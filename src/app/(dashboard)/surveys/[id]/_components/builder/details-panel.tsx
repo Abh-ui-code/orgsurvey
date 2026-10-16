@@ -28,7 +28,11 @@ function formOf(s: SurveyDetail) {
     description: s.description,
     instructions: s.instructions,
     due_date: s.due_date ?? "",
-    people: { responder: s.responder?.id ?? "", reviewer: s.reviewer?.id ?? "", approver: s.approver?.id ?? "" } satisfies People,
+    people: {
+      responder: s.responder?.id ?? "",
+      reviewer: s.reviewer?.id ?? "",
+      approver: s.approver?.id ?? "",
+    } satisfies People,
   };
 }
 
@@ -80,7 +84,10 @@ export function DetailsPanel({ survey, onDirtyChange }: { survey: SurveyDetail; 
         reviewer_id: form.people.reviewer || null,
         approver_id: form.people.approver || null,
       },
-      { onSuccess: () => toast.success("Saved"), onError: (e) => toast.error((e as Error).message) },
+      {
+        onSuccess: () => toast.success("Saved"),
+        onError: (e) => toast.error((e as Error).message),
+      },
     );
   }
 
@@ -91,27 +98,29 @@ export function DetailsPanel({ survey, onDirtyChange }: { survey: SurveyDetail; 
       </CardHeader>
       <CardContent className="space-y-5">
         <DrawerSection title="Details">
-          <DrawerField label="Title" required>
-            <Input value={form.title} onChange={(e) => patch("title", e.target.value)} />
-          </DrawerField>
-          <DrawerField label="Category" required>
-            <Select value={form.category_id} onChange={(e) => patch("category_id", e.target.value)}>
-              {selectable.map((c) => (
-                <option key={c.id} value={c.id}>
-                  {c.label}
-                </option>
-              ))}
-            </Select>
-          </DrawerField>
-          <DrawerField label="Aimed at" required hint="The org block this survey is about.">
-            <UnitSelect value={form.target_unit_id} onChange={(id) => patch("target_unit_id", id)} />
-          </DrawerField>
-          <DrawerField label="Description" hint="For admins. Responders see the instructions below.">
-            <Textarea rows={2} value={form.description} onChange={(e) => patch("description", e.target.value)} />
-          </DrawerField>
-          <DrawerField label="Instructions" hint="Shown to the responder above the questions.">
-            <Textarea rows={3} value={form.instructions} onChange={(e) => patch("instructions", e.target.value)} />
-          </DrawerField>
+          <div className="grid gap-4 md:grid-cols-2">
+            <DrawerField label="Title" required>
+              <Input value={form.title} onChange={(e) => patch("title", e.target.value)} />
+            </DrawerField>
+            <DrawerField label="Category" required>
+              <Select value={form.category_id} onChange={(e) => patch("category_id", e.target.value)}>
+                {selectable.map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {c.label}
+                  </option>
+                ))}
+              </Select>
+            </DrawerField>
+            <DrawerField label="Aimed at" required hint="The org block this survey is about.">
+              <UnitSelect value={form.target_unit_id} onChange={(id) => patch("target_unit_id", id)} />
+            </DrawerField>
+            <DrawerField label="Description" hint="For admins. Responders see the instructions below.">
+              <Textarea rows={2} value={form.description} onChange={(e) => patch("description", e.target.value)} />
+            </DrawerField>
+            <DrawerField label="Instructions" hint="Shown to the responder above the questions.">
+              <Textarea rows={2} value={form.instructions} onChange={(e) => patch("instructions", e.target.value)} />
+            </DrawerField>
+          </div>
         </DrawerSection>
 
         <DrawerSection title="Assignment">
@@ -125,7 +134,7 @@ export function DetailsPanel({ survey, onDirtyChange }: { survey: SurveyDetail; 
                 : suggested.map((r) => `${r.label}: ${suggestion[r.value]!.person.full_name} (head of ${suggestion[r.value]!.unit.name})`).join(" · ")}
             </p>
           </div>
-          <AssignmentFields people={form.people} onChange={(p) => patch("people", p)} />
+          <AssignmentFields className="grid gap-4 md:grid-cols-3" people={form.people} onChange={(p) => patch("people", p)} />
           <DrawerField label="Due date">
             <Input type="date" value={form.due_date} onChange={(e) => patch("due_date", e.target.value)} />
           </DrawerField>

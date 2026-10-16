@@ -23,7 +23,7 @@ export function LiveAssignmentCard({ survey }: { survey: SurveyDetail }) {
 
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="py-3">
         <CardTitle>People &amp; deadline</CardTitle>
       </CardHeader>
       <CardContent className="space-y-3">

@@ -29,6 +29,14 @@ const config: Config = {
           soft: "hsl(var(--brand-soft))",
           contrast: "hsl(var(--brand-contrast))",
         },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar))",
+          line: "hsl(var(--sidebar-line))",
+          ink: "hsl(var(--sidebar-ink))",
+          muted: "hsl(var(--sidebar-muted))",
+          active: "hsl(var(--sidebar-active))",
+          mark: "hsl(var(--sidebar-mark))",
+        },
         amber: { DEFAULT: "hsl(var(--amber))", soft: "hsl(var(--amber-soft))" },
         rust: { DEFAULT: "hsl(var(--rust))", soft: "hsl(var(--rust-soft))" },
         moss: { DEFAULT: "hsl(var(--moss))", soft: "hsl(var(--moss-soft))" },
@@ -42,8 +50,13 @@ const config: Config = {
         xl: "calc(var(--radius) + 4px)",
       },
       fontFamily: {
+        display: ["var(--font-display)", "var(--font-ui)", "system-ui", "sans-serif"],
         sans: ["var(--font-ui)", "system-ui", "sans-serif"],
         mono: ["var(--font-data)", "ui-monospace", "monospace"],
+      },
+      boxShadow: {
+        card: "0 1px 2px hsl(210 35% 12% / 0.04), 0 1px 1px hsl(210 35% 12% / 0.03)",
+        pop: "0 8px 24px -8px hsl(210 35% 12% / 0.18), 0 2px 6px hsl(210 35% 12% / 0.06)",
       },
       fontSize: {
         "2xs": ["0.6875rem", { lineHeight: "1rem" }],

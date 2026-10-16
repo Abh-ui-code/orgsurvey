@@ -4,6 +4,7 @@ import { ChevronDown, LogOut, Menu, Settings as SettingsIcon, User, X, type Luci
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
+import { LogoMark } from "@/components/shared/logo";
 import { ThemeToggle } from "@/components/theme-toggle";
 import {
   DropdownMenu,
@@ -42,12 +43,13 @@ function NavLink({
       href={href}
       className={cn(
         "relative flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
-        isActive ? "bg-brand-soft text-brand-strong" : "text-ink-muted hover:bg-paper-sunken hover:text-ink",
+        isActive ? "bg-sidebar-active text-white" : "text-sidebar-muted hover:bg-sidebar-active/50 hover:text-sidebar-ink",
         collapsed && "justify-center px-0",
         indent && !collapsed && "pl-8",
       )}
       title={collapsed ? label : undefined}
     >
+      {isActive && <span aria-hidden className="absolute inset-y-1.5 left-0 w-0.5 rounded-full bg-sidebar-mark" />}
       <Icon className="h-4 w-4 shrink-0" />
       {!collapsed && <span className="flex-1">{label}</span>}
       {badge ? (
@@ -92,19 +94,19 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
       <aside
         className={cn(
-          "z-40 flex shrink-0 flex-col border-r border-line bg-paper-raised transition-all duration-150",
+          "z-40 flex shrink-0 flex-col border-r border-sidebar-line bg-sidebar text-sidebar-ink transition-all duration-150",
           // phone: off-canvas drawer; desktop: static column
           "fixed inset-y-0 left-0 w-64 -translate-x-full md:static md:translate-x-0",
           mobileOpen && "translate-x-0 shadow-xl",
           collapsed ? "md:w-16" : "md:w-60",
         )}
       >
-        <div className="flex h-14 items-center gap-2 border-b border-line px-4">
-          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-brand text-sm font-bold text-brand-contrast">O</span>
-          {!rail && <span className="flex-1 text-sm font-semibold text-ink">OrgSurvey</span>}
+        <div className="flex h-14 items-center gap-2.5 border-b border-sidebar-line px-4">
+          <LogoMark className="h-7 w-7 shrink-0" />
+          {!rail && <span className="font-display flex-1 text-base font-semibold text-white">OrgSurvey</span>}
           <button
             onClick={() => setMobileOpen(false)}
-            className="rounded p-1 text-ink-faint hover:bg-paper-sunken md:hidden"
+            className="rounded p-1 text-sidebar-muted hover:bg-sidebar-active md:hidden"
             aria-label="Close menu"
           >
             <X className="h-4 w-4" />
@@ -132,7 +134,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 {!rail && (
                   <button
                     onClick={() => setOpenGroups((g) => ({ ...g, [entry.id]: !isOpen }))}
-                    className="flex w-full items-center gap-1.5 rounded-md px-3 pb-1 text-xs font-semibold uppercase tracking-wide text-ink-faint hover:text-ink"
+                    className="flex w-full items-center gap-1.5 rounded-md px-3 pb-1 text-xs font-medium text-sidebar-muted hover:text-sidebar-ink"
                   >
                     <entry.icon className="h-3.5 w-3.5" />
                     <span className="flex-1 text-left">{entry.label}</span>
@@ -161,7 +163,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
         <button
           onClick={() => setCollapsed((c) => !c)}
-          className="hidden h-10 items-center justify-center border-t border-line text-ink-faint hover:bg-paper-sunken hover:text-ink md:flex"
+          className="hidden h-10 items-center justify-center border-t border-sidebar-line text-sidebar-muted hover:bg-sidebar-active/50 hover:text-sidebar-ink md:flex"
           aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
         >
           <Menu className="h-4 w-4" />

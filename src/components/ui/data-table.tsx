@@ -59,7 +59,7 @@ export function DataTable<T extends { id: string }>({
   const rowCount = skeletonRows ?? pagination?.pageSize ?? 6;
 
   return (
-    <div className="relative overflow-hidden rounded-lg border border-line bg-paper-raised">
+    <div className="relative overflow-hidden rounded-xl border border-line bg-paper-raised shadow-card">
       {isFetching && !isLoading && (
         <div className="absolute inset-x-0 top-0 z-10 h-0.5 overflow-hidden bg-brand-soft">
           <div className="h-full w-1/3 bg-brand animate-indeterminate-bar" />
@@ -71,7 +71,7 @@ export function DataTable<T extends { id: string }>({
           <thead>
             <tr className="border-b border-line bg-paper-sunken/60">
               {columns.map((col) => (
-                <th key={col.key} className={cn("px-4 py-2.5 text-xs font-medium text-ink-muted", col.className)}>
+                <th key={col.key} className={cn("px-4 py-2.5 text-xs font-semibold text-ink-muted", col.className)}>
                   {col.label}
                 </th>
               ))}

@@ -3,89 +3,112 @@
 @tailwind utilities;
 
 :root {
-  /* Surface -- cool paper, not stark white, not the cream-and-terracotta default */
-  --paper: 100 8% 97%;
+  --paper: 205 25% 97%;
   --paper-raised: 0 0% 100%;
-  --paper-sunken: 100 8% 94%;
-  --line: 110 10% 87%;
-  --line-strong: 110 8% 78%;
+  --paper-sunken: 205 22% 94%;
+  --line: 205 18% 88%;
+  --line-strong: 205 14% 78%;
 
-  /* Ink */
-  --ink: 160 18% 13%;
-  --ink-muted: 155 8% 38%;
-  --ink-faint: 150 6% 58%;
+  --ink: 210 35% 12%;
+  --ink-muted: 208 14% 36%;
+  --ink-faint: 208 10% 46%;
 
-  /* Brand -- organisational indigo */
-  --brand: 226 62% 46%;
-  --brand-strong: 226 64% 36%;
-  --brand-soft: 226 70% 95%;
+  /* Brand: deep petrol. The one amber is reserved for "waiting on someone". */
+  --brand: 192 70% 27%;
+  --brand-strong: 192 75% 20%;
+  --brand-soft: 190 45% 93%;
   --brand-contrast: 0 0% 100%;
 
-  /* Signal colors */
-  --amber: 32 52% 45%;          /* flags, attention -- contour-line accent */
-  --amber-soft: 32 60% 93%;
-  --rust: 6 58% 42%;            /* destructive, rejected */
-  --rust-soft: 6 65% 94%;
-  --moss: 142 36% 32%;          /* approved, success */
-  --moss-soft: 142 40% 92%;
-  --slate: 210 12% 45%;         /* neutral info */
-  --slate-soft: 210 20% 93%;
+  --amber: 34 85% 34%;
+  --amber-soft: 38 90% 92%;
+  --rust: 8 62% 42%;
+  --rust-soft: 8 70% 95%;
+  --moss: 150 45% 28%;
+  --moss-soft: 150 40% 92%;
+  --slate: 212 14% 42%;
+  --slate-soft: 212 20% 93%;
 
-  --radius: 0.5rem;
-  --focus-ring: 226 62% 46%;
+  /* Sidebar: dark in both themes, so the navigation reads as one fixed frame. */
+  --sidebar: 197 55% 11%;
+  --sidebar-line: 197 35% 19%;
+  --sidebar-ink: 190 25% 88%;
+  --sidebar-muted: 192 16% 62%;
+  --sidebar-active: 192 55% 21%;
+  --sidebar-mark: 38 92% 62%;
+
+  --radius: 0.625rem;
+  --focus-ring: 192 70% 33%;
 }
 
 :root[data-theme="dark"] {
-  --paper: 160 14% 8%;
-  --paper-raised: 160 12% 11%;
-  --paper-sunken: 160 14% 6%;
-  --line: 155 10% 20%;
-  --line-strong: 155 10% 28%;
+  --paper: 205 28% 7%;
+  --paper-raised: 205 24% 10%;
+  --paper-sunken: 205 28% 5%;
+  --line: 205 18% 18%;
+  --line-strong: 205 15% 26%;
 
-  --ink: 100 10% 92%;
-  --ink-muted: 110 6% 68%;
-  --ink-faint: 110 5% 50%;
+  --ink: 200 20% 93%;
+  --ink-muted: 200 10% 68%;
+  --ink-faint: 200 8% 56%;
 
-  --brand: 226 80% 68%;
-  --brand-strong: 226 85% 76%;
-  --brand-soft: 226 35% 20%;
-  --brand-contrast: 160 20% 8%;
+  --brand: 188 62% 52%;
+  --brand-strong: 188 70% 66%;
+  --brand-soft: 192 40% 16%;
+  --brand-contrast: 205 40% 8%;
 
-  --amber: 32 65% 62%;
-  --amber-soft: 32 40% 18%;
-  --rust: 6 65% 62%;
-  --rust-soft: 6 45% 18%;
-  --moss: 142 40% 55%;
-  --moss-soft: 142 30% 16%;
-  --slate: 210 15% 68%;
-  --slate-soft: 210 15% 18%;
+  --amber: 38 85% 60%;
+  --amber-soft: 36 45% 16%;
+  --rust: 8 70% 64%;
+  --rust-soft: 8 45% 17%;
+  --moss: 150 42% 55%;
+  --moss-soft: 150 30% 15%;
+  --slate: 208 20% 70%;
+  --slate-soft: 208 18% 17%;
+
+  --sidebar: 205 32% 5%;
+  --sidebar-line: 205 20% 14%;
+  --sidebar-ink: 200 20% 90%;
+  --sidebar-muted: 200 10% 60%;
+  --sidebar-active: 192 40% 15%;
+  --sidebar-mark: 38 85% 60%;
+
+  --focus-ring: 188 62% 52%;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: 160 14% 8%;
-    --paper-raised: 160 12% 11%;
-    --paper-sunken: 160 14% 6%;
-    --line: 155 10% 20%;
-    --line-strong: 155 10% 28%;
+    --paper: 205 28% 7%;
+    --paper-raised: 205 24% 10%;
+    --paper-sunken: 205 28% 5%;
+    --line: 205 18% 18%;
+    --line-strong: 205 15% 26%;
 
-    --ink: 100 10% 92%;
-    --ink-muted: 110 6% 68%;
-    --ink-faint: 110 5% 50%;
+    --ink: 200 20% 93%;
+    --ink-muted: 200 10% 68%;
+    --ink-faint: 200 8% 56%;
 
-    --brand: 226 80% 68%;
-    --brand-strong: 226 85% 76%;
-    --brand-soft: 226 35% 20%;
-    --brand-contrast: 160 20% 8%;
+    --brand: 188 62% 52%;
+    --brand-strong: 188 70% 66%;
+    --brand-soft: 192 40% 16%;
+    --brand-contrast: 205 40% 8%;
 
-    --amber: 32 65% 62%;
-    --amber-soft: 32 40% 18%;
-    --rust: 6 65% 62%;
-    --rust-soft: 6 45% 18%;
-    --moss: 142 40% 55%;
-    --moss-soft: 142 30% 16%;
-    --slate: 210 15% 68%;
-    --slate-soft: 210 15% 18%;
+    --amber: 38 85% 60%;
+    --amber-soft: 36 45% 16%;
+    --rust: 8 70% 64%;
+    --rust-soft: 8 45% 17%;
+    --moss: 150 42% 55%;
+    --moss-soft: 150 30% 15%;
+    --slate: 208 20% 70%;
+    --slate-soft: 208 18% 17%;
+
+    --sidebar: 205 32% 5%;
+    --sidebar-line: 205 20% 14%;
+    --sidebar-ink: 200 20% 90%;
+    --sidebar-muted: 200 10% 60%;
+    --sidebar-active: 192 40% 15%;
+    --sidebar-mark: 38 85% 60%;
+
+    --focus-ring: 188 62% 52%;
   }
 }
 
@@ -96,7 +119,8 @@
 body {
   background: hsl(var(--paper));
   color: hsl(var(--ink));
-  font-feature-settings: "cv05", "cv11";
+  font-feature-settings: "ss01", "cv11";
+  text-rendering: optimizeLegibility;
 }
 
 ::selection {
@@ -122,4 +146,11 @@ body {
 .font-mono-data {
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.01em;
+}
+
+/* Page and figure headings. Body stays in the UI face. */
+.font-display {
+  font-family: var(--font-display), var(--font-ui), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  font-optical-sizing: auto;
 }

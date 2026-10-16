@@ -3,7 +3,6 @@
 import { Download } from "lucide-react";
 import { formatAnswer } from "@/components/shared/answer-field";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { downloadCsv, slug } from "@/lib/csv";
 import { questionTypeLabel } from "@/types/question";
 import type { SurveyDetail } from "@/types/survey";
@@ -31,26 +30,32 @@ export function AnswersReadOnly({ survey }: { survey: SurveyDetail }) {
   }
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Response</CardTitle>
+    <div className="space-y-4">
+      <div className="flex items-center justify-between gap-4">
+        <div>
+          <h2 className="text-sm font-semibold text-ink">Response</h2>
+          <p className="mt-0.5 text-xs text-ink-faint">Submitted by {survey.responder?.full_name ?? "the responder"}</p>
+        </div>
         <Button variant="secondary" size="sm" onClick={exportCsv}>
-          <Download className="h-3.5 w-3.5" /> Export CSV
+          <Download className="h-4 w-4" /> Export CSV
         </Button>
-      </CardHeader>
-      <CardContent>
-        <SectionedQuestions
-          survey={survey}
-          render={(q, n) => (
-            <div key={q.id}>
-              <p className="text-sm text-ink-muted">
-                {n}. {q.text}
+      </div>
+      <SectionedQuestions
+        survey={survey}
+        render={(q, n) => {
+          const answer = formatAnswer(survey.answers[q.id]);
+          const empty = !answer || answer === "—";
+          return (
+            <li key={q.id} className="border-b border-line px-5 py-3 last:border-b-0">
+              <p className="text-sm text-ink">
+                <span className="mr-1.5 font-mono-data text-xs text-ink-faint">Q{n}</span>
+                {q.text}
               </p>
-              <p className="mt-0.5 text-sm font-medium text-ink">{formatAnswer(survey.answers[q.id])}</p>
-            </div>
-          )}
-        />
-      </CardContent>
-    </Card>
+              <p className={empty ? "mt-1 text-sm italic text-ink-faint" : "mt-1 whitespace-pre-wrap text-sm font-medium text-ink"}>{empty ? "No answer" : answer}</p>
+            </li>
+          );
+        }}
+      />
+    </div>
   );
 }

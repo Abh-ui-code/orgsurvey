@@ -10,8 +10,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-brand text-brand-contrast hover:bg-brand-strong",
-        secondary: "bg-paper-raised text-ink border border-line hover:bg-paper-sunken",
+        primary: "bg-brand text-brand-contrast shadow-sm hover:bg-brand-strong",
+        secondary: "bg-paper-raised text-ink border border-line-strong/70 shadow-card hover:bg-paper-sunken",
         ghost: "text-ink-muted hover:bg-paper-sunken hover:text-ink",
         destructive: "bg-rust text-white hover:brightness-95",
         link: "text-brand underline-offset-4 hover:underline p-0 h-auto",

@@ -52,61 +52,62 @@ export default function SurveyDetailPage() {
   const lastClose = lastOf(s.history, "closed");
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-5">
       <SurveyHeader survey={s} isAdmin={isAdmin} />
-      {!isDraft && s.description && <p className="text-sm text-ink-muted">{s.description}</p>}
 
       {isDraft ? (
         <>
-          <p className="text-sm text-ink-muted">This survey is a draft. Only administrators can see it until it is published.</p>
+          <Banner tone="slate" title="This survey is a draft">
+            Only administrators can see it until it is published.
+          </Banner>
           <SurveyBuilder survey={s} />
         </>
       ) : (
         <>
-          {s.status !== "closed" && <WorkflowStepper survey={s} />}
+          {s.status !== "closed" && (
+            <Card>
+              <CardContent className="px-5 py-4">
+                <WorkflowStepper survey={s} meId={me?.id} />
+              </CardContent>
+            </Card>
+          )}
 
           {s.is_overdue && s.waiting_on && (
-            <div className="rounded-lg border border-rust/30 bg-rust-soft p-4 text-sm">
-              <p className="font-medium text-rust">This survey is overdue</p>
-              <p className="mt-1 text-ink">
-                It has been with {s.waiting_on.person.full_name} ({s.waiting_on.role}) {sinceText(daysSince(s.stage_since))}.
-                {isAdmin && " You can move the due date or swap the person under People & deadline."}
-              </p>
-            </div>
+            <Banner tone="rust" title="This survey is overdue">
+              It has been with {s.waiting_on.person.full_name} ({s.waiting_on.role}) {sinceText(daysSince(s.stage_since))}.
+              {isAdmin && " You can move the due date or swap the person under People & deadline."}
+            </Banner>
           )}
           {s.status === "returned" && lastReturn && (
-            <div className="rounded-lg border border-rust/30 bg-rust-soft p-4 text-sm">
-              <p className="font-medium text-rust">Returned by {lastReturn.by?.full_name ?? "someone"}</p>
-              {lastReturn.comment && <p className="mt-1 text-ink">{lastReturn.comment}</p>}
-            </div>
+            <Banner tone="rust" title={`Returned by ${lastReturn.by?.full_name ?? "someone"}`}>
+              {lastReturn.comment}
+            </Banner>
           )}
           {s.status === "closed" && (
-            <div className="rounded-lg border border-line bg-paper-sunken p-4 text-sm">
-              <p className="font-medium text-ink">Closed{lastClose?.by ? ` by ${lastClose.by.full_name}` : ""}</p>
-              {lastClose?.comment && <p className="mt-1 text-ink-muted">{lastClose.comment}</p>}
-            </div>
+            <Banner tone="slate" title={`Closed${lastClose?.by ? ` by ${lastClose.by.full_name}` : ""}`}>
+              {lastClose?.comment}
+            </Banner>
           )}
 
-          <div className="grid gap-4 lg:grid-cols-[1fr_320px]">
-            <div className="space-y-4">
+          <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_340px]">
+            <div className="space-y-5">
               {canRespond ? (
                 <AnswerForm survey={s} />
               ) : responded ? (
                 <AnswersReadOnly survey={s} />
               ) : (
                 <Card>
-                  <CardContent>
-                    <p className="text-sm text-ink-muted">
-                      {s.status === "closed" ? "This survey was closed before it was answered." : `Waiting for ${s.responder?.full_name ?? "the responder"} to respond.`}
-                    </p>
-                  </CardContent>
+                <EmptyState
+                  title="No response yet"
+                  description={s.status === "closed" ? "This survey was closed before it was answered." : `Waiting for ${s.responder?.full_name ?? "the responder"} to respond.`}
+                />
                 </Card>
               )}
               {canReview && <DecisionPanel survey={s} role="reviewer" />}
               {canApprove && <DecisionPanel survey={s} role="approver" />}
             </div>
 
-            <div className="space-y-4 self-start">
+            <div className="space-y-5 self-start lg:sticky lg:top-4">
               {isAdmin && isLive && (
                 <LiveAssignmentCard key={`${s.responder?.id}${s.reviewer?.id}${s.approver?.id}${s.due_date}`} survey={s} />
               )}
@@ -115,6 +116,20 @@ export default function SurveyDetailPage() {
           </div>
         </>
       )}
+    </div>
+  );
+}
+
+const BANNER = {
+  rust: "border-rust/30 bg-rust-soft text-rust",
+  slate: "border-line bg-paper-sunken text-ink-muted",
+};
+
+function Banner({ tone, title, children }: { tone: keyof typeof BANNER; title: string; children?: React.ReactNode }) {
+  return (
+    <div role="status" className={`rounded-md border px-3 py-2 text-sm ${BANNER[tone]}`}>
+      <span className="font-semibold">{title}</span>
+      {children && <span className="ml-1.5">{children}</span>}
     </div>
   );
 }

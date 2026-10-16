@@ -27,7 +27,7 @@ export function Kpi({
   return (
     <div
       className={cn(
-        "rounded-lg border border-line border-l-[3px] bg-paper-raised p-4",
+        "rounded-xl border border-line border-l-[3px] bg-paper-raised p-4 shadow-card",
         ACCENT[accent],
         className,
       )}
@@ -36,7 +36,7 @@ export function Kpi({
         {Icon && <Icon className="h-3.5 w-3.5" />}
         {label}
       </div>
-      <div className="mt-1.5 font-mono-data text-2xl font-semibold text-ink">{value}</div>
+      <div className="mt-1.5 font-display text-3xl font-semibold tabular-nums text-ink">{value}</div>
       {sub && <div className="mt-0.5 text-xs text-ink-faint">{sub}</div>}
     </div>
   );

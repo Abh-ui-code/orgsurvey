@@ -1,8 +1,10 @@
+import { Card } from "@/components/ui/card";
 import type { SurveyQuestion } from "@/types/question";
 import type { SurveyDetail } from "@/types/survey";
 
-/** A survey's questions grouped under their section titles, numbered
- * continuously across sections. `render` draws one question. */
+/** A survey's questions as one card per section (title in the header, one
+ * divided row per question), numbered continuously across sections. `render`
+ * draws the contents of one row. */
 export function SectionedQuestions({
   survey,
   render,
@@ -12,17 +14,17 @@ export function SectionedQuestions({
 }) {
   let n = 0;
   return (
-    <div className="space-y-8">
+    <div className="space-y-4">
       {survey.sections
         .filter((s) => s.questions.length > 0)
         .map((section) => (
-          <div key={section.id} className="space-y-5">
-            <div>
-              <h3 className="text-sm font-semibold text-brand-strong">{section.title}</h3>
-              {section.description && <p className="mt-0.5 text-sm text-ink-muted">{section.description}</p>}
+          <Card key={section.id}>
+            <div className="border-b border-line px-5 py-3">
+              <h3 className="text-sm font-semibold text-ink">{section.title}</h3>
+              {section.description && <p className="mt-0.5 text-xs text-ink-muted">{section.description}</p>}
             </div>
-            {section.questions.map((q) => render(q, ++n))}
-          </div>
+            <ul>{section.questions.map((q) => render(q, ++n))}</ul>
+          </Card>
         ))}
     </div>
   );

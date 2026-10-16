@@ -1,13 +1,13 @@
 "use client";
 
-import { ArrowDown, ArrowUp, Pencil, Plus, Trash2 } from "lucide-react";
+import { ArrowDown, ArrowUp, GripVertical, Pencil, Plus, Trash2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { FormDialog } from "@/components/shared/form-dialog";
 import { IconButton } from "@/components/shared/icon-button";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { ConfirmDialog } from "@/components/ui/confirm-dialog";
 import { DrawerField } from "@/components/ui/drawer-form";
 import { Input } from "@/components/ui/input";
@@ -58,15 +58,18 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
     <div className="space-y-4">
       {survey.sections.map((section, si) => (
         <Card key={section.id}>
-          <CardHeader className="items-start">
-            <div className="min-w-0">
-              <CardTitle>
-                <span className="mr-2 font-mono-data text-ink-faint">{si + 1}.</span>
-                {section.title}
-              </CardTitle>
-              {section.description && <p className="mt-1 text-sm text-ink-muted">{section.description}</p>}
+          <CardHeader className="items-center py-3">
+            <div className="flex min-w-0 items-center gap-2">
+              <GripVertical className="h-4 w-4 shrink-0 text-ink-faint" />
+              <div className="min-w-0">
+                <CardTitle>{section.title}</CardTitle>
+                {section.description && <p className="mt-0.5 text-xs text-ink-muted">{section.description}</p>}
+              </div>
             </div>
             <div className="flex shrink-0 items-center">
+              <Button variant="ghost" size="sm" onClick={() => setQuestionTarget({ sectionId: section.id })}>
+                <Plus className="h-4 w-4" /> Question
+              </Button>
               <IconButton label="Move section up" disabled={si === 0} onClick={() => moveSection.mutate({ id: section.id, direction: "up" }, { onError: fail })}>
                 <ArrowUp className="h-4 w-4" />
               </IconButton>
@@ -81,46 +84,47 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
               </IconButton>
             </div>
           </CardHeader>
-          <CardContent className="space-y-2">
-            {section.questions.length === 0 && <p className="py-2 text-sm text-ink-muted">No questions in this section yet.</p>}
-            {section.questions.map((q, qi) => (
-              <div key={q.id} className="flex items-start gap-3 rounded-md border border-line p-3">
-                <span className="mt-0.5 w-5 shrink-0 font-mono-data text-xs text-ink-faint">{qi + 1}</span>
-                <div className="min-w-0 flex-1">
-                  <p className="text-sm text-ink">
-                    {q.text} {q.required && <span className="text-rust">*</span>}
-                  </p>
-                  <p className="mt-1 flex flex-wrap items-center gap-1.5 text-xs text-ink-faint">
-                    {questionTypeLabel(q.type)}
-                    {q.bank_question_id && <Badge tone="brand">From bank</Badge>}
-                    {q.options.length > 0 && <span>· {q.options.join(", ")}</span>}
-                  </p>
-                  {q.hint && <p className="mt-1 text-xs italic text-ink-muted">{q.hint}</p>}
-                </div>
-                <div className="flex shrink-0 items-center">
-                  <IconButton label="Move question up" disabled={qi === 0} onClick={() => moveQuestion.mutate({ sectionId: section.id, id: q.id, direction: "up" }, { onError: fail })}>
-                    <ArrowUp className="h-4 w-4" />
-                  </IconButton>
-                  <IconButton label="Move question down" disabled={qi === section.questions.length - 1} onClick={() => moveQuestion.mutate({ sectionId: section.id, id: q.id, direction: "down" }, { onError: fail })}>
-                    <ArrowDown className="h-4 w-4" />
-                  </IconButton>
-                  <IconButton label="Edit question" onClick={() => setQuestionTarget({ sectionId: section.id, question: q })}>
-                    <Pencil className="h-4 w-4" />
-                  </IconButton>
-                  <IconButton label="Delete question" onClick={() => deleteQuestion.mutate({ sectionId: section.id, id: q.id }, { onError: fail })}>
-                    <Trash2 className="h-4 w-4" />
-                  </IconButton>
-                </div>
-              </div>
-            ))}
-            <Button variant="secondary" size="sm" onClick={() => setQuestionTarget({ sectionId: section.id })}>
-              <Plus className="h-3.5 w-3.5" /> Add question
-            </Button>
-          </CardContent>
+          {section.questions.length === 0 ? (
+            <p className="px-5 py-6 text-sm text-ink-faint">No questions in this section yet.</p>
+          ) : (
+            <ul>
+              {section.questions.map((q, qi) => (
+                <li key={q.id} className="flex items-center justify-between gap-4 border-b border-line px-5 py-3 last:border-b-0">
+                  <div className="min-w-0">
+                    <p className="truncate text-sm text-ink">
+                      {q.text} {q.required && <span className="text-rust">*</span>}
+                    </p>
+                    <p className="mt-0.5 flex flex-wrap items-center gap-2 text-xs text-ink-faint">
+                      <span className="font-mono-data">Q{qi + 1}</span>
+                      <span>·</span>
+                      <span>{questionTypeLabel(q.type)}</span>
+                      {q.bank_question_id && <Badge tone="brand">From bank</Badge>}
+                      {q.options.length > 0 && <span className="truncate">· {q.options.join(", ")}</span>}
+                    </p>
+                    {q.hint && <p className="mt-1 text-xs italic text-ink-muted">{q.hint}</p>}
+                  </div>
+                  <div className="flex shrink-0 items-center gap-1">
+                    <IconButton label="Move question up" disabled={qi === 0} onClick={() => moveQuestion.mutate({ sectionId: section.id, id: q.id, direction: "up" }, { onError: fail })}>
+                      <ArrowUp className="h-4 w-4" />
+                    </IconButton>
+                    <IconButton label="Move question down" disabled={qi === section.questions.length - 1} onClick={() => moveQuestion.mutate({ sectionId: section.id, id: q.id, direction: "down" }, { onError: fail })}>
+                      <ArrowDown className="h-4 w-4" />
+                    </IconButton>
+                    <IconButton label="Edit question" onClick={() => setQuestionTarget({ sectionId: section.id, question: q })}>
+                      <Pencil className="h-4 w-4" />
+                    </IconButton>
+                    <IconButton label="Delete question" onClick={() => deleteQuestion.mutate({ sectionId: section.id, id: q.id }, { onError: fail })}>
+                      <Trash2 className="h-4 w-4" />
+                    </IconButton>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
         </Card>
       ))}
 
-      <Button variant="secondary" onClick={() => setSectionForm({ title: "", description: "" })}>
+      <Button variant="secondary" size="sm" onClick={() => setSectionForm({ title: "", description: "" })}>
         <Plus className="h-4 w-4" /> Add section
       </Button>
 

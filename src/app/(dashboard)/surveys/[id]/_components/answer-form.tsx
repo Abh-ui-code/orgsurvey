@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 import { AnswerField, isAnswered } from "@/components/shared/answer-field";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { ConfirmDialog } from "@/components/ui/confirm-dialog";
 import { useDebounced } from "@/hooks/use-debounced";
 import { useUnsavedChangesWarning } from "@/hooks/use-unsaved-changes-warning";
@@ -77,9 +77,9 @@ export function AnswerForm({ survey }: { survey: SurveyDetail }) {
   }
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Your response</CardTitle>
+    <div className="space-y-4">
+      <div className="flex items-center justify-between gap-4">
+        <h2 className="text-sm font-semibold text-ink">Your response</h2>
         <span className="flex items-center gap-1.5 text-xs text-ink-faint" aria-live="polite">
           {saveDraft.isPending ? (
             <>
@@ -95,57 +95,51 @@ export function AnswerForm({ survey }: { survey: SurveyDetail }) {
             "Saved automatically as you go"
           )}
         </span>
-      </CardHeader>
-      <CardContent className="space-y-6">
-        {survey.instructions && (
-          <div className="rounded-md bg-brand-soft/60 p-3 text-sm text-ink">
-            <p className="mb-0.5 text-xs font-semibold uppercase tracking-wide text-brand-strong">Instructions</p>
-            {survey.instructions}
-          </div>
-        )}
+      </div>
 
-        {required.length > 0 && (
-          <div>
-            <div className="mb-1 flex justify-between text-xs text-ink-muted">
-              <span>
-                {done} of {required.length} required answered
-              </span>
-              <span className="font-mono-data">{percent}%</span>
-            </div>
-            <div className="h-1.5 overflow-hidden rounded-full bg-paper-sunken">
-              <div className="h-full bg-brand transition-all" style={{ width: `${percent}%` }} />
-            </div>
-          </div>
-        )}
-
-        <SectionedQuestions
-          survey={survey}
-          render={(q, n) => {
-            const flagged = showMissing && q.required && !isAnswered(answers[q.id]);
-            return (
-              <div
-                key={q.id}
-                id={`q-${q.id}`}
-                className={cn("space-y-2 rounded-md", flagged && "-m-2 border border-rust/50 bg-rust-soft/40 p-2")}
-              >
-                <p className="text-sm font-medium text-ink">
-                  {n}. {q.text} {q.required && <span className="text-rust">*</span>}
-                </p>
-                {q.hint && <p className="text-xs text-ink-faint">{q.hint}</p>}
-                <AnswerField question={q} value={answers[q.id]} onChange={(v) => setAnswers({ ...answers, [q.id]: v })} />
-                {flagged && <p className="text-xs font-medium text-rust">This question needs an answer.</p>}
-              </div>
-            );
-          }}
-        />
-
-        <div className="flex items-center justify-between gap-3">
-          <p className="text-xs text-ink-faint">Your reviewer sees your answers only after you submit.</p>
-          <Button onClick={trySubmit} loading={submit.isPending}>
-            Submit for review
-          </Button>
+      {survey.instructions && (
+        <div className="rounded-md border border-brand/30 bg-brand-soft px-3 py-2 text-sm text-brand-strong">
+          <span className="font-semibold">Instructions: </span>
+          {survey.instructions}
         </div>
-      </CardContent>
+      )}
+
+      {required.length > 0 && (
+        <Card className="sticky top-0 z-10 px-5 py-3">
+          <div className="mb-1.5 flex justify-between text-xs">
+            <span className="text-ink-muted">{percent === 100 ? "All required questions answered" : `${done} of ${required.length} required answered`}</span>
+            <span className={cn("font-mono-data font-semibold", percent === 100 ? "text-moss" : "text-brand-strong")}>{percent}%</span>
+          </div>
+          <div className="h-1.5 overflow-hidden rounded-full bg-paper-sunken">
+            <div className={cn("h-full rounded-full transition-all duration-500", percent === 100 ? "bg-moss" : "bg-brand")} style={{ width: `${percent}%` }} />
+          </div>
+        </Card>
+      )}
+
+      <SectionedQuestions
+        survey={survey}
+        render={(q, n) => {
+          const flagged = showMissing && q.required && !isAnswered(answers[q.id]);
+          return (
+            <li key={q.id} id={`q-${q.id}`} className={cn("space-y-2 border-b border-line px-5 py-4 last:border-b-0", flagged && "bg-rust-soft/40")}>
+              <p className="text-sm text-ink">
+                <span className="mr-1.5 font-mono-data text-xs text-ink-faint">Q{n}</span>
+                {q.text} {q.required && <span className="text-rust">*</span>}
+              </p>
+              {q.hint && <p className="text-xs text-ink-faint">{q.hint}</p>}
+              <AnswerField question={q} value={answers[q.id]} onChange={(v) => setAnswers({ ...answers, [q.id]: v })} />
+              {flagged && <p className="text-xs font-medium text-rust">This question needs an answer.</p>}
+            </li>
+          );
+        }}
+      />
+
+      <Card className="sticky bottom-4 flex flex-wrap items-center justify-between gap-3 px-5 py-3">
+        <p className="text-xs text-ink-faint">Your reviewer sees your answers only after you submit.</p>
+        <Button onClick={trySubmit} loading={submit.isPending}>
+          Submit for review
+        </Button>
+      </Card>
 
       <ConfirmDialog
         open={confirm}
@@ -167,6 +161,6 @@ export function AnswerForm({ survey }: { survey: SurveyDetail }) {
           })
         }
       />
-    </Card>
+    </div>
   );
 }

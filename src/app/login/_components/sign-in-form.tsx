@@ -6,16 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useLogin } from "@/hooks/use-auth";
 import { useWorkspaceInfo } from "@/hooks/use-workspace";
-import { baseDomain, platformUrl } from "@/lib/tenant";
-
-const SHOW_DEMO = process.env.NEXT_PUBLIC_SHOW_DEMO_ACCOUNTS !== "false";
-const DEMO_PASSWORD = "devpassword";
-const DEMO = [
-  { label: "Administrator", user: "admin" },
-  { label: "Responder (Neha)", user: "neha" },
-  { label: "Reviewer (Vikram)", user: "vikram" },
-  { label: "Approver (Anita)", user: "anita" },
-];
+import { platformUrl } from "@/lib/tenant";
 
 /** Sign in to the workspace named by the address bar. */
 export function SignInForm({ tenant }: { tenant: string }) {
@@ -26,8 +17,8 @@ export function SignInForm({ tenant }: { tenant: string }) {
 
   if (workspace.isError) {
     return (
-      <div className="space-y-3 rounded-lg border border-line bg-paper-raised p-6">
-        <h1 className="text-lg font-semibold text-ink">Workspace not available</h1>
+      <div className="space-y-3 rounded-xl border border-line bg-paper-raised p-6 shadow-card">
+        <h1 className="font-display text-2xl font-semibold text-ink">Workspace not available</h1>
         <p className="text-sm text-ink-muted">{(workspace.error as Error).message}</p>
         <Button asChild variant="secondary" className="w-full">
           <a href={platformUrl("/login")}>Find another workspace</a>
@@ -39,14 +30,14 @@ export function SignInForm({ tenant }: { tenant: string }) {
   return (
     <>
       <form
-        className="space-y-4 rounded-lg border border-line bg-paper-raised p-6"
+        className="space-y-4 rounded-xl border border-line bg-paper-raised p-6 shadow-card"
         onSubmit={(e) => {
           e.preventDefault();
           login.mutate({ email, password });
         }}
       >
         <div>
-          <h1 className="text-lg font-semibold text-ink">Sign in</h1>
+          <h1 className="font-display text-2xl font-semibold text-ink">Sign in</h1>
           <p className="mt-1 text-sm text-ink-muted">
             to <span className="font-medium text-ink">{workspace.data?.name ?? tenant}</span>
           </p>
@@ -71,27 +62,6 @@ export function SignInForm({ tenant }: { tenant: string }) {
         </p>
       </form>
 
-      {SHOW_DEMO && (
-        <div className="mt-4 rounded-lg border border-dashed border-line-strong p-4">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-ink-faint">Demo accounts</p>
-          <div className="grid grid-cols-2 gap-2">
-            {DEMO.map((d) => (
-              <Button
-                key={d.user}
-                type="button"
-                variant="secondary"
-                size="sm"
-                onClick={() => {
-                  setEmail(`${d.user}@${tenant}.${baseDomain()}`);
-                  setPassword(DEMO_PASSWORD);
-                }}
-              >
-                {d.label}
-              </Button>
-            ))}
-          </div>
-        </div>
-      )}
     </>
   );
 }

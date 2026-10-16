@@ -1,37 +1,47 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCheck, CircleCheck, CirclePlus, Rocket, Send, Undo2, XCircle, type LucideIcon } from "lucide-react";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatDateTime } from "@/lib/format";
+import { cn } from "@/lib/utils";
 import type { HistoryAction, HistoryEntry } from "@/types/survey";
 
-const LABEL: Record<HistoryAction, string> = {
-  created: "Created",
-  published: "Published and assigned",
-  submitted: "Response submitted",
-  reviewed: "Passed review",
-  approved: "Approved",
-  returned: "Returned to responder",
-  closed: "Closed",
+const META: Record<HistoryAction, { label: string; icon: LucideIcon; tone: string }> = {
+  created: { label: "Created", icon: CirclePlus, tone: "bg-slate-soft text-slate" },
+  published: { label: "Published and assigned", icon: Rocket, tone: "bg-brand-soft text-brand-strong" },
+  submitted: { label: "Response submitted", icon: Send, tone: "bg-brand-soft text-brand-strong" },
+  reviewed: { label: "Passed review", icon: CheckCheck, tone: "bg-moss-soft text-moss" },
+  approved: { label: "Approved", icon: CircleCheck, tone: "bg-moss-soft text-moss" },
+  returned: { label: "Returned to responder", icon: Undo2, tone: "bg-rust-soft text-rust" },
+  closed: { label: "Closed", icon: XCircle, tone: "bg-slate-soft text-slate" },
 };
 
-/** The survey's activity log, newest first. */
+/** The survey's activity log as a vertical timeline, newest first. */
 export function ActivityCard({ history }: { history: HistoryEntry[] }) {
+  const items = [...history].reverse();
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="py-3">
         <CardTitle>Activity</CardTitle>
+        <span className="text-xs text-ink-faint">{items.length} events</span>
       </CardHeader>
-      <CardContent>
-        <ol className="space-y-4">
-          {[...history].reverse().map((h) => (
-            <li key={h.id} className="text-sm">
-              <p className="font-medium text-ink">{LABEL[h.action]}</p>
-              <p className="text-xs text-ink-faint">
-                {h.by?.full_name ?? "Unknown"} · {formatDateTime(h.at)}
-              </p>
-              {h.comment && <p className="mt-1 text-ink-muted">“{h.comment}”</p>}
+      <ul>
+        {items.map((h) => {
+          const m = META[h.action];
+          return (
+            <li key={h.id} className="flex gap-3 border-b border-line px-5 py-3 text-sm last:border-b-0">
+              <span className={cn("mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full", m.tone)}>
+                <m.icon className="h-3.5 w-3.5" />
+              </span>
+              <div className="min-w-0">
+                <p className="text-ink">{m.label}</p>
+                <p className="mt-0.5 text-xs text-ink-faint">
+                  {h.by?.full_name ?? "Unknown"} · {formatDateTime(h.at)}
+                </p>
+                {h.comment && <p className="mt-1.5 text-xs italic text-ink-muted">“{h.comment}”</p>}
+              </div>
             </li>
-          ))}
-        </ol>
-      </CardContent>
+          );
+        })}
+      </ul>
     </Card>
   );
 }
