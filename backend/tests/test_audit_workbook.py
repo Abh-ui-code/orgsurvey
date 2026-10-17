@@ -56,12 +56,29 @@ def test_workbook_describes_the_whole_flow(monkeypatch):
     )
     wb = load_workbook(BytesIO(audit.build_workbook(survey)))
 
-    assert wb.sheetnames == ["Summary", "Questions", "Audit trail", "Returns", "Answers by round"]
-    summary = dict(wb["Summary"].iter_rows(min_row=2, max_col=2, values_only=True))
-    assert summary["Times submitted"] == 2 and summary["Times returned"] == 1
-    assert summary["Returned to reviewer"] == 1 and summary["Question comments in total"] == 1
-    assert len(list(wb["Audit trail"].iter_rows(min_row=2))) == 5
-    returns = list(wb["Returns"].iter_rows(min_row=2, values_only=True))
-    assert returns[0][4] == "Responder and reviewer" and returns[0][8] == "Rate it" and returns[0][9] == "Too high, explain"
-    rounds = list(wb["Answers by round"].iter_rows(min_row=2, values_only=True))
-    assert rounds[1][3:] == (5, 3)
+    assert wb.sheetnames == ["Audit report"]
+    rows = [r for r in wb["Audit report"].iter_rows(values_only=True)]
+    cells = {c for r in rows for c in r if c is not None}
+
+    # Block 1: details and counts, label then value.
+    details = {r[0]: r[2] for r in rows if r[0]} | {r[3]: r[5] for r in rows if r[3]}
+    assert details["Times submitted"] == 2 and details["Times returned"] == 1
+    assert details["Returned to responder / reviewer"] == "1 / 1" and details["Question comments in total"] == 1
+
+    # Block 2: five steps; the return names who it went to and how many comments it carried.
+    start = next(i for i, r in enumerate(rows) if r[0] == "Step")
+    timeline = rows[start + 1:start + 6]
+    assert [r[2] for r in timeline] == ["Created", "Response submitted", "Returned", "Response submitted", "Approved"]
+    assert timeline[2][5] == "Responder and reviewer" and timeline[2][6] == 1 and timeline[2][7] == "See Q2"
+
+    # Block 3: one row per question, answer per submission, comments on the question.
+    start = next(i for i, r in enumerate(rows) if r[0] == "Q#")
+    q1_row, q2_row = rows[start + 1], rows[start + 2]
+    assert q1_row[7] == "None" and q1_row[4:6] == ("Yes", "Yes")
+    assert q2_row[4:6] == (5, 3)
+    assert "Approver) to Responder and reviewer" in q2_row[7] and "Too high, explain" in q2_row[7]
+    assert any(str(c).startswith("Submission 2") for c in cells)
+
+    # An answer that changed since the previous submission is highlighted.
+    ws = wb["Audit report"]
+    assert ws.cell(start + 3, 6).fill.fgColor.rgb.endswith("FFF4CF") and ws.cell(start + 2, 6).fill.fgColor.rgb.endswith("FFF4CF") is False
