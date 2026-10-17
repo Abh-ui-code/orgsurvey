@@ -12,6 +12,7 @@ import { useUnsavedChangesWarning } from "@/hooks/use-unsaved-changes-warning";
 import { cn } from "@/lib/utils";
 import type { AnswerValue, SurveyDetail } from "@/types/survey";
 import { useSaveDraft, useSubmitResponse } from "../_hooks/use-survey-actions";
+import { commentsByQuestion, QuestionComments } from "./question-comments";
 import { SectionedQuestions } from "./sectioned-questions";
 
 const AUTOSAVE_MS = 1500;
@@ -60,6 +61,7 @@ export function AnswerForm({ survey }: { survey: SurveyDetail }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [settled, round]);
 
+  const pinned = commentsByQuestion(survey.history, "responder");
   const questions = survey.sections.flatMap((s) => s.questions);
   const required = questions.filter((q) => q.required);
   const missing = required.filter((q) => !isAnswered(answers[q.id]));
@@ -127,6 +129,7 @@ export function AnswerForm({ survey }: { survey: SurveyDetail }) {
                 {q.text} {q.required && <span className="text-rust">*</span>}
               </p>
               {q.hint && <p className="text-xs text-ink-faint">{q.hint}</p>}
+              <QuestionComments comments={pinned[q.id]} />
               <AnswerField question={q} value={answers[q.id]} onChange={(v) => setAnswers({ ...answers, [q.id]: v })} />
               {flagged && <p className="text-xs font-medium text-rust">This question needs an answer.</p>}
             </li>

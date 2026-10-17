@@ -1,107 +1,98 @@
 "use client";
 
-import { Download } from "lucide-react";
-import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { FileSpreadsheet } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
 import { PermissionGate } from "@/components/permission-gate";
+import { CategoryBadge } from "@/components/shared/category-badge";
 import { Button } from "@/components/ui/button";
-import { downloadCsv } from "@/lib/csv";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DataTable, type ColumnDef } from "@/components/ui/data-table";
 import { PageHeader } from "@/components/ui/page-header";
-import { statusLabel } from "@/components/ui/status-badge";
-import type { CategoryProgress, UnitProgress } from "@/types/reports";
-import { useReportSummary } from "./_hooks/use-reports";
-
-const percent = (done: number, total: number) => (total ? `${Math.round((done / total) * 100)}%` : "—");
-
-const unitColumns: ColumnDef<UnitProgress & { id: string }>[] = [
-  { key: "name", label: "Org block", render: (r) => <span className="font-medium text-ink">{r.name}</span> },
-  { key: "total", label: "Surveys", render: (r) => r.total },
-  { key: "approved", label: "Approved", render: (r) => r.approved },
-  { key: "returned", label: "Returned", render: (r) => r.returned },
-  { key: "rate", label: "Completion", render: (r) => percent(r.approved, r.total) },
-];
-
-const categoryColumns: ColumnDef<CategoryProgress & { id: string }>[] = [
-  { key: "label", label: "Category", render: (r) => <span className="font-medium text-ink">{r.label}</span> },
-  { key: "total", label: "Surveys", render: (r) => r.total },
-  { key: "in_progress", label: "In progress", render: (r) => r.in_progress },
-  { key: "approved", label: "Approved", render: (r) => r.approved },
-  { key: "rate", label: "Completion", render: (r) => percent(r.approved, r.total) },
-];
+import { SearchInput } from "@/components/ui/search-input";
+import { SurveyStatusBadge } from "@/components/ui/status-badge";
+import { useDebounced } from "@/hooks/use-debounced";
+import { useSurveyList } from "@/hooks/use-surveys";
+import { downloadFile } from "@/lib/api";
+import type { Survey } from "@/types/survey";
 
 function Reports() {
-  const report = useReportSummary();
-  const byStatus = (report.data?.by_status ?? []).map((s) => ({ status: statusLabel(s.status), count: s.count }));
+  const [search, setSearch] = useState("");
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(25);
+  const [busy, setBusy] = useState<string | null>(null);
+  const surveys = useSurveyList({ search: useDebounced(search), page, page_size: pageSize, ordering: "-created_at" });
 
-  function exportCsv() {
-    if (!report.data) return;
-    downloadCsv("survey-report", [
-      ["Surveys by workflow stage"],
-      ["Stage", "Surveys"],
-      ...byStatus.map((r) => [r.status, r.count]),
-      [],
-      ["Rolled up by org block"],
-      ["Org block", "Surveys", "Approved", "Returned", "Completion"],
-      ...report.data.by_unit.map((r) => [r.name, r.total, r.approved, r.returned, percent(r.approved, r.total)]),
-      [],
-      ["By survey category"],
-      ["Category", "Surveys", "In progress", "Approved", "Completion"],
-      ...report.data.by_category.map((r) => [r.label, r.total, r.in_progress, r.approved, percent(r.approved, r.total)]),
-    ]);
+  async function download(survey: Survey) {
+    setBusy(survey.id);
+    try {
+      await downloadFile(`/reports/surveys/${survey.id}/audit/`, "survey-audit-trail.xlsx");
+    } catch (e) {
+      toast.error((e as Error).message);
+    } finally {
+      setBusy(null);
+    }
   }
+
+  const columns: ColumnDef<Survey>[] = [
+    {
+      key: "title",
+      label: "Survey",
+      render: (s) => (
+        <div>
+          <div className="font-medium text-ink">{s.title}</div>
+          <div className="mt-1">
+            <CategoryBadge label={s.category.label} color={s.category.color} />
+          </div>
+        </div>
+      ),
+    },
+    { key: "status", label: "Status", render: (s) => <SurveyStatusBadge status={s.status} /> },
+    { key: "unit", label: "Aimed at", render: (s) => s.target_unit.name },
+    {
+      key: "people",
+      label: "Responder → reviewer → approver",
+      render: (s) => [s.responder, s.reviewer, s.approver].map((p) => p?.full_name ?? "—").join(" → "),
+    },
+    {
+      key: "download",
+      label: "",
+      render: (s) => (
+        <Button variant="secondary" size="sm" loading={busy === s.id} disabled={s.status === "draft"} onClick={() => download(s)}>
+          <FileSpreadsheet className="h-4 w-4" /> Audit trail (Excel)
+        </Button>
+      ),
+    },
+  ];
 
   return (
     <div className="space-y-4">
       <PageHeader
         title="Reports"
-        description="Survey progress, rolled up through the org hierarchy."
-        actions={
-          <Button variant="secondary" onClick={exportCsv} disabled={!report.data}>
-            <Download className="h-4 w-4" /> Export CSV
-          </Button>
-        }
+        description="Download a survey's full audit trail as an Excel workbook: its questions, every step from response to approval, and each return with its comments."
       />
-      <Card>
-        <CardHeader>
-          <CardTitle>Surveys by workflow stage</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="h-64">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={byStatus} margin={{ left: -20 }}>
-                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="hsl(var(--line))" />
-                <XAxis dataKey="status" tick={{ fontSize: 12, fill: "hsl(var(--ink-muted))" }} tickLine={false} axisLine={false} />
-                <YAxis allowDecimals={false} tick={{ fontSize: 12, fill: "hsl(var(--ink-muted))" }} tickLine={false} axisLine={false} />
-                <Tooltip cursor={{ fill: "hsl(var(--paper-sunken))" }} />
-                <Bar dataKey="count" fill="hsl(var(--brand))" radius={[4, 4, 0, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        </CardContent>
-      </Card>
-
-      <div>
-        <h2 className="mb-2 text-sm font-semibold text-ink">Rolled up by org block</h2>
-        <DataTable
-          columns={unitColumns}
-          data={(report.data?.by_unit ?? []).map((r) => ({ ...r, id: r.unit_id }))}
-          isLoading={report.isPending}
-          isError={report.isError}
-          emptyTitle="No survey data yet"
-        />
-      </div>
-
-      <div>
-        <h2 className="mb-2 text-sm font-semibold text-ink">By survey category</h2>
-        <DataTable
-          columns={categoryColumns}
-          data={(report.data?.by_category ?? []).map((r) => ({ ...r, id: r.category_id }))}
-          isLoading={report.isPending}
-          isError={report.isError}
-          emptyTitle="No survey data yet"
-        />
-      </div>
+      <SearchInput
+        value={search}
+        onChange={(v) => {
+          setSearch(v);
+          setPage(1);
+        }}
+        placeholder="Search surveys"
+        className="w-64"
+      />
+      <DataTable
+        columns={columns}
+        data={surveys.data?.results ?? []}
+        isLoading={surveys.isPending}
+        isError={surveys.isError}
+        emptyTitle="No surveys yet"
+        isFetching={surveys.isFetching}
+        pagination={{ page, pageSize, total: surveys.data?.count ?? 0 }}
+        onPageChange={setPage}
+        onPageSizeChange={(size) => {
+          setPageSize(size);
+          setPage(1);
+        }}
+      />
     </div>
   );
 }

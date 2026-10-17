@@ -3,6 +3,7 @@ import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatDateTime } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import type { HistoryAction, HistoryEntry } from "@/types/survey";
+import { AUDIENCE_LABEL } from "./question-comments";
 
 const META: Record<HistoryAction, { label: string; icon: LucideIcon; tone: string }> = {
   created: { label: "Created", icon: CirclePlus, tone: "bg-slate-soft text-slate" },
@@ -32,11 +33,16 @@ export function ActivityCard({ history }: { history: HistoryEntry[] }) {
                 <m.icon className="h-3.5 w-3.5" />
               </span>
               <div className="min-w-0">
-                <p className="text-ink">{m.label}</p>
+                <p className="text-ink">{h.action === "returned" && h.audience ? AUDIENCE_LABEL[h.audience] : m.label}</p>
                 <p className="mt-0.5 text-xs text-ink-faint">
                   {h.by?.full_name ?? "Unknown"} · {formatDateTime(h.at)}
                 </p>
                 {h.comment && <p className="mt-1.5 text-xs italic text-ink-muted">“{h.comment}”</p>}
+                {h.question_comments.length > 0 && (
+                  <p className="mt-1 text-xs text-ink-faint">
+                    {h.question_comments.length} question note{h.question_comments.length === 1 ? "" : "s"}
+                  </p>
+                )}
               </div>
             </li>
           );

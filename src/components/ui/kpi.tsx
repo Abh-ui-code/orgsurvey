@@ -27,7 +27,7 @@ export function Kpi({
   return (
     <div
       className={cn(
-        "rounded-xl border border-line border-l-[3px] bg-paper-raised p-4 shadow-card",
+        "h-full min-h-[7rem] rounded-xl border border-line border-l-[3px] bg-paper-raised p-4 shadow-card",
         ACCENT[accent],
         className,
       )}

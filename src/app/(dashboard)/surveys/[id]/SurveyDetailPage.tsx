@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { EmptyState } from "@/components/ui/empty-state";
@@ -25,6 +26,8 @@ export default function SurveyDetailPage() {
   const { id } = useParams<{ id: string }>();
   const survey = useSurvey(id);
   const { user: me, isAdmin } = usePermissions();
+  // Notes the reviewer or approver is pinning to questions before returning.
+  const [notes, setNotes] = useState<Record<string, string>>({});
 
   if (survey.isPending) return <Skeleton className="h-96 w-full" />;
   if (survey.isError || !survey.data) {
@@ -50,6 +53,10 @@ export default function SurveyDetailPage() {
   const responded = s.history.some((h) => h.action === "submitted");
   const lastReturn = lastOf(s.history, "returned");
   const lastClose = lastOf(s.history, "closed");
+  // An approver can send it back to the reviewer alone: the survey is back in review.
+  const lastEvent = s.history[s.history.length - 1];
+  const sentBackToReviewer = s.status === "awaiting_review" && lastEvent?.action === "returned" && lastEvent.audience === "reviewer";
+  const deciding = canReview || canApprove;
 
   return (
     <div className="space-y-5">
@@ -80,7 +87,13 @@ export default function SurveyDetailPage() {
           )}
           {s.status === "returned" && lastReturn && (
             <Banner tone="rust" title={`Returned by ${lastReturn.by?.full_name ?? "someone"}`}>
-              {lastReturn.comment}
+              {lastReturn.audience === "both" && "(also sent to the reviewer) "}
+              {lastReturn.comment || "See the notes on the questions below."}
+            </Banner>
+          )}
+          {sentBackToReviewer && lastEvent && (
+            <Banner tone="rust" title={`Returned to the reviewer by ${lastEvent.by?.full_name ?? "the approver"}`}>
+              {lastEvent.comment || "See the notes on the questions below."}
             </Banner>
           )}
           {s.status === "closed" && (
@@ -94,7 +107,11 @@ export default function SurveyDetailPage() {
               {canRespond ? (
                 <AnswerForm survey={s} />
               ) : responded ? (
-                <AnswersReadOnly survey={s} />
+                <AnswersReadOnly
+                  survey={s}
+                  notes={deciding ? notes : undefined}
+                  onNote={deciding ? (id, text) => setNotes((n) => ({ ...n, [id]: text })) : undefined}
+                />
               ) : (
                 <Card>
                 <EmptyState
@@ -103,8 +120,8 @@ export default function SurveyDetailPage() {
                 />
                 </Card>
               )}
-              {canReview && <DecisionPanel survey={s} role="reviewer" />}
-              {canApprove && <DecisionPanel survey={s} role="approver" />}
+              {canReview && <DecisionPanel survey={s} role="reviewer" notes={notes} onSent={() => setNotes({})} />}
+              {canApprove && <DecisionPanel survey={s} role="approver" notes={notes} onSent={() => setNotes({})} />}
             </div>
 
             <div className="space-y-5 self-start lg:sticky lg:top-4">

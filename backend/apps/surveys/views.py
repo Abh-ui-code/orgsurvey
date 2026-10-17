@@ -89,7 +89,7 @@ class SurveyViewSet(TenantScopedMixin, viewsets.ModelViewSet):
             .annotate(question_count=Count("sections__questions", distinct=True), last_activity=Max("events__created_at"))
         )
         if self.action in self.DETAIL_ACTIONS:
-            queryset = queryset.prefetch_related("sections__questions", "events__by")
+            queryset = queryset.prefetch_related("sections__questions", "events__by", "events__question_comments__author")
         return scope_surveys(queryset, self.request.user, member_for(self.request))
 
     def get_serializer_class(self):

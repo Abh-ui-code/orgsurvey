@@ -104,12 +104,27 @@ export interface SurveySection {
 
 export type HistoryAction = "created" | "published" | "submitted" | "reviewed" | "approved" | "returned" | "closed";
 
+/** Who a return was sent to. */
+export type ReturnAudience = "responder" | "reviewer" | "both";
+
+/** A note pinned to one question by whoever returned the survey. */
+export interface QuestionComment {
+  id: string;
+  question_id: string;
+  by: Person | null;
+  at: string;
+  text: string;
+}
+
 export interface HistoryEntry {
   id: string;
   action: HistoryAction;
   by: Person | null;
   at: string;
   comment: string;
+  /** Set on a return: responder, reviewer or both. Empty otherwise. */
+  audience: ReturnAudience | "";
+  question_comments: QuestionComment[];
 }
 
 /** What is still missing before a draft can publish. */

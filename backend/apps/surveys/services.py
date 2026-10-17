@@ -5,7 +5,10 @@ stay thin; the lifecycle reads top to bottom here.
     draft --publish--> awaiting_response --responder submits--> awaiting_review
     awaiting_review   --reviewer passes--> awaiting_approval
     awaiting_approval --approver approves--> approved
-    reviewer or approver may return it (comment required) --> returned;
+    the reviewer may return it to the responder --> returned;
+    the approver may return it to the responder or both --> returned, or to
+    the reviewer alone --> awaiting_review. A return carries a comment and/or
+    notes pinned to individual questions.
     the responder revises and resubmits --> awaiting_review
     an administrator may close a live survey at any point.
 
@@ -19,15 +22,18 @@ from django.utils import timezone
 from apps.core.exceptions import ApiError
 from apps.core.question_types import is_empty, validate_answer
 from apps.organisation.models import Member
-from apps.surveys.models import Section, Survey, SurveyEvent, SurveyQuestion
+from apps.surveys.models import QuestionComment, Section, Survey, SurveyEvent, SurveyQuestion
 
 FROZEN = "Published surveys can't be changed. Duplicate it to make changes."
 ROLES = ("responder", "reviewer", "approver")
+RETURN_AUDIENCES = ("responder", "reviewer", "both")
 QUESTION_FIELDS = ("text", "type", "options", "hint", "required")
 
 
-def _log(survey, action, by, comment=""):
-    SurveyEvent.objects.create(survey=survey, action=action, by=by, comment=(comment or "").strip())
+def _log(survey, action, by, comment="", audience="", snapshot=None):
+    return SurveyEvent.objects.create(
+        survey=survey, action=action, by=by, comment=(comment or "").strip(), audience=audience, snapshot=snapshot or {}
+    )
 
 
 def require_draft(survey):
@@ -256,7 +262,7 @@ def submit_response(survey: Survey, user, answers) -> Survey:
     survey.draft_answers = {}
     survey.status = "awaiting_review"
     survey.save(update_fields=["answers", "draft_answers", "status"])
-    _log(survey, "submitted", user)
+    _log(survey, "submitted", user, snapshot=cleaned)
     return survey
 
 
@@ -283,34 +289,66 @@ def save_draft(survey: Survey, user, answers) -> Survey:
     return survey
 
 
-def _need_comment(decision, comment):
-    if decision == "return" and not (comment or "").strip():
-        raise ApiError("Add a comment explaining what to fix.")
+def _clean_question_comments(survey, items):
+    """Validate notes pinned to questions: [{question_id, text}, ...]. Blank
+    notes are dropped; a note on a question outside this survey is an error."""
+    known = {str(q.id): q for q in all_questions(survey)}
+    cleaned = {}
+    for item in items or []:
+        text = (item.get("text") or "").strip()
+        if not text:
+            continue
+        question = known.get(str(item.get("question_id")))
+        if question is None:
+            raise ApiError("A comment refers to a question that isn't in this survey.")
+        cleaned[question.pk] = (question, text)
+    return list(cleaned.values())
+
+
+def _return(survey, user, comment, question_comments, audience):
+    """Send the survey back. A return needs something to act on: a general
+    comment, a note on a question, or both."""
+    notes = _clean_question_comments(survey, question_comments)
+    if not (comment or "").strip() and not notes:
+        raise ApiError("Add a comment, or a note on a question, explaining what to fix.")
+    survey.status = "awaiting_review" if audience == "reviewer" else "returned"
+    survey.save(update_fields=["status"])
+    event = _log(survey, "returned", user, comment, audience)
+    QuestionComment.objects.bulk_create(
+        [QuestionComment(event=event, question=q, author=user, text=text) for q, text in notes]
+    )
 
 
 @transaction.atomic
-def review(survey: Survey, user, decision, comment) -> Survey:
+def review(survey: Survey, user, decision, comment, question_comments=None, audience="responder") -> Survey:
     if survey.reviewer_id != user.pk:
         raise ApiError("Only the assigned reviewer can review.")
     _expect(survey, "awaiting_review")
     if decision not in ("pass", "return"):
         raise ApiError("Decision must be 'pass' or 'return'.")
-    _need_comment(decision, comment)
-    survey.status = "awaiting_approval" if decision == "pass" else "returned"
-    survey.save(update_fields=["status"])
-    _log(survey, "reviewed" if decision == "pass" else "returned", user, comment)
+    if decision == "return":
+        # The reviewer can only send it back down the chain, to the responder.
+        _return(survey, user, comment, question_comments, "responder")
+    else:
+        survey.status = "awaiting_approval"
+        survey.save(update_fields=["status"])
+        _log(survey, "reviewed", user, comment)
     return survey
 
 
 @transaction.atomic
-def approve(survey: Survey, user, decision, comment) -> Survey:
+def approve(survey: Survey, user, decision, comment, question_comments=None, audience="responder") -> Survey:
     if survey.approver_id != user.pk:
         raise ApiError("Only the assigned approver can approve.")
     _expect(survey, "awaiting_approval")
     if decision not in ("approve", "return"):
         raise ApiError("Decision must be 'approve' or 'return'.")
-    _need_comment(decision, comment)
-    survey.status = "approved" if decision == "approve" else "returned"
-    survey.save(update_fields=["status"])
-    _log(survey, "approved" if decision == "approve" else "returned", user, comment)
+    if decision == "return":
+        if audience not in RETURN_AUDIENCES:
+            raise ApiError("Choose who to return it to: the responder, the reviewer or both.")
+        _return(survey, user, comment, question_comments, audience)
+    else:
+        survey.status = "approved"
+        survey.save(update_fields=["status"])
+        _log(survey, "approved", user, comment)
     return survey

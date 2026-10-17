@@ -3,7 +3,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { api } from "@/lib/api";
 import { reportKeys, surveyKeys } from "@/lib/query-keys";
-import type { AnswerValue, SurveyDetail } from "@/types/survey";
+import type { AnswerValue, ReturnAudience, SurveyDetail } from "@/types/survey";
 
 /** Everything the survey screens can do to one survey, bound to its id.
  * Each write refreshes the survey lists and the report figures, since both
@@ -51,11 +51,17 @@ export function useSaveDraft(id: string) {
 /** The three-role workflow. */
 export const useSubmitResponse = (id: string) =>
   useSurveyMutation((answers: Record<string, AnswerValue>) => api.post<SurveyDetail>(`/surveys/${id}/submit/`, { answers }));
+/** Notes pinned to questions, sent with a return: { question id: note }. */
+export type QuestionNotes = Record<string, string>;
+const toPayload = (notes: QuestionNotes) =>
+  Object.entries(notes).map(([question_id, text]) => ({ question_id, text }));
+
 export const useReviewSurvey = (id: string) =>
-  useSurveyMutation(({ decision, comment }: { decision: "pass" | "return"; comment: string }) =>
-    api.post<SurveyDetail>(`/surveys/${id}/review/`, { decision, comment }),
+  useSurveyMutation(({ decision, comment, notes = {} }: { decision: "pass" | "return"; comment: string; notes?: QuestionNotes }) =>
+    api.post<SurveyDetail>(`/surveys/${id}/review/`, { decision, comment, question_comments: toPayload(notes) }),
   );
 export const useApproveSurvey = (id: string) =>
-  useSurveyMutation(({ decision, comment }: { decision: "approve" | "return"; comment: string }) =>
-    api.post<SurveyDetail>(`/surveys/${id}/approve/`, { decision, comment }),
+  useSurveyMutation(
+    ({ decision, comment, notes = {}, audience }: { decision: "approve" | "return"; comment: string; notes?: QuestionNotes; audience?: ReturnAudience }) =>
+      api.post<SurveyDetail>(`/surveys/${id}/approve/`, { decision, comment, question_comments: toPayload(notes), audience }),
   );

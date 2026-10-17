@@ -6,7 +6,7 @@ from rest_framework import serializers
 from apps.core.serializers import IdField, PersonSerializer, QuestionFieldsSerializer, UnitRefSerializer
 from apps.organisation.models import OrgUnit
 from apps.surveys import services
-from apps.surveys.models import Section, Survey, SurveyCategory, SurveyEvent, SurveyQuestion
+from apps.surveys.models import QuestionComment, Section, Survey, SurveyCategory, SurveyEvent, SurveyQuestion
 from apps.surveys.scoping import task_for
 
 User = get_user_model()
@@ -78,13 +78,25 @@ class SectionSerializer(serializers.ModelSerializer):
         return value
 
 
-class SurveyEventSerializer(serializers.ModelSerializer):
-    by = PersonSerializer(read_only=True)
+class QuestionCommentSerializer(serializers.ModelSerializer):
+    question_id = serializers.UUIDField(read_only=True)
+    by = PersonSerializer(source="author", read_only=True)
     at = serializers.DateTimeField(source="created_at", read_only=True)
 
     class Meta:
+        model = QuestionComment
+        fields = ["id", "question_id", "by", "at", "text"]
+        read_only_fields = fields
+
+
+class SurveyEventSerializer(serializers.ModelSerializer):
+    by = PersonSerializer(read_only=True)
+    at = serializers.DateTimeField(source="created_at", read_only=True)
+    question_comments = QuestionCommentSerializer(many=True, read_only=True)
+
+    class Meta:
         model = SurveyEvent
-        fields = ["id", "action", "by", "at", "comment"]
+        fields = ["id", "action", "by", "at", "comment", "audience", "question_comments"]
         read_only_fields = fields
 
 
@@ -198,9 +210,17 @@ class DraftSerializer(serializers.Serializer):
     answers = serializers.DictField()
 
 
+class QuestionNoteSerializer(serializers.Serializer):
+    question_id = serializers.UUIDField()
+    text = serializers.CharField(allow_blank=True)
+
+
 class DecisionSerializer(serializers.Serializer):
     decision = serializers.CharField()
     comment = serializers.CharField(required=False, allow_blank=True, default="")
+    question_comments = QuestionNoteSerializer(many=True, required=False, default=list)
+    # Who a return goes to. The reviewer's is always the responder.
+    audience = serializers.ChoiceField(choices=["responder", "reviewer", "both"], required=False, default="responder")
 
 
 class CloseSerializer(serializers.Serializer):

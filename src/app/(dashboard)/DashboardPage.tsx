@@ -18,7 +18,7 @@ import { useSurveyList, useSurveyTasks } from "@/hooks/use-surveys";
 /** A KPI that jumps to the matching, already-filtered survey list. */
 function KpiLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <Link href={href} className="block rounded-lg transition-shadow hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40">
+    <Link href={href} className="block h-full rounded-xl transition-shadow hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40">
       {children}
     </Link>
   );

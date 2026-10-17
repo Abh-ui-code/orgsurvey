@@ -126,3 +126,26 @@ export const api = {
   patch: <T>(path: string, body: unknown) => request<T>("PATCH", path, body),
   delete: (path: string) => request<null>("DELETE", path),
 };
+
+/** Download a file the API builds (an Excel report, say) and hand it to the
+ * browser to save. Uses the same sign-in and token refresh as every call. */
+export async function downloadFile(path: string, fallbackName: string): Promise<void> {
+  const send = () => fetch(`${apiBase()}${path}`, { headers: tokens.access ? { Authorization: `Bearer ${tokens.access}` } : {} });
+  let res: Response;
+  try {
+    res = await send();
+    if (res.status === 401 && (await refreshAccess())) res = await send();
+  } catch {
+    throw new ApiError("Can't reach the server. Is the backend running?", 0);
+  }
+  if (!res.ok) throw new ApiError(messageOf(res.status, await parse(res)), res.status);
+  const name = /filename="?([^";]+)"?/.exec(res.headers.get("Content-Disposition") ?? "")?.[1] ?? fallbackName;
+  const url = URL.createObjectURL(await res.blob());
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = name;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}

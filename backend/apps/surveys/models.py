@@ -119,6 +119,26 @@ class SurveyEvent(BaseModel):
     action = models.CharField(max_length=20, choices=[(a, a) for a in ACTIONS])
     by = user_fk()
     comment = models.TextField(blank=True)
+    # For a return: who it was sent back to -- responder, reviewer or both.
+    audience = models.CharField(max_length=10, blank=True)
+    # For a submission: the answers as they were sent, kept for the audit
+    # trail because a resubmission overwrites `Survey.answers`.
+    snapshot = models.JSONField(default=dict, blank=True)
+
+    class Meta:
+        app_label = "surveys"
+        ordering = ["created_at", "id"]
+
+
+class QuestionComment(BaseModel):
+    """A note a reviewer or approver pinned to one question when returning a
+    survey. It belongs to the return event that carried it, so the
+    audience (responder, reviewer or both) is read from there."""
+
+    event = models.ForeignKey(SurveyEvent, on_delete=models.CASCADE, related_name="question_comments")
+    question = models.ForeignKey(SurveyQuestion, on_delete=models.CASCADE, related_name="comments")
+    author = user_fk()
+    text = models.TextField()
 
     class Meta:
         app_label = "surveys"
