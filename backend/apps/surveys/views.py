@@ -1,5 +1,5 @@
 import django_filters
-from django.db.models import Count, Max
+from django.db.models import Count, Max, Q
 from django.utils import timezone
 from django.shortcuts import get_object_or_404
 from rest_framework import status, viewsets
@@ -86,7 +86,12 @@ class SurveyViewSet(TenantScopedMixin, viewsets.ModelViewSet):
     def get_queryset(self):
         queryset = (
             Survey.objects.select_related("category", "target_unit", "responder", "reviewer", "approver", "created_by")
-            .annotate(question_count=Count("sections__questions", distinct=True), last_activity=Max("events__created_at"))
+            .annotate(
+                question_count=Count("sections__questions", distinct=True),
+                last_activity=Max("events__created_at"),
+                return_count=Count("events", filter=Q(events__action="returned"), distinct=True),
+                submission_count=Count("events", filter=Q(events__action="submitted"), distinct=True),
+            )
         )
         if self.action in self.DETAIL_ACTIONS:
             queryset = queryset.prefetch_related("sections__questions", "events__by", "events__question_comments__author")
@@ -150,7 +155,7 @@ class SurveyViewSet(TenantScopedMixin, viewsets.ModelViewSet):
 
     @action(detail=True, methods=["post"], url_path="save-draft", permission_classes=[IsTenantMember])
     def save_draft(self, request, pk=None):
-        """Keep the responder's work in progress without submitting it."""
+        """Keep the respondent's work in progress without submitting it."""
         survey = self.get_object()
         body = DraftSerializer(data=request.data)
         body.is_valid(raise_exception=True)

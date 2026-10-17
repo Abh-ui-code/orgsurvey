@@ -7,9 +7,9 @@ export interface PinnedComment extends QuestionComment {
 }
 
 export const AUDIENCE_LABEL: Record<ReturnAudience, string> = {
-  responder: "Returned to responder",
+  responder: "Returned to respondent",
   reviewer: "Returned to reviewer",
-  both: "Returned to responder and reviewer",
+  both: "Returned to respondent and reviewer",
 };
 
 /** Every note pinned to a question in the survey's returns, grouped by

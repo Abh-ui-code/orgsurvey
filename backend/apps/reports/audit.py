@@ -28,7 +28,7 @@ ACTION_LABELS = {
     "returned": "Returned",
     "closed": "Closed",
 }
-AUDIENCE_LABELS = {"responder": "Responder", "reviewer": "Reviewer", "both": "Responder and reviewer"}
+AUDIENCE_LABELS = {"responder": "Respondent", "reviewer": "Reviewer", "both": "Respondent and reviewer"}
 HEADER_FILL = PatternFill("solid", fgColor="1F6F78")
 HEADER_FONT = Font(bold=True, color="FFFFFF")
 BAND_FILL = PatternFill("solid", fgColor="E3F0F1")
@@ -189,7 +189,7 @@ def build_workbook(survey: Survey) -> bytes:
     for role in ("responder", "reviewer", "approver"):
         person = getattr(survey, role)
         if person:
-            role_of[person.pk] = role.capitalize()
+            role_of[person.pk] = "Respondent" if role == "responder" else role.capitalize()
     submissions = [e for e in events if e.action == "submitted"]
     returns = [e for e in events if e.action == "returned"]
     published = next((e for e in events if e.action == "published"), None)
@@ -208,10 +208,10 @@ def build_workbook(survey: Survey) -> bytes:
         ("Question comments in total", sum(len(e.question_comments.all()) for e in returns)), ("Created by", _name(survey.created_by)),
     ]
     right = [
-        ("Responder", _name(survey.responder)), ("Reviewer", _name(survey.reviewer)), ("Approver", _name(survey.approver)),
+        ("Respondent", _name(survey.responder)), ("Reviewer", _name(survey.reviewer)), ("Approver", _name(survey.approver)),
         ("Published", _when(survey.published_at)), ("Finished", _when(finished.created_at) if finished else ""),
         ("Days from publish to finish", days), ("Times returned", len(returns)),
-        ("Returned to responder / reviewer", f"{sum(1 for e in returns if e.audience in ('responder', 'both'))} / {sum(1 for e in returns if e.audience in ('reviewer', 'both'))}"),
+        ("Returned to respondent / reviewer", f"{sum(1 for e in returns if e.audience in ('responder', 'both'))} / {sum(1 for e in returns if e.audience in ('reviewer', 'both'))}"),
         ("Report generated", _when(timezone.now())),
     ]
     for l, r in zip(left, right):

@@ -51,7 +51,7 @@ function Reports() {
     { key: "unit", label: "Aimed at", render: (s) => s.target_unit.name },
     {
       key: "people",
-      label: "Responder → reviewer → approver",
+      label: "Respondent → reviewer → approver",
       render: (s) => [s.responder, s.reviewer, s.approver].map((p) => p?.full_name ?? "—").join(" → "),
     },
     {

@@ -10,7 +10,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { usePermissions } from "@/hooks/use-permissions";
 import { useSurvey } from "@/hooks/use-surveys";
 import { daysSince, sinceText } from "@/lib/format";
-import { LIVE_STATUSES, type HistoryEntry } from "@/types/survey";
+import { LIVE_STATUSES, roleName, type HistoryEntry } from "@/types/survey";
 import { ActivityCard } from "./_components/activity-card";
 import { AnswerForm } from "./_components/answer-form";
 import { AnswersReadOnly } from "./_components/answers-read-only";
@@ -81,7 +81,7 @@ export default function SurveyDetailPage() {
 
           {s.is_overdue && s.waiting_on && (
             <Banner tone="rust" title="This survey is overdue">
-              It has been with {s.waiting_on.person.full_name} ({s.waiting_on.role}) {sinceText(daysSince(s.stage_since))}.
+              It has been with {s.waiting_on.person.full_name} ({roleName(s.waiting_on.role)}) {sinceText(daysSince(s.stage_since))}.
               {isAdmin && " You can move the due date or swap the person under People & deadline."}
             </Banner>
           )}
@@ -116,7 +116,7 @@ export default function SurveyDetailPage() {
                 <Card>
                 <EmptyState
                   title="No response yet"
-                  description={s.status === "closed" ? "This survey was closed before it was answered." : `Waiting for ${s.responder?.full_name ?? "the responder"} to respond.`}
+                  description={s.status === "closed" ? "This survey was closed before it was answered." : `Waiting for ${s.responder?.full_name ?? "the respondent"} to respond.`}
                 />
                 </Card>
               )}

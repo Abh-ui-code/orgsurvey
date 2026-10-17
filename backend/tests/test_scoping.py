@@ -35,6 +35,6 @@ def test_nobody_has_a_task_on_a_finished_or_unpublished_survey():
 
 
 def test_a_person_only_has_a_task_at_their_own_stage():
-    assert task_for(survey("awaiting_review"), person("r")) is None  # the responder is done
+    assert task_for(survey("awaiting_review"), person("r")) is None  # the respondent is done
     assert task_for(survey("awaiting_review"), person("a")) is None  # the approver is not up yet
     assert task_for(survey("awaiting_response"), person("v")) is None

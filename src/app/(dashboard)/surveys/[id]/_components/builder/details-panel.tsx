@@ -114,10 +114,10 @@ export function DetailsPanel({ survey, onDirtyChange }: { survey: SurveyDetail; 
             <DrawerField label="Aimed at" required hint="The org block this survey is about.">
               <UnitSelect value={form.target_unit_id} onChange={(id) => patch("target_unit_id", id)} />
             </DrawerField>
-            <DrawerField label="Description" hint="For admins. Responders see the instructions below.">
+            <DrawerField label="Description" hint="For admins. Respondents see the instructions below.">
               <Textarea rows={2} value={form.description} onChange={(e) => patch("description", e.target.value)} />
             </DrawerField>
-            <DrawerField label="Instructions" hint="Shown to the responder above the questions.">
+            <DrawerField label="Instructions" hint="Shown to the respondent above the questions.">
               <Textarea rows={2} value={form.instructions} onChange={(e) => patch("instructions", e.target.value)} />
             </DrawerField>
           </div>

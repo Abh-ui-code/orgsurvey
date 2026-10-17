@@ -63,7 +63,7 @@ export function QuestionFormFields({ value, onChange }: { value: QuestionDraft; 
           <Textarea rows={4} value={value.optionsText} onChange={(e) => onChange({ ...value, optionsText: e.target.value })} />
         </DrawerField>
       )}
-      <DrawerField label="Hint" hint="Shown under the question to help the responder.">
+      <DrawerField label="Hint" hint="Shown under the question to help the respondent.">
         <Input value={value.hint} onChange={(e) => onChange({ ...value, hint: e.target.value })} />
       </DrawerField>
       <label className="flex items-center gap-2 text-sm text-ink">

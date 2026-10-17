@@ -96,7 +96,7 @@ class SurveyEventSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = SurveyEvent
-        fields = ["id", "action", "by", "at", "comment", "audience", "question_comments"]
+        fields = ["id", "action", "by", "at", "comment", "audience", "snapshot", "question_comments"]
         read_only_fields = fields
 
 
@@ -108,6 +108,8 @@ class SurveyListSerializer(serializers.ModelSerializer):
     reviewer = PersonSerializer(read_only=True)
     approver = PersonSerializer(read_only=True)
     question_count = serializers.IntegerField(read_only=True, default=0)
+    return_count = serializers.IntegerField(read_only=True, default=0)
+    submission_count = serializers.IntegerField(read_only=True, default=0)
     my_task = serializers.SerializerMethodField()
     waiting_on = serializers.SerializerMethodField()
     stage_since = serializers.SerializerMethodField()
@@ -118,7 +120,7 @@ class SurveyListSerializer(serializers.ModelSerializer):
         fields = [
             "id", "title", "description", "status", "category", "target_unit",
             "responder", "reviewer", "approver", "due_date", "is_overdue", "question_count",
-            "my_task", "waiting_on", "stage_since", "published_at", "created_at",
+            "return_count", "submission_count", "my_task", "waiting_on", "stage_since", "published_at", "created_at",
         ]
         read_only_fields = fields
 
@@ -163,7 +165,7 @@ class SurveyDetailSerializer(SurveyListSerializer):
 
     def to_representation(self, survey):
         data = super().to_representation(survey)
-        # Work in progress belongs to the responder alone.
+        # Work in progress belongs to the respondent alone.
         request = self.context.get("request")
         if request is None or survey.responder_id != request.user.pk:
             data["draft_answers"] = {}
@@ -219,7 +221,7 @@ class DecisionSerializer(serializers.Serializer):
     decision = serializers.CharField()
     comment = serializers.CharField(required=False, allow_blank=True, default="")
     question_comments = QuestionNoteSerializer(many=True, required=False, default=list)
-    # Who a return goes to. The reviewer's is always the responder.
+    # Who a return goes to. The reviewer's is always the respondent.
     audience = serializers.ChoiceField(choices=["responder", "reviewer", "both"], required=False, default="responder")
 
 

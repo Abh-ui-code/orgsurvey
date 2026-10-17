@@ -33,7 +33,7 @@ export function AnswersReadOnly({
       ["Category", survey.category.label],
       ["Aimed at", survey.target_unit.name],
       ["Status", survey.status.replace("_", " ")],
-      ["Responder", survey.responder?.full_name ?? ""],
+      ["Respondent", survey.responder?.full_name ?? ""],
       ["Reviewer", survey.reviewer?.full_name ?? ""],
       ["Approver", survey.approver?.full_name ?? ""],
       [],
@@ -50,7 +50,7 @@ export function AnswersReadOnly({
       <div className="flex items-center justify-between gap-4">
         <div>
           <h2 className="text-sm font-semibold text-ink">Response</h2>
-          <p className="mt-0.5 text-xs text-ink-faint">Submitted by {survey.responder?.full_name ?? "the responder"}</p>
+          <p className="mt-0.5 text-xs text-ink-faint">Submitted by {survey.responder?.full_name ?? "the respondent"}</p>
         </div>
         <Button variant="secondary" size="sm" onClick={exportCsv}>
           <Download className="h-4 w-4" /> Export CSV

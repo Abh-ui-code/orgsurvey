@@ -2,6 +2,7 @@ import {
   BookOpen,
   ClipboardCheck,
   FileSpreadsheet,
+  History,
   LayoutDashboard,
   ListChecks,
   Network,
@@ -41,6 +42,7 @@ export const NAV: NavEntry[] = [
   leaf("/organisation", "Organisation", Network, "organisation"),
   leaf("/surveys", "Surveys", ListChecks, "surveys"),
   leaf("/question-bank", "Question bank", BookOpen, "question_bank"),
+  leaf("/audit-trail", "Audit trail", History, "audit_trail"),
   leaf("/reports", "Reports", FileSpreadsheet, "reports"),
   {
     kind: "group",

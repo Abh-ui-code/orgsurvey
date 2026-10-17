@@ -63,20 +63,20 @@ def test_workbook_describes_the_whole_flow(monkeypatch):
     # Block 1: details and counts, label then value.
     details = {r[0]: r[2] for r in rows if r[0]} | {r[3]: r[5] for r in rows if r[3]}
     assert details["Times submitted"] == 2 and details["Times returned"] == 1
-    assert details["Returned to responder / reviewer"] == "1 / 1" and details["Question comments in total"] == 1
+    assert details["Returned to respondent / reviewer"] == "1 / 1" and details["Question comments in total"] == 1
 
     # Block 2: five steps; the return names who it went to and how many comments it carried.
     start = next(i for i, r in enumerate(rows) if r[0] == "Step")
     timeline = rows[start + 1:start + 6]
     assert [r[2] for r in timeline] == ["Created", "Response submitted", "Returned", "Response submitted", "Approved"]
-    assert timeline[2][5] == "Responder and reviewer" and timeline[2][6] == 1 and timeline[2][7] == "See Q2"
+    assert timeline[2][5] == "Respondent and reviewer" and timeline[2][6] == 1 and timeline[2][7] == "See Q2"
 
     # Block 3: one row per question, answer per submission, comments on the question.
     start = next(i for i, r in enumerate(rows) if r[0] == "Q#")
     q1_row, q2_row = rows[start + 1], rows[start + 2]
     assert q1_row[6] == "No comments" and q1_row[4:6] == ("Yes", "Yes")
     assert q2_row[4:6] == (5, 3)
-    assert "Approver) → Responder and reviewer" in str(q2_row[6]) and "Too high, explain" in str(q2_row[6])
+    assert "Approver) → Respondent and reviewer" in str(q2_row[6]) and "Too high, explain" in str(q2_row[6])
     assert any(str(c).startswith("Submission 2") for c in cells)
 
     # An answer that changed since the previous submission is highlighted.

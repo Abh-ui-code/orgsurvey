@@ -3,7 +3,7 @@
 Multi-tenant organisational surveys. Each organisation gets its own workspace
 at `<subdomain>.localhost` (e.g. `abc.localhost`) with its own database schema,
 an org hierarchy, a question bank, and surveys that move through a
-**responder → reviewer → approver** workflow.
+**respondent → reviewer → approver** workflow.
 
 - **Backend** — Django 5, django-tenants (one PostgreSQL schema per workspace), DRF, JWT (`backend/`)
 - **Web** — Next.js 15, TypeScript, Tailwind, React Query (this directory)
@@ -20,7 +20,7 @@ Open a workspace address and sign in (every seeded password is `devpassword`):
 
 | Workspace | Address | Sign in as |
 |---|---|---|
-| ABC Corporation | http://abc.localhost:3000 | `admin@abc.localhost` (administrator), `neha@` responder, `vikram@` reviewer, `anita@` approver |
+| ABC Corporation | http://abc.localhost:3000 | `admin@abc.localhost` (administrator), `neha@` respondent, `vikram@` reviewer, `anita@` approver |
 | XYZ Industries | http://xyz.localhost:3000 | the same names at `@xyz.localhost`, with entirely separate data |
 
 Or open http://localhost:3000 and type a workspace name. `*.localhost`
@@ -55,7 +55,7 @@ then open `http://acme.localhost:3000`.
   That creates a **draft** and opens the **builder**.
 - **Builder:** sections and questions (pick from the bank or write new; text, single/multiple choice,
   rating, yes/no, number, date), reorder, edit, delete. Details, instructions, the
-  **responder / reviewer / approver** and the due date are set in the side panel.
+  **respondent / reviewer / approver** and the due date are set in the side panel.
 - **Publish** checks there is a question and three different people, then freezes the questions and
   starts the workflow. Admins can still move the due date or swap a person. To change questions,
   **Duplicate** the survey into a new draft. **Close** withdraws a survey that is in progress.

@@ -7,7 +7,7 @@ import type { SurveyDetail, SurveyStatus } from "@/types/survey";
 type StepState = "done" | "current" | "todo";
 
 /** Which of the three people the survey is currently waiting on. A returned
- * survey is back with the responder. */
+ * survey is back with the respondent. */
 function stepStates(status: SurveyStatus): [StepState, StepState, StepState] {
   switch (status) {
     case "awaiting_response":
@@ -26,12 +26,12 @@ function stepStates(status: SurveyStatus): [StepState, StepState, StepState] {
 
 const CAPTION: Record<StepState, string> = { done: "Completed", current: "Waiting on", todo: "Up next" };
 
-/** Responder → Reviewer → Approver as a connected progress track, with the
+/** Respondent → Reviewer → Approver as a connected progress track, with the
  * current step highlighted and the signed-in person marked "You". */
 export function WorkflowStepper({ survey, meId }: { survey: SurveyDetail; meId?: string }) {
   const states = stepStates(survey.status);
   const steps: { label: string; person: Person | null }[] = [
-    { label: "Responder", person: survey.responder },
+    { label: "Respondent", person: survey.responder },
     { label: "Reviewer", person: survey.reviewer },
     { label: "Approver", person: survey.approver },
   ];

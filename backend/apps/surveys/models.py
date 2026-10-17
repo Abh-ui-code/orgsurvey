@@ -32,7 +32,7 @@ class Survey(AuthoredModel, BaseModel):
     Lifecycle:  draft -> (publish) -> awaiting_response -> awaiting_review
                 -> awaiting_approval -> approved, with `returned` as the
                 send-back loop and `closed` as an administrator withdrawing it.
-    Once published, the structure is frozen: the responder, reviewer and
+    Once published, the structure is frozen: the respondent, reviewer and
     approver all see exactly the same questions for the life of the survey.
     """
 
@@ -60,7 +60,7 @@ class Survey(AuthoredModel, BaseModel):
     approver = user_fk()
     due_date = models.DateField(null=True, blank=True)
     answers = models.JSONField(default=dict, blank=True)  # the submitted response: {survey_question_id: answer}
-    # The responder's work in progress. Kept apart from `answers` so that
+    # The respondent's work in progress. Kept apart from `answers` so that
     # saving a draft never changes what a reviewer or approver is looking at.
     draft_answers = models.JSONField(default=dict, blank=True)
     published_at = models.DateTimeField(null=True, blank=True)
@@ -119,7 +119,7 @@ class SurveyEvent(BaseModel):
     action = models.CharField(max_length=20, choices=[(a, a) for a in ACTIONS])
     by = user_fk()
     comment = models.TextField(blank=True)
-    # For a return: who it was sent back to -- responder, reviewer or both.
+    # For a return: who it was sent back to -- respondent, reviewer or both.
     audience = models.CharField(max_length=10, blank=True)
     # For a submission: the answers as they were sent, kept for the audit
     # trail because a resubmission overwrites `Survey.answers`.
@@ -133,7 +133,7 @@ class SurveyEvent(BaseModel):
 class QuestionComment(BaseModel):
     """A note a reviewer or approver pinned to one question when returning a
     survey. It belongs to the return event that carried it, so the
-    audience (responder, reviewer or both) is read from there."""
+    audience (respondent, reviewer or both) is read from there."""
 
     event = models.ForeignKey(SurveyEvent, on_delete=models.CASCADE, related_name="question_comments")
     question = models.ForeignKey(SurveyQuestion, on_delete=models.CASCADE, related_name="comments")

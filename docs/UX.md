@@ -18,7 +18,7 @@ of them is trying to get done**.
   becomes a drawer and tables scroll within themselves.
 - **Light and dark themes**, keyboard-friendly dialogs, labelled controls.
 
-## Responders
+## Respondents
 
 - **Long surveys are safe to do over several sittings.** Answers are saved as a
   private draft a moment after each change, and restored on return. The reviewer
@@ -31,7 +31,7 @@ of them is trying to get done**.
 ## Reviewers and approvers
 
 - The response is shown in the survey's own sections, with the activity log beside it.
-- Returning always needs a comment, so the responder knows what to fix.
+- Returning always needs a comment, so the respondent knows what to fix.
 - **Export CSV** of the response, for filing or analysis.
 
 ## Administrators

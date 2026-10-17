@@ -5,15 +5,15 @@ stay thin; the lifecycle reads top to bottom here.
     draft --publish--> awaiting_response --responder submits--> awaiting_review
     awaiting_review   --reviewer passes--> awaiting_approval
     awaiting_approval --approver approves--> approved
-    the reviewer may return it to the responder --> returned;
-    the approver may return it to the responder or both --> returned, or to
+    the reviewer may return it to the respondent --> returned;
+    the approver may return it to the respondent or both --> returned, or to
     the reviewer alone --> awaiting_review. A return carries a comment and/or
     notes pinned to individual questions.
-    the responder revises and resubmits --> awaiting_review
+    the respondent revises and resubmits --> awaiting_review
     an administrator may close a live survey at any point.
 
 Structure (sections, questions) is editable only while a draft: once
-published, the responder, reviewer and approver all see exactly the same form.
+published, the respondent, reviewer and approver all see exactly the same form.
 """
 from django.db import transaction
 from django.db.models import Max
@@ -90,7 +90,7 @@ def update_survey(survey: Survey, **fields) -> Survey:
 
     people = [p for p in (survey.responder_id, survey.reviewer_id, survey.approver_id) if p]
     if len(set(people)) != len(people):
-        raise ApiError("The responder, reviewer and approver must be three different people.")
+        raise ApiError("The respondent, reviewer and approver must be three different people.")
     if survey.status != "draft" and len(people) != 3:
         raise ApiError("A published survey needs all three people.")
     survey.save()
@@ -192,7 +192,7 @@ def readiness(survey: Survey) -> list[dict]:
     people = [survey.responder_id, survey.reviewer_id, survey.approver_id]
     return [
         {"key": "questions", "label": "At least one question", "ok": SurveyQuestion.objects.filter(section__survey=survey).exists()},
-        {"key": "people", "label": "A responder, a reviewer and an approver", "ok": all(people)},
+        {"key": "people", "label": "A respondent, a reviewer and an approver", "ok": all(people)},
         {"key": "distinct", "label": "Three different people", "ok": all(people) and len(set(people)) == 3},
     ]
 
@@ -248,7 +248,7 @@ def _expect(survey, *allowed):
 @transaction.atomic
 def submit_response(survey: Survey, user, answers) -> Survey:
     if survey.responder_id != user.pk:
-        raise ApiError("Only the assigned responder can submit.")
+        raise ApiError("Only the assigned respondent can submit.")
     _expect(survey, "awaiting_response", "returned")
     if not isinstance(answers, dict):
         raise ApiError("Answers are required.")
@@ -268,11 +268,11 @@ def submit_response(survey: Survey, user, answers) -> Survey:
 
 @transaction.atomic
 def save_draft(survey: Survey, user, answers) -> Survey:
-    """Keep the responder's work in progress. Required answers are not
+    """Keep the respondent's work in progress. Required answers are not
     enforced yet (that happens on submit), but each answer given must still be
     the right shape for its question."""
     if survey.responder_id != user.pk:
-        raise ApiError("Only the assigned responder can save a draft.")
+        raise ApiError("Only the assigned respondent can save a draft.")
     _expect(survey, "awaiting_response", "returned")
     if not isinstance(answers, dict):
         raise ApiError("Answers are required.")
@@ -327,7 +327,7 @@ def review(survey: Survey, user, decision, comment, question_comments=None, audi
     if decision not in ("pass", "return"):
         raise ApiError("Decision must be 'pass' or 'return'.")
     if decision == "return":
-        # The reviewer can only send it back down the chain, to the responder.
+        # The reviewer can only send it back down the chain, to the respondent.
         _return(survey, user, comment, question_comments, "responder")
     else:
         survey.status = "awaiting_approval"
@@ -345,7 +345,7 @@ def approve(survey: Survey, user, decision, comment, question_comments=None, aud
         raise ApiError("Decision must be 'approve' or 'return'.")
     if decision == "return":
         if audience not in RETURN_AUDIENCES:
-            raise ApiError("Choose who to return it to: the responder, the reviewer or both.")
+            raise ApiError("Choose who to return it to: the respondent, the reviewer or both.")
         _return(survey, user, comment, question_comments, audience)
     else:
         survey.status = "approved"

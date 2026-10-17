@@ -7,18 +7,18 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
-import type { ReturnAudience, SurveyDetail } from "@/types/survey";
+import { roleName, type ReturnAudience, type SurveyDetail } from "@/types/survey";
 import { useApproveSurvey, useReviewSurvey, type QuestionNotes } from "../_hooks/use-survey-actions";
 
 const AUDIENCES: { value: ReturnAudience; label: string }[] = [
-  { value: "responder", label: "Responder" },
+  { value: "responder", label: "Respondent" },
   { value: "reviewer", label: "Reviewer" },
   { value: "both", label: "Both" },
 ];
 
 /** The decision panel shown to whoever the survey is currently waiting on:
- * the reviewer passes it or returns it to the responder; the approver approves
- * it or returns it to the responder, the reviewer or both. Notes pinned to
+ * the reviewer passes it or returns it to the respondent; the approver approves
+ * it or returns it to the respondent, the reviewer or both. Notes pinned to
  * individual questions (kept by the page, written beside each answer) are
  * sent along with a return. */
 export function DecisionPanel({
@@ -57,7 +57,7 @@ export function DecisionPanel({
   };
   // Question notes only travel with a return, so passing on clears none of them silently.
   const advance = () => (role === "reviewer" ? review.mutate({ decision: "pass", comment }, done) : approve.mutate({ decision: "approve", comment }, done));
-  const returnLabel = role === "reviewer" ? "Return to responder" : `Return to ${audience === "both" ? "both" : audience}`;
+  const returnLabel = role === "reviewer" ? "Return to respondent" : `Return to ${audience === "both" ? "both" : roleName(audience)}`;
 
   return (
     <Card>

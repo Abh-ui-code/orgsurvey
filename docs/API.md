@@ -28,8 +28,8 @@ All endpoints are under `/api/` on the **workspace host** (`abc.localhost:8000`)
 | GET, PATCH, DELETE | `/api/surveys/{id}/` | detail (sections, answers, activity, readiness) / edit / delete. After publishing only `due_date` and the three people can change |
 | GET | `/api/surveys/tasks/` | surveys waiting on the signed-in person, soonest due first |
 | POST | `/api/surveys/{id}/publish/` · `close/` · `duplicate/` | admin lifecycle |
-| POST | `/api/surveys/{id}/save-draft/` | `{answers}` — the responder's work in progress |
-| POST | `/api/surveys/{id}/submit/` | `{answers}` — the responder |
+| POST | `/api/surveys/{id}/save-draft/` | `{answers}` — the respondent's work in progress |
+| POST | `/api/surveys/{id}/submit/` | `{answers}` — the respondent |
 | POST | `/api/surveys/{id}/review/` | `{decision: pass\|return, comment}` — the reviewer |
 | POST | `/api/surveys/{id}/approve/` | `{decision: approve\|return, comment}` — the approver |
 | GET, POST · GET, PATCH, DELETE | `/api/surveys/{id}/sections/` · `…/{section_id}/` | builder: sections of a draft (admin) |
@@ -55,4 +55,4 @@ All endpoints are under `/api/` on the **workspace host** (`abc.localhost:8000`)
 ```
 
 The detail adds `instructions`, `sections[].questions[]`, `answers`, `draft_answers`
-(only for the responder), `readiness` (for drafts), `history[]` and `created_by`.
+(only for the respondent), `readiness` (for drafts), `history[]` and `created_by`.

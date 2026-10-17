@@ -79,7 +79,7 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS(
             f"\nSeeded http://{sub}.{settings.TENANT_BASE_DOMAIN}:3000 -- every password is '{DEV_PASSWORD}'."
             f"\n  admin@{sub}.{settings.TENANT_BASE_DOMAIN}   (administrator)"
-            f"\n  neha@ (responder)   vikram@ (reviewer)   anita@ (approver)   -- same domain\n"
+            f"\n  neha@ (respondent)   vikram@ (reviewer)   anita@ (approver)   -- same domain\n"
         ))
 
     @staticmethod

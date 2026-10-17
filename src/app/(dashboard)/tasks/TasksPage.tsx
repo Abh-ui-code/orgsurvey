@@ -10,7 +10,7 @@ import { DataTable, type ColumnDef } from "@/components/ui/data-table";
 import { PageHeader } from "@/components/ui/page-header";
 import { SurveyStatusBadge } from "@/components/ui/status-badge";
 import { useSurveyTasks } from "@/hooks/use-surveys";
-import type { Survey } from "@/types/survey";
+import { roleName, type Survey } from "@/types/survey";
 
 export default function TasksPage() {
   const router = useRouter();
@@ -36,7 +36,7 @@ export default function TasksPage() {
       label: "Your role",
       render: (s) => (
         <Badge tone="brand" className="capitalize">
-          {s.my_task?.role}
+          {s.my_task && roleName(s.my_task.role)}
         </Badge>
       ),
     },

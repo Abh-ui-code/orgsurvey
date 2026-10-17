@@ -305,7 +305,7 @@ submit = lambda token, answers: call(A, "POST", f"{S}/submit/", {"answers": answ
 
 # ---- who is holding it up, deadlines, and saved drafts
 s, cur = call(A, "GET", f"{S}/", token=tk)
-ok("waiting_on names the responder while awaiting a response", cur["waiting_on"]["role"] == "responder" and cur["waiting_on"]["person"]["id"] == people["neha"], cur["waiting_on"])
+ok("waiting_on names the respondent while awaiting a response", cur["waiting_on"]["role"] == "responder" and cur["waiting_on"]["person"]["id"] == people["neha"], cur["waiting_on"])
 ok("stage_since is a timestamp", "T" in cur["stage_since"])
 ok("a survey due in the future is not overdue", cur["is_overdue"] is False)
 call(A, "PATCH", f"{S}/", {"due_date": "2020-01-01"}, tk)
@@ -318,9 +318,9 @@ ok("the dashboard counts it as overdue", call(A, "GET", "/api/reports/dashboard/
 call(A, "PATCH", f"{S}/", {"due_date": "2031-02-02"}, tk)
 
 DRAFT = {RQ: 3}
-ok("only the responder can save a draft", call(A, "POST", f"{S}/save-draft/", {"answers": DRAFT}, vtk)[0] in (400, 403, 404))
+ok("only the respondent can save a draft", call(A, "POST", f"{S}/save-draft/", {"answers": DRAFT}, vtk)[0] in (400, 403, 404))
 s, d = call(A, "POST", f"{S}/save-draft/", {"answers": DRAFT}, ntk)
-ok("the responder saves a draft", s == 200 and d["draft_answers"] == {RQ: 3}, d["draft_answers"])
+ok("the respondent saves a draft", s == 200 and d["draft_answers"] == {RQ: 3}, d["draft_answers"])
 ok("a draft does not touch the submitted answers", d["answers"] == {} and d["status"] == "awaiting_response")
 ok("a draft is private to the responder", call(A, "GET", f"{S}/", token=tk)[1]["draft_answers"] == {} and call(A, "GET", f"{S}/", token=vtk)[1]["draft_answers"] == {})
 ok("a draft is restored for the responder", call(A, "GET", f"{S}/", token=ntk)[1]["draft_answers"] == DRAFT)

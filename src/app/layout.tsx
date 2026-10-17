@@ -11,7 +11,7 @@ const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], var
 
 export const metadata: Metadata = {
   title: "OrgSurvey",
-  description: "Organisational surveys with a responder, reviewer and approver workflow",
+  description: "Organisational surveys with a respondent, reviewer and approver workflow",
 };
 
 // Runs before React hydrates so the right theme paints first.

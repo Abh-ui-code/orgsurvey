@@ -13,9 +13,9 @@ draft ──publish──▶ awaiting_response ──submit──▶ awaiting_re
 |---|---|---|
 | Build | Admin | Sections and questions are editable **only while a draft** |
 | Publish | Admin | Needs at least one question and three **different** active people. Freezes the questions |
-| Respond | Responder | All required questions answered, each in the right shape. Work in progress is saved as a private draft |
-| Review | Reviewer | Pass to the approver, or return to the responder (a comment is required) |
-| Approve | Approver | Approve, or return to the responder (a comment is required) |
+| Respond | Respondent | All required questions answered, each in the right shape. Work in progress is saved as a private draft |
+| Review | Reviewer | Pass to the approver, or return to the respondent (a comment is required) |
+| Approve | Approver | Approve, or return to the respondent (a comment is required) |
 | Close | Admin | Withdraws a survey that is in progress. Final |
 
 After publishing, an admin can still change the **due date** and **swap any of the
@@ -27,8 +27,8 @@ questions, **duplicate** the survey into a new draft.
 | | Admin | Member |
 |---|---|---|
 | Drafts | all | never |
-| Published surveys | all | only those they are the responder, reviewer or approver of |
-| A responder's draft answers | no | only the responder |
+| Published surveys | all | only those they are the respondent, reviewer or approver of |
+| A respondent's draft answers | no | only the respondent |
 | Question bank, categories, users, settings, reports | read and write | not available |
 | Org hierarchy | read and write | read |
 

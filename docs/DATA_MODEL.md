@@ -20,7 +20,7 @@ Every tenant model has a UUID `id`, `created_at` and `updated_at` (`BaseModel`).
 | **Member** | A person inside this workspace: `role` (admin / member), `unit`, `title`, `is_active`. One per user per workspace |
 | **BankCategory / Question** | Reusable questions. Types: text, single choice, multiple choice, rating 1-5, yes/no, number, date |
 | **SurveyCategory** | The topic a survey belongs to (code, label, colour, active flag). Seven defaults are created with every workspace |
-| **Survey** | Title, category, the block it is **aimed at**, `status`, the three people (`responder`, `reviewer`, `approver`), `due_date`, `answers` (the submitted response) and `draft_answers` (the responder's work in progress) |
+| **Survey** | Title, category, the block it is **aimed at**, `status`, the three people (`responder`, `reviewer`, `approver`), `due_date`, `answers` (the submitted response) and `draft_answers` (the respondent's work in progress) |
 | **Section / SurveyQuestion** | The survey's own copy of its questions, ordered. Copying from the bank keeps a link (`bank_question`) but later bank edits never change a survey |
 | **SurveyEvent** | The activity log: created, published, submitted, reviewed, returned, approved, closed (who, when, comment) |
 

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-/** Three linked nodes: responder, reviewer, approver. The last one is the
+/** Three linked nodes: respondent, reviewer, approver. The last one is the
  * "you are here" amber, the colour the app uses for who a survey is waiting on. */
 export function LogoMark({ className }: { className?: string }) {
   return (

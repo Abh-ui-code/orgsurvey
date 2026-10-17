@@ -7,7 +7,7 @@ import { FindWorkspace } from "./_components/find-workspace";
 import { SignInForm } from "./_components/sign-in-form";
 
 const STEPS = [
-  { role: "Responder", line: "Answers for their block" },
+  { role: "Respondent", line: "Answers for their block" },
   { role: "Reviewer", line: "Checks the response" },
   { role: "Approver", line: "Signs it off" },
 ];

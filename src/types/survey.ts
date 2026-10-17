@@ -28,8 +28,11 @@ export const LIVE_STATUSES: SurveyStatus[] = ["awaiting_response", "awaiting_rev
 /** The three people a survey is assigned to. */
 export type WorkflowRole = "responder" | "reviewer" | "approver";
 
+/** How a role is written for people: the API's `responder` is shown as "respondent". */
+export const roleName = (role: string): string => (role === "responder" ? "respondent" : role);
+
 export const WORKFLOW_ROLES: { value: WorkflowRole; label: string; description: string }[] = [
-  { value: "responder", label: "Responder", description: "Fills in the survey" },
+  { value: "responder", label: "Respondent", description: "Fills in the survey" },
   { value: "reviewer", label: "Reviewer", description: "Checks the response" },
   { value: "approver", label: "Approver", description: "Gives final approval" },
 ];
@@ -83,6 +86,9 @@ export interface Survey {
   /** In progress and past its due date. */
   is_overdue: boolean;
   question_count: number;
+  /** How many times it was sent back, and how many times it was submitted. */
+  return_count: number;
+  submission_count: number;
   my_task: MyTask | null;
   /** The person it is with now; null for drafts, approved and closed surveys. */
   waiting_on: WaitingOn | null;
@@ -122,8 +128,10 @@ export interface HistoryEntry {
   by: Person | null;
   at: string;
   comment: string;
-  /** Set on a return: responder, reviewer or both. Empty otherwise. */
+  /** Set on a return: respondent, reviewer or both. Empty otherwise. */
   audience: ReturnAudience | "";
+  /** For a submission: the answers as sent. Empty for other steps (and for submissions made before this was recorded). */
+  snapshot: Record<string, AnswerValue>;
   question_comments: QuestionComment[];
 }
 
@@ -139,7 +147,7 @@ export interface SurveyDetail extends Survey {
   instructions: string;
   sections: SurveySection[];
   answers: Record<string, AnswerValue>;
-  /** The responder's unsent work. Empty for everyone else. */
+  /** The respondent's unsent work. Empty for everyone else. */
   draft_answers: Record<string, AnswerValue>;
   readiness: Readiness[];
   history: HistoryEntry[];

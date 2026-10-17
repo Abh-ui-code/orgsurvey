@@ -38,7 +38,7 @@ export const useCloseSurvey = (id: string) => useSurveyMutation((comment: string
 export const useDuplicateSurvey = (id: string) => useSurveyMutation(() => api.post<SurveyDetail>(`/surveys/${id}/duplicate/`));
 export const useDeleteSurvey = (id: string) => useSurveyMutation(() => api.delete(`/surveys/${id}/`));
 
-/** Keep the responder's work in progress. Writes the returned survey straight
+/** Keep the respondent's work in progress. Writes the returned survey straight
  * into the cache (no list refresh), so autosaving stays quiet and cheap. */
 export function useSaveDraft(id: string) {
   const qc = useQueryClient();

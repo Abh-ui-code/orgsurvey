@@ -19,7 +19,7 @@ const AUTOSAVE_MS = 1500;
 const same = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
 
 /**
- * The responder's form, built so a long survey is safe to do over several
+ * The respondent's form, built so a long survey is safe to do over several
  * sittings: answers are saved as a draft a moment after each change, a progress
  * bar shows what is left, and submitting first checks for missed required
  * questions (jumping to the first) and then asks for confirmation.

@@ -54,7 +54,7 @@ cat <<'MSG'
 ============================================================
 
  Sign in at a workspace address (every seeded password: devpassword):
-   http://abc.localhost:3000     admin@abc.localhost   neha@ (responder)
+   http://abc.localhost:3000     admin@abc.localhost   neha@ (respondent)
                                  vikram@ (reviewer)    anita@ (approver)
    http://xyz.localhost:3000     admin@xyz.localhost   ... same names, separate data
  Or open http://localhost:3000 and enter a workspace name.

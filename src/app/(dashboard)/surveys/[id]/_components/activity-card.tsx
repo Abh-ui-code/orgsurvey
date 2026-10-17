@@ -5,13 +5,13 @@ import { cn } from "@/lib/utils";
 import type { HistoryAction, HistoryEntry } from "@/types/survey";
 import { AUDIENCE_LABEL } from "./question-comments";
 
-const META: Record<HistoryAction, { label: string; icon: LucideIcon; tone: string }> = {
+export const ACTION_META: Record<HistoryAction, { label: string; icon: LucideIcon; tone: string }> = {
   created: { label: "Created", icon: CirclePlus, tone: "bg-slate-soft text-slate" },
   published: { label: "Published and assigned", icon: Rocket, tone: "bg-brand-soft text-brand-strong" },
   submitted: { label: "Response submitted", icon: Send, tone: "bg-brand-soft text-brand-strong" },
   reviewed: { label: "Passed review", icon: CheckCheck, tone: "bg-moss-soft text-moss" },
   approved: { label: "Approved", icon: CircleCheck, tone: "bg-moss-soft text-moss" },
-  returned: { label: "Returned to responder", icon: Undo2, tone: "bg-rust-soft text-rust" },
+  returned: { label: "Returned to respondent", icon: Undo2, tone: "bg-rust-soft text-rust" },
   closed: { label: "Closed", icon: XCircle, tone: "bg-slate-soft text-slate" },
 };
 
@@ -26,7 +26,7 @@ export function ActivityCard({ history }: { history: HistoryEntry[] }) {
       </CardHeader>
       <ul>
         {items.map((h) => {
-          const m = META[h.action];
+          const m = ACTION_META[h.action];
           return (
             <li key={h.id} className="flex gap-3 border-b border-line px-5 py-3 text-sm last:border-b-0">
               <span className={cn("mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full", m.tone)}>
