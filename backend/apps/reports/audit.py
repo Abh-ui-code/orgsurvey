@@ -11,6 +11,8 @@ from io import BytesIO
 
 from django.utils import timezone
 from openpyxl import Workbook
+from openpyxl.cell.rich_text import CellRichText, TextBlock
+from openpyxl.cell.text import InlineFont
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
@@ -46,6 +48,19 @@ def _when(value):
     if value is None:
         return ""
     return timezone.localtime(value).strftime("%Y-%m-%d %H:%M")
+
+
+def _nice(value):
+    """A readable moment: 17 Oct 2026, 13:19."""
+    if value is None:
+        return ""
+    return timezone.localtime(value).strftime("%d %b %Y, %H:%M").lstrip("0")
+
+
+TYPE_LABELS = {
+    "text": "Free text", "single_choice": "Single choice", "multi_choice": "Multiple choice",
+    "rating": "Rating (1-5)", "yes_no": "Yes / No", "number": "Number", "date": "Date",
+}
 
 
 def _name(person):
@@ -111,11 +126,19 @@ class _Sheet:
         self.row += 1
 
 
-def _comment_lines(comment, event, role_of, numbered):
-    """One comment as cell text: when, who, to whom, then the words."""
+def _comment_parts(comment, event, role_of):
+    """One comment as rich text: a bold line (when, who, to whom), then the words."""
     to = AUDIENCE_LABELS.get(event.audience, "")
     who = f"{_name(comment.author)} ({role_of.get(comment.author.pk, 'Administrator')})" if comment.author else "Unknown"
-    return f"{_when(event.created_at)[:10]} · {who} to {to}\n{comment.text}"
+    return [TextBlock(InlineFont(b=True), f"{_nice(event.created_at)} · {who} → {to}\n"), comment.text]
+
+
+def _span(ws, row, start):
+    """Stretch the cell at `start` across to column H, keeping the box border on every part."""
+    if start < 8:
+        ws.merge_cells(start_row=row, start_column=start, end_row=row, end_column=8)
+    for col in range(start, 9):
+        ws.cell(row, col).border = BOX
 
 
 def _polish(ws):
@@ -203,7 +226,7 @@ def build_workbook(survey: Survey) -> bytes:
     sheet.header(["Step", "Date and time", "Action", "By", "Role", "Returned to", "Question comments", "Comment"])
     for step, e in enumerate(events, start=1):
         r = sheet.line([
-            step, _when(e.created_at), ACTION_LABELS.get(e.action, e.action), _name(e.by),
+            step, _nice(e.created_at), ACTION_LABELS.get(e.action, e.action), _name(e.by),
             role_of.get(e.by_id, "Administrator" if e.by_id else ""),
             AUDIENCE_LABELS.get(e.audience, "") if e.action == "returned" else "",
             len(e.question_comments.all()) or "", e.comment,
@@ -216,27 +239,58 @@ def build_workbook(survey: Survey) -> bytes:
 
     # ---- 3. Questions: answer per submission, comments per question
     sheet.band("3 · Questions, answers by submission, and comments")
-    # The first three submissions fill E:G; any more continue to the right of the Comments column.
+    # Only submissions whose answers were recorded get a column. Earlier ones (from
+    # before answer history existed) stay in the timeline. The first three fill E:G;
+    # any more continue to the right of the Comments column.
+    recorded = [(n, e) for n, e in enumerate(submissions, start=1) if e.snapshot]
     sub_col = lambda i: 5 + i if i < 3 else 8 + (i - 2)
-    header = ["Q#", "Section", "Question", "Type", "", "", "", "Comments on this question"]
-    header[4:7] = [f"Submission {i} ({_when(e.created_at)})" for i, e in enumerate(submissions[:3], start=1)] + [""] * (3 - len(submissions[:3]))
-    sheet.header(header)
-    for i, e in enumerate(submissions[3:], start=4):
-        cell = ws.cell(sheet.row - 1, sub_col(i - 1), f"Submission {i} ({_when(e.created_at)})")
+    # Comments start in the first column no submission uses and stretch to H, so
+    # a survey with one recorded submission has no empty columns in between.
+    first_comment = 5 + min(len(recorded), 3)
+    sheet.header(["Q#", "Section", "Question", "Type"])
+    header_row = sheet.row - 1
+    cell = ws.cell(header_row, first_comment, "Comments on this question")
+    cell.fill, cell.font, cell.alignment = HEADER_FILL, HEADER_FONT, WRAP
+    span = lambda r: _span(ws, r, first_comment)
+    span(header_row)
+    for i, (n, e) in enumerate(recorded):
+        col = sub_col(i)
+        cell = ws.cell(header_row, col, f"Submission {n}\n{_nice(e.created_at)}")
         cell.fill, cell.font, cell.alignment = HEADER_FILL, HEADER_FONT, WRAP
-        ws.column_dimensions[get_column_letter(sub_col(i - 1))].width = 24
+        ws.column_dimensions[get_column_letter(col)].width = 24
+    if len(recorded) < len(submissions):
+        skipped = len(submissions) - len(recorded)
+        ws.merge_cells(start_row=sheet.row, start_column=3, end_row=sheet.row, end_column=8)
+        sheet.line(["", "", f"{skipped} earlier submission{'s' if skipped != 1 else ''} made before answers were recorded: see the timeline above."])
+        ws.cell(sheet.row - 1, 3).font = Font(italic=True, color="5B6B6E")
 
     notes_by_question = {}
     for e in returns:
         for c in e.question_comments.all():
-            notes_by_question.setdefault(c.question_id, []).append(_comment_lines(c, e, role_of, None))
+            notes_by_question.setdefault(c.question_id, []).append(_comment_parts(c, e, role_of))
     for n, q in enumerate(questions, start=1):
-        r = sheet.line([n, q.section.title, q.text, q.type, "", "", "", "\n\n".join(notes_by_question.get(q.pk, [])) or "None"])
+        r = sheet.line([n, q.section.title, q.text, TYPE_LABELS.get(q.type, q.type)])
+        notes = notes_by_question.get(q.pk)
+        target = ws.cell(r, first_comment)
+        target.alignment = WRAP
+        if notes:
+            parts = []
+            for k, note in enumerate(notes):
+                parts += (["\n\n"] if k else []) + note
+            target.value = CellRichText(*parts)
+        else:
+            target.value = "No comments"
+            target.font = Font(color="5B6B6E")
+        span(r)
+        # Merged cells don't auto-fit their height, so size the row for its longest cell.
+        width = sum(WIDTHS[first_comment - 1:])
+        lines = sum(-(-len(t) // width) + 1 for t in (note[-1] for note in notes)) if notes else 1
+        ws.row_dimensions[r].height = max(15 * max(lines + len(notes or []) - 1, -(-len(q.text) // WIDTHS[2])), 18)
         previous = None
-        for i, e in enumerate(submissions):
+        for i, (_, e) in enumerate(recorded):
             value = _text(e.snapshot.get(str(q.id)))
             cell = ws.cell(r, sub_col(i), value)
-            cell.alignment = WRAP
+            cell.alignment = Alignment(wrap_text=True, vertical="top", horizontal="left")
             if previous is not None and value != previous:
                 cell.fill = CHANGED_FILL
             previous = value

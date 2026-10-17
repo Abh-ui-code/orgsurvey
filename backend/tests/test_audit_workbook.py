@@ -74,9 +74,9 @@ def test_workbook_describes_the_whole_flow(monkeypatch):
     # Block 3: one row per question, answer per submission, comments on the question.
     start = next(i for i, r in enumerate(rows) if r[0] == "Q#")
     q1_row, q2_row = rows[start + 1], rows[start + 2]
-    assert q1_row[7] == "None" and q1_row[4:6] == ("Yes", "Yes")
+    assert q1_row[6] == "No comments" and q1_row[4:6] == ("Yes", "Yes")
     assert q2_row[4:6] == (5, 3)
-    assert "Approver) to Responder and reviewer" in q2_row[7] and "Too high, explain" in q2_row[7]
+    assert "Approver) → Responder and reviewer" in str(q2_row[6]) and "Too high, explain" in str(q2_row[6])
     assert any(str(c).startswith("Submission 2") for c in cells)
 
     # An answer that changed since the previous submission is highlighted.

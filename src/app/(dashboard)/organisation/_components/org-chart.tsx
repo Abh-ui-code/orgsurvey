@@ -2,13 +2,17 @@
 
 import { ChevronsDownUp, ChevronsUpDown, Maximize2, Minus, Plus, Search } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { toast } from "sonner";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { usePermissions } from "@/hooks/use-permissions";
 import type { UnitNode } from "@/lib/org";
 import { unitPath } from "@/lib/org";
 import { cn } from "@/lib/utils";
-import type { OrgUnit } from "@/types/org";
-import { UnitCard } from "./unit-card";
+import { UNIT_KINDS, type OrgUnit, type UnitKind } from "@/types/org";
+import { useSaveUnit } from "../_hooks/use-organisation";
+import { KIND_TONE, UnitCard } from "./unit-card";
 
 const MIN_ZOOM = 0.3;
 const MAX_ZOOM = 1.6;
@@ -34,6 +38,61 @@ function initiallyCollapsed(roots: UnitNode[], total: number): Set<string> {
   return out;
 }
 
+/** What a new block under this one is most likely to be. */
+const CHILD_KIND: Record<UnitKind, UnitKind> = { organisation: "division", division: "department", department: "team", team: "team" };
+
+/** A new block being typed straight into the chart. Enter (or clicking away
+ * with a name) saves it, Escape (or clicking away empty) discards it. */
+function DraftCard({ parent, onDone }: { parent: UnitNode; onDone: () => void }) {
+  const save = useSaveUnit();
+  const [name, setName] = useState("");
+  const finished = useRef(false);
+  const kind = CHILD_KIND[parent.kind];
+
+  function commit() {
+    if (finished.current) return;
+    finished.current = true;
+    if (!name.trim()) return onDone();
+    save.mutate(
+      { parent_id: parent.id, name: name.trim(), kind, head_id: null },
+      {
+        onSuccess: () => {
+          toast.success("Block added");
+          onDone();
+        },
+        onError: (e) => {
+          finished.current = false;
+          toast.error((e as Error).message);
+        },
+      },
+    );
+  }
+
+  return (
+    <div className="w-52 rounded-lg border border-dashed border-brand bg-paper-raised p-3 ring-2 ring-brand/20">
+      <Badge tone={KIND_TONE[kind]}>{UNIT_KINDS.find((k) => k.value === kind)?.label}</Badge>
+      <Input
+        autoFocus
+        value={name}
+        disabled={save.isPending}
+        onChange={(e) => setName(e.target.value)}
+        onBlur={commit}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") commit();
+          if (e.key === "Escape") {
+            finished.current = true;
+            onDone();
+          }
+        }}
+        placeholder="Type a name, e.g. Recruitment"
+        aria-label={`New block under ${parent.name}`}
+        className="mt-2 h-8"
+      />
+      <p className="mt-1.5 text-2xs text-ink-faint">Enter to add · Esc to cancel</p>
+    </div>
+  );
+}
+
 /** One block plus its subtree. The connector lines are plain borders: a
  * vertical stub under the parent, a horizontal rail across the children, and
  * a vertical stub into each child. A block with children can be folded. */
@@ -43,41 +102,64 @@ function Branch({
   collapsed,
   onToggle,
   onSelect,
+  canAdd,
+  adding,
+  onAdd,
 }: {
   node: UnitNode;
   selectedId: string | null;
   collapsed: Set<string>;
   onToggle: (id: string) => void;
   onSelect: (id: string) => void;
+  canAdd: boolean;
+  adding: string | null;
+  onAdd: (id: string | null) => void;
 }) {
-  const count = node.children.length;
-  const folded = collapsed.has(node.id);
+  const real = node.children.length;
+  const drafting = adding === node.id;
+  const count = real + (drafting ? 1 : 0);
+  const folded = collapsed.has(node.id) && !drafting;
   return (
     <div className="flex flex-col items-center">
-      <UnitCard unit={node} selected={selectedId === node.id} onSelect={() => onSelect(node.id)} />
-      {count > 0 && (
-        <button
-          type="button"
-          onClick={() => onToggle(node.id)}
-          aria-label={folded ? `Show ${countDescendants(node)} blocks under ${node.name}` : `Hide blocks under ${node.name}`}
-          aria-expanded={!folded}
-          className="-mb-1.5 mt-1 flex h-5 items-center gap-1 rounded-full border border-line-strong bg-paper-raised px-1.5 text-2xs font-medium text-ink-muted hover:border-brand hover:text-brand"
-        >
-          {folded ? (
-            <>
-              <Plus className="h-3 w-3" /> {countDescendants(node)}
-            </>
-          ) : (
-            <Minus className="h-3 w-3" />
+      <UnitCard unit={node} canEdit={canAdd} hasChildren={real > 0} selected={selectedId === node.id} onSelect={() => onSelect(node.id)} />
+      {(real > 0 || canAdd) && (
+        <div className="-mb-2.5 mt-1 flex items-center gap-1">
+          {real > 0 && (
+            <button
+              type="button"
+              onClick={() => onToggle(node.id)}
+              aria-label={folded ? `Show ${countDescendants(node)} blocks under ${node.name}` : `Hide blocks under ${node.name}`}
+              aria-expanded={!folded}
+              className="flex h-5 items-center gap-1 rounded-full border border-line-strong bg-paper-raised px-1.5 text-2xs font-medium text-ink-muted hover:border-brand hover:text-brand"
+            >
+              {folded ? (
+                <>
+                  <Plus className="h-3 w-3" /> {countDescendants(node)}
+                </>
+              ) : (
+                <Minus className="h-3 w-3" />
+              )}
+            </button>
           )}
-        </button>
+          {canAdd && (
+            <button
+              type="button"
+              onClick={() => onAdd(node.id)}
+              aria-label={`Add a block under ${node.name}`}
+              title="Add a block under this one"
+              className="flex h-5 w-5 items-center justify-center rounded-full border border-brand bg-brand-soft text-brand-strong hover:bg-brand hover:text-white"
+            >
+              <Plus className="h-3 w-3" />
+            </button>
+          )}
+        </div>
       )}
       {count > 0 && !folded && (
         <>
           <div className="h-6 w-px bg-line-strong" />
           <div className="flex">
-            {node.children.map((child, i) => (
-              <div key={child.id} className="relative flex flex-col items-center px-3 pt-6">
+            {[...node.children, ...(drafting ? [null] : [])].map((child, i) => (
+              <div key={child?.id ?? "new"} className="relative flex flex-col items-center px-3 pt-6">
                 {count > 1 && (
                   <div
                     className={cn(
@@ -87,7 +169,11 @@ function Branch({
                   />
                 )}
                 <div className="absolute left-1/2 top-0 h-6 w-px bg-line-strong" />
-                <Branch node={child} selectedId={selectedId} collapsed={collapsed} onToggle={onToggle} onSelect={onSelect} />
+                {child ? (
+                  <Branch node={child} selectedId={selectedId} collapsed={collapsed} onToggle={onToggle} onSelect={onSelect} canAdd={canAdd} adding={adding} onAdd={onAdd} />
+                ) : (
+                  <DraftCard parent={node} onDone={() => onAdd(null)} />
+                )}
               </div>
             ))}
           </div>
@@ -145,6 +231,8 @@ export function OrgChart({
   selectedId: string | null;
   onSelect: (id: string) => void;
 }) {
+  const { isAdmin } = usePermissions();
+  const [adding, setAdding] = useState<string | null>(null);
   const [zoom, setZoom] = useState(1);
   const [collapsed, setCollapsed] = useState(() => initiallyCollapsed(roots, units.length));
   const scroller = useRef<HTMLDivElement>(null);
@@ -211,7 +299,7 @@ export function OrgChart({
         {/* CSS zoom (unlike transform: scale) changes layout size, so the scroll area tracks it. */}
         <div className="flex min-w-max justify-center p-8" style={{ zoom }}>
           {roots.map((root) => (
-            <Branch key={root.id} node={root} selectedId={selectedId} collapsed={collapsed} onToggle={toggle} onSelect={onSelect} />
+            <Branch key={root.id} node={root} selectedId={selectedId} collapsed={collapsed} onToggle={toggle} onSelect={onSelect} canAdd={isAdmin} adding={adding} onAdd={setAdding} />
           ))}
         </div>
       </div>

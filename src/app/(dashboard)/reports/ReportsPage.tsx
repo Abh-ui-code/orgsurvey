@@ -13,6 +13,7 @@ import { SurveyStatusBadge } from "@/components/ui/status-badge";
 import { useDebounced } from "@/hooks/use-debounced";
 import { useSurveyList } from "@/hooks/use-surveys";
 import { downloadFile } from "@/lib/api";
+import { slug } from "@/lib/csv";
 import type { Survey } from "@/types/survey";
 
 function Reports() {
@@ -25,7 +26,7 @@ function Reports() {
   async function download(survey: Survey) {
     setBusy(survey.id);
     try {
-      await downloadFile(`/reports/surveys/${survey.id}/audit/`, "survey-audit-trail.xlsx");
+      await downloadFile(`/reports/surveys/${survey.id}/audit/`, `${slug(survey.title)}-audit-trail-${new Date().toISOString().slice(0, 10)}.xlsx`);
     } catch (e) {
       toast.error((e as Error).message);
     } finally {
