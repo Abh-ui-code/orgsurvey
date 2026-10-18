@@ -3,17 +3,21 @@
 import { ArrowDown, ArrowUp, GripVertical, Pencil, Plus, Trash2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { Avatar } from "@/components/shared/avatar";
+import { PersonSelect } from "@/components/shared/person-select";
 import { FormDialog } from "@/components/shared/form-dialog";
 import { IconButton } from "@/components/shared/icon-button";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
 import { ConfirmDialog } from "@/components/ui/confirm-dialog";
 import { DrawerField } from "@/components/ui/drawer-form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { questionTypeLabel } from "@/types/question";
 import type { SurveyDetail, SurveySection } from "@/types/survey";
+import { useAssignQuestions } from "../../_hooks/use-survey-actions";
 import {
   useAddSection,
   useDeleteQuestion,
@@ -38,6 +42,7 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
   const moveSection = useMoveSection(survey.id);
   const moveQuestion = useMoveQuestion(survey.id);
   const deleteQuestion = useDeleteQuestion(survey.id);
+  const assign = useAssignQuestions(survey.id);
 
   const [sectionForm, setSectionForm] = useState<SectionDraft | null>(null);
   const [questionTarget, setQuestionTarget] = useState<QuestionTarget | null>(null);
@@ -45,6 +50,31 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
 
   const fail = (e: Error) => toast.error(e.message);
   const lastSection = survey.sections.length - 1;
+  // Reviewer and approver can't answer questions, so they are greyed out in the pickers.
+  const handlers = [survey.reviewer?.id, survey.approver?.id].filter(Boolean) as string[];
+  // Questions ticked for a bulk assignment, across all sections.
+  const [picked, setPicked] = useState<Set<string>>(new Set());
+  const toggle = (ids: string[], on: boolean) =>
+    setPicked((prev) => {
+      const next = new Set(prev);
+      for (const id of ids) {
+        if (on) next.add(id);
+        else next.delete(id);
+      }
+      return next;
+    });
+  const everyId = survey.sections.flatMap((sec) => sec.questions.map((q) => q.id));
+  const assignPicked = (personId: string) => {
+    if (!personId) return;
+    const ids = [...picked];
+    assign.mutate(ids.map((question_id) => ({ question_id, responder_id: personId })), {
+      onSuccess: () => {
+        toast.success(`${ids.length} question${ids.length === 1 ? "" : "s"} assigned`);
+        setPicked(new Set());
+      },
+      onError: fail,
+    });
+  };
 
   function saveSection() {
     if (!sectionForm) return;
@@ -56,10 +86,31 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
 
   return (
     <div className="space-y-4">
+      {picked.size > 0 && (
+        <div role="region" aria-label="Assign selected questions" className="sticky top-2 z-20 flex flex-wrap items-center gap-3 rounded-xl border border-brand/40 bg-paper-raised px-4 py-3 shadow-lg">
+          <span className="text-sm font-semibold text-brand-strong">{picked.size} selected</span>
+          <div className="w-64 max-w-full">
+            <PersonSelect value="" placeholder="Assign to respondent…" onChange={assignPicked} disabledIds={handlers} />
+          </div>
+          <Button variant="ghost" size="sm" onClick={() => toggle(everyId, picked.size < everyId.length)}>
+            {picked.size < everyId.length ? "Select all" : "Select none"}
+          </Button>
+          <Button variant="ghost" size="sm" className="ml-auto" onClick={() => setPicked(new Set())}>
+            Clear
+          </Button>
+        </div>
+      )}
       {survey.sections.map((section, si) => (
         <Card key={section.id}>
           <CardHeader className="items-center py-3">
             <div className="flex min-w-0 items-center gap-2">
+              {section.questions.length > 0 && (
+                <Checkbox
+                  aria-label={`Select every question in ${section.title}`}
+                  checked={section.questions.every((q) => picked.has(q.id))}
+                  onCheckedChange={(v) => toggle(section.questions.map((q) => q.id), v === true)}
+                />
+              )}
               <GripVertical className="h-4 w-4 shrink-0 text-ink-faint" />
               <div className="min-w-0">
                 <CardTitle>{section.title}</CardTitle>
@@ -89,8 +140,9 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
           ) : (
             <ul>
               {section.questions.map((q, qi) => (
-                <li key={q.id} className="flex items-center justify-between gap-4 border-b border-line px-5 py-3 last:border-b-0">
-                  <div className="min-w-0">
+                <li key={q.id} className={`flex items-center justify-between gap-4 border-b border-line px-5 py-3 last:border-b-0 ${picked.has(q.id) ? "bg-brand-soft/40" : ""}`}>
+                  <Checkbox aria-label={`Select question ${qi + 1}`} checked={picked.has(q.id)} onCheckedChange={(v) => toggle([q.id], v === true)} />
+                  <div className="min-w-0 flex-1">
                     <p className="truncate text-sm text-ink">
                       {q.text} {q.required && <span className="text-rust">*</span>}
                     </p>
@@ -102,6 +154,16 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
                       {q.options.length > 0 && <span className="truncate">· {q.options.join(", ")}</span>}
                     </p>
                     {q.hint && <p className="mt-1 text-xs italic text-ink-muted">{q.hint}</p>}
+                    <p className="mt-1.5 flex items-center gap-1.5 text-xs">
+                      <span className="text-ink-muted">Respondent</span>
+                      {q.responder ? (
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-paper-sunken py-0.5 pl-0.5 pr-2 font-medium text-ink">
+                          <Avatar name={q.responder.full_name} className="h-5 w-5 text-2xs" /> {q.responder.full_name}
+                        </span>
+                      ) : (
+                        <span className="font-medium text-rust">Not assigned</span>
+                      )}
+                    </p>
                   </div>
                   <div className="flex shrink-0 items-center gap-1">
                     <IconButton label="Move question up" disabled={qi === 0} onClick={() => moveQuestion.mutate({ sectionId: section.id, id: q.id, direction: "up" }, { onError: fail })}>

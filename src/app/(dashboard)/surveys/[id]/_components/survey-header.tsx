@@ -40,7 +40,7 @@ export function SurveyHeader({ survey, isAdmin }: { survey: SurveyDetail; isAdmi
           </div>
           <p className="mt-1 text-sm text-ink-muted">
             {survey.category.label}
-            {` · ${survey.question_count} question${survey.question_count === 1 ? "" : "s"}`}
+            {` · ${survey.status === "draft" || isAdmin ? survey.question_count : survey.my_question_count} question${(survey.status === "draft" || isAdmin ? survey.question_count : survey.my_question_count) === 1 ? "" : "s"}`}
             {` · ${unitPath(units.data ?? [], survey.target_unit.id) || survey.target_unit.name}`}
           </p>
           {!isDraft && survey.description && <p className="mt-2 max-w-2xl text-sm text-ink-muted">{survey.description}</p>}

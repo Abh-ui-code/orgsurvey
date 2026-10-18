@@ -7,12 +7,13 @@ import { cn } from "@/lib/utils";
 import { questionTypeLabel } from "@/types/question";
 import type { SurveyDetail } from "@/types/survey";
 
-/** What was answered each time it was submitted, one column per submission.
- * An answer that changed since the previous submission is highlighted, so a
- * revision after a return is visible at a glance. */
+/** What was answered each time questions were submitted, one column per
+ * submission (a respondent's batch). A question a submission didn't include shows a
+ * dash. An answer that changed since that question's previous submission is
+ * highlighted, so a revision after a return is visible at a glance. */
 export function AnswersByRound({ survey }: { survey: SurveyDetail }) {
   const submissions = survey.history.filter((h) => h.action === "submitted");
-  const recorded = submissions.filter((h) => Object.keys(h.snapshot).length > 0);
+  const recorded = submissions.filter((h) => h.question_ids.length > 0 || Object.keys(h.snapshot).length > 0);
 
   if (recorded.length === 0) {
     return (
@@ -20,7 +21,7 @@ export function AnswersByRound({ survey }: { survey: SurveyDetail }) {
         <EmptyState
           icon={ClipboardList}
           title="No answers recorded yet"
-          description={submissions.length > 0 ? "This survey was submitted before answers were kept for each round." : "The respondent has not submitted yet."}
+          description={submissions.length > 0 ? "This survey was submitted before answers were kept for each round." : "No respondent has submitted yet."}
         />
       </Card>
     );
@@ -42,6 +43,10 @@ export function AnswersByRound({ survey }: { survey: SurveyDetail }) {
               {recorded.map((h, i) => (
                 <th key={h.id} className="px-4 py-3 font-medium">
                   <div className="text-ink">Submission {i + 1}</div>
+                  <div className="font-normal text-ink-muted">
+                    {h.by?.full_name}
+                    {h.question_ids.length > 0 && ` · ${h.question_ids.length} question${h.question_ids.length === 1 ? "" : "s"}`}
+                  </div>
                   <div className="font-normal text-ink-faint">{formatDateTime(h.at)}</div>
                 </th>
               ))}
@@ -67,8 +72,17 @@ export function AnswersByRound({ survey }: { survey: SurveyDetail }) {
                           </p>
                         </td>
                         {recorded.map((h, i) => {
+                          const covers = h.question_ids.length === 0 || h.question_ids.includes(q.id);
+                          if (!covers) {
+                            return (
+                              <td key={h.id} className="px-4 py-3 text-ink-faint">
+                                —
+                              </td>
+                            );
+                          }
                           const value = formatAnswer(h.snapshot[q.id]);
-                          const before = i > 0 ? formatAnswer(recorded[i - 1].snapshot[q.id]) : value;
+                          const earlier = recorded.slice(0, i).reverse().find((r) => r.question_ids.length === 0 || r.question_ids.includes(q.id));
+                          const before = earlier ? formatAnswer(earlier.snapshot[q.id]) : value;
                           const empty = !value || value === "—";
                           return (
                             <td key={h.id} className={cn("px-4 py-3", value !== before && "bg-amber-soft")}>

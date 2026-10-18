@@ -14,6 +14,7 @@ from apps.surveys import services
 from apps.surveys.models import Section, Survey, SurveyCategory, SurveyQuestion
 from apps.surveys.scoping import scope_surveys, waiting_on
 from apps.surveys.serializers import (
+    AssignSerializer,
     CloseSerializer,
     DecisionSerializer,
     DraftSerializer,
@@ -49,6 +50,7 @@ class SurveyFilter(django_filters.FilterSet):
     `?in_progress=true` (awaiting a response, review or approval)."""
 
     overdue = django_filters.BooleanFilter(method="filter_overdue")
+    returned = django_filters.BooleanFilter(method="filter_returned")
     in_progress = django_filters.BooleanFilter(method="filter_in_progress")
 
     class Meta:
@@ -62,10 +64,15 @@ class SurveyFilter(django_filters.FilterSet):
 
 
     def filter_in_progress(self, queryset, name, value):
-        """Waiting on someone: any of the three stages, not returned, approved or closed."""
         if not value:
             return queryset
-        return queryset.filter(status__in=("awaiting_response", "awaiting_review", "awaiting_approval"))
+        return queryset.filter(status="in_progress")
+
+    def filter_returned(self, queryset, name, value):
+        """Live surveys with at least one question sent back."""
+        if not value:
+            return queryset
+        return queryset.filter(status="in_progress", pk__in=SurveyQuestion.objects.filter(status="returned").values("section__survey"))
 
 
 class SurveyViewSet(TenantScopedMixin, viewsets.ModelViewSet):
@@ -81,7 +88,7 @@ class SurveyViewSet(TenantScopedMixin, viewsets.ModelViewSet):
     ordering_fields = ["created_at", "title", "status", "due_date"]
     ordering = ["-created_at"]
 
-    DETAIL_ACTIONS = {"retrieve", "create", "update", "partial_update", "publish", "close", "duplicate", "submit", "save_draft", "review", "approve"}
+    DETAIL_ACTIONS = {"retrieve", "create", "update", "partial_update", "publish", "close", "duplicate", "submit", "save_draft", "review", "approve", "assign"}
 
     def get_queryset(self):
         queryset = (
@@ -93,8 +100,9 @@ class SurveyViewSet(TenantScopedMixin, viewsets.ModelViewSet):
                 submission_count=Count("events", filter=Q(events__action="submitted"), distinct=True),
             )
         )
+        queryset = queryset.prefetch_related("sections__questions__responder")
         if self.action in self.DETAIL_ACTIONS:
-            queryset = queryset.prefetch_related("sections__questions", "events__by", "events__question_comments__author")
+            queryset = queryset.prefetch_related("events__by", "events__questions", "events__question_comments__author")
         return scope_surveys(queryset, self.request.user, member_for(self.request))
 
     def get_serializer_class(self):
@@ -140,6 +148,22 @@ class SurveyViewSet(TenantScopedMixin, viewsets.ModelViewSet):
         return self._detail(survey)
 
     @action(detail=True, methods=["post"])
+    def assign(self, request, pk=None):
+        """Hand questions to respondents: one respondent per question."""
+        survey = self.get_object()
+        body = AssignSerializer(data=request.data)
+        body.is_valid(raise_exception=True)
+        by_id = {str(q.pk): q for q in services.all_questions(survey)}
+        pairs = []
+        for item in body.validated_data["assignments"]:
+            question = by_id.get(str(item["question_id"]))
+            if question is None:
+                raise ApiError("A question in that list isn't part of this survey.")
+            pairs.append((question, item["responder"]))
+        services.assign_questions(survey, pairs)
+        return self._detail(survey)
+
+    @action(detail=True, methods=["post"])
     def duplicate(self, request, pk=None):
         copy = services.duplicate(self.get_object(), request.user)
         return self._detail(copy, status.HTTP_201_CREATED)
@@ -150,7 +174,7 @@ class SurveyViewSet(TenantScopedMixin, viewsets.ModelViewSet):
         survey = self.get_object()
         body = SubmitSerializer(data=request.data)
         body.is_valid(raise_exception=True)
-        services.submit_response(survey, request.user, body.validated_data["answers"])
+        services.submit_response(survey, request.user, body.validated_data["answers"], body.validated_data["question_ids"])
         return self._detail(survey)
 
     @action(detail=True, methods=["post"], url_path="save-draft", permission_classes=[IsTenantMember])

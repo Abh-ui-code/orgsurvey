@@ -31,4 +31,4 @@ def test_only_the_last_note_per_question_is_kept(survey_with_questions):
 
 def test_returning_needs_a_comment_or_a_note(survey_with_questions):
     with pytest.raises(ApiError):
-        services._return(SimpleNamespace(), SimpleNamespace(), "  ", [], "responder")
+        services._return(SimpleNamespace(), SimpleNamespace(), "  ", [], "responder", [], "returned")

@@ -19,6 +19,42 @@ import { WORKFLOW_ROLES, type SurveyDetail } from "@/types/survey";
 import { useUpdateSurvey } from "../../_hooks/use-survey-actions";
 import { AssignmentFields, type People } from "../assignment-fields";
 
+/** Who answers what, read from the questions themselves: each respondent with
+ * how many questions are assigned to them. Assigning happens below, by ticking questions. */
+function RespondentsSummary({ survey }: { survey: SurveyDetail }) {
+  const questions = survey.sections.flatMap((s) => s.questions);
+  const counts = new Map<string, { name: string; n: number }>();
+  for (const q of questions) {
+    if (!q.responder) continue;
+    const row = counts.get(q.responder.id) ?? { name: q.responder.full_name, n: 0 };
+    row.n += 1;
+    counts.set(q.responder.id, row);
+  }
+  const unassigned = questions.filter((q) => !q.responder).length;
+  return (
+    <div className="rounded-md border border-line bg-paper-sunken/50 p-3">
+      <p className="text-sm font-medium text-ink">Respondents</p>
+      {questions.length === 0 ? (
+        <p className="mt-1 text-xs text-ink-muted">Add questions below, then tick them to assign each to a respondent.</p>
+      ) : (
+        <ul className="mt-2 flex flex-wrap gap-2">
+          {[...counts.values()].map((r) => (
+            <li key={r.name} className="rounded-full bg-brand-soft px-3 py-1 text-xs font-medium text-brand-strong">
+              {r.name} · {r.n} question{r.n === 1 ? "" : "s"}
+            </li>
+          ))}
+          {unassigned > 0 && (
+            <li className="rounded-full bg-rust-soft px-3 py-1 text-xs font-medium text-rust">
+              {unassigned} not assigned yet
+            </li>
+          )}
+        </ul>
+      )}
+      <p className="mt-2 text-xs text-ink-faint">One respondent per question. Tick questions below and choose who answers them.</p>
+    </div>
+  );
+}
+
 /** The editable fields of a draft, in the shape the form holds them. */
 function formOf(s: SurveyDetail) {
   return {
@@ -54,12 +90,12 @@ export function DetailsPanel({ survey, onDirtyChange }: { survey: SurveyDetail; 
     () => suggestRoleHolders(units.data ?? [], form.target_unit_id, new Set((people.data ?? []).filter((p) => p.is_active).map((p) => p.id))),
     [units.data, people.data, form.target_unit_id],
   );
-  const suggested = WORKFLOW_ROLES.filter((r) => suggestion[r.value]);
+  const suggested = WORKFLOW_ROLES.filter((r) => r.value !== "responder" && suggestion[r.value]);
   const applySuggestion = () => {
     setForm({
       ...form,
       people: {
-        responder: suggestion.responder?.person.id ?? "",
+        responder: "",
         reviewer: suggestion.reviewer?.person.id ?? "",
         approver: suggestion.approver?.person.id ?? "",
       },
@@ -80,7 +116,6 @@ export function DetailsPanel({ survey, onDirtyChange }: { survey: SurveyDetail; 
         description: form.description,
         instructions: form.instructions,
         due_date: form.due_date || null,
-        responder_id: form.people.responder || null,
         reviewer_id: form.people.reviewer || null,
         approver_id: form.people.approver || null,
       },
@@ -134,7 +169,8 @@ export function DetailsPanel({ survey, onDirtyChange }: { survey: SurveyDetail; 
                 : suggested.map((r) => `${r.label}: ${suggestion[r.value]!.person.full_name} (head of ${suggestion[r.value]!.unit.name})`).join(" · ")}
             </p>
           </div>
-          <AssignmentFields className="grid gap-4 md:grid-cols-3" people={form.people} onChange={(p) => patch("people", p)} />
+          <AssignmentFields className="grid gap-4 md:grid-cols-2" roles={["reviewer", "approver"]} people={form.people} onChange={(p) => patch("people", p)} />
+          <RespondentsSummary survey={survey} />
           <DrawerField label="Due date">
             <Input type="date" value={form.due_date} onChange={(e) => patch("due_date", e.target.value)} />
           </DrawerField>

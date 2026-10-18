@@ -19,6 +19,7 @@ from openpyxl.utils import get_column_letter
 from apps.core.question_types import is_empty
 from apps.surveys.models import Survey, SurveyQuestion
 
+STATUS_LABELS = dict(SurveyQuestion.STATUSES)
 ACTION_LABELS = {
     "created": "Created",
     "published": "Published and assigned",
@@ -130,7 +131,23 @@ def _comment_parts(comment, event, role_of):
     """One comment as rich text: a bold line (when, who, to whom), then the words."""
     to = AUDIENCE_LABELS.get(event.audience, "")
     who = f"{_name(comment.author)} ({role_of.get(comment.author.pk, 'Administrator')})" if comment.author else "Unknown"
-    return [TextBlock(InlineFont(b=True), f"{_nice(event.created_at)} · {who} → {to}\n"), comment.text]
+    return [TextBlock(InlineFont(b=True), f"{_nice(event.created_at)} · {who}{' → ' + to if to else ''}\n"), comment.text]
+
+
+def _numbers(numbers):
+    """Question numbers as ranges: [1, 2, 3, 7] -> "Q1-Q3, Q7"."""
+    runs, start, last = [], None, None
+    for n in sorted(numbers):
+        if start is None:
+            start = last = n
+        elif n == last + 1:
+            last = n
+        else:
+            runs.append((start, last))
+            start = last = n
+    if start is not None:
+        runs.append((start, last))
+    return ", ".join(f"Q{a}" if a == b else f"Q{a}-Q{b}" for a, b in runs)
 
 
 def _span(ws, row, start):
@@ -183,13 +200,18 @@ def _polish(ws):
 def build_workbook(survey: Survey) -> bytes:
     events = list(survey.events.select_related("by").prefetch_related("question_comments__author"))
     questions = list(
-        SurveyQuestion.objects.filter(section__survey=survey).select_related("section").order_by("section__order", "order")
+        SurveyQuestion.objects.filter(section__survey=survey).select_related("section", "responder").order_by("section__order", "order")
     )
     role_of = {}
-    for role in ("responder", "reviewer", "approver"):
+    for q in questions:
+        if q.responder:
+            role_of[q.responder.pk] = "Respondent"
+    for role in ("reviewer", "approver"):
         person = getattr(survey, role)
         if person:
-            role_of[person.pk] = "Respondent" if role == "responder" else role.capitalize()
+            role_of[person.pk] = role.capitalize()
+    number_of = {q.pk: n for n, q in enumerate(questions, start=1)}
+    respondents = list(dict.fromkeys(_name(q.responder) for q in questions if q.responder))
     submissions = [e for e in events if e.action == "submitted"]
     returns = [e for e in events if e.action == "returned"]
     published = next((e for e in events if e.action == "published"), None)
@@ -204,11 +226,12 @@ def build_workbook(survey: Survey) -> bytes:
     left = [
         ("Survey", survey.title), ("Category", survey.category.label), ("Aimed at (org block)", survey.target_unit.name),
         ("Status", dict(Survey.STATUSES).get(survey.status, survey.status)), ("Due date", survey.due_date.isoformat() if survey.due_date else ""),
-        ("Number of questions", len(questions)), ("Times submitted", len(submissions)),
-        ("Question comments in total", sum(len(e.question_comments.all()) for e in returns)), ("Created by", _name(survey.created_by)),
+        ("Number of questions", len(questions)), ("Questions approved", sum(1 for q in questions if q.status == "approved")),
+        ("Times submitted", len(submissions)),
+        ("Question comments in total", sum(len(e.question_comments.all()) for e in events)), ("Created by", _name(survey.created_by)),
     ]
     right = [
-        ("Respondent", _name(survey.responder)), ("Reviewer", _name(survey.reviewer)), ("Approver", _name(survey.approver)),
+        ("Respondents", ", ".join(respondents)), ("Reviewer", _name(survey.reviewer)), ("Approver", _name(survey.approver)),
         ("Published", _when(survey.published_at)), ("Finished", _when(finished.created_at) if finished else ""),
         ("Days from publish to finish", days), ("Times returned", len(returns)),
         ("Returned to respondent / reviewer", f"{sum(1 for e in returns if e.audience in ('responder', 'both'))} / {sum(1 for e in returns if e.audience in ('reviewer', 'both'))}"),
@@ -223,13 +246,13 @@ def build_workbook(survey: Survey) -> bytes:
 
     # ---- 2. Timeline
     sheet.band("2 · Timeline, every step in order")
-    sheet.header(["Step", "Date and time", "Action", "By", "Role", "Returned to", "Question comments", "Comment"])
+    sheet.header(["Step", "Date and time", "Action", "By", "Role", "Returned to", "Questions", "Comment"])
     for step, e in enumerate(events, start=1):
         r = sheet.line([
             step, _nice(e.created_at), ACTION_LABELS.get(e.action, e.action), _name(e.by),
             role_of.get(e.by_id, "Administrator" if e.by_id else ""),
             AUDIENCE_LABELS.get(e.audience, "") if e.action == "returned" else "",
-            len(e.question_comments.all()) or "", e.comment,
+            _numbers(number_of[q.pk] for q in e.questions.all() if q.pk in number_of), e.comment,
         ])
         if e.action in ("returned", "closed"):
             ws.cell(r, 3).font = RETURNED_FONT
@@ -247,7 +270,7 @@ def build_workbook(survey: Survey) -> bytes:
     # Comments start in the first column no submission uses and stretch to H, so
     # a survey with one recorded submission has no empty columns in between.
     first_comment = 5 + min(len(recorded), 3)
-    sheet.header(["Q#", "Section", "Question", "Type"])
+    sheet.header(["Q#", "Section", "Question", "Respondent and status"])
     header_row = sheet.row - 1
     cell = ws.cell(header_row, first_comment, "Comments on this question")
     cell.fill, cell.font, cell.alignment = HEADER_FILL, HEADER_FONT, WRAP
@@ -265,11 +288,11 @@ def build_workbook(survey: Survey) -> bytes:
         ws.cell(sheet.row - 1, 3).font = Font(italic=True, color="5B6B6E")
 
     notes_by_question = {}
-    for e in returns:
+    for e in events:
         for c in e.question_comments.all():
             notes_by_question.setdefault(c.question_id, []).append(_comment_parts(c, e, role_of))
     for n, q in enumerate(questions, start=1):
-        r = sheet.line([n, q.section.title, q.text, TYPE_LABELS.get(q.type, q.type)])
+        r = sheet.line([n, q.section.title, q.text, f"{_name(q.responder) or 'Unassigned'}\n{STATUS_LABELS.get(q.status, q.status)}"])
         notes = notes_by_question.get(q.pk)
         target = ws.cell(r, first_comment)
         target.alignment = WRAP
@@ -288,12 +311,48 @@ def build_workbook(survey: Survey) -> bytes:
         ws.row_dimensions[r].height = max(15 * max(lines + len(notes or []) - 1, -(-len(q.text) // WIDTHS[2])), 18)
         previous = None
         for i, (_, e) in enumerate(recorded):
+            if q.pk not in {x.pk for x in e.questions.all()}:
+                continue  # this submission was about other questions
             value = _text(e.snapshot.get(str(q.id)))
             cell = ws.cell(r, sub_col(i), value)
             cell.alignment = Alignment(wrap_text=True, vertical="top", horizontal="left")
             if previous is not None and value != previous:
                 cell.fill = CHANGED_FILL
             previous = value
+
+    # ---- 4. Each question's own trail
+    sheet.gap()
+    sheet.band("4 · Question trail, every step of every question")
+    sheet.header(["Q#", "Date and time", "Step", "By", "Question", "Answer at this step", "Changed from", "Comment"])
+    covered = {e.pk: {q.pk for q in e.questions.all()} for e in events}
+    for n, q in enumerate(questions, start=1):
+        last_answer = None
+        revisions = 0
+        for e in events:
+            if q.pk not in covered[e.pk]:
+                continue
+            if e.action == "submitted":
+                revisions += 1
+                answer = _text(e.snapshot.get(str(q.id)))
+                changed_from = last_answer if last_answer is not None and last_answer != answer else ""
+                step = "Answer submitted" if revisions == 1 else f"Answer resubmitted (revision {revisions})"
+                last_answer = answer
+            else:
+                answer = last_answer if last_answer is not None else ""
+                changed_from = ""
+                step = ACTION_LABELS.get(e.action, e.action)
+                if e.action == "returned" and e.audience:
+                    step = f"Returned to {AUDIENCE_LABELS[e.audience].lower()}"
+            notes = [c.text for c in e.question_comments.all() if c.question_id == q.pk]
+            comment = "\n".join(([e.comment] if e.comment else []) + notes)
+            who = f"{_name(e.by)} ({role_of.get(e.by_id, 'Administrator')})" if e.by_id else ""
+            r = sheet.line([n, _nice(e.created_at), step, who, q.text, answer, changed_from, comment])
+            if e.action == "returned":
+                ws.cell(r, 3).font = RETURNED_FONT
+            elif e.action == "approved":
+                ws.cell(r, 3).font = OK_FONT
+            if changed_from:
+                ws.cell(r, 6).fill = CHANGED_FILL
 
     _polish(ws)
     out = BytesIO()

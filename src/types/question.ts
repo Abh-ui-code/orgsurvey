@@ -1,3 +1,6 @@
+import type { Person } from "@/types/common";
+import type { QuestionStatus } from "@/types/survey";
+
 export type QuestionType = "text" | "single_choice" | "multi_choice" | "rating" | "yes_no" | "number" | "date";
 
 export const QUESTION_TYPES: { value: QuestionType; label: string }[] = [
@@ -43,4 +46,11 @@ export interface SurveyQuestion extends QuestionFields {
   id: string;
   order: number;
   bank_question_id: string | null;
+  /** Its place in the whole survey (Q1, Q2 ...), the same for everyone who can see it. */
+  number: number;
+  /** The one person who answers it. */
+  responder: Person | null;
+  status: QuestionStatus;
+  /** Furthest stage reached: 0 not submitted, 1 submitted, 2 passed review. */
+  progress: number;
 }

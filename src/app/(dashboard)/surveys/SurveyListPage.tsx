@@ -23,7 +23,7 @@ export default function SurveyListPage() {
   const router = useRouter();
   const { isAdmin } = usePermissions();
   const categories = useSurveyCategories();
-  // Dashboard cards link here with a filter already applied (?overdue=true, ?status=returned).
+  // Dashboard cards link here with a filter already applied (?overdue=true, ?returned=true).
   const params = useSearchParams();
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState(params.get("category") ?? "");
@@ -36,8 +36,8 @@ export default function SurveyListPage() {
   const surveys = useSurveyList({
     search: useDebounced(search),
     category,
-    status: status === "in_progress" ? undefined : status,
-    in_progress: status === "in_progress" || undefined,
+    status: status === "returned" ? undefined : status,
+    returned: status === "returned" || undefined,
     overdue: overdue || undefined,
     page,
     page_size: pageSize,
@@ -95,12 +95,12 @@ export default function SurveyListPage() {
         </Select>
         <Select value={status} onChange={(e) => filter(setStatus)(e.target.value)} className="w-52">
           <option value="">All statuses</option>
-          <option value="in_progress">In progress (any stage)</option>
           {SURVEY_STATUSES.filter((s) => isAdmin || s !== "draft").map((s) => (
             <option key={s} value={s}>
               {statusLabel(s)}
             </option>
           ))}
+          <option value="returned">Has returned questions</option>
         </Select>
         <Select value={overdue ? "overdue" : ""} onChange={(e) => filter(setOverdue)(e.target.value === "overdue")} className="w-44">
           <option value="">Any deadline</option>

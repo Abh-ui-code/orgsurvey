@@ -48,20 +48,37 @@ export function useSaveDraft(id: string) {
   });
 }
 
-/** The three-role workflow. */
+/** Give questions their respondent: one respondent per question. */
+export const useAssignQuestions = (id: string) =>
+  useSurveyMutation((assignments: { question_id: string; responder_id: string | null }[]) =>
+    api.post<SurveyDetail>(`/surveys/${id}/assign/`, { assignments }),
+  );
+
+/** The question-level workflow. A respondent submits their open questions; the
+ * reviewer and approver decide on the questions they select. */
 export const useSubmitResponse = (id: string) =>
-  useSurveyMutation((answers: Record<string, AnswerValue>) => api.post<SurveyDetail>(`/surveys/${id}/submit/`, { answers }));
-/** Notes pinned to questions, sent with a return: { question id: note }. */
+  useSurveyMutation(({ answers, questionIds }: { answers: Record<string, AnswerValue>; questionIds: string[] }) =>
+    api.post<SurveyDetail>(`/surveys/${id}/submit/`, { answers, question_ids: questionIds }),
+  );
+/** Notes pinned to questions, sent with a decision: { question id: note }. */
 export type QuestionNotes = Record<string, string>;
 const toPayload = (notes: QuestionNotes) =>
-  Object.entries(notes).map(([question_id, text]) => ({ question_id, text }));
+  Object.entries(notes)
+    .filter(([, text]) => text.trim())
+    .map(([question_id, text]) => ({ question_id, text }));
+
+interface Decision<D> {
+  decision: D;
+  comment: string;
+  questionIds: string[];
+  notes?: QuestionNotes;
+}
 
 export const useReviewSurvey = (id: string) =>
-  useSurveyMutation(({ decision, comment, notes = {} }: { decision: "pass" | "return"; comment: string; notes?: QuestionNotes }) =>
-    api.post<SurveyDetail>(`/surveys/${id}/review/`, { decision, comment, question_comments: toPayload(notes) }),
+  useSurveyMutation(({ decision, comment, questionIds, notes = {} }: Decision<"pass" | "return">) =>
+    api.post<SurveyDetail>(`/surveys/${id}/review/`, { decision, comment, question_ids: questionIds, question_comments: toPayload(notes) }),
   );
 export const useApproveSurvey = (id: string) =>
-  useSurveyMutation(
-    ({ decision, comment, notes = {}, audience }: { decision: "approve" | "return"; comment: string; notes?: QuestionNotes; audience?: ReturnAudience }) =>
-      api.post<SurveyDetail>(`/surveys/${id}/approve/`, { decision, comment, question_comments: toPayload(notes), audience }),
+  useSurveyMutation(({ decision, comment, questionIds, notes = {}, audience }: Decision<"approve" | "return"> & { audience?: ReturnAudience }) =>
+    api.post<SurveyDetail>(`/surveys/${id}/approve/`, { decision, comment, audience, question_ids: questionIds, question_comments: toPayload(notes) }),
   );

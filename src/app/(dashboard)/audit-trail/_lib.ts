@@ -6,7 +6,7 @@ import type { HistoryEntry, SurveyDetail } from "@/types/survey";
  * (creating, publishing, closing) is an administrator. */
 export function roleOf(survey: SurveyDetail, person: Person | null): string {
   if (!person) return "System";
-  if (person.id === survey.responder?.id) return "Respondent";
+  if (survey.respondents.some((r) => r.person.id === person.id)) return "Respondent";
   if (person.id === survey.reviewer?.id) return "Reviewer";
   if (person.id === survey.approver?.id) return "Approver";
   return "Administrator";
@@ -22,7 +22,7 @@ export interface NumberedQuestion {
 export function numberQuestions(survey: SurveyDetail): Map<string, NumberedQuestion> {
   const map = new Map<string, NumberedQuestion>();
   let n = 0;
-  for (const section of survey.sections) for (const question of section.questions) map.set(question.id, { n: ++n, question, section: section.title });
+  for (const section of survey.sections) for (const question of section.questions) map.set(question.id, { n: question.number ?? ++n, question, section: section.title });
   return map;
 }
 
@@ -37,22 +37,11 @@ export function gapText(from: string, to: string): string {
   return `${days} day${days === 1 ? "" : "s"} later`;
 }
 
-export interface Round {
-  key: string;
-  /** Setup (before anyone answered) or Round 1, 2, ... starting at each submission. */
-  title: string;
-  events: HistoryEntry[];
-}
-
-/** Split the activity log into setup plus one round per submission. */
-export function groupRounds(history: HistoryEntry[]): Round[] {
-  const rounds: Round[] = [];
-  for (const event of history) {
-    if (event.action === "submitted") rounds.push({ key: event.id, title: `Round ${rounds.filter((r) => r.title !== "Setup").length + 1}`, events: [event] });
-    else if (rounds.length === 0) rounds.push({ key: "setup", title: "Setup", events: [event] });
-    else rounds[rounds.length - 1].events.push(event);
-  }
-  return rounds;
+/** Setup events (before anyone answered) and the question workflow after them. */
+export function splitSetup(history: HistoryEntry[]): { setup: HistoryEntry[]; flow: HistoryEntry[] } {
+  const firstStep = history.findIndex((h) => h.question_ids.length > 0 || h.action === "closed");
+  const at = firstStep === -1 ? history.length : firstStep;
+  return { setup: history.slice(0, at), flow: history.slice(at) };
 }
 
 /** Whole days between publishing and the end (approval or closing), or now if still moving. */

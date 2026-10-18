@@ -3,10 +3,11 @@
 import { Check, Loader2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
-import { AnswerField, isAnswered } from "@/components/shared/answer-field";
+import { AnswerField, formatAnswer, isAnswered } from "@/components/shared/answer-field";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ConfirmDialog } from "@/components/ui/confirm-dialog";
+import { QuestionStatusBadge } from "@/components/ui/status-badge";
 import { useDebounced } from "@/hooks/use-debounced";
 import { useUnsavedChangesWarning } from "@/hooks/use-unsaved-changes-warning";
 import { cn } from "@/lib/utils";
@@ -18,18 +19,30 @@ import { SectionedQuestions } from "./sectioned-questions";
 const AUTOSAVE_MS = 1500;
 const same = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
 
+const OPEN = ["awaiting_response", "returned"];
+
 /**
- * The respondent's form, built so a long survey is safe to do over several
- * sittings: answers are saved as a draft a moment after each change, a progress
- * bar shows what is left, and submitting first checks for missed required
- * questions (jumping to the first) and then asks for confirmation.
+ * The respondent's form for the questions assigned to them, built so a long
+ * list is safe to do over several sittings: answers are saved as a draft a
+ * moment after each change, a progress bar shows what is left, and submitting
+ * first checks for missed required questions (jumping to the first) and then
+ * asks for confirmation. Questions already submitted stay visible, read-only,
+ * with where they are in review.
  */
-export function AnswerForm({ survey }: { survey: SurveyDetail }) {
+export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: string }) {
   const submit = useSubmitResponse(survey.id);
   const saveDraft = useSaveDraft(survey.id);
 
-  // Resume from the saved draft; a returned survey resumes from what was submitted.
-  const initial = Object.keys(survey.draft_answers).length > 0 ? survey.draft_answers : survey.answers;
+  const all = survey.sections.flatMap((s) => s.questions);
+  const open = all.filter((q) => q.responder?.id === meId && OPEN.includes(q.status));
+  const openIds = new Set(open.map((q) => q.id));
+  // Resume from the saved draft; a returned question resumes from what was submitted.
+  const initial = Object.fromEntries(
+    open.flatMap((q) => {
+      const value = survey.draft_answers[q.id] ?? survey.answers[q.id];
+      return value === undefined ? [] : [[q.id, value] as const];
+    }),
+  ) as Record<string, AnswerValue>;
   const [answers, setAnswers] = useState<Record<string, AnswerValue>>(initial);
   const [saved, setSaved] = useState<Record<string, AnswerValue>>(initial); // what the server holds
   const [showMissing, setShowMissing] = useState(false);
@@ -62,8 +75,7 @@ export function AnswerForm({ survey }: { survey: SurveyDetail }) {
   }, [settled, round]);
 
   const pinned = commentsByQuestion(survey.history, "responder");
-  const questions = survey.sections.flatMap((s) => s.questions);
-  const required = questions.filter((q) => q.required);
+  const required = open.filter((q) => q.required);
   const missing = required.filter((q) => !isAnswered(answers[q.id]));
   const done = required.length - missing.length;
   const percent = required.length ? Math.round((done / required.length) * 100) : 100;
@@ -81,7 +93,12 @@ export function AnswerForm({ survey }: { survey: SurveyDetail }) {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between gap-4">
-        <h2 className="text-sm font-semibold text-ink">Your response</h2>
+        <div>
+          <h2 className="text-sm font-semibold text-ink">Your questions</h2>
+          <p className="mt-0.5 text-xs text-ink-faint">
+            {open.length} to answer{all.length > open.length ? ` · ${all.length - open.length} already submitted` : ""}
+          </p>
+        </div>
         <span className="flex items-center gap-1.5 text-xs text-ink-faint" aria-live="polite">
           {saveDraft.isPending ? (
             <>
@@ -121,6 +138,22 @@ export function AnswerForm({ survey }: { survey: SurveyDetail }) {
       <SectionedQuestions
         survey={survey}
         render={(q, n) => {
+          if (!openIds.has(q.id)) {
+            const answer = formatAnswer(survey.answers[q.id]);
+            return (
+              <li key={q.id} className="space-y-1 border-b border-line bg-paper-sunken/40 px-5 py-3 last:border-b-0">
+                <div className="flex items-start justify-between gap-3">
+                  <p className="text-sm text-ink">
+                    <span className="mr-1.5 font-mono-data text-xs text-ink-faint">Q{n}</span>
+                    {q.text}
+                  </p>
+                  <QuestionStatusBadge status={q.status} />
+                </div>
+                <p className="whitespace-pre-wrap text-sm font-medium text-ink-muted">{answer && answer !== "—" ? answer : "No answer"}</p>
+                <QuestionComments comments={pinned[q.id]} />
+              </li>
+            );
+          }
           const flagged = showMissing && q.required && !isAnswered(answers[q.id]);
           return (
             <li key={q.id} id={`q-${q.id}`} className={cn("space-y-2 border-b border-line px-5 py-4 last:border-b-0", flagged && "bg-rust-soft/40")}>
@@ -138,23 +171,23 @@ export function AnswerForm({ survey }: { survey: SurveyDetail }) {
       />
 
       <Card className="sticky bottom-4 flex flex-wrap items-center justify-between gap-3 px-5 py-3">
-        <p className="text-xs text-ink-faint">Your reviewer sees your answers only after you submit.</p>
+        <p className="text-xs text-ink-faint">Your reviewer sees these answers only after you submit.</p>
         <Button onClick={trySubmit} loading={submit.isPending}>
-          Submit for review
+          Submit {open.length} question{open.length === 1 ? "" : "s"} for review
         </Button>
       </Card>
 
       <ConfirmDialog
         open={confirm}
         onOpenChange={setConfirm}
-        title="Submit your response?"
-        description={`It goes to ${survey.reviewer?.full_name ?? "the reviewer"} to review. You won't be able to change it unless they send it back.`}
+        title={`Submit ${open.length} question${open.length === 1 ? "" : "s"}?`}
+        description={`They go to ${survey.reviewer?.full_name ?? "the reviewer"} to review. You won't be able to change them unless they are sent back.`}
         confirmLabel="Submit"
         loading={submit.isPending}
         onConfirm={() =>
-          submit.mutate(answers, {
+          submit.mutate({ answers, questionIds: open.map((q) => q.id) }, {
             onSuccess: () => {
-              toast.success("Submitted for review");
+              toast.success(`${open.length} question${open.length === 1 ? "" : "s"} submitted for review`);
               setConfirm(false);
             },
             onError: (e) => {

@@ -1,29 +1,29 @@
 import type { Person, Ref } from "@/types/common";
 import type { SurveyQuestion } from "@/types/question";
 
-/** draft -> (publish) -> awaiting_response -> awaiting_review -> awaiting_approval -> approved,
- * with `returned` as the send-back loop and `closed` as an administrator withdrawing it. */
-export type SurveyStatus =
-  | "draft"
-  | "awaiting_response"
-  | "awaiting_review"
-  | "awaiting_approval"
-  | "returned"
-  | "approved"
-  | "closed";
+/** The workflow runs per question (see QuestionStatus). A survey is a draft, then in progress
+ * until every question is approved, then approved; `closed` is an administrator withdrawing it. */
+export type SurveyStatus = "draft" | "in_progress" | "approved" | "closed";
 
-export const SURVEY_STATUSES: SurveyStatus[] = [
-  "draft",
-  "awaiting_response",
-  "awaiting_review",
-  "awaiting_approval",
-  "returned",
-  "approved",
-  "closed",
-];
+export const SURVEY_STATUSES: SurveyStatus[] = ["draft", "in_progress", "approved", "closed"];
 
 /** Published and still moving. */
-export const LIVE_STATUSES: SurveyStatus[] = ["awaiting_response", "awaiting_review", "awaiting_approval", "returned"];
+export const LIVE_STATUSES: SurveyStatus[] = ["in_progress"];
+
+/** Where one question is: with its respondent, in review, awaiting approval, sent back, or approved. */
+export type QuestionStatus = "awaiting_response" | "awaiting_review" | "awaiting_approval" | "returned" | "approved";
+
+export const QUESTION_STATUSES: QuestionStatus[] = ["awaiting_response", "awaiting_review", "awaiting_approval", "returned", "approved"];
+
+/** Questions at each stage, plus the total. */
+export type StageCounts = Record<QuestionStatus, number> & { total: number };
+
+/** One respondent and the stage of their questions. */
+export interface RespondentProgress {
+  person: Person;
+  stats: StageCounts;
+  question_ids: string[];
+}
 
 /** The three people a survey is assigned to. */
 export type WorkflowRole = "responder" | "reviewer" | "approver";
@@ -32,9 +32,9 @@ export type WorkflowRole = "responder" | "reviewer" | "approver";
 export const roleName = (role: string): string => (role === "responder" ? "respondent" : role);
 
 export const WORKFLOW_ROLES: { value: WorkflowRole; label: string; description: string }[] = [
-  { value: "responder", label: "Respondent", description: "Fills in the survey" },
-  { value: "reviewer", label: "Reviewer", description: "Checks the response" },
-  { value: "approver", label: "Approver", description: "Gives final approval" },
+  { value: "responder", label: "Respondent", description: "Answers the questions assigned to them" },
+  { value: "reviewer", label: "Reviewer", description: "Checks submitted questions" },
+  { value: "approver", label: "Approver", description: "Gives final approval per question" },
 ];
 
 export type CategoryColor = "brand" | "amber" | "moss" | "rust" | "slate";
@@ -62,12 +62,16 @@ export interface CategoryRef {
 export interface MyTask {
   role: WorkflowRole;
   action: string;
+  /** How many questions it covers. */
+  count: number;
 }
 
 /** Who is holding a survey up right now, and in which role. */
 export interface WaitingOn {
   role: WorkflowRole;
   person: Person;
+  /** How many questions are with them. */
+  count: number;
 }
 
 /** A survey as it appears in lists. */
@@ -79,6 +83,7 @@ export interface Survey {
   category: CategoryRef;
   /** The org block this survey is about. */
   target_unit: Ref;
+  /** The default respondent: takes any question with no one assigned when the survey is published. */
   responder: Person | null;
   reviewer: Person | null;
   approver: Person | null;
@@ -90,8 +95,12 @@ export interface Survey {
   return_count: number;
   submission_count: number;
   my_task: MyTask | null;
-  /** The person it is with now; null for drafts, approved and closed surveys. */
-  waiting_on: WaitingOn | null;
+  /** Everyone it is with now, each with their number of questions; empty for drafts, approved and closed surveys. */
+  waiting_on: WaitingOn[];
+  /** Questions at each stage, among those the signed-in person can see. */
+  question_stats: StageCounts;
+  /** How many questions the signed-in person can see. */
+  my_question_count: number;
   /** When it last changed hands (ISO), for "waiting 6 days". */
   stage_since: string;
   published_at: string | null;
@@ -113,7 +122,7 @@ export type HistoryAction = "created" | "published" | "submitted" | "reviewed" |
 /** Who a return was sent to. */
 export type ReturnAudience = "responder" | "reviewer" | "both";
 
-/** A note pinned to one question by whoever returned the survey. */
+/** A note pinned to one question by the reviewer or approver. */
 export interface QuestionComment {
   id: string;
   question_id: string;
@@ -130,6 +139,8 @@ export interface HistoryEntry {
   comment: string;
   /** Set on a return: respondent, reviewer or both. Empty otherwise. */
   audience: ReturnAudience | "";
+  /** The questions this step was about; empty for steps about the whole survey. */
+  question_ids: string[];
   /** For a submission: the answers as sent. Empty for other steps (and for submissions made before this was recorded). */
   snapshot: Record<string, AnswerValue>;
   question_comments: QuestionComment[];
@@ -150,6 +161,8 @@ export interface SurveyDetail extends Survey {
   /** The respondent's unsent work. Empty for everyone else. */
   draft_answers: Record<string, AnswerValue>;
   readiness: Readiness[];
+  /** Each respondent with their questions' progress. Empty for a respondent, who sees only their own. */
+  respondents: RespondentProgress[];
   history: HistoryEntry[];
   created_by: Person | null;
 }

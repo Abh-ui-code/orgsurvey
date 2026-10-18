@@ -40,7 +40,7 @@ export default function TasksPage() {
         </Badge>
       ),
     },
-    { key: "action", label: "What's needed", render: (s) => s.my_task?.action },
+    { key: "action", label: "What's needed", render: (s) => s.my_task && `${s.my_task.action} · ${s.my_task.count} question${s.my_task.count === 1 ? "" : "s"}` },
     { key: "status", label: "Status", render: (s) => <SurveyStatusBadge status={s.status} /> },
     { key: "due", label: "Due", render: (s) => <DueBadge dueDate={s.due_date} status={s.status} overdue={s.is_overdue} /> },
   ];

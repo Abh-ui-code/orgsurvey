@@ -54,3 +54,14 @@ export function pluralDays(n: number): string {
 export function sinceText(days: number): string {
   return days === 0 ? "since today" : `for ${pluralDays(days)}`;
 }
+
+/** Question numbers as short ranges: [1, 2, 3, 7] -> "Q1–Q3, Q7". */
+export function questionRange(numbers: number[]): string {
+  const runs: [number, number][] = [];
+  for (const n of [...numbers].sort((a, b) => a - b)) {
+    const last = runs[runs.length - 1];
+    if (last && n === last[1] + 1) last[1] = n;
+    else runs.push([n, n]);
+  }
+  return runs.map(([a, b]) => (a === b ? `Q${a}` : `Q${a}–Q${b}`)).join(", ");
+}

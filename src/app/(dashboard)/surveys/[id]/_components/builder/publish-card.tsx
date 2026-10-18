@@ -16,7 +16,8 @@ export function PublishCard({ survey, dirty }: { survey: SurveyDetail; dirty: bo
   const publish = usePublishSurvey(survey.id);
   const [confirm, setConfirm] = useState(false);
   const ready = survey.readiness.every((r) => r.ok);
-  const respondent = survey.responder?.full_name ?? "the respondent";
+  const names = [...new Set(survey.sections.flatMap((sec) => sec.questions.map((q) => q.responder?.full_name)).filter(Boolean))];
+  const respondent = names.length > 1 ? `${names.length} respondents` : (names[0] ?? "the respondent");
 
   return (
     <Card>
@@ -34,7 +35,7 @@ export function PublishCard({ survey, dirty }: { survey: SurveyDetail; dirty: bo
           <p className="mt-2 text-xs text-ink-faint">
             {dirty
               ? "Save your changes before publishing."
-              : `Publishing freezes the questions and sends the survey to ${respondent}. You can still move the due date or swap a person afterwards.`}
+              : `Publishing freezes the questions and sends each respondent their own questions. You can still move the due date, swap the reviewer or approver, or reassign a question that hasn't been answered.`}
           </p>
         </div>
         <Button className="shrink-0" disabled={!ready || dirty} onClick={() => setConfirm(true)}>
@@ -46,7 +47,7 @@ export function PublishCard({ survey, dirty }: { survey: SurveyDetail; dirty: bo
         open={confirm}
         onOpenChange={setConfirm}
         title="Publish this survey?"
-        description={`“${survey.title}” goes to ${respondent} to respond. Its ${survey.question_count} question(s) can no longer be edited; duplicate the survey to change them.`}
+        description={`“${survey.title}” goes to ${respondent}, each seeing only their own questions. Its ${survey.question_count} question(s) can no longer be edited; duplicate the survey to change them.`}
         confirmLabel="Publish"
         loading={publish.isPending}
         onConfirm={() =>

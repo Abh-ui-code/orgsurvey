@@ -51,8 +51,13 @@ function Reports() {
     { key: "unit", label: "Aimed at", render: (s) => s.target_unit.name },
     {
       key: "people",
-      label: "Respondent → reviewer → approver",
-      render: (s) => [s.responder, s.reviewer, s.approver].map((p) => p?.full_name ?? "—").join(" → "),
+      label: "Reviewer → approver",
+      render: (s) => [s.reviewer, s.approver].map((p) => p?.full_name ?? "—").join(" → "),
+    },
+    {
+      key: "progress",
+      label: "Questions approved",
+      render: (s) => (s.status === "draft" ? "—" : `${s.question_stats.approved} of ${s.question_stats.total}`),
     },
     {
       key: "download",
@@ -69,7 +74,7 @@ function Reports() {
     <div className="space-y-4">
       <PageHeader
         title="Reports"
-        description="Download a survey's full audit trail as one Excel sheet: survey details, a timeline of every step, and each question with its answers per submission and the comments made on it."
+        description="Download a survey's full audit trail as one Excel sheet: survey details, a timeline of every step, each question with its answers per submission, and a step-by-step trail for every question (answers, changes, returns, approvals and comments)."
       />
       <SearchInput
         value={search}

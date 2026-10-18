@@ -8,11 +8,16 @@ from django.db.models import Count, Q
 from django.utils import timezone
 
 from apps.organisation.models import OrgUnit
-from apps.surveys.models import Survey, SurveyCategory
+from apps.surveys.models import Survey, SurveyCategory, SurveyQuestion
 from apps.surveys.scoping import scope_surveys, waiting_on
 
-IN_PROGRESS = ("awaiting_response", "awaiting_review", "awaiting_approval")
-REPORT_STATUSES = ("awaiting_response", "awaiting_review", "awaiting_approval", "returned", "approved", "closed")
+IN_PROGRESS = ("in_progress",)
+REPORT_STATUSES = ("in_progress", "approved", "closed")
+
+
+def _with_returned_questions():
+    """Surveys that have at least one question sent back and not yet resubmitted."""
+    return Q(status="in_progress", pk__in=SurveyQuestion.objects.filter(status="returned").values("section__survey"))
 
 
 def _by_unit(surveys) -> list[dict]:
@@ -23,7 +28,7 @@ def _by_unit(surveys) -> list[dict]:
         for row in surveys.values("target_unit").annotate(
             total=Count("id"),
             approved=Count("id", filter=Q(status="approved")),
-            returned=Count("id", filter=Q(status="returned")),
+            returned=Count("id", filter=_with_returned_questions()),
         )
     }
     units = list(OrgUnit.objects.all())
@@ -56,7 +61,7 @@ def dashboard(user, member) -> dict:
             "waiting_on_you": published.filter(waiting_on(user)).count(),
             "surveys": published.count(),
             "in_progress": published.filter(status__in=IN_PROGRESS).count(),
-            "returned": published.filter(status="returned").count(),
+            "returned": published.filter(_with_returned_questions()).count(),
             "approved": published.filter(status="approved").count(),
             "overdue": published.filter(due_date__lt=timezone.localdate(), status__in=Survey.LIVE).count(),
             "drafts": visible.filter(status="draft").count() if is_admin else 0,

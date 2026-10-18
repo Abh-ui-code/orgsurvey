@@ -87,7 +87,7 @@ export default function DashboardPage() {
                           <DueBadge dueDate={s.due_date} status={s.status} overdue={s.is_overdue} />
                         </span>
                       </span>
-                      <Badge tone="brand">{s.my_task?.action}</Badge>
+                      <Badge tone="brand">{s.my_task && `${s.my_task.action} · ${s.my_task.count}`}</Badge>
                     </Link>
                   </li>
                 ))}

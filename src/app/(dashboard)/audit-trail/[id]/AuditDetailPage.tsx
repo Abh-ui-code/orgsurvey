@@ -19,6 +19,8 @@ import { WorkflowStepper } from "../../surveys/[id]/_components/workflow-stepper
 import { daysInFlow } from "../_lib";
 import { AnswersByRound } from "./_components/answers-by-round";
 import { Journey } from "./_components/journey";
+import { RespondentsCard } from "../../surveys/[id]/_components/respondents-card";
+import { ByQuestion } from "./_components/by-question";
 import { Returns } from "./_components/returns";
 
 function Figure({ label, value, hint }: { label: string; value: React.ReactNode; hint?: string }) {
@@ -54,7 +56,9 @@ function AuditDetail() {
 
   const s = survey.data;
   const returns = s.history.filter((h) => h.action === "returned");
-  const notes = returns.reduce((sum, h) => sum + h.question_comments.length, 0);
+  const commented = s.history.filter((h) => h.action === "returned" || h.question_comments.length > 0);
+  const notes = s.history.reduce((sum, h) => sum + h.question_comments.length, 0);
+  const stats = s.question_stats;
   const days = daysInFlow(s);
 
   async function download() {
@@ -100,9 +104,12 @@ function AuditDetail() {
             </CardContent>
           </Card>
 
-          <Card className="grid grid-cols-2 divide-x divide-y divide-line sm:grid-cols-4 sm:divide-y-0">
+          {s.respondents.length > 1 && <RespondentsCard survey={s} />}
+
+          <Card className="grid grid-cols-2 divide-x divide-y divide-line sm:grid-cols-5 sm:divide-y-0">
             <Figure label="Days in the workflow" value={days ?? "—"} hint={s.status === "approved" || s.status === "closed" ? "From publishing to the end" : "From publishing until now"} />
-            <Figure label="Times submitted" value={s.history.filter((h) => h.action === "submitted").length} />
+            <Figure label="Questions approved" value={`${stats.approved} of ${stats.total}`} hint={stats.approved === stats.total ? "All done" : "The rest are in progress"} />
+            <Figure label="Submissions" value={s.history.filter((h) => h.action === "submitted").length} hint={`${s.respondents.length} respondent${s.respondents.length === 1 ? "" : "s"}`} />
             <Figure label="Times sent back" value={returns.length} hint={returns.length === 0 ? "No returns" : undefined} />
             <Figure label="Comments on questions" value={notes} />
           </Card>
@@ -110,11 +117,15 @@ function AuditDetail() {
           <Tabs defaultValue="journey">
             <TabsList>
               <TabsTrigger value="journey">Journey</TabsTrigger>
-              <TabsTrigger value="returns">Returns & comments{returns.length > 0 && ` (${returns.length})`}</TabsTrigger>
+              <TabsTrigger value="questions">By question</TabsTrigger>
+              <TabsTrigger value="returns">Returns & comments{commented.length > 0 && ` (${commented.length})`}</TabsTrigger>
               <TabsTrigger value="answers">Answers by round</TabsTrigger>
             </TabsList>
             <TabsContent value="journey">
               <Journey survey={s} />
+            </TabsContent>
+            <TabsContent value="questions">
+              <ByQuestion survey={s} />
             </TabsContent>
             <TabsContent value="returns">
               <Returns survey={s} />

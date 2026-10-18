@@ -6,13 +6,14 @@ import { Card } from "@/components/ui/card";
 import { EmptyState } from "@/components/ui/empty-state";
 import { formatDateTime } from "@/lib/format";
 import type { SurveyDetail } from "@/types/survey";
+import { ACTION_META } from "../../../surveys/[id]/_components/activity-card";
 import { AUDIENCE_LABEL } from "../../../surveys/[id]/_components/question-comments";
 import { numberQuestions, roleOf } from "../../_lib";
 
-/** Every time the survey was sent back: who, to whom, why, and for each
- * flagged question what the answer was at that moment next to the comment. */
+/** Every time questions were sent back or commented on: who, to whom, why, and for
+ * each flagged question what the answer was at that moment next to the comment. */
 export function Returns({ survey }: { survey: SurveyDetail }) {
-  const returns = survey.history.filter((h) => h.action === "returned");
+  const returns = survey.history.filter((h) => h.action === "returned" || h.question_comments.length > 0);
   const questions = numberQuestions(survey);
 
   if (returns.length === 0) {
@@ -20,8 +21,8 @@ export function Returns({ survey }: { survey: SurveyDetail }) {
       <Card>
         <EmptyState
           icon={CheckCircle2}
-          title="Never sent back"
-          description={survey.status === "approved" ? "It went through without a single return." : "Nobody has returned this survey so far."}
+          title="Nothing sent back or commented on"
+          description={survey.status === "approved" ? "It went through without a single return." : "Nobody has returned or commented on a question so far."}
         />
       </Card>
     );
@@ -30,13 +31,18 @@ export function Returns({ survey }: { survey: SurveyDetail }) {
   return (
     <div className="space-y-4">
       {returns.map((event, i) => {
-        // The answers being judged: the latest submission before this return.
-        const sent = survey.history.filter((h) => h.action === "submitted" && new Date(h.at) <= new Date(event.at)).pop();
+        const returned = event.action === "returned";
+        // The answers being judged: the latest submission of that question before this step.
+        const sentFor = (questionId: string) =>
+          survey.history.filter((h) => h.action === "submitted" && h.question_ids.includes(questionId) && new Date(h.at) <= new Date(event.at)).pop();
         return (
           <Card key={event.id} className="overflow-hidden">
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-line bg-rust-soft/40 px-5 py-3">
-              <span className="font-display text-base font-semibold text-ink">Return {i + 1}</span>
-              <Badge tone="rust">{event.audience ? AUDIENCE_LABEL[event.audience] : "Returned"}</Badge>
+            <div className={`flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-line px-5 py-3 ${returned ? "bg-rust-soft/40" : "bg-brand-soft/40"}`}>
+              <span className="font-display text-base font-semibold text-ink">{returned ? `Return ${returns.slice(0, i + 1).filter((r) => r.action === "returned").length}` : ACTION_META[event.action].label}</span>
+              <Badge tone={returned ? "rust" : "brand"}>{returned ? (event.audience ? AUDIENCE_LABEL[event.audience] : "Returned") : "Comment"}</Badge>
+              <span className="text-xs text-ink-muted">
+                {event.question_ids.length} question{event.question_ids.length === 1 ? "" : "s"}
+              </span>
               <span className="ml-auto text-xs text-ink-faint">{formatDateTime(event.at)}</span>
             </div>
             <div className="space-y-4 px-5 py-4">
@@ -52,6 +58,7 @@ export function Returns({ survey }: { survey: SurveyDetail }) {
                 <ul className="divide-y divide-line rounded-lg border border-line">
                   {event.question_comments.map((c) => {
                     const q = questions.get(c.question_id);
+                    const sent = sentFor(c.question_id);
                     const answer = sent ? formatAnswer(sent.snapshot[c.question_id]) : "";
                     return (
                       <li key={c.id} className="grid gap-3 px-4 py-3 md:grid-cols-2">
@@ -60,13 +67,13 @@ export function Returns({ survey }: { survey: SurveyDetail }) {
                             <span className="mr-1.5 font-mono-data text-xs text-ink-faint">Q{q?.n ?? "?"}</span>
                             {q?.question.text ?? "Question removed"}
                           </p>
-                          {sent && Object.keys(sent.snapshot).length > 0 && (
+                          {sent && c.question_id in sent.snapshot && (
                             <p className="mt-1.5 text-xs text-ink-muted">
                               Answer given: <span className="font-medium text-ink">{answer && answer !== "—" ? answer : "No answer"}</span>
                             </p>
                           )}
                         </div>
-                        <p className="whitespace-pre-wrap border-l-2 border-rust pl-3 text-sm text-ink">{c.text}</p>
+                        <p className={`whitespace-pre-wrap border-l-2 pl-3 text-sm text-ink ${returned ? "border-rust" : "border-brand"}`}>{c.text}</p>
                       </li>
                     );
                   })}

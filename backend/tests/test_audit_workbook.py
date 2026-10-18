@@ -36,18 +36,18 @@ def at(day):
 
 def test_workbook_describes_the_whole_flow(monkeypatch):
     section = NS(title="Processes")
-    q1 = NS(pk="q1", id="q1", section=section, text="Documented?", type="yes_no", options=[], required=True, hint="")
-    q2 = NS(pk="q2", id="q2", section=section, text="Rate it", type="rating", options=[], required=True, hint="")
-    monkeypatch.setattr(audit.SurveyQuestion, "objects", NS(filter=lambda **kw: FakeQS([q1, q2])))
-
     people = {k: NS(pk=k, full_name=k.title(), email=f"{k}@x") for k in ("responder", "reviewer", "approver")}
-    note = NS(question_id="q2", text="Too high, explain", author=people["approver"])
+    q1 = NS(pk="q1", id="q1", section=section, text="Documented?", type="yes_no", options=[], required=True, hint="", responder=people["responder"], status="approved")
+    q2 = NS(pk="q2", id="q2", section=section, text="Rate it", type="rating", options=[], required=True, hint="", responder=people["responder"], status="approved")
+    monkeypatch.setattr(audit.SurveyQuestion, "objects", NS(filter=lambda **kw: FakeQS([q1, q2])))
+    both = Many([q1, q2])
+    note = NS(question_id="q2", pk="n1", text="Too high, explain", author=people["approver"])
     events = [
-        NS(action="created", by=None, by_id=None, created_at=at(1), comment="", audience="", snapshot={}, question_comments=Many([])),
-        NS(action="submitted", by=people["responder"], by_id="responder", created_at=at(2), comment="", audience="", snapshot={"q1": "Yes", "q2": 5}, question_comments=Many([])),
-        NS(action="returned", by=people["approver"], by_id="approver", created_at=at(3), comment="See Q2", audience="both", snapshot={}, question_comments=Many([note])),
-        NS(action="submitted", by=people["responder"], by_id="responder", created_at=at(4), comment="", audience="", snapshot={"q1": "Yes", "q2": 3}, question_comments=Many([])),
-        NS(action="approved", by=people["approver"], by_id="approver", created_at=at(5), comment="", audience="", snapshot={}, question_comments=Many([])),
+        NS(pk="e1", action="created", by=None, by_id=None, created_at=at(1), comment="", audience="", snapshot={}, question_comments=Many([]), questions=both),
+        NS(pk="e2", action="submitted", by=people["responder"], by_id="responder", created_at=at(2), comment="", audience="", snapshot={"q1": "Yes", "q2": 5}, question_comments=Many([]), questions=both),
+        NS(pk="e3", action="returned", by=people["approver"], by_id="approver", created_at=at(3), comment="See Q2", audience="both", snapshot={}, question_comments=Many([note]), questions=both),
+        NS(pk="e4", action="submitted", by=people["responder"], by_id="responder", created_at=at(4), comment="", audience="", snapshot={"q1": "Yes", "q2": 3}, question_comments=Many([]), questions=both),
+        NS(pk="e5", action="approved", by=people["approver"], by_id="approver", created_at=at(5), comment="", audience="", snapshot={}, question_comments=Many([]), questions=both),
     ]
     survey = NS(
         title="Pulse", description="", instructions="", status="approved", due_date=None, created_at=at(1), published_at=at(1),
@@ -62,14 +62,14 @@ def test_workbook_describes_the_whole_flow(monkeypatch):
 
     # Block 1: details and counts, label then value.
     details = {r[0]: r[2] for r in rows if r[0]} | {r[3]: r[5] for r in rows if r[3]}
-    assert details["Times submitted"] == 2 and details["Times returned"] == 1
+    assert details["Questions approved"] == 2 and details["Times submitted"] == 2 and details["Times returned"] == 1
     assert details["Returned to respondent / reviewer"] == "1 / 1" and details["Question comments in total"] == 1
 
     # Block 2: five steps; the return names who it went to and how many comments it carried.
     start = next(i for i, r in enumerate(rows) if r[0] == "Step")
     timeline = rows[start + 1:start + 6]
     assert [r[2] for r in timeline] == ["Created", "Response submitted", "Returned", "Response submitted", "Approved"]
-    assert timeline[2][5] == "Respondent and reviewer" and timeline[2][6] == 1 and timeline[2][7] == "See Q2"
+    assert timeline[2][5] == "Respondent and reviewer" and timeline[2][6] == "Q1-Q2" and timeline[2][7] == "See Q2"
 
     # Block 3: one row per question, answer per submission, comments on the question.
     start = next(i for i, r in enumerate(rows) if r[0] == "Q#")

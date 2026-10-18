@@ -29,23 +29,20 @@ class Survey(AuthoredModel, BaseModel):
     """
     An organisational survey, built as a draft and then published.
 
-    Lifecycle:  draft -> (publish) -> awaiting_response -> awaiting_review
-                -> awaiting_approval -> approved, with `returned` as the
-                send-back loop and `closed` as an administrator withdrawing it.
-    Once published, the structure is frozen: the respondent, reviewer and
-    approver all see exactly the same questions for the life of the survey.
+    The workflow runs per question (see SurveyQuestion.status): each question
+    has one respondent and moves through review and approval on its own. The
+    survey itself is only draft -> in_progress -> approved (once every
+    question is approved), or closed when an administrator withdraws it.
+    Once published, the structure is frozen.
     """
 
     STATUSES = [
         ("draft", "Draft"),
-        ("awaiting_response", "Awaiting response"),
-        ("awaiting_review", "Awaiting review"),
-        ("awaiting_approval", "Awaiting approval"),
-        ("returned", "Returned"),
+        ("in_progress", "In progress"),
         ("approved", "Approved"),
         ("closed", "Closed"),
     ]
-    LIVE = ("awaiting_response", "awaiting_review", "awaiting_approval", "returned")
+    LIVE = ("in_progress",)
 
     category = models.ForeignKey(SurveyCategory, on_delete=models.PROTECT, related_name="surveys")
     title = models.CharField(max_length=255)
@@ -54,12 +51,13 @@ class Survey(AuthoredModel, BaseModel):
     # The org block this survey is about.
     target_unit = models.ForeignKey("organisation.OrgUnit", on_delete=models.PROTECT, related_name="surveys")
     status = models.CharField(max_length=20, choices=STATUSES, default="draft", db_index=True)
-    # The three people. Optional while drafting, all required to publish.
+    # The reviewer and approver handle every question. Respondents are set per
+    # question (SurveyQuestion.responder); this field is unused, kept for old data.
     responder = user_fk()
     reviewer = user_fk()
     approver = user_fk()
     due_date = models.DateField(null=True, blank=True)
-    answers = models.JSONField(default=dict, blank=True)  # the submitted response: {survey_question_id: answer}
+    answers = models.JSONField(default=dict, blank=True)  # submitted answers from every respondent: {survey_question_id: answer}
     # The respondent's work in progress. Kept apart from `answers` so that
     # saving a draft never changes what a reviewer or approver is looking at.
     draft_answers = models.JSONField(default=dict, blank=True)
@@ -89,7 +87,20 @@ class Section(BaseModel):
 
 
 class SurveyQuestion(BaseModel):
-    """A question inside a survey: a copy of a bank question, or written fresh."""
+    """A question inside a survey: a copy of a bank question, or written fresh.
+    It has exactly one respondent and its own place in the workflow."""
+
+    STATUSES = [
+        ("awaiting_response", "Awaiting response"),
+        ("awaiting_review", "Awaiting review"),
+        ("awaiting_approval", "Awaiting approval"),
+        ("returned", "Returned"),
+        ("approved", "Approved"),
+    ]
+    # Furthest point reached, so the reviewer and approver can keep seeing a
+    # question after it has moved on or been sent back: 0 not submitted,
+    # 1 submitted, 2 passed review.
+    PROGRESS_SUBMITTED, PROGRESS_REVIEWED = 1, 2
 
     section = models.ForeignKey(Section, on_delete=models.CASCADE, related_name="questions")
     order = models.PositiveIntegerField(default=0)
@@ -101,6 +112,9 @@ class SurveyQuestion(BaseModel):
     bank_question = models.ForeignKey(
         "question_bank.Question", null=True, blank=True, on_delete=models.SET_NULL, related_name="+"
     )
+    responder = user_fk()
+    status = models.CharField(max_length=20, choices=STATUSES, default="awaiting_response", db_index=True)
+    progress = models.PositiveSmallIntegerField(default=0)
 
     class Meta:
         app_label = "surveys"
@@ -124,6 +138,9 @@ class SurveyEvent(BaseModel):
     # For a submission: the answers as they were sent, kept for the audit
     # trail because a resubmission overwrites `Survey.answers`.
     snapshot = models.JSONField(default=dict, blank=True)
+    # The questions this step was about: a respondent submitting 50 of 100, a
+    # reviewer returning 3. Empty for steps about the whole survey.
+    questions = models.ManyToManyField(SurveyQuestion, blank=True, related_name="events")
 
     class Meta:
         app_label = "surveys"

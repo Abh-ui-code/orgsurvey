@@ -139,7 +139,7 @@ class Command(BaseCommand):
                 )
                 fields = {"instructions": instructions}
                 if people_keys:
-                    fields.update(zip(("responder", "reviewer", "approver"), (people[k] for k in people_keys)))
+                    fields.update(zip(("reviewer", "approver"), (people[k] for k in people_keys[1:])))
                 if days is not None:
                     fields["due_date"] = today + datetime.timedelta(days=days)
                 services.update_survey(survey, **fields)
@@ -151,6 +151,8 @@ class Command(BaseCommand):
                         section = services.add_section(survey, title=section_title)
                     for q in idx:
                         services.add_question_from_bank(section, qs[q])
+                if people_keys:  # everything goes to the first person unless split afterwards
+                    services.assign_questions(survey, [(q, people[people_keys[0]]) for q in services.all_questions(survey)])
                 return survey
 
             def sample_answers(survey):
@@ -174,6 +176,20 @@ class Command(BaseCommand):
                           "engagement", "eng", [("Team & communication", [0, 2]), ("Tools & obstacles", [3, 4])],
                           ("neha", "vikram", "anita"), 7, "Answer for the whole Web Team, not just yourself.")
             services.publish(pulse, admin)
+
+            # One survey, questions split between two respondents, at different stages:
+            # the first respondent's questions are approved and returned, the second's untouched.
+            split = build("Customer Support Readiness Review",
+                          "Questions shared between two respondents, each seeing only their own.",
+                          "operations", "ops", [("Processes", [5, 6]), ("Improvement", [7, 8])],
+                          ("priya", "vikram", "anita"), 10)
+            first, second, third, fourth = services.all_questions(split)
+            services.assign_questions(split, [(first, people["priya"]), (second, people["priya"]), (third, people["kavya"]), (fourth, people["kavya"])])
+            services.publish(split, admin)
+            services.submit_response(split, people["priya"], sample_answers(split))
+            services.review(split, people["vikram"], "pass", "Good.", question_ids=[str(first.id)])
+            services.review(split, people["vikram"], "return", "", [{"question_id": str(second.id), "text": "Add an example."}], question_ids=[str(second.id)])
+            services.approve(split, people["anita"], "approve", "", question_ids=[str(first.id)])
 
             ops_s = build("Operations Process Review",
                           "Review of documented processes and collaboration across Operations.",
