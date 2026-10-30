@@ -1,0 +1,17 @@
+{
+ "summary": "GRI 409 addresses forced or compulsory labor, defined by ILO Convention 29 as all work or service exacted under the menace of any penalty and not offered voluntarily. It contains one disclosure on operations and suppliers at significant risk.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "Describe how the organization manages this material topic and its related impacts, as required by Disclosure 3-3 in GRI 3 (Material Topics 2021).",
+   "type": "text",
+   "hint": "Per GRI 3-3: the actual and potential impacts, policy commitments, actions taken, tracking of effectiveness and stakeholder engagement for the topic."
+  },
+  {
+   "ref": "409-1",
+   "text": "Identify operations and suppliers at significant risk for incidents of forced or compulsory labor, and the measures taken to contribute to its elimination.",
+   "type": "text",
+   "hint": "a. Operations and suppliers at significant risk, by type of operation and supplier, and by countries or geographic areas. b. Measures taken in the reporting period to contribute to the elimination of all forms of forced or compulsory labor."
+  }
+ ]
+}

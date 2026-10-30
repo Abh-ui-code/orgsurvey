@@ -1,0 +1,707 @@
+{
+ "summary": "GRI 11 provides information for organizations in the oil and gas sector about their likely material topics, based on the sector's most significant impacts on the economy, environment, and people. It lists disclosures to report for each topic, drawn from the GRI Topic Standards and other sources.",
+ "questions": [
+  {
+   "ref": "11.1.1",
+   "text": "Describe how the organization manages the material topic of climate change: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.1 Climate change. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.1.2",
+   "text": "Report GRI 102-1 Transition plan for climate change mitigation, as it relates to climate change.",
+   "type": "text",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 102: Climate Change 2025, Disclosure 102-1 Transition plan for climate change mitigation."
+  },
+  {
+   "ref": "11.1.3",
+   "text": "Report GRI 102-2 Climate change adaptation plan, as it relates to climate change.",
+   "type": "text",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 102: Climate Change 2025, Disclosure 102-2 Climate change adaptation plan."
+  },
+  {
+   "ref": "11.1.4",
+   "text": "Report GRI 102-3 Just transition, as it relates to climate change.",
+   "type": "text",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 102: Climate Change 2025, Disclosure 102-3 Just transition."
+  },
+  {
+   "ref": "11.1.5",
+   "text": "Report GRI 102-4 GHG emissions reduction targets and progress, as it relates to climate change.",
+   "type": "text",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 102: Climate Change 2025, Disclosure 102-4 GHG emissions reduction targets and progress."
+  },
+  {
+   "ref": "11.1.6",
+   "text": "Report GRI 102-5 Scope 1 GHG emissions, as it relates to climate change.",
+   "type": "text",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 102: Climate Change 2025, Disclosure 102-5 Scope 1 GHG emissions."
+  },
+  {
+   "ref": "11.1.7",
+   "text": "Report GRI 102-6 Scope 2 GHG emissions, as it relates to climate change.",
+   "type": "text",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 102: Climate Change 2025, Disclosure 102-6 Scope 2 GHG emissions."
+  },
+  {
+   "ref": "11.1.8",
+   "text": "Report GRI 102-7 Scope 3 GHG emissions, as it relates to climate change.",
+   "type": "text",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 102: Climate Change 2025, Disclosure 102-7 Scope 3 GHG emissions."
+  },
+  {
+   "ref": "11.1.9",
+   "text": "Report GRI 102-8 GHG emissions intensity, as it relates to climate change.",
+   "type": "text",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 102: Climate Change 2025, Disclosure 102-8 GHG emissions intensity."
+  },
+  {
+   "ref": "11.1.10",
+   "text": "Report GRI 102-9 GHG removals in the value chain, as it relates to climate change.",
+   "type": "text",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 102: Climate Change 2025, Disclosure 102-9 GHG removals in the value chain."
+  },
+  {
+   "ref": "11.1.11",
+   "text": "Report GRI 102-10 Carbon credits, as it relates to climate change.",
+   "type": "text",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 102: Climate Change 2025, Disclosure 102-10 Carbon credits."
+  },
+  {
+   "ref": "11.1.12",
+   "text": "Report GRI 103-1 Energy policies and commitments, as it relates to climate change.",
+   "type": "text",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 103: Energy 2025, Disclosure 103-1 Energy policies and commitments."
+  },
+  {
+   "ref": "11.1.13",
+   "text": "Report GRI 103-2 Energy consumption and self-generation within the organization, as it relates to climate change.",
+   "type": "text",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 103: Energy 2025, Disclosure 103-2 Energy consumption and self-generation within the organization."
+  },
+  {
+   "ref": "11.1.14",
+   "text": "Report GRI 103-3 Upstream and downstream energy consumption, as it relates to climate change.",
+   "type": "text",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 103: Energy 2025, Disclosure 103-3 Upstream and downstream energy consumption."
+  },
+  {
+   "ref": "11.1.15",
+   "text": "Report GRI 103-4 Energy intensity, as it relates to climate change.",
+   "type": "text",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 103: Energy 2025, Disclosure 103-4 Energy intensity."
+  },
+  {
+   "ref": "11.1.16",
+   "text": "What percentage of capital expenditure (CapEx) is allocated to investments in new reserves, renewable energy, CO2 removal and nature-based solutions, and other climate-related R&D?",
+   "type": "text",
+   "hint": "Topic 11.1 additional sector disclosure. Report the % of CapEx allocated to: a. prospection, exploration, and development of new reserves; b. energy from renewable sources (by renewable energy source); c. technologies to remove CO2 from the atmosphere and nature-based solutions; d. other R&D that can address climate change risks. Also report GRI 102-1 to 102-10 and 103-1 to 103-4."
+  },
+  {
+   "ref": "11.3.1",
+   "text": "Describe how the organization manages the material topic of air emissions: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.3 Air emissions. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.3.2",
+   "text": "Report GRI 305-7 Nitrogen oxides (NOx), sulfur oxides (SOx), and other significant air emissions, as it relates to air emissions.",
+   "type": "text",
+   "hint": "Topic 11.3 Air emissions. Referenced disclosure: GRI 305: Emissions 2016, Disclosure 305-7 Nitrogen oxides (NOx), sulfur oxides (SOx), and other significant air emissions."
+  },
+  {
+   "ref": "11.3.3",
+   "text": "Report GRI 416-1 Assessment of the health and safety impacts of product and service categories, as it relates to air emissions.",
+   "type": "text",
+   "hint": "Topic 11.3 Air emissions. Referenced disclosure: GRI 416: Customer Health and Safety 2016, Disclosure 416-1 Assessment of the health and safety impacts of product and service categories."
+  },
+  {
+   "ref": "11.4.1",
+   "text": "Describe how the organization manages the material topic of biodiversity: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.4 Biodiversity. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.4.2",
+   "text": "Report GRI 101-1 Policies to halt and reverse biodiversity loss, as it relates to biodiversity.",
+   "type": "text",
+   "hint": "Topic 11.4 Biodiversity. Referenced disclosure: GRI 101: Biodiversity 2024, Disclosure 101-1 Policies to halt and reverse biodiversity loss."
+  },
+  {
+   "ref": "11.4.3",
+   "text": "Report GRI 101-2 Management of biodiversity impacts, as it relates to biodiversity.",
+   "type": "text",
+   "hint": "Topic 11.4 Biodiversity. Referenced disclosure: GRI 101: Biodiversity 2024, Disclosure 101-2 Management of biodiversity impacts."
+  },
+  {
+   "ref": "11.4.4",
+   "text": "Report GRI 101-4 Identification of biodiversity impacts, as it relates to biodiversity.",
+   "type": "text",
+   "hint": "Topic 11.4 Biodiversity. Referenced disclosure: GRI 101: Biodiversity 2024, Disclosure 101-4 Identification of biodiversity impacts."
+  },
+  {
+   "ref": "11.4.5",
+   "text": "Report GRI 101-5 Locations with biodiversity impacts, as it relates to biodiversity.",
+   "type": "text",
+   "hint": "Topic 11.4 Biodiversity. Referenced disclosure: GRI 101: Biodiversity 2024, Disclosure 101-5 Locations with biodiversity impacts."
+  },
+  {
+   "ref": "11.4.6",
+   "text": "Report GRI 101-6 Direct drivers of biodiversity loss, as it relates to biodiversity.",
+   "type": "text",
+   "hint": "Topic 11.4 Biodiversity. Referenced disclosure: GRI 101: Biodiversity 2024, Disclosure 101-6 Direct drivers of biodiversity loss."
+  },
+  {
+   "ref": "11.4.7",
+   "text": "Report GRI 101-7 Changes to the state of biodiversity, as it relates to biodiversity.",
+   "type": "text",
+   "hint": "Topic 11.4 Biodiversity. Referenced disclosure: GRI 101: Biodiversity 2024, Disclosure 101-7 Changes to the state of biodiversity."
+  },
+  {
+   "ref": "11.4.8",
+   "text": "Report GRI 101-8 Ecosystem services, as it relates to biodiversity.",
+   "type": "text",
+   "hint": "Topic 11.4 Biodiversity. Referenced disclosure: GRI 101: Biodiversity 2024, Disclosure 101-8 Ecosystem services."
+  },
+  {
+   "ref": "11.5.1",
+   "text": "Describe how the organization manages the material topic of waste: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.5 Waste. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.5.2",
+   "text": "Report GRI 306-1 Waste generation and significant waste-related impacts, as it relates to waste.",
+   "type": "text",
+   "hint": "Topic 11.5 Waste. Referenced disclosure: GRI 306: Waste 2020, Disclosure 306-1 Waste generation and significant waste-related impacts."
+  },
+  {
+   "ref": "11.5.3",
+   "text": "Report GRI 306-2 Management of significant waste-related impacts, as it relates to waste.",
+   "type": "text",
+   "hint": "Topic 11.5 Waste. Referenced disclosure: GRI 306: Waste 2020, Disclosure 306-2 Management of significant waste-related impacts."
+  },
+  {
+   "ref": "11.5.4",
+   "text": "Report GRI 306-3 Waste generated, as it relates to waste.",
+   "type": "text",
+   "hint": "Topic 11.5 Waste. Referenced disclosure: GRI 306: Waste 2020, Disclosure 306-3 Waste generated."
+  },
+  {
+   "ref": "11.5.5",
+   "text": "Report GRI 306-4 Waste diverted from disposal, as it relates to waste.",
+   "type": "text",
+   "hint": "Topic 11.5 Waste. Referenced disclosure: GRI 306: Waste 2020, Disclosure 306-4 Waste diverted from disposal."
+  },
+  {
+   "ref": "11.5.6",
+   "text": "Report GRI 306-5 Waste directed to disposal, as it relates to waste.",
+   "type": "text",
+   "hint": "Topic 11.5 Waste. Referenced disclosure: GRI 306: Waste 2020, Disclosure 306-5 Waste directed to disposal."
+  },
+  {
+   "ref": "11.6.1",
+   "text": "Describe how the organization manages the material topic of water and effluents: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.6 Water and effluents. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.6.2",
+   "text": "Report GRI 303-1 Interactions with water as a shared resource, as it relates to water and effluents.",
+   "type": "text",
+   "hint": "Topic 11.6 Water and effluents. Referenced disclosure: GRI 303: Water and Effluents 2018, Disclosure 303-1 Interactions with water as a shared resource."
+  },
+  {
+   "ref": "11.6.3",
+   "text": "Report GRI 303-2 Management of water discharge-related impacts, as it relates to water and effluents.",
+   "type": "text",
+   "hint": "Topic 11.6 Water and effluents. Referenced disclosure: GRI 303: Water and Effluents 2018, Disclosure 303-2 Management of water discharge-related impacts."
+  },
+  {
+   "ref": "11.6.4",
+   "text": "Report GRI 303-3 Water withdrawal, as it relates to water and effluents.",
+   "type": "text",
+   "hint": "Topic 11.6 Water and effluents. Referenced disclosure: GRI 303: Water and Effluents 2018, Disclosure 303-3 Water withdrawal."
+  },
+  {
+   "ref": "11.6.5",
+   "text": "Report GRI 303-4 Water discharge, as it relates to water and effluents.",
+   "type": "text",
+   "hint": "Topic 11.6 Water and effluents. Referenced disclosure: GRI 303: Water and Effluents 2018, Disclosure 303-4 Water discharge."
+  },
+  {
+   "ref": "11.6.6",
+   "text": "Report GRI 303-5 Water consumption, as it relates to water and effluents.",
+   "type": "text",
+   "hint": "Topic 11.6 Water and effluents. Referenced disclosure: GRI 303: Water and Effluents 2018, Disclosure 303-5 Water consumption."
+  },
+  {
+   "ref": "11.7.1",
+   "text": "Describe how the organization manages the material topic of closure and rehabilitation: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.7 Closure and rehabilitation. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.7.2",
+   "text": "Report GRI 402-1 Minimum notice periods regarding operational changes, as it relates to closure and rehabilitation.",
+   "type": "text",
+   "hint": "Topic 11.7 Closure and rehabilitation. Referenced disclosure: GRI 402: Labor/Management Relations 2016, Disclosure 402-1 Minimum notice periods regarding operational changes."
+  },
+  {
+   "ref": "11.7.3",
+   "text": "Report GRI 404-2 Programs for upgrading employee skills and transition assistance programs, as it relates to closure and rehabilitation.",
+   "type": "text",
+   "hint": "Topic 11.7 Closure and rehabilitation. Referenced disclosure: GRI 404: Training and Education 2016, Disclosure 404-2 Programs for upgrading employee skills and transition assistance programs."
+  },
+  {
+   "ref": "11.7.4",
+   "text": "Which operational sites have closure and rehabilitation plans in place, have been closed, or are in the process of being closed?",
+   "type": "text",
+   "hint": "Topic 11.7 additional sector disclosure. List the operational sites that: a. have closure and rehabilitation plans in place; b. have been closed; c. are in the process of being closed. Also report GRI 402-1 and 404-2."
+  },
+  {
+   "ref": "11.7.5",
+   "text": "Which decommissioned structures have been left in place, and why?",
+   "type": "text",
+   "hint": "Topic 11.7 additional sector disclosure. List the decommissioned structures left in place and describe the rationale for leaving them in place."
+  },
+  {
+   "ref": "11.7.6",
+   "text": "What is the total monetary value of financial provisions made for closure and rehabilitation, including post-closure monitoring and aftercare?",
+   "type": "number",
+   "hint": "Topic 11.7 additional sector disclosure. Report the total monetary value of financial provisions for closure and rehabilitation made by the organization, including post-closure monitoring and aftercare for operational sites."
+  },
+  {
+   "ref": "11.8.1",
+   "text": "Describe how the organization manages the material topic of asset integrity and critical incident management: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.8 Asset integrity and critical incident management. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.8.2",
+   "text": "Report GRI 306-3 Waste generated, as it relates to asset integrity and critical incident management.",
+   "type": "text",
+   "hint": "Topic 11.8 Asset integrity and critical incident management. Referenced disclosure: GRI 306: Waste 2020, Disclosure 306-3 Waste generated."
+  },
+  {
+   "ref": "11.8.3",
+   "text": "How many Tier 1 and Tier 2 process safety events occurred, and how do they break down by business activity?",
+   "type": "text",
+   "hint": "Topic 11.8 additional sector disclosure. Report the total number of Tier 1 and Tier 2 process safety events, and a breakdown by business activity (e.g., exploration, development, production, closure and rehabilitation, refining, processing, transportation, storage). Also report GRI 306-3 (significant spills)."
+  },
+  {
+   "ref": "11.8.4",
+   "text": "For oil sands mining operations, what are the organization's tailings facilities, their status and risk assessments, and what actions manage impacts and prevent catastrophic failure?",
+   "type": "text",
+   "hint": "Topic 11.8 additional sector disclosure. For organizations with oil sands mining: a. list tailings facilities; b. for each, describe it, report whether active, inactive or closed, and the date and main findings of the latest risk assessment; c. describe actions to manage impacts (incl. closure and post-closure) and prevent catastrophic failures."
+  },
+  {
+   "ref": "11.9.1",
+   "text": "Describe how the organization manages the material topic of occupational health and safety: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.9 Occupational health and safety. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.9.2",
+   "text": "Report GRI 403-1 Occupational health and safety management system, as it relates to occupational health and safety.",
+   "type": "text",
+   "hint": "Topic 11.9 Occupational health and safety. Referenced disclosure: GRI 403: Occupational Health and Safety 2018, Disclosure 403-1 Occupational health and safety management system."
+  },
+  {
+   "ref": "11.9.3",
+   "text": "Report GRI 403-2 Hazard identification, risk assessment, and incident investigation, as it relates to occupational health and safety.",
+   "type": "text",
+   "hint": "Topic 11.9 Occupational health and safety. Referenced disclosure: GRI 403: Occupational Health and Safety 2018, Disclosure 403-2 Hazard identification, risk assessment, and incident investigation."
+  },
+  {
+   "ref": "11.9.4",
+   "text": "Report GRI 403-3 Occupational health services, as it relates to occupational health and safety.",
+   "type": "text",
+   "hint": "Topic 11.9 Occupational health and safety. Referenced disclosure: GRI 403: Occupational Health and Safety 2018, Disclosure 403-3 Occupational health services."
+  },
+  {
+   "ref": "11.9.5",
+   "text": "Report GRI 403-4 Worker participation, consultation, and communication on occupational health and safety, as it relates to occupational health and safety.",
+   "type": "text",
+   "hint": "Topic 11.9 Occupational health and safety. Referenced disclosure: GRI 403: Occupational Health and Safety 2018, Disclosure 403-4 Worker participation, consultation, and communication on occupational health and safety."
+  },
+  {
+   "ref": "11.9.6",
+   "text": "Report GRI 403-5 Worker training on occupational health and safety, as it relates to occupational health and safety.",
+   "type": "text",
+   "hint": "Topic 11.9 Occupational health and safety. Referenced disclosure: GRI 403: Occupational Health and Safety 2018, Disclosure 403-5 Worker training on occupational health and safety."
+  },
+  {
+   "ref": "11.9.7",
+   "text": "Report GRI 403-6 Promotion of worker health, as it relates to occupational health and safety.",
+   "type": "text",
+   "hint": "Topic 11.9 Occupational health and safety. Referenced disclosure: GRI 403: Occupational Health and Safety 2018, Disclosure 403-6 Promotion of worker health."
+  },
+  {
+   "ref": "11.9.8",
+   "text": "Report GRI 403-7 Prevention and mitigation of occupational health and safety impacts directly linked by business relationships, as it relates to occupational health and safety.",
+   "type": "text",
+   "hint": "Topic 11.9 Occupational health and safety. Referenced disclosure: GRI 403: Occupational Health and Safety 2018, Disclosure 403-7 Prevention and mitigation of occupational health and safety impacts directly linked by business relationships."
+  },
+  {
+   "ref": "11.9.9",
+   "text": "Report GRI 403-8 Workers covered by an occupational health and safety management system, as it relates to occupational health and safety.",
+   "type": "text",
+   "hint": "Topic 11.9 Occupational health and safety. Referenced disclosure: GRI 403: Occupational Health and Safety 2018, Disclosure 403-8 Workers covered by an occupational health and safety management system."
+  },
+  {
+   "ref": "11.9.10",
+   "text": "Report GRI 403-9 Work-related injuries, as it relates to occupational health and safety.",
+   "type": "text",
+   "hint": "Topic 11.9 Occupational health and safety. Referenced disclosure: GRI 403: Occupational Health and Safety 2018, Disclosure 403-9 Work-related injuries."
+  },
+  {
+   "ref": "11.9.11",
+   "text": "Report GRI 403-10 Work-related ill health, as it relates to occupational health and safety.",
+   "type": "text",
+   "hint": "Topic 11.9 Occupational health and safety. Referenced disclosure: GRI 403: Occupational Health and Safety 2018, Disclosure 403-10 Work-related ill health."
+  },
+  {
+   "ref": "11.10.1",
+   "text": "Describe how the organization manages the material topic of employment practices: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.10 Employment practices. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.10.2",
+   "text": "Report GRI 401-1 New employee hires and employee turnover, as it relates to employment practices.",
+   "type": "text",
+   "hint": "Topic 11.10 Employment practices. Referenced disclosure: GRI 401: Employment 2016, Disclosure 401-1 New employee hires and employee turnover."
+  },
+  {
+   "ref": "11.10.3",
+   "text": "Report GRI 401-2 Benefits provided to full-time employees that are not provided to temporary or part-time employees, as it relates to employment practices.",
+   "type": "text",
+   "hint": "Topic 11.10 Employment practices. Referenced disclosure: GRI 401: Employment 2016, Disclosure 401-2 Benefits provided to full-time employees that are not provided to temporary or part-time employees."
+  },
+  {
+   "ref": "11.10.4",
+   "text": "Report GRI 401-3 Parental leave, as it relates to employment practices.",
+   "type": "text",
+   "hint": "Topic 11.10 Employment practices. Referenced disclosure: GRI 401: Employment 2016, Disclosure 401-3 Parental leave."
+  },
+  {
+   "ref": "11.10.5",
+   "text": "Report GRI 402-1 Minimum notice periods regarding operational changes, as it relates to employment practices.",
+   "type": "text",
+   "hint": "Topic 11.10 Employment practices. Referenced disclosure: GRI 402: Labor/Management Relations 2016, Disclosure 402-1 Minimum notice periods regarding operational changes."
+  },
+  {
+   "ref": "11.10.6",
+   "text": "Report GRI 404-1 Average hours of training per year per employee, as it relates to employment practices.",
+   "type": "text",
+   "hint": "Topic 11.10 Employment practices. Referenced disclosure: GRI 404: Training and Education 2016, Disclosure 404-1 Average hours of training per year per employee."
+  },
+  {
+   "ref": "11.10.7",
+   "text": "Report GRI 404-2 Programs for upgrading employee skills and transition assistance programs, as it relates to employment practices.",
+   "type": "text",
+   "hint": "Topic 11.10 Employment practices. Referenced disclosure: GRI 404: Training and Education 2016, Disclosure 404-2 Programs for upgrading employee skills and transition assistance programs."
+  },
+  {
+   "ref": "11.10.8",
+   "text": "Report GRI 414-1 New suppliers that were screened using social criteria, as it relates to employment practices.",
+   "type": "text",
+   "hint": "Topic 11.10 Employment practices. Referenced disclosure: GRI 414: Supplier Social Assessment 2016, Disclosure 414-1 New suppliers that were screened using social criteria."
+  },
+  {
+   "ref": "11.10.9",
+   "text": "Report GRI 414-2 Negative social impacts in the supply chain and actions taken, as it relates to employment practices.",
+   "type": "text",
+   "hint": "Topic 11.10 Employment practices. Referenced disclosure: GRI 414: Supplier Social Assessment 2016, Disclosure 414-2 Negative social impacts in the supply chain and actions taken."
+  },
+  {
+   "ref": "11.11.1",
+   "text": "Describe how the organization manages the material topic of non-discrimination and equal opportunity: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.11 Non-discrimination and equal opportunity. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.11.2",
+   "text": "Report GRI 202-2 Proportion of senior management hired from the local community, as it relates to non-discrimination and equal opportunity.",
+   "type": "text",
+   "hint": "Topic 11.11 Non-discrimination and equal opportunity. Referenced disclosure: GRI 202: Market Presence 2016, Disclosure 202-2 Proportion of senior management hired from the local community."
+  },
+  {
+   "ref": "11.11.3",
+   "text": "Report GRI 401-3 Parental leave, as it relates to non-discrimination and equal opportunity.",
+   "type": "text",
+   "hint": "Topic 11.11 Non-discrimination and equal opportunity. Referenced disclosure: GRI 401: Employment 2016, Disclosure 401-3 Parental leave."
+  },
+  {
+   "ref": "11.11.4",
+   "text": "Report GRI 404-1 Average hours of training per year per employee, as it relates to non-discrimination and equal opportunity.",
+   "type": "text",
+   "hint": "Topic 11.11 Non-discrimination and equal opportunity. Referenced disclosure: GRI 404: Training and Education 2016, Disclosure 404-1 Average hours of training per year per employee."
+  },
+  {
+   "ref": "11.11.5",
+   "text": "Report GRI 405-1 Diversity of governance bodies and employees, as it relates to non-discrimination and equal opportunity.",
+   "type": "text",
+   "hint": "Topic 11.11 Non-discrimination and equal opportunity. Referenced disclosure: GRI 405: Diversity and Equal Opportunity 2016, Disclosure 405-1 Diversity of governance bodies and employees."
+  },
+  {
+   "ref": "11.11.6",
+   "text": "Report GRI 405-2 Ratio of basic salary and remuneration of women to men, as it relates to non-discrimination and equal opportunity.",
+   "type": "text",
+   "hint": "Topic 11.11 Non-discrimination and equal opportunity. Referenced disclosure: GRI 405: Diversity and Equal Opportunity 2016, Disclosure 405-2 Ratio of basic salary and remuneration of women to men."
+  },
+  {
+   "ref": "11.11.7",
+   "text": "Report GRI 406-1 Incidents of discrimination and corrective actions taken, as it relates to non-discrimination and equal opportunity.",
+   "type": "text",
+   "hint": "Topic 11.11 Non-discrimination and equal opportunity. Referenced disclosure: GRI 406: Non-discrimination 2016, Disclosure 406-1 Incidents of discrimination and corrective actions taken."
+  },
+  {
+   "ref": "11.12.1",
+   "text": "Describe how the organization manages the material topic of forced labor and modern slavery: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.12 Forced labor and modern slavery. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.12.2",
+   "text": "Report GRI 409-1 Operations and suppliers at significant risk for incidents of forced or compulsory labor, as it relates to forced labor and modern slavery.",
+   "type": "text",
+   "hint": "Topic 11.12 Forced labor and modern slavery. Referenced disclosure: GRI 409: Forced or Compulsory Labor 2016, Disclosure 409-1 Operations and suppliers at significant risk for incidents of forced or compulsory labor."
+  },
+  {
+   "ref": "11.12.3",
+   "text": "Report GRI 414-1 New suppliers that were screened using social criteria, as it relates to forced labor and modern slavery.",
+   "type": "text",
+   "hint": "Topic 11.12 Forced labor and modern slavery. Referenced disclosure: GRI 414: Supplier Social Assessment 2016, Disclosure 414-1 New suppliers that were screened using social criteria."
+  },
+  {
+   "ref": "11.13.1",
+   "text": "Describe how the organization manages the material topic of freedom of association and collective bargaining: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.13 Freedom of association and collective bargaining. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.13.2",
+   "text": "Report GRI 407-1 Operations and suppliers in which the right to freedom of association and collective bargaining may be at risk, as it relates to freedom of association and collective bargaining.",
+   "type": "text",
+   "hint": "Topic 11.13 Freedom of association and collective bargaining. Referenced disclosure: GRI 407: Freedom of Association and Collective Bargaining 2016, Disclosure 407-1 Operations and suppliers in which the right to freedom of association and collective bargaining may be at risk."
+  },
+  {
+   "ref": "11.14.1",
+   "text": "Describe how the organization manages the material topic of economic impacts: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.14 Economic impacts. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.14.2",
+   "text": "Report GRI 201-1 Direct economic value generated and distributed, as it relates to economic impacts.",
+   "type": "text",
+   "hint": "Topic 11.14 Economic impacts. Referenced disclosure: GRI 201: Economic Performance 2016, Disclosure 201-1 Direct economic value generated and distributed."
+  },
+  {
+   "ref": "11.14.3",
+   "text": "Report GRI 202-2 Proportion of senior management hired from the local community, as it relates to economic impacts.",
+   "type": "text",
+   "hint": "Topic 11.14 Economic impacts. Referenced disclosure: GRI 202: Market Presence 2016, Disclosure 202-2 Proportion of senior management hired from the local community."
+  },
+  {
+   "ref": "11.14.4",
+   "text": "Report GRI 203-1 Infrastructure investments and services supported, as it relates to economic impacts.",
+   "type": "text",
+   "hint": "Topic 11.14 Economic impacts. Referenced disclosure: GRI 203: Indirect Economic Impacts 2016, Disclosure 203-1 Infrastructure investments and services supported."
+  },
+  {
+   "ref": "11.14.5",
+   "text": "Report GRI 203-2 Significant indirect economic impacts, as it relates to economic impacts.",
+   "type": "text",
+   "hint": "Topic 11.14 Economic impacts. Referenced disclosure: GRI 203: Indirect Economic Impacts 2016, Disclosure 203-2 Significant indirect economic impacts."
+  },
+  {
+   "ref": "11.14.6",
+   "text": "Report GRI 204-1 Proportion of spending on local suppliers, as it relates to economic impacts.",
+   "type": "text",
+   "hint": "Topic 11.14 Economic impacts. Referenced disclosure: GRI 204: Procurement Practices 2016, Disclosure 204-1 Proportion of spending on local suppliers."
+  },
+  {
+   "ref": "11.15.1",
+   "text": "Describe how the organization manages the material topic of local communities: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.15 Local communities. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.15.2",
+   "text": "Report GRI 413-1 Operations with local community engagement, impact assessments, and development programs, as it relates to local communities.",
+   "type": "text",
+   "hint": "Topic 11.15 Local communities. Referenced disclosure: GRI 413: Local Communities 2016, Disclosure 413-1 Operations with local community engagement, impact assessments, and development programs."
+  },
+  {
+   "ref": "11.15.3",
+   "text": "Report GRI 413-2 Operations with significant actual and potential negative impacts on local communities, as it relates to local communities.",
+   "type": "text",
+   "hint": "Topic 11.15 Local communities. Referenced disclosure: GRI 413: Local Communities 2016, Disclosure 413-2 Operations with significant actual and potential negative impacts on local communities."
+  },
+  {
+   "ref": "11.15.4",
+   "text": "How many grievances from local communities were identified, by type, and what percentage were addressed, resolved, and resolved through remediation?",
+   "type": "text",
+   "hint": "Topic 11.15 additional sector disclosure. Report the number and type of grievances from local communities identified, including: a. percentage addressed and resolved; b. percentage resolved through remediation. Also report GRI 413-1 and 413-2."
+  },
+  {
+   "ref": "11.16.1",
+   "text": "Describe how the organization manages the material topic of land and resource rights: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.16 Land and resource rights. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.16.2",
+   "text": "Which operations caused or contributed to involuntary resettlement, and how were people's livelihoods and human rights affected and restored?",
+   "type": "text",
+   "hint": "Topic 11.16 additional sector disclosure. List the locations of operations that caused or contributed to involuntary resettlement or where it is ongoing. For each location, describe how peoples' livelihoods and human rights were affected and restored."
+  },
+  {
+   "ref": "11.17.1",
+   "text": "Describe how the organization manages the material topic of rights of indigenous peoples: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.17 Rights of Indigenous Peoples. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.17.2",
+   "text": "Report GRI 411-1 Incidents of violations involving rights of Indigenous Peoples, as it relates to rights of indigenous peoples.",
+   "type": "text",
+   "hint": "Topic 11.17 Rights of Indigenous Peoples. Referenced disclosure: GRI 411: Rights of Indigenous Peoples 2016, Disclosure 411-1 Incidents of violations involving rights of Indigenous Peoples."
+  },
+  {
+   "ref": "11.17.3",
+   "text": "At which operation locations are Indigenous Peoples present or affected by the organization's activities?",
+   "type": "text",
+   "hint": "Topic 11.17 additional sector disclosure. List the locations of operations where Indigenous Peoples are present or affected by activities of the organization. Also report GRI 411-1."
+  },
+  {
+   "ref": "11.17.4",
+   "text": "Has the organization been involved in a process of seeking free, prior, and informed consent (FPIC) from Indigenous Peoples for any of its activities? For each case, was the process mutually accepted and has an agreement been reached?",
+   "type": "text",
+   "hint": "Topic 11.17 additional sector disclosure. Report if involved in an FPIC process, and for each case: a. whether the process was mutually accepted by the organization and the affected Indigenous Peoples; b. whether an agreement was reached and, if so, whether it is publicly available."
+  },
+  {
+   "ref": "11.18.1",
+   "text": "Describe how the organization manages the material topic of conflict and security: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.18 Conflict and security. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.18.2",
+   "text": "Report GRI 410-1 Security personnel trained in human rights policies or procedures, as it relates to conflict and security.",
+   "type": "text",
+   "hint": "Topic 11.18 Conflict and security. Referenced disclosure: GRI 410: Security Practices 2016, Disclosure 410-1 Security personnel trained in human rights policies or procedures."
+  },
+  {
+   "ref": "11.19.1",
+   "text": "Describe how the organization manages the material topic of anti-competitive behavior: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.19 Anti-competitive behavior. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.19.2",
+   "text": "Report GRI 206-1 Legal actions for anti-competitive behavior, anti-trust, and monopoly practices, as it relates to anti-competitive behavior.",
+   "type": "text",
+   "hint": "Topic 11.19 Anti-competitive behavior. Referenced disclosure: GRI 206: Anti-competitive Behavior 2016, Disclosure 206-1 Legal actions for anti-competitive behavior, anti-trust, and monopoly practices."
+  },
+  {
+   "ref": "11.20.1",
+   "text": "Describe how the organization manages the material topic of anti-corruption: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.20 Anti-corruption. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.20.2",
+   "text": "Report GRI 205-1 Operations assessed for risks related to corruption, as it relates to anti-corruption.",
+   "type": "text",
+   "hint": "Topic 11.20 Anti-corruption. Referenced disclosure: GRI 205: Anti-corruption 2016, Disclosure 205-1 Operations assessed for risks related to corruption."
+  },
+  {
+   "ref": "11.20.3",
+   "text": "Report GRI 205-2 Communication and training about anti-corruption policies and procedures, as it relates to anti-corruption.",
+   "type": "text",
+   "hint": "Topic 11.20 Anti-corruption. Referenced disclosure: GRI 205: Anti-corruption 2016, Disclosure 205-2 Communication and training about anti-corruption policies and procedures."
+  },
+  {
+   "ref": "11.20.4",
+   "text": "Report GRI 205-3 Confirmed incidents of corruption and actions taken, as it relates to anti-corruption.",
+   "type": "text",
+   "hint": "Topic 11.20 Anti-corruption. Referenced disclosure: GRI 205: Anti-corruption 2016, Disclosure 205-3 Confirmed incidents of corruption and actions taken."
+  },
+  {
+   "ref": "11.20.5",
+   "text": "What is the organization's approach to contract transparency, including whether contracts and licenses are public?",
+   "type": "text",
+   "hint": "Topic 11.20 additional sector disclosure. Describe the approach to contract transparency, including: a. whether contracts and licenses are made public and, if so, where published; b. if not public, the reason and actions taken to make them public in future."
+  },
+  {
+   "ref": "11.20.6",
+   "text": "Who are the organization's beneficial owners, and how does it identify the beneficial owners of business partners, including joint ventures and suppliers?",
+   "type": "text",
+   "hint": "Topic 11.20 additional sector disclosure. List the organization's beneficial owners and explain how the organization identifies the beneficial owners of business partners, including joint ventures and suppliers."
+  },
+  {
+   "ref": "11.21.1",
+   "text": "Describe how the organization manages the material topic of payments to governments: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.21 Payments to governments. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.21.2",
+   "text": "Report GRI 201-1 Direct economic value generated and distributed, as it relates to payments to governments.",
+   "type": "text",
+   "hint": "Topic 11.21 Payments to governments. Referenced disclosure: GRI 201: Economic Performance 2016, Disclosure 201-1 Direct economic value generated and distributed."
+  },
+  {
+   "ref": "11.21.3",
+   "text": "Report GRI 201-4 Financial assistance received from government, as it relates to payments to governments.",
+   "type": "text",
+   "hint": "Topic 11.21 Payments to governments. Referenced disclosure: GRI 201: Economic Performance 2016, Disclosure 201-4 Financial assistance received from government."
+  },
+  {
+   "ref": "11.21.4",
+   "text": "Report GRI 207-1 Approach to tax, as it relates to payments to governments.",
+   "type": "text",
+   "hint": "Topic 11.21 Payments to governments. Referenced disclosure: GRI 207: Tax 2019, Disclosure 207-1 Approach to tax."
+  },
+  {
+   "ref": "11.21.5",
+   "text": "Report GRI 207-2 Tax governance, control, and risk management, as it relates to payments to governments.",
+   "type": "text",
+   "hint": "Topic 11.21 Payments to governments. Referenced disclosure: GRI 207: Tax 2019, Disclosure 207-2 Tax governance, control, and risk management."
+  },
+  {
+   "ref": "11.21.6",
+   "text": "Report GRI 207-3 Stakeholder engagement and management of concerns related to tax, as it relates to payments to governments.",
+   "type": "text",
+   "hint": "Topic 11.21 Payments to governments. Referenced disclosure: GRI 207: Tax 2019, Disclosure 207-3 Stakeholder engagement and management of concerns related to tax."
+  },
+  {
+   "ref": "11.21.7",
+   "text": "Report GRI 207-4 Country-by-country reporting, as it relates to payments to governments.",
+   "type": "text",
+   "hint": "Topic 11.21 Payments to governments. Referenced disclosure: GRI 207: Tax 2019, Disclosure 207-4 Country-by-country reporting."
+  },
+  {
+   "ref": "11.21.8",
+   "text": "For oil and gas purchased from the state or its appointed sellers, what volumes and types were bought, who were the buyer and payment recipient, and what was paid?",
+   "type": "text",
+   "hint": "Topic 11.21 additional sector disclosure. For oil and gas purchased from the state or third parties appointed by the state, report: a. volumes and types purchased; b. full names of the buying entity and the recipient of the payment; c. payments made for the purchase. Also report GRI 201, 207."
+  },
+  {
+   "ref": "11.22.1",
+   "text": "Describe how the organization manages the material topic of public policy: its actual and potential impacts, policies and commitments, actions taken, how effectiveness is tracked, and stakeholder engagement (GRI 3-3).",
+   "type": "text",
+   "hint": "Topic 11.22 Public policy. Report per Disclosure 3-3: a. describe actual and potential, negative and positive impacts on the economy, environment and people, incl. human rights; b. whether involved through own activities or business relationships; c. policies or commitments; d. actions taken, incl. to prevent, mitigate or remediate impacts; e. how effectiveness is tracked; f. how stakeholder engagement informed actions."
+  },
+  {
+   "ref": "11.22.2",
+   "text": "Report GRI 415-1 Political contributions, as it relates to public policy.",
+   "type": "text",
+   "hint": "Topic 11.22 Public policy. Referenced disclosure: GRI 415: Public Policy 2016, Disclosure 415-1 Political contributions."
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "summary": "GRI 205 covers anti-corruption, including practices such as bribery, facilitation payments, fraud, extortion, collusion and money laundering. Organizations are expected to demonstrate integrity, governance and responsible business practices.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does the organization manage anti-corruption as a material topic (GRI 3-3)?",
+   "type": "text",
+   "hint": "Describe how the organization manages the topic and its related impacts, as required by Disclosure 3-3 in GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "205-1",
+   "text": "How many operations were assessed for risks related to corruption, and what significant risks were identified?",
+   "type": "text",
+   "hint": "a. Total number and percentage of operations assessed for corruption risks. b. Significant corruption-related risks identified through the risk assessment."
+  },
+  {
+   "ref": "205-2",
+   "text": "How have anti-corruption policies and procedures been communicated, and who has received anti-corruption training?",
+   "type": "text",
+   "hint": "a. Number and percentage of governance body members informed of policies, by region. b. Employees informed, by category and region. c. Business partners informed, by type and region; other persons or organizations. d. Governance body members trained, by region. e. Employees trained, by category and region."
+  },
+  {
+   "ref": "205-3",
+   "text": "What confirmed incidents of corruption occurred, and what actions were taken?",
+   "type": "text",
+   "hint": "a. Total number and nature of confirmed incidents. b. Incidents in which employees were dismissed or disciplined. c. Incidents in which business partner contracts were terminated or not renewed. d. Public legal cases regarding corruption brought against the organization or its employees and their outcomes."
+  }
+ ]
+}

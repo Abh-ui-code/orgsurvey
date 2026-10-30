@@ -33,6 +33,8 @@ export interface OrgUser {
   role: UserRole;
   title: string;
   unit: Ref | null;
+  /** Every block they are in: their home block first, then any others. */
+  units: Ref[];
   is_active: boolean;
 }
 

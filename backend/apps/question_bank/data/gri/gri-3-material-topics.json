@@ -1,0 +1,23 @@
+{
+ "summary": "GRI 3: Material Topics 2021 gives step-by-step guidance on how to determine material topics, i.e. topics representing an organization's most significant impacts on the economy, environment and people. It also contains disclosures on the process of determining material topics, the list of topics, and how each is managed.",
+ "questions": [
+  {
+   "ref": "3-1",
+   "text": "Describe the process you followed to determine your material topics and the stakeholders and experts whose views informed it.",
+   "type": "text",
+   "hint": "Report: a. the process followed, incl. i. how actual and potential, negative and positive impacts were identified; ii. how impacts were prioritized by significance; b. stakeholders and experts whose views informed the process."
+  },
+  {
+   "ref": "3-2",
+   "text": "List your material topics and report any changes compared to the previous reporting period.",
+   "type": "text",
+   "hint": "Report: a. list of material topics; b. changes to the list of material topics compared to the previous reporting period."
+  },
+  {
+   "ref": "3-3",
+   "text": "Management of material topics: for each material topic, describe the impacts, your involvement, policies, actions, tracking of effectiveness and stakeholder engagement.",
+   "type": "text",
+   "hint": "Report for each material topic: a. actual and potential impacts; b. involvement with negative impacts; c. policies or commitments; d. actions to prevent, mitigate, remediate and manage impacts; e. tracking effectiveness: processes, goals, targets, results, lessons; f. stakeholder engagement."
+  }
+ ]
+}

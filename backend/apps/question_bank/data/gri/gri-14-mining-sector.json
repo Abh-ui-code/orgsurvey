@@ -1,0 +1,803 @@
+{
+ "summary": "GRI 14 gives organizations involved in mining activities information on their likely material topics, based on the sector's most significant impacts on the economy, environment and people. It lists the disclosures to report for each topic, from tailings and closure to community rights and payments.",
+ "questions": [
+  {
+   "ref": "14.0.1",
+   "text": "Mine-site disclosure: list the organization's mine sites, giving its definition of 'mine site' and, for each site, the name, geographic location (country and coordinates) and size in hectares.",
+   "type": "text",
+   "hint": "List the mine sites and the organization's definition of 'mine site'. For each site: name; geographic location (country and coordinates); size in hectares."
+  },
+  {
+   "ref": "14.1.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Climate change', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.1 Climate change. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.1.2",
+   "text": "Transition plan for climate change mitigation (GRI 102-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.1 Climate change. Refers to GRI 102 Disclosure 102-1 Transition plan for climate change mitigation."
+  },
+  {
+   "ref": "14.1.3",
+   "text": "Climate change adaptation plan (GRI 102-2): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.1 Climate change. Refers to GRI 102 Disclosure 102-2 Climate change adaptation plan."
+  },
+  {
+   "ref": "14.1.4",
+   "text": "Just transition (GRI 102-3): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.1 Climate change. Refers to GRI 102 Disclosure 102-3 Just transition."
+  },
+  {
+   "ref": "14.1.5",
+   "text": "GHG emissions reduction targets and progress (GRI 102-4): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.1 Climate change. Refers to GRI 102 Disclosure 102-4 GHG emissions reduction targets and progress."
+  },
+  {
+   "ref": "14.1.6",
+   "text": "Scope 1 GHG emissions (GRI 102-5): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.1 Climate change. Refers to GRI 102 Disclosure 102-5 Scope 1 GHG emissions."
+  },
+  {
+   "ref": "14.1.7",
+   "text": "Scope 2 GHG emissions (GRI 102-6): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.1 Climate change. Refers to GRI 102 Disclosure 102-6 Scope 2 GHG emissions."
+  },
+  {
+   "ref": "14.1.8",
+   "text": "Scope 3 GHG emissions (GRI 102-7): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.1 Climate change. Refers to GRI 102 Disclosure 102-7 Scope 3 GHG emissions."
+  },
+  {
+   "ref": "14.1.9",
+   "text": "GHG emissions intensity (GRI 102-8): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.1 Climate change. Refers to GRI 102 Disclosure 102-8 GHG emissions intensity."
+  },
+  {
+   "ref": "14.1.10",
+   "text": "GHG removals in the value chain (GRI 102-9): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.1 Climate change. Refers to GRI 102 Disclosure 102-9 GHG removals in the value chain."
+  },
+  {
+   "ref": "14.1.11",
+   "text": "Carbon credits (GRI 102-10): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.1 Climate change. Refers to GRI 102 Disclosure 102-10 Carbon credits."
+  },
+  {
+   "ref": "14.1.12",
+   "text": "Energy policies and commitments (GRI 103-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.1 Climate change. Refers to GRI 103 Disclosure 103-1 Energy policies and commitments."
+  },
+  {
+   "ref": "14.1.13",
+   "text": "Energy consumption and self-generation within the organization (GRI 103-2): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.1 Climate change. Refers to GRI 103 Disclosure 103-2 Energy consumption and self-generation within the organization."
+  },
+  {
+   "ref": "14.1.14",
+   "text": "Upstream and downstream energy consumption (GRI 103-3): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.1 Climate change. Refers to GRI 103 Disclosure 103-3 Upstream and downstream energy consumption."
+  },
+  {
+   "ref": "14.1.15",
+   "text": "Energy intensity (GRI 103-4): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.1 Climate change. Refers to GRI 103 Disclosure 103-4 Energy intensity."
+  },
+  {
+   "ref": "14.3.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Air emissions', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.3 Air emissions. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.3.2",
+   "text": "Nitrogen oxides (NOx), sulfur oxides (SOx), and other significant air emissions (GRI 305-7): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.3 Air emissions. Refers to GRI 305 Disclosure 305-7 Nitrogen oxides (NOx), sulfur oxides (SOx), and other significant air emissions."
+  },
+  {
+   "ref": "14.4.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Biodiversity', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.4 Biodiversity. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.4.2",
+   "text": "Policies to halt and reverse biodiversity loss (GRI 101-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.4 Biodiversity. Refers to GRI 101 Disclosure 101-1 Policies to halt and reverse biodiversity loss."
+  },
+  {
+   "ref": "14.4.3",
+   "text": "Management of biodiversity impacts (GRI 101-2): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.4 Biodiversity. Refers to GRI 101 Disclosure 101-2 Management of biodiversity impacts."
+  },
+  {
+   "ref": "14.4.4",
+   "text": "Identification of biodiversity impacts (GRI 101-4): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.4 Biodiversity. Refers to GRI 101 Disclosure 101-4 Identification of biodiversity impacts."
+  },
+  {
+   "ref": "14.4.5",
+   "text": "Locations with biodiversity impacts (GRI 101-5): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.4 Biodiversity. Refers to GRI 101 Disclosure 101-5 Locations with biodiversity impacts."
+  },
+  {
+   "ref": "14.4.6",
+   "text": "Direct drivers of biodiversity loss (GRI 101-6): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.4 Biodiversity. Refers to GRI 101 Disclosure 101-6 Direct drivers of biodiversity loss."
+  },
+  {
+   "ref": "14.4.7",
+   "text": "Changes to the state of biodiversity (GRI 101-7): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.4 Biodiversity. Refers to GRI 101 Disclosure 101-7 Changes to the state of biodiversity."
+  },
+  {
+   "ref": "14.4.8",
+   "text": "Ecosystem services (GRI 101-8): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.4 Biodiversity. Refers to GRI 101 Disclosure 101-8 Ecosystem services."
+  },
+  {
+   "ref": "14.5.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Waste', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.5 Waste. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.5.2",
+   "text": "Waste generation and significant waste-related impacts (GRI 306-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.5 Waste. Refers to GRI 306 Disclosure 306-1 Waste generation and significant waste-related impacts."
+  },
+  {
+   "ref": "14.5.3",
+   "text": "Management of significant waste-related impacts (GRI 306-2): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.5 Waste. Refers to GRI 306 Disclosure 306-2 Management of significant waste-related impacts."
+  },
+  {
+   "ref": "14.5.4",
+   "text": "Significant spills (GRI 306-3): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.5 Waste. Refers to GRI 306 Disclosure 306-3 Significant spills."
+  },
+  {
+   "ref": "14.5.5",
+   "text": "Waste diverted from disposal (GRI 306-4): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.5 Waste. Refers to GRI 306 Disclosure 306-4 Waste diverted from disposal."
+  },
+  {
+   "ref": "14.5.6",
+   "text": "Waste directed to disposal (GRI 306-5): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.5 Waste. Refers to GRI 306 Disclosure 306-5 Waste directed to disposal."
+  },
+  {
+   "ref": "14.6.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Tailings', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.6 Tailings. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.6.2",
+   "text": "Tailings disposal methods: which tailings disposal methods does the organization use?",
+   "type": "text",
+   "hint": "Report the tailings disposal methods used by the organization."
+  },
+  {
+   "ref": "14.6.3",
+   "text": "Tailings facilities: list the organization's tailings facilities with name, location, ownership status and operator status, and report details for facilities not in safe closure.",
+   "type": "text",
+   "hint": "List facilities with name, location, ownership, operator status. For each not in safe closure: description and construction method; active/inactive/closed; max permitted capacity and tailings stored (tons); GISTM Consequence Classification; risk assessment frequency and findings; latest independent technical review and next review date."
+  },
+  {
+   "ref": "14.7.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Water and effluents', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.7 Water and effluents. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.7.2",
+   "text": "Interactions with water as a shared resource (GRI 303-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.7 Water and effluents. Refers to GRI 303 Disclosure 303-1 Interactions with water as a shared resource."
+  },
+  {
+   "ref": "14.7.3",
+   "text": "Management of water discharge-related impacts (GRI 303-2): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.7 Water and effluents. Refers to GRI 303 Disclosure 303-2 Management of water discharge-related impacts."
+  },
+  {
+   "ref": "14.7.4",
+   "text": "Water withdrawal (GRI 303-3): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.7 Water and effluents. Refers to GRI 303 Disclosure 303-3 Water withdrawal."
+  },
+  {
+   "ref": "14.7.5",
+   "text": "Water discharge (GRI 303-4): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.7 Water and effluents. Refers to GRI 303 Disclosure 303-4 Water discharge."
+  },
+  {
+   "ref": "14.7.6",
+   "text": "Water consumption (GRI 303-5): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.7 Water and effluents. Refers to GRI 303 Disclosure 303-5 Water consumption."
+  },
+  {
+   "ref": "14.8.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Closure and rehabilitation', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.8 Closure and rehabilitation. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.8.2",
+   "text": "Minimum notice periods regarding operational changes (GRI 402-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.8 Closure and rehabilitation. Refers to GRI 402 Disclosure 402-1 Minimum notice periods regarding operational changes."
+  },
+  {
+   "ref": "14.8.3",
+   "text": "Programs for upgrading employee skills and transition assistance programs (GRI 404-2): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.8 Closure and rehabilitation. Refers to GRI 404 Disclosure 404-2 Programs for upgrading employee skills and transition assistance programs."
+  },
+  {
+   "ref": "14.8.4",
+   "text": "Closure and rehabilitation of sites: for each mine site, does it have a closure and rehabilitation plan, is it undergoing closure and rehabilitation, or has it been closed and rehabilitated?",
+   "type": "text",
+   "hint": "For each mine site, whether it: has a closure and rehabilitation plan in place; is undergoing closure and rehabilitation activities; has been closed and rehabilitated."
+  },
+  {
+   "ref": "14.8.5",
+   "text": "Approval and review of closure and rehabilitation plans: for each plan, has it been approved by authorities, and when are the most recent and next reviews?",
+   "type": "text",
+   "hint": "For each plan: whether approved by relevant authorities; dates of the most recent and next reviews."
+  },
+  {
+   "ref": "14.8.6",
+   "text": "Land disturbed and rehabilitated: for each mine site, how many hectares are disturbed and not yet rehabilitated, and disturbed and rehabilitated?",
+   "type": "text",
+   "hint": "For each mine site, in hectares: total land disturbed and not yet rehabilitated; total land disturbed and rehabilitated (including progressively rehabilitated)."
+  },
+  {
+   "ref": "14.8.7",
+   "text": "Estimated life of mine: what is the estimated life of mine for each mine site?",
+   "type": "text",
+   "hint": "For each mine site, the estimated life of the mine (LOM)."
+  },
+  {
+   "ref": "14.8.8",
+   "text": "Financial provisions for closure and rehabilitation: what are the total estimated closure costs, the methodology, and the financial instruments used to guarantee provisions?",
+   "type": "text",
+   "hint": "a. Total estimated closure cost (not discounted), whether provision covers full amount and meets regulatory requirements, by mine site; b. methodology for estimating the cost; c. financial instruments used to guarantee adequate provisions."
+  },
+  {
+   "ref": "14.8.9",
+   "text": "Post-mining transition: describe non-financial provisions made to manage the local community's socioeconomic transition to a sustainable post-mining economy.",
+   "type": "text",
+   "hint": "Description of non-financial provisions to manage the local community's socioeconomic transition to a sustainable post-mining economy, including collaborative efforts, projects and programs."
+  },
+  {
+   "ref": "14.9.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Economic impacts', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.9 Economic impacts. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.9.2",
+   "text": "Direct economic value generated and distributed (GRI 201-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.9 Economic impacts. Refers to GRI 201 Disclosure 201-1 Direct economic value generated and distributed."
+  },
+  {
+   "ref": "14.9.3",
+   "text": "Infrastructure investments and services supported (GRI 203-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.9 Economic impacts. Refers to GRI 203 Disclosure 203-1 Infrastructure investments and services supported."
+  },
+  {
+   "ref": "14.9.4",
+   "text": "Significant indirect economic impacts (GRI 203-2): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.9 Economic impacts. Refers to GRI 203 Disclosure 203-2 Significant indirect economic impacts."
+  },
+  {
+   "ref": "14.9.5",
+   "text": "Proportion of spending on local suppliers (GRI 204-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.9 Economic impacts. Refers to GRI 204 Disclosure 204-1 Proportion of spending on local suppliers."
+  },
+  {
+   "ref": "14.9.6",
+   "text": "Local employment: what percentage of workers at each mine site are hired from the local community, by gender, and how is 'local community' defined?",
+   "type": "text",
+   "hint": "Percentage of workers hired from the local community at mine-site level, broken down by gender; the organization's definition of 'local community'."
+  },
+  {
+   "ref": "14.10.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Local communities', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.10 Local communities. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.10.2",
+   "text": "Operations with local community engagement, impact assessments, and development programs (GRI 413-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.10 Local communities. Refers to GRI 413 Disclosure 413-1 Operations with local community engagement, impact assessments, and development programs."
+  },
+  {
+   "ref": "14.10.3",
+   "text": "Operations with significant actual and potential negative impacts on local communities (GRI 413-2): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.10 Local communities. Refers to GRI 413 Disclosure 413-2 Operations with significant actual and potential negative impacts on local communities."
+  },
+  {
+   "ref": "14.10.4",
+   "text": "Grievances from local communities: for each mine site, how many grievances were received, and what percentage were addressed, resolved and remediated?",
+   "type": "text",
+   "hint": "For each mine site: number and types of grievances from local communities; percentage addressed and resolved; percentage resolved through remediation, during the reporting period."
+  },
+  {
+   "ref": "14.11.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Rights of Indigenous Peoples', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.11 Rights of Indigenous Peoples. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.11.2",
+   "text": "Incidents of violations involving rights of Indigenous Peoples (GRI 411-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.11 Rights of Indigenous Peoples. Refers to GRI 411 Disclosure 411-1 Incidents of violations involving rights of Indigenous Peoples."
+  },
+  {
+   "ref": "14.11.3",
+   "text": "Operations where Indigenous Peoples may be affected: list the operations and proven reserves where Indigenous Peoples are present and are or may be affected.",
+   "type": "text",
+   "hint": "List locations of operations and proven reserves where Indigenous Peoples are present and are or may be affected by the organization's activities."
+  },
+  {
+   "ref": "14.11.4",
+   "text": "Free, prior, and informed consent: has the organization been involved in a process of seeking FPIC from Indigenous Peoples and, if so, what were the process and outcome?",
+   "type": "text",
+   "hint": "For each case: whether the process was mutually accepted by the organization and affected Indigenous Peoples; whether an agreement was reached and whether it is publicly available."
+  },
+  {
+   "ref": "14.12.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Land and resource rights', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.12 Land and resource rights. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.12.2",
+   "text": "Involuntary resettlement: which mine sites have planned, ongoing or completed involuntary resettlement, and who is affected?",
+   "type": "text",
+   "hint": "List mine sites where involuntary resettlement is planned, ongoing or has occurred. For each: number of persons displaced or to be displaced, by gender; how livelihoods and human rights are or could be affected and restored."
+  },
+  {
+   "ref": "14.12.3",
+   "text": "Violations of land and natural resource rights: list the locations where conflicts or violations of land and resource rights occurred and describe the incidents and stakeholders affected.",
+   "type": "text",
+   "hint": "List locations of operations where conflicts or violations of land and resource rights (including customary, collective and informal tenure) occurred; describe incidents and stakeholders whose rights are or could be affected."
+  },
+  {
+   "ref": "14.13.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Artisanal and small-scale mining', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.13 Artisanal and small-scale mining. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.13.2",
+   "text": "Mine sites where ASM is present: list the mine sites where artisanal and small-scale mining occurs on or near the site.",
+   "type": "text",
+   "hint": "List mine sites where ASM occurs on or in close proximity to the site."
+  },
+  {
+   "ref": "14.13.3",
+   "text": "Incidents involving ASM: how many incidents involving artisanal and small-scale mining occurred, what was their nature, and what actions were taken?",
+   "type": "text",
+   "hint": "Total number and nature of incidents involving ASM; actions taken to address them."
+  },
+  {
+   "ref": "14.14.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Security practices', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.14 Security practices. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.14.2",
+   "text": "Security personnel trained in human rights policies or procedures (GRI 410-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.14 Security practices. Refers to GRI 410 Disclosure 410-1 Security personnel trained in human rights policies or procedures."
+  },
+  {
+   "ref": "14.15.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Critical incident management', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.15 Critical incident management. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.15.2",
+   "text": "Significant spills (GRI 306-3): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.15 Critical incident management. Refers to GRI 306 Disclosure 306-3 Significant spills."
+  },
+  {
+   "ref": "14.15.3",
+   "text": "Critical incidents: how many critical incidents occurred in the reporting period, what were their impacts, and what remediation actions were taken?",
+   "type": "text",
+   "hint": "Number of critical incidents in the reporting period; description of their impacts; actions taken to remediate them."
+  },
+  {
+   "ref": "14.15.4",
+   "text": "Sites with emergency preparedness and response plans: what percentage of mine sites have such plans, and which sites do not?",
+   "type": "text",
+   "hint": "Percentage of mine sites with emergency preparedness and response plans in place; list of sites without them."
+  },
+  {
+   "ref": "14.16.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Occupational health and safety', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.16 Occupational health and safety. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.16.2",
+   "text": "Occupational health and safety management system (GRI 403-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.16 Occupational health and safety. Refers to GRI 403 Disclosure 403-1 Occupational health and safety management system."
+  },
+  {
+   "ref": "14.16.3",
+   "text": "Hazard identification, risk assessment, and incident investigation (GRI 403-2): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.16 Occupational health and safety. Refers to GRI 403 Disclosure 403-2 Hazard identification, risk assessment, and incident investigation."
+  },
+  {
+   "ref": "14.16.4",
+   "text": "Occupational health services (GRI 403-3): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.16 Occupational health and safety. Refers to GRI 403 Disclosure 403-3 Occupational health services."
+  },
+  {
+   "ref": "14.16.5",
+   "text": "Worker participation, consultation, and communication on occupational health and safety (GRI 403-4): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.16 Occupational health and safety. Refers to GRI 403 Disclosure 403-4 Worker participation, consultation, and communication on occupational health and safety."
+  },
+  {
+   "ref": "14.16.6",
+   "text": "Worker training on occupational health and safety (GRI 403-5): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.16 Occupational health and safety. Refers to GRI 403 Disclosure 403-5 Worker training on occupational health and safety."
+  },
+  {
+   "ref": "14.16.7",
+   "text": "Promotion of worker health (GRI 403-6): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.16 Occupational health and safety. Refers to GRI 403 Disclosure 403-6 Promotion of worker health."
+  },
+  {
+   "ref": "14.16.8",
+   "text": "Prevention and mitigation of occupational health and safety impacts directly linked by business relationships (GRI 403-7): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.16 Occupational health and safety. Refers to GRI 403 Disclosure 403-7 Prevention and mitigation of occupational health and safety impacts directly linked by business relationships."
+  },
+  {
+   "ref": "14.16.9",
+   "text": "Workers covered by an occupational health and safety management system (GRI 403-8): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.16 Occupational health and safety. Refers to GRI 403 Disclosure 403-8 Workers covered by an occupational health and safety management system."
+  },
+  {
+   "ref": "14.16.10",
+   "text": "Work-related injuries (GRI 403-9): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.16 Occupational health and safety. Refers to GRI 403 Disclosure 403-9 Work-related injuries."
+  },
+  {
+   "ref": "14.16.11",
+   "text": "Work-related ill health (GRI 403-10): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.16 Occupational health and safety. Refers to GRI 403 Disclosure 403-10 Work-related ill health."
+  },
+  {
+   "ref": "14.17.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Employment practices', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.17 Employment practices. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.17.2",
+   "text": "Ratios of standard entry-level wage by gender compared to local minimum wage (GRI 202-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.17 Employment practices. Refers to GRI 202 Disclosure 202-1 Ratios of standard entry-level wage by gender compared to local minimum wage."
+  },
+  {
+   "ref": "14.17.3",
+   "text": "New employee hires and employee turnover (GRI 401-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.17 Employment practices. Refers to GRI 401 Disclosure 401-1 New employee hires and employee turnover."
+  },
+  {
+   "ref": "14.17.4",
+   "text": "Benefits provided to full-time employees that are not provided to temporary or part-time employees (GRI 401-2): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.17 Employment practices. Refers to GRI 401 Disclosure 401-2 Benefits provided to full-time employees that are not provided to temporary or part-time employees."
+  },
+  {
+   "ref": "14.17.5",
+   "text": "Parental leave (GRI 401-3): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.17 Employment practices. Refers to GRI 401 Disclosure 401-3 Parental leave."
+  },
+  {
+   "ref": "14.17.6",
+   "text": "Minimum notice periods regarding operational changes (GRI 402-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.17 Employment practices. Refers to GRI 402 Disclosure 402-1 Minimum notice periods regarding operational changes."
+  },
+  {
+   "ref": "14.17.7",
+   "text": "Average hours of training per year per employee (GRI 404-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.17 Employment practices. Refers to GRI 404 Disclosure 404-1 Average hours of training per year per employee."
+  },
+  {
+   "ref": "14.17.8",
+   "text": "Programs for upgrading employee skills and transition assistance programs (GRI 404-2): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.17 Employment practices. Refers to GRI 404 Disclosure 404-2 Programs for upgrading employee skills and transition assistance programs."
+  },
+  {
+   "ref": "14.17.9",
+   "text": "New suppliers that were screened using social criteria (GRI 414-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.17 Employment practices. Refers to GRI 414 Disclosure 414-1 New suppliers that were screened using social criteria."
+  },
+  {
+   "ref": "14.17.10",
+   "text": "Negative social impacts in the supply chain and actions taken (GRI 414-2): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.17 Employment practices. Refers to GRI 414 Disclosure 414-2 Negative social impacts in the supply chain and actions taken."
+  },
+  {
+   "ref": "14.18.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Child labor', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.18 Child labor. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.18.2",
+   "text": "Operations and suppliers at significant risk for incidents of child labor (GRI 408-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.18 Child labor. Refers to GRI 408 Disclosure 408-1 Operations and suppliers at significant risk for incidents of child labor."
+  },
+  {
+   "ref": "14.18.3",
+   "text": "New suppliers that were screened using social criteria (GRI 414-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.18 Child labor. Refers to GRI 414 Disclosure 414-1 New suppliers that were screened using social criteria."
+  },
+  {
+   "ref": "14.19.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Forced labor and modern slavery', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.19 Forced labor and modern slavery. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.19.2",
+   "text": "Operations and suppliers at significant risk for incidents of forced or compulsory labor (GRI 409-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.19 Forced labor and modern slavery. Refers to GRI 409 Disclosure 409-1 Operations and suppliers at significant risk for incidents of forced or compulsory labor."
+  },
+  {
+   "ref": "14.19.3",
+   "text": "New suppliers that were screened using social criteria (GRI 414-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.19 Forced labor and modern slavery. Refers to GRI 414 Disclosure 414-1 New suppliers that were screened using social criteria."
+  },
+  {
+   "ref": "14.20.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Freedom of association and collective bargaining', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.20 Freedom of association and collective bargaining. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.20.2",
+   "text": "Operations and suppliers in which the right to freedom of association and collective bargaining may be at risk (GRI 407-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.20 Freedom of association and collective bargaining. Refers to GRI 407 Disclosure 407-1 Operations and suppliers in which the right to freedom of association and collective bargaining may be at risk."
+  },
+  {
+   "ref": "14.20.3",
+   "text": "Strikes and lockouts: how many strikes and lockouts involving 1,000 or more workers lasted one full shift or longer, and what was their total duration in worker days idle?",
+   "type": "text",
+   "hint": "Number of strikes and lockouts involving 1,000 or more workers lasting one full shift or longer; total duration in worker days idle."
+  },
+  {
+   "ref": "14.21.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Non-discrimination and equal opportunity', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.21 Non-discrimination and equal opportunity. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.21.2",
+   "text": "Proportion of senior management hired from the local community (GRI 202-2): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.21 Non-discrimination and equal opportunity. Refers to GRI 202 Disclosure 202-2 Proportion of senior management hired from the local community."
+  },
+  {
+   "ref": "14.21.3",
+   "text": "Parental leave (GRI 401-3): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.21 Non-discrimination and equal opportunity. Refers to GRI 401 Disclosure 401-3 Parental leave."
+  },
+  {
+   "ref": "14.21.4",
+   "text": "Average hours of training per year per employee (GRI 404-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.21 Non-discrimination and equal opportunity. Refers to GRI 404 Disclosure 404-1 Average hours of training per year per employee."
+  },
+  {
+   "ref": "14.21.5",
+   "text": "Diversity of governance bodies and employees (GRI 405-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.21 Non-discrimination and equal opportunity. Refers to GRI 405 Disclosure 405-1 Diversity of governance bodies and employees."
+  },
+  {
+   "ref": "14.21.6",
+   "text": "Ratio of basic salary and remuneration of women to men (GRI 405-2): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.21 Non-discrimination and equal opportunity. Refers to GRI 405 Disclosure 405-2 Ratio of basic salary and remuneration of women to men."
+  },
+  {
+   "ref": "14.21.7",
+   "text": "Incidents of discrimination and corrective actions taken (GRI 406-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.21 Non-discrimination and equal opportunity. Refers to GRI 406 Disclosure 406-1 Incidents of discrimination and corrective actions taken."
+  },
+  {
+   "ref": "14.22.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Anti-corruption', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.22 Anti-corruption. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.22.2",
+   "text": "Operations assessed for risks related to corruption (GRI 205-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.22 Anti-corruption. Refers to GRI 205 Disclosure 205-1 Operations assessed for risks related to corruption."
+  },
+  {
+   "ref": "14.22.3",
+   "text": "Communication and training about anti-corruption policies and procedures (GRI 205-2): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.22 Anti-corruption. Refers to GRI 205 Disclosure 205-2 Communication and training about anti-corruption policies and procedures."
+  },
+  {
+   "ref": "14.22.4",
+   "text": "Confirmed incidents of corruption and actions taken (GRI 205-3): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.22 Anti-corruption. Refers to GRI 205 Disclosure 205-3 Confirmed incidents of corruption and actions taken."
+  },
+  {
+   "ref": "14.22.5",
+   "text": "Contract transparency: describe the approach to contract transparency, including whether contracts and licenses are publicly available.",
+   "type": "text",
+   "hint": "Approach to contract transparency: whether contracts and licenses are public and where published; if not, the reason and actions to make them public in future."
+  },
+  {
+   "ref": "14.22.6",
+   "text": "Beneficial ownership: what information is held on the organization's beneficial owners, including joint ventures?",
+   "type": "text",
+   "hint": "For beneficial owners, including joint ventures: name, nationality, country of residence; whether politically exposed persons; level of ownership; how ownership or control is exerted."
+  },
+  {
+   "ref": "14.23.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Payments to governments', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.23 Payments to governments. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.23.2",
+   "text": "Direct economic value generated and distributed (GRI 201-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.23 Payments to governments. Refers to GRI 201 Disclosure 201-1 Direct economic value generated and distributed."
+  },
+  {
+   "ref": "14.23.3",
+   "text": "Financial assistance received from government (GRI 201-4): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.23 Payments to governments. Refers to GRI 201 Disclosure 201-4 Financial assistance received from government."
+  },
+  {
+   "ref": "14.23.4",
+   "text": "Approach to tax (GRI 207-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.23 Payments to governments. Refers to GRI 207 Disclosure 207-1 Approach to tax."
+  },
+  {
+   "ref": "14.23.5",
+   "text": "Tax governance, control, and risk management (GRI 207-2): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.23 Payments to governments. Refers to GRI 207 Disclosure 207-2 Tax governance, control, and risk management."
+  },
+  {
+   "ref": "14.23.6",
+   "text": "Stakeholder engagement and management of concerns related to tax (GRI 207-3): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.23 Payments to governments. Refers to GRI 207 Disclosure 207-3 Stakeholder engagement and management of concerns related to tax."
+  },
+  {
+   "ref": "14.23.7",
+   "text": "Country-by-country reporting (GRI 207-4): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.23 Payments to governments. Refers to GRI 207 Disclosure 207-4 Country-by-country reporting."
+  },
+  {
+   "ref": "14.23.8",
+   "text": "State mineral purchases: for minerals purchased from the state or its appointed sellers, what volumes, parties and payments are involved?",
+   "type": "text",
+   "hint": "For minerals purchased from the state or its appointed third parties: volumes and types purchased; full names of selling entity and payment recipient; payments made."
+  },
+  {
+   "ref": "14.24.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Public policy', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.24 Public policy. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.24.2",
+   "text": "Political contributions (GRI 415-1): what does the organization report for this disclosure?",
+   "type": "text",
+   "hint": "Topic 14.24 Public policy. Refers to GRI 415 Disclosure 415-1 Political contributions."
+  },
+  {
+   "ref": "14.25.1",
+   "text": "Management of material topics (GRI 3-3): how does the organization manage the material topic 'Conflict-affected and high-risk areas', including its impacts, policies or commitments, actions taken, and how it tracks effectiveness?",
+   "type": "text",
+   "hint": "Topic 14.25 Conflict-affected and high-risk areas. Refers to GRI 3 Disclosure 3-3 Management of material topics (describe the impacts, policies, actions, effectiveness tracking and stakeholder engagement for the topic)."
+  },
+  {
+   "ref": "14.25.2",
+   "text": "Operations in conflict-affected and high-risk areas: list the operations in conflict-affected or high-risk areas and how these were identified.",
+   "type": "text",
+   "hint": "List locations of operations in conflict-affected or high-risk areas and how these were identified."
+  },
+  {
+   "ref": "14.25.3",
+   "text": "Due diligence for conflict-affected and high-risk areas: describe the due diligence process applied and whether it aligns with the OECD guidance.",
+   "type": "text",
+   "hint": "Description of due diligence process for operations in, or sourcing from, conflict-affected and high-risk areas; whether it aligns with the OECD Due Diligence Guidance for minerals."
+  },
+  {
+   "ref": "14.25.4",
+   "text": "Management of impacts in conflict-affected and high-risk areas: what are the potential negative impacts on workers and local communities, and what actions prevent or mitigate them?",
+   "type": "text",
+   "hint": "For operations in conflict-affected or high-risk areas: potential negative impacts on workers and local communities; actions to prevent or mitigate them."
+  }
+ ]
+}

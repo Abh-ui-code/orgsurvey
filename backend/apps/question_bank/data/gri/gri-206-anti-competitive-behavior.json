@@ -1,0 +1,17 @@
+{
+ "summary": "GRI 206 covers anti-competitive behavior, including anti-trust and monopoly practices. It addresses actions that can result in collusion with competitors or barriers to entry, intended to limit market competition.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does the organization manage anti-competitive behavior as a material topic (GRI 3-3)?",
+   "type": "text",
+   "hint": "Describe how the organization manages the topic and its related impacts, as required by Disclosure 3-3 in GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "206-1",
+   "text": "What legal actions were pending or completed regarding anti-competitive behavior, anti-trust and monopoly practices?",
+   "type": "text",
+   "hint": "a. Number of legal actions pending or completed in the period regarding anti-competitive behavior and violations of anti-trust and monopoly legislation in which the organization was identified as a participant. b. Main outcomes of completed actions, including decisions or judgements."
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "summary": "GRI 308: Supplier Environmental Assessment 2016 contains disclosures for reporting an organization's supply chain environmental impacts and how it manages them. It covers screening of new suppliers using environmental criteria and negative environmental impacts in the supply chain and actions taken.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does your organization manage supplier environmental assessment?",
+   "type": "text",
+   "hint": "Report how you manage this material topic using Disclosure 3-3 of GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "308-1",
+   "text": "What percentage of new suppliers were screened using environmental criteria?",
+   "type": "number",
+   "hint": "a. Percentage of new suppliers that were screened using environmental criteria."
+  },
+  {
+   "ref": "308-2",
+   "text": "What negative environmental impacts have you identified in your supply chain, and what actions have you taken?",
+   "type": "text",
+   "hint": "a. Number of suppliers assessed. b. Number with significant negative impacts. c. Impacts identified. d. % with which improvements were agreed. e. % with which relationships were terminated, and why."
+  }
+ ]
+}

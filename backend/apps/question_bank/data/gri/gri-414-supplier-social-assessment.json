@@ -1,0 +1,23 @@
+{
+ "summary": "GRI 414 covers supplier social assessment: due diligence by an organization to prevent, mitigate and address actual and potential negative social impacts in its supply chain. Suppliers can be assessed on criteria such as human rights, employment practices, and health and safety.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does your organization manage the topic of supplier social assessment, including its impacts, policies, actions and tracking of effectiveness?",
+   "type": "text",
+   "hint": "Report how the organization manages this material topic using Disclosure 3-3 in GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "414-1",
+   "text": "What percentage of new suppliers were screened using social criteria?",
+   "type": "number",
+   "hint": "a. Percentage of new suppliers that were screened using social criteria."
+  },
+  {
+   "ref": "414-2",
+   "text": "What negative social impacts exist in your supply chain, and what actions have you taken?",
+   "type": "text",
+   "hint": "a. Number of suppliers assessed for social impacts. b. Number identified with significant actual and potential negative social impacts. c. Significant negative impacts identified in the supply chain. d. Percentage with which improvements were agreed. e. Percentage with which relationships were terminated, and why."
+  }
+ ]
+}

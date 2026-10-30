@@ -1,0 +1,23 @@
+{
+ "summary": "GRI 416 covers customer health and safety, including an organization's systematic efforts to address health and safety across the life cycle of a product or service, and its adherence to customer health and safety regulations and voluntary codes.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does your organization manage the topic of customer health and safety, including its impacts, policies, actions and tracking of effectiveness?",
+   "type": "text",
+   "hint": "Report how the organization manages this material topic using Disclosure 3-3 in GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "416-1",
+   "text": "What percentage of your significant product and service categories are assessed for health and safety impacts for improvement?",
+   "type": "number",
+   "hint": "a. Percentage of significant product and service categories for which health and safety impacts are assessed for improvement."
+  },
+  {
+   "ref": "416-2",
+   "text": "How many incidents of non-compliance concerning the health and safety impacts of products and services occurred during the reporting period?",
+   "type": "text",
+   "hint": "a. Total number of incidents of non-compliance with regulations and/or voluntary codes, by: i. regulations resulting in a fine or penalty; ii. regulations resulting in a warning; iii. voluntary codes. b. If none identified, a brief statement of this fact is sufficient."
+  }
+ ]
+}

@@ -28,6 +28,7 @@ export interface UserInput {
   title?: string;
   role?: UserRole;
   unit_id?: string | null;
+  also_in_ids?: string[];
   is_active?: boolean;
   /** Required for a new person; blank on edit keeps the current password. */
   password?: string;

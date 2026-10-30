@@ -1,0 +1,53 @@
+{
+ "summary": "GRI 101 covers the organization's impacts on biodiversity: the variety of organisms in terrestrial, marine and aquatic ecosystems. It addresses direct drivers of biodiversity loss such as land and sea use change, resource exploitation, climate change, pollution and invasive alien species, and how impacts are managed.",
+ "questions": [
+  {
+   "ref": "101-1",
+   "text": "What are your policies or commitments to halt and reverse biodiversity loss, and what goals and targets do you have?",
+   "type": "text",
+   "hint": "a. Policies/commitments and how informed by the Kunming-Montreal Global Biodiversity Framework 2050 Goals and 2030 Targets; b. extent they apply to activities and business relationships; c. goals and targets, whether informed by scientific consensus, base year, and progress indicators."
+  },
+  {
+   "ref": "101-2",
+   "text": "How do you manage your biodiversity impacts, including how you apply the mitigation hierarchy?",
+   "type": "text",
+   "hint": "a. Actions to avoid, minimize, restore/rehabilitate (with goals and stakeholder engagement), offset, plus transformative and conservation actions; b. hectares under restoration and restored per significant site; c. per offset: goals, location, good-practice principles, third-party certification; d. sites with biodiversity management plans and why others lack one; e. synergies with climate actions; f. impacts on stakeholders."
+  },
+  {
+   "ref": "101-3",
+   "text": "How do you ensure compliance with access and benefit-sharing regulations, and what voluntary actions do you take?",
+   "type": "text",
+   "hint": "a. Process to ensure compliance with access and benefit-sharing regulations and measures; b. voluntary actions to advance access and benefit-sharing beyond legal obligations or where no regulations exist."
+  },
+  {
+   "ref": "101-4",
+   "text": "How have you determined which of your sites and which products and services in your supply chain have the most significant actual and potential impacts on biodiversity?",
+   "type": "text",
+   "hint": "a. Explain how the sites and the supply chain products and services with the most significant actual and potential biodiversity impacts were determined, including methods and assumptions."
+  },
+  {
+   "ref": "101-5",
+   "text": "Where are your sites with the most significant biodiversity impacts, and which supply chain products and services have the most significant impacts?",
+   "type": "text",
+   "hint": "a. Location and size in hectares of sites; b. per site, whether in or near ecologically sensitive areas, distance, and type (biodiversity importance, high or declining ecosystem integrity, high physical water risk, ecosystem service areas); c. activities at each site; d. supply chain products/services and the countries or jurisdictions of their activities."
+  },
+  {
+   "ref": "101-6",
+   "text": "What are the direct drivers of biodiversity loss associated with your sites and supply chain products and services?",
+   "type": "text",
+   "hint": "a. Land and sea use change: hectares of natural ecosystem converted, cut-off date, ecosystem types; hectares converted between modified ecosystems; b. exploitation: wild species harvested (quantity, type, extinction risk), water withdrawal and consumption in megaliters; c. pollutants by type and quantity; d. invasive alien species introduction; e. supply chain by country; f. methodologies and assumptions."
+  },
+  {
+   "ref": "101-7",
+   "text": "How has the state of biodiversity changed at your sites with the most significant impacts?",
+   "type": "text",
+   "hint": "a. Per site, affected ecosystems: type and size in hectares for the base year, and condition for the base year and current reporting period; b. contextual information on standards, methodologies and assumptions."
+  },
+  {
+   "ref": "101-8",
+   "text": "Which ecosystem services and beneficiaries are affected by your activities, and how?",
+   "type": "text",
+   "hint": "a. Per site, list the ecosystem services and beneficiaries affected or potentially affected; b. explain how the ecosystem services and beneficiaries are or could be affected."
+  }
+ ]
+}

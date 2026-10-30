@@ -1,6 +1,7 @@
 "use client";
 
 import { BookOpen, FolderCog, Pencil, Plus, Trash2 } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
 import { PermissionGate } from "@/components/permission-gate";
@@ -13,10 +14,12 @@ import { DataTable, type ColumnDef } from "@/components/ui/data-table";
 import { PageHeader } from "@/components/ui/page-header";
 import { SearchInput } from "@/components/ui/search-input";
 import { Select } from "@/components/ui/select";
+import { useGriStandards } from "@/hooks/use-gri-standards";
 import { useBankCategories } from "@/hooks/use-bank-categories";
 import { useBankQuestions } from "@/hooks/use-bank-questions";
 import { useDebounced } from "@/hooks/use-debounced";
 import { questionTypeLabel, type BankQuestion } from "@/types/question";
+import { GRI_CATEGORY, GriTab } from "./_components/gri-tab";
 import { CategoriesDialog } from "./_components/categories-dialog";
 import { QuestionDialog, type BankDraft } from "./_components/question-dialog";
 import { useDeleteBankQuestion } from "./_hooks/use-question-bank";
@@ -25,14 +28,17 @@ function QuestionBank() {
   const categories = useBankCategories();
   const del = useDeleteBankQuestion();
   const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("");
+  // Arriving from a GRI standard's page lands back on the GRI standards.
+  const [category, setCategory] = useState(useSearchParams().get("category") === GRI_CATEGORY ? GRI_CATEGORY : "");
+  const gri = category === GRI_CATEGORY;
+  const griCount = useGriStandards().data?.length;
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(25);
   const [draft, setDraft] = useState<BankDraft | null>(null);
   const [toDelete, setToDelete] = useState<BankQuestion | null>(null);
   const [manage, setManage] = useState(false);
 
-  const questions = useBankQuestions({ search: useDebounced(search), category, page, page_size: pageSize });
+  const questions = useBankQuestions({ search: useDebounced(search), category: gri ? "" : category, page, page_size: pageSize }, !gri);
   const blank: BankDraft = { ...EMPTY_QUESTION, category_id: category || categories.data?.[0]?.id || "" };
 
   const columns: ColumnDef<BankQuestion>[] = [
@@ -71,14 +77,16 @@ function QuestionBank() {
         title="Question bank"
         description="Reusable questions that surveys are built from."
         actions={
-          <>
-            <Button variant="secondary" onClick={() => setManage(true)}>
-              <FolderCog className="h-4 w-4" /> Categories
-            </Button>
-            <Button onClick={() => setDraft(blank)}>
-              <Plus className="h-4 w-4" /> Add question
-            </Button>
-          </>
+          !gri && (
+            <>
+              <Button variant="secondary" onClick={() => setManage(true)}>
+                <FolderCog className="h-4 w-4" /> Categories
+              </Button>
+              <Button onClick={() => setDraft(blank)}>
+                <Plus className="h-4 w-4" /> Add question
+              </Button>
+            </>
+          )
         }
       />
       <div className="mb-4 flex flex-wrap gap-2">
@@ -88,7 +96,7 @@ function QuestionBank() {
             setSearch(v);
             setPage(1);
           }}
-          placeholder="Search questions"
+          placeholder={gri ? "Search GRI standards" : "Search questions"}
           className="w-72"
         />
         <Select
@@ -97,7 +105,7 @@ function QuestionBank() {
             setCategory(e.target.value);
             setPage(1);
           }}
-          className="w-52"
+          className="w-56"
         >
           <option value="">All categories</option>
           {categories.data?.map((c) => (
@@ -105,25 +113,30 @@ function QuestionBank() {
               {c.label} ({c.question_count})
             </option>
           ))}
+          <option value={GRI_CATEGORY}>GRI standards{griCount !== undefined ? ` (${griCount})` : ""}</option>
         </Select>
       </div>
-      <DataTable
-        columns={columns}
-        data={questions.data?.results ?? []}
-        isLoading={questions.isPending}
-        isFetching={questions.isFetching}
-        isError={questions.isError}
-        emptyIcon={BookOpen}
-        emptyTitle="No questions yet"
-        emptyDescription="Add reusable questions to build surveys from."
-        emptyAction={<Button onClick={() => setDraft(blank)}>Add question</Button>}
-        pagination={{ page, pageSize, total: questions.data?.count ?? 0 }}
-        onPageChange={setPage}
-        onPageSizeChange={(size) => {
-          setPageSize(size);
-          setPage(1);
-        }}
-      />
+      {gri ? (
+        <GriTab search={search} />
+      ) : (
+        <DataTable
+          columns={columns}
+          data={questions.data?.results ?? []}
+          isLoading={questions.isPending}
+          isFetching={questions.isFetching}
+          isError={questions.isError}
+          emptyIcon={BookOpen}
+          emptyTitle="No questions yet"
+          emptyDescription="Add reusable questions to build surveys from."
+          emptyAction={<Button onClick={() => setDraft(blank)}>Add question</Button>}
+          pagination={{ page, pageSize, total: questions.data?.count ?? 0 }}
+          onPageChange={setPage}
+          onPageSizeChange={(size) => {
+            setPageSize(size);
+            setPage(1);
+          }}
+        />
+      )}
       <QuestionDialog draft={draft} onClose={() => setDraft(null)} />
       <CategoriesDialog open={manage} onClose={() => setManage(false)} />
       <ConfirmDialog

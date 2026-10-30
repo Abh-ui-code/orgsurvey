@@ -1,0 +1,41 @@
+{
+ "summary": "GRI 306: Waste 2020 contains disclosures for reporting an organization's waste-related impacts and how it manages them. It covers waste generated in the organization's own activities and in its upstream and downstream value chain, including waste diverted from and directed to disposal.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does your organization manage waste and its waste-related impacts?",
+   "type": "text",
+   "hint": "Report how you manage this material topic using Disclosure 3-3 of GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "306-1",
+   "text": "What are your waste generation and significant waste-related impacts?",
+   "type": "text",
+   "hint": "a. For significant actual and potential waste-related impacts, describe: i. the inputs, activities and outputs leading to them; ii. whether they relate to own activities or upstream/downstream waste in the value chain."
+  },
+  {
+   "ref": "306-2",
+   "text": "How do you manage your significant waste-related impacts?",
+   "type": "text",
+   "hint": "a. Actions, including circularity measures, to prevent waste and manage significant impacts. b. If waste is managed by a third party, how you determine it complies with contractual or legislative obligations. c. Processes to collect and monitor waste-related data."
+  },
+  {
+   "ref": "306-3",
+   "text": "What was the total weight of waste generated?",
+   "type": "text",
+   "hint": "a. Total weight of waste generated in metric tons, with a breakdown by waste composition. b. Contextual information necessary to understand the data and how they were compiled."
+  },
+  {
+   "ref": "306-4",
+   "text": "What was the total weight of waste diverted from disposal?",
+   "type": "text",
+   "hint": "a. Total weight diverted, in metric tons, by composition. b. Hazardous waste by recovery operation (reuse, recycling, other). c. Non-hazardous waste by recovery operation. d. Each operation split onsite and offsite. e. Context on data compilation."
+  },
+  {
+   "ref": "306-5",
+   "text": "What was the total weight of waste directed to disposal?",
+   "type": "text",
+   "hint": "a. Total weight directed to disposal, in metric tons, by composition. b. Hazardous waste by disposal operation (incineration with/without energy recovery, landfilling, other). c. Non-hazardous waste likewise. d. Each operation split onsite and offsite. e. Context on data compilation."
+  }
+ ]
+}

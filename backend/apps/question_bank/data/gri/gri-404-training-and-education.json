@@ -1,0 +1,29 @@
+{
+ "summary": "GRI 404 covers an organization's approach to training and upgrading employee skills, and to performance and career development reviews. It also covers transition assistance for continued employability and for career endings through retirement or termination.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "Describe how the organization manages this material topic and its related impacts, as required by Disclosure 3-3 in GRI 3 (Material Topics 2021).",
+   "type": "text",
+   "hint": "Per GRI 3-3: the actual and potential impacts, policy commitments, actions taken, tracking of effectiveness and stakeholder engagement for the topic."
+  },
+  {
+   "ref": "404-1",
+   "text": "What was the average number of training hours per employee during the reporting period, by gender and by employee category?",
+   "type": "text",
+   "hint": "a. Average hours of training undertaken by employees during the reporting period, by gender and by employee category."
+  },
+  {
+   "ref": "404-2",
+   "text": "Describe the programs implemented to upgrade employee skills and the transition assistance programs that support continued employability and the management of career endings.",
+   "type": "text",
+   "hint": "a. Type and scope of programs and assistance to upgrade employee skills. b. Transition assistance programs for continued employability and career endings from retirement or termination."
+  },
+  {
+   "ref": "404-3",
+   "text": "What percentage of employees, by gender and employee category, received a regular performance and career development review during the reporting period?",
+   "type": "text",
+   "hint": "a. Percentage of total employees by gender and employee category who received a regular performance and career development review."
+  }
+ ]
+}

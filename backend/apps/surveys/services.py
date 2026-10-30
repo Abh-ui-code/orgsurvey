@@ -132,6 +132,15 @@ def assign_questions(survey: Survey, assignments) -> Survey:
     if survey.status not in ("draft", *Survey.LIVE):
         raise ApiError("This survey is finished and can't be changed.")
     questions = {q.pk: q for q in all_questions(survey)}
+    # A GRI section goes to one person as a whole: every question in it, or none.
+    given = {}
+    for question, person in assignments:
+        if question.pk in questions and question.section.gri_standard_id:
+            given.setdefault(question.section_id, {})[question.pk] = person
+    for section_id, chosen in given.items():
+        whole = set(SurveyQuestion.objects.filter(section_id=section_id).values_list("pk", flat=True))
+        if set(chosen) != whole or len({p.pk if p else None for p in chosen.values()}) > 1:
+            raise ApiError(GRI_FIXED.split(".")[0] + ". Assign the whole section to one person.")
     for question, person in assignments:
         if question.pk not in questions:
             raise ApiError("A question in that list isn't part of this survey.")
@@ -165,6 +174,39 @@ def update_section(section: Section, **fields) -> Section:
         setattr(section, name, value)
     section.save()
     return section
+
+
+GRI_FIXED = "GRI sections are added and assigned as a whole. Remove the section to change it."
+
+
+def _not_gri(section):
+    if section.gri_standard_id:
+        raise ApiError(GRI_FIXED)
+
+
+@transaction.atomic
+def add_gri_section(survey: Survey, standard) -> Section:
+    """Add a whole GRI Standard as a section, with every question in it."""
+    require_draft(survey)
+    if survey.sections.filter(gri_standard=standard).exists():
+        raise ApiError(f"{standard.code} is already in this survey.")
+    section = Section.objects.create(
+        survey=survey, order=_next_order(survey.sections), title=f"{standard.code}: {standard.title}"[:255],
+        description=standard.summary, gri_standard=standard,
+    )
+    for bank_question in standard.questions.order_by("gri_order"):
+        fields = {name: getattr(bank_question, name) for name in QUESTION_FIELDS}
+        SurveyQuestion.objects.create(
+            section=section, order=_next_order(section.questions), bank_question=bank_question, **fields
+        )
+    return section
+
+
+@transaction.atomic
+def assign_section(section: Section, person) -> Survey:
+    """Give a whole section to one respondent (or take it back, while a draft)."""
+    survey = section.survey
+    return assign_questions(survey, [(q, person) for q in section.questions.all()])
 
 
 @transaction.atomic
@@ -201,6 +243,7 @@ def move_section(section: Section, direction):
 @transaction.atomic
 def add_question(section: Section, **fields) -> SurveyQuestion:
     require_draft(section.survey)
+    _not_gri(section)
     _active_member(fields.get("responder"))
     return SurveyQuestion.objects.create(section=section, order=_next_order(section.questions), **fields)
 
@@ -208,6 +251,8 @@ def add_question(section: Section, **fields) -> SurveyQuestion:
 @transaction.atomic
 def add_question_from_bank(section: Section, bank_question) -> SurveyQuestion:
     """Copy a bank question into the section, remembering where it came from."""
+    if bank_question.gri_standard_id:
+        raise ApiError("GRI questions can't be added one by one. Add the whole GRI standard as a section.")
     fields = {name: getattr(bank_question, name) for name in QUESTION_FIELDS}
     question = add_question(section, **fields)
     question.bank_question = bank_question
@@ -218,6 +263,7 @@ def add_question_from_bank(section: Section, bank_question) -> SurveyQuestion:
 @transaction.atomic
 def update_question(question: SurveyQuestion, **fields) -> SurveyQuestion:
     require_draft(question.section.survey)
+    _not_gri(question.section)
     _active_member(fields.get("responder"))
     for name, value in fields.items():
         setattr(question, name, value)
@@ -228,12 +274,14 @@ def update_question(question: SurveyQuestion, **fields) -> SurveyQuestion:
 @transaction.atomic
 def delete_question(question: SurveyQuestion):
     require_draft(question.section.survey)
+    _not_gri(question.section)
     question.delete()
 
 
 @transaction.atomic
 def move_question(question: SurveyQuestion, direction):
     require_draft(question.section.survey)
+    _not_gri(question.section)
     _move(question.section.questions.all(), question, direction)
 
 
@@ -284,7 +332,9 @@ def duplicate(survey: Survey, by) -> Survey:
         responder=survey.responder, reviewer=survey.reviewer, approver=survey.approver,
     )
     for section in survey.sections.all():
-        new_section = Section.objects.create(survey=copy, order=section.order, title=section.title, description=section.description)
+        new_section = Section.objects.create(
+            survey=copy, order=section.order, title=section.title, description=section.description, gri_standard=section.gri_standard
+        )
         for q in section.questions.all():
             SurveyQuestion.objects.create(
                 section=new_section, order=q.order, bank_question=q.bank_question, responder=q.responder,

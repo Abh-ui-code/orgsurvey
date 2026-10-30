@@ -114,6 +114,8 @@ export interface SurveySection {
   order: number;
   title: string;
   description: string;
+  /** Set when this section is a whole GRI standard: its questions are fixed and it goes to one respondent. */
+  gri: { id: string; code: string; title: string; pdf: string } | null;
   questions: SurveyQuestion[];
 }
 

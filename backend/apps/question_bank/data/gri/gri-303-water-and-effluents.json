@@ -1,0 +1,41 @@
+{
+ "summary": "GRI 303: Water and Effluents 2018 contains disclosures for reporting an organization's water-related impacts and how it manages them. It covers interactions with water as a shared resource, management of discharge-related impacts, and water withdrawal, discharge and consumption.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does your organization manage water and effluents?",
+   "type": "text",
+   "hint": "Report how you manage this material topic using Disclosure 3-3 of GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "303-1",
+   "text": "How does your organization interact with water as a shared resource?",
+   "type": "text",
+   "hint": "a. How the organization interacts with water (withdrawal, consumption, discharge) and related impacts. b. Approach used to identify water-related impacts. c. How impacts are addressed, including stakeholder and supplier/customer engagement. d. Process for setting water-related goals and targets."
+  },
+  {
+   "ref": "303-2",
+   "text": "How do you manage water discharge-related impacts?",
+   "type": "text",
+   "hint": "a. Minimum standards set for the quality of effluent discharge and how they were determined, including: i. standards where no local requirements exist; ii. internal standards; iii. sector-specific standards; iv. whether the receiving waterbody profile was considered."
+  },
+  {
+   "ref": "303-3",
+   "text": "What was your total water withdrawal?",
+   "type": "text",
+   "hint": "a. Total withdrawal in megaliters by source (surface water, groundwater, seawater, produced water, third-party water). b. Same for areas with water stress. c. Breakdown by freshwater (<=1,000 mg/L TDS) and other water. d. Context on how data were compiled."
+  },
+  {
+   "ref": "303-4",
+   "text": "What was your total water discharge?",
+   "type": "text",
+   "hint": "a. Total discharge in megaliters by destination (surface water, groundwater, seawater, third-party water). b. Breakdown by freshwater and other water. c. Discharge to water-stress areas. d. Priority substances of concern treated, how defined, discharge limits, non-compliance incidents. e. Context on data compilation."
+  },
+  {
+   "ref": "303-5",
+   "text": "What was your total water consumption?",
+   "type": "text",
+   "hint": "a. Total water consumption from all areas in megaliters. b. Total consumption from areas with water stress in megaliters. c. Change in water storage in megaliters, if significant. d. Context on how data were compiled (calculated, estimated, modeled or measured; sector-specific factors)."
+  }
+ ]
+}

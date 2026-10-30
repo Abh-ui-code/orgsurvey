@@ -1,0 +1,23 @@
+{
+ "summary": "GRI 203 covers an organization's indirect economic impacts, including the impacts of its infrastructure investments and services supported. Indirect impacts are additional consequences of financial transactions and money flows, and can be monetary or non-monetary.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does the organization manage indirect economic impacts as a material topic (GRI 3-3)?",
+   "type": "text",
+   "hint": "Describe how the organization manages the topic and its related impacts, as required by Disclosure 3-3 in GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "203-1",
+   "text": "What infrastructure investments and services has the organization supported?",
+   "type": "text",
+   "hint": "a. Extent of development of significant infrastructure investments and services supported. b. Current or expected impacts on communities and local economies, positive and negative. c. Whether these are commercial, in-kind or pro bono engagements."
+  },
+  {
+   "ref": "203-2",
+   "text": "What are the organization's significant indirect economic impacts?",
+   "type": "text",
+   "hint": "a. Examples of significant identified indirect economic impacts, positive and negative. b. Significance of these impacts in the context of external benchmarks and stakeholder priorities, such as national and international standards, protocols and policy agendas."
+  }
+ ]
+}

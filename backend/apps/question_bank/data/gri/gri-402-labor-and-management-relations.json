@@ -1,0 +1,17 @@
+{
+ "summary": "GRI 402 covers an organization's consultative practices with employees and their representatives, including how it communicates significant operational changes. Collective bargaining is part of these practices. It contains one disclosure on minimum notice periods.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "Describe how the organization manages this material topic and its related impacts, as required by Disclosure 3-3 in GRI 3 (Material Topics 2021).",
+   "type": "text",
+   "hint": "Per GRI 3-3: the actual and potential impacts, policy commitments, actions taken, tracking of effectiveness and stakeholder engagement for the topic."
+  },
+  {
+   "ref": "402-1",
+   "text": "What is the minimum number of weeks' notice typically given to employees and their representatives before significant operational changes that could substantially affect them, and are notice and consultation provisions specified in collective agreements?",
+   "type": "text",
+   "hint": "a. Minimum weeks' notice typically provided before significant operational changes. b. For organizations with collective bargaining agreements, whether notice period and consultation/negotiation provisions are specified in the agreements."
+  }
+ ]
+}

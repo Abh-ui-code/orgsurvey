@@ -1,0 +1,17 @@
+{
+ "summary": "GRI 406 addresses non-discrimination, defined as treating people unequally by imposing unequal burdens or denying benefits instead of treating each person fairly on individual merit. Discrimination can include harassment. It contains one disclosure on incidents and corrective actions.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "Describe how the organization manages this material topic and its related impacts, as required by Disclosure 3-3 in GRI 3 (Material Topics 2021).",
+   "type": "text",
+   "hint": "Per GRI 3-3: the actual and potential impacts, policy commitments, actions taken, tracking of effectiveness and stakeholder engagement for the topic."
+  },
+  {
+   "ref": "406-1",
+   "text": "Report the total number of incidents of discrimination during the reporting period and the status of those incidents and actions taken.",
+   "type": "text",
+   "hint": "a. Total number of incidents of discrimination. b. Status and actions: incident reviewed; remediation plans being implemented; remediation implemented with results reviewed through routine management review; incident no longer subject to action."
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "summary": "GRI 301: Materials 2016 contains disclosures for reporting an organization's materials-related impacts and how it manages them. It covers the materials used to make and package products and services, recycled input materials, and reclaimed products and packaging.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does your organization manage its materials-related impacts?",
+   "type": "text",
+   "hint": "Report how you manage this material topic using Disclosure 3-3 of GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "301-1",
+   "text": "What was the total weight or volume of materials used to produce and package your primary products and services in the reporting period?",
+   "type": "text",
+   "hint": "a. Total weight or volume of materials used to produce and package primary products and services during the period, by: i. non-renewable materials; ii. renewable materials."
+  },
+  {
+   "ref": "301-2",
+   "text": "What percentage of the input materials used to manufacture your primary products and services were recycled?",
+   "type": "number",
+   "hint": "a. Percentage of recycled input materials used to manufacture primary products and services (total recycled input materials / total input materials x 100, using the total from 301-1)."
+  },
+  {
+   "ref": "301-3",
+   "text": "What percentage of your products and their packaging materials were reclaimed, for each product category, and how were the data collected?",
+   "type": "text",
+   "hint": "a. Percentage of reclaimed products and their packaging materials for each product category (excluding rejects and recalls). b. How the data were collected."
+  }
+ ]
+}

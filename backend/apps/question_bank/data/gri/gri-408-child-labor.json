@@ -1,0 +1,17 @@
+{
+ "summary": "GRI 408 addresses child labor, work that deprives children of their childhood, potential and dignity and is harmful to their development. It does not refer to youth employment. It contains one disclosure on operations and suppliers at significant risk.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "Describe how the organization manages this material topic and its related impacts, as required by Disclosure 3-3 in GRI 3 (Material Topics 2021).",
+   "type": "text",
+   "hint": "Per GRI 3-3: the actual and potential impacts, policy commitments, actions taken, tracking of effectiveness and stakeholder engagement for the topic."
+  },
+  {
+   "ref": "408-1",
+   "text": "Identify operations and suppliers at significant risk for incidents of child labor or of young workers exposed to hazardous work, and the measures taken to contribute to the effective abolition of child labor.",
+   "type": "text",
+   "hint": "a. Operations and suppliers at significant risk for child labor or young workers exposed to hazardous work. b. Risk by type of operation and supplier, and by country or geographic area. c. Measures taken in the reporting period to contribute to the abolition of child labor."
+  }
+ ]
+}

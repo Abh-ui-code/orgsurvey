@@ -1,0 +1,35 @@
+{
+ "summary": "GRI 103 addresses energy. Energy use leads to GHG emissions that contribute to climate change, so organizations need to change how they consume energy, including moving to renewables and phasing out fossil fuels. It covers policies, consumption, self-generation, intensity and reductions.",
+ "questions": [
+  {
+   "ref": "103-1",
+   "text": "How do your energy policies and commitments contribute to reducing consumption, improving efficiency and transitioning to renewables?",
+   "type": "text",
+   "hint": "a. How energy-related policies and commitments contribute to consumption reduction, energy efficiency and the transition to renewable energy; b. impacts on the economy, environment and people from energy consumption and the renewable transition."
+  },
+  {
+   "ref": "103-2",
+   "text": "What is your energy consumption and self-generation within the organization?",
+   "type": "text",
+   "hint": "In joules, watt-hours or multiples: a. fuel consumption by renewable/non-renewable and activity; b. purchased electricity, heating, cooling, steam by source; c. self-generated renewable energy consumed; d. self-generated energy sold; e. contractual instruments and quality criteria; f. standards, methodologies, conversion factor sources."
+  },
+  {
+   "ref": "103-3",
+   "text": "What is your significant energy consumption upstream and downstream in your value chain?",
+   "type": "text",
+   "hint": "a. Total significant upstream and downstream energy consumption in joules, watt-hours or multiples, and the categories where it occurs; b. standards, methodologies, assumptions, tools and conversion factor sources."
+  },
+  {
+   "ref": "103-4",
+   "text": "What is your energy intensity?",
+   "type": "text",
+   "hint": "a. Intensity ratio(s): energy consumption (numerator) and organization-specific metric (denominator); b. whether it covers within the organization, upstream/downstream, or both; c. types of energy included: fuel, electricity, heating, cooling, steam."
+  },
+  {
+   "ref": "103-5",
+   "text": "What reduction in energy consumption have you achieved?",
+   "type": "text",
+   "hint": "a. Reduction achieved and whether due to conservation/efficiency initiatives or other factors; b. energy types included; c. within organization, value chain or both, with categories; d. estimated, modeled or measured, and methods; e. base year/baseline, rationale and consumption; f. standards, methodologies, tools."
+  }
+ ]
+}

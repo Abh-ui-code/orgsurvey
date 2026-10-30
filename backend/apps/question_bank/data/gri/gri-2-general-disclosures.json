@@ -1,0 +1,185 @@
+{
+ "summary": "GRI 2: General Disclosures 2021 contains disclosures for organizations to provide information about their reporting practices, activities and workers, governance, strategy, policies and practices, and stakeholder engagement. This gives insight into the profile and scale of the organization and context for understanding its impacts.",
+ "questions": [
+  {
+   "ref": "2-1",
+   "text": "Report the organization's legal name, nature of ownership and legal form, location of headquarters, and countries of operation.",
+   "type": "text",
+   "hint": "Report: a. legal name; b. nature of ownership and legal form; c. location of headquarters; d. countries of operation."
+  },
+  {
+   "ref": "2-2",
+   "text": "List all entities included in your sustainability reporting, and explain how they differ from financial reporting and how information is consolidated.",
+   "type": "text",
+   "hint": "Report: a. list of entities included; b. differences from entities in financial reporting; c. consolidation approach: minority interests, mergers/acquisitions/disposals, and whether it differs across disclosures and material topics."
+  },
+  {
+   "ref": "2-3",
+   "text": "Specify the reporting period and frequency of sustainability reporting, the financial reporting period, the publication date, and a contact point for questions.",
+   "type": "text",
+   "hint": "Report: a. sustainability reporting period and frequency; b. financial reporting period, with reason if it differs; c. publication date; d. contact point for questions."
+  },
+  {
+   "ref": "2-4",
+   "text": "Report any restatements of information from previous reporting periods, with the reasons and effect.",
+   "type": "text",
+   "hint": "Report: a. restatements made from previous periods, explaining i. reasons for the restatements; ii. effect of the restatements."
+  },
+  {
+   "ref": "2-5",
+   "text": "Describe your policy and practice for seeking external assurance and, if your reporting was externally assured, provide the assurance details.",
+   "type": "text",
+   "hint": "Report: a. policy and practice for external assurance, incl. involvement of governance body and senior executives; b. if assured: link to assurance report, what was assured and on what basis (standards, level, limitations), and relationship with assurance provider."
+  },
+  {
+   "ref": "2-6",
+   "text": "Describe the sectors in which you operate, your value chain and other business relationships, and significant changes since the previous period.",
+   "type": "text",
+   "hint": "Report: a. sector(s) in which active; b. value chain: activities, products, services, markets served; supply chain; downstream entities; c. other relevant business relationships; d. significant changes compared to previous period."
+  },
+  {
+   "ref": "2-7",
+   "text": "Report the total number of employees and breakdowns by gender and region, by employment type, and the methodologies used.",
+   "type": "text",
+   "hint": "Report: a. total employees by gender and region; b. permanent, temporary, non-guaranteed hours, full-time and part-time employees by gender and region; c. methodologies (head count/FTE; end of period/average); d. context; e. significant fluctuations."
+  },
+  {
+   "ref": "2-8",
+   "text": "Report the total number of workers who are not employees and whose work you control, the types of work, and the methodologies used.",
+   "type": "text",
+   "hint": "Report: a. total workers who are not employees, with most common types and contractual relationship, and the type of work; b. methodologies (head count/FTE; end of period/average); c. significant fluctuations."
+  },
+  {
+   "ref": "2-9",
+   "text": "Describe your governance structure, the committees responsible for impacts, and the composition of the highest governance body and its committees.",
+   "type": "text",
+   "hint": "Report: a. governance structure incl. committees; b. committees overseeing impacts on economy, environment and people; c. composition by executive/non-executive, independence, tenure, other commitments, gender, under-represented groups, competencies, stakeholder representation."
+  },
+  {
+   "ref": "2-10",
+   "text": "Describe how members of the highest governance body and its committees are nominated and selected, and the criteria used.",
+   "type": "text",
+   "hint": "Report: a. nomination and selection processes; b. criteria used, including whether and how these are considered: stakeholder views, diversity, independence, competencies relevant to the organization's impacts."
+  },
+  {
+   "ref": "2-11",
+   "text": "Report whether the chair of the highest governance body is also a senior executive and, if so, explain the arrangement.",
+   "type": "text",
+   "hint": "Report: a. whether the chair is also a senior executive; b. if so, their function, the reasons for the arrangement, and how conflicts of interest are prevented and mitigated."
+  },
+  {
+   "ref": "2-12",
+   "text": "Describe the role of the highest governance body and senior executives in overseeing the management of impacts on the economy, environment and people.",
+   "type": "text",
+   "hint": "Report: a. role in developing, approving and updating purpose, strategies, policies and goals for sustainable development; b. role in overseeing due diligence and impact processes, incl. stakeholder engagement; c. role in reviewing effectiveness and frequency of review."
+  },
+  {
+   "ref": "2-13",
+   "text": "Describe how the highest governance body delegates responsibility for managing impacts and how it receives reports back.",
+   "type": "text",
+   "hint": "Report: a. how responsibility is delegated, incl. appointed senior executives and other employees; b. process and frequency for reporting back to the highest governance body."
+  },
+  {
+   "ref": "2-14",
+   "text": "Report whether the highest governance body reviews and approves the reported information, including material topics.",
+   "type": "text",
+   "hint": "Report: a. whether the governance body reviews and approves reported information and material topics, and the process; b. if not, the reason."
+  },
+  {
+   "ref": "2-15",
+   "text": "Describe the processes to prevent and mitigate conflicts of interest and whether conflicts of interest are disclosed to stakeholders.",
+   "type": "text",
+   "hint": "Report: a. processes to prevent and mitigate conflicts of interest; b. whether disclosed to stakeholders, at minimum: cross-board membership, cross-shareholding, controlling shareholders, related parties and transactions."
+  },
+  {
+   "ref": "2-16",
+   "text": "Describe how critical concerns are communicated to the highest governance body and report their number and nature.",
+   "type": "text",
+   "hint": "Report: a. whether and how critical concerns are communicated to the highest governance body; b. total number and nature of critical concerns communicated during the reporting period."
+  },
+  {
+   "ref": "2-17",
+   "text": "Report the measures taken to advance the collective knowledge, skills and experience of the highest governance body on sustainable development.",
+   "type": "text",
+   "hint": "Report: a. measures taken to advance the collective knowledge, skills and experience of the highest governance body on sustainable development."
+  },
+  {
+   "ref": "2-18",
+   "text": "Describe how the performance of the highest governance body is evaluated and the actions taken in response.",
+   "type": "text",
+   "hint": "Report: a. processes for evaluating performance in overseeing impacts; b. whether evaluations are independent and their frequency; c. actions taken, incl. changes to composition and organizational practices."
+  },
+  {
+   "ref": "2-19",
+   "text": "Describe the remuneration policies for the highest governance body and senior executives and how they relate to impact management.",
+   "type": "text",
+   "hint": "Report: a. policies incl. fixed and variable pay, sign-on bonuses, termination payments, clawbacks, retirement benefits; b. how they relate to objectives and performance in managing impacts on economy, environment and people."
+  },
+  {
+   "ref": "2-20",
+   "text": "Describe the process for designing remuneration policies and determining remuneration, and report results of stakeholder votes.",
+   "type": "text",
+   "hint": "Report: a. process, incl. independent oversight, how stakeholder views are considered, and use and independence of remuneration consultants; b. results of stakeholder (incl. shareholder) votes on remuneration policies and proposals, if applicable."
+  },
+  {
+   "ref": "2-21",
+   "text": "Report the annual total compensation ratio and the ratio of percentage increase in compensation for the highest-paid individual versus all other employees.",
+   "type": "text",
+   "hint": "Report: a. ratio of highest-paid individual's annual total compensation to the median for all other employees; b. ratio of their percentage increase to the median percentage increase; c. contextual information on how data was compiled."
+  },
+  {
+   "ref": "2-22",
+   "text": "Provide a statement from the highest governance body or most senior executive on the relevance of sustainable development to the organization and its strategy.",
+   "type": "text",
+   "hint": "Report: a. a statement from the highest governance body or most senior executive about the relevance of sustainable development to the organization and its strategy for contributing to it."
+  },
+  {
+   "ref": "2-23",
+   "text": "Describe your policy commitments for responsible business conduct, including your commitment to respect human rights.",
+   "type": "text",
+   "hint": "Report: a. policy commitments, incl. instruments referenced, due diligence, precautionary principle, human rights; b. human rights commitment, rights and stakeholder groups covered; c. links or reasons not public; d. approval level; e. scope of application; f. how communicated."
+  },
+  {
+   "ref": "2-24",
+   "text": "Describe how you embed each policy commitment for responsible business conduct throughout your activities and business relationships.",
+   "type": "text",
+   "hint": "Report: a. how each commitment is embedded, incl. i. allocation of responsibility; ii. integration into strategies, policies and procedures; iii. implementation with and through business relationships; iv. training provided."
+  },
+  {
+   "ref": "2-25",
+   "text": "Describe your commitments and processes to remediate negative impacts, including grievance mechanisms and how their effectiveness is tracked.",
+   "type": "text",
+   "hint": "Report: a. commitments to remediation; b. approach to grievances and mechanisms; c. other remediation processes; d. involvement of intended users in mechanism design and operation; e. how effectiveness is tracked, with examples and stakeholder feedback."
+  },
+  {
+   "ref": "2-26",
+   "text": "Describe the mechanisms for individuals to seek advice on and raise concerns about your responsible business conduct.",
+   "type": "text",
+   "hint": "Report: a. mechanisms for individuals to i. seek advice on implementing policies and practices for responsible business conduct; ii. raise concerns about the organization's business conduct."
+  },
+  {
+   "ref": "2-27",
+   "text": "Report significant instances of non-compliance with laws and regulations, and the fines and sanctions incurred during the reporting period.",
+   "type": "text",
+   "hint": "Report: a. total significant non-compliance instances, split by fines and non-monetary sanctions; b. number and value of fines paid, split by current and previous periods; c. description of significant instances; d. how significance was determined."
+  },
+  {
+   "ref": "2-28",
+   "text": "Report the industry associations, membership associations and advocacy organizations in which you participate in a significant role.",
+   "type": "text",
+   "hint": "Report: a. industry associations, other membership associations, and national or international advocacy organizations in which it participates in a significant role."
+  },
+  {
+   "ref": "2-29",
+   "text": "Describe your approach to engaging with stakeholders.",
+   "type": "text",
+   "hint": "Report: a. approach to stakeholder engagement, incl. i. categories of stakeholders and how they are identified; ii. purpose of engagement; iii. how meaningful engagement is sought."
+  },
+  {
+   "ref": "2-30",
+   "text": "Report the percentage of total employees covered by collective bargaining agreements.",
+   "type": "text",
+   "hint": "Report: a. percentage of total employees covered by collective bargaining agreements; b. for employees not covered, whether working conditions are based on agreements covering other employees or other organizations."
+  }
+ ]
+}

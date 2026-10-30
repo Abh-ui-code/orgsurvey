@@ -1,0 +1,23 @@
+{
+ "summary": "GRI 405 addresses an organization's approach to diversity and equal opportunity at work. It covers the diversity of governance bodies and employees and the ratio of women's to men's basic salary and remuneration.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "Describe how the organization manages this material topic and its related impacts, as required by Disclosure 3-3 in GRI 3 (Material Topics 2021).",
+   "type": "text",
+   "hint": "Per GRI 3-3: the actual and potential impacts, policy commitments, actions taken, tracking of effectiveness and stakeholder engagement for the topic."
+  },
+  {
+   "ref": "405-1",
+   "text": "Report the percentage of individuals in governance bodies and of employees per employee category in each diversity category: gender, age group and other relevant indicators of diversity.",
+   "type": "text",
+   "hint": "a. Percentage in governance bodies by gender, age group (under 30, 30-50, over 50) and other diversity indicators (e.g. minority or vulnerable groups). b. Same for employees per employee category."
+  },
+  {
+   "ref": "405-2",
+   "text": "Report the ratio of the basic salary and remuneration of women to men for each employee category, by significant location of operation, and define 'significant locations of operation'.",
+   "type": "text",
+   "hint": "a. Ratio of basic salary and remuneration of women to men for each employee category, by significant locations of operation. b. Definition of significant locations of operation."
+  }
+ ]
+}

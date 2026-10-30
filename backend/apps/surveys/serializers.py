@@ -57,25 +57,34 @@ class CategoryRefSerializer(serializers.ModelSerializer):
 # ============================================================== builder
 class SurveyQuestionSerializer(QuestionFieldsSerializer):
     bank_question_id = serializers.UUIDField(read_only=True)
+    gri_ref = serializers.SerializerMethodField()
     responder = PersonSerializer(read_only=True)
     responder_id = IdField(source="responder", queryset=User.objects.all(), required=False, allow_null=True, write_only=True)
 
     class Meta:
         model = SurveyQuestion
         fields = [
-            "id", "order", "text", "type", "options", "hint", "required", "bank_question_id",
+            "id", "order", "text", "type", "options", "hint", "required", "bank_question_id", "gri_ref",
             "responder", "responder_id", "status", "progress",
         ]
         read_only_fields = ["order", "status", "progress"]
 
+    def get_gri_ref(self, question):
+        return question.bank_question.gri_ref if question.bank_question_id and question.section.gri_standard_id else ""
+
 
 class SectionSerializer(serializers.ModelSerializer):
     questions = SurveyQuestionSerializer(many=True, read_only=True)
+    gri = serializers.SerializerMethodField()
 
     class Meta:
         model = Section
-        fields = ["id", "order", "title", "description", "questions"]
+        fields = ["id", "order", "title", "description", "gri", "questions"]
         read_only_fields = ["order"]
+
+    def get_gri(self, section):
+        g = section.gri_standard
+        return {"id": g.id, "code": g.code, "title": g.title, "pdf": g.pdf} if g else None
 
     def validate_title(self, value):
         value = value.strip()

@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 from apps.core.serializers import IdField, QuestionFieldsSerializer
-from apps.question_bank.models import BankCategory, Question
+from apps.question_bank.models import BankCategory, GriStandard, Question
 
 
 class BankCategorySerializer(serializers.ModelSerializer):
@@ -40,3 +40,32 @@ class BankQuestionSerializer(QuestionFieldsSerializer):
     class Meta:
         model = Question
         fields = ["id", "text", "type", "options", "hint", "required", "category", "category_id"]
+
+
+class GriQuestionSerializer(serializers.ModelSerializer):
+    ref = serializers.CharField(source="gri_ref", read_only=True)
+
+    class Meta:
+        model = Question
+        fields = ["id", "ref", "text", "type", "hint", "required"]
+        read_only_fields = fields
+
+
+class GriStandardSerializer(serializers.ModelSerializer):
+    question_count = serializers.IntegerField(read_only=True, default=0)
+
+    class Meta:
+        model = GriStandard
+        fields = ["id", "slug", "code", "number", "title", "edition", "series", "summary", "pdf", "question_count"]
+        read_only_fields = fields
+
+
+class GriStandardDetailSerializer(GriStandardSerializer):
+    questions = serializers.SerializerMethodField()
+
+    class Meta(GriStandardSerializer.Meta):
+        fields = [*GriStandardSerializer.Meta.fields, "questions"]
+        read_only_fields = fields
+
+    def get_questions(self, standard):
+        return GriQuestionSerializer(standard.questions.order_by("gri_order"), many=True).data

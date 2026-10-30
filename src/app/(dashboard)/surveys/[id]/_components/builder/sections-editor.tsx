@@ -1,12 +1,14 @@
 "use client";
 
 import { ArrowDown, ArrowUp, GripVertical, Pencil, Plus, Trash2 } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 import { toast } from "sonner";
 import { Avatar } from "@/components/shared/avatar";
 import { PersonSelect } from "@/components/shared/person-select";
 import { FormDialog } from "@/components/shared/form-dialog";
 import { IconButton } from "@/components/shared/icon-button";
+import { FileText } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
@@ -24,9 +26,16 @@ import {
   useDeleteSection,
   useMoveQuestion,
   useMoveSection,
+  useAssignSection,
   useUpdateSection,
 } from "../../_hooks/use-survey-builder";
 import { QuestionDialog, type QuestionTarget } from "./question-dialog";
+
+/** The one person a whole section is assigned to, or "" when it isn't (or isn't all one person). */
+const commonResponder = (section: SurveySection) => {
+  const first = section.questions[0]?.responder?.id ?? "";
+  return first && section.questions.every((q) => q.responder?.id === first) ? first : "";
+};
 
 interface SectionDraft {
   id?: string;
@@ -43,6 +52,7 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
   const moveQuestion = useMoveQuestion(survey.id);
   const deleteQuestion = useDeleteQuestion(survey.id);
   const assign = useAssignQuestions(survey.id);
+  const assignSection = useAssignSection(survey.id);
 
   const [sectionForm, setSectionForm] = useState<SectionDraft | null>(null);
   const [questionTarget, setQuestionTarget] = useState<QuestionTarget | null>(null);
@@ -113,48 +123,88 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
               )}
               <GripVertical className="h-4 w-4 shrink-0 text-ink-faint" />
               <div className="min-w-0">
-                <CardTitle>{section.title}</CardTitle>
-                {section.description && <p className="mt-0.5 text-xs text-ink-muted">{section.description}</p>}
+                <CardTitle className="flex items-center gap-2">
+                  {section.title}
+                  {section.gri && <Badge tone="brand">GRI</Badge>}
+                </CardTitle>
+                {section.description && <p className="mt-0.5 line-clamp-2 text-xs text-ink-muted">{section.description}</p>}
               </div>
             </div>
             <div className="flex shrink-0 items-center">
-              <Button variant="ghost" size="sm" onClick={() => setQuestionTarget({ sectionId: section.id })}>
-                <Plus className="h-4 w-4" /> Question
-              </Button>
+              {section.gri ? (
+                <>
+                  <a href={section.gri.pdf} target="_blank" rel="noreferrer" className="mr-1 inline-flex items-center gap-1 text-xs text-brand-strong hover:underline">
+                    <FileText className="h-3.5 w-3.5" /> PDF
+                  </a>
+                  <div className="mr-1 w-52">
+                    <PersonSelect
+                      value={commonResponder(section)}
+                      placeholder="Assign whole section…"
+                      disabledIds={handlers}
+                      onChange={(id) =>
+                        assignSection.mutate(
+                          { sectionId: section.id, responder_id: id || null },
+                          { onSuccess: () => toast.success(id ? "Section assigned" : "Section unassigned"), onError: fail },
+                        )
+                      }
+                    />
+                  </div>
+                </>
+              ) : (
+                <Button asChild variant="ghost" size="sm">
+                  <Link href={`/surveys/${survey.id}/add-question?section=${section.id}`}>
+                    <Plus className="h-4 w-4" /> Question
+                  </Link>
+                </Button>
+              )}
               <IconButton label="Move section up" disabled={si === 0} onClick={() => moveSection.mutate({ id: section.id, direction: "up" }, { onError: fail })}>
                 <ArrowUp className="h-4 w-4" />
               </IconButton>
               <IconButton label="Move section down" disabled={si === lastSection} onClick={() => moveSection.mutate({ id: section.id, direction: "down" }, { onError: fail })}>
                 <ArrowDown className="h-4 w-4" />
               </IconButton>
-              <IconButton label="Edit section" onClick={() => setSectionForm({ id: section.id, title: section.title, description: section.description })}>
-                <Pencil className="h-4 w-4" />
-              </IconButton>
+              {!section.gri && (
+                <IconButton label="Edit section" onClick={() => setSectionForm({ id: section.id, title: section.title, description: section.description })}>
+                  <Pencil className="h-4 w-4" />
+                </IconButton>
+              )}
               <IconButton label="Delete section" disabled={survey.sections.length <= 1} onClick={() => setSectionToDelete(section)}>
                 <Trash2 className="h-4 w-4" />
               </IconButton>
             </div>
           </CardHeader>
+          {section.gri && (
+            <p className="flex items-center gap-1.5 border-b border-line px-5 py-2 text-xs">
+              <span className="text-ink-muted">Respondent for the whole section</span>
+              {section.questions[0]?.responder && commonResponder(section) ? (
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-paper-sunken py-0.5 pl-0.5 pr-2 font-medium text-ink">
+                  <Avatar name={section.questions[0].responder.full_name} className="h-5 w-5 text-2xs" /> {section.questions[0].responder.full_name}
+                </span>
+              ) : (
+                <span className="font-medium text-rust">Not assigned</span>
+              )}
+            </p>
+          )}
           {section.questions.length === 0 ? (
             <p className="px-5 py-6 text-sm text-ink-faint">No questions in this section yet.</p>
           ) : (
             <ul>
               {section.questions.map((q, qi) => (
                 <li key={q.id} className={`flex items-center justify-between gap-4 border-b border-line px-5 py-3 last:border-b-0 ${picked.has(q.id) ? "bg-brand-soft/40" : ""}`}>
-                  <Checkbox aria-label={`Select question ${qi + 1}`} checked={picked.has(q.id)} onCheckedChange={(v) => toggle([q.id], v === true)} />
+                  {!section.gri && <Checkbox aria-label={`Select question ${qi + 1}`} checked={picked.has(q.id)} onCheckedChange={(v) => toggle([q.id], v === true)} />}
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-sm text-ink">
                       {q.text} {q.required && <span className="text-rust">*</span>}
                     </p>
                     <p className="mt-0.5 flex flex-wrap items-center gap-2 text-xs text-ink-faint">
-                      <span className="font-mono-data">Q{qi + 1}</span>
+                      <span className="font-mono-data">{section.gri ? (q.gri_ref === "mgmt" ? "Management" : q.gri_ref) : `Q${qi + 1}`}</span>
                       <span>·</span>
                       <span>{questionTypeLabel(q.type)}</span>
-                      {q.bank_question_id && <Badge tone="brand">From bank</Badge>}
+                      {q.bank_question_id && !section.gri && <Badge tone="brand">From bank</Badge>}
                       {q.options.length > 0 && <span className="truncate">· {q.options.join(", ")}</span>}
                     </p>
                     {q.hint && <p className="mt-1 text-xs italic text-ink-muted">{q.hint}</p>}
-                    <p className="mt-1.5 flex items-center gap-1.5 text-xs">
+                    {!section.gri && <p className="mt-1.5 flex items-center gap-1.5 text-xs">
                       <span className="text-ink-muted">Respondent</span>
                       {q.responder ? (
                         <span className="inline-flex items-center gap-1.5 rounded-full bg-paper-sunken py-0.5 pl-0.5 pr-2 font-medium text-ink">
@@ -163,9 +213,9 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
                       ) : (
                         <span className="font-medium text-rust">Not assigned</span>
                       )}
-                    </p>
+                    </p>}
                   </div>
-                  <div className="flex shrink-0 items-center gap-1">
+                  {!section.gri && <div className="flex shrink-0 items-center gap-1">
                     <IconButton label="Move question up" disabled={qi === 0} onClick={() => moveQuestion.mutate({ sectionId: section.id, id: q.id, direction: "up" }, { onError: fail })}>
                       <ArrowUp className="h-4 w-4" />
                     </IconButton>
@@ -178,7 +228,7 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
                     <IconButton label="Delete question" onClick={() => deleteQuestion.mutate({ sectionId: section.id, id: q.id }, { onError: fail })}>
                       <Trash2 className="h-4 w-4" />
                     </IconButton>
-                  </div>
+                  </div>}
                 </li>
               ))}
             </ul>

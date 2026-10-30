@@ -1,4 +1,5 @@
 import django_filters
+from django.contrib.auth import get_user_model
 from django.db.models import Count, Max, Q
 from django.utils import timezone
 from django.shortcuts import get_object_or_404
@@ -9,7 +10,7 @@ from rest_framework.response import Response
 from apps.core.exceptions import ApiError
 from apps.core.permissions import IsAdminOrReadOnly, IsTenantAdmin, IsTenantMember, member_for
 from apps.core.viewset_mixins import TenantScopedMixin
-from apps.question_bank.models import Question as BankQuestion
+from apps.question_bank.models import GriStandard, Question as BankQuestion
 from apps.surveys import services
 from apps.surveys.models import Section, Survey, SurveyCategory, SurveyQuestion
 from apps.surveys.scoping import scope_surveys, waiting_on
@@ -239,6 +240,24 @@ class SurveySectionViewSet(viewsets.ModelViewSet):
 
     def perform_destroy(self, section):
         services.delete_section(section)
+
+    @action(detail=False, methods=["post"], url_path="from-gri")
+    def from_gri(self, request, **kwargs):
+        """Add a whole GRI Standard as a section."""
+        survey = get_object_or_404(Survey, pk=self.kwargs["survey_pk"])
+        standard = get_object_or_404(GriStandard, pk=request.data.get("gri_standard_id"))
+        section = services.add_gri_section(survey, standard)
+        return Response(self.get_serializer(section).data, status=status.HTTP_201_CREATED)
+
+    @action(detail=True, methods=["post"])
+    def assign(self, request, **kwargs):
+        """Give the whole section to one respondent."""
+        section = self.get_object()
+        person = None
+        if request.data.get("responder_id"):
+            person = get_object_or_404(get_user_model(), pk=request.data["responder_id"])
+        services.assign_section(section, person)
+        return Response(self.get_serializer(self.get_object()).data)
 
     @action(detail=True, methods=["post"])
     def move(self, request, **kwargs):

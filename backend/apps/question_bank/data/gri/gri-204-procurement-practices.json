@@ -1,0 +1,17 @@
+{
+ "summary": "GRI 204 covers procurement practices, including an organization's support for local suppliers or those owned by women or members of vulnerable groups. It also covers how procurement practices cause or contribute to negative impacts in the supply chain.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does the organization manage procurement practices as a material topic (GRI 3-3)?",
+   "type": "text",
+   "hint": "Describe how the organization manages the topic and its related impacts, as required by Disclosure 3-3 in GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "204-1",
+   "text": "What proportion of spending at significant locations of operation goes to local suppliers?",
+   "type": "number",
+   "hint": "a. Percentage of the procurement budget for significant locations spent on local suppliers. b. Geographical definition of 'local'. c. Definition of 'significant locations of operation'."
+  }
+ ]
+}

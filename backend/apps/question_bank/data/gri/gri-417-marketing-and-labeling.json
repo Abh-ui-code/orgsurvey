@@ -1,0 +1,29 @@
+{
+ "summary": "GRI 417 covers product and service information and labeling and marketing communications, including customer access to accurate and adequate information on the impacts of products and services. Fair marketing and information on composition, use and disposal help customers make informed choices.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does your organization manage the topic of marketing and labeling, including its impacts, policies, actions and tracking of effectiveness?",
+   "type": "text",
+   "hint": "Report how the organization manages this material topic using Disclosure 3-3 in GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "417-1",
+   "text": "Which types of product and service information and labeling are required by your procedures, and what percentage of significant product or service categories are covered and assessed for compliance?",
+   "type": "text",
+   "hint": "a. Whether required by procedures: i. sourcing of components; ii. content, esp. substances with environmental or social impact; iii. safe use; iv. disposal and impacts; v. other (explain). b. Percentage of significant product or service categories covered by and assessed for compliance with such procedures."
+  },
+  {
+   "ref": "417-2",
+   "text": "How many incidents of non-compliance concerning product and service information and labeling occurred?",
+   "type": "text",
+   "hint": "a. Total number of incidents of non-compliance with regulations and/or voluntary codes, by: i. regulations resulting in a fine or penalty; ii. regulations resulting in a warning; iii. voluntary codes. b. If none identified, a brief statement of this fact is sufficient."
+  },
+  {
+   "ref": "417-3",
+   "text": "How many incidents of non-compliance concerning marketing communications, including advertising, promotion and sponsorship, occurred?",
+   "type": "text",
+   "hint": "a. Total number of incidents of non-compliance with regulations and/or voluntary codes, by: i. regulations resulting in a fine or penalty; ii. regulations resulting in a warning; iii. voluntary codes. b. If none identified, a brief statement of this fact is sufficient."
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "summary": "GRI 305: Emissions 2016 contains disclosures for reporting an organization's emissions-related impacts and how it manages them. It addresses emissions into the air, including greenhouse gases, ozone-depleting substances, nitrogen oxides, sulfur oxides and other significant air emissions.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does your organization manage its emissions-related impacts?",
+   "type": "text",
+   "hint": "Report how you manage this material topic using Disclosure 3-3 of GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "305-1",
+   "text": "What were your gross direct (Scope 1) GHG emissions?",
+   "type": "text",
+   "hint": "a. Gross Scope 1 emissions in metric tons CO2e. b. Gases included. c. Biogenic CO2 emissions. d. Base year, rationale, base year emissions, recalculation context. e. Emission factor and GWP source. f. Consolidation approach. g. Standards, methodologies, tools."
+  },
+  {
+   "ref": "305-2",
+   "text": "What were your gross energy indirect (Scope 2) GHG emissions?",
+   "type": "text",
+   "hint": "a. Gross location-based Scope 2 emissions in metric tons CO2e. b. Market-based emissions, if applicable. c. Gases included. d. Base year details. e. Emission factor and GWP source. f. Consolidation approach. g. Standards, methodologies, tools."
+  },
+  {
+   "ref": "305-3",
+   "text": "What were your gross other indirect (Scope 3) GHG emissions?",
+   "type": "text",
+   "hint": "a. Gross Scope 3 emissions in metric tons CO2e. b. Gases included. c. Biogenic CO2 emissions. d. Scope 3 categories and activities included. e. Base year details. f. Emission factor and GWP source. g. Standards, methodologies, tools."
+  },
+  {
+   "ref": "305-4",
+   "text": "What is your GHG emissions intensity?",
+   "type": "text",
+   "hint": "a. GHG emissions intensity ratio. b. Organization-specific metric (denominator) chosen. c. Types of emissions included (Scope 1, 2 and/or 3). d. Gases included."
+  },
+  {
+   "ref": "305-5",
+   "text": "What reductions in GHG emissions did you achieve?",
+   "type": "text",
+   "hint": "a. GHG emissions reduced as a direct result of reduction initiatives, in metric tons CO2e. b. Gases included. c. Base year or baseline and rationale. d. Scopes in which reductions took place. e. Standards, methodologies, assumptions, tools."
+  },
+  {
+   "ref": "305-6",
+   "text": "What were your production, imports and exports of ozone-depleting substances (ODS)?",
+   "type": "text",
+   "hint": "a. Production, imports and exports of ODS in metric tons of CFC-11 equivalent. b. Substances included. c. Source of emission factors. d. Standards, methodologies, assumptions, tools."
+  },
+  {
+   "ref": "305-7",
+   "text": "What were your emissions of nitrogen oxides (NOx), sulfur oxides (SOx) and other significant air emissions?",
+   "type": "text",
+   "hint": "a. Significant air emissions in kg or multiples for: NOx, SOx, POP, VOC, HAP, particulate matter, other categories in regulations. b. Source of emission factors. c. Standards, methodologies, assumptions, tools."
+  }
+ ]
+}

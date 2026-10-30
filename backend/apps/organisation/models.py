@@ -43,6 +43,8 @@ class Member(BaseModel):
     )
     role = models.CharField(max_length=10, choices=ROLES, default="member")
     unit = models.ForeignKey(OrgUnit, null=True, blank=True, on_delete=models.SET_NULL, related_name="members")
+    # Further blocks this person also belongs to (`unit` stays their home block).
+    also_in = models.ManyToManyField(OrgUnit, blank=True, related_name="associate_members")
     title = models.CharField(max_length=255, blank=True)
     is_active = models.BooleanField(default=True)
 

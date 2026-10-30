@@ -1,0 +1,23 @@
+{
+ "summary": "GRI 202 covers an organization's market presence, meaning its contribution to economic development in the local areas or communities where it operates. This can include approaches to remuneration or local hiring.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does the organization manage market presence as a material topic (GRI 3-3)?",
+   "type": "text",
+   "hint": "Describe how the organization manages the topic and its related impacts, as required by Disclosure 3-3 in GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "202-1",
+   "text": "What are the ratios of standard entry level wage by gender compared to the local minimum wage?",
+   "type": "text",
+   "hint": "a. Ratio of entry level wage by gender to minimum wage at significant locations, where a significant proportion of employees are on minimum-wage-based pay. b. Actions to check other workers are paid above minimum wage. c. Whether a local minimum wage is absent or variable, by gender, and which is used. d. Definition of 'significant locations of operation'."
+  },
+  {
+   "ref": "202-2",
+   "text": "What proportion of senior management is hired from the local community?",
+   "type": "number",
+   "hint": "a. Percentage of senior management at significant locations hired from the local community. b. Definition of 'senior management'. c. Geographical definition of 'local'. d. Definition of 'significant locations of operation'."
+  }
+ ]
+}

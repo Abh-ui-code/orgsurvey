@@ -1,0 +1,17 @@
+{
+ "summary": "GRI 407 addresses freedom of association and collective bargaining, both internationally recognized human rights of workers and employers. It contains one disclosure on operations and suppliers where these rights may be at risk and measures taken to support them.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "Describe how the organization manages this material topic and its related impacts, as required by Disclosure 3-3 in GRI 3 (Material Topics 2021).",
+   "type": "text",
+   "hint": "Per GRI 3-3: the actual and potential impacts, policy commitments, actions taken, tracking of effectiveness and stakeholder engagement for the topic."
+  },
+  {
+   "ref": "407-1",
+   "text": "Identify operations and suppliers in which workers' rights to freedom of association or collective bargaining may be violated or at significant risk, and the measures taken to support these rights.",
+   "type": "text",
+   "hint": "a. Operations and suppliers at risk, by type of operation and supplier, and by countries or geographic areas. b. Measures taken in the reporting period to support the rights to freedom of association and collective bargaining."
+  }
+ ]
+}

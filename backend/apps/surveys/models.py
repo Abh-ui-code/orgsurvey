@@ -77,6 +77,10 @@ class Section(BaseModel):
     order = models.PositiveIntegerField(default=0)
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
+    # A whole GRI Standard added as a section: its questions are fixed and it is assigned to one respondent.
+    gri_standard = models.ForeignKey(
+        "question_bank.GriStandard", null=True, blank=True, on_delete=models.SET_NULL, related_name="+"
+    )
 
     class Meta:
         app_label = "surveys"

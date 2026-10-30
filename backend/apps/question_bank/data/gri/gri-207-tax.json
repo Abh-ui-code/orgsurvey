@@ -1,0 +1,35 @@
+{
+ "summary": "GRI 207 covers tax, an important source of government revenue and a key way organizations contribute to the economies where they operate. It sets out disclosures on approach to tax, tax governance, stakeholder engagement and country-by-country reporting.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does the organization manage tax as a material topic (GRI 3-3)?",
+   "type": "text",
+   "hint": "Describe how the organization manages the topic and its related impacts, as required by Disclosure 3-3 in GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "207-1",
+   "text": "What is the organization's approach to tax?",
+   "type": "text",
+   "hint": "a. Description of the approach to tax: i. whether there is a tax strategy and a link if public; ii. governance body or executive position that approves it and review frequency; iii. approach to regulatory compliance; iv. link to business and sustainable development strategies."
+  },
+  {
+   "ref": "207-2",
+   "text": "How are tax governance, control and risk management handled?",
+   "type": "text",
+   "hint": "a. Tax governance and control framework: i. body or position accountable for compliance; ii. how approach to tax is embedded; iii. approach to tax risks; iv. how compliance is evaluated. b. Mechanisms to raise concerns about tax conduct and integrity. c. Assurance process for tax disclosures, with a link to any external assurance report."
+  },
+  {
+   "ref": "207-3",
+   "text": "How does the organization engage stakeholders and manage their concerns related to tax?",
+   "type": "text",
+   "hint": "a. Approach to stakeholder engagement and management of tax concerns: i. engagement with tax authorities; ii. public policy advocacy on tax; iii. processes for collecting and considering stakeholder views and concerns, including external stakeholders."
+  },
+  {
+   "ref": "207-4",
+   "text": "What country-by-country tax and financial information does the organization report?",
+   "type": "text",
+   "hint": "a. All tax jurisdictions where entities are resident for tax purposes. b. For each: resident entity names, primary activities, employees, third-party and intra-group revenues, profit/loss before tax, tangible assets, corporate income tax paid and accrued, reasons for difference from the statutory rate. c. Time period covered."
+  }
+ ]
+}

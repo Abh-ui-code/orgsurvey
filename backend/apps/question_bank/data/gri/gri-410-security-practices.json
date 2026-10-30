@@ -1,0 +1,17 @@
+{
+ "summary": "GRI 410 addresses security practices, focusing on the conduct of security personnel towards third parties and the risk of excessive use of force or other human rights violations. Security personnel can be employees or staff of third-party providers. It contains one disclosure on training.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "Describe how the organization manages this material topic and its related impacts, as required by Disclosure 3-3 in GRI 3 (Material Topics 2021).",
+   "type": "text",
+   "hint": "Per GRI 3-3: the actual and potential impacts, policy commitments, actions taken, tracking of effectiveness and stakeholder engagement for the topic."
+  },
+  {
+   "ref": "410-1",
+   "text": "What percentage of security personnel have received formal training in the organization's human rights policies or procedures, and do training requirements also apply to third-party security providers?",
+   "type": "text",
+   "hint": "a. Percentage of security personnel with formal training in human rights policies or specific procedures and their application to security. b. Whether training requirements also apply to third-party organizations providing security personnel."
+  }
+ ]
+}

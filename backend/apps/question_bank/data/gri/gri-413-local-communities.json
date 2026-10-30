@@ -1,0 +1,23 @@
+{
+ "summary": "GRI 413 covers an organization's impacts on local communities, meaning people living or working in areas affected or potentially affected by its activities, and how it manages them. It includes community engagement, impact assessments and development programs.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does your organization manage the topic of local communities, including its impacts, policies, actions and tracking of effectiveness?",
+   "type": "text",
+   "hint": "Report how the organization manages this material topic using Disclosure 3-3 in GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "413-1",
+   "text": "What percentage of your operations have implemented local community engagement, impact assessments, and/or development programs?",
+   "type": "number",
+   "hint": "a. Percentage of operations with engagement, impact assessments and/or development programs, incl.: i. social impact assessments (incl. gender), participatory; ii. environmental assessments and monitoring; iii. public disclosure of results; iv. development programs; v. stakeholder engagement plans; vi. consultation committees incl. vulnerable groups; vii. works councils/OHS committees; viii. grievance processes."
+  },
+  {
+   "ref": "413-2",
+   "text": "Which of your operations have significant actual and potential negative impacts on local communities, where are they located, and what are those impacts?",
+   "type": "text",
+   "hint": "a. Operations with significant actual and potential negative impacts on local communities, including: i. the location of the operations; ii. the significant actual and potential negative impacts of the operations."
+  }
+ ]
+}

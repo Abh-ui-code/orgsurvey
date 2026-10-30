@@ -46,3 +46,12 @@ export const useMoveQuestion = (surveyId: string) =>
   useBuilderMutation(({ sectionId, id, direction }: { sectionId: string; id: string; direction: Direction }) =>
     api.post(`${questionsUrl(surveyId, sectionId)}/${id}/move/`, { direction }),
   );
+
+/** Add a whole GRI standard as a section (all of its questions come with it). */
+export const useAddGriSection = (surveyId: string) =>
+  useBuilderMutation((gri_standard_id: string) => api.post<SurveySection>(`${sectionsUrl(surveyId)}/from-gri/`, { gri_standard_id }));
+/** Give a whole section to one respondent. */
+export const useAssignSection = (surveyId: string) =>
+  useBuilderMutation(({ sectionId, responder_id }: { sectionId: string; responder_id: string | null }) =>
+    api.post<SurveySection>(`${sectionsUrl(surveyId)}/${sectionId}/assign/`, { responder_id }),
+  );

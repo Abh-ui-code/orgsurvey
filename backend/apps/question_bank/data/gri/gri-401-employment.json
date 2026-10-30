@@ -1,0 +1,29 @@
+{
+ "summary": "GRI 401 covers an organization's employment-related impacts and how it manages them. It addresses hiring, recruitment, retention and the working conditions it provides, including in its supply chain, with disclosures on hires and turnover, benefits and parental leave.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "Describe how the organization manages this material topic and its related impacts, as required by Disclosure 3-3 in GRI 3 (Material Topics 2021).",
+   "type": "text",
+   "hint": "Per GRI 3-3: the actual and potential impacts, policy commitments, actions taken, tracking of effectiveness and stakeholder engagement for the topic. GRI 401 recommends describing policies on work relationships and supply chain employment issues."
+  },
+  {
+   "ref": "401-1",
+   "text": "Report the total number and rate of new employee hires and of employee turnover during the reporting period, by age group, gender and region.",
+   "type": "text",
+   "hint": "a. Total number and rate of new employee hires, by age group, gender and region. b. Total number and rate of employee turnover, by age group, gender and region."
+  },
+  {
+   "ref": "401-2",
+   "text": "Which benefits are standard for full-time employees but not provided to temporary or part-time employees, by significant location of operation, and how do you define 'significant locations of operation'?",
+   "type": "text",
+   "hint": "a. Benefits for full-time but not temporary/part-time employees by significant location (life insurance, health care, disability and invalidity coverage, parental leave, retirement provision, stock ownership, others). b. Definition of significant locations of operation."
+  },
+  {
+   "ref": "401-3",
+   "text": "Report parental leave figures for the reporting period by gender: employees entitled, employees who took leave, employees who returned to work, employees still employed 12 months after return, and the return to work and retention rates.",
+   "type": "text",
+   "hint": "a. Employees entitled to parental leave, by gender. b. Employees who took it. c. Employees who returned to work after leave. d. Employees still employed 12 months after return. e. Return to work and retention rates."
+  }
+ ]
+}

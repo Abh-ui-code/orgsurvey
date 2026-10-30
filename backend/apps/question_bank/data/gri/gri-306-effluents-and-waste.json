@@ -1,0 +1,35 @@
+{
+ "summary": "GRI 306: Effluents and Waste 2016 addresses water discharges, the generation, treatment and disposal of waste, and spills of chemicals, oils, fuels and other substances. It was superseded by GRI 306: Waste 2020 and GRI 303: Water and Effluents 2018 (only Disclosure 306-3 remains in effect).",
+ "questions": [
+  {
+   "ref": "306-1",
+   "text": "What was the total volume of your planned and unplanned water discharges, by destination and quality?",
+   "type": "text",
+   "hint": "Superseded by GRI 303 (2018). a. Total volume of planned and unplanned discharges by: i. destination; ii. quality, including treatment method; iii. whether reused by another organization. b. Standards, methodologies, assumptions."
+  },
+  {
+   "ref": "306-2",
+   "text": "What was the total weight of your hazardous and non-hazardous waste, by disposal method?",
+   "type": "text",
+   "hint": "Superseded by GRI 306 (2020). a. Hazardous waste weight by disposal method. b. Non-hazardous waste weight by disposal method (reuse, recycling, composting, recovery, incineration, deep well injection, landfill, on-site storage, other). c. How the disposal method was determined."
+  },
+  {
+   "ref": "306-3",
+   "text": "How many significant spills did you record, and what was their total volume and impact?",
+   "type": "text",
+   "hint": "a. Total number and total volume of recorded significant spills. b. For each spill in financial statements: location, volume, material (oil, fuel, waste, chemical, other). c. Impacts of significant spills."
+  },
+  {
+   "ref": "306-4",
+   "text": "What weight of hazardous waste did you transport, import, export or treat?",
+   "type": "text",
+   "hint": "Superseded by GRI 306 (2020). a. Weight of hazardous waste transported, imported, exported, treated. b. Percentage shipped internationally. c. Standards, methodologies, assumptions."
+  },
+  {
+   "ref": "306-5",
+   "text": "Which water bodies and related habitats are significantly affected by your water discharges and/or runoff?",
+   "type": "text",
+   "hint": "Superseded by GRI 303 (2018). a. Affected water bodies and habitats, including: i. size; ii. whether designated a protected area; iii. biodiversity value, such as number of protected species."
+  }
+ ]
+}

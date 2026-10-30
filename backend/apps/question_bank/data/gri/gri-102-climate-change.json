@@ -1,0 +1,65 @@
+{
+ "summary": "GRI 102 addresses climate change and organizations' responsibility to contribute to mitigation and adaptation. It covers transition and adaptation plans, just transition, GHG emissions targets, Scope 1, 2 and 3 emissions, intensity, removals and carbon credits.",
+ "questions": [
+  {
+   "ref": "102-1",
+   "text": "What is your transition plan for climate change mitigation?",
+   "type": "text",
+   "hint": "a. Plan, policies and actions; b. alignment with 1.5 C science, scenarios, methods; c. expenditure (amount and % of total); d. governance responsibility; e. embedding in strategy; f. targets (GHG, fossil fuel phase-out, other) and progress; g. just transition alignment and stakeholder engagement; h. impacts on people, environment and biodiversity; i. consistency of lobbying; j. if no plan, why and timeline."
+  },
+  {
+   "ref": "102-2",
+   "text": "What is your climate change adaptation plan?",
+   "type": "text",
+   "hint": "a. Impacts on people and environment from climate risks and opportunities; b. plan: policies and actions, scenarios and temperature projection, expenditure, governance, targets and progress, just transition alignment; c. impacts of implementing the plan on workers, communities, Indigenous Peoples and biodiversity; d. if no plan, why and timeline."
+  },
+  {
+   "ref": "102-3",
+   "text": "What are the workforce and community effects of your transition or adaptation efforts (just transition)?",
+   "type": "text",
+   "hint": "Numbers, by gender and employee type, of: a. new employees; b. terminated; c. redeployed; d. trained for up/re-skilling. e-f. Non-employee workers recruited and terminated by gender; g. new hires paid at/above cost-of-living and gap actions; h-i. locations affecting communities/Indigenous Peoples and % with agreements; j. methodologies."
+  },
+  {
+   "ref": "102-4",
+   "text": "What are your GHG emissions reduction targets and your progress toward them?",
+   "type": "text",
+   "hint": "a. Short-, medium-, long-term gross Scope 1, 2, 3 targets in tCO2e and % of base year; b. biogenic CO2 included; c. location- or market-based; d. Scope 3 categories; e. gases; f. alignment with 1.5 C; g. revision policy; h. base year details; i. progress; j. reductions due to initiatives or other factors; k. standards and tools."
+  },
+  {
+   "ref": "102-5",
+   "text": "What are your gross Scope 1 GHG emissions?",
+   "type": "text",
+   "hint": "a. Gross Scope 1 in tCO2e (gases included, GWP 100-year, excluding removals and trades); b. breakdown by gas; c. biogenic CO2 separately; d. base year, rationale, recalculations; e. consolidation approach; f. standards, methodologies, tools, emission factor sources."
+  },
+  {
+   "ref": "102-6",
+   "text": "What are your gross Scope 2 GHG emissions?",
+   "type": "text",
+   "hint": "a. Gross location-based and, if applicable, market-based Scope 2 in tCO2e; b. breakdown by CO2, CH4, N2O; c. biogenic CO2 separately; d. base year, rationale, recalculations; e. consolidation approach; f. standards, methodologies, tools, emission factor sources."
+  },
+  {
+   "ref": "102-7",
+   "text": "What are your gross Scope 3 GHG emissions?",
+   "type": "text",
+   "hint": "a. Gross Scope 3 in tCO2e including each category and gases, GWP 100-year; b. breakdown by the 15 Scope 3 categories; c. biogenic CO2 separately, by category; d. base year, rationale, recalculations; e. consolidation approach; f. standards, methodologies, tools, emission factor sources."
+  },
+  {
+   "ref": "102-8",
+   "text": "What is your GHG emissions intensity?",
+   "type": "text",
+   "hint": "a. Intensity ratio(s): gross GHG emissions in tCO2e (numerator) and the organization-specific metric (denominator); b. scope(s) included: Scope 1, 2 or 3."
+  },
+  {
+   "ref": "102-9",
+   "text": "What are your Scope 1 GHG removals and how are they managed?",
+   "type": "text",
+   "hint": "a. Total Scope 1 removals in tCO2e, excluding trades, by storage pool; b. how quality criteria are monitored for non-permanence risk; c. intended use; d. impacts on people, environment and biodiversity and actions to manage them; e. standards, methodologies, assumptions, tools."
+  },
+  {
+   "ref": "102-10",
+   "text": "How many carbon credits did you cancel, and how do the projects meet quality criteria?",
+   "type": "text",
+   "hint": "a. Total credits canceled in tCO2e by project; b. per project: name/ID, type, serial number, date, vintage, host country, registry; c. adherence to quality criteria (additionality, baselines, permanence, leakage, unique claiming, monitoring, verification, governance); d. purpose; e. impacts on people and environment and monitoring."
+  }
+ ]
+}

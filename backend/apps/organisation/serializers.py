@@ -63,11 +63,26 @@ class MemberSerializer(serializers.ModelSerializer):
     unit_id = IdField(
         source="unit", queryset=OrgUnit.objects.all(), allow_null=True, required=False, write_only=True
     )
+    also_in_ids = IdField(
+        source="also_in", queryset=OrgUnit.objects.all(), many=True, required=False, write_only=True
+    )
+    units = serializers.SerializerMethodField()
     password = serializers.CharField(write_only=True, required=False, allow_blank=True, trim_whitespace=False)
 
     class Meta:
         model = Member
-        fields = ["id", "full_name", "email", "role", "title", "unit", "unit_id", "is_active", "password"]
+        fields = [
+            "id", "full_name", "email", "role", "title", "unit", "unit_id", "also_in_ids", "units", "is_active", "password",
+        ]
+
+    def get_units(self, member):
+        """Every block this person is in: their home block first, then the others."""
+        blocks = ([member.unit] if member.unit_id else []) + [u for u in member.also_in.all() if u.pk != member.unit_id]
+        return UnitRefSerializer(blocks, many=True).data
+
+    @staticmethod
+    def _set_also_in(member, blocks):
+        member.also_in.set([b for b in blocks if b.pk != member.unit_id])
 
     def validate_email(self, value):
         return value.strip().lower()
@@ -96,7 +111,10 @@ class MemberSerializer(serializers.ModelSerializer):
         UserTenantMembership.objects.update_or_create(
             user=user, tenant=current_tenant(self.context["request"]), defaults={"is_active": True}
         )
-        return Member.objects.create(user=user, **validated)
+        also_in = validated.pop("also_in", [])
+        member = Member.objects.create(user=user, **validated)
+        self._set_also_in(member, also_in)
+        return member
 
     @transaction.atomic
     def update(self, member, validated):
@@ -121,9 +139,13 @@ class MemberSerializer(serializers.ModelSerializer):
             user.set_password(password)
         user.save()
 
+        also_in = validated.pop("also_in", None)
         for attr, value in validated.items():
             setattr(member, attr, value)
         member.save()
+        # The home block never doubles as an extra one, so re-set when either changes.
+        if also_in is not None or "unit" in validated:
+            self._set_also_in(member, also_in if also_in is not None else list(member.also_in.all()))
         UserTenantMembership.objects.filter(user=user, tenant=current_tenant(self.context["request"])).update(
             is_active=member.is_active
         )

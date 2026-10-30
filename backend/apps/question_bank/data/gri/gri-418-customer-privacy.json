@@ -1,0 +1,17 @@
+{
+ "summary": "GRI 418 covers customer privacy, including losses of customer data and breaches of customer privacy. These can result from non-compliance with laws, regulations and/or voluntary standards on the protection of customer privacy.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does your organization manage the topic of customer privacy, including its impacts, policies, actions and tracking of effectiveness?",
+   "type": "text",
+   "hint": "Report how the organization manages this material topic using Disclosure 3-3 in GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "418-1",
+   "text": "How many substantiated complaints concerning breaches of customer privacy and losses of customer data did your organization receive?",
+   "type": "text",
+   "hint": "a. Total number of substantiated complaints concerning breaches of customer privacy, by: i. complaints from outside parties substantiated by the organization; ii. complaints from regulatory bodies. b. Total number of identified leaks, thefts, or losses of customer data. c. If none, a brief statement is sufficient."
+  }
+ ]
+}

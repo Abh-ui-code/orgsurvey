@@ -4,8 +4,13 @@ from rest_framework import viewsets
 from apps.core.exceptions import ApiError
 from apps.core.permissions import IsAdminOrReadOnly
 from apps.core.viewset_mixins import TenantScopedMixin
-from apps.question_bank.models import BankCategory, Question
-from apps.question_bank.serializers import BankCategorySerializer, BankQuestionSerializer
+from apps.question_bank.models import BankCategory, GriStandard, Question
+from apps.question_bank.serializers import (
+    BankCategorySerializer,
+    BankQuestionSerializer,
+    GriStandardDetailSerializer,
+    GriStandardSerializer,
+)
 
 
 class BankCategoryViewSet(viewsets.ModelViewSet):
@@ -14,7 +19,11 @@ class BankCategoryViewSet(viewsets.ModelViewSet):
     pagination_class = None
 
     def get_queryset(self):
-        return BankCategory.objects.annotate(question_count=Count("questions")).order_by("display_order", "label")
+        return (
+            BankCategory.objects.filter(is_system=False)
+            .annotate(question_count=Count("questions"))
+            .order_by("display_order", "label")
+        )
 
     def perform_destroy(self, category):
         if category.questions.exists():
@@ -31,4 +40,18 @@ class BankQuestionViewSet(TenantScopedMixin, viewsets.ModelViewSet):
     ordering = ["created_at"]
 
     def get_queryset(self):
-        return Question.objects.select_related("category")
+        # GRI questions belong to their standard and are only ever added as a whole section.
+        return Question.objects.select_related("category").filter(gri_standard__isnull=True)
+
+
+class GriStandardViewSet(viewsets.ReadOnlyModelViewSet):
+    """The GRI Standards: a summary, the PDF and the questions in it."""
+
+    pagination_class = None
+    filterset_fields = ["series"]
+
+    def get_serializer_class(self):
+        return GriStandardDetailSerializer if self.action == "retrieve" else GriStandardSerializer
+
+    def get_queryset(self):
+        return GriStandard.objects.annotate(question_count=Count("questions")).order_by("display_order", "code")

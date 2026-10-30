@@ -1,0 +1,35 @@
+{
+ "summary": "GRI 201 covers the organization's economic performance and how it manages related impacts. It addresses economic value generated and distributed, defined benefit plan obligations, government financial assistance, and the financial implications of climate change.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does the organization manage economic performance as a material topic (GRI 3-3)?",
+   "type": "text",
+   "hint": "Describe how the organization manages the topic and its related impacts, as required by Disclosure 3-3 in GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "201-1",
+   "text": "What direct economic value did the organization generate and distribute?",
+   "type": "text",
+   "hint": "a. Direct economic value generated (revenues), distributed (operating costs, employee wages and benefits, payments to capital providers, payments to government by country, community investments) and retained, on an accruals basis (justify if cash basis). b. Where significant, EVG&D by country, region or market, and the significance criteria."
+  },
+  {
+   "ref": "201-2",
+   "text": "What financial implications and other risks and opportunities does climate change pose for the organization's activities?",
+   "type": "text",
+   "hint": "a. Climate risks and opportunities with potential substantive changes in operations, revenue or expenditure: i. description and classification (physical, regulatory, other); ii. impact; iii. financial implications before action; iv. management methods; v. cost of actions."
+  },
+  {
+   "ref": "201-3",
+   "text": "What are the organization's defined benefit plan obligations and other retirement plans?",
+   "type": "text",
+   "hint": "a. Estimated value of liabilities if met from general resources. b. If a separate fund exists: extent of coverage, basis and date of estimate. c. Strategy and timescale if not fully covered. d. Percentage of salary contributed by employee or employer. e. Level of participation in retirement plans."
+  },
+  {
+   "ref": "201-4",
+   "text": "What financial assistance did the organization receive from any government?",
+   "type": "text",
+   "hint": "a. Total monetary value of assistance received in the period (tax relief and credits, subsidies, grants, awards, royalty holidays, ECA assistance, incentives, other). b. The same by country. c. Whether and to what extent any government is in the shareholding structure."
+  }
+ ]
+}

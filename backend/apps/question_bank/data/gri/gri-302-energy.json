@@ -1,0 +1,41 @@
+{
+ "summary": "GRI 302: Energy 2016 contains disclosures for reporting an organization's energy-related impacts and how it manages them. It covers energy consumption within and outside the organization, energy intensity, reductions in energy consumption, and reductions in the energy requirements of products and services.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does your organization manage its energy-related impacts?",
+   "type": "text",
+   "hint": "Report how you manage this material topic using Disclosure 3-3 of GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "302-1",
+   "text": "What was your energy consumption within the organization?",
+   "type": "text",
+   "hint": "a. Total non-renewable fuel consumption and types. b. Total renewable fuel consumption and types. c. Electricity, heating, cooling, steam consumed. d. Electricity, heating, cooling, steam sold. e. Total energy consumption. f. Standards, methodologies, assumptions, tools. g. Source of conversion factors."
+  },
+  {
+   "ref": "302-2",
+   "text": "What was your energy consumption outside of the organization?",
+   "type": "text",
+   "hint": "a. Energy consumption outside of the organization, in joules or multiples. b. Standards, methodologies, assumptions, and/or calculation tools used. c. Source of the conversion factors used."
+  },
+  {
+   "ref": "302-3",
+   "text": "What is your energy intensity?",
+   "type": "text",
+   "hint": "a. Energy intensity ratio. b. Organization-specific metric (denominator) chosen. c. Types of energy included (fuel, electricity, heating, cooling, steam, or all). d. Whether the ratio uses consumption within the organization, outside of it, or both."
+  },
+  {
+   "ref": "302-4",
+   "text": "What reductions in energy consumption did you achieve?",
+   "type": "text",
+   "hint": "a. Reductions in energy consumption achieved through conservation and efficiency initiatives, in joules or multiples. b. Types of energy included. c. Basis for calculating reductions (base year or baseline) and rationale. d. Standards, methodologies, assumptions, tools used."
+  },
+  {
+   "ref": "302-5",
+   "text": "What reductions in the energy requirements of your products and services did you achieve?",
+   "type": "text",
+   "hint": "a. Reductions in energy requirements of sold products and services achieved in the period, in joules or multiples. b. Basis for calculating reductions (base year or baseline) and rationale. c. Standards, methodologies, assumptions, tools used."
+  }
+ ]
+}

@@ -46,6 +46,8 @@ export interface SurveyQuestion extends QuestionFields {
   id: string;
   order: number;
   bank_question_id: string | null;
+  /** The disclosure number (e.g. "401-1") when it comes from a GRI standard, else "". */
+  gri_ref: string;
   /** Its place in the whole survey (Q1, Q2 ...), the same for everyone who can see it. */
   number: number;
   /** The one person who answers it. */
@@ -53,4 +55,42 @@ export interface SurveyQuestion extends QuestionFields {
   status: QuestionStatus;
   /** Furthest stage reached: 0 not submitted, 1 submitted, 2 passed review. */
   progress: number;
+}
+
+export type GriSeries = "universal" | "sector" | "economic" | "environmental" | "social";
+
+export const GRI_SERIES: { value: GriSeries; label: string; blurb: string }[] = [
+  { value: "universal", label: "Universal Standards", blurb: "Apply to every organization" },
+  { value: "sector", label: "Sector Standards", blurb: "Industry-specific disclosures" },
+  { value: "economic", label: "Economic topics", blurb: "GRI 200 series" },
+  { value: "environmental", label: "Environmental topics", blurb: "GRI 100 and 300 series" },
+  { value: "social", label: "Social topics", blurb: "GRI 400 series" },
+];
+
+/** One GRI Standard: a ready-made section with its own questions and PDF. */
+export interface GriStandard {
+  id: string;
+  slug: string;
+  code: string;
+  number: number;
+  title: string;
+  edition: string;
+  series: GriSeries;
+  summary: string;
+  /** Where the PDF is served from, e.g. /gri/gri-401-employment.pdf. */
+  pdf: string;
+  question_count: number;
+}
+
+export interface GriQuestion {
+  id: string;
+  ref: string;
+  text: string;
+  type: QuestionType;
+  hint: string;
+  required: boolean;
+}
+
+export interface GriStandardDetail extends GriStandard {
+  questions: GriQuestion[];
 }

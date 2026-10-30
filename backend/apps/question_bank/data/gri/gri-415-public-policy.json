@@ -1,0 +1,17 @@
+{
+ "summary": "GRI 415 covers public policy, including an organization's participation in developing public policy through lobbying and financial or in-kind contributions to political parties, politicians or causes. It notes the associated risks of corruption, bribery and undue influence.",
+ "questions": [
+  {
+   "ref": "mgmt",
+   "text": "How does your organization manage the topic of public policy, including its impacts, policies, actions and tracking of effectiveness?",
+   "type": "text",
+   "hint": "Report how the organization manages this material topic using Disclosure 3-3 in GRI 3: Material Topics 2021."
+  },
+  {
+   "ref": "415-1",
+   "text": "What is the total monetary value of financial and in-kind political contributions your organization made, directly and indirectly, by country and recipient/beneficiary?",
+   "type": "text",
+   "hint": "a. Total monetary value of financial and in-kind political contributions made directly and indirectly, by country and recipient/beneficiary. b. If applicable, how the monetary value of in-kind contributions was estimated."
+  }
+ ]
+}

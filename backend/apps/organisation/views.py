@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.db.models import Count, Q
 from rest_framework import viewsets
 
@@ -19,7 +20,10 @@ class UnitViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         return (
             OrgUnit.objects.select_related("head")
-            .annotate(member_count=Count("members", filter=Q(members__is_active=True)))
+            .annotate(
+                member_count=Count("members", filter=Q(members__is_active=True), distinct=True)
+                + Count("associate_members", filter=Q(associate_members__is_active=True), distinct=True)
+            )
             .order_by("name")
         )
 
@@ -46,10 +50,17 @@ class MemberViewSet(viewsets.ModelViewSet):
     lookup_url_kwarg = "pk"
     lookup_value_regex = "[0-9a-fA-F-]{36}"
     http_method_names = ["get", "post", "put", "patch", "head", "options"]
-    filterset_fields = ["role", "unit", "is_active"]
+    filterset_fields = ["role", "is_active"]
     search_fields = ["user__full_name", "user__email", "title"]
     ordering_fields = ["user__full_name", "role", "created_at"]
     ordering = ["user__full_name"]
 
     def get_queryset(self):
-        return Member.objects.select_related("user", "unit")
+        members = Member.objects.select_related("user", "unit").prefetch_related("also_in")
+        unit = self.request.query_params.get("unit")
+        if unit:  # a block's people: those based there plus those who also belong to it
+            try:
+                members = members.filter(Q(unit_id=unit) | Q(also_in=unit)).distinct()
+            except (ValueError, ValidationError):
+                members = members.none()
+        return members
