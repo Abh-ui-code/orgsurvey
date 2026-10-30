@@ -46,7 +46,7 @@ export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: strin
   const [answers, setAnswers] = useState<Record<string, AnswerValue>>(initial);
   const [saved, setSaved] = useState<Record<string, AnswerValue>>(initial); // what the server holds
   const [showMissing, setShowMissing] = useState(false);
-  const [confirm, setConfirm] = useState(false);
+  const [confirmIds, setConfirmIds] = useState<string[] | null>(null); // questions awaiting confirmation
   const [savedAt, setSavedAt] = useState<Date | null>(null);
 
   const dirty = !same(answers, saved);
@@ -80,14 +80,31 @@ export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: strin
   const done = required.length - missing.length;
   const percent = required.length ? Math.round((done / required.length) * 100) : 100;
 
-  function trySubmit() {
-    if (missing.length > 0) {
+  // GRI sections can be submitted partially. Any other section is submitted as
+  // a whole: once something in it is answered, all its questions must be.
+  // Sections left untouched stay open for later.
+  const sections = survey.sections.map((section) => {
+    const mine = section.questions.filter((q) => openIds.has(q.id));
+    const started = mine.some((q) => isAnswered(answers[q.id]));
+    const incomplete = !section.gri && started && mine.some((q) => !isAnswered(answers[q.id]));
+    return { mine, started, incomplete };
+  });
+  const ready = sections.filter((s) => s.started && !s.incomplete).flatMap((s) => s.mine.filter((q) => isAnswered(answers[q.id])));
+  const incompleteIds = new Set(sections.filter((s) => s.incomplete).flatMap((s) => s.mine.map((q) => q.id)));
+
+  function trySubmit(ids: string[]) {
+    if (incompleteIds.size > 0) {
       setShowMissing(true);
-      document.getElementById(`q-${missing[0].id}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
-      toast.error(`${missing.length} required question${missing.length === 1 ? "" : "s"} still need${missing.length === 1 ? "s" : ""} an answer`);
+      const first = open.find((q) => incompleteIds.has(q.id) && !isAnswered(answers[q.id]));
+      document.getElementById(`q-${first?.id}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
+      toast.error("Answer every question in a section you started, or clear it, before submitting");
       return;
     }
-    setConfirm(true);
+    if (ids.length === 0) {
+      toast.error("Answer at least one section to submit");
+      return;
+    }
+    setConfirmIds(ids);
   }
 
   return (
@@ -154,7 +171,7 @@ export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: strin
               </li>
             );
           }
-          const flagged = showMissing && q.required && !isAnswered(answers[q.id]);
+          const flagged = showMissing && incompleteIds.has(q.id) && !isAnswered(answers[q.id]);
           return (
             <li key={q.id} id={`q-${q.id}`} className={cn("space-y-2 border-b border-line px-5 py-4 last:border-b-0", flagged && "bg-rust-soft/40")}>
               <p className="text-sm text-ink">
@@ -164,7 +181,7 @@ export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: strin
               {q.hint && <p className="text-xs text-ink-faint">{q.hint}</p>}
               <QuestionComments comments={pinned[q.id]} />
               <AnswerField question={q} value={answers[q.id]} onChange={(v) => setAnswers({ ...answers, [q.id]: v })} />
-              {flagged && <p className="text-xs font-medium text-rust">This question needs an answer.</p>}
+              {flagged && <p className="text-xs font-medium text-rust">Answer this to submit the section.</p>}
             </li>
           );
         }}
@@ -172,30 +189,31 @@ export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: strin
 
       <Card className="sticky bottom-4 flex flex-wrap items-center justify-between gap-3 px-5 py-3">
         <p className="text-xs text-ink-faint">Your reviewer sees these answers only after you submit.</p>
-        <Button onClick={trySubmit} loading={submit.isPending}>
-          Submit {open.length} question{open.length === 1 ? "" : "s"} for review
+        <Button onClick={() => trySubmit(ready.map((q) => q.id))} loading={submit.isPending} disabled={ready.length === 0 && incompleteIds.size === 0}>
+          Submit {ready.length} question{ready.length === 1 ? "" : "s"} for review
         </Button>
       </Card>
 
       <ConfirmDialog
-        open={confirm}
-        onOpenChange={setConfirm}
-        title={`Submit ${open.length} question${open.length === 1 ? "" : "s"}?`}
-        description={`They go to ${survey.reviewer?.full_name ?? "the reviewer"} to review. You won't be able to change them unless they are sent back.`}
+        open={confirmIds !== null}
+        onOpenChange={(o) => !o && setConfirmIds(null)}
+        title={`Submit ${confirmIds?.length ?? 0} question${confirmIds?.length === 1 ? "" : "s"}?`}
+        description={`They go to ${survey.reviewer?.full_name ?? "the reviewer"} to review. You won't be able to change them unless they are sent back.${confirmIds && open.length - confirmIds.length > 0 ? ` ${open.length - confirmIds.length} other question${open.length - confirmIds.length === 1 ? "" : "s"} will stay open for you.` : ""}`}
         confirmLabel="Submit"
         loading={submit.isPending}
-        onConfirm={() =>
-          submit.mutate({ answers, questionIds: open.map((q) => q.id) }, {
+        onConfirm={() => {
+          const ids = confirmIds ?? [];
+          submit.mutate({ answers, questionIds: ids }, {
             onSuccess: () => {
-              toast.success(`${open.length} question${open.length === 1 ? "" : "s"} submitted for review`);
-              setConfirm(false);
+              toast.success(`${ids.length} question${ids.length === 1 ? "" : "s"} submitted for review`);
+              setConfirmIds(null);
             },
             onError: (e) => {
               toast.error((e as Error).message);
-              setConfirm(false);
+              setConfirmIds(null);
             },
-          })
-        }
+          });
+        }}
       />
     </div>
   );
