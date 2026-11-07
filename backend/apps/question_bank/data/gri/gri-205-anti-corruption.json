@@ -15,9 +15,16 @@
   },
   {
    "ref": "205-2",
-   "text": "How have anti-corruption policies and procedures been communicated, and who has received anti-corruption training?",
-   "type": "text",
-   "hint": "a. Number and percentage of governance body members informed of policies, by region. b. Employees informed, by category and region. c. Business partners informed, by type and region; other persons or organizations. d. Governance body members trained, by region. e. Employees trained, by category and region."
+   "text": "Who has received communication or training on anti-corruption policies and procedures?",
+   "type": "multi_choice",
+   "hint": "a. Number and percentage of governance body members informed of policies, by region. b. Employees informed, by category and region. c. Business partners informed, by type and region; other persons or organizations. d. Governance body members trained, by region. e. Employees trained, by category and region.",
+   "options": [
+    "Governance body members",
+    "Employees",
+    "Business partners",
+    "Suppliers",
+    "None"
+   ]
   },
   {
    "ref": "205-3",

@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Loader2 } from "lucide-react";
+import { Check, Loader2, MessageSquarePlus } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 import { AnswerField, formatAnswer, isAnswered } from "@/components/shared/answer-field";
@@ -8,12 +8,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ConfirmDialog } from "@/components/ui/confirm-dialog";
 import { QuestionStatusBadge } from "@/components/ui/status-badge";
+import { Textarea } from "@/components/ui/textarea";
 import { useDebounced } from "@/hooks/use-debounced";
 import { useUnsavedChangesWarning } from "@/hooks/use-unsaved-changes-warning";
 import { cn } from "@/lib/utils";
 import type { AnswerValue, SurveyDetail } from "@/types/survey";
 import { useSaveDraft, useSubmitResponse } from "../_hooks/use-survey-actions";
 import { commentsByQuestion, QuestionComments } from "./question-comments";
+import { AttachmentList, AttachmentPicker } from "./question-attachments";
 import { SectionedQuestions } from "./sectioned-questions";
 
 const AUTOSAVE_MS = 1500;
@@ -43,27 +45,37 @@ export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: strin
       return value === undefined ? [] : [[q.id, value] as const];
     }),
   ) as Record<string, AnswerValue>;
+  const initialNotes = Object.fromEntries(
+    open.flatMap((q) => {
+      const text = survey.draft_notes[q.id] ?? survey.notes[q.id];
+      return text ? [[q.id, text] as const] : [];
+    }),
+  ) as Record<string, string>;
   const [answers, setAnswers] = useState<Record<string, AnswerValue>>(initial);
   const [saved, setSaved] = useState<Record<string, AnswerValue>>(initial); // what the server holds
+  const [notes, setNotes] = useState<Record<string, string>>(initialNotes);
+  const [savedNotes, setSavedNotes] = useState<Record<string, string>>(initialNotes);
+  const [noteOpen, setNoteOpen] = useState<Record<string, boolean>>({});
   const [showMissing, setShowMissing] = useState(false);
   const [confirmIds, setConfirmIds] = useState<string[] | null>(null); // questions awaiting confirmation
   const [savedAt, setSavedAt] = useState<Date | null>(null);
 
-  const dirty = !same(answers, saved);
+  const dirty = !same(answers, saved) || !same(notes, savedNotes);
   useUnsavedChangesWarning(dirty);
 
   // Autosave once typing pauses. If something changes while a save is in
   // flight, `round` bumps when it finishes so the effect runs again and the
   // newest answers are never left behind.
-  const settled = useDebounced(answers, AUTOSAVE_MS);
+  const settled = useDebounced({ answers, notes }, AUTOSAVE_MS);
   const inFlight = useRef(false);
   const [round, setRound] = useState(0);
   useEffect(() => {
-    if (same(settled, saved) || inFlight.current) return;
+    if ((same(settled.answers, saved) && same(settled.notes, savedNotes)) || inFlight.current) return;
     inFlight.current = true;
     saveDraft.mutate(settled, {
       onSuccess: () => {
-        setSaved(settled);
+        setSaved(settled.answers);
+        setSavedNotes(settled.notes);
         setSavedAt(new Date());
       },
       onSettled: () => {
@@ -167,7 +179,9 @@ export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: strin
                   <QuestionStatusBadge status={q.status} />
                 </div>
                 <p className="whitespace-pre-wrap text-sm font-medium text-ink-muted">{answer && answer !== "—" ? answer : "No answer"}</p>
-                <QuestionComments comments={pinned[q.id]} />
+                {survey.notes[q.id] && <p className="whitespace-pre-wrap text-xs text-ink-muted">Your note: {survey.notes[q.id]}</p>}
+                <AttachmentList surveyId={survey.id} files={q.attachments.filter((f) => f.kind === "response")} />
+                <QuestionComments comments={pinned[q.id]} surveyId={survey.id} />
               </li>
             );
           }
@@ -179,8 +193,30 @@ export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: strin
                 {q.text} {q.required && <span className="text-rust">*</span>}
               </p>
               {q.hint && <p className="text-xs text-ink-faint">{q.hint}</p>}
-              <QuestionComments comments={pinned[q.id]} />
+              <QuestionComments comments={pinned[q.id]} surveyId={survey.id} />
               <AnswerField question={q} value={answers[q.id]} onChange={(v) => setAnswers({ ...answers, [q.id]: v })} />
+              {(noteOpen[q.id] || notes[q.id]) && (
+                <Textarea
+                  rows={2}
+                  maxLength={2000}
+                  value={notes[q.id] ?? ""}
+                  onChange={(e) => setNotes({ ...notes, [q.id]: e.target.value })}
+                  placeholder="Note for your reviewer (optional)"
+                  aria-label={`Note on question ${n}`}
+                />
+              )}
+              <div className="flex flex-wrap items-center gap-x-3">
+                {!(noteOpen[q.id] || notes[q.id]) && (
+                  <button
+                    type="button"
+                    onClick={() => setNoteOpen({ ...noteOpen, [q.id]: true })}
+                    className="inline-flex items-center gap-1.5 rounded-md px-2 py-1.5 text-xs font-medium text-brand hover:bg-brand-soft"
+                  >
+                    <MessageSquarePlus className="h-3.5 w-3.5" /> Add comment
+                  </button>
+                )}
+                <AttachmentPicker surveyId={survey.id} questionId={q.id} files={q.attachments.filter((f) => f.kind === "response")} />
+              </div>
               {flagged && <p className="text-xs font-medium text-rust">Answer this to submit the section.</p>}
             </li>
           );
@@ -203,7 +239,7 @@ export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: strin
         loading={submit.isPending}
         onConfirm={() => {
           const ids = confirmIds ?? [];
-          submit.mutate({ answers, questionIds: ids }, {
+          submit.mutate({ answers, notes, questionIds: ids }, {
             onSuccess: () => {
               toast.success(`${ids.length} question${ids.length === 1 ? "" : "s"} submitted for review`);
               setConfirmIds(null);

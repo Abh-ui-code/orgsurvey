@@ -9,9 +9,15 @@
   },
   {
    "ref": "407-1",
-   "text": "Identify operations and suppliers in which workers' rights to freedom of association or collective bargaining may be violated or at significant risk, and the measures taken to support these rights.",
-   "type": "text",
-   "hint": "a. Operations and suppliers at risk, by type of operation and supplier, and by countries or geographic areas. b. Measures taken in the reporting period to support the rights to freedom of association and collective bargaining."
+   "text": "Have you identified operations or suppliers where the right to freedom of association or collective bargaining may be at risk?",
+   "type": "single_choice",
+   "hint": "a. Operations and suppliers at risk, by type of operation and supplier, and by countries or geographic areas. b. Measures taken in the reporting period to support the rights to freedom of association and collective bargaining.",
+   "options": [
+    "Yes, operations",
+    "Yes, suppliers",
+    "Yes, both",
+    "No"
+   ]
   }
  ]
 }

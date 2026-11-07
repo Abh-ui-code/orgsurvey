@@ -3,9 +3,15 @@
  "questions": [
   {
    "ref": "101-1",
-   "text": "What are your policies or commitments to halt and reverse biodiversity loss, and what goals and targets do you have?",
-   "type": "text",
-   "hint": "a. Policies/commitments and how informed by the Kunming-Montreal Global Biodiversity Framework 2050 Goals and 2030 Targets; b. extent they apply to activities and business relationships; c. goals and targets, whether informed by scientific consensus, base year, and progress indicators."
+   "text": "Do you have a published commitment to halt and reverse biodiversity loss?",
+   "type": "single_choice",
+   "hint": "a. Policies/commitments and how informed by the Kunming-Montreal Global Biodiversity Framework 2050 Goals and 2030 Targets; b. extent they apply to activities and business relationships; c. goals and targets, whether informed by scientific consensus, base year, and progress indicators.",
+   "options": [
+    "Yes, with targets",
+    "Yes, without targets",
+    "In development",
+    "No"
+   ]
   },
   {
    "ref": "101-2",
@@ -33,9 +39,17 @@
   },
   {
    "ref": "101-6",
-   "text": "What are the direct drivers of biodiversity loss associated with your sites and supply chain products and services?",
-   "type": "text",
-   "hint": "a. Land and sea use change: hectares of natural ecosystem converted, cut-off date, ecosystem types; hectares converted between modified ecosystems; b. exploitation: wild species harvested (quantity, type, extinction risk), water withdrawal and consumption in megaliters; c. pollutants by type and quantity; d. invasive alien species introduction; e. supply chain by country; f. methodologies and assumptions."
+   "text": "Which direct drivers of biodiversity loss are associated with your sites and supply chain?",
+   "type": "multi_choice",
+   "hint": "a. Land and sea use change: hectares of natural ecosystem converted, cut-off date, ecosystem types; hectares converted between modified ecosystems; b. exploitation: wild species harvested (quantity, type, extinction risk), water withdrawal and consumption in megaliters; c. pollutants by type and quantity; d. invasive alien species introduction; e. supply chain by country; f. methodologies and assumptions.",
+   "options": [
+    "Land or sea use change",
+    "Overexploitation",
+    "Climate change",
+    "Pollution",
+    "Invasive species",
+    "Other"
+   ]
   },
   {
    "ref": "101-7",
@@ -45,9 +59,15 @@
   },
   {
    "ref": "101-8",
-   "text": "Which ecosystem services and beneficiaries are affected by your activities, and how?",
-   "type": "text",
-   "hint": "a. Per site, list the ecosystem services and beneficiaries affected or potentially affected; b. explain how the ecosystem services and beneficiaries are or could be affected."
+   "text": "Which types of ecosystem services are affected by your activities?",
+   "type": "multi_choice",
+   "hint": "a. Per site, list the ecosystem services and beneficiaries affected or potentially affected; b. explain how the ecosystem services and beneficiaries are or could be affected.",
+   "options": [
+    "Provisioning (food, water, materials)",
+    "Regulating (climate, flood, disease)",
+    "Cultural",
+    "Supporting (soil, nutrients)"
+   ]
   }
  ]
 }

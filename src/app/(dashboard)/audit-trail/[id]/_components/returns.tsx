@@ -9,6 +9,8 @@ import type { SurveyDetail } from "@/types/survey";
 import { ACTION_META } from "../../../surveys/[id]/_components/activity-card";
 import { AUDIENCE_LABEL } from "../../../surveys/[id]/_components/question-comments";
 import { numberQuestions, roleOf } from "../../_lib";
+import { AttachmentList } from "../../../surveys/[id]/_components/question-attachments";
+import { Evidence } from "./evidence";
 
 /** Every time questions were sent back or commented on: who, to whom, why, and for
  * each flagged question what the answer was at that moment next to the comment. */
@@ -72,8 +74,12 @@ export function Returns({ survey }: { survey: SurveyDetail }) {
                               Answer given: <span className="font-medium text-ink">{answer && answer !== "—" ? answer : "No answer"}</span>
                             </p>
                           )}
+                          {sent && <Evidence surveyId={survey.id} detail={sent.details?.[c.question_id]} />}
                         </div>
-                        <p className={`whitespace-pre-wrap border-l-2 pl-3 text-sm text-ink ${returned ? "border-rust" : "border-brand"}`}>{c.text}</p>
+                        <div className={`border-l-2 pl-3 ${returned ? "border-rust" : "border-brand"}`}>
+                          <p className="whitespace-pre-wrap text-sm text-ink">{c.text}</p>
+                          <AttachmentList surveyId={survey.id} files={c.attachments ?? []} />
+                        </div>
                       </li>
                     );
                   })}

@@ -9,9 +9,17 @@
   },
   {
    "ref": "302-1",
-   "text": "What was your energy consumption within the organization?",
-   "type": "text",
-   "hint": "a. Total non-renewable fuel consumption and types. b. Total renewable fuel consumption and types. c. Electricity, heating, cooling, steam consumed. d. Electricity, heating, cooling, steam sold. e. Total energy consumption. f. Standards, methodologies, assumptions, tools. g. Source of conversion factors."
+   "text": "Which energy sources do you consume within the organization?",
+   "type": "multi_choice",
+   "hint": "a. Total non-renewable fuel consumption and types. b. Total renewable fuel consumption and types. c. Electricity, heating, cooling, steam consumed. d. Electricity, heating, cooling, steam sold. e. Total energy consumption. f. Standards, methodologies, assumptions, tools. g. Source of conversion factors.",
+   "options": [
+    "Purchased electricity",
+    "Diesel or other fuel",
+    "Natural gas",
+    "Coal",
+    "Self-generated renewable energy",
+    "Heating, cooling or steam"
+   ]
   },
   {
    "ref": "302-2",

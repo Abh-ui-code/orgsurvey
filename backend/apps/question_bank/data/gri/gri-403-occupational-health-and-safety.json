@@ -9,9 +9,15 @@
   },
   {
    "ref": "403-1",
-   "text": "Describe the occupational health and safety management system, including whether it is based on legal requirements or recognized standards, and the scope of workers, activities and workplaces it covers.",
-   "type": "text",
-   "hint": "For employees and non-employee workers under the organization's control: a. Whether an OHS management system is implemented, on what legal requirements or standards. b. Scope of workers, activities and workplaces covered and any not covered, with reasons."
+   "text": "What is your occupational health and safety management system based on?",
+   "type": "single_choice",
+   "hint": "For employees and non-employee workers under the organization's control: a. Whether an OHS management system is implemented, on what legal requirements or standards. b. Scope of workers, activities and workplaces covered and any not covered, with reasons.",
+   "options": [
+    "Legal requirements only",
+    "Recognized standards (e.g. ISO 45001)",
+    "Both",
+    "No formal system"
+   ]
   },
   {
    "ref": "403-2",
@@ -39,9 +45,17 @@
   },
   {
    "ref": "403-6",
-   "text": "Explain how the organization facilitates workers' access to non-occupational medical and healthcare services, and describe voluntary health promotion services and programs offered.",
-   "type": "text",
-   "hint": "a. How workers' access to non-occupational medical and healthcare services is facilitated and its scope. b. Voluntary health promotion programs addressing major non-work-related health risks and how access is facilitated."
+   "text": "How do workers access non-occupational medical and healthcare services?",
+   "type": "multi_choice",
+   "hint": "a. How workers' access to non-occupational medical and healthcare services is facilitated and its scope. b. Voluntary health promotion programs addressing major non-work-related health risks and how access is facilitated.",
+   "options": [
+    "On-site clinic",
+    "Health insurance",
+    "Wellness programs",
+    "Telehealth",
+    "Vaccination",
+    "None"
+   ]
   },
   {
    "ref": "403-7",

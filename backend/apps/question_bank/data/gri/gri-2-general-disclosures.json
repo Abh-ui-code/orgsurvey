@@ -15,21 +15,37 @@
   },
   {
    "ref": "2-3",
-   "text": "Specify the reporting period and frequency of sustainability reporting, the financial reporting period, the publication date, and a contact point for questions.",
-   "type": "text",
-   "hint": "Report: a. sustainability reporting period and frequency; b. financial reporting period, with reason if it differs; c. publication date; d. contact point for questions."
+   "text": "How often do you publish sustainability reports?",
+   "type": "single_choice",
+   "hint": "Report: a. sustainability reporting period and frequency; b. financial reporting period, with reason if it differs; c. publication date; d. contact point for questions.",
+   "options": [
+    "Annually",
+    "Every two years",
+    "Quarterly",
+    "Other"
+   ]
   },
   {
    "ref": "2-4",
-   "text": "Report any restatements of information from previous reporting periods, with the reasons and effect.",
-   "type": "text",
-   "hint": "Report: a. restatements made from previous periods, explaining i. reasons for the restatements; ii. effect of the restatements."
+   "text": "Have you restated information from previous reporting periods?",
+   "type": "single_choice",
+   "hint": "Report: a. restatements made from previous periods, explaining i. reasons for the restatements; ii. effect of the restatements.",
+   "options": [
+    "Yes",
+    "No"
+   ]
   },
   {
    "ref": "2-5",
-   "text": "Describe your policy and practice for seeking external assurance and, if your reporting was externally assured, provide the assurance details.",
-   "type": "text",
-   "hint": "Report: a. policy and practice for external assurance, incl. involvement of governance body and senior executives; b. if assured: link to assurance report, what was assured and on what basis (standards, level, limitations), and relationship with assurance provider."
+   "text": "Is your sustainability reporting externally assured?",
+   "type": "single_choice",
+   "hint": "Report: a. policy and practice for external assurance, incl. involvement of governance body and senior executives; b. if assured: link to assurance report, what was assured and on what basis (standards, level, limitations), and relationship with assurance provider.",
+   "options": [
+    "Fully assured",
+    "Partially assured",
+    "Not assured, but planned",
+    "Not assured"
+   ]
   },
   {
    "ref": "2-6",
@@ -63,9 +79,13 @@
   },
   {
    "ref": "2-11",
-   "text": "Report whether the chair of the highest governance body is also a senior executive and, if so, explain the arrangement.",
-   "type": "text",
-   "hint": "Report: a. whether the chair is also a senior executive; b. if so, their function, the reasons for the arrangement, and how conflicts of interest are prevented and mitigated."
+   "text": "Is the chair of your highest governance body also a senior executive?",
+   "type": "single_choice",
+   "hint": "Report: a. whether the chair is also a senior executive; b. if so, their function, the reasons for the arrangement, and how conflicts of interest are prevented and mitigated.",
+   "options": [
+    "Yes",
+    "No"
+   ]
   },
   {
    "ref": "2-12",
@@ -81,15 +101,27 @@
   },
   {
    "ref": "2-14",
-   "text": "Report whether the highest governance body reviews and approves the reported information, including material topics.",
-   "type": "text",
-   "hint": "Report: a. whether the governance body reviews and approves reported information and material topics, and the process; b. if not, the reason."
+   "text": "Does the highest governance body review and approve the reported information?",
+   "type": "single_choice",
+   "hint": "Report: a. whether the governance body reviews and approves reported information and material topics, and the process; b. if not, the reason.",
+   "options": [
+    "Yes, all of it",
+    "Yes, in part",
+    "No"
+   ]
   },
   {
    "ref": "2-15",
-   "text": "Describe the processes to prevent and mitigate conflicts of interest and whether conflicts of interest are disclosed to stakeholders.",
-   "type": "text",
-   "hint": "Report: a. processes to prevent and mitigate conflicts of interest; b. whether disclosed to stakeholders, at minimum: cross-board membership, cross-shareholding, controlling shareholders, related parties and transactions."
+   "text": "Which conflict-of-interest situations do you disclose to stakeholders?",
+   "type": "multi_choice",
+   "hint": "Report: a. processes to prevent and mitigate conflicts of interest; b. whether disclosed to stakeholders, at minimum: cross-board membership, cross-shareholding, controlling shareholders, related parties and transactions.",
+   "options": [
+    "Cross-board membership",
+    "Cross-shareholding",
+    "Controlling shareholders",
+    "Related-party transactions",
+    "None"
+   ]
   },
   {
    "ref": "2-16",
@@ -153,9 +185,17 @@
   },
   {
    "ref": "2-26",
-   "text": "Describe the mechanisms for individuals to seek advice on and raise concerns about your responsible business conduct.",
-   "type": "text",
-   "hint": "Report: a. mechanisms for individuals to i. seek advice on implementing policies and practices for responsible business conduct; ii. raise concerns about the organization's business conduct."
+   "text": "Which mechanisms can people use to raise concerns about your business conduct?",
+   "type": "multi_choice",
+   "hint": "Report: a. mechanisms for individuals to i. seek advice on implementing policies and practices for responsible business conduct; ii. raise concerns about the organization's business conduct.",
+   "options": [
+    "Hotline",
+    "Email or web form",
+    "Ombudsperson",
+    "Grievance committee",
+    "Worker representatives",
+    "Other"
+   ]
   },
   {
    "ref": "2-27",
@@ -171,9 +211,20 @@
   },
   {
    "ref": "2-29",
-   "text": "Describe your approach to engaging with stakeholders.",
-   "type": "text",
-   "hint": "Report: a. approach to stakeholder engagement, incl. i. categories of stakeholders and how they are identified; ii. purpose of engagement; iii. how meaningful engagement is sought."
+   "text": "Which stakeholder groups do you engage with?",
+   "type": "multi_choice",
+   "hint": "Report: a. approach to stakeholder engagement, incl. i. categories of stakeholders and how they are identified; ii. purpose of engagement; iii. how meaningful engagement is sought.",
+   "options": [
+    "Employees",
+    "Customers",
+    "Suppliers",
+    "Investors",
+    "Communities",
+    "Regulators",
+    "NGOs",
+    "Unions",
+    "Other"
+   ]
   },
   {
    "ref": "2-30",

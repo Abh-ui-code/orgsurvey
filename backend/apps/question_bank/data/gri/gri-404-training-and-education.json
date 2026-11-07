@@ -15,9 +15,17 @@
   },
   {
    "ref": "404-2",
-   "text": "Describe the programs implemented to upgrade employee skills and the transition assistance programs that support continued employability and the management of career endings.",
-   "type": "text",
-   "hint": "a. Type and scope of programs and assistance to upgrade employee skills. b. Transition assistance programs for continued employability and career endings from retirement or termination."
+   "text": "Which skills upgrade or transition assistance programs do you offer?",
+   "type": "multi_choice",
+   "hint": "a. Type and scope of programs and assistance to upgrade employee skills. b. Transition assistance programs for continued employability and career endings from retirement or termination.",
+   "options": [
+    "Internal training",
+    "External courses",
+    "Tuition assistance",
+    "Sabbaticals",
+    "Retirement preparation",
+    "Outplacement"
+   ]
   },
   {
    "ref": "404-3",

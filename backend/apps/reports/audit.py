@@ -127,11 +127,33 @@ class _Sheet:
         self.row += 1
 
 
+def _files_line(names):
+    return f"Files: {', '.join(names)}" if names else ""
+
+
+def _comment_files(comment):
+    """The files a reviewer or approver sent with a comment, as a line of names."""
+    return _files_line([a.name for a in comment.attachments.all()])
+
+
+def _submission_extras(event, question):
+    """What went with a submitted answer besides the answer: the respondent's note and files."""
+    detail = (event.details or {}).get(str(question.id)) or {}
+    lines = []
+    if detail.get("note"):
+        lines.append(f"Note: {detail['note']}")
+    files = _files_line([f["name"] for f in detail.get("files", [])])
+    if files:
+        lines.append(files)
+    return "\n".join(lines)
+
+
 def _comment_parts(comment, event, role_of):
     """One comment as rich text: a bold line (when, who, to whom), then the words."""
     to = AUDIENCE_LABELS.get(event.audience, "")
     who = f"{_name(comment.author)} ({role_of.get(comment.author.pk, 'Administrator')})" if comment.author else "Unknown"
-    return [TextBlock(InlineFont(b=True), f"{_nice(event.created_at)} · {who}{' → ' + to if to else ''}\n"), comment.text]
+    files = _comment_files(comment)
+    return [TextBlock(InlineFont(b=True), f"{_nice(event.created_at)} · {who}{' → ' + to if to else ''}\n"), comment.text + (f"\n{files}" if files else "")]
 
 
 def _numbers(numbers):
@@ -198,7 +220,7 @@ def _polish(ws):
 
 
 def build_workbook(survey: Survey) -> bytes:
-    events = list(survey.events.select_related("by").prefetch_related("question_comments__author"))
+    events = list(survey.events.select_related("by").prefetch_related("question_comments__author", "question_comments__attachments"))
     questions = list(
         SurveyQuestion.objects.filter(section__survey=survey).select_related("section", "responder").order_by("section__order", "order")
     )
@@ -314,7 +336,8 @@ def build_workbook(survey: Survey) -> bytes:
             if q.pk not in {x.pk for x in e.questions.all()}:
                 continue  # this submission was about other questions
             value = _text(e.snapshot.get(str(q.id)))
-            cell = ws.cell(r, sub_col(i), value)
+            extras = _submission_extras(e, q)
+            cell = ws.cell(r, sub_col(i), f"{value}\n\n{extras}" if extras else value)
             cell.alignment = Alignment(wrap_text=True, vertical="top", horizontal="left")
             if previous is not None and value != previous:
                 cell.fill = CHANGED_FILL
@@ -343,7 +366,14 @@ def build_workbook(survey: Survey) -> bytes:
                 step = ACTION_LABELS.get(e.action, e.action)
                 if e.action == "returned" and e.audience:
                     step = f"Returned to {AUDIENCE_LABELS[e.audience].lower()}"
-            notes = [c.text for c in e.question_comments.all() if c.question_id == q.pk]
+            notes = [
+                "\n".join(part for part in (c.text, _comment_files(c)) if part)
+                for c in e.question_comments.all()
+                if c.question_id == q.pk
+            ]
+            if e.action == "submitted":
+                extras = _submission_extras(e, q)
+                notes = ([extras] if extras else []) + notes
             comment = "\n".join(([e.comment] if e.comment else []) + notes)
             who = f"{_name(e.by)} ({role_of.get(e.by_id, 'Administrator')})" if e.by_id else ""
             r = sheet.line([n, _nice(e.created_at), step, who, q.text, answer, changed_from, comment])

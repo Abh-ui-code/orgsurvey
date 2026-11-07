@@ -21,6 +21,8 @@ then `approved`. An administrator may close a live survey at any point.
 Structure (sections, questions) is editable only while a draft; who answers
 which question can still change while it waits for its respondent.
 """
+import os
+
 from django.db import transaction
 from django.db.models import Max
 from django.utils import timezone
@@ -28,7 +30,7 @@ from django.utils import timezone
 from apps.core.exceptions import ApiError
 from apps.core.question_types import is_empty, validate_answer
 from apps.organisation.models import Member
-from apps.surveys.models import QuestionComment, Section, Survey, SurveyEvent, SurveyQuestion
+from apps.surveys.models import QuestionAttachment, QuestionComment, Section, Survey, SurveyEvent, SurveyQuestion
 from apps.surveys.scoping import RESPONDER_OPEN
 
 FROZEN = "Published surveys can't be changed. Duplicate it to make changes."
@@ -38,9 +40,10 @@ QUESTION_FIELDS = ("text", "type", "options", "hint", "required")
 STAGE_ERROR = "Those questions are not at the right stage for that action."
 
 
-def _log(survey, action, by, comment="", audience="", snapshot=None, questions=()):
+def _log(survey, action, by, comment="", audience="", snapshot=None, questions=(), details=None):
     event = SurveyEvent.objects.create(
-        survey=survey, action=action, by=by, comment=(comment or "").strip(), audience=audience, snapshot=snapshot or {}
+        survey=survey, action=action, by=by, comment=(comment or "").strip(), audience=audience, snapshot=snapshot or {},
+        details=details or {},
     )
     if questions:
         event.questions.set(questions)
@@ -176,29 +179,53 @@ def update_section(section: Section, **fields) -> Section:
     return section
 
 
-GRI_FIXED = "GRI sections are added and assigned as a whole. Remove the section to change it."
+GRI_FIXED = "Questions from a GRI standard are changed by editing the selection for that standard."
 
 
-def _not_gri(section):
-    if section.gri_standard_id:
+def _not_gri(question):
+    """A question that came from a GRI standard is fixed; your own questions in a GRI section are not."""
+    if question.section.gri_standard_id and question.bank_question_id and question.bank_question.gri_standard_id:
         raise ApiError(GRI_FIXED)
 
 
 @transaction.atomic
-def add_gri_section(survey: Survey, standard) -> Section:
-    """Add a whole GRI Standard as a section, with every question in it."""
+def add_gri_section(survey: Survey, standard, question_ids=None) -> Section:
+    """Put the chosen questions of a GRI Standard into the survey as its own
+    section (all of them when none are named). Calling it again for a standard
+    already in the survey makes the section match the new choice."""
     require_draft(survey)
-    if survey.sections.filter(gri_standard=standard).exists():
-        raise ApiError(f"{standard.code} is already in this survey.")
-    section = Section.objects.create(
-        survey=survey, order=_next_order(survey.sections), title=f"{standard.code}: {standard.title}"[:255],
-        description=standard.summary, gri_standard=standard,
-    )
-    for bank_question in standard.questions.order_by("gri_order"):
-        fields = {name: getattr(bank_question, name) for name in QUESTION_FIELDS}
-        SurveyQuestion.objects.create(
-            section=section, order=_next_order(section.questions), bank_question=bank_question, **fields
+    available = {str(q.pk): q for q in standard.questions.order_by("gri_order")}
+    if question_ids is None:
+        chosen = list(available)
+    else:
+        chosen = [str(i) for i in question_ids]
+        if not chosen:
+            raise ApiError("Select at least one question.")
+        if any(i not in available for i in chosen):
+            raise ApiError(f"A selected question isn't part of {standard.code}.")
+    section = survey.sections.filter(gri_standard=standard).first()
+    if section is None:
+        section = Section.objects.create(
+            survey=survey, order=_next_order(survey.sections), title=f"{standard.code}: {standard.title}"[:255],
+            description=standard.summary, gri_standard=standard,
         )
+    section.questions.filter(bank_question__gri_standard=standard).exclude(bank_question_id__in=chosen).delete()
+    have = {str(i) for i in section.questions.values_list("bank_question_id", flat=True)}
+    for key, bank_question in available.items():
+        if key in chosen and key not in have:
+            fields = {name: getattr(bank_question, name) for name in QUESTION_FIELDS}
+            SurveyQuestion.objects.create(
+                section=section, order=_next_order(section.questions), bank_question=bank_question, **fields
+            )
+    # The standard's questions in its own order, then any questions added by hand.
+    def place(q):
+        theirs = q.bank_question_id is not None and q.bank_question.gri_standard_id is not None
+        return (not theirs, q.bank_question.gri_order if theirs else 0, q.order)
+
+    for order, question in enumerate(sorted(section.questions.select_related("bank_question"), key=place)):
+        if question.order != order:
+            question.order = order
+            question.save(update_fields=["order"])
     return section
 
 
@@ -234,6 +261,31 @@ def _move(items, target, direction):
             item.save(update_fields=["order"])
 
 
+def _reorder(items, ids):
+    """Give `items` the order of `ids`, which must name every one of them once."""
+    items = {str(item.pk): item for item in items}
+    ids = [str(i) for i in ids]
+    if len(ids) != len(items) or set(ids) != set(items):
+        raise ApiError("The new order must list every item exactly once.")
+    for order, key in enumerate(ids):
+        if items[key].order != order:
+            items[key].order = order
+            items[key].save(update_fields=["order"])
+
+
+@transaction.atomic
+def reorder_sections(survey: Survey, ids):
+    require_draft(survey)
+    _reorder(survey.sections.all(), ids)
+
+
+@transaction.atomic
+def reorder_questions(section: Section, ids):
+    """Reordering only changes the display order, so GRI sections allow it too."""
+    require_draft(section.survey)
+    _reorder(section.questions.all(), ids)
+
+
 @transaction.atomic
 def move_section(section: Section, direction):
     require_draft(section.survey)
@@ -243,7 +295,6 @@ def move_section(section: Section, direction):
 @transaction.atomic
 def add_question(section: Section, **fields) -> SurveyQuestion:
     require_draft(section.survey)
-    _not_gri(section)
     _active_member(fields.get("responder"))
     return SurveyQuestion.objects.create(section=section, order=_next_order(section.questions), **fields)
 
@@ -263,7 +314,7 @@ def add_question_from_bank(section: Section, bank_question) -> SurveyQuestion:
 @transaction.atomic
 def update_question(question: SurveyQuestion, **fields) -> SurveyQuestion:
     require_draft(question.section.survey)
-    _not_gri(question.section)
+    _not_gri(question)
     _active_member(fields.get("responder"))
     for name, value in fields.items():
         setattr(question, name, value)
@@ -274,14 +325,14 @@ def update_question(question: SurveyQuestion, **fields) -> SurveyQuestion:
 @transaction.atomic
 def delete_question(question: SurveyQuestion):
     require_draft(question.section.survey)
-    _not_gri(question.section)
+    _not_gri(question)
     question.delete()
 
 
 @transaction.atomic
 def move_question(question: SurveyQuestion, direction):
     require_draft(question.section.survey)
-    _not_gri(question.section)
+    _not_gri(question)
     _move(question.section.questions.all(), question, direction)
 
 
@@ -384,7 +435,7 @@ def _refresh_status(survey):
 
 
 @transaction.atomic
-def submit_response(survey: Survey, user, answers, question_ids=None) -> Survey:
+def submit_response(survey: Survey, user, answers, question_ids=None, notes=None) -> Survey:
     """A respondent submits some or all of their open questions."""
     _expect_live(survey)
     if not isinstance(answers, dict):
@@ -399,14 +450,113 @@ def submit_response(survey: Survey, user, answers, question_ids=None) -> Survey:
     ids = {str(q.id) for q in mine}
     survey.answers = {**{k: v for k, v in survey.answers.items() if k not in ids}, **cleaned}
     survey.draft_answers = {k: v for k, v in survey.draft_answers.items() if k not in ids}
-    survey.save(update_fields=["answers", "draft_answers"])
+    # The note sent is the one in the form, falling back to the saved draft.
+    sent = _clean_notes(notes if notes is not None else survey.draft_notes, ids)
+    survey.notes = {**{k: v for k, v in survey.notes.items() if k not in ids}, **sent}
+    survey.draft_notes = {k: v for k, v in survey.draft_notes.items() if k not in ids}
+    survey.save(update_fields=["answers", "draft_answers", "notes", "draft_notes"])
+    QuestionAttachment.objects.filter(question__in=mine).update(submitted=True)
+    # What went with each answer, as sent, for the audit trail.
+    details = {}
+    for q in mine:
+        key = str(q.id)
+        files = [
+            {"id": str(a.pk), "name": a.name, "size": a.size}
+            for a in q.attachments.filter(kind="response", removed=False)
+        ]
+        if key in sent or files:
+            details[key] = {"note": sent.get(key, ""), "files": files}
     _set_status(mine, "awaiting_review", SurveyQuestion.PROGRESS_SUBMITTED)
-    _log(survey, "submitted", user, snapshot=cleaned, questions=mine)
+    _log(survey, "submitted", user, snapshot=cleaned, questions=mine, details=details)
     return survey
 
 
+NOTE_MAX = 2000
+ATTACH_MAX_FILES = 5
+ATTACH_MAX_BYTES = 10 * 1024 * 1024
+ATTACH_TYPES = {".pdf", ".png", ".jpg", ".jpeg", ".gif", ".webp", ".doc", ".docx", ".xls", ".xlsx", ".csv", ".txt"}
+
+
+def _clean_notes(notes, allowed_ids):
+    """Notes to keep: {question_id: text} for `allowed_ids`, blanks dropped."""
+    if not isinstance(notes, dict):
+        raise ApiError("Notes are not in the right format.")
+    cleaned = {}
+    for question_id, text in notes.items():
+        if question_id not in allowed_ids or not isinstance(text, str) or not text.strip():
+            continue
+        if len(text.strip()) > NOTE_MAX:
+            raise ApiError(f"A note can be at most {NOTE_MAX} characters.")
+        cleaned[question_id] = text.strip()
+    return cleaned
+
+
+def _my_open_question(survey, user, question_id):
+    _expect_live(survey)
+    question = next((q for q in all_questions(survey) if str(q.id) == str(question_id)), None)
+    if question is None or question.responder_id != user.pk or question.status not in RESPONDER_OPEN:
+        raise ApiError("You can only change files on your own open questions.")
+    return question
+
+
+def _check_upload(question, upload, existing):
+    name = upload.name.replace("\\", "/").split("/")[-1][:255]
+    if os.path.splitext(name)[1].lower() not in ATTACH_TYPES:
+        raise ApiError("That file type isn't allowed. Use PDF, image, Word, Excel, CSV or text files.")
+    if upload.size > ATTACH_MAX_BYTES:
+        raise ApiError("A file can be at most 10 MB.")
+    if existing.count() >= ATTACH_MAX_FILES:
+        raise ApiError(f"A question can have at most {ATTACH_MAX_FILES} files.")
+    return name
+
+
+def add_attachment(survey: Survey, user, question_id, upload) -> QuestionAttachment:
+    question = _my_open_question(survey, user, question_id)
+    name = _check_upload(question, upload, question.attachments.filter(kind="response", removed=False))
+    return QuestionAttachment.objects.create(
+        question=question, uploaded_by=user, file=upload, name=name, size=upload.size,
+        content_type=(upload.content_type or "")[:100],
+    )
+
+
+def add_review_attachment(survey: Survey, user, question_id, upload) -> QuestionAttachment:
+    """A reviewer or approver attaches a file to a question they are deciding on."""
+    _expect_live(survey)
+    question = next((q for q in all_questions(survey) if str(q.id) == str(question_id)), None)
+    deciding = (
+        question is not None
+        and (
+            (question.status == "awaiting_review" and survey.reviewer_id == user.pk)
+            or (question.status == "awaiting_approval" and survey.approver_id == user.pk)
+        )
+    )
+    if not deciding:
+        raise ApiError("You can only attach files to questions waiting for your decision.")
+    name = _check_upload(question, upload, question.attachments.filter(kind="review", uploaded_by=user, comment__isnull=True))
+    return QuestionAttachment.objects.create(
+        question=question, uploaded_by=user, file=upload, name=name, size=upload.size,
+        content_type=(upload.content_type or "")[:100], kind="review", submitted=True,
+    )
+
+
+def delete_attachment(survey: Survey, user, attachment: QuestionAttachment):
+    if attachment.kind == "review":
+        # Only your own file, and only until the decision it belongs to is sent.
+        if attachment.uploaded_by_id != user.pk or attachment.comment_id is not None:
+            raise ApiError("You can only remove your own files before sending your decision.")
+    else:
+        _my_open_question(survey, user, attachment.question_id)
+        if attachment.submitted:
+            # Already sent once: take it off the form but keep the file for the audit trail.
+            attachment.removed = True
+            attachment.save(update_fields=["removed"])
+            return
+    attachment.file.delete(save=False)
+    attachment.delete()
+
+
 @transaction.atomic
-def save_draft(survey: Survey, user, answers) -> Survey:
+def save_draft(survey: Survey, user, answers, notes=None) -> Survey:
     """Keep the respondent's work in progress. Required answers are not
     enforced yet (that happens on submit), but each answer given must still be
     the right shape for its question. Only the respondent's own open questions
@@ -425,7 +575,11 @@ def save_draft(survey: Survey, user, answers) -> Survey:
         validate_answer({"text": q.text, "type": q.type, "options": q.options, "required": False}, value)
         cleaned[question_id] = value.strip() if isinstance(value, str) else value
     survey.draft_answers = {**{k: v for k, v in survey.draft_answers.items() if k not in mine}, **cleaned}
-    survey.save(update_fields=["draft_answers"])
+    fields = ["draft_answers"]
+    if notes is not None:
+        survey.draft_notes = {**{k: v for k, v in survey.draft_notes.items() if k not in mine}, **_clean_notes(notes, set(mine))}
+        fields.append("draft_notes")
+    survey.save(update_fields=fields)
     return survey
 
 
@@ -446,6 +600,18 @@ def _clean_question_comments(survey, items, allowed=None):
     return list(cleaned.values())
 
 
+def _send_files(user, event, questions, comments):
+    """Tie the files `user` attached to these questions to the note sent with
+    this decision. A question with files but no written note gets a short one."""
+    by_question = {c.question_id: c for c in comments}
+    for q in questions:
+        pending = list(QuestionAttachment.objects.filter(question=q, kind="review", uploaded_by=user, comment__isnull=True))
+        if not pending:
+            continue
+        note = by_question.get(q.pk) or QuestionComment.objects.create(event=event, question=q, author=user, text="Attached files")
+        QuestionAttachment.objects.filter(pk__in=[a.pk for a in pending]).update(comment=note)
+
+
 def _return(survey, user, comment, question_comments, audience, questions, status):
     """Send questions back. A return needs something to act on: a general
     comment, a note on a question, or both."""
@@ -454,9 +620,10 @@ def _return(survey, user, comment, question_comments, audience, questions, statu
         raise ApiError("Add a comment, or a note on a question, explaining what to fix.")
     _set_status(questions, status)
     event = _log(survey, "returned", user, comment, audience, questions=questions)
-    QuestionComment.objects.bulk_create(
+    made = QuestionComment.objects.bulk_create(
         [QuestionComment(event=event, question=q, author=user, text=text) for q, text in notes]
     )
+    _send_files(user, event, questions, made)
 
 
 def _advance(survey, user, action, comment, question_comments, questions, status, progress):
@@ -465,9 +632,10 @@ def _advance(survey, user, action, comment, question_comments, questions, status
     notes = _clean_question_comments(survey, question_comments, questions)
     _set_status(questions, status, progress)
     event = _log(survey, action, user, comment, questions=questions)
-    QuestionComment.objects.bulk_create(
+    made = QuestionComment.objects.bulk_create(
         [QuestionComment(event=event, question=q, author=user, text=text) for q, text in notes]
     )
+    _send_files(user, event, questions, made)
 
 
 @transaction.atomic

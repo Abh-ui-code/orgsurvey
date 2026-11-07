@@ -7,11 +7,13 @@ import { Avatar } from "@/components/shared/avatar";
 import { Badge } from "@/components/ui/badge";
 import { formatDateTime, questionRange } from "@/lib/format";
 import { cn } from "@/lib/utils";
-import type { HistoryEntry, SurveyDetail } from "@/types/survey";
+import type { HistoryEntry, SubmissionDetail, SurveyDetail } from "@/types/survey";
 import { ACTION_META } from "../../../surveys/[id]/_components/activity-card";
 import { AUDIENCE_LABEL } from "../../../surveys/[id]/_components/question-comments";
 import { gapText, numberQuestions, roleOf, splitSetup } from "../../_lib";
 import { ByQuestion } from "./by-question";
+import { Evidence } from "./evidence";
+import { AttachmentList } from "../../../surveys/[id]/_components/question-attachments";
 
 /** The answer to a question as it stood at a step: the one submitted in that step, or
  * else the latest submission of that question before it. */
@@ -23,6 +25,15 @@ function answerAt(survey: SurveyDetail, questionId: string, event: HistoryEntry)
   if (!sent) return undefined;
   const value = formatAnswer(sent.snapshot[questionId]);
   return value === "—" ? undefined : value;
+}
+
+/** The note and files sent with a question's answer as it stood at a step. */
+function detailAt(survey: SurveyDetail, questionId: string, event: HistoryEntry): SubmissionDetail | undefined {
+  const sent =
+    event.action === "submitted"
+      ? event
+      : survey.history.filter((h) => h.action === "submitted" && h.question_ids.includes(questionId) && new Date(h.at) <= new Date(event.at)).pop();
+  return sent?.details?.[questionId];
 }
 
 /** How the question workflow stands, in words: the line under its heading. */
@@ -85,6 +96,7 @@ export function Journey({ survey }: { survey: SurveyDetail }) {
               survey={survey}
               tone={returned ? "rust" : "brand"}
               answerFor={(id) => answerAt(survey, id, event)}
+              detailFor={(id) => detailAt(survey, id, event)}
             />
           )}
           {event.comment && <p className="mt-2 whitespace-pre-wrap text-sm text-ink-muted">“{event.comment}”</p>}
@@ -99,6 +111,7 @@ export function Journey({ survey }: { survey: SurveyDetail }) {
                       {q?.question.text ?? "Question removed"}
                     </p>
                     <p className="mt-1 whitespace-pre-wrap text-sm text-ink">{c.text}</p>
+                    <AttachmentList surveyId={survey.id} files={c.attachments ?? []} />
                   </li>
                 );
               })}
@@ -216,6 +229,7 @@ function QuestionChips({
   survey,
   tone,
   answerFor,
+  detailFor,
 }: {
   ids: string[];
   numbers: number[];
@@ -224,6 +238,8 @@ function QuestionChips({
   tone: "brand" | "rust";
   /** The answer to show under each question: what was given at the time of this step. */
   answerFor?: (questionId: string) => string | undefined;
+  /** The respondent's note and files sent with that answer. */
+  detailFor?: (questionId: string) => SubmissionDetail | undefined;
 }) {
   const [open, setOpen] = useState(false);
   const byId = new Map(survey.sections.flatMap((s) => s.questions).map((q) => [q.id, q]));
@@ -260,6 +276,7 @@ function QuestionChips({
                       {answerFor(id) ?? "No answer"}
                     </span>
                   )}
+                  {detailFor && <Evidence surveyId={survey.id} detail={detailFor(id)} />}
                 </span>
                 {q?.responder && <span className="shrink-0 text-ink-faint">{q.responder.full_name}</span>}
               </li>

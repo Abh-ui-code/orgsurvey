@@ -9,9 +9,17 @@
   },
   {
    "ref": "303-1",
-   "text": "How does your organization interact with water as a shared resource?",
-   "type": "text",
-   "hint": "a. How the organization interacts with water (withdrawal, consumption, discharge) and related impacts. b. Approach used to identify water-related impacts. c. How impacts are addressed, including stakeholder and supplier/customer engagement. d. Process for setting water-related goals and targets."
+   "text": "Which water sources do you use?",
+   "type": "multi_choice",
+   "hint": "a. How the organization interacts with water (withdrawal, consumption, discharge) and related impacts. b. Approach used to identify water-related impacts. c. How impacts are addressed, including stakeholder and supplier/customer engagement. d. Process for setting water-related goals and targets.",
+   "options": [
+    "Surface water",
+    "Groundwater",
+    "Seawater",
+    "Rainwater",
+    "Municipal supply",
+    "Produced water"
+   ]
   },
   {
    "ref": "303-2",
@@ -27,9 +35,16 @@
   },
   {
    "ref": "303-4",
-   "text": "What was your total water discharge?",
-   "type": "text",
-   "hint": "a. Total discharge in megaliters by destination (surface water, groundwater, seawater, third-party water). b. Breakdown by freshwater and other water. c. Discharge to water-stress areas. d. Priority substances of concern treated, how defined, discharge limits, non-compliance incidents. e. Context on data compilation."
+   "text": "Where is your water discharged to?",
+   "type": "multi_choice",
+   "hint": "a. Total discharge in megaliters by destination (surface water, groundwater, seawater, third-party water). b. Breakdown by freshwater and other water. c. Discharge to water-stress areas. d. Priority substances of concern treated, how defined, discharge limits, non-compliance incidents. e. Context on data compilation.",
+   "options": [
+    "Surface water",
+    "Groundwater",
+    "Seawater",
+    "Third party",
+    "No discharge"
+   ]
   },
   {
    "ref": "303-5",

@@ -164,3 +164,6 @@ TIME_ZONE = env("TIME_ZONE")
 USE_I18N = False
 USE_TZ = True
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Files respondents attach to questions. Served only through an authenticated endpoint.
+MEDIA_ROOT = BASE_DIR / "media"

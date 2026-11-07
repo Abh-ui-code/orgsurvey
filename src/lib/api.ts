@@ -83,9 +83,11 @@ async function refreshAccess(): Promise<boolean> {
 export async function request<T>(method: string, path: string, body?: unknown, opts: { auth?: boolean } = {}): Promise<T> {
   const send = () => {
     const headers: Record<string, string> = {};
-    if (body !== undefined) headers["Content-Type"] = "application/json";
+    const upload = typeof FormData !== "undefined" && body instanceof FormData; // the browser sets that Content-Type itself
+    if (body !== undefined && !upload) headers["Content-Type"] = "application/json";
     if (opts.auth !== false && tokens.access) headers.Authorization = `Bearer ${tokens.access}`;
-    return fetch(`${apiBase()}${path}`, { method, headers, body: body === undefined ? undefined : JSON.stringify(body) });
+    const payload = body === undefined ? undefined : upload ? (body as FormData) : JSON.stringify(body);
+    return fetch(`${apiBase()}${path}`, { method, headers, body: payload });
   };
 
   let res: Response;
@@ -122,6 +124,8 @@ export const api = {
   /** A paginated list: `{ count, next, previous, results }`. */
   list: <T>(path: string, params?: Params) => request<Paginated<T>>("GET", withQuery(path, params)),
   post: <T>(path: string, body?: unknown, opts?: { auth?: boolean }) => request<T>("POST", path, body ?? {}, opts),
+  /** Send a file (and any other fields) as a multipart form. */
+  upload: <T>(path: string, form: FormData) => request<T>("POST", path, form),
   put: <T>(path: string, body: unknown) => request<T>("PUT", path, body),
   patch: <T>(path: string, body: unknown) => request<T>("PATCH", path, body),
   delete: (path: string) => request<null>("DELETE", path),

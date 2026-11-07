@@ -15,9 +15,18 @@
   },
   {
    "ref": "306-2",
-   "text": "How do you manage your significant waste-related impacts?",
-   "type": "text",
-   "hint": "a. Actions, including circularity measures, to prevent waste and manage significant impacts. b. If waste is managed by a third party, how you determine it complies with contractual or legislative obligations. c. Processes to collect and monitor waste-related data."
+   "text": "Which waste disposal methods do you use?",
+   "type": "multi_choice",
+   "hint": "a. Actions, including circularity measures, to prevent waste and manage significant impacts. b. If waste is managed by a third party, how you determine it complies with contractual or legislative obligations. c. Processes to collect and monitor waste-related data.",
+   "options": [
+    "Reuse",
+    "Recycling",
+    "Composting",
+    "Recovery",
+    "Incineration",
+    "Landfill",
+    "On-site storage"
+   ]
   },
   {
    "ref": "306-3",

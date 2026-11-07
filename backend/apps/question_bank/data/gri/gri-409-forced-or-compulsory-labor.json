@@ -9,9 +9,15 @@
   },
   {
    "ref": "409-1",
-   "text": "Identify operations and suppliers at significant risk for incidents of forced or compulsory labor, and the measures taken to contribute to its elimination.",
-   "type": "text",
-   "hint": "a. Operations and suppliers at significant risk, by type of operation and supplier, and by countries or geographic areas. b. Measures taken in the reporting period to contribute to the elimination of all forms of forced or compulsory labor."
+   "text": "Have you identified operations or suppliers at significant risk for incidents of forced or compulsory labor?",
+   "type": "single_choice",
+   "hint": "a. Operations and suppliers at significant risk, by type of operation and supplier, and by countries or geographic areas. b. Measures taken in the reporting period to contribute to the elimination of all forms of forced or compulsory labor.",
+   "options": [
+    "Yes, operations",
+    "Yes, suppliers",
+    "Yes, both",
+    "No"
+   ]
   }
  ]
 }

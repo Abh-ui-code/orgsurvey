@@ -42,6 +42,17 @@ export interface BankQuestion extends QuestionFields {
 }
 
 /** A question inside one survey: a copy, so bank edits never change it. */
+/** A file a respondent attached to a question as evidence. */
+export interface Attachment {
+  id: string;
+  name: string;
+  size: number;
+  /** False while the respondent is still working on it: only they can see it. */
+  submitted: boolean;
+  /** "response": the respondent's evidence. "review": attached by a reviewer or approver with a note. */
+  kind: "response" | "review";
+}
+
 export interface SurveyQuestion extends QuestionFields {
   id: string;
   order: number;
@@ -55,6 +66,8 @@ export interface SurveyQuestion extends QuestionFields {
   status: QuestionStatus;
   /** Furthest stage reached: 0 not submitted, 1 submitted, 2 passed review. */
   progress: number;
+  /** Files attached to this question (only the respondent sees unsent ones). */
+  attachments: Attachment[];
 }
 
 export type GriSeries = "universal" | "sector" | "economic" | "environmental" | "social";

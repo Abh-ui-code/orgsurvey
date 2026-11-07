@@ -5,6 +5,7 @@ import { EmptyState } from "@/components/ui/empty-state";
 import { formatDateTime } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import { questionTypeLabel } from "@/types/question";
+import { Evidence } from "./evidence";
 import type { SurveyDetail } from "@/types/survey";
 
 /** What was answered each time questions were submitted, one column per
@@ -87,6 +88,7 @@ export function AnswersByRound({ survey }: { survey: SurveyDetail }) {
                           return (
                             <td key={h.id} className={cn("px-4 py-3", value !== before && "bg-amber-soft")}>
                               <span className={empty ? "italic text-ink-faint" : "whitespace-pre-wrap font-medium text-ink"}>{empty ? "No answer" : value}</span>
+                              <Evidence surveyId={survey.id} detail={h.details?.[q.id]} />
                             </td>
                           );
                         })}

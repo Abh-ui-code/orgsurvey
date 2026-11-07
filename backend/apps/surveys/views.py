@@ -1,10 +1,12 @@
 import django_filters
 from django.contrib.auth import get_user_model
 from django.db.models import Count, Max, Q
+from django.http import FileResponse
 from django.utils import timezone
 from django.shortcuts import get_object_or_404
 from rest_framework import status, viewsets
 from rest_framework.decorators import action
+from rest_framework.parsers import MultiPartParser
 from rest_framework.response import Response
 
 from apps.core.exceptions import ApiError
@@ -12,9 +14,10 @@ from apps.core.permissions import IsAdminOrReadOnly, IsTenantAdmin, IsTenantMemb
 from apps.core.viewset_mixins import TenantScopedMixin
 from apps.question_bank.models import GriStandard, Question as BankQuestion
 from apps.surveys import services
-from apps.surveys.models import Section, Survey, SurveyCategory, SurveyQuestion
-from apps.surveys.scoping import scope_surveys, waiting_on
+from apps.surveys.models import QuestionAttachment, Section, Survey, SurveyCategory, SurveyQuestion
+from apps.surveys.scoping import scope_surveys, visible_questions, waiting_on
 from apps.surveys.serializers import (
+    can_open_review_file,
     AssignSerializer,
     CloseSerializer,
     DecisionSerializer,
@@ -175,7 +178,9 @@ class SurveyViewSet(TenantScopedMixin, viewsets.ModelViewSet):
         survey = self.get_object()
         body = SubmitSerializer(data=request.data)
         body.is_valid(raise_exception=True)
-        services.submit_response(survey, request.user, body.validated_data["answers"], body.validated_data["question_ids"])
+        services.submit_response(
+            survey, request.user, body.validated_data["answers"], body.validated_data["question_ids"], body.validated_data["notes"]
+        )
         return self._detail(survey)
 
     @action(detail=True, methods=["post"], url_path="save-draft", permission_classes=[IsTenantMember])
@@ -184,8 +189,42 @@ class SurveyViewSet(TenantScopedMixin, viewsets.ModelViewSet):
         survey = self.get_object()
         body = DraftSerializer(data=request.data)
         body.is_valid(raise_exception=True)
-        services.save_draft(survey, request.user, body.validated_data["answers"])
+        services.save_draft(survey, request.user, body.validated_data["answers"], body.validated_data["notes"])
         return self._detail(survey)
+
+    @action(detail=True, methods=["post"], url_path="attachments", permission_classes=[IsTenantMember], parser_classes=[MultiPartParser])
+    def attachments(self, request, pk=None):
+        """Attach a file to one of the respondent's open questions."""
+        survey = self.get_object()
+        upload = request.FILES.get("file")
+        if upload is None:
+            raise ApiError("Choose a file to attach.")
+        add = services.add_review_attachment if request.data.get("kind") == "review" else services.add_attachment
+        attachment = add(survey, request.user, request.data.get("question_id"), upload)
+        return Response(
+            {"id": str(attachment.pk), "name": attachment.name, "size": attachment.size, "submitted": attachment.submitted, "kind": attachment.kind},
+            status=status.HTTP_201_CREATED,
+        )
+
+    @action(detail=True, methods=["get", "delete"], url_path=r"attachments/(?P<attachment_id>[^/.]+)", permission_classes=[IsTenantMember])
+    def attachment(self, request, pk=None, attachment_id=None):
+        """Download (anyone who can see the question) or remove (its respondent) one attached file."""
+        survey = self.get_object()
+        attachment = get_object_or_404(QuestionAttachment, pk=attachment_id, question__section__survey=survey)
+        if request.method == "DELETE":
+            services.delete_attachment(survey, request.user, attachment)
+            return Response(status=status.HTTP_204_NO_CONTENT)
+        member = member_for(request)
+        is_admin = member is not None and member.role == "admin"
+        question = attachment.question
+        if attachment.kind == "review":
+            allowed = can_open_review_file(attachment, request.user, is_admin)
+        else:
+            own = question.responder_id == request.user.pk
+            allowed = own or (attachment.submitted and any(q.pk == question.pk for q in visible_questions(survey, request.user, is_admin)))
+        if not allowed:
+            raise ApiError("You can't open that file.")
+        return FileResponse(attachment.file.open("rb"), as_attachment=True, filename=attachment.name)
 
     @action(detail=True, methods=["post"], permission_classes=[IsTenantMember])
     def review(self, request, pk=None):
@@ -243,10 +282,10 @@ class SurveySectionViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=["post"], url_path="from-gri")
     def from_gri(self, request, **kwargs):
-        """Add a whole GRI Standard as a section."""
+        """Add the chosen questions of a GRI Standard (all if none named) as a section."""
         survey = get_object_or_404(Survey, pk=self.kwargs["survey_pk"])
         standard = get_object_or_404(GriStandard, pk=request.data.get("gri_standard_id"))
-        section = services.add_gri_section(survey, standard)
+        section = services.add_gri_section(survey, standard, request.data.get("question_ids"))
         return Response(self.get_serializer(section).data, status=status.HTTP_201_CREATED)
 
     @action(detail=True, methods=["post"])
@@ -258,6 +297,13 @@ class SurveySectionViewSet(viewsets.ModelViewSet):
             person = get_object_or_404(get_user_model(), pk=request.data["responder_id"])
         services.assign_section(section, person)
         return Response(self.get_serializer(self.get_object()).data)
+
+    @action(detail=False, methods=["post"])
+    def reorder(self, request, **kwargs):
+        """Set the order of all sections: {"ids": [...]}."""
+        survey = get_object_or_404(Survey, pk=self.kwargs["survey_pk"])
+        services.reorder_sections(survey, request.data.get("ids") or [])
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
     @action(detail=True, methods=["post"])
     def move(self, request, **kwargs):
@@ -300,6 +346,13 @@ class SurveyQuestionViewSet(viewsets.ModelViewSet):
 
     def perform_destroy(self, question):
         services.delete_question(question)
+
+    @action(detail=False, methods=["post"])
+    def reorder(self, request, **kwargs):
+        """Set the order of the section's questions: {"ids": [...]}."""
+        section = get_object_or_404(Section, pk=self.kwargs["section_pk"], survey_id=self.kwargs["survey_pk"])
+        services.reorder_questions(section, request.data.get("ids") or [])
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
     @action(detail=True, methods=["post"])
     def move(self, request, **kwargs):

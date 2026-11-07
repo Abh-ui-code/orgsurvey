@@ -3,15 +3,27 @@
  "questions": [
   {
    "ref": "102-1",
-   "text": "What is your transition plan for climate change mitigation?",
-   "type": "text",
-   "hint": "a. Plan, policies and actions; b. alignment with 1.5 C science, scenarios, methods; c. expenditure (amount and % of total); d. governance responsibility; e. embedding in strategy; f. targets (GHG, fossil fuel phase-out, other) and progress; g. just transition alignment and stakeholder engagement; h. impacts on people, environment and biodiversity; i. consistency of lobbying; j. if no plan, why and timeline."
+   "text": "Do you have a transition plan for climate change mitigation?",
+   "type": "single_choice",
+   "hint": "a. Plan, policies and actions; b. alignment with 1.5 C science, scenarios, methods; c. expenditure (amount and % of total); d. governance responsibility; e. embedding in strategy; f. targets (GHG, fossil fuel phase-out, other) and progress; g. just transition alignment and stakeholder engagement; h. impacts on people, environment and biodiversity; i. consistency of lobbying; j. if no plan, why and timeline.",
+   "options": [
+    "Yes, published",
+    "Yes, not published",
+    "In development",
+    "No"
+   ]
   },
   {
    "ref": "102-2",
-   "text": "What is your climate change adaptation plan?",
-   "type": "text",
-   "hint": "a. Impacts on people and environment from climate risks and opportunities; b. plan: policies and actions, scenarios and temperature projection, expenditure, governance, targets and progress, just transition alignment; c. impacts of implementing the plan on workers, communities, Indigenous Peoples and biodiversity; d. if no plan, why and timeline."
+   "text": "Do you have a climate change adaptation plan?",
+   "type": "single_choice",
+   "hint": "a. Impacts on people and environment from climate risks and opportunities; b. plan: policies and actions, scenarios and temperature projection, expenditure, governance, targets and progress, just transition alignment; c. impacts of implementing the plan on workers, communities, Indigenous Peoples and biodiversity; d. if no plan, why and timeline.",
+   "options": [
+    "Yes, published",
+    "Yes, not published",
+    "In development",
+    "No"
+   ]
   },
   {
    "ref": "102-3",
@@ -21,9 +33,14 @@
   },
   {
    "ref": "102-4",
-   "text": "What are your GHG emissions reduction targets and your progress toward them?",
-   "type": "text",
-   "hint": "a. Short-, medium-, long-term gross Scope 1, 2, 3 targets in tCO2e and % of base year; b. biogenic CO2 included; c. location- or market-based; d. Scope 3 categories; e. gases; f. alignment with 1.5 C; g. revision policy; h. base year details; i. progress; j. reductions due to initiatives or other factors; k. standards and tools."
+   "text": "What kind of GHG emissions reduction target do you have?",
+   "type": "single_choice",
+   "hint": "a. Short-, medium-, long-term gross Scope 1, 2, 3 targets in tCO2e and % of base year; b. biogenic CO2 included; c. location- or market-based; d. Scope 3 categories; e. gases; f. alignment with 1.5 C; g. revision policy; h. base year details; i. progress; j. reductions due to initiatives or other factors; k. standards and tools.",
+   "options": [
+    "Science-based target (validated)",
+    "Own target",
+    "No target"
+   ]
   },
   {
    "ref": "102-5",

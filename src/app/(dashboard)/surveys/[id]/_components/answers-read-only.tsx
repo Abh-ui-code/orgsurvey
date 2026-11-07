@@ -15,7 +15,18 @@ import { questionTypeLabel } from "@/types/question";
 import { QUESTION_STATUSES, type QuestionStatus, type SurveyDetail } from "@/types/survey";
 import { useAssignQuestions } from "../_hooks/use-survey-actions";
 import { commentsByQuestion, QuestionComments } from "./question-comments";
+import { AttachmentList, AttachmentPicker } from "./question-attachments";
 import { SectionedQuestions } from "./sectioned-questions";
+
+/** One labelled row inside a question's answer box. */
+function Block({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div className="grid gap-1 px-3 py-2.5 sm:grid-cols-[8.5rem_minmax(0,1fr)] sm:gap-3">
+      <p className="pt-0.5 text-2xs font-semibold uppercase tracking-wide text-ink-faint">{label}</p>
+      <div className="min-w-0">{children}</div>
+    </div>
+  );
+}
 
 export type Choice = "pass" | "return";
 
@@ -168,6 +179,7 @@ export function AnswersReadOnly({ survey, deciding, canReassign }: { survey: Sur
           const pickable = deciding?.status === q.status;
           const choice = deciding?.choices[q.id];
           const note = deciding?.notes[q.id] ?? "";
+          const files = q.attachments.filter((f) => f.kind === "response");
           const canMove = canReassign && (q.status === "awaiting_response" || q.status === "returned");
           return (
             <li
@@ -206,48 +218,71 @@ export function AnswersReadOnly({ survey, deciding, canReassign }: { survey: Sur
                       />
                     </div>
                   )}
-                  <p className={empty ? "mt-1 text-sm italic text-ink-faint" : "mt-1 whitespace-pre-wrap text-sm font-medium text-ink"}>
-                    {empty ? "No answer" : answer}
-                  </p>
-                  <QuestionComments comments={past[q.id]} />
+                  <div className="mt-3 divide-y divide-line overflow-hidden rounded-lg border border-line">
+                    <Block label="Answer">
+                      <p className={empty ? "text-sm italic text-ink-faint" : "whitespace-pre-wrap text-sm font-medium text-ink"}>{empty ? "No answer" : answer}</p>
+                    </Block>
+                    {survey.notes[q.id] && (
+                      <Block label="Respondent's note">
+                        <p className="whitespace-pre-wrap text-sm text-ink-muted">{survey.notes[q.id]}</p>
+                      </Block>
+                    )}
+                    {files.length > 0 && (
+                      <Block label={`Attachments (${files.length})`}>
+                        <AttachmentList surveyId={survey.id} files={files} />
+                      </Block>
+                    )}
+                  </div>
+                  {past[q.id]?.length > 0 && (
+                    <div className="mt-3">
+                      <p className="text-2xs font-semibold uppercase tracking-wide text-ink-faint">Review comments</p>
+                      <QuestionComments comments={past[q.id]} surveyId={survey.id} />
+                    </div>
+                  )}
                   {deciding && pickable && (
-                    <div className="mt-3 space-y-2">
-                      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-                        <div
-                          role="radiogroup"
-                          aria-label={`Decision for question ${n}`}
-                          className="inline-flex overflow-hidden rounded-md border border-line text-xs font-medium"
-                        >
-                          {(["pass", "return"] as const).map((c) => (
-                            <button
-                              key={c}
-                              type="button"
-                              role="radio"
-                              aria-checked={choice === c}
-                              onClick={() => deciding.onChoose([q.id], choice === c ? null : c)}
-                              className={cn(
-                                "px-3 py-1.5 transition-colors",
-                                choice === c
-                                  ? c === "pass"
-                                    ? "bg-moss text-white"
-                                    : "bg-rust text-white"
-                                  : "bg-paper-raised text-ink-muted hover:bg-paper-sunken",
-                                c === "return" && "border-l border-line",
-                              )}
-                            >
-                              {c === "pass" ? deciding.passLabel : "Return"}
-                            </button>
-                          ))}
-                        </div>
-                        {!(open[q.id] || note || choice === "return") && (
-                          <button
-                            type="button"
-                            onClick={() => setOpen({ ...open, [q.id]: true })}
-                            className="inline-flex items-center gap-1.5 rounded-md px-2 py-1.5 text-xs font-medium text-brand hover:bg-brand-soft"
+                    <div className="mt-3 space-y-3 rounded-lg border border-line bg-paper-sunken/50 p-3">
+                      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+                        <div className="flex items-center gap-3">
+                          <span className="text-2xs font-semibold uppercase tracking-wide text-ink-faint">Your decision</span>
+                          <div
+                            role="radiogroup"
+                            aria-label={`Decision for question ${n}`}
+                            className="inline-flex overflow-hidden rounded-md border border-line text-xs font-medium"
                           >
-                            <MessageSquarePlus className="h-3.5 w-3.5" /> Add comment
-                          </button>
-                        )}
+                            {(["pass", "return"] as const).map((c) => (
+                              <button
+                                key={c}
+                                type="button"
+                                role="radio"
+                                aria-checked={choice === c}
+                                onClick={() => deciding.onChoose([q.id], choice === c ? null : c)}
+                                className={cn(
+                                  "px-3 py-1.5 transition-colors",
+                                  choice === c
+                                    ? c === "pass"
+                                      ? "bg-moss text-white"
+                                      : "bg-rust text-white"
+                                    : "bg-paper-raised text-ink-muted hover:bg-paper-sunken",
+                                  c === "return" && "border-l border-line",
+                                )}
+                              >
+                                {c === "pass" ? deciding.passLabel : "Return"}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          {!(open[q.id] || note || choice === "return") && (
+                            <button
+                              type="button"
+                              onClick={() => setOpen({ ...open, [q.id]: true })}
+                              className="inline-flex items-center gap-1.5 rounded-md px-2 py-1.5 text-xs font-medium text-brand hover:bg-brand-soft"
+                            >
+                              <MessageSquarePlus className="h-3.5 w-3.5" /> Add comment
+                            </button>
+                          )}
+                          <AttachmentPicker surveyId={survey.id} questionId={q.id} kind="review" files={q.attachments.filter((f) => f.kind === "review")} />
+                        </div>
                       </div>
                       {open[q.id] || note || choice === "return" ? (
                         <Textarea

@@ -1,5 +1,6 @@
 import { MessageSquare } from "lucide-react";
 import { formatDateTime } from "@/lib/format";
+import { AttachmentList } from "./question-attachments";
 import type { HistoryEntry, QuestionComment, ReturnAudience } from "@/types/survey";
 
 export interface PinnedComment extends QuestionComment {
@@ -36,7 +37,7 @@ export function commentsByQuestion(history: HistoryEntry[], visibleTo?: "respond
 }
 
 /** The notes on one question, shown under it. */
-export function QuestionComments({ comments }: { comments?: PinnedComment[] }) {
+export function QuestionComments({ comments, surveyId }: { comments?: PinnedComment[]; surveyId?: string }) {
   if (!comments?.length) return null;
   return (
     <ul className="mt-2 space-y-1.5">
@@ -54,6 +55,7 @@ export function QuestionComments({ comments }: { comments?: PinnedComment[] }) {
             {c.by?.full_name ?? "Someone"} · {c.label} · {formatDateTime(c.at)}
           </p>
           <p className="mt-1 whitespace-pre-wrap text-ink">{c.text}</p>
+          {surveyId && <AttachmentList surveyId={surveyId} files={c.attachments ?? []} />}
         </li>
       ))}
     </ul>

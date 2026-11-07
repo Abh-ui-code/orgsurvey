@@ -41,13 +41,13 @@ def test_workbook_describes_the_whole_flow(monkeypatch):
     q2 = NS(pk="q2", id="q2", section=section, text="Rate it", type="rating", options=[], required=True, hint="", responder=people["responder"], status="approved")
     monkeypatch.setattr(audit.SurveyQuestion, "objects", NS(filter=lambda **kw: FakeQS([q1, q2])))
     both = Many([q1, q2])
-    note = NS(question_id="q2", pk="n1", text="Too high, explain", author=people["approver"])
+    note = NS(question_id="q2", pk="n1", text="Too high, explain", author=people["approver"], attachments=Many([NS(name="benchmark.pdf")]))
     events = [
-        NS(pk="e1", action="created", by=None, by_id=None, created_at=at(1), comment="", audience="", snapshot={}, question_comments=Many([]), questions=both),
-        NS(pk="e2", action="submitted", by=people["responder"], by_id="responder", created_at=at(2), comment="", audience="", snapshot={"q1": "Yes", "q2": 5}, question_comments=Many([]), questions=both),
-        NS(pk="e3", action="returned", by=people["approver"], by_id="approver", created_at=at(3), comment="See Q2", audience="both", snapshot={}, question_comments=Many([note]), questions=both),
-        NS(pk="e4", action="submitted", by=people["responder"], by_id="responder", created_at=at(4), comment="", audience="", snapshot={"q1": "Yes", "q2": 3}, question_comments=Many([]), questions=both),
-        NS(pk="e5", action="approved", by=people["approver"], by_id="approver", created_at=at(5), comment="", audience="", snapshot={}, question_comments=Many([]), questions=both),
+        NS(pk="e1", action="created", by=None, by_id=None, created_at=at(1), comment="", audience="", snapshot={}, details={}, question_comments=Many([]), questions=both),
+        NS(pk="e2", action="submitted", by=people["responder"], by_id="responder", created_at=at(2), comment="", audience="", snapshot={"q1": "Yes", "q2": 5}, details={}, question_comments=Many([]), questions=both),
+        NS(pk="e3", action="returned", by=people["approver"], by_id="approver", created_at=at(3), comment="See Q2", audience="both", snapshot={}, details={}, question_comments=Many([note]), questions=both),
+        NS(pk="e4", action="submitted", by=people["responder"], by_id="responder", created_at=at(4), comment="", audience="", snapshot={"q1": "Yes", "q2": 3}, details={"q2": {"note": "Reduced after review", "files": [{"id": "f1", "name": "proof.pdf", "size": 10}]}}, question_comments=Many([]), questions=both),
+        NS(pk="e5", action="approved", by=people["approver"], by_id="approver", created_at=at(5), comment="", audience="", snapshot={}, details={}, question_comments=Many([]), questions=both),
     ]
     survey = NS(
         title="Pulse", description="", instructions="", status="approved", due_date=None, created_at=at(1), published_at=at(1),
@@ -75,8 +75,12 @@ def test_workbook_describes_the_whole_flow(monkeypatch):
     start = next(i for i, r in enumerate(rows) if r[0] == "Q#")
     q1_row, q2_row = rows[start + 1], rows[start + 2]
     assert q1_row[6] == "No comments" and q1_row[4:6] == ("Yes", "Yes")
-    assert q2_row[4:6] == (5, 3)
+    assert q2_row[4] == 5 and str(q2_row[5]).startswith("3")
+    # The respondent's note and files ride along with the answer they were sent with.
+    assert "Note: Reduced after review" in str(q2_row[5]) and "Files: proof.pdf" in str(q2_row[5])
     assert "Approver) → Respondent and reviewer" in str(q2_row[6]) and "Too high, explain" in str(q2_row[6])
+    # A reviewer's files are listed with the comment they were sent with.
+    assert "Files: benchmark.pdf" in str(q2_row[6])
     assert any(str(c).startswith("Submission 2") for c in cells)
 
     # An answer that changed since the previous submission is highlighted.

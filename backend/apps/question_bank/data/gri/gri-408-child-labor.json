@@ -9,9 +9,15 @@
   },
   {
    "ref": "408-1",
-   "text": "Identify operations and suppliers at significant risk for incidents of child labor or of young workers exposed to hazardous work, and the measures taken to contribute to the effective abolition of child labor.",
-   "type": "text",
-   "hint": "a. Operations and suppliers at significant risk for child labor or young workers exposed to hazardous work. b. Risk by type of operation and supplier, and by country or geographic area. c. Measures taken in the reporting period to contribute to the abolition of child labor."
+   "text": "Have you identified operations or suppliers at significant risk for incidents of child labor?",
+   "type": "single_choice",
+   "hint": "a. Operations and suppliers at significant risk for child labor or young workers exposed to hazardous work. b. Risk by type of operation and supplier, and by country or geographic area. c. Measures taken in the reporting period to contribute to the abolition of child labor.",
+   "options": [
+    "Yes, operations",
+    "Yes, suppliers",
+    "Yes, both",
+    "No"
+   ]
   }
  ]
 }

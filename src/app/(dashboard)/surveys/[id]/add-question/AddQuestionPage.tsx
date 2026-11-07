@@ -2,7 +2,7 @@
 
 import { ArrowLeft, BookOpen, Check, FileText, Plus, X } from "lucide-react";
 import Link from "next/link";
-import { useParams, useSearchParams } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
 import { IconButton } from "@/components/shared/icon-button";
@@ -23,7 +23,7 @@ import { useDebounced } from "@/hooks/use-debounced";
 import { useSurvey } from "@/hooks/use-surveys";
 import { GRI_SERIES, questionTypeLabel } from "@/types/question";
 import type { SurveyDetail } from "@/types/survey";
-import { useAddGriSection, useAddQuestion, useDeleteQuestion, useDeleteSection } from "../_hooks/use-survey-builder";
+import { useAddQuestion, useDeleteQuestion, useDeleteSection } from "../_hooks/use-survey-builder";
 
 const PAGE = 20;
 
@@ -33,7 +33,7 @@ function BankPicker({ survey, sectionId }: { survey: SurveyDetail; sectionId: st
   const add = useAddQuestion(survey.id);
   const remove = useDeleteQuestion(survey.id);
   const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState(useSearchParams().get("gri") ? GRI_CATEGORY : "");
   const [size, setSize] = useState(PAGE);
   const gri = category === GRI_CATEGORY;
   const bank = useBankQuestions({ search: useDebounced(search), category: gri ? "" : category, page_size: size }, !gri);
@@ -78,7 +78,7 @@ function BankPicker({ survey, sectionId }: { survey: SurveyDetail; sectionId: st
       </div>
 
       {gri ? (
-        <GriPicker survey={survey} search={search} />
+        <GriPicker survey={survey} search={search} sectionId={sectionId} />
       ) : (
         <>
           {bank.isPending ? (
@@ -156,20 +156,21 @@ function BankPicker({ survey, sectionId }: { survey: SurveyDetail; sectionId: st
   );
 }
 
-/** Add a whole GRI standard as its own section. */
-function GriPicker({ survey, search }: { survey: SurveyDetail; search: string }) {
+/** Choose which questions of a GRI standard go into the survey. */
+function GriPicker({ survey, search, sectionId }: { survey: SurveyDetail; search: string; sectionId: string }) {
   const standards = useGriStandards();
-  const add = useAddGriSection(survey.id);
   const remove = useDeleteSection(survey.id);
+  const router = useRouter();
+  const open = (standardId: string) => router.push(`/surveys/${survey.id}/add-question/gri/${standardId}?section=${sectionId}`);
   const q = search.trim().toLowerCase();
   const rows = (standards.data ?? []).filter((s) => !q || `${s.code} ${s.title}`.toLowerCase().includes(q));
-  const added = new Map(survey.sections.filter((s) => s.gri).map((s) => [s.gri!.id, s.id]));
+  const added = new Map(survey.sections.filter((s) => s.gri).map((s) => [s.gri!.id, s]));
   const fail = (e: Error) => toast.error(e.message);
 
   return (
     <div className="space-y-4">
       <p className="text-sm text-ink-muted">
-        A GRI standard is added as a whole new section, with every question in it. You then assign the section to one respondent.
+        Open a GRI standard and tick the questions you want. Only the ticked questions are added, as one section you then assign to one respondent.
       </p>
       {standards.isPending ? (
         <Skeleton className="h-40" />
@@ -182,17 +183,22 @@ function GriPicker({ survey, search }: { survey: SurveyDetail; search: string })
           return (
             <section key={series.value}>
               <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-ink-faint">{series.label}</h3>
-              <ul className="grid gap-3 md:grid-cols-2">
+              <ul className="grid items-start gap-3 md:grid-cols-2">
                 {group.map((s) => {
-                  const sectionId = added.get(s.id);
+                  const section = added.get(s.id);
                   return (
-                    <li key={s.id} className="flex flex-col gap-2 rounded-lg border border-line bg-paper-raised p-4">
+                    <li
+                      key={s.id}
+                      className="flex cursor-pointer flex-col gap-2 rounded-lg border border-line bg-paper-raised p-4 hover:border-brand/40"
+                      onClick={() => open(s.id)}
+                    >
                       <div className="flex items-center justify-between gap-2">
                         <Badge tone="brand">{s.code}</Badge>
                         <a
                           href={s.pdf}
                           target="_blank"
                           rel="noreferrer"
+                          onClick={(e) => e.stopPropagation()}
                           className="inline-flex items-center gap-1 text-xs text-brand-strong hover:underline"
                         >
                           <FileText className="h-3.5 w-3.5" /> PDF
@@ -202,32 +208,39 @@ function GriPicker({ survey, search }: { survey: SurveyDetail; search: string })
                       <p className="line-clamp-2 flex-1 text-xs text-ink-muted">{s.summary}</p>
                       <div className="flex items-center justify-between gap-2">
                         <span className="text-xs text-ink-faint">
-                          {s.question_count} question{s.question_count === 1 ? "" : "s"}
+                          {section ? `${section.questions.length} of ${s.question_count}` : s.question_count} question
+                          {s.question_count === 1 ? "" : "s"}
                         </span>
-                        {sectionId ? (
-                          <span className="flex items-center gap-2">
-                            <span className="flex items-center gap-1 text-xs font-medium text-moss">
-                              <Check className="h-3.5 w-3.5" /> Added
-                            </span>
-                            <Button
-                              size="sm"
-                              variant="ghost"
-                              disabled={remove.isPending}
-                              onClick={() => remove.mutate(sectionId, { onSuccess: () => toast.success("Section removed"), onError: fail })}
-                            >
-                              Remove
-                            </Button>
-                          </span>
-                        ) : (
+                        <span className="flex items-center gap-2">
+                          {section && (
+                            <>
+                              <span className="flex items-center gap-1 text-xs font-medium text-moss">
+                                <Check className="h-3.5 w-3.5" /> Added
+                              </span>
+                              <Button
+                                size="sm"
+                                variant="ghost"
+                                disabled={remove.isPending}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  remove.mutate(section.id, { onSuccess: () => toast.success("Section removed"), onError: fail });
+                                }}
+                              >
+                                Remove
+                              </Button>
+                            </>
+                          )}
                           <Button
                             size="sm"
                             variant="secondary"
-                            disabled={add.isPending}
-                            onClick={() => add.mutate(s.id, { onSuccess: () => toast.success(`${s.code} added as a section`), onError: fail })}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              open(s.id);
+                            }}
                           >
-                            <Plus className="h-3.5 w-3.5" /> Add section
+                            {section ? "Edit selection" : "Choose questions"}
                           </Button>
-                        )}
+                        </span>
                       </div>
                     </li>
                   );
@@ -318,10 +331,19 @@ export default function AddQuestionPage() {
               <TabsList>
                 <TabsTrigger value="bank">From question bank</TabsTrigger>
                 <TabsTrigger value="new">Write new</TabsTrigger>
+                {section.gri && <TabsTrigger value="gri">{section.gri.code} questions</TabsTrigger>}
               </TabsList>
               <TabsContent value="bank" className="pt-5">
                 <BankPicker survey={survey.data} sectionId={section.id} />
               </TabsContent>
+              {section.gri && (
+                <TabsContent value="gri" className="space-y-3 pt-5">
+                  <p className="text-sm text-ink-muted">Tick which questions of {section.gri.code}: {section.gri.title} belong in this section.</p>
+                  <Button asChild variant="secondary">
+                    <Link href={`/surveys/${survey.data.id}/add-question/gri/${section.gri.id}?section=${section.id}`}>Choose {section.gri.code} questions</Link>
+                  </Button>
+                </TabsContent>
+              )}
               <TabsContent value="new" className="pt-5">
                 <WriteNew surveyId={survey.data.id} sectionId={section.id} />
               </TabsContent>

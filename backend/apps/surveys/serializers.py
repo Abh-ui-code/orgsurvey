@@ -93,15 +93,45 @@ class SectionSerializer(serializers.ModelSerializer):
         return value
 
 
+def can_open_review_file(attachment, user, is_admin: bool) -> bool:
+    """A file a reviewer or approver sent with a note: its author and administrators
+    always; the question's respondent only if the note was returned to them; the rest
+    of the review chain (who can see the question) otherwise."""
+    if attachment.uploaded_by_id == user.pk:
+        return True
+    comment = attachment.comment
+    if comment is None:
+        return False  # not sent yet: private to its author
+    if is_admin:
+        return True
+    event = comment.event
+    if attachment.question.responder_id == user.pk:
+        return event.action == "returned" and event.audience in ("responder", "both")
+    return True
+
+
 class QuestionCommentSerializer(serializers.ModelSerializer):
     question_id = serializers.UUIDField(read_only=True)
     by = PersonSerializer(source="author", read_only=True)
     at = serializers.DateTimeField(source="created_at", read_only=True)
+    attachments = serializers.SerializerMethodField()
 
     class Meta:
         model = QuestionComment
-        fields = ["id", "question_id", "by", "at", "text"]
+        fields = ["id", "question_id", "by", "at", "text", "attachments"]
         read_only_fields = fields
+
+    def get_attachments(self, comment):
+        request = self.context.get("request")
+        if request is None:
+            return []
+        member = member_for(request)
+        is_admin = bool(member is not None and member.role == "admin")
+        return [
+            {"id": str(a.pk), "name": a.name, "size": a.size, "submitted": True, "kind": "review"}
+            for a in comment.attachments.all()
+            if can_open_review_file(a, request.user, is_admin)
+        ]
 
 
 class SurveyEventSerializer(serializers.ModelSerializer):
@@ -113,7 +143,7 @@ class SurveyEventSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = SurveyEvent
-        fields = ["id", "action", "by", "at", "comment", "audience", "snapshot", "question_comments", "question_ids"]
+        fields = ["id", "action", "by", "at", "comment", "audience", "snapshot", "details", "question_comments", "question_ids"]
         read_only_fields = fields
 
     def get_question_ids(self, event):
@@ -205,7 +235,7 @@ class SurveyDetailSerializer(SurveyListSerializer):
     class Meta(SurveyListSerializer.Meta):
         fields = [
             *SurveyListSerializer.Meta.fields,
-            "instructions", "sections", "answers", "draft_answers", "readiness", "history", "created_by", "respondents",
+            "instructions", "sections", "answers", "draft_answers", "notes", "draft_notes", "readiness", "history", "created_by", "respondents",
         ]
         read_only_fields = fields
 
@@ -224,6 +254,20 @@ class SurveyDetailSerializer(SurveyListSerializer):
         # Work in progress belongs to the respondent alone, administrators included.
         own = {str(q.pk) for q in survey_questions(survey) if user is not None and q.responder_id == user.pk}
         data["draft_answers"] = {k: v for k, v in data["draft_answers"].items() if k in own}
+        data["draft_notes"] = {k: v for k, v in data["draft_notes"].items() if k in own}
+        # Attached files: the respondent sees all of theirs, everyone else only what was submitted.
+        files = {}
+        for q in survey_questions(survey):
+            files[str(q.pk)] = [
+                {"id": str(a.pk), "name": a.name, "size": a.size, "submitted": a.submitted, "kind": a.kind}
+                for a in q.attachments.all()
+                if (a.kind == "response" and not a.removed and (a.submitted or str(q.pk) in own))
+                # a reviewer's or approver's file not yet sent with a decision: only its author sees it
+                or (a.kind == "review" and a.comment_id is None and user is not None and a.uploaded_by_id == user.pk)
+            ]
+        for section in data["sections"]:
+            for q in section["questions"]:
+                q["attachments"] = files.get(q["id"], [])
         if user is None or is_admin:
             return data
         seen = {str(q.pk) for q in visible_questions(survey, user, is_admin)}
@@ -234,6 +278,7 @@ class SurveyDetailSerializer(SurveyListSerializer):
                 sections.append({**section, "questions": questions})
         data["sections"] = sections
         data["answers"] = {k: v for k, v in data["answers"].items() if k in seen}
+        data["notes"] = {k: v for k, v in data["notes"].items() if k in seen}
         history = []
         for event in data["history"]:
             if event["question_ids"]:
@@ -244,6 +289,7 @@ class SurveyDetailSerializer(SurveyListSerializer):
                     **event,
                     "question_ids": ids,
                     "snapshot": {k: v for k, v in event["snapshot"].items() if k in seen},
+                    "details": {k: v for k, v in event["details"].items() if k in seen},
                     "question_comments": [c for c in event["question_comments"] if c["question_id"] in seen],
                 }
             history.append(event)
@@ -302,12 +348,14 @@ class SurveyUpdateSerializer(serializers.Serializer):
 
 class SubmitSerializer(serializers.Serializer):
     answers = serializers.DictField()
+    notes = serializers.DictField(required=False, allow_null=True, default=None)
     # Which of the respondent's questions to submit; all open ones when omitted.
     question_ids = serializers.ListField(child=serializers.UUIDField(), required=False, allow_null=True, default=None)
 
 
 class DraftSerializer(serializers.Serializer):
     answers = serializers.DictField()
+    notes = serializers.DictField(required=False, allow_null=True, default=None)
 
 
 class QuestionNoteSerializer(serializers.Serializer):

@@ -9,15 +9,27 @@
   },
   {
    "ref": "11.1.2",
-   "text": "Report GRI 102-1 Transition plan for climate change mitigation, as it relates to climate change.",
-   "type": "text",
-   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 102: Climate Change 2025, Disclosure 102-1 Transition plan for climate change mitigation."
+   "text": "Do you have a transition plan for climate change mitigation?",
+   "type": "single_choice",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 102: Climate Change 2025, Disclosure 102-1 Transition plan for climate change mitigation.",
+   "options": [
+    "Yes, published",
+    "Yes, not published",
+    "In development",
+    "No"
+   ]
   },
   {
    "ref": "11.1.3",
-   "text": "Report GRI 102-2 Climate change adaptation plan, as it relates to climate change.",
-   "type": "text",
-   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 102: Climate Change 2025, Disclosure 102-2 Climate change adaptation plan."
+   "text": "Do you have a climate change adaptation plan?",
+   "type": "single_choice",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 102: Climate Change 2025, Disclosure 102-2 Climate change adaptation plan.",
+   "options": [
+    "Yes, published",
+    "Yes, not published",
+    "In development",
+    "No"
+   ]
   },
   {
    "ref": "11.1.4",
@@ -27,9 +39,14 @@
   },
   {
    "ref": "11.1.5",
-   "text": "Report GRI 102-4 GHG emissions reduction targets and progress, as it relates to climate change.",
-   "type": "text",
-   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 102: Climate Change 2025, Disclosure 102-4 GHG emissions reduction targets and progress."
+   "text": "What kind of GHG emissions reduction target do you have?",
+   "type": "single_choice",
+   "hint": "Topic 11.1 Climate change. Referenced disclosure: GRI 102: Climate Change 2025, Disclosure 102-4 GHG emissions reduction targets and progress.",
+   "options": [
+    "Science-based target (validated)",
+    "Own target",
+    "No target"
+   ]
   },
   {
    "ref": "11.1.6",
@@ -105,9 +122,18 @@
   },
   {
    "ref": "11.3.2",
-   "text": "Report GRI 305-7 Nitrogen oxides (NOx), sulfur oxides (SOx), and other significant air emissions, as it relates to air emissions.",
-   "type": "text",
-   "hint": "Topic 11.3 Air emissions. Referenced disclosure: GRI 305: Emissions 2016, Disclosure 305-7 Nitrogen oxides (NOx), sulfur oxides (SOx), and other significant air emissions."
+   "text": "Which significant air emissions do you track?",
+   "type": "multi_choice",
+   "hint": "Topic 11.3 Air emissions. Referenced disclosure: GRI 305: Emissions 2016, Disclosure 305-7 Nitrogen oxides (NOx), sulfur oxides (SOx), and other significant air emissions.",
+   "options": [
+    "NOx",
+    "SOx",
+    "Particulate matter",
+    "VOCs",
+    "Persistent organic pollutants",
+    "Hazardous air pollutants",
+    "Other"
+   ]
   },
   {
    "ref": "11.3.3",
@@ -123,9 +149,15 @@
   },
   {
    "ref": "11.4.2",
-   "text": "Report GRI 101-1 Policies to halt and reverse biodiversity loss, as it relates to biodiversity.",
-   "type": "text",
-   "hint": "Topic 11.4 Biodiversity. Referenced disclosure: GRI 101: Biodiversity 2024, Disclosure 101-1 Policies to halt and reverse biodiversity loss."
+   "text": "Do you have a published commitment to halt and reverse biodiversity loss?",
+   "type": "single_choice",
+   "hint": "Topic 11.4 Biodiversity. Referenced disclosure: GRI 101: Biodiversity 2024, Disclosure 101-1 Policies to halt and reverse biodiversity loss.",
+   "options": [
+    "Yes, with targets",
+    "Yes, without targets",
+    "In development",
+    "No"
+   ]
   },
   {
    "ref": "11.4.3",
@@ -147,9 +179,17 @@
   },
   {
    "ref": "11.4.6",
-   "text": "Report GRI 101-6 Direct drivers of biodiversity loss, as it relates to biodiversity.",
-   "type": "text",
-   "hint": "Topic 11.4 Biodiversity. Referenced disclosure: GRI 101: Biodiversity 2024, Disclosure 101-6 Direct drivers of biodiversity loss."
+   "text": "Which direct drivers of biodiversity loss are associated with your sites and supply chain?",
+   "type": "multi_choice",
+   "hint": "Topic 11.4 Biodiversity. Referenced disclosure: GRI 101: Biodiversity 2024, Disclosure 101-6 Direct drivers of biodiversity loss.",
+   "options": [
+    "Land or sea use change",
+    "Overexploitation",
+    "Climate change",
+    "Pollution",
+    "Invasive species",
+    "Other"
+   ]
   },
   {
    "ref": "11.4.7",
@@ -159,9 +199,15 @@
   },
   {
    "ref": "11.4.8",
-   "text": "Report GRI 101-8 Ecosystem services, as it relates to biodiversity.",
-   "type": "text",
-   "hint": "Topic 11.4 Biodiversity. Referenced disclosure: GRI 101: Biodiversity 2024, Disclosure 101-8 Ecosystem services."
+   "text": "Which types of ecosystem services are affected by your activities?",
+   "type": "multi_choice",
+   "hint": "Topic 11.4 Biodiversity. Referenced disclosure: GRI 101: Biodiversity 2024, Disclosure 101-8 Ecosystem services.",
+   "options": [
+    "Provisioning (food, water, materials)",
+    "Regulating (climate, flood, disease)",
+    "Cultural",
+    "Supporting (soil, nutrients)"
+   ]
   },
   {
    "ref": "11.5.1",
@@ -177,9 +223,18 @@
   },
   {
    "ref": "11.5.3",
-   "text": "Report GRI 306-2 Management of significant waste-related impacts, as it relates to waste.",
-   "type": "text",
-   "hint": "Topic 11.5 Waste. Referenced disclosure: GRI 306: Waste 2020, Disclosure 306-2 Management of significant waste-related impacts."
+   "text": "Which waste disposal methods do you use?",
+   "type": "multi_choice",
+   "hint": "Topic 11.5 Waste. Referenced disclosure: GRI 306: Waste 2020, Disclosure 306-2 Management of significant waste-related impacts.",
+   "options": [
+    "Reuse",
+    "Recycling",
+    "Composting",
+    "Recovery",
+    "Incineration",
+    "Landfill",
+    "On-site storage"
+   ]
   },
   {
    "ref": "11.5.4",
@@ -207,9 +262,17 @@
   },
   {
    "ref": "11.6.2",
-   "text": "Report GRI 303-1 Interactions with water as a shared resource, as it relates to water and effluents.",
-   "type": "text",
-   "hint": "Topic 11.6 Water and effluents. Referenced disclosure: GRI 303: Water and Effluents 2018, Disclosure 303-1 Interactions with water as a shared resource."
+   "text": "Which water sources do you use?",
+   "type": "multi_choice",
+   "hint": "Topic 11.6 Water and effluents. Referenced disclosure: GRI 303: Water and Effluents 2018, Disclosure 303-1 Interactions with water as a shared resource.",
+   "options": [
+    "Surface water",
+    "Groundwater",
+    "Seawater",
+    "Rainwater",
+    "Municipal supply",
+    "Produced water"
+   ]
   },
   {
    "ref": "11.6.3",
@@ -225,9 +288,16 @@
   },
   {
    "ref": "11.6.5",
-   "text": "Report GRI 303-4 Water discharge, as it relates to water and effluents.",
-   "type": "text",
-   "hint": "Topic 11.6 Water and effluents. Referenced disclosure: GRI 303: Water and Effluents 2018, Disclosure 303-4 Water discharge."
+   "text": "Where is your water discharged to?",
+   "type": "multi_choice",
+   "hint": "Topic 11.6 Water and effluents. Referenced disclosure: GRI 303: Water and Effluents 2018, Disclosure 303-4 Water discharge.",
+   "options": [
+    "Surface water",
+    "Groundwater",
+    "Seawater",
+    "Third party",
+    "No discharge"
+   ]
   },
   {
    "ref": "11.6.6",
@@ -249,9 +319,17 @@
   },
   {
    "ref": "11.7.3",
-   "text": "Report GRI 404-2 Programs for upgrading employee skills and transition assistance programs, as it relates to closure and rehabilitation.",
-   "type": "text",
-   "hint": "Topic 11.7 Closure and rehabilitation. Referenced disclosure: GRI 404: Training and Education 2016, Disclosure 404-2 Programs for upgrading employee skills and transition assistance programs."
+   "text": "Which skills upgrade or transition assistance programs do you offer?",
+   "type": "multi_choice",
+   "hint": "Topic 11.7 Closure and rehabilitation. Referenced disclosure: GRI 404: Training and Education 2016, Disclosure 404-2 Programs for upgrading employee skills and transition assistance programs.",
+   "options": [
+    "Internal training",
+    "External courses",
+    "Tuition assistance",
+    "Sabbaticals",
+    "Retirement preparation",
+    "Outplacement"
+   ]
   },
   {
    "ref": "11.7.4",
@@ -303,9 +381,15 @@
   },
   {
    "ref": "11.9.2",
-   "text": "Report GRI 403-1 Occupational health and safety management system, as it relates to occupational health and safety.",
-   "type": "text",
-   "hint": "Topic 11.9 Occupational health and safety. Referenced disclosure: GRI 403: Occupational Health and Safety 2018, Disclosure 403-1 Occupational health and safety management system."
+   "text": "What is your occupational health and safety management system based on?",
+   "type": "single_choice",
+   "hint": "Topic 11.9 Occupational health and safety. Referenced disclosure: GRI 403: Occupational Health and Safety 2018, Disclosure 403-1 Occupational health and safety management system.",
+   "options": [
+    "Legal requirements only",
+    "Recognized standards (e.g. ISO 45001)",
+    "Both",
+    "No formal system"
+   ]
   },
   {
    "ref": "11.9.3",
@@ -333,9 +417,17 @@
   },
   {
    "ref": "11.9.7",
-   "text": "Report GRI 403-6 Promotion of worker health, as it relates to occupational health and safety.",
-   "type": "text",
-   "hint": "Topic 11.9 Occupational health and safety. Referenced disclosure: GRI 403: Occupational Health and Safety 2018, Disclosure 403-6 Promotion of worker health."
+   "text": "How do workers access non-occupational medical and healthcare services?",
+   "type": "multi_choice",
+   "hint": "Topic 11.9 Occupational health and safety. Referenced disclosure: GRI 403: Occupational Health and Safety 2018, Disclosure 403-6 Promotion of worker health.",
+   "options": [
+    "On-site clinic",
+    "Health insurance",
+    "Wellness programs",
+    "Telehealth",
+    "Vaccination",
+    "None"
+   ]
   },
   {
    "ref": "11.9.8",
@@ -399,9 +491,17 @@
   },
   {
    "ref": "11.10.7",
-   "text": "Report GRI 404-2 Programs for upgrading employee skills and transition assistance programs, as it relates to employment practices.",
-   "type": "text",
-   "hint": "Topic 11.10 Employment practices. Referenced disclosure: GRI 404: Training and Education 2016, Disclosure 404-2 Programs for upgrading employee skills and transition assistance programs."
+   "text": "Which skills upgrade or transition assistance programs do you offer?",
+   "type": "multi_choice",
+   "hint": "Topic 11.10 Employment practices. Referenced disclosure: GRI 404: Training and Education 2016, Disclosure 404-2 Programs for upgrading employee skills and transition assistance programs.",
+   "options": [
+    "Internal training",
+    "External courses",
+    "Tuition assistance",
+    "Sabbaticals",
+    "Retirement preparation",
+    "Outplacement"
+   ]
   },
   {
    "ref": "11.10.8",
@@ -465,9 +565,15 @@
   },
   {
    "ref": "11.12.2",
-   "text": "Report GRI 409-1 Operations and suppliers at significant risk for incidents of forced or compulsory labor, as it relates to forced labor and modern slavery.",
-   "type": "text",
-   "hint": "Topic 11.12 Forced labor and modern slavery. Referenced disclosure: GRI 409: Forced or Compulsory Labor 2016, Disclosure 409-1 Operations and suppliers at significant risk for incidents of forced or compulsory labor."
+   "text": "Have you identified operations or suppliers at significant risk for incidents of forced or compulsory labor?",
+   "type": "single_choice",
+   "hint": "Topic 11.12 Forced labor and modern slavery. Referenced disclosure: GRI 409: Forced or Compulsory Labor 2016, Disclosure 409-1 Operations and suppliers at significant risk for incidents of forced or compulsory labor.",
+   "options": [
+    "Yes, operations",
+    "Yes, suppliers",
+    "Yes, both",
+    "No"
+   ]
   },
   {
    "ref": "11.12.3",
@@ -483,9 +589,15 @@
   },
   {
    "ref": "11.13.2",
-   "text": "Report GRI 407-1 Operations and suppliers in which the right to freedom of association and collective bargaining may be at risk, as it relates to freedom of association and collective bargaining.",
-   "type": "text",
-   "hint": "Topic 11.13 Freedom of association and collective bargaining. Referenced disclosure: GRI 407: Freedom of Association and Collective Bargaining 2016, Disclosure 407-1 Operations and suppliers in which the right to freedom of association and collective bargaining may be at risk."
+   "text": "Have you identified operations or suppliers where the right to freedom of association or collective bargaining may be at risk?",
+   "type": "single_choice",
+   "hint": "Topic 11.13 Freedom of association and collective bargaining. Referenced disclosure: GRI 407: Freedom of Association and Collective Bargaining 2016, Disclosure 407-1 Operations and suppliers in which the right to freedom of association and collective bargaining may be at risk.",
+   "options": [
+    "Yes, operations",
+    "Yes, suppliers",
+    "Yes, both",
+    "No"
+   ]
   },
   {
    "ref": "11.14.1",
@@ -507,9 +619,18 @@
   },
   {
    "ref": "11.14.4",
-   "text": "Report GRI 203-1 Infrastructure investments and services supported, as it relates to economic impacts.",
-   "type": "text",
-   "hint": "Topic 11.14 Economic impacts. Referenced disclosure: GRI 203: Indirect Economic Impacts 2016, Disclosure 203-1 Infrastructure investments and services supported."
+   "text": "What infrastructure or services have you supported?",
+   "type": "multi_choice",
+   "hint": "Topic 11.14 Economic impacts. Referenced disclosure: GRI 203: Indirect Economic Impacts 2016, Disclosure 203-1 Infrastructure investments and services supported.",
+   "options": [
+    "Transport",
+    "Energy",
+    "Health",
+    "Education",
+    "Community facilities",
+    "Other",
+    "None"
+   ]
   },
   {
    "ref": "11.14.5",
@@ -579,9 +700,15 @@
   },
   {
    "ref": "11.17.4",
-   "text": "Has the organization been involved in a process of seeking free, prior, and informed consent (FPIC) from Indigenous Peoples for any of its activities? For each case, was the process mutually accepted and has an agreement been reached?",
-   "type": "text",
-   "hint": "Topic 11.17 additional sector disclosure. Report if involved in an FPIC process, and for each case: a. whether the process was mutually accepted by the organization and the affected Indigenous Peoples; b. whether an agreement was reached and, if so, whether it is publicly available."
+   "text": "Have you sought free, prior and informed consent (FPIC) from Indigenous Peoples?",
+   "type": "single_choice",
+   "hint": "Topic 11.17 additional sector disclosure. Report if involved in an FPIC process, and for each case: a. whether the process was mutually accepted by the organization and the affected Indigenous Peoples; b. whether an agreement was reached and, if so, whether it is publicly available.",
+   "options": [
+    "Yes, for all activities",
+    "Yes, for some",
+    "No",
+    "Not applicable"
+   ]
   },
   {
    "ref": "11.18.1",
@@ -621,9 +748,16 @@
   },
   {
    "ref": "11.20.3",
-   "text": "Report GRI 205-2 Communication and training about anti-corruption policies and procedures, as it relates to anti-corruption.",
-   "type": "text",
-   "hint": "Topic 11.20 Anti-corruption. Referenced disclosure: GRI 205: Anti-corruption 2016, Disclosure 205-2 Communication and training about anti-corruption policies and procedures."
+   "text": "Who has received communication or training on anti-corruption policies and procedures?",
+   "type": "multi_choice",
+   "hint": "Topic 11.20 Anti-corruption. Referenced disclosure: GRI 205: Anti-corruption 2016, Disclosure 205-2 Communication and training about anti-corruption policies and procedures.",
+   "options": [
+    "Governance body members",
+    "Employees",
+    "Business partners",
+    "Suppliers",
+    "None"
+   ]
   },
   {
    "ref": "11.20.4",
@@ -633,9 +767,14 @@
   },
   {
    "ref": "11.20.5",
-   "text": "What is the organization's approach to contract transparency, including whether contracts and licenses are public?",
-   "type": "text",
-   "hint": "Topic 11.20 additional sector disclosure. Describe the approach to contract transparency, including: a. whether contracts and licenses are made public and, if so, where published; b. if not public, the reason and actions taken to make them public in future."
+   "text": "Are contracts and licenses publicly available?",
+   "type": "single_choice",
+   "hint": "Topic 11.20 additional sector disclosure. Describe the approach to contract transparency, including: a. whether contracts and licenses are made public and, if so, where published; b. if not public, the reason and actions taken to make them public in future.",
+   "options": [
+    "All public",
+    "Partly public",
+    "Not public"
+   ]
   },
   {
    "ref": "11.20.6",
@@ -657,9 +796,17 @@
   },
   {
    "ref": "11.21.3",
-   "text": "Report GRI 201-4 Financial assistance received from government, as it relates to payments to governments.",
-   "type": "text",
-   "hint": "Topic 11.21 Payments to governments. Referenced disclosure: GRI 201: Economic Performance 2016, Disclosure 201-4 Financial assistance received from government."
+   "text": "What financial assistance did you receive from any government?",
+   "type": "multi_choice",
+   "hint": "Topic 11.21 Payments to governments. Referenced disclosure: GRI 201: Economic Performance 2016, Disclosure 201-4 Financial assistance received from government.",
+   "options": [
+    "Tax relief",
+    "Subsidies",
+    "Grants",
+    "Export credit",
+    "Other",
+    "None"
+   ]
   },
   {
    "ref": "11.21.4",

@@ -3,6 +3,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { api } from "@/lib/api";
 import { reportKeys, surveyKeys } from "@/lib/query-keys";
+import type { Attachment } from "@/types/question";
 import type { AnswerValue, ReturnAudience, SurveyDetail } from "@/types/survey";
 
 /** Everything the survey screens can do to one survey, bound to its id.
@@ -43,7 +44,8 @@ export const useDeleteSurvey = (id: string) => useSurveyMutation(() => api.delet
 export function useSaveDraft(id: string) {
   const qc = useQueryClient();
   return useMutation({
-    mutationFn: (answers: Record<string, AnswerValue>) => api.post<SurveyDetail>(`/surveys/${id}/save-draft/`, { answers }),
+    mutationFn: ({ answers, notes }: { answers: Record<string, AnswerValue>; notes: Record<string, string> }) =>
+      api.post<SurveyDetail>(`/surveys/${id}/save-draft/`, { answers, notes }),
     onSuccess: (survey) => qc.setQueryData(surveyKeys.detail(id), survey),
   });
 }
@@ -57,9 +59,30 @@ export const useAssignQuestions = (id: string) =>
 /** The question-level workflow. A respondent submits their open questions; the
  * reviewer and approver decide on the questions they select. */
 export const useSubmitResponse = (id: string) =>
-  useSurveyMutation(({ answers, questionIds }: { answers: Record<string, AnswerValue>; questionIds: string[] }) =>
-    api.post<SurveyDetail>(`/surveys/${id}/submit/`, { answers, question_ids: questionIds }),
+  useSurveyMutation(({ answers, notes, questionIds }: { answers: Record<string, AnswerValue>; notes: Record<string, string>; questionIds: string[] }) =>
+    api.post<SurveyDetail>(`/surveys/${id}/submit/`, { answers, notes, question_ids: questionIds }),
   );
+/** Attach a file to one of the respondent's open questions. */
+export function useUploadAttachment(id: string) {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ questionId, file, kind = "response" }: { questionId: string; file: File; kind?: "response" | "review" }) => {
+      const form = new FormData();
+      form.append("question_id", questionId);
+      form.append("file", file);
+      form.append("kind", kind);
+      return api.upload<Attachment>(`/surveys/${id}/attachments/`, form);
+    },
+    onSuccess: () => qc.invalidateQueries({ queryKey: surveyKeys.detail(id) }),
+  });
+}
+export function useDeleteAttachment(id: string) {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (attachmentId: string) => api.delete(`/surveys/${id}/attachments/${attachmentId}/`),
+    onSuccess: () => qc.invalidateQueries({ queryKey: surveyKeys.detail(id) }),
+  });
+}
 /** Notes pinned to questions, sent with a decision: { question id: note }. */
 export type QuestionNotes = Record<string, string>;
 const toPayload = (notes: QuestionNotes) =>

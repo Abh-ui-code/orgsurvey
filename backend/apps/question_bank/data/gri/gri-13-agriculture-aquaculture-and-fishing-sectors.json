@@ -9,9 +9,15 @@
   },
   {
    "ref": "13.1.2",
-   "text": "Transition plan for climate change mitigation (GRI 102-1): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.1 Emissions. Refers to GRI 102 Disclosure 102-1 Transition plan for climate change mitigation."
+   "text": "Do you have a transition plan for climate change mitigation?",
+   "type": "single_choice",
+   "hint": "Topic 13.1 Emissions. Refers to GRI 102 Disclosure 102-1 Transition plan for climate change mitigation.",
+   "options": [
+    "Yes, published",
+    "Yes, not published",
+    "In development",
+    "No"
+   ]
   },
   {
    "ref": "13.1.3",
@@ -21,9 +27,14 @@
   },
   {
    "ref": "13.1.4",
-   "text": "GHG emissions reduction targets and progress (GRI 102-4): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.1 Emissions. Refers to GRI 102 Disclosure 102-4 GHG emissions reduction targets and progress."
+   "text": "What kind of GHG emissions reduction target do you have?",
+   "type": "single_choice",
+   "hint": "Topic 13.1 Emissions. Refers to GRI 102 Disclosure 102-4 GHG emissions reduction targets and progress.",
+   "options": [
+    "Science-based target (validated)",
+    "Own target",
+    "No target"
+   ]
   },
   {
    "ref": "13.1.5",
@@ -69,9 +80,18 @@
   },
   {
    "ref": "13.1.12",
-   "text": "Nitrogen oxides (NOx), sulfur oxides (SOx), and other significant air emissions (GRI 305-7): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.1 Emissions. Refers to GRI 305 Disclosure 305-7 Nitrogen oxides (NOx), sulfur oxides (SOx), and other significant air emissions."
+   "text": "Which significant air emissions do you track?",
+   "type": "multi_choice",
+   "hint": "Topic 13.1 Emissions. Refers to GRI 305 Disclosure 305-7 Nitrogen oxides (NOx), sulfur oxides (SOx), and other significant air emissions.",
+   "options": [
+    "NOx",
+    "SOx",
+    "Particulate matter",
+    "VOCs",
+    "Persistent organic pollutants",
+    "Hazardous air pollutants",
+    "Other"
+   ]
   },
   {
    "ref": "13.2.1",
@@ -81,9 +101,15 @@
   },
   {
    "ref": "13.2.2",
-   "text": "Climate change adaptation plan (GRI 102-2): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.2 Climate adaptation. Refers to GRI 102 Disclosure 102-2 Climate change adaptation plan."
+   "text": "Do you have a climate change adaptation plan?",
+   "type": "single_choice",
+   "hint": "Topic 13.2 Climate adaptation. Refers to GRI 102 Disclosure 102-2 Climate change adaptation plan.",
+   "options": [
+    "Yes, published",
+    "Yes, not published",
+    "In development",
+    "No"
+   ]
   },
   {
    "ref": "13.2.3",
@@ -99,9 +125,15 @@
   },
   {
    "ref": "13.3.2",
-   "text": "Policies to halt and reverse biodiversity loss (GRI 101-1): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.3 Biodiversity. Refers to GRI 101 Disclosure 101-1 Policies to halt and reverse biodiversity loss."
+   "text": "Do you have a published commitment to halt and reverse biodiversity loss?",
+   "type": "single_choice",
+   "hint": "Topic 13.3 Biodiversity. Refers to GRI 101 Disclosure 101-1 Policies to halt and reverse biodiversity loss.",
+   "options": [
+    "Yes, with targets",
+    "Yes, without targets",
+    "In development",
+    "No"
+   ]
   },
   {
    "ref": "13.3.3",
@@ -129,9 +161,17 @@
   },
   {
    "ref": "13.3.7",
-   "text": "Direct drivers of biodiversity loss (GRI 101-6): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.3 Biodiversity. Refers to GRI 101 Disclosure 101-6 Direct drivers of biodiversity loss."
+   "text": "Which direct drivers of biodiversity loss are associated with your sites and supply chain?",
+   "type": "multi_choice",
+   "hint": "Topic 13.3 Biodiversity. Refers to GRI 101 Disclosure 101-6 Direct drivers of biodiversity loss.",
+   "options": [
+    "Land or sea use change",
+    "Overexploitation",
+    "Climate change",
+    "Pollution",
+    "Invasive species",
+    "Other"
+   ]
   },
   {
    "ref": "13.3.8",
@@ -141,9 +181,15 @@
   },
   {
    "ref": "13.3.9",
-   "text": "Ecosystem services (GRI 101-8): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.3 Biodiversity. Refers to GRI 101 Disclosure 101-8 Ecosystem services."
+   "text": "Which types of ecosystem services are affected by your activities?",
+   "type": "multi_choice",
+   "hint": "Topic 13.3 Biodiversity. Refers to GRI 101 Disclosure 101-8 Ecosystem services.",
+   "options": [
+    "Provisioning (food, water, materials)",
+    "Regulating (climate, flood, disease)",
+    "Cultural",
+    "Supporting (soil, nutrients)"
+   ]
   },
   {
    "ref": "13.3.10",
@@ -213,9 +259,17 @@
   },
   {
    "ref": "13.7.2",
-   "text": "Interactions with water as a shared resource (GRI 303-1): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.7 Water and effluents. Refers to GRI 303 Disclosure 303-1 Interactions with water as a shared resource."
+   "text": "Which water sources do you use?",
+   "type": "multi_choice",
+   "hint": "Topic 13.7 Water and effluents. Refers to GRI 303 Disclosure 303-1 Interactions with water as a shared resource.",
+   "options": [
+    "Surface water",
+    "Groundwater",
+    "Seawater",
+    "Rainwater",
+    "Municipal supply",
+    "Produced water"
+   ]
   },
   {
    "ref": "13.7.3",
@@ -231,9 +285,16 @@
   },
   {
    "ref": "13.7.5",
-   "text": "Water discharge (GRI 303-4): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.7 Water and effluents. Refers to GRI 303 Disclosure 303-4 Water discharge."
+   "text": "Where is your water discharged to?",
+   "type": "multi_choice",
+   "hint": "Topic 13.7 Water and effluents. Refers to GRI 303 Disclosure 303-4 Water discharge.",
+   "options": [
+    "Surface water",
+    "Groundwater",
+    "Seawater",
+    "Third party",
+    "No discharge"
+   ]
   },
   {
    "ref": "13.7.6",
@@ -255,9 +316,18 @@
   },
   {
    "ref": "13.8.3",
-   "text": "Management of significant waste-related impacts (GRI 306-2): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.8 Waste. Refers to GRI 306 Disclosure 306-2 Management of significant waste-related impacts."
+   "text": "Which waste disposal methods do you use?",
+   "type": "multi_choice",
+   "hint": "Topic 13.8 Waste. Refers to GRI 306 Disclosure 306-2 Management of significant waste-related impacts.",
+   "options": [
+    "Reuse",
+    "Recycling",
+    "Composting",
+    "Recovery",
+    "Incineration",
+    "Landfill",
+    "On-site storage"
+   ]
   },
   {
    "ref": "13.8.4",
@@ -393,9 +463,15 @@
   },
   {
    "ref": "13.14.4",
-   "text": "Free, prior, and informed consent: has the organization been involved in a process of seeking FPIC from Indigenous Peoples and, if so, what were the process and outcome?",
-   "type": "text",
-   "hint": "For each case: a. whether the process was mutually accepted by the organization and affected Indigenous Peoples; b. how the constituent elements of FPIC were implemented; c. whether an agreement was reached and is publicly available."
+   "text": "Have you sought free, prior and informed consent (FPIC) from Indigenous Peoples?",
+   "type": "single_choice",
+   "hint": "For each case: a. whether the process was mutually accepted by the organization and affected Indigenous Peoples; b. how the constituent elements of FPIC were implemented; c. whether an agreement was reached and is publicly available.",
+   "options": [
+    "Yes, for all activities",
+    "Yes, for some",
+    "No",
+    "Not applicable"
+   ]
   },
   {
    "ref": "13.15.1",
@@ -435,9 +511,15 @@
   },
   {
    "ref": "13.16.2",
-   "text": "Operations and suppliers at significant risk for incidents of forced or compulsory labor (GRI 409-1): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.16 Forced or compulsory labor. Refers to GRI 409 Disclosure 409-1 Operations and suppliers at significant risk for incidents of forced or compulsory labor."
+   "text": "Have you identified operations or suppliers at significant risk for incidents of forced or compulsory labor?",
+   "type": "single_choice",
+   "hint": "Topic 13.16 Forced or compulsory labor. Refers to GRI 409 Disclosure 409-1 Operations and suppliers at significant risk for incidents of forced or compulsory labor.",
+   "options": [
+    "Yes, operations",
+    "Yes, suppliers",
+    "Yes, both",
+    "No"
+   ]
   },
   {
    "ref": "13.17.1",
@@ -447,9 +529,15 @@
   },
   {
    "ref": "13.17.2",
-   "text": "Operations and suppliers at significant risk for incidents of child labor (GRI 408-1): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.17 Child labor. Refers to GRI 408 Disclosure 408-1 Operations and suppliers at significant risk for incidents of child labor."
+   "text": "Have you identified operations or suppliers at significant risk for incidents of child labor?",
+   "type": "single_choice",
+   "hint": "Topic 13.17 Child labor. Refers to GRI 408 Disclosure 408-1 Operations and suppliers at significant risk for incidents of child labor.",
+   "options": [
+    "Yes, operations",
+    "Yes, suppliers",
+    "Yes, both",
+    "No"
+   ]
   },
   {
    "ref": "13.18.1",
@@ -459,9 +547,15 @@
   },
   {
    "ref": "13.18.2",
-   "text": "Operations and suppliers in which the right to freedom of association and collective bargaining may be at risk (GRI 407-1): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.18 Freedom of association and collective bargaining. Refers to GRI 407 Disclosure 407-1 Operations and suppliers in which the right to freedom of association and collective bargaining may be at risk."
+   "text": "Have you identified operations or suppliers where the right to freedom of association or collective bargaining may be at risk?",
+   "type": "single_choice",
+   "hint": "Topic 13.18 Freedom of association and collective bargaining. Refers to GRI 407 Disclosure 407-1 Operations and suppliers in which the right to freedom of association and collective bargaining may be at risk.",
+   "options": [
+    "Yes, operations",
+    "Yes, suppliers",
+    "Yes, both",
+    "No"
+   ]
   },
   {
    "ref": "13.19.1",
@@ -471,9 +565,15 @@
   },
   {
    "ref": "13.19.2",
-   "text": "Occupational health and safety management system (GRI 403-1): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.19 Occupational health and safety. Refers to GRI 403 Disclosure 403-1 Occupational health and safety management system."
+   "text": "What is your occupational health and safety management system based on?",
+   "type": "single_choice",
+   "hint": "Topic 13.19 Occupational health and safety. Refers to GRI 403 Disclosure 403-1 Occupational health and safety management system.",
+   "options": [
+    "Legal requirements only",
+    "Recognized standards (e.g. ISO 45001)",
+    "Both",
+    "No formal system"
+   ]
   },
   {
    "ref": "13.19.3",
@@ -501,9 +601,17 @@
   },
   {
    "ref": "13.19.7",
-   "text": "Promotion of worker health (GRI 403-6): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.19 Occupational health and safety. Refers to GRI 403 Disclosure 403-6 Promotion of worker health."
+   "text": "How do workers access non-occupational medical and healthcare services?",
+   "type": "multi_choice",
+   "hint": "Topic 13.19 Occupational health and safety. Refers to GRI 403 Disclosure 403-6 Promotion of worker health.",
+   "options": [
+    "On-site clinic",
+    "Health insurance",
+    "Wellness programs",
+    "Telehealth",
+    "Vaccination",
+    "None"
+   ]
   },
   {
    "ref": "13.19.8",
@@ -567,9 +675,18 @@
   },
   {
    "ref": "13.22.3",
-   "text": "Infrastructure investments and services supported (GRI 203-1): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.22 Economic inclusion. Refers to GRI 203 Disclosure 203-1 Infrastructure investments and services supported."
+   "text": "What infrastructure or services have you supported?",
+   "type": "multi_choice",
+   "hint": "Topic 13.22 Economic inclusion. Refers to GRI 203 Disclosure 203-1 Infrastructure investments and services supported.",
+   "options": [
+    "Transport",
+    "Energy",
+    "Health",
+    "Education",
+    "Community facilities",
+    "Other",
+    "None"
+   ]
   },
   {
    "ref": "13.22.4",
@@ -639,9 +756,16 @@
   },
   {
    "ref": "13.26.3",
-   "text": "Communication and training about anti-corruption policies and procedures (GRI 205-2): what does the organization report for this disclosure?",
-   "type": "text",
-   "hint": "Topic 13.26 Anti-corruption. Refers to GRI 205 Disclosure 205-2 Communication and training about anti-corruption policies and procedures."
+   "text": "Who has received communication or training on anti-corruption policies and procedures?",
+   "type": "multi_choice",
+   "hint": "Topic 13.26 Anti-corruption. Refers to GRI 205 Disclosure 205-2 Communication and training about anti-corruption policies and procedures.",
+   "options": [
+    "Governance body members",
+    "Employees",
+    "Business partners",
+    "Suppliers",
+    "None"
+   ]
   },
   {
    "ref": "13.26.4",

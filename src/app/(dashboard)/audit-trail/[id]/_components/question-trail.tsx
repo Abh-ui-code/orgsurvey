@@ -6,6 +6,8 @@ import type { HistoryEntry, SurveyDetail } from "@/types/survey";
 import { ACTION_META } from "../../../surveys/[id]/_components/activity-card";
 import { AUDIENCE_LABEL } from "../../../surveys/[id]/_components/question-comments";
 import { roleOf } from "../../_lib";
+import { AttachmentList } from "../../../surveys/[id]/_components/question-attachments";
+import { Evidence } from "./evidence";
 
 /** One step in a question's life, with what the answer was and how it changed. */
 export interface TrailStep {
@@ -95,18 +97,20 @@ export function QuestionTrail({ survey, question }: { survey: SurveyDetail; ques
                   </p>
                 )}
                 {revision > 1 && !changed && <p className="text-xs text-ink-faint">Resubmitted without changing the answer.</p>}
+                <Evidence surveyId={survey.id} detail={event.details?.[question.id]} />
               </div>
             )}
 
             {event.comment && <p className="mt-1.5 text-xs italic text-ink-muted">General comment: “{event.comment}”</p>}
             {notes.map((c) => (
-              <p
+              <div
                 key={c.id}
                 className={cn("mt-1.5 whitespace-pre-wrap border-l-2 py-0.5 pl-2.5 text-sm text-ink", returned ? "border-rust" : "border-brand")}
               >
                 <span className="mr-1.5 text-xs font-medium text-ink-muted">{c.by?.full_name}:</span>
                 {c.text}
-              </p>
+                <AttachmentList surveyId={survey.id} files={c.attachments ?? []} />
+              </div>
             ))}
           </li>
         );

@@ -21,9 +21,21 @@
   },
   {
    "ref": "305-3",
-   "text": "What were your gross other indirect (Scope 3) GHG emissions?",
-   "type": "text",
-   "hint": "a. Gross Scope 3 emissions in metric tons CO2e. b. Gases included. c. Biogenic CO2 emissions. d. Scope 3 categories and activities included. e. Base year details. f. Emission factor and GWP source. g. Standards, methodologies, tools."
+   "text": "Which Scope 3 categories are included in your emissions reporting?",
+   "type": "multi_choice",
+   "hint": "a. Gross Scope 3 emissions in metric tons CO2e. b. Gases included. c. Biogenic CO2 emissions. d. Scope 3 categories and activities included. e. Base year details. f. Emission factor and GWP source. g. Standards, methodologies, tools.",
+   "options": [
+    "Purchased goods and services",
+    "Capital goods",
+    "Fuel and energy related",
+    "Transport",
+    "Waste",
+    "Business travel",
+    "Employee commuting",
+    "Use of sold products",
+    "End of life of sold products",
+    "Other"
+   ]
   },
   {
    "ref": "305-4",
@@ -45,9 +57,18 @@
   },
   {
    "ref": "305-7",
-   "text": "What were your emissions of nitrogen oxides (NOx), sulfur oxides (SOx) and other significant air emissions?",
-   "type": "text",
-   "hint": "a. Significant air emissions in kg or multiples for: NOx, SOx, POP, VOC, HAP, particulate matter, other categories in regulations. b. Source of emission factors. c. Standards, methodologies, assumptions, tools."
+   "text": "Which significant air emissions do you track?",
+   "type": "multi_choice",
+   "hint": "a. Significant air emissions in kg or multiples for: NOx, SOx, POP, VOC, HAP, particulate matter, other categories in regulations. b. Source of emission factors. c. Standards, methodologies, assumptions, tools.",
+   "options": [
+    "NOx",
+    "SOx",
+    "Particulate matter",
+    "VOCs",
+    "Persistent organic pollutants",
+    "Hazardous air pollutants",
+    "Other"
+   ]
   }
  ]
 }

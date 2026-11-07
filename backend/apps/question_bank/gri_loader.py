@@ -33,7 +33,24 @@ def load(apps):
         Question.objects.bulk_create(
             Question(
                 category=category, gri_standard=standard, gri_ref=q["ref"], gri_order=i, text=q["text"],
-                type=q.get("type", "text"), hint=q.get("hint", "")[:500], options=[], required=True,
+                type=q.get("type", "text"), hint=q.get("hint", "")[:500], options=q.get("options", []), required=True,
             )
             for i, q in enumerate(content["questions"])
         )
+
+
+def convert_to_choices(apps):
+    """Give existing bank questions the select types and options now in the data files.
+
+    Only questions still of type text are touched, so edits made in the app are kept."""
+    GriStandard = apps.get_model("question_bank", "GriStandard")
+    Question = apps.get_model("question_bank", "Question")
+    for standard in GriStandard.objects.all():
+        content_file = DATA / "gri" / f"{standard.slug}.json"
+        if not content_file.exists():
+            continue
+        for i, q in enumerate(json.loads(content_file.read_text())["questions"]):
+            if q.get("options"):
+                Question.objects.filter(gri_standard=standard, gri_order=i, gri_ref=q["ref"], type="text").update(
+                    text=q["text"], type=q["type"], options=q["options"]
+                )

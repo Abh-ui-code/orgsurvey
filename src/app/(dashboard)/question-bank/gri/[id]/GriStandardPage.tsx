@@ -71,9 +71,9 @@ function GriStandard() {
           <Badge>{s.questions.length}</Badge>
         </CardHeader>
         <ol className="divide-y divide-line">
-          {s.questions.map((q) => (
+          {s.questions.map((q, i) => (
             <li key={q.id} className="flex gap-4 px-5 py-3.5">
-              <span className="w-24 shrink-0 pt-0.5 font-mono-data text-xs text-brand-strong">{q.ref === "mgmt" ? "Management" : q.ref}</span>
+              <span className="w-8 shrink-0 pt-0.5 font-mono-data text-xs text-brand-strong">{`Q${i + 1}`}</span>
               <div className="min-w-0 flex-1">
                 <p className="text-sm text-ink">{q.text}</p>
                 {q.hint && <p className="mt-1 text-xs text-ink-muted">{q.hint}</p>}

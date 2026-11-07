@@ -1,4 +1,6 @@
-from django.db import models
+import os
+
+from django.db import connection, models
 
 from apps.core.models import AuthoredModel, BaseModel, user_fk
 
@@ -61,6 +63,10 @@ class Survey(AuthoredModel, BaseModel):
     # The respondent's work in progress. Kept apart from `answers` so that
     # saving a draft never changes what a reviewer or approver is looking at.
     draft_answers = models.JSONField(default=dict, blank=True)
+    # A note the respondent leaves for the reviewer on a question, kept the same way:
+    # `notes` once submitted, `draft_notes` while still being written. {survey_question_id: text}
+    notes = models.JSONField(default=dict, blank=True)
+    draft_notes = models.JSONField(default=dict, blank=True)
     published_at = models.DateTimeField(null=True, blank=True)
     closed_at = models.DateTimeField(null=True, blank=True)
 
@@ -142,6 +148,9 @@ class SurveyEvent(BaseModel):
     # For a submission: the answers as they were sent, kept for the audit
     # trail because a resubmission overwrites `Survey.answers`.
     snapshot = models.JSONField(default=dict, blank=True)
+    # For a submission: the note and files that went with each answer, kept for the same
+    # reason. {survey_question_id: {"note": str, "files": [{"id", "name", "size"}]}}
+    details = models.JSONField(default=dict, blank=True)
     # The questions this step was about: a respondent submitting 50 of 100, a
     # reviewer returning 3. Empty for steps about the whole survey.
     questions = models.ManyToManyField(SurveyQuestion, blank=True, related_name="events")
@@ -160,6 +169,36 @@ class QuestionComment(BaseModel):
     question = models.ForeignKey(SurveyQuestion, on_delete=models.CASCADE, related_name="comments")
     author = user_fk()
     text = models.TextField()
+
+    class Meta:
+        app_label = "surveys"
+        ordering = ["created_at", "id"]
+
+
+def _attachment_path(instance, filename):
+    return f"{connection.schema_name}/survey-attachments/{instance.question.section.survey_id}/{instance.id}{os.path.splitext(filename)[1].lower()}"
+
+
+class QuestionAttachment(BaseModel):
+    """A file a respondent attached to one question as evidence. Private to the
+    respondent until the question is submitted (`submitted`), then visible to
+    whoever can see that question."""
+
+    question = models.ForeignKey(SurveyQuestion, on_delete=models.CASCADE, related_name="attachments")
+    uploaded_by = user_fk()
+    file = models.FileField(upload_to=_attachment_path)
+    name = models.CharField(max_length=255)
+    size = models.PositiveIntegerField(default=0)
+    content_type = models.CharField(max_length=100, blank=True)
+    submitted = models.BooleanField(default=False)
+    # "response": the respondent's evidence. "review": a file the reviewer or approver
+    # attached while deciding; it is tied to the note (`comment`) it was sent with,
+    # and until then is private to whoever attached it.
+    kind = models.CharField(max_length=10, default="response")
+    # Taken off the question by the respondent after it had been submitted. It no longer
+    # shows on the form, but the earlier submission it went with still lists it.
+    removed = models.BooleanField(default=False)
+    comment = models.ForeignKey(QuestionComment, null=True, blank=True, on_delete=models.CASCADE, related_name="attachments")
 
     class Meta:
         app_label = "surveys"

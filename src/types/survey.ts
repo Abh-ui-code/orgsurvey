@@ -1,5 +1,5 @@
 import type { Person, Ref } from "@/types/common";
-import type { SurveyQuestion } from "@/types/question";
+import type { Attachment, SurveyQuestion } from "@/types/question";
 
 /** The workflow runs per question (see QuestionStatus). A survey is a draft, then in progress
  * until every question is approved, then approved; `closed` is an administrator withdrawing it. */
@@ -131,6 +131,14 @@ export interface QuestionComment {
   by: Person | null;
   at: string;
   text: string;
+  /** Files the reviewer or approver attached to this note. */
+  attachments: Attachment[];
+}
+
+/** The note and files that went with one answer when it was submitted. */
+export interface SubmissionDetail {
+  note: string;
+  files: { id: string; name: string; size: number }[];
 }
 
 export interface HistoryEntry {
@@ -145,6 +153,8 @@ export interface HistoryEntry {
   question_ids: string[];
   /** For a submission: the answers as sent. Empty for other steps (and for submissions made before this was recorded). */
   snapshot: Record<string, AnswerValue>;
+  /** For a submission: each answer's note and files as sent. */
+  details: Record<string, SubmissionDetail>;
   question_comments: QuestionComment[];
 }
 
@@ -162,6 +172,10 @@ export interface SurveyDetail extends Survey {
   answers: Record<string, AnswerValue>;
   /** The respondent's unsent work. Empty for everyone else. */
   draft_answers: Record<string, AnswerValue>;
+  /** The respondent's note to the reviewer on each submitted question. */
+  notes: Record<string, string>;
+  /** Notes still being written. Empty for everyone but the respondent. */
+  draft_notes: Record<string, string>;
   readiness: Readiness[];
   /** Each respondent with their questions' progress. Empty for a respondent, who sees only their own. */
   respondents: RespondentProgress[];

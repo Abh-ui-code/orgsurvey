@@ -9,9 +9,18 @@
   },
   {
    "ref": "203-1",
-   "text": "What infrastructure investments and services has the organization supported?",
-   "type": "text",
-   "hint": "a. Extent of development of significant infrastructure investments and services supported. b. Current or expected impacts on communities and local economies, positive and negative. c. Whether these are commercial, in-kind or pro bono engagements."
+   "text": "What infrastructure or services have you supported?",
+   "type": "multi_choice",
+   "hint": "a. Extent of development of significant infrastructure investments and services supported. b. Current or expected impacts on communities and local economies, positive and negative. c. Whether these are commercial, in-kind or pro bono engagements.",
+   "options": [
+    "Transport",
+    "Energy",
+    "Health",
+    "Education",
+    "Community facilities",
+    "Other",
+    "None"
+   ]
   },
   {
    "ref": "203-2",

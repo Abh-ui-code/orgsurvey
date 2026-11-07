@@ -26,6 +26,8 @@ import {
   useDeleteSection,
   useMoveQuestion,
   useMoveSection,
+  useReorderQuestions,
+  useReorderSections,
   useAssignSection,
   useUpdateSection,
 } from "../../_hooks/use-survey-builder";
@@ -50,6 +52,11 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
   const deleteSection = useDeleteSection(survey.id);
   const moveSection = useMoveSection(survey.id);
   const moveQuestion = useMoveQuestion(survey.id);
+  const reorderSections = useReorderSections(survey.id);
+  const reorderQuestions = useReorderQuestions(survey.id);
+  // What is being dragged, and the row it is currently over.
+  const [drag, setDrag] = useState<{ kind: "section" | "question"; id: string; sectionId?: string } | null>(null);
+  const [over, setOver] = useState<string | null>(null);
   const deleteQuestion = useDeleteQuestion(survey.id);
   const assign = useAssignQuestions(survey.id);
   const assignSection = useAssignSection(survey.id);
@@ -86,6 +93,49 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
     });
   };
 
+  /** Drop `drag` where `targetId` is: the dragged item takes the target's place. */
+  function drop(kind: "section" | "question", targetId: string, sectionId?: string) {
+    const d = drag;
+    setDrag(null);
+    setOver(null);
+    if (!d || d.kind !== kind || d.id === targetId || d.sectionId !== sectionId) return;
+    const ids = (kind === "section" ? survey.sections : survey.sections.find((x) => x.id === sectionId)!.questions).map((x) => x.id);
+    ids.splice(ids.indexOf(d.id), 1);
+    ids.splice(ids.indexOf(targetId), 0, d.id);
+    if (kind === "section") reorderSections.mutate(ids, { onError: fail });
+    else reorderQuestions.mutate({ sectionId: sectionId!, ids }, { onError: fail });
+  }
+  const dragProps = (kind: "section" | "question", id: string, sectionId?: string) => ({
+    onDragOver: (e: React.DragEvent) => {
+      if (drag?.kind === kind && drag.sectionId === sectionId) {
+        e.preventDefault();
+        setOver(id);
+      }
+    },
+    onDrop: (e: React.DragEvent) => {
+      e.preventDefault();
+      drop(kind, id, sectionId);
+    },
+  });
+  const grip = (kind: "section" | "question", id: string, label: string, sectionId?: string) => (
+    <span
+      draggable
+      aria-label={label}
+      title="Drag to reorder"
+      onDragStart={(e) => {
+        e.dataTransfer.effectAllowed = "move";
+        setDrag({ kind, id, sectionId });
+      }}
+      onDragEnd={() => {
+        setDrag(null);
+        setOver(null);
+      }}
+      className="shrink-0 cursor-grab touch-none text-ink-faint hover:text-ink active:cursor-grabbing"
+    >
+      <GripVertical className="h-4 w-4" />
+    </span>
+  );
+
   function saveSection() {
     if (!sectionForm) return;
     const done = { onSuccess: () => setSectionForm(null), onError: fail };
@@ -111,7 +161,11 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
         </div>
       )}
       {survey.sections.map((section, si) => (
-        <Card key={section.id}>
+        <Card
+          key={section.id}
+          {...dragProps("section", section.id)}
+          className={drag?.kind === "section" && drag.id === section.id ? "opacity-50" : over === section.id && drag?.kind === "section" ? "ring-2 ring-brand/50" : ""}
+        >
           <CardHeader className="items-center py-3">
             <div className="flex min-w-0 items-center gap-2">
               {section.questions.length > 0 && (
@@ -121,7 +175,7 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
                   onCheckedChange={(v) => toggle(section.questions.map((q) => q.id), v === true)}
                 />
               )}
-              <GripVertical className="h-4 w-4 shrink-0 text-ink-faint" />
+              {grip("section", section.id, `Drag section ${section.title}`)}
               <div className="min-w-0">
                 <CardTitle className="flex items-center gap-2">
                   {section.title}
@@ -136,6 +190,11 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
                   <a href={section.gri.pdf} target="_blank" rel="noreferrer" className="mr-1 inline-flex items-center gap-1 text-xs text-brand-strong hover:underline">
                     <FileText className="h-3.5 w-3.5" /> PDF
                   </a>
+                  <Button asChild variant="ghost" size="sm">
+                    <Link href={`/surveys/${survey.id}/add-question?section=${section.id}`}>
+                      <Plus className="h-4 w-4" /> Question
+                    </Link>
+                  </Button>
                   <div className="mr-1 w-52">
                     <PersonSelect
                       value={commonResponder(section)}
@@ -190,21 +249,28 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
           ) : (
             <ul>
               {section.questions.map((q, qi) => (
-                <li key={q.id} className={`flex items-center justify-between gap-4 border-b border-line px-5 py-3 last:border-b-0 ${picked.has(q.id) ? "bg-brand-soft/40" : ""}`}>
-                  {!section.gri && <Checkbox aria-label={`Select question ${qi + 1}`} checked={picked.has(q.id)} onCheckedChange={(v) => toggle([q.id], v === true)} />}
+                <li
+                  key={q.id}
+                  {...dragProps("question", q.id, section.id)}
+                  className={`flex items-center justify-between gap-3 border-b border-line px-5 py-3 last:border-b-0 ${picked.has(q.id) ? "bg-brand-soft/40" : ""} ${
+                    drag?.kind === "question" && drag.id === q.id ? "opacity-40" : ""
+                  } ${over === q.id && drag?.kind === "question" && drag.id !== q.id ? "border-t-2 border-t-brand" : ""}`}
+                >
+                  {grip("question", q.id, `Drag question ${qi + 1}`, section.id)}
+                  {!(section.gri && q.gri_ref) && <Checkbox aria-label={`Select question ${qi + 1}`} checked={picked.has(q.id)} onCheckedChange={(v) => toggle([q.id], v === true)} />}
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-sm text-ink">
                       {q.text} {q.required && <span className="text-rust">*</span>}
                     </p>
                     <p className="mt-0.5 flex flex-wrap items-center gap-2 text-xs text-ink-faint">
-                      <span className="font-mono-data">{section.gri ? (q.gri_ref === "mgmt" ? "Management" : q.gri_ref) : `Q${qi + 1}`}</span>
+                      <span className="font-mono-data">{`Q${qi + 1}`}</span>
                       <span>·</span>
                       <span>{questionTypeLabel(q.type)}</span>
-                      {q.bank_question_id && !section.gri && <Badge tone="brand">From bank</Badge>}
+                      {q.bank_question_id && !q.gri_ref && <Badge tone="brand">From bank</Badge>}
                       {q.options.length > 0 && <span className="truncate">· {q.options.join(", ")}</span>}
                     </p>
                     {q.hint && <p className="mt-1 text-xs italic text-ink-muted">{q.hint}</p>}
-                    {!section.gri && <p className="mt-1.5 flex items-center gap-1.5 text-xs">
+                    {!(section.gri && q.gri_ref) && <p className="mt-1.5 flex items-center gap-1.5 text-xs">
                       <span className="text-ink-muted">Respondent</span>
                       {q.responder ? (
                         <span className="inline-flex items-center gap-1.5 rounded-full bg-paper-sunken py-0.5 pl-0.5 pr-2 font-medium text-ink">
@@ -215,7 +281,7 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
                       )}
                     </p>}
                   </div>
-                  {!section.gri && <div className="flex shrink-0 items-center gap-1">
+                  {!(section.gri && q.gri_ref) && <div className="flex shrink-0 items-center gap-1">
                     <IconButton label="Move question up" disabled={qi === 0} onClick={() => moveQuestion.mutate({ sectionId: section.id, id: q.id, direction: "up" }, { onError: fail })}>
                       <ArrowUp className="h-4 w-4" />
                     </IconButton>
