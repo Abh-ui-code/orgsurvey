@@ -1,23 +1,95 @@
 {
- "summary": "GRI 308: Supplier Environmental Assessment 2016 contains disclosures for reporting an organization's supply chain environmental impacts and how it manages them. It covers screening of new suppliers using environmental criteria and negative environmental impacts in the supply chain and actions taken.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "How does your organization manage supplier environmental assessment?",
-   "type": "text",
-   "hint": "Report how you manage this material topic using Disclosure 3-3 of GRI 3: Material Topics 2021."
-  },
-  {
-   "ref": "308-1",
-   "text": "What percentage of new suppliers were screened using environmental criteria?",
-   "type": "number",
-   "hint": "a. Percentage of new suppliers that were screened using environmental criteria."
-  },
-  {
-   "ref": "308-2",
-   "text": "What negative environmental impacts have you identified in your supply chain, and what actions have you taken?",
-   "type": "text",
-   "hint": "a. Number of suppliers assessed. b. Number with significant negative impacts. c. Impacts identified. d. % with which improvements were agreed. e. % with which relationships were terminated, and why."
-  }
- ]
+  "summary": "GRI 308: Supplier Environmental Assessment 2016 contains disclosures for reporting an organization's supply chain environmental impacts and how it manages them. It covers screening of new suppliers using environmental criteria and negative environmental impacts in the supply chain and actions taken.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to supplier environmental assessment.",
+          "type": "text",
+          "hint": "Describe the actual and potential, negative and positive impacts on the economy, environment, and people, including impacts on human rights (GRI 3-3-a)."
+        },
+        {
+          "item": "b",
+          "text": "State whether the organization is involved with the negative impacts related to supplier environmental assessment through its own activities or as a result of its business relationships, and describe how.",
+          "type": "text",
+          "hint": "Say whether the organization causes or contributes to the negative impacts through its activities, or whether they are linked to its operations, products or services through business relationships, and describe how (GRI 3-3-b)."
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding supplier environmental assessment.",
+          "type": "text",
+          "hint": "Describe policies or commitments regarding the material topic (GRI 3-3-c)."
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage supplier environmental assessment and the related impacts.",
+          "type": "text",
+          "hint": "Include: i. how negative impacts are prevented or mitigated; ii. how actual negative impacts are addressed, including actions to provide for or cooperate in remediation; iii. how actual and potential positive impacts are managed (GRI 3-3-d)."
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of its actions on supplier environmental assessment?",
+          "type": "text",
+          "hint": "Report: i. information about the effectiveness of the actions; ii. the goals, targets and indicators used to evaluate progress; iii. lessons learned and how they have been integrated into policies and operational procedures (GRI 3-3-e)."
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken on supplier environmental assessment and whether those actions have been effective.",
+          "type": "text",
+          "hint": "Describe how stakeholder engagement has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e) (GRI 3-3-f)."
+        }
+      ]
+    },
+    {
+      "ref": "308-1",
+      "title": "New suppliers that were screened using environmental criteria",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What percentage of new suppliers were screened using environmental criteria?",
+          "type": "number",
+          "hint": "Percentage of new suppliers screened using environmental criteria."
+        }
+      ]
+    },
+    {
+      "ref": "308-2",
+      "title": "Negative environmental impacts in the supply chain and actions taken",
+      "questions": [
+        {
+          "item": "a",
+          "text": "How many suppliers were assessed for environmental impacts?",
+          "type": "text",
+          "hint": "Number of suppliers assessed for environmental impacts."
+        },
+        {
+          "item": "b",
+          "text": "How many suppliers were identified as having significant actual and potential negative environmental impacts?",
+          "type": "text",
+          "hint": "Number of suppliers identified with significant actual and potential negative environmental impacts."
+        },
+        {
+          "item": "c",
+          "text": "What significant actual and potential negative environmental impacts were identified in the supply chain?",
+          "type": "text",
+          "hint": "Significant actual and potential negative environmental impacts identified in the supply chain."
+        },
+        {
+          "item": "d",
+          "text": "What percentage of those suppliers agreed improvements as a result of the assessment?",
+          "type": "text",
+          "hint": "Percentage of suppliers identified as having significant actual and potential negative environmental impacts with which improvements were agreed upon as a result of assessment."
+        },
+        {
+          "item": "e",
+          "text": "What percentage of those suppliers had relationships terminated as a result of the assessment, and why?",
+          "type": "text",
+          "hint": "Percentage of suppliers identified as having significant actual and potential negative environmental impacts with which relationships were terminated as a result of assessment, and why."
+        }
+      ]
+    }
+  ]
 }

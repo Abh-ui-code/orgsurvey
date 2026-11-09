@@ -1,23 +1,107 @@
 {
- "summary": "GRI 202 covers an organization's market presence, meaning its contribution to economic development in the local areas or communities where it operates. This can include approaches to remuneration or local hiring.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "How does the organization manage market presence as a material topic (GRI 3-3)?",
-   "type": "text",
-   "hint": "Describe how the organization manages the topic and its related impacts, as required by Disclosure 3-3 in GRI 3: Material Topics 2021."
-  },
-  {
-   "ref": "202-1",
-   "text": "What are the ratios of standard entry level wage by gender compared to the local minimum wage?",
-   "type": "text",
-   "hint": "a. Ratio of entry level wage by gender to minimum wage at significant locations, where a significant proportion of employees are on minimum-wage-based pay. b. Actions to check other workers are paid above minimum wage. c. Whether a local minimum wage is absent or variable, by gender, and which is used. d. Definition of 'significant locations of operation'."
-  },
-  {
-   "ref": "202-2",
-   "text": "What proportion of senior management is hired from the local community?",
-   "type": "number",
-   "hint": "a. Percentage of senior management at significant locations hired from the local community. b. Definition of 'senior management'. c. Geographical definition of 'local'. d. Definition of 'significant locations of operation'."
-  }
- ]
+  "summary": "GRI 202 covers an organization's market presence, meaning its contribution to economic development in the local areas or communities where it operates. This can include approaches to remuneration or local hiring.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to market presence.",
+          "type": "text",
+          "hint": "Describe the actual and potential, negative and positive impacts on the economy, environment, and people, including impacts on human rights (GRI 3-3-a)."
+        },
+        {
+          "item": "b",
+          "text": "State whether the organization is involved with the negative impacts related to market presence through its own activities or as a result of its business relationships, and describe how.",
+          "type": "text",
+          "hint": "Say whether the organization causes or contributes to the negative impacts through its activities, or whether they are linked to its operations, products or services through business relationships, and describe how (GRI 3-3-b)."
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding market presence.",
+          "type": "text",
+          "hint": "Describe policies or commitments regarding the material topic (GRI 3-3-c)."
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage market presence and the related impacts.",
+          "type": "text",
+          "hint": "Include: i. how negative impacts are prevented or mitigated; ii. how actual negative impacts are addressed, including actions to provide for or cooperate in remediation; iii. how actual and potential positive impacts are managed (GRI 3-3-d)."
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of its actions on market presence?",
+          "type": "text",
+          "hint": "Report: i. information about the effectiveness of the actions; ii. the goals, targets and indicators used to evaluate progress; iii. lessons learned and how they have been integrated into policies and operational procedures (GRI 3-3-e)."
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken on market presence and whether those actions have been effective.",
+          "type": "text",
+          "hint": "Describe how stakeholder engagement has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e) (GRI 3-3-f)."
+        }
+      ]
+    },
+    {
+      "ref": "202-1",
+      "title": "Ratios of standard entry level wage by gender compared to local minimum wage",
+      "questions": [
+        {
+          "item": "a",
+          "text": "If a significant proportion of employees are paid wages subject to minimum wage rules, what is the ratio of the entry level wage by gender to the minimum wage at significant locations of operation?",
+          "type": "text",
+          "hint": "Report the relevant ratio of entry level wage by gender at significant locations of operation to the minimum wage."
+        },
+        {
+          "item": "b",
+          "text": "If a significant proportion of other workers are paid wages subject to minimum wage rules, what actions are taken to determine whether they are paid above the minimum wage?",
+          "type": "text",
+          "hint": "Applies to workers who are not employees performing the organization's activities."
+        },
+        {
+          "item": "c",
+          "text": "Is a local minimum wage absent or variable at significant locations of operation, by gender, and which minimum wage is used as the reference?",
+          "type": "text",
+          "hint": "Where different minimums can be used as a reference, report which minimum wage is being used."
+        },
+        {
+          "item": "d",
+          "text": "How does the organization define 'significant locations of operation'?",
+          "type": "text",
+          "hint": "The definition used for significant locations of operation."
+        }
+      ]
+    },
+    {
+      "ref": "202-2",
+      "title": "Proportion of senior management hired from the local community",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What percentage of senior management at significant locations of operation is hired from the local community?",
+          "type": "number",
+          "hint": "Percentage of senior management at significant locations of operation hired from the local community."
+        },
+        {
+          "item": "b",
+          "text": "How does the organization define 'senior management'?",
+          "type": "text",
+          "hint": "The definition used for senior management."
+        },
+        {
+          "item": "c",
+          "text": "What is the organization's geographical definition of 'local'?",
+          "type": "text",
+          "hint": "The organization's geographical definition of local."
+        },
+        {
+          "item": "d",
+          "text": "How does the organization define 'significant locations of operation'?",
+          "type": "text",
+          "hint": "The definition used for significant locations of operation."
+        }
+      ]
+    }
+  ]
 }

@@ -44,10 +44,12 @@ class BankQuestionSerializer(QuestionFieldsSerializer):
 
 class GriQuestionSerializer(serializers.ModelSerializer):
     ref = serializers.CharField(source="gri_ref", read_only=True)
+    title = serializers.CharField(source="gri_title", read_only=True)
+    item = serializers.CharField(source="gri_item", read_only=True)
 
     class Meta:
         model = Question
-        fields = ["id", "ref", "text", "type", "hint", "required"]
+        fields = ["id", "ref", "title", "item", "text", "type", "hint", "required"]
         read_only_fields = fields
 
 
@@ -56,7 +58,7 @@ class GriStandardSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = GriStandard
-        fields = ["id", "slug", "code", "number", "title", "edition", "series", "summary", "pdf", "question_count"]
+        fields = ["id", "framework", "slug", "code", "number", "title", "edition", "series", "summary", "pdf", "question_count"]
         read_only_fields = fields
 
 

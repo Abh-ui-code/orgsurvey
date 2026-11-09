@@ -1,0 +1,83 @@
+{
+ "summary": "Disclose the actual and potential impacts of climate-related risks and opportunities on the organization's businesses, strategy and financial planning where such information is material. Investors and other stakeholders need to understand how climate-related issues may affect the organization over the short, medium and long term.",
+ "disclosures": [
+  {
+   "ref": "Strategy a)",
+   "title": "Describe the climate-related risks and opportunities the organization has identified over the short, medium, and long term.",
+   "questions": [
+    {
+     "text": "What do you consider to be the relevant short-, medium- and long-term time horizons, taking into consideration the useful life of your assets or infrastructure?",
+     "type": "text",
+     "hint": "Guidance for All Sectors. Climate-related issues often manifest themselves over the medium and longer terms.",
+     "item": "1"
+    },
+    {
+     "text": "What specific climate-related issues could arise in each time horizon (short, medium and long term) that could have a material financial impact on the organization?",
+     "type": "text",
+     "hint": "Guidance for All Sectors. Consider describing risks and opportunities by sector and/or geography, and refer to the TCFD's Tables A1 and A2 (examples of climate-related risks and opportunities).",
+     "item": "2"
+    },
+    {
+     "text": "What process(es) do you use to determine which climate-related risks and opportunities could have a material financial impact on the organization?",
+     "type": "text",
+     "hint": "Guidance for All Sectors.",
+     "item": "3"
+    }
+   ]
+  },
+  {
+   "ref": "Strategy b)",
+   "title": "Describe the impact of climate-related risks and opportunities on the organization's businesses, strategy, and financial planning.",
+   "questions": [
+    {
+     "text": "How have the identified climate-related issues affected your businesses and strategy?",
+     "type": "text",
+     "hint": "Guidance for All Sectors. Consider the impact on: products and services; supply chain and/or value chain; adaptation and mitigation activities; investment in research and development; operations (including types of operations and location of facilities).",
+     "item": "1"
+    },
+    {
+     "text": "How do climate-related issues serve as an input to your financial planning process, over what time period(s), and how are these risks and opportunities prioritized?",
+     "type": "text",
+     "hint": "Guidance for All Sectors. Reflect the interdependencies among the factors that affect your ability to create value over time.",
+     "item": "2"
+    },
+    {
+     "text": "How have climate-related issues affected your financial planning?",
+     "type": "text",
+     "hint": "Guidance for All Sectors. Consider the impact on: operating costs and revenues; capital expenditures and capital allocation; acquisitions or divestments; access to capital.",
+     "item": "3"
+    },
+    {
+     "text": "Were climate-related scenarios used to inform your strategy and financial planning? If so, which ones?",
+     "type": "yes_no",
+     "hint": "Guidance for All Sectors: if climate-related scenarios were used, such scenarios should be described.",
+     "item": "4"
+    }
+   ]
+  },
+  {
+   "ref": "Strategy c)",
+   "title": "Describe the resilience of the organization's strategy, taking into consideration different climate-related scenarios, including a 2°C or lower scenario.",
+   "questions": [
+    {
+     "text": "Where do you believe your strategy may be affected by climate-related risks and opportunities?",
+     "type": "text",
+     "hint": "Guidance for All Sectors: consider a transition to a lower-carbon economy consistent with a 2°C or lower scenario and, where relevant, scenarios consistent with increased physical climate-related risks.",
+     "item": "1"
+    },
+    {
+     "text": "How might your strategy change to address these potential risks and opportunities?",
+     "type": "text",
+     "hint": "Guidance for All Sectors.",
+     "item": "2"
+    },
+    {
+     "text": "Which climate-related scenarios, and associated time horizon(s), did you consider?",
+     "type": "text",
+     "hint": "Guidance for All Sectors. See Section D of the TCFD report for information on applying scenarios to forward-looking analysis.",
+     "item": "3"
+    }
+   ]
+  }
+ ]
+}

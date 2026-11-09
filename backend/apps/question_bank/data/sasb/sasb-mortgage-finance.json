@@ -1,0 +1,101 @@
+{
+ "summary": "This standard covers companies that lend against property, mainly residential and commercial mortgages, and provide mortgage servicing. Disclosure topics are lending practices, discriminatory lending and environmental risk to mortgaged properties.",
+ "disclosures": [
+  {
+   "ref": "FN-MF-270a",
+   "title": "Lending Practices",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the number and (2) the value of your residential mortgages of the following types: (a) combined fixed- and variable-rate, (b) prepayment penalty, and (c) total?",
+     "type": "text",
+     "hint": "Unit: Number, Presentation currency · Report a count and a value (presentation currency) for each of the three types."
+    },
+    {
+     "item": ".2",
+     "text": "What are (1) the number and (2) the value of (a) residential mortgage modifications, (b) foreclosures, and (c) short sales or deeds in lieu of foreclosure?",
+     "type": "text",
+     "hint": "Unit: Number, Presentation currency · Report a count and a value (presentation currency) for each of the three categories."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses as a result of legal proceedings associated with communications to customers or remuneration of loan originators?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period."
+    },
+    {
+     "item": ".4",
+     "text": "How is the remuneration of your mortgage loan originators structured?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the fixed and variable components, what drives variable pay and safeguards against incentivising harmful lending."
+    }
+   ]
+  },
+  {
+   "ref": "FN-MF-270b",
+   "title": "Discriminatory Lending",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the number, (2) the value and (3) the weighted average loan-to-value ratio of mortgages issued to (a) minority borrowers and (b) all other borrowers?",
+     "type": "text",
+     "hint": "Unit: Number, Presentation currency, Percentage (%) · Report each of the three measures separately for minority borrowers and for all other borrowers; value in presentation currency, LTV as a percentage."
+    },
+    {
+     "item": ".2",
+     "text": "What was the total amount of monetary losses as a result of legal proceedings associated with discriminatory mortgage lending?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "What policies and procedures does your organisation have for ensuring non-discriminatory mortgage origination?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the policies, monitoring, training and review processes used to prevent discrimination."
+    }
+   ]
+  },
+  {
+   "ref": "FN-MF-450a",
+   "title": "Environmental Risk to Mortgaged Properties",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the number and (2) the value of your mortgage loans in 100-year flood zones?",
+     "type": "text",
+     "hint": "Unit: Number, Presentation currency · Report a count and a value (presentation currency) of mortgage loans located in 100-year flood zones."
+    },
+    {
+     "item": ".2",
+     "text": "What are (1) your total expected loss and (2) Loss Given Default (LGD) attributable to mortgage loan default and delinquency because of weather-related natural catastrophes, by geographical region?",
+     "type": "text",
+     "hint": "Unit: Presentation currency, Percentage (%) · Report expected loss in your presentation currency and LGD as a percentage, for each region."
+    },
+    {
+     "item": ".3",
+     "text": "How are climate change and other environmental risks incorporated into your mortgage origination and underwriting?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how such risks are assessed, which criteria or models are used and how they influence lending decisions."
+    }
+   ]
+  },
+  {
+   "ref": "FN-MF-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What are (1) the number and (2) the value of mortgages you originated, by category: (a) residential and (b) commercial?",
+     "type": "text",
+     "hint": "Unit: Number, Presentation currency · Report a count and a value (presentation currency) for each category."
+    },
+    {
+     "item": ".B",
+     "text": "What are (1) the number and (2) the value of mortgages you purchased, by category: (a) residential and (b) commercial?",
+     "type": "text",
+     "hint": "Unit: Number, Presentation currency · Report a count and a value (presentation currency) for each category."
+    }
+   ]
+  }
+ ]
+}

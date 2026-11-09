@@ -1,0 +1,239 @@
+{
+  "summary": "Principle 2 states that RSPO Growers operate legally and with accountability. It covers legal compliance and legal land rights, engaging legally compliant contractors, sourcing FFB from legal and traceable suppliers, upholding human rights, and operating an accessible grievance system.",
+  "disclosures": [
+    {
+      "ref": "2.1",
+      "title": "The Unit of Certification shall operate legally, in compliance with applicable legal requirements and ratified international laws and regulations.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Does your Unit of Certification comply with all applicable and relevant legal requirements?",
+          "type": "yes_no",
+          "hint": "Indicator 2.1.1 (Critical). Must comply with all applicable and relevant legal requirements. National Interpretations determine applicable national and local laws/regulations, including ratified international laws. Attach evidence of compliance (permits, licences)."
+        },
+        {
+          "item": ".2 A",
+          "text": "Do you have a documented and implemented system to ensure legal compliance, with processes to track changes to applicable and relevant laws and regulations?",
+          "type": "yes_no",
+          "hint": "Indicator 2.1.2. A documented system to ensure legal compliance must be developed and implemented, with processes to track changes to applicable laws/regulations. Attach the system documentation."
+        },
+        {
+          "item": ".2 B",
+          "text": "Does your legal compliance system include evidence of legal due diligence or evaluation of the legal compliance of your contractors?",
+          "type": "yes_no",
+          "hint": "Indicator 2.1.2. The legal compliance system shall include evidence of legal due diligence/evaluation of legal compliance of contractors. Attach the due diligence records."
+        },
+        {
+          "item": ".3 A",
+          "text": "Is evidence of your Unit of Certification's legal right to its land operations available?",
+          "type": "yes_no",
+          "hint": "Indicator 2.1.3 (Critical). Evidence of legality of land operations must be available; National Interpretations define the evidence required based on the country's context. Attach land titles, leases or other evidence."
+        },
+        {
+          "item": ".3 B",
+          "text": "Are your legal or authorised boundaries clearly demarcated and visibly maintained, and is all planting within them?",
+          "type": "yes_no",
+          "hint": "Indicator 2.1.3 (Critical). Legal or authorised boundaries must be clearly demarcated and visibly maintained, and planting must be within these legal or authorised boundaries. Attach maps or photos if available."
+        }
+      ]
+    },
+    {
+      "ref": "2.2",
+      "title": "The Unit of Certification shall engage with contractors that are legally compliant.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Does your Unit of Certification maintain a list of its contractors?",
+          "type": "yes_no",
+          "hint": "Indicator 2.2.1. Maintain a list of the UoC's contractors, i.e. those involved in activities within the scope of the RSPO P&C, including contractors providing operational services, supplying labour, or supplying FFB. Attach the list."
+        },
+        {
+          "item": ".2",
+          "text": "Do all contracts with your contractors require them to meet and demonstrate compliance with applicable national and local laws and regulations?",
+          "type": "yes_no",
+          "hint": "Indicator 2.2.2. All contracts involving the UoC's contractors shall require the contractor to meet and demonstrate compliance to applicable and relevant national and local laws/regulations. Attach sample contracts."
+        },
+        {
+          "item": ".3",
+          "text": "Do all contracts with your contractors disallow child labour, forced or trafficked labour, and the collection of recruitment fees (and related costs) from workers?",
+          "type": "yes_no",
+          "hint": "Indicator 2.2.3. All contracts involving contractors shall disallow use of child labour, forced/trafficked labour, and collection of recruitment fees (and related costs) from workers by the contractor. Attach sample contracts."
+        }
+      ]
+    },
+    {
+      "ref": "2.3",
+      "title": "The Unit of Certification shall source Fresh Fruit Bunches (FFB) from legal and traceable suppliers.",
+      "questions": [
+        {
+          "item": ".1 A",
+          "text": "For all FFB you source directly, do your mill(s) hold documentation of the geolocation of the FFB origin?",
+          "type": "yes_no",
+          "hint": "Indicator 2.3.1 A) (Critical). Mill(s) within the UoC shall obtain documentation on FFB origins and legality for all directly sourced FFB, including geolocation of the FFB origin. Attach supplier geolocation records."
+        },
+        {
+          "item": ".1 B",
+          "text": "For all FFB you source directly, do your mill(s) hold evidence of the legal status of the land (including tenure and user rights) of the supply base or smallholder?",
+          "type": "yes_no",
+          "hint": "Indicator 2.3.1 B) (Critical). Evidence of legal status of the land (including tenure and user rights) of the supply base or smallholder. National Interpretations determine accepted local practices and customs on a par with legal standing (e.g. native courts). Attach evidence."
+        },
+        {
+          "item": ".1 C",
+          "text": "For all FFB you source directly, where applicable, do your mill(s) hold evidence of a legal business licence for buying and selling FFB?",
+          "type": "yes_no",
+          "hint": "Indicator 2.3.1 C) (Critical). Where applicable, evidence of a legal business licence for the buying and selling of FFB. Attach copies of licences."
+        },
+        {
+          "item": ".2 A",
+          "text": "For FFB you source indirectly, do your mill(s) engage with suppliers to ensure traceability and legality, and what percentage of your indirectly sourced FFB volume has available documentation?",
+          "type": "number",
+          "hint": "Indicator 2.3.2 (Critical). Engage with suppliers on traceability and legality, and provide the annual percentage of indirectly sourced FFB volume with available documentation during audits to show progress. Enter the percentage (0-100) and attach evidence of engagement."
+        },
+        {
+          "item": ".2 B",
+          "text": "For indirectly sourced FFB, does the available documentation include the geolocation of the FFB origin?",
+          "type": "yes_no",
+          "hint": "Indicator 2.3.2 A) (Critical). Documentation shall include geolocation of the FFB origin. Attach examples."
+        },
+        {
+          "item": ".2 C",
+          "text": "For indirectly sourced FFB, does the available documentation include evidence of the legal status of the land (including tenure and user rights) of the supply base and/or smallholder?",
+          "type": "yes_no",
+          "hint": "Indicator 2.3.2 B) (Critical). Evidence of legal status of land (tenure and user rights). National Interpretations determine accepted local practices and customs (e.g. native courts). Attach examples."
+        },
+        {
+          "item": ".2 D",
+          "text": "For indirectly sourced FFB, where applicable, does the documentation include evidence of a legal business licence for buying and selling FFB?",
+          "type": "yes_no",
+          "hint": "Indicator 2.3.2 C) (Critical). Where applicable, evidence of a legal business licence for the buying and selling of FFB. Attach examples."
+        }
+      ]
+    },
+    {
+      "ref": "2.4",
+      "title": "The Unit of Certification shall commit to uphold human rights, and to respect rights of workers and stakeholders affected by the UoC's business operations and conduct.",
+      "questions": [
+        {
+          "item": ".1 A",
+          "text": "Do you have a policy or policies to respect the human rights of workers, contractors, suppliers, affected communities, and Human Rights Defenders?",
+          "type": "yes_no",
+          "hint": "Indicator 2.4.1 (Critical). Policy or policies to respect the human rights of workers, contractors, suppliers, affected communities and Human Rights Defenders. Attach the policy."
+        },
+        {
+          "item": ".1 B",
+          "text": "Does the policy prohibit negative actions against affected stakeholders, including Human Rights Defenders, complainants, whistleblowers and community spokespersons who lodge complaints against you?",
+          "type": "yes_no",
+          "hint": "Indicator 2.4.1 (Critical). The policy shall prohibit negative actions against affected stakeholders including Human Rights Defenders, complainants, whistleblowers and/or community spokespersons who lodge complaints against the UoC."
+        },
+        {
+          "item": ".1 C",
+          "text": "Is the policy publicly available?",
+          "type": "yes_no",
+          "hint": "Indicator 2.4.1 (Critical). The policy or policies shall be publicly available. Describe or attach where it is published."
+        },
+        {
+          "item": ".2 A",
+          "text": "Is the human rights policy implemented by your Unit of Certification and its contracted security services?",
+          "type": "yes_no",
+          "hint": "Indicator 2.4.2. The policy shall be implemented by the UoC and its contracted security services. Attach evidence such as security contracts and training records."
+        },
+        {
+          "item": ".2 B",
+          "text": "Has the policy been explained to affected stakeholders in a language they understand?",
+          "type": "yes_no",
+          "hint": "Indicator 2.4.2. The policy shall be socialised to affected stakeholders in a language understood by them. Attach evidence of socialisation (meeting records, materials)."
+        }
+      ]
+    },
+    {
+      "ref": "2.5",
+      "title": "The Unit of Certification shall, in consultation with relevant stakeholders, develop and implement an accessible system to manage and resolve grievances regarding its business operations and conduct.",
+      "questions": [
+        {
+          "item": ".1 A",
+          "text": "Has your Unit of Certification established and implemented an accessible and impartial grievance system that ensures confidentiality or anonymity if requested?",
+          "type": "yes_no",
+          "hint": "Indicator 2.5.1 A) (Critical). The UoC shall establish and implement an accessible and impartial grievance system that ensures confidentiality or anonymity, if requested. Attach the procedure."
+        },
+        {
+          "item": ".1 B",
+          "text": "Is the grievance system appropriate for potential complainants, especially workers and affected communities?",
+          "type": "yes_no",
+          "hint": "Indicator 2.5.1 B) (Critical). The system must be appropriate for potential complainants, especially workers and affected communities. Describe how this was assessed, e.g. consultation with them."
+        },
+        {
+          "item": ".1 C",
+          "text": "Does the grievance system take into account any specific needs of women and children?",
+          "type": "yes_no",
+          "hint": "Indicator 2.5.1 C) (Critical). The system shall take into account any specific needs of women and children. Describe the measures taken."
+        },
+        {
+          "item": ".1 D",
+          "text": "Does the grievance system maintain independence and impartiality in handling grievances?",
+          "type": "yes_no",
+          "hint": "Indicator 2.5.1 D) (Critical). Independence and impartiality must be maintained in handling grievance(s). Describe how this is ensured."
+        },
+        {
+          "item": ".1 E",
+          "text": "Does the grievance system avoid preventing either party from using other judicial or non-judicial processes on the same issue?",
+          "type": "yes_no",
+          "hint": "Indicator 2.5.1 E) (Critical). The system shall not prevent the use of other judicial or non-judicial processes independent of the UoC on the same issue by either party."
+        },
+        {
+          "item": ".1 F",
+          "text": "Does the grievance system provide safeguards against reprisals or intimidation of people who lodge grievances?",
+          "type": "yes_no",
+          "hint": "Indicator 2.5.1 F) (Critical). Safeguards must exist to avoid potential reprisals or intimidation of complainant(s) as a result of lodging grievance(s). Describe the safeguards."
+        },
+        {
+          "item": ".2 A",
+          "text": "Is the grievance system available, accessible, and explained to relevant stakeholders, especially workers and affected communities, in appropriate languages and formats?",
+          "type": "yes_no",
+          "hint": "Indicator 2.5.2. Ensure availability, access and socialisation of the grievance system to relevant stakeholders, especially workers and affected communities, in appropriate language(s) and format(s). Attach evidence."
+        },
+        {
+          "item": ".2 B",
+          "text": "Do you provide assistance to stakeholders, including illiterate or vulnerable people, who face difficulties understanding or accessing the grievance system?",
+          "type": "yes_no",
+          "hint": "Indicator 2.5.2. Assistance shall be provided to relevant stakeholders including illiterate stakeholders or vulnerable groups who may face challenges during socialisation or gaining access to the system. Describe the assistance."
+        },
+        {
+          "item": ".3 A",
+          "text": "Do you keep an up-to-date record of the status of every grievance, with all grievances responded to and either resolved or in the process of resolution?",
+          "type": "yes_no",
+          "hint": "Indicator 2.5.3 (Critical). Status of grievance(s) shall be recorded, maintained and kept up-to-date; all grievances raised shall be responded to, and should be resolved or in the process of resolution. Attach the grievance log."
+        },
+        {
+          "item": ".3 B",
+          "text": "Do your grievance records include the steps taken to resolve each grievance?",
+          "type": "yes_no",
+          "hint": "Indicator 2.5.3 A) (Critical). Records/documentation of grievance(s) shall include steps taken to resolve grievance(s)."
+        },
+        {
+          "item": ".3 C",
+          "text": "Do you have procedures that set out the timeline for addressing raised grievances?",
+          "type": "yes_no",
+          "hint": "Indicator 2.5.3 B) (Critical). Records/documentation shall include procedures outlining the timeline in addressing the raised grievance(s). Attach the procedure."
+        },
+        {
+          "item": ".3 D",
+          "text": "Do your grievance records include the outcomes of grievance resolution processes?",
+          "type": "yes_no",
+          "hint": "Indicator 2.5.3 C) (Critical). Records shall include outcomes of grievance resolution processes."
+        },
+        {
+          "item": ".3 E",
+          "text": "For unresolved grievances, do your records include the status, issues affecting resolution, and steps taken to resolve them?",
+          "type": "yes_no",
+          "hint": "Indicator 2.5.3 D) (Critical). Records shall include unresolved grievance(s), including status, issues affecting resolution, and steps taken by the UoC for potential resolution."
+        },
+        {
+          "item": ".3 F",
+          "text": "Do you verify that complainants (and their representatives, if any) are updated on the progress and status of their case in a language they understand?",
+          "type": "yes_no",
+          "hint": "Indicator 2.5.3 E) (Critical). Records shall include verification that a complainant (and representatives) are updated and informed on progress and status of a case, in a language they understand."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+ "summary": "Covers supermarkets, grocery and convenience stores, pharmacy and other food retailers and food distributors. Disclosures address fleet fuel, refrigerant emissions, energy, food waste, data security, food safety, health and nutrition, labelling and marketing, labour practices and supply chain impacts.",
+ "disclosures": [
+  {
+   "ref": "FB-FR-110a",
+   "title": "Fleet Fuel Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How much fleet fuel did your organisation consume, and what percentage was renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) fleet fuel consumed in GJ and (2) the percentage of that fuel that is renewable."
+    }
+   ]
+  },
+  {
+   "ref": "FB-FR-110b",
+   "title": "Air Emissions from Refrigeration",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your gross global Scope 1 emissions from refrigerants?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Report gross global Scope 1 emissions from refrigerants in metric tonnes CO2-e."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of the refrigerants you consumed, by weight, had zero ozone-depleting potential?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by weight · Report the percentage by weight of refrigerants consumed with zero ozone-depleting potential."
+    },
+    {
+     "item": ".3",
+     "text": "What was your average refrigerant emissions rate?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the average refrigerant emissions rate as a percentage of refrigerant charge, and state how it was calculated."
+    }
+   ]
+  },
+  {
+   "ref": "FB-FR-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the operational energy consumed, (2) the percentage of that energy that is grid electricity and (3) the percentage that is renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) operational energy consumed in GJ, (2) the percentage supplied as grid electricity and (3) the percentage that is renewable."
+    }
+   ]
+  },
+  {
+   "ref": "FB-FR-150a",
+   "title": "Food Waste Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the amount of food waste your organisation generated and (2) the percentage diverted from the waste stream?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) food waste generated in metric tonnes and (2) the percentage diverted from the waste stream (for example donation, animal feed, composting)."
+    }
+   ]
+  },
+  {
+   "ref": "FB-FR-230a",
+   "title": "Data Security",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the number of data breaches, (2) the percentage that are personal data breaches and (3) the number of customers affected?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the number of data breaches, (2) the percentage involving personal data and (3) the number of customers affected."
+    },
+    {
+     "item": ".2",
+     "text": "What is your approach to identifying and addressing data security risks?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how data security risks are identified and addressed, including governance, controls, standards followed and incident response."
+    }
+   ]
+  },
+  {
+   "ref": "FB-FR-250a",
+   "title": "Food Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was your high-risk food safety violation rate?",
+     "type": "number",
+     "hint": "Unit: Rate · Report the rate of high-risk food safety violations from inspections, stating the basis (for example violations per inspection)."
+    },
+    {
+     "item": ".2",
+     "text": "What are (1) the number of recalls, (2) the number of units recalled and (3) the percentage of units recalled that are private-label products?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) number of recalls, (2) number of units recalled and (3) the percentage of recalled units that are private-label products."
+    }
+   ]
+  },
+  {
+   "ref": "FB-FR-260a",
+   "title": "Product Health & Nutrition",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What revenue does your organisation earn from products labelled or marketed to promote health and nutrition attributes?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report revenue from products labelled or marketed to promote health and nutrition attributes, in your presentation currency."
+    },
+    {
+     "item": ".2",
+     "text": "How does your organisation identify and manage products and ingredients related to nutritional and health concerns among consumers?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the process to identify and manage products and ingredients of nutritional or health concern, including reformulation, labelling and portfolio decisions."
+    }
+   ]
+  },
+  {
+   "ref": "FB-FR-270a",
+   "title": "Product Labelling & Marketing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many incidents of non-compliance with industry or regulatory labelling or marketing codes did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of incidents of non-compliance with industry or regulatory labelling or marketing codes in the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "What was the total amount of monetary losses as a result of legal proceedings associated with marketing or labelling practices?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Report the total monetary losses (fines, settlements, damages) from legal proceedings related to marketing or labelling practices, in your presentation currency."
+    },
+    {
+     "item": ".3",
+     "text": "What revenue does your organisation earn from products labelled as (1) containing genetically modified organisms (GMOs) and (2) non-GMO?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Report (1) revenue from products labelled as containing GMOs and (2) revenue from products labelled non-GMO, each in your presentation currency."
+    }
+   ]
+  },
+  {
+   "ref": "FB-FR-310a",
+   "title": "Labour Practices",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "By region, what are (1) the average hourly wage and (2) the percentage of in-store and distribution centre employees earning minimum wage?",
+     "type": "text",
+     "hint": "Unit: Presentation currency, Percentage (%) · Report by region (1) the average hourly wage in your presentation currency and (2) the percentage of in-store and distribution centre employees earning minimum wage."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your active workforce is employed under collective agreements?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of the active workforce covered by collective agreements."
+    },
+    {
+     "item": ".3",
+     "text": "How many work stoppages did you have, and how many total days were idle?",
+     "type": "text",
+     "hint": "Unit: Number, Days idle · Report (1) the number of work stoppages and (2) total days idle, for stoppages involving 1,000 or more workers where applicable."
+    },
+    {
+     "item": ".4",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with (1) labour law violations and (2) employment discrimination?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Report monetary losses separately for (1) labour law violations and (2) employment discrimination, in your presentation currency."
+    }
+   ]
+  },
+  {
+   "ref": "FB-FR-430a",
+   "title": "Management of Environmental & Social Impacts in the Supply Chain",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What revenue does your organisation earn from products third-party certified to environmental or social sustainability sourcing standards?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report revenue from third-party certified products in your presentation currency."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your revenue comes from (1) eggs that originated from a cage-free environment and (2) pork produced without the use of gestation crates?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) by revenue · Report separately (1) the percentage of revenue from cage-free eggs and (2) the percentage of revenue from pork produced without gestation crates."
+    },
+    {
+     "item": ".3",
+     "text": "What is your strategy to manage environmental and social risks within the supply chain, including animal welfare?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy, covering supplier standards, monitoring, engagement and animal welfare commitments."
+    },
+    {
+     "item": ".4",
+     "text": "What strategies do you use to reduce the environmental impact of your packaging?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe strategies such as material reduction, redesign, recycled content, and recyclability or reuse of packaging."
+    }
+   ]
+  },
+  {
+   "ref": "FB-FR-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many (1) retail locations and (2) distribution centres does your organisation have?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of (1) retail locations and (2) distribution centres."
+    },
+    {
+     "item": ".B",
+     "text": "What is the total area of (1) your retail space and (2) your distribution centres?",
+     "type": "text",
+     "hint": "Unit: Square metres (m²) · Report total area in square metres of (1) retail space and (2) distribution centres."
+    },
+    {
+     "item": ".C",
+     "text": "How many vehicles are in your commercial fleet?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of vehicles in the commercial fleet."
+    },
+    {
+     "item": ".D",
+     "text": "How many tonne-kilometres did your organisation travel?",
+     "type": "number",
+     "hint": "Unit: Tonne- kilometres · Report total tonne-kilometres travelled in the reporting period."
+    }
+   ]
+  }
+ ]
+}

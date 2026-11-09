@@ -48,14 +48,14 @@ WRAP = Alignment(wrap_text=True, vertical="top")
 def _when(value):
     if value is None:
         return ""
-    return timezone.localtime(value).strftime("%Y-%m-%d %H:%M")
+    return timezone.localtime(value).strftime("%Y-%m-%d %H:%M:%S")
 
 
 def _nice(value):
-    """A readable moment: 17 Oct 2026, 13:19."""
+    """A readable moment: 17 Oct 2026, 13:19:05."""
     if value is None:
         return ""
-    return timezone.localtime(value).strftime("%d %b %Y, %H:%M").lstrip("0")
+    return timezone.localtime(value).strftime("%d %b %Y, %H:%M:%S").lstrip("0")
 
 
 TYPE_LABELS = {
@@ -66,6 +66,16 @@ TYPE_LABELS = {
 
 def _name(person):
     return (person.full_name or person.email) if person else ""
+
+
+def _numbered(question):
+    """The question as the PDF numbers it: "[305-1 a] What were ...?" for a standard's question, as is otherwise."""
+    bank = question.bank_question if question.bank_question_id and question.section.gri_standard_id else None
+    if bank is None or not bank.gri_ref:
+        return question.text
+    item = bank.gri_item
+    number = bank.gri_ref + (item if item.startswith(".") else f" {item}" if item else "")
+    return f"[{number}] {question.text}"
 
 
 def _text(value):
@@ -222,7 +232,7 @@ def _polish(ws):
 def build_workbook(survey: Survey) -> bytes:
     events = list(survey.events.select_related("by").prefetch_related("question_comments__author", "question_comments__attachments"))
     questions = list(
-        SurveyQuestion.objects.filter(section__survey=survey).select_related("section", "responder").order_by("section__order", "order")
+        SurveyQuestion.objects.filter(section__survey=survey).select_related("section", "responder", "bank_question").order_by("section__order", "order")
     )
     role_of = {}
     for q in questions:
@@ -314,7 +324,8 @@ def build_workbook(survey: Survey) -> bytes:
         for c in e.question_comments.all():
             notes_by_question.setdefault(c.question_id, []).append(_comment_parts(c, e, role_of))
     for n, q in enumerate(questions, start=1):
-        r = sheet.line([n, q.section.title, q.text, f"{_name(q.responder) or 'Unassigned'}\n{STATUS_LABELS.get(q.status, q.status)}"])
+        shown = _numbered(q)
+        r = sheet.line([n, q.section.title, shown, f"{_name(q.responder) or 'Unassigned'}\n{STATUS_LABELS.get(q.status, q.status)}"])
         notes = notes_by_question.get(q.pk)
         target = ws.cell(r, first_comment)
         target.alignment = WRAP
@@ -330,7 +341,7 @@ def build_workbook(survey: Survey) -> bytes:
         # Merged cells don't auto-fit their height, so size the row for its longest cell.
         width = sum(WIDTHS[first_comment - 1:])
         lines = sum(-(-len(t) // width) + 1 for t in (note[-1] for note in notes)) if notes else 1
-        ws.row_dimensions[r].height = max(15 * max(lines + len(notes or []) - 1, -(-len(q.text) // WIDTHS[2])), 18)
+        ws.row_dimensions[r].height = max(15 * max(lines + len(notes or []) - 1, -(-len(shown) // WIDTHS[2])), 18)
         previous = None
         for i, (_, e) in enumerate(recorded):
             if q.pk not in {x.pk for x in e.questions.all()}:

@@ -1,29 +1,89 @@
 {
- "summary": "GRI 301: Materials 2016 contains disclosures for reporting an organization's materials-related impacts and how it manages them. It covers the materials used to make and package products and services, recycled input materials, and reclaimed products and packaging.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "How does your organization manage its materials-related impacts?",
-   "type": "text",
-   "hint": "Report how you manage this material topic using Disclosure 3-3 of GRI 3: Material Topics 2021."
-  },
-  {
-   "ref": "301-1",
-   "text": "What was the total weight or volume of materials used to produce and package your primary products and services in the reporting period?",
-   "type": "text",
-   "hint": "a. Total weight or volume of materials used to produce and package primary products and services during the period, by: i. non-renewable materials; ii. renewable materials."
-  },
-  {
-   "ref": "301-2",
-   "text": "What percentage of the input materials used to manufacture your primary products and services were recycled?",
-   "type": "number",
-   "hint": "a. Percentage of recycled input materials used to manufacture primary products and services (total recycled input materials / total input materials x 100, using the total from 301-1)."
-  },
-  {
-   "ref": "301-3",
-   "text": "What percentage of your products and their packaging materials were reclaimed, for each product category, and how were the data collected?",
-   "type": "text",
-   "hint": "a. Percentage of reclaimed products and their packaging materials for each product category (excluding rejects and recalls). b. How the data were collected."
-  }
- ]
+  "summary": "GRI 301: Materials 2016 contains disclosures for reporting an organization's materials-related impacts and how it manages them. It covers the materials used to make and package products and services, recycled input materials, and reclaimed products and packaging.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to materials.",
+          "type": "text",
+          "hint": "Describe the actual and potential, negative and positive impacts on the economy, environment, and people, including impacts on human rights (GRI 3-3-a)."
+        },
+        {
+          "item": "b",
+          "text": "State whether the organization is involved with the negative impacts related to materials through its own activities or as a result of its business relationships, and describe how.",
+          "type": "text",
+          "hint": "Say whether the organization causes or contributes to the negative impacts through its activities, or whether they are linked to its operations, products or services through business relationships, and describe how (GRI 3-3-b)."
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding materials.",
+          "type": "text",
+          "hint": "Describe policies or commitments regarding the material topic (GRI 3-3-c)."
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage materials and the related impacts.",
+          "type": "text",
+          "hint": "Include: i. how negative impacts are prevented or mitigated; ii. how actual negative impacts are addressed, including actions to provide for or cooperate in remediation; iii. how actual and potential positive impacts are managed (GRI 3-3-d)."
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of its actions on materials?",
+          "type": "text",
+          "hint": "Report: i. information about the effectiveness of the actions; ii. the goals, targets and indicators used to evaluate progress; iii. lessons learned and how they have been integrated into policies and operational procedures (GRI 3-3-e)."
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken on materials and whether those actions have been effective.",
+          "type": "text",
+          "hint": "Describe how stakeholder engagement has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e) (GRI 3-3-f)."
+        }
+      ]
+    },
+    {
+      "ref": "301-1",
+      "title": "Materials used by weight or volume",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What is the total weight or volume of materials used to produce and package the organization's primary products and services?",
+          "type": "text",
+          "hint": "Report by: i. non-renewable materials used; ii. renewable materials used."
+        }
+      ]
+    },
+    {
+      "ref": "301-2",
+      "title": "Recycled input materials used",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What percentage of recycled input materials is used to manufacture the organization's primary products and services?",
+          "type": "number",
+          "hint": "Percentage of recycled input materials used."
+        }
+      ]
+    },
+    {
+      "ref": "301-3",
+      "title": "Reclaimed products and their packaging materials",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What percentage of products and their packaging materials is reclaimed, for each product category?",
+          "type": "text",
+          "hint": "Percentage of reclaimed products and their packaging materials for each product category."
+        },
+        {
+          "item": "b",
+          "text": "How were the data for this disclosure collected?",
+          "type": "text",
+          "hint": "Describe how the data have been collected."
+        }
+      ]
+    }
+  ]
 }

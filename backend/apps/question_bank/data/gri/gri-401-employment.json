@@ -1,29 +1,119 @@
 {
- "summary": "GRI 401 covers an organization's employment-related impacts and how it manages them. It addresses hiring, recruitment, retention and the working conditions it provides, including in its supply chain, with disclosures on hires and turnover, benefits and parental leave.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "Describe how the organization manages this material topic and its related impacts, as required by Disclosure 3-3 in GRI 3 (Material Topics 2021).",
-   "type": "text",
-   "hint": "Per GRI 3-3: the actual and potential impacts, policy commitments, actions taken, tracking of effectiveness and stakeholder engagement for the topic. GRI 401 recommends describing policies on work relationships and supply chain employment issues."
-  },
-  {
-   "ref": "401-1",
-   "text": "Report the total number and rate of new employee hires and of employee turnover during the reporting period, by age group, gender and region.",
-   "type": "text",
-   "hint": "a. Total number and rate of new employee hires, by age group, gender and region. b. Total number and rate of employee turnover, by age group, gender and region."
-  },
-  {
-   "ref": "401-2",
-   "text": "Which benefits are standard for full-time employees but not provided to temporary or part-time employees, by significant location of operation, and how do you define 'significant locations of operation'?",
-   "type": "text",
-   "hint": "a. Benefits for full-time but not temporary/part-time employees by significant location (life insurance, health care, disability and invalidity coverage, parental leave, retirement provision, stock ownership, others). b. Definition of significant locations of operation."
-  },
-  {
-   "ref": "401-3",
-   "text": "Report parental leave figures for the reporting period by gender: employees entitled, employees who took leave, employees who returned to work, employees still employed 12 months after return, and the return to work and retention rates.",
-   "type": "text",
-   "hint": "a. Employees entitled to parental leave, by gender. b. Employees who took it. c. Employees who returned to work after leave. d. Employees still employed 12 months after return. e. Return to work and retention rates."
-  }
- ]
+  "summary": "GRI 401 covers an organization's employment-related impacts and how it manages them. It addresses hiring, recruitment, retention and the working conditions it provides, including in its supply chain, with disclosures on hires and turnover, benefits and parental leave.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to employment.",
+          "hint": "Cover both actual and potential impacts, negative and positive, including impacts on human rights.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "Is the organization involved with the negative impacts related to employment through its own activities or as a result of its business relationships? Describe those activities or business relationships.",
+          "hint": "State whether involvement is through the organization's activities or through its business relationships, and describe them.",
+          "type": "text"
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding employment.",
+          "hint": "Describe the policies or commitments that apply to this material topic.",
+          "type": "text"
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage employment and the related impacts, including (i) actions to prevent or mitigate potential negative impacts, (ii) actions to address actual negative impacts, including actions to provide for or cooperate in their remediation, and (iii) actions to manage actual and potential positive impacts.",
+          "hint": "Cover i. prevention or mitigation of potential negative impacts; ii. addressing actual negative impacts, including remediation; iii. managing positive impacts.",
+          "type": "text"
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of the actions taken? Describe (i) the processes used, (ii) the goals, targets and indicators used to evaluate progress, (iii) the effectiveness of the actions, including progress toward goals and targets, and (iv) lessons learned and how they have been incorporated into operational policies and procedures.",
+          "hint": "Cover i. tracking processes; ii. goals, targets and indicators; iii. effectiveness and progress; iv. lessons learned and how they were incorporated.",
+          "type": "text"
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e).",
+          "hint": "Explain the role of stakeholder engagement in shaping actions and in judging their effectiveness.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "401-1",
+      "title": "New employee hires and employee turnover",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What was the total number and rate of new employee hires during the reporting period, by age group, gender and region?",
+          "hint": "Use total employee numbers at the end of the reporting period to calculate rates.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "What was the total number and rate of employee turnover during the reporting period, by age group, gender and region?",
+          "hint": "Use total employee numbers at the end of the reporting period to calculate rates.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "401-2",
+      "title": "Benefits provided to full-time employees that are not provided to temporary or part-time employees",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Which benefits are standard for full-time employees but not provided to temporary or part-time employees, by significant location of operation? Cover at a minimum life insurance, health care, disability and invalidity coverage, parental leave, retirement provision, stock ownership and others.",
+          "hint": "Exclude in-kind benefits such as sports or child day care facilities and free meals. List benefits per significant location.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "What definition is used for 'significant locations of operation'?",
+          "hint": "Provide the definition applied in part a.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "401-3",
+      "title": "Parental leave",
+      "questions": [
+        {
+          "item": "a",
+          "text": "How many employees were entitled to parental leave, by gender?",
+          "hint": "Report numbers by gender.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "How many employees took parental leave, by gender?",
+          "hint": "Report numbers by gender.",
+          "type": "text"
+        },
+        {
+          "item": "c",
+          "text": "How many employees returned to work in the reporting period after parental leave ended, by gender?",
+          "hint": "Report numbers by gender.",
+          "type": "text"
+        },
+        {
+          "item": "d",
+          "text": "How many employees who returned to work after parental leave ended were still employed 12 months after their return, by gender?",
+          "hint": "Report numbers by gender.",
+          "type": "text"
+        },
+        {
+          "item": "e",
+          "text": "What were the return to work and retention rates of employees who took parental leave, by gender?",
+          "hint": "Return to work rate and retention rate, by gender.",
+          "type": "text"
+        }
+      ]
+    }
+  ]
 }

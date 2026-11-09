@@ -1,0 +1,143 @@
+{
+ "summary": "The Engineering & Construction Services standard covers organisations providing engineering, design, consulting and construction for buildings and infrastructure. Its disclosure topics are environmental impacts of project development, structural integrity and safety, workforce health and safety, lifecycle impacts of buildings, climate impacts of business mix and business ethics.",
+ "disclosures": [
+  {
+   "ref": "IF-EN-160a",
+   "title": "Environmental Impacts of Project Development",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many incidents of non-compliance with environmental permits, standards and regulations did you have?",
+     "type": "number",
+     "hint": "Unit: number · Report the total number of incidents in the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "What processes do you use to assess and manage environmental risks associated with project design, siting and construction?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how environmental risks are identified, assessed and managed across design, siting and construction."
+    }
+   ]
+  },
+  {
+   "ref": "IF-EN-250a",
+   "title": "Structural Integrity & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the amount of your defect- and safety-related rework costs?",
+     "type": "number",
+     "hint": "Unit: presentation currency · Report the total rework cost for the reporting period in your presentation currency."
+    },
+    {
+     "item": ".2",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with defect- and safety-related incidents?",
+     "type": "number",
+     "hint": "Unit: presentation currency · Report total monetary losses from such legal proceedings in your presentation currency."
+    }
+   ]
+  },
+  {
+   "ref": "IF-EN-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total recordable incident rate (TRIR) and (2) fatality rate for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: rate · Report both rates separately for direct employees and contract employees."
+    }
+   ]
+  },
+  {
+   "ref": "IF-EN-410a",
+   "title": "Lifecycle Impacts of Buildings & Infrastructure",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many (1) commissioned projects are certified to a third-party multi-attribute sustainability standard, and (2) how many active projects are seeking such certification?",
+     "type": "text",
+     "hint": "Unit: number · Report both counts and name the certification standards used."
+    },
+    {
+     "item": ".2",
+     "text": "What process do you use to incorporate operational-phase energy and water efficiency considerations into project planning and design?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how operational energy and water efficiency are considered during planning and design."
+    }
+   ]
+  },
+  {
+   "ref": "IF-EN-410b",
+   "title": "Climate Impacts of Business Mix",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is the amount of your backlog for (1) hydrocarbon-related projects and (2) renewable energy projects?",
+     "type": "text",
+     "hint": "Unit: presentation currency · Report backlog separately for hydrocarbon-related and renewable energy projects."
+    },
+    {
+     "item": ".2",
+     "text": "What was the amount of backlog cancellations associated with hydrocarbon-related projects?",
+     "type": "number",
+     "hint": "Unit: presentation currency · Report the value of backlog cancellations for hydrocarbon-related projects in the period."
+    },
+    {
+     "item": ".3",
+     "text": "What is the amount of your backlog for non-energy projects associated with climate change mitigation?",
+     "type": "number",
+     "hint": "Unit: presentation currency · Report backlog value for non-energy projects that contribute to climate change mitigation."
+    }
+   ]
+  },
+  {
+   "ref": "IF-EN-510a",
+   "title": "Business Ethics",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many (1) active projects and what (2) backlog do you have in countries ranked among the 20 lowest in Transparency International's Corruption Perception Index?",
+     "type": "text",
+     "hint": "Unit: number; presentation currency · Report (1) the number of active projects and (2) the backlog value in those countries."
+    },
+    {
+     "item": ".2",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with charges of (1) bribery or corruption and (2) anti-competitive practices?",
+     "type": "text",
+     "hint": "Unit: presentation currency · Report losses separately for bribery or corruption and for anti-competitive practices."
+    },
+    {
+     "item": ".3",
+     "text": "What are your policies and practices for preventing (1) bribery and corruption and (2) anti-competitive behaviour in project bidding processes?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe policies and practices for both areas as applied to bidding."
+    }
+   ]
+  },
+  {
+   "ref": "IF-EN-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many active projects do you have?",
+     "type": "number",
+     "hint": "Unit: number · Report the number of active projects at the end of the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "How many projects did you commission?",
+     "type": "number",
+     "hint": "Unit: number · Report the number of projects commissioned in the reporting period."
+    },
+    {
+     "item": ".C",
+     "text": "What is your total backlog?",
+     "type": "number",
+     "hint": "Unit: presentation currency · Report the total value of backlog in your presentation currency."
+    }
+   ]
+  }
+ ]
+}

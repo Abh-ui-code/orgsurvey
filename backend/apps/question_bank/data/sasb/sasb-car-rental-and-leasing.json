@@ -1,0 +1,65 @@
+{
+ "summary": "Covers entities that rent or lease passenger vehicles, including car-sharing models. Disclosure topics are customer safety and fleet fuel economy and utilisation.",
+ "disclosures": [
+  {
+   "ref": "TR-CR-250a",
+   "title": "Customer Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your rental fleet vehicles are rated by NCAP with an overall 5-star safety rating, by region?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report the percentage by region, for models rated by a New Car Assessment Programme (NCAP) with an overall 5-star rating."
+    },
+    {
+     "item": ".2",
+     "text": "How many vehicles did your organisation recall?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of vehicles recalled during the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "TR-CR-410a",
+   "title": "Fleet Fuel Economy & Utilisation",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your rental day-weighted rental fleet average fuel economy, by region?",
+     "type": "text",
+     "hint": "Unit: Mpg, L/km, gCO2/km, km/L · Report by region, in the unit(s) you use: mpg, L/km, gCO2/km or km/L, and state the weighting method."
+    },
+    {
+     "item": ".2",
+     "text": "What is your fleet utilisation rate?",
+     "type": "number",
+     "hint": "Unit: Rate · Report fleet utilisation as a rate (for example rental days divided by available rental days) and state the calculation."
+    }
+   ]
+  },
+  {
+   "ref": "TR-CR-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What is the average age of your vehicles?",
+     "type": "number",
+     "hint": "Unit: Months · Report the average vehicle age in months."
+    },
+    {
+     "item": ".B",
+     "text": "What are your total available rental days?",
+     "type": "number",
+     "hint": "Unit: Days · Report total available rental days for the reporting period."
+    },
+    {
+     "item": ".C",
+     "text": "What was your average rental fleet size?",
+     "type": "number",
+     "hint": "Unit: Number of vehicles · Report the average rental fleet size as a number of vehicles."
+    }
+   ]
+  }
+ ]
+}

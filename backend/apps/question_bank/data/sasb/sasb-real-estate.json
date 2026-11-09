@@ -1,0 +1,143 @@
+{
+ "summary": "The Real Estate standard covers organisations that own, operate, develop and invest in real estate such as offices, retail, residential and industrial property. Its disclosure topics are energy management, water management, management of tenant sustainability impacts and climate change adaptation.",
+ "disclosures": [
+  {
+   "ref": "IF-RE-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your total floor area has energy consumption data coverage, by property sector?",
+     "type": "text",
+     "hint": "Unit: percentage by floor area · Report coverage as a percentage of total floor area for each property sector."
+    },
+    {
+     "item": ".2",
+     "text": "For the portfolio area with data coverage, what is (1) your total energy consumed, (2) the percentage from grid electricity and (3) the percentage renewable, by property sector?",
+     "type": "text",
+     "hint": "Unit: gigajoules (GJ); percentage · Report all three figures for each property sector."
+    },
+    {
+     "item": ".3",
+     "text": "What was the like-for-like percentage change in energy consumption for the portfolio area with data coverage, by property sector?",
+     "type": "text",
+     "hint": "Unit: percentage · Report the like-for-like change for each property sector and state the comparison basis."
+    },
+    {
+     "item": ".4",
+     "text": "What percentage of your eligible portfolio (1) has an energy rating and (2) is certified to ENERGY STAR, by property sector?",
+     "type": "text",
+     "hint": "Unit: percentage by floor area · Report both percentages by floor area for each property sector."
+    },
+    {
+     "item": ".5",
+     "text": "How are building energy management considerations integrated into your property investment analysis and operational strategy?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how energy considerations influence investment analysis and operations."
+    }
+   ]
+  },
+  {
+   "ref": "IF-RE-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of (1) your total floor area and (2) your floor area in regions with High or Extremely High Baseline Water Stress has water withdrawal data coverage, by property sector?",
+     "type": "text",
+     "hint": "Unit: percentage by floor area · Report both coverage percentages for each property sector."
+    },
+    {
+     "item": ".2",
+     "text": "For the portfolio area with data coverage, what is (1) your total water withdrawn and (2) the percentage in regions with High or Extremely High Baseline Water Stress, by property sector?",
+     "type": "text",
+     "hint": "Unit: thousand cubic metres; percentage · Report both figures for each property sector."
+    },
+    {
+     "item": ".3",
+     "text": "What was the like-for-like percentage change in water withdrawn for the portfolio area with data coverage, by property sector?",
+     "type": "text",
+     "hint": "Unit: percentage · Report the like-for-like change for each property sector and state the comparison basis."
+    },
+    {
+     "item": ".4",
+     "text": "What are your water management risks, and what strategies and practices do you use to mitigate them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the main water-related risks and the strategies and practices used to mitigate them."
+    }
+   ]
+  },
+  {
+   "ref": "IF-RE-410a",
+   "title": "Management of Tenant Sustainability Impacts",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your new leases contain a cost recovery clause for resource efficiency-related capital improvements, and what leased floor area do they cover, by property sector?",
+     "type": "text",
+     "hint": "Unit: percentage by floor area; square metres · Report (1) the percentage of new leases and (2) the associated leased floor area for each property sector."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your tenants are separately metered or submetered for (1) grid electricity consumption and (2) water withdrawals, by property sector?",
+     "type": "text",
+     "hint": "Unit: percentage by floor area · Report both percentages for each property sector."
+    },
+    {
+     "item": ".3",
+     "text": "What is your approach to measuring, incentivising and improving the sustainability impacts of tenants?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you measure tenant impacts and the incentives and programmes used to improve them."
+    }
+   ]
+  },
+  {
+   "ref": "IF-RE-450a",
+   "title": "Climate Change Adaptation",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What area of your properties is located in 100-year flood zones, by property sector?",
+     "type": "text",
+     "hint": "Unit: square metres (m2) · Report the area in m2 for each property sector."
+    },
+    {
+     "item": ".2",
+     "text": "How do you analyse climate change risk exposure, how systematic is your portfolio exposure, and what strategies do you use to mitigate the risks?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the exposure analysis, the degree of portfolio-wide exposure and the mitigation strategies."
+    }
+   ]
+  },
+  {
+   "ref": "IF-RE-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many assets do you have, by property sector?",
+     "type": "text",
+     "hint": "Unit: number · Report the number of assets for each property sector."
+    },
+    {
+     "item": ".B",
+     "text": "What is your leasable floor area, by property sector?",
+     "type": "text",
+     "hint": "Unit: square metres (m2) · Report leasable floor area for each property sector."
+    },
+    {
+     "item": ".C",
+     "text": "What percentage of your assets are indirectly managed, by property sector?",
+     "type": "text",
+     "hint": "Unit: percentage by floor area · Report the percentage of indirectly managed assets for each property sector."
+    },
+    {
+     "item": ".D",
+     "text": "What is your average occupancy rate, by property sector?",
+     "type": "text",
+     "hint": "Unit: percentage · Report average occupancy for each property sector."
+    }
+   ]
+  }
+ ]
+}

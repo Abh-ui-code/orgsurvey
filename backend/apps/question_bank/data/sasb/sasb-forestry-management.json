@@ -1,0 +1,89 @@
+{
+ "summary": "This standard covers entities that own or manage natural and planted forestlands and timber tracts, or run tree nurseries and rubber plantations. Its disclosure topics are ecosystem services and impacts, rights of indigenous peoples, and climate change adaptation.",
+ "disclosures": [
+  {
+   "ref": "RR-FM-160a",
+   "title": "Ecosystem Services & Impacts",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What area of forestland, in hectares, is certified to a third-party forest management standard, and what percentage is certified to each standard?",
+     "type": "text",
+     "hint": "Unit: Hectares (ha), Percentage (%) · Report total certified hectares and, for each standard (for example FSC, PEFC, SFI), the percentage of forestland certified to it. Note that land may hold more than one certification."
+    },
+    {
+     "item": ".2",
+     "text": "What area of your forestland, in hectares, has protected conservation status?",
+     "type": "number",
+     "hint": "Unit: Hectares (ha) · Report hectares of forestland with protected conservation status. State how protected status is defined."
+    },
+    {
+     "item": ".3",
+     "text": "What area of your forestland, in hectares, is in endangered species habitat?",
+     "type": "number",
+     "hint": "Unit: Hectares (ha) · Report hectares of forestland located in endangered species habitat. State the lists or classifications used to identify such habitat."
+    },
+    {
+     "item": ".4",
+     "text": "What is your approach to optimising the opportunities from the ecosystem services provided by your forestlands?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the ecosystem services considered (such as carbon storage, water regulation and recreation), and how management decisions aim to optimise the opportunities they offer."
+    }
+   ]
+  },
+  {
+   "ref": "RR-FM-210a",
+   "title": "Rights of Indigenous Peoples",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What area of your forestland, in hectares, is in indigenous land?",
+     "type": "number",
+     "hint": "Unit: Hectares (ha) · Report hectares of forestland that lies within indigenous land. State how indigenous land is defined."
+    },
+    {
+     "item": ".2",
+     "text": "What engagement processes and due diligence practices do you use with respect to human rights, indigenous rights and the local community?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you engage with indigenous peoples and local communities, for example consultation and free, prior and informed consent, and the due diligence practices used to identify human rights risks."
+    }
+   ]
+  },
+  {
+   "ref": "RR-FM-450a",
+   "title": "Climate Change Adaptation",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your strategy to manage the opportunities for and risks to forest management and timber production presented by climate change?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe climate-related risks (such as fire, pests, drought and storms) and opportunities, and the strategy and actions used to manage them."
+    }
+   ]
+  },
+  {
+   "ref": "RR-FM-000",
+   "title": "Activity Metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What area of forestland, in hectares, does your organisation own, lease or manage?",
+     "type": "number",
+     "hint": "Unit: Hectares (ha) · Report total hectares of forestland owned, leased or managed by your organisation."
+    },
+    {
+     "item": ".B",
+     "text": "What is your aggregate standing timber inventory, in cubic metres?",
+     "type": "number",
+     "hint": "Unit: Cubic metres (m³) · Report the aggregate standing timber inventory in cubic metres, and state the measurement basis and date."
+    },
+    {
+     "item": ".C",
+     "text": "What was your timber harvest volume, in cubic metres?",
+     "type": "number",
+     "hint": "Unit: Cubic metres (m³) · Report the timber harvest volume in cubic metres for the reporting period."
+    }
+   ]
+  }
+ ]
+}

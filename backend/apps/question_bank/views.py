@@ -45,10 +45,10 @@ class BankQuestionViewSet(TenantScopedMixin, viewsets.ModelViewSet):
 
 
 class GriStandardViewSet(viewsets.ReadOnlyModelViewSet):
-    """The GRI Standards: a summary, the PDF and the questions in it."""
+    """The GRI, SASB, TCFD, RSPO and WEF standards: a summary, the PDF and the questions in it (?framework=gri|sasb|tcfd|rspo|wef)."""
 
     pagination_class = None
-    filterset_fields = ["series"]
+    filterset_fields = ["series", "framework"]
 
     def get_serializer_class(self):
         return GriStandardDetailSerializer if self.action == "retrieve" else GriStandardSerializer

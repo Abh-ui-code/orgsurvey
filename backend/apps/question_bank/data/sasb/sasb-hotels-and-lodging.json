@@ -1,0 +1,119 @@
+{
+ "summary": "The Hotels & Lodging standard covers entities that provide overnight accommodation such as hotels, motels and inns, whether owned, managed or franchised. Its disclosure topics are energy management, water management, ecological impacts, labour practices and climate change adaptation.",
+ "disclosures": [
+  {
+   "ref": "SV-HL-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total energy consumed, (2) percentage grid electricity and (3) percentage renewable energy?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy in gigajoules, (2) the percentage supplied by grid electricity and (3) the percentage that is renewable, including self-generated and purchased renewable energy."
+    }
+   ]
+  },
+  {
+   "ref": "SV-HL-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total water withdrawn and (2) total water consumed, and what percentage of each is in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report (1) total water withdrawn and (2) total water consumed in thousand cubic metres, and for each the percentage in regions with High or Extremely High Baseline Water Stress."
+    }
+   ]
+  },
+  {
+   "ref": "SV-HL-160a",
+   "title": "Ecological Impacts",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many of your lodging facilities are located in or near areas of protected conservation status or endangered species habitat?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of lodging facilities located in or near protected conservation areas or endangered species habitat."
+    },
+    {
+     "item": ".2",
+     "text": "What environmental management policies and practices does your organisation use to preserve ecosystem services?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe policies and practices for preserving ecosystem services at your lodging facilities, such as siting, construction and operating practices, and engagement with local communities."
+    }
+   ]
+  },
+  {
+   "ref": "SV-HL-310a",
+   "title": "Labour Practices",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) voluntary and (2) involuntary turnover rates for lodging facility employees?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report the voluntary turnover rate and the involuntary turnover rate for lodging facility employees as percentages."
+    },
+    {
+     "item": ".2",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with labour law violations?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to labour law violations."
+    },
+    {
+     "item": ".3",
+     "text": "What are (1) the average hourly wage and (2) the percentage of lodging facility employees earning minimum wage, by region?",
+     "type": "text",
+     "hint": "Unit: Presentation currency, Percentage (%) · For each region report (1) the average hourly wage in your presentation currency and (2) the percentage of lodging facility employees earning minimum wage."
+    },
+    {
+     "item": ".4",
+     "text": "What policies and programmes does your organisation have to prevent worker harassment?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe policies and programmes to prevent harassment of workers, including reporting channels, training, investigation processes and protections for those who report."
+    }
+   ]
+  },
+  {
+   "ref": "SV-HL-450a",
+   "title": "Climate Change Adaptation",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many of your lodging facilities are located in 100-year flood zones?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of lodging facilities located in 100-year flood zones."
+    }
+   ]
+  },
+  {
+   "ref": "SV-HL-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many available room-nights does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of available room-nights in the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "What is your average occupancy rate?",
+     "type": "number",
+     "hint": "Unit: Rate · Report the average occupancy rate as a rate or percentage of available room-nights occupied."
+    },
+    {
+     "item": ".C",
+     "text": "What is the total area of your lodging facilities?",
+     "type": "number",
+     "hint": "Unit: Square metres (m²) · Report the total area of lodging facilities in square metres."
+    },
+    {
+     "item": ".D",
+     "text": "How many lodging facilities do you have, and what percentage are (1) managed, (2) owned and leased, and (3) franchised?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report the total number of lodging facilities and the percentage that are managed, owned and leased, and franchised."
+    }
+   ]
+  }
+ ]
+}

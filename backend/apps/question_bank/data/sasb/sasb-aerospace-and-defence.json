@@ -1,0 +1,155 @@
+{
+ "summary": "This standard covers the Aerospace & Defence industry, including manufacturers of commercial aircraft, aircraft parts, defence products and defence prime contractors. Its disclosure topics are energy management, hazardous waste management, data security, product safety, fuel economy and emissions in use-phase, materials sourcing and business ethics.",
+ "disclosures": [
+  {
+   "ref": "RT-AE-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your organisation's (1) total energy consumed, (2) percentage of that energy that is grid electricity and (3) percentage that is renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy consumed in GJ, (2) the percentage purchased from the grid and (3) the percentage from renewable sources, including self-generated renewable energy."
+    }
+   ]
+  },
+  {
+   "ref": "RT-AE-150a",
+   "title": "Hazardous Waste Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What (1) amount of hazardous waste did your organisation generate, and (2) what percentage of it was recycled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) the total hazardous waste generated in tonnes and (2) the percentage recycled, using the applicable regulatory definition of hazardous waste."
+    },
+    {
+     "item": ".2",
+     "text": "What are (1) the number and aggregate quantity of your reportable spills, and (2) the quantity recovered?",
+     "type": "text",
+     "hint": "Unit: Number, Kilogrammes (kg) · Report (1) the number of reportable spills and their aggregate quantity in kg, and (2) the quantity recovered in kg."
+    }
+   ]
+  },
+  {
+   "ref": "RT-AE-230a",
+   "title": "Data Security",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "(1) How many data breaches did your organisation experience, and (2) what percentage involved confidential information?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the number of data breaches and (2) the percentage that involved confidential information, such as export-controlled or classified data."
+    },
+    {
+     "item": ".2",
+     "text": "How does your organisation identify and address data security risks in (1) its operations and (2) its products?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe the approach for (1) entity operations and (2) products, including risk identification, controls, standards followed and any relevant certifications or customer requirements."
+    }
+   ]
+  },
+  {
+   "ref": "RT-AE-250a",
+   "title": "Product Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "(1) How many product recalls did your organisation issue, and (2) how many units were recalled in total?",
+     "type": "text",
+     "hint": "Unit: Number · Report (1) the number of recalls issued and (2) the total units recalled, covering voluntary and mandated recalls in the period."
+    },
+    {
+     "item": ".2",
+     "text": "(1) How many counterfeit parts did your organisation detect, and (2) what percentage were avoided?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the number of counterfeit parts detected and (2) the percentage avoided, meaning kept out of the supply chain or products."
+    },
+    {
+     "item": ".3",
+     "text": "(1) How many Airworthiness Directives did your organisation receive, and (2) how many units were affected in total?",
+     "type": "text",
+     "hint": "Unit: Number · Report (1) the number of Airworthiness Directives received and (2) the total number of units affected."
+    },
+    {
+     "item": ".4",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with product safety?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses from legal proceedings associated with product safety, in your presentation currency, including settlements, fines and penalties."
+    }
+   ]
+  },
+  {
+   "ref": "RT-AE-410a",
+   "title": "Fuel Economy & Emissions in Use-phase",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was your organisation's revenue from alternative energy-related products?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report revenue from alternative energy-related products in your presentation currency for the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "What is your organisation's approach and strategy to address the fuel economy and greenhouse gas (GHG) emissions of its products?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe the approach and strategy, including product design and technology initiatives, targets, regulatory drivers and progress on improving fuel economy and reducing GHG emissions."
+    }
+   ]
+  },
+  {
+   "ref": "RT-AE-440a",
+   "title": "Materials Sourcing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation manage the risks associated with the use of critical materials?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe the critical materials used, the risks (supply, price, regulatory, reputational) and the actions taken to manage them, such as diversification, substitution or recycling."
+    }
+   ]
+  },
+  {
+   "ref": "RT-AE-510a",
+   "title": "Business Ethics",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with incidents of corruption, bribery or illicit international trade?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses from legal proceedings associated with incidents of corruption, bribery or illicit international trade, in your presentation currency, including settlements, fines and penalties."
+    },
+    {
+     "item": ".2",
+     "text": "What was your organisation's revenue from countries ranked in the 'E' or 'F' Band of Transparency International's Government Defence Anti-Corruption Index?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report revenue from countries ranked in the 'E' or 'F' Band of Transparency International's Government Defence Anti-Corruption Index in your presentation currency for the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "What processes does your organisation use to manage business ethics risks throughout its value chain?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe policies, due diligence, training, agent and supplier screening and monitoring processes used to manage corruption, bribery and illicit trade risks across the value chain."
+    }
+   ]
+  },
+  {
+   "ref": "RT-AE-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was your organisation's production by reportable segment?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of units produced for each reportable segment, such as commercial aircraft, defence or parts."
+    },
+    {
+     "item": ".B",
+     "text": "How many employees does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of employees; state whether it is a headcount or full-time equivalent figure."
+    }
+   ]
+  }
+ ]
+}

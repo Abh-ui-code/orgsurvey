@@ -1,0 +1,125 @@
+{
+ "summary": "This standard covers companies that operate retail pharmacies and the distribution centres supplying them, selling prescription and over-the-counter medicines and other goods. Disclosure topics include energy management in stores, data security and privacy, drug supply chain integrity, management of controlled substances and patient health outcomes.",
+ "disclosures": [
+  {
+   "ref": "HC-DR-130a",
+   "title": "Energy Management in Retail",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was your total energy consumed, and what percentage was (1) grid electricity and (2) renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy consumed in gigajoules, (2) the percentage from grid electricity and (3) the percentage from renewable sources."
+    }
+   ]
+  },
+  {
+   "ref": "HC-DR-230a",
+   "title": "Data Security & Privacy",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What policies and practices does your organisation have to secure customers' personal health data records and other personal data?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you identify data security vulnerabilities and risks, the controls in place, and any standards or certifications followed."
+    },
+    {
+     "item": ".2",
+     "text": "How many data breaches did you have, what percentage involved (a) personal data only and (b) personal health data, and how many customers were affected in each category?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the number of breaches, (2) the percentage involving personal data only and personal health data, and (3) the number of customers affected in each category."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with data security and privacy?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+    }
+   ]
+  },
+  {
+   "ref": "HC-DR-250a",
+   "title": "Drug Supply Chain Integrity",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What efforts does your organisation make to reduce the occurrence of compromised drugs within the supply chain?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe supplier qualification, traceability, storage and handling controls, and verification measures used to prevent compromised drugs."
+    },
+    {
+     "item": ".2",
+     "text": "How many drug recalls did you issue, how many units were recalled in total, and what percentage were private-label products?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the number of recalls issued, (2) total units recalled and (3) the percentage of recalled units that were private-label products."
+    }
+   ]
+  },
+  {
+   "ref": "HC-DR-260a",
+   "title": "Management of Controlled Substances",
+   "questions": [
+    {
+     "item": ".2",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with controlled substances?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+    }
+   ]
+  },
+  {
+   "ref": "HC-DR-260b",
+   "title": "Patient Health Outcomes",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your first fill adherence rate?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of new prescriptions that patients pick up on the first fill, and state the calculation method and period."
+    },
+    {
+     "item": ".2",
+     "text": "What policies and practices do you have to prevent prescription dispensing errors?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe procedures, technology, staffing and training measures, and how errors are tracked and reviewed."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with prescription dispensing errors?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+    }
+   ]
+  },
+  {
+   "ref": "HC-DR-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many pharmacy locations do you operate?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of pharmacy locations at the end of the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "What is the total area of your retail space in square metres?",
+     "type": "number",
+     "hint": "Unit: Square metres (m²) · Report the total retail floor area in square metres at the end of the reporting period."
+    },
+    {
+     "item": ".C",
+     "text": "How many prescriptions did you fill, and what percentage were for controlled substances?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the number of prescriptions filled and (2) the percentage that were for controlled substances."
+    },
+    {
+     "item": ".D",
+     "text": "How many pharmacists does your organisation employ?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of pharmacists at the end of the reporting period."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "summary": "The Advertising & Marketing standard covers entities that create advertising campaigns for media, display or direct mail and related services such as market research. Its disclosure topics are data privacy, advertising integrity, and workforce diversity and inclusion.",
+ "disclosures": [
+  {
+   "ref": "SV-AD-220a",
+   "title": "Data Privacy",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation approach targeted advertising and consumer privacy, including the policies and practices that apply?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your policies and practices on targeted advertising and consumer privacy, including how consumer data is collected, used and shared, and how consumers can opt out or control it."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your online advertising impressions, by revenue, are targeted to custom audiences?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by revenue · Report a single percentage by revenue of online advertising impressions targeted to custom audiences, such as audiences built from customer lists or tracked behaviour."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with consumer privacy?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to consumer privacy during the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "SV-AD-270a",
+   "title": "Advertising Integrity",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with false, deceptive or unfair advertising?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to false, deceptive or unfair advertising."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your campaigns were reviewed for adherence with a self-regulatory assessment procedure or equivalent, and what percentage of those were in compliance?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) by revenue · Give both percentages by revenue: (1) campaigns reviewed against a self-regulatory assessment procedure or equivalent, and (2) the share of those reviewed that were in compliance."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of your campaigns promote alcohol or tobacco products?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by revenue · Report a single percentage by revenue of campaigns that promote alcohol or tobacco products."
+    }
+   ]
+  },
+  {
+   "ref": "SV-AD-330a",
+   "title": "Workforce Diversity & Inclusion",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your (1) gender and (2) diversity group representation is there for (a) executive management, (b) non-executive management, (c) professionals, and (d) all other employees?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report percentages for gender and for diversity groups in each of the four employee categories (executive management, non-executive management, professionals, all other employees), and say which diversity groups are counted."
+    }
+   ]
+  },
+  {
+   "ref": "SV-AD-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What is the median reach of your advertisements and marketing campaigns?",
+     "type": "number",
+     "hint": "Unit: Number · Report the median number of unique people or audience members reached by your advertisements and marketing campaigns."
+    },
+    {
+     "item": ".B",
+     "text": "How many exposures to advertisements or marketing campaigns did your organisation deliver?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of exposures (impressions) to advertisements or marketing campaigns in the reporting period."
+    },
+    {
+     "item": ".C",
+     "text": "What is the median frequency of exposures to your advertisements or marketing campaigns?",
+     "type": "number",
+     "hint": "Unit: Number · Report the median number of times an audience member is exposed to a given advertisement or campaign."
+    },
+    {
+     "item": ".D",
+     "text": "How many employees does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of employees at the end of the reporting period."
+    }
+   ]
+  }
+ ]
+}

@@ -1,35 +1,107 @@
 {
- "summary": "GRI 306: Effluents and Waste 2016 addresses water discharges, the generation, treatment and disposal of waste, and spills of chemicals, oils, fuels and other substances. It was superseded by GRI 306: Waste 2020 and GRI 303: Water and Effluents 2018 (only Disclosure 306-3 remains in effect).",
- "questions": [
-  {
-   "ref": "306-1",
-   "text": "What was the total volume of your planned and unplanned water discharges, by destination and quality?",
-   "type": "text",
-   "hint": "Superseded by GRI 303 (2018). a. Total volume of planned and unplanned discharges by: i. destination; ii. quality, including treatment method; iii. whether reused by another organization. b. Standards, methodologies, assumptions."
-  },
-  {
-   "ref": "306-2",
-   "text": "What was the total weight of your hazardous and non-hazardous waste, by disposal method?",
-   "type": "text",
-   "hint": "Superseded by GRI 306 (2020). a. Hazardous waste weight by disposal method. b. Non-hazardous waste weight by disposal method (reuse, recycling, composting, recovery, incineration, deep well injection, landfill, on-site storage, other). c. How the disposal method was determined."
-  },
-  {
-   "ref": "306-3",
-   "text": "How many significant spills did you record, and what was their total volume and impact?",
-   "type": "text",
-   "hint": "a. Total number and total volume of recorded significant spills. b. For each spill in financial statements: location, volume, material (oil, fuel, waste, chemical, other). c. Impacts of significant spills."
-  },
-  {
-   "ref": "306-4",
-   "text": "What weight of hazardous waste did you transport, import, export or treat?",
-   "type": "text",
-   "hint": "Superseded by GRI 306 (2020). a. Weight of hazardous waste transported, imported, exported, treated. b. Percentage shipped internationally. c. Standards, methodologies, assumptions."
-  },
-  {
-   "ref": "306-5",
-   "text": "Which water bodies and related habitats are significantly affected by your water discharges and/or runoff?",
-   "type": "text",
-   "hint": "Superseded by GRI 303 (2018). a. Affected water bodies and habitats, including: i. size; ii. whether designated a protected area; iii. biodiversity value, such as number of protected species."
-  }
- ]
+  "summary": "GRI 306: Effluents and Waste 2016 addresses water discharges, the generation, treatment and disposal of waste, and spills of chemicals, oils, fuels and other substances. It was superseded by GRI 306: Waste 2020 and GRI 303: Water and Effluents 2018 (only Disclosure 306-3 remains in effect).",
+  "disclosures": [
+    {
+      "ref": "306-1",
+      "title": "Water discharge by quality and destination",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What is the total volume of planned and unplanned water discharges?",
+          "type": "text",
+          "hint": "Break down by: i. destination; ii. quality of the water, including treatment method; iii. whether the water was reused by another organization."
+        },
+        {
+          "item": "b",
+          "text": "Which standards, methodologies and assumptions were used?",
+          "type": "text",
+          "hint": "Standards, methodologies, and assumptions used."
+        }
+      ]
+    },
+    {
+      "ref": "306-2",
+      "title": "Waste by type and disposal method",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What is the total weight of hazardous waste, by disposal method?",
+          "type": "text",
+          "hint": "Break down by disposal method where applicable: i. reuse; ii. recycling; iii. composting; iv. recovery, including energy recovery; v. incineration (mass burn); vi. deep well injection; vii. landfill; viii. on-site storage; ix. other (specify)."
+        },
+        {
+          "item": "b",
+          "text": "What is the total weight of non-hazardous waste, by disposal method?",
+          "type": "text",
+          "hint": "Break down by disposal method where applicable: i. reuse; ii. recycling; iii. composting; iv. recovery, including energy recovery; v. incineration (mass burn); vi. deep well injection; vii. landfill; viii. on-site storage; ix. other (specify)."
+        },
+        {
+          "item": "c",
+          "text": "How was the waste disposal method determined?",
+          "type": "text",
+          "hint": "i. Disposed of directly by the organization, or otherwise directly confirmed; ii. information provided by the waste disposal contractor; iii. organizational defaults of the waste disposal contractor."
+        }
+      ]
+    },
+    {
+      "ref": "306-3",
+      "title": "Significant spills",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What is the total number and total volume of recorded significant spills?",
+          "type": "text",
+          "hint": "Total number and total volume of recorded significant spills."
+        },
+        {
+          "item": "b",
+          "text": "For each spill reported in the financial statements, what were the location, volume and material of the spill?",
+          "type": "text",
+          "hint": "i. Location; ii. volume; iii. material, categorized as oil spills, fuel spills, spills of wastes, spills of chemicals, or other (specify)."
+        },
+        {
+          "item": "c",
+          "text": "What were the impacts of significant spills?",
+          "type": "text",
+          "hint": "Impacts of significant spills."
+        }
+      ]
+    },
+    {
+      "ref": "306-4",
+      "title": "Transport of hazardous waste",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What is the total weight of hazardous waste transported, imported, exported and treated?",
+          "type": "text",
+          "hint": "Total weight for each: i. hazardous waste transported; ii. imported; iii. exported; iv. treated."
+        },
+        {
+          "item": "b",
+          "text": "What percentage of hazardous waste is shipped internationally?",
+          "type": "text",
+          "hint": "Percentage of hazardous waste shipped internationally."
+        },
+        {
+          "item": "c",
+          "text": "Which standards, methodologies and assumptions were used?",
+          "type": "text",
+          "hint": "Standards, methodologies, and assumptions used."
+        }
+      ]
+    },
+    {
+      "ref": "306-5",
+      "title": "Water bodies affected by water discharges and/or runoff",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Which water bodies and related habitats are significantly affected by water discharges and/or runoff?",
+          "type": "text",
+          "hint": "Include: i. size of the water body and habitat; ii. whether it is designated as a nationally or internationally protected area; iii. biodiversity value, such as total number of protected species."
+        }
+      ]
+    }
+  ]
 }

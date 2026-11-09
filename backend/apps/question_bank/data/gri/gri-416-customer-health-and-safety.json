@@ -1,23 +1,77 @@
 {
- "summary": "GRI 416 covers customer health and safety, including an organization's systematic efforts to address health and safety across the life cycle of a product or service, and its adherence to customer health and safety regulations and voluntary codes.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "How does your organization manage the topic of customer health and safety, including its impacts, policies, actions and tracking of effectiveness?",
-   "type": "text",
-   "hint": "Report how the organization manages this material topic using Disclosure 3-3 in GRI 3: Material Topics 2021."
-  },
-  {
-   "ref": "416-1",
-   "text": "What percentage of your significant product and service categories are assessed for health and safety impacts for improvement?",
-   "type": "number",
-   "hint": "a. Percentage of significant product and service categories for which health and safety impacts are assessed for improvement."
-  },
-  {
-   "ref": "416-2",
-   "text": "How many incidents of non-compliance concerning the health and safety impacts of products and services occurred during the reporting period?",
-   "type": "text",
-   "hint": "a. Total number of incidents of non-compliance with regulations and/or voluntary codes, by: i. regulations resulting in a fine or penalty; ii. regulations resulting in a warning; iii. voluntary codes. b. If none identified, a brief statement of this fact is sufficient."
-  }
- ]
+  "summary": "GRI 416 covers customer health and safety, including an organization's systematic efforts to address health and safety across the life cycle of a product or service, and its adherence to customer health and safety regulations and voluntary codes.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to customer health and safety.",
+          "hint": "Cover both actual and potential impacts, negative and positive, including impacts on human rights.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "Is the organization involved with the negative impacts related to customer health and safety through its own activities or as a result of its business relationships? Describe those activities or business relationships.",
+          "hint": "State whether involvement is through the organization's activities or through its business relationships, and describe them.",
+          "type": "text"
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding customer health and safety.",
+          "hint": "Describe the policies or commitments that apply to this material topic.",
+          "type": "text"
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage customer health and safety and the related impacts, including (i) actions to prevent or mitigate potential negative impacts, (ii) actions to address actual negative impacts, including actions to provide for or cooperate in their remediation, and (iii) actions to manage actual and potential positive impacts.",
+          "hint": "Cover i. prevention or mitigation of potential negative impacts; ii. addressing actual negative impacts, including remediation; iii. managing positive impacts.",
+          "type": "text"
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of the actions taken? Describe (i) the processes used, (ii) the goals, targets and indicators used to evaluate progress, (iii) the effectiveness of the actions, including progress toward goals and targets, and (iv) lessons learned and how they have been incorporated into operational policies and procedures.",
+          "hint": "Cover i. tracking processes; ii. goals, targets and indicators; iii. effectiveness and progress; iv. lessons learned and how they were incorporated.",
+          "type": "text"
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e).",
+          "hint": "Explain the role of stakeholder engagement in shaping actions and in judging their effectiveness.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "416-1",
+      "title": "Assessment of the health and safety impacts of product and service categories",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What percentage of significant product and service categories have had their health and safety impacts assessed for improvement?",
+          "hint": "Enter the percentage of significant product and service categories.",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "ref": "416-2",
+      "title": "Incidents of non-compliance concerning the health and safety impacts of products and services",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What was the total number of incidents of non-compliance with regulations and/or voluntary codes concerning the health and safety impacts of products and services within the reporting period, by (i) incidents of non-compliance with regulations resulting in a fine or penalty, (ii) incidents resulting in a warning, and (iii) incidents of non-compliance with voluntary codes?",
+          "hint": "Exclude incidents where the organization was not at fault; identify incidents relating to prior periods.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "If the organization has not identified any non-compliance with regulations and/or voluntary codes, provide a brief statement of this fact.",
+          "hint": "A brief statement is sufficient.",
+          "type": "text"
+        }
+      ]
+    }
+  ]
 }

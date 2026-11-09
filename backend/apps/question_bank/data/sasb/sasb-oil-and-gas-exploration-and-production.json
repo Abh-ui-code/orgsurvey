@@ -1,0 +1,257 @@
+{
+ "summary": "This standard covers upstream companies that explore for, extract and produce crude oil and natural gas. It addresses greenhouse gas and air emissions, water management including hydraulic fracturing, biodiversity and spills, human and indigenous rights, community relations, worker safety, reserves valuation and capital spending, ethics, regulation and critical incident risk.",
+ "disclosures": [
+  {
+   "ref": "EM-EP-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your organisation's gross global Scope 1 greenhouse gas emissions, what percentage of them is methane, and what percentage is covered under emissions-limiting regulations?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes CO₂-e (t), Percentage (%) · Report gross global Scope 1 emissions in metric tonnes CO2-e, the percentage that is methane, and the percentage covered under emissions-limiting regulations."
+    },
+    {
+     "item": ".2",
+     "text": "What is the amount of your gross global Scope 1 emissions from (1) flared hydrocarbons, (2) other combustion, (3) process emissions, (4) other vented emissions and (5) fugitive emissions?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes CO₂-e · Report each of the five sources separately in metric tonnes CO2-e, and the calculation methods used."
+    },
+    {
+     "item": ".3",
+     "text": "What is your long- and short-term strategy or plan to manage Scope 1 emissions, what are your emissions reduction targets, and how have you performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy or plan, the targets (scope, baseline year, target year), and an analysis of performance against those targets, including any activities or investments driving the change."
+    }
+   ]
+  },
+  {
+   "ref": "EM-EP-120a",
+   "title": "Air Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's air emissions of the following pollutants: (1) NOx (excluding N2O), (2) SOx, (3) volatile organic compounds (VOCs) and (4) particulate matter (PM10)?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report each pollutant separately in metric tonnes, covering all operations and noting estimation or measurement methods; state any pollutant that is not applicable."
+    }
+   ]
+  },
+  {
+   "ref": "EM-EP-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's (1) total water withdrawn and (2) total water consumed, and what percentage of each is in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report (1) total water withdrawn and (2) total water consumed in thousand cubic metres, and the percentage of each in regions with High or Extremely High Baseline Water Stress (e.g. per the WRI Aqueduct tool)."
+    },
+    {
+     "item": ".2",
+     "text": "What volume of produced water and flowback did you generate, what percentage was (1) discharged, (2) injected and (3) recycled, and what was the hydrocarbon content of discharged water?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%), Metric tonnes (t) · Report volume generated in thousand cubic metres, the percentage discharged, injected and recycled, and hydrocarbon content of discharged water in metric tonnes."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of your hydraulically fractured wells have public disclosure of all fracturing fluid chemicals used?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of hydraulically fractured wells with full public disclosure of fracturing fluid chemicals (e.g. via FracFocus)."
+    },
+    {
+     "item": ".4",
+     "text": "At what percentage of your hydraulic fracturing sites did ground or surface water quality deteriorate compared to a baseline?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of hydraulic fracturing sites where water quality deteriorated against baseline; explain how baselines and deterioration are measured."
+    }
+   ]
+  },
+  {
+   "ref": "EM-EP-160a",
+   "title": "Biodiversity Impacts",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What environmental management policies and practices does your organisation have for its active sites?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the policies and practices (e.g. impact assessments, site management plans, rehabilitation commitments) and how they are applied across active sites, including any certifications or standards used."
+    },
+    {
+     "item": ".2",
+     "text": "What were (1) the number and (2) the aggregate volume of hydrocarbon spills, (3) the volume in the Arctic, (4) the volume impacting shorelines with ESI rankings 8-10, and (5) the volume recovered?",
+     "type": "text",
+     "hint": "Unit: Number, Barrels (bbls) · Report (1) number of spills, (2) aggregate volume in barrels, (3) volume in the Arctic, (4) volume impacting shorelines with ESI rankings 8-10 and (5) volume recovered, for reportable spills."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of your (1) proved and (2) probable reserves are in or near sites with protected conservation status or endangered species habitat?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report (1) the percentage of proved reserves and (2) the percentage of probable reserves located in or near protected conservation areas or endangered species habitat, and state how 'near' is defined."
+    }
+   ]
+  },
+  {
+   "ref": "EM-EP-210a",
+   "title": "Security, Human Rights & Rights of Indigenous Peoples",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your (1) proved and (2) probable reserves are in or near areas of conflict?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report (1) the percentage of proved reserves and (2) the percentage of probable reserves in or near areas of conflict, and state how areas of conflict are identified."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your (1) proved and (2) probable reserves are in or near indigenous land?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report (1) the percentage of proved reserves and (2) the percentage of probable reserves in or near indigenous land, and state how 'near' is defined."
+    },
+    {
+     "item": ".3",
+     "text": "What engagement processes and due diligence practices do you use to manage human rights, indigenous rights, and operations in areas of conflict?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe engagement processes (e.g. free, prior and informed consent), due diligence practices and how risks relating to human rights, indigenous rights and areas of conflict are identified and managed."
+    }
+   ]
+  },
+  {
+   "ref": "EM-EP-210b",
+   "title": "Community Relations",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What process does your organisation use to manage risks and opportunities associated with community rights and interests?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the process for identifying, engaging on and managing community rights and interests, including grievance mechanisms and how outcomes are tracked."
+    },
+    {
+     "item": ".2",
+     "text": "What were (1) the number and (2) the duration of non-technical delays at your operations?",
+     "type": "text",
+     "hint": "Unit: Number, Days · Report (1) the number of non-technical delays (e.g. protests, blockades, permit or community disputes) and (2) their total duration in days."
+    }
+   ]
+  },
+  {
+   "ref": "EM-EP-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total recordable incident rate (TRIR), (2) fatality rate, (3) near miss frequency rate (NMFR) and (4) average hours of health, safety and emergency response training for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate, Hours (h) · Report each of the four measures separately for (a) direct employees and (b) contract employees; rates in hours-worked basis and training in average hours."
+    },
+    {
+     "item": ".2",
+     "text": "What management systems do you use to integrate a culture of safety throughout the exploration and production lifecycle?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the management systems, leadership commitments, training, reporting and audit practices that embed safety culture across the exploration and production lifecycle."
+    }
+   ]
+  },
+  {
+   "ref": "EM-EP-420a",
+   "title": "Reserves Valuation & Capital Expenditures",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How sensitive are your hydrocarbon reserve levels to future price projection scenarios that account for a price on carbon emissions?",
+     "type": "text",
+     "hint": "Unit: Million barrels (MMbbls), Million standard cubic feet (MMscf) · Describe the scenarios and carbon price assumptions and report the change in reserves in million barrels (MMbbls) for oil and million standard cubic feet (MMscf) for gas."
+    },
+    {
+     "item": ".2",
+     "text": "What is the estimated carbon dioxide emissions embedded in your proved hydrocarbon reserves?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Report estimated CO2 emissions embedded in proved reserves in metric tonnes CO2-e, and state the method and emission factors used."
+    },
+    {
+     "item": ".3",
+     "text": "How much has your organisation invested in renewable energy, and how much revenue did it generate from renewable energy sales?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Report the amount invested in renewable energy and the revenue from renewable energy sales, both in presentation currency."
+    },
+    {
+     "item": ".4",
+     "text": "How do price and demand for hydrocarbons or climate regulation influence your capital expenditure strategy for exploration, acquisition and development of assets?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how price outlooks, demand trends and climate regulation shape capital allocation, including any scenario analysis and asset decisions."
+    }
+   ]
+  },
+  {
+   "ref": "EM-EP-510a",
+   "title": "Business Ethics & Transparency",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your (1) proved and (2) probable reserves are in countries ranked among the 20 lowest in Transparency International's Corruption Perception Index?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report (1) the percentage of proved reserves and (2) the percentage of probable reserves in those countries, stating the index year used."
+    },
+    {
+     "item": ".2",
+     "text": "What management system do you have to prevent corruption and bribery throughout the value chain?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the policies, controls, training, due diligence and monitoring used to prevent corruption and bribery across your operations, suppliers and business partners."
+    }
+   ]
+  },
+  {
+   "ref": "EM-EP-530a",
+   "title": "Management of the Legal & Regulatory Environment",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's corporate positions on government regulations or policy proposals that address environmental and social factors affecting the industry?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your positions on relevant regulations or policy proposals, how they were developed, and how you engage with policymakers (e.g. lobbying, trade associations)."
+    }
+   ]
+  },
+  {
+   "ref": "EM-EP-540a",
+   "title": "Critical Incident Risk Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your Process Safety Event (PSE) rates for Loss of Primary Containment (LOPC) of greater consequence (Tier 1)?",
+     "type": "text",
+     "hint": "Unit: Rate · Report the PSE rate(s) for each tier named per 200,000 hours worked (or the basis you use), covering employees and contractors."
+    },
+    {
+     "item": ".2",
+     "text": "What management systems do you use to identify and mitigate catastrophic and tail-end risks?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how catastrophic and low-probability, high-consequence risks are identified, assessed and mitigated, including governance, safety systems and emergency response."
+    }
+   ]
+  },
+  {
+   "ref": "EM-EP-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was your organisation's production of (1) oil, (2) natural gas, (3) synthetic oil and (4) synthetic gas?",
+     "type": "text",
+     "hint": "Unit: Thousand barrels per day (Mbbl/day); Million standard cubic feet per day (MMscf/day) · Report each of the four products separately: oil and synthetic oil in thousand barrels per day (Mbbl/day) and gas and synthetic gas in million standard cubic feet per day (MMscf/day)."
+    },
+    {
+     "item": ".B",
+     "text": "How many offshore sites does your organisation operate?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of offshore sites at the end of the reporting period."
+    },
+    {
+     "item": ".C",
+     "text": "How many terrestrial sites does your organisation operate?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of terrestrial (onshore) sites at the end of the reporting period."
+    }
+   ]
+  }
+ ]
+}

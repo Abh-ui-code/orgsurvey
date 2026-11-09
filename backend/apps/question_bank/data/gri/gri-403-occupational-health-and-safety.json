@@ -1,85 +1,289 @@
 {
- "summary": "GRI 403 addresses occupational health and safety, covering both the prevention of physical and mental harm and the promotion of workers' health. It contains disclosures on the management system, hazard identification, worker participation, training, injuries and ill health.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "Describe how the organization manages this material topic and its related impacts, as required by Disclosure 3-3 in GRI 3 (Material Topics 2021).",
-   "type": "text",
-   "hint": "Per GRI 3-3: the actual and potential impacts, policy commitments, actions taken, tracking of effectiveness and stakeholder engagement for the topic."
-  },
-  {
-   "ref": "403-1",
-   "text": "What is your occupational health and safety management system based on?",
-   "type": "single_choice",
-   "hint": "For employees and non-employee workers under the organization's control: a. Whether an OHS management system is implemented, on what legal requirements or standards. b. Scope of workers, activities and workplaces covered and any not covered, with reasons.",
-   "options": [
-    "Legal requirements only",
-    "Recognized standards (e.g. ISO 45001)",
-    "Both",
-    "No formal system"
-   ]
-  },
-  {
-   "ref": "403-2",
-   "text": "Describe the processes for hazard identification, risk assessment and incident investigation, including how workers report hazards, remove themselves from danger and are protected from reprisals.",
-   "type": "text",
-   "hint": "a. Processes to identify hazards, assess risks and apply the hierarchy of controls, with quality assurance and use of results. b. Worker hazard reporting and protection from reprisals. c. Policies for workers to remove themselves from danger. d. Incident investigation processes."
-  },
-  {
-   "ref": "403-3",
-   "text": "Describe the occupational health services that contribute to hazard identification and risk minimization, and how you ensure their quality and workers' access to them.",
-   "type": "text",
-   "hint": "a. Functions of occupational health services contributing to hazard elimination and risk minimization, how quality is ensured and how workers' access is facilitated."
-  },
-  {
-   "ref": "403-4",
-   "text": "Describe the processes for worker participation, consultation and communication on occupational health and safety, and any formal joint management-worker health and safety committees.",
-   "type": "text",
-   "hint": "a. Processes for worker participation and consultation in developing, implementing and evaluating the OHS system, and for communicating OHS information. b. Joint committees: responsibilities, meeting frequency, decision-making authority, and workers not represented."
-  },
-  {
-   "ref": "403-5",
-   "text": "Describe the occupational health and safety training provided to workers, including generic training and training on specific hazards, hazardous activities or situations.",
-   "type": "text",
-   "hint": "a. Description of OHS training provided to workers, including generic and hazard-specific training."
-  },
-  {
-   "ref": "403-6",
-   "text": "How do workers access non-occupational medical and healthcare services?",
-   "type": "multi_choice",
-   "hint": "a. How workers' access to non-occupational medical and healthcare services is facilitated and its scope. b. Voluntary health promotion programs addressing major non-work-related health risks and how access is facilitated.",
-   "options": [
-    "On-site clinic",
-    "Health insurance",
-    "Wellness programs",
-    "Telehealth",
-    "Vaccination",
-    "None"
-   ]
-  },
-  {
-   "ref": "403-7",
-   "text": "Describe the organization's approach to preventing or mitigating significant negative occupational health and safety impacts directly linked to its operations, products or services by its business relationships.",
-   "type": "text",
-   "hint": "a. Approach to preventing or mitigating significant negative OHS impacts directly linked by business relationships, and the related hazards and risks."
-  },
-  {
-   "ref": "403-8",
-   "text": "Report the number and percentage of employees and non-employee workers covered by an occupational health and safety management system, including those internally audited and those audited or certified externally.",
-   "type": "text",
-   "hint": "a. If a system exists: number and percentage covered; covered and internally audited; covered and externally audited or certified. b. Workers excluded and why. c. Contextual information on how data were compiled."
-  },
-  {
-   "ref": "403-9",
-   "text": "Report work-related injuries for employees and for non-employee workers: fatalities, high-consequence injuries, recordable injuries, their rates, main injury types and hours worked, plus the main hazards and actions taken.",
-   "type": "text",
-   "hint": "a/b. For employees and non-employee workers: number and rate of fatalities, high-consequence injuries and recordable injuries; main types; hours worked. c. Hazards posing risk of high-consequence injury. d. Actions on other hazards. e. Rate basis (200,000 or 1,000,000 hours). f. Exclusions. g. Context."
-  },
-  {
-   "ref": "403-10",
-   "text": "Report work-related ill health for employees and for non-employee workers: fatalities, recordable cases and main types, and the hazards that pose a risk of ill health and actions taken.",
-   "type": "text",
-   "hint": "a/b. For employees and non-employee workers: fatalities from work-related ill health; recordable cases; main types. c. Hazards posing risk of ill health, how determined, which contributed, actions taken. d. Exclusions. e. Contextual information."
-  }
- ]
+  "summary": "GRI 403 addresses occupational health and safety, covering both the prevention of physical and mental harm and the promotion of workers' health. It contains disclosures on the management system, hazard identification, worker participation, training, injuries and ill health.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to occupational health and safety.",
+          "hint": "Cover both actual and potential impacts, negative and positive, including impacts on human rights.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "Is the organization involved with the negative impacts related to occupational health and safety through its own activities or as a result of its business relationships? Describe those activities or business relationships.",
+          "hint": "State whether involvement is through the organization's activities or through its business relationships, and describe them.",
+          "type": "text"
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding occupational health and safety.",
+          "hint": "Describe the policies or commitments that apply to this material topic.",
+          "type": "text"
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage occupational health and safety and the related impacts, including (i) actions to prevent or mitigate potential negative impacts, (ii) actions to address actual negative impacts, including actions to provide for or cooperate in their remediation, and (iii) actions to manage actual and potential positive impacts.",
+          "hint": "Cover i. prevention or mitigation of potential negative impacts; ii. addressing actual negative impacts, including remediation; iii. managing positive impacts.",
+          "type": "text"
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of the actions taken? Describe (i) the processes used, (ii) the goals, targets and indicators used to evaluate progress, (iii) the effectiveness of the actions, including progress toward goals and targets, and (iv) lessons learned and how they have been incorporated into operational policies and procedures.",
+          "hint": "Cover i. tracking processes; ii. goals, targets and indicators; iii. effectiveness and progress; iv. lessons learned and how they were incorporated.",
+          "type": "text"
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e).",
+          "hint": "Explain the role of stakeholder engagement in shaping actions and in judging their effectiveness.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "403-1",
+      "title": "Occupational health and safety management system",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Has an occupational health and safety management system been implemented for employees and for workers who are not employees but whose work and/or workplace is controlled by the organization? If so, was it implemented because of legal requirements (list them) and/or based on recognized risk management or management system standards/guidelines (list them)?",
+          "hint": "Select the basis of the system and list the legal requirements and/or standards/guidelines in your notes.",
+          "type": "single_choice",
+          "options": [
+            "Legal requirements only",
+            "Recognized standards (e.g. ISO 45001)",
+            "Both",
+            "No formal system"
+          ]
+        },
+        {
+          "item": "b",
+          "text": "Describe the scope of workers, activities and workplaces covered by the occupational health and safety management system, and explain whether and, if so, why any workers, activities or workplaces are not covered.",
+          "hint": "Applies to employees and to non-employee workers whose work and/or workplace is controlled by the organization.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "403-2",
+      "title": "Hazard identification, risk assessment, and incident investigation",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the processes used to identify work-related hazards and assess risks on a routine and non-routine basis, and to apply the hierarchy of controls to eliminate hazards and minimize risks for employees and for workers who are not employees but whose work and/or workplace is controlled by the organization, including (i) how the quality of these processes and the competency of persons who carry them out is ensured, and (ii) how the results are used to evaluate and continually improve the management system.",
+          "hint": "Cover routine and non-routine processes, the hierarchy of controls, quality and competency, and use of results for continual improvement.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "Describe the processes for workers to report work-related hazards and hazardous situations, and explain how workers are protected against reprisals.",
+          "hint": "Cover reporting processes and protection against reprisals.",
+          "type": "text"
+        },
+        {
+          "item": "c",
+          "text": "Describe the policies and processes for workers to remove themselves from work situations that they believe could cause injury or ill health, and explain how workers are protected against reprisals.",
+          "hint": "Covers the right of workers to refuse or stop unsafe or unhealthy work.",
+          "type": "text"
+        },
+        {
+          "item": "d",
+          "text": "Describe the processes used to investigate work-related incidents, including the processes to identify hazards and assess risks relating to the incidents, to determine corrective actions using the hierarchy of controls, and to determine improvements needed in the management system.",
+          "hint": "Cover hazard and risk identification, corrective actions and management system improvements.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "403-3",
+      "title": "Occupational health services",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the occupational health services' functions that contribute to the identification and elimination of hazards and minimization of risks for employees and for workers who are not employees but whose work and/or workplace is controlled by the organization, and explain how the organization ensures the quality of these services and facilitates workers' access to them.",
+          "hint": "Cover service functions, quality assurance and workers' access.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "403-4",
+      "title": "Worker participation, consultation, and communication on occupational health and safety",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the processes for worker participation and consultation in the development, implementation and evaluation of the occupational health and safety management system, and for providing access to and communicating relevant occupational health and safety information to workers for employees and for workers who are not employees but whose work and/or workplace is controlled by the organization.",
+          "hint": "Cover participation, consultation and communication processes.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "Where formal joint management-worker health and safety committees exist, describe their responsibilities, meeting frequency and decision-making authority, and whether and, if so, why any workers are not represented by these committees.",
+          "hint": "Does not require naming which workers are or are not members.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "403-5",
+      "title": "Worker training on occupational health and safety",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe any occupational health and safety training provided to workers for employees and for workers who are not employees but whose work and/or workplace is controlled by the organization, including generic training as well as training on specific work-related hazards, hazardous activities or hazardous situations.",
+          "hint": "Cover generic and hazard-specific training.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "403-6",
+      "title": "Promotion of worker health",
+      "questions": [
+        {
+          "item": "a",
+          "text": "How does the organization facilitate workers' access to non-occupational medical and healthcare services for employees and for workers who are not employees but whose work and/or workplace is controlled by the organization, and what is the scope of access provided?",
+          "hint": "Select the ways access is facilitated; describe the scope of access in your notes.",
+          "type": "multi_choice",
+          "options": [
+            "On-site clinic",
+            "Health insurance",
+            "Wellness programs",
+            "Telehealth",
+            "Vaccination",
+            "None"
+          ]
+        },
+        {
+          "item": "b",
+          "text": "Describe any voluntary health promotion services and programs offered to workers to address major non-work-related health risks, including the specific health risks addressed and how the organization facilitates workers' access to them.",
+          "hint": "Include the specific health risks addressed and how access is facilitated.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "403-7",
+      "title": "Prevention and mitigation of occupational health and safety impacts directly linked by business relationships",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the organization's approach to preventing or mitigating significant negative occupational health and safety impacts that are directly linked to its operations, products or services by its business relationships, and the related hazards and risks.",
+          "hint": "Cover the approach, and the related hazards and risks.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "403-8",
+      "title": "Workers covered by an occupational health and safety management system",
+      "questions": [
+        {
+          "item": "a",
+          "text": "If an occupational health and safety management system has been implemented based on legal requirements and/or recognized standards/guidelines, state the number and percentage of all employees and of workers who are not employees but whose work and/or workplace is controlled by the organization who are (i) covered by such a system, (ii) covered by such a system that has been internally audited, and (iii) covered by such a system that has been audited or certified by an external party.",
+          "hint": "Report number and percentage for each of i, ii and iii, for employees and for non-employee workers.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "Have any workers been excluded from this disclosure and, if so, why? Include the types of worker excluded.",
+          "hint": "State whether any workers are excluded, why, and which types.",
+          "type": "text"
+        },
+        {
+          "item": "c",
+          "text": "Provide any contextual information necessary to understand how the data have been compiled, such as standards, methodologies and assumptions used.",
+          "hint": "Standards, methodologies and assumptions.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "403-9",
+      "title": "Work-related injuries",
+      "questions": [
+        {
+          "item": "a",
+          "text": "For all employees, report (i) the number and rate of fatalities as a result of work-related injury, (ii) the number and rate of high-consequence work-related injuries (excluding fatalities), (iii) the number and rate of recordable work-related injuries, (iv) the main types of work-related injury, and (v) the number of hours worked.",
+          "hint": "Exclude fatalities from high-consequence injuries; include fatalities in recordable injuries.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "For all workers who are not employees but whose work and/or workplace is controlled by the organization, report (i) the number and rate of fatalities as a result of work-related injury, (ii) the number and rate of high-consequence work-related injuries (excluding fatalities), (iii) the number and rate of recordable work-related injuries, (iv) the main types of work-related injury, and (v) the number of hours worked.",
+          "hint": "Same measures as for employees, for non-employee workers under the organization's control.",
+          "type": "text"
+        },
+        {
+          "item": "c",
+          "text": "What are the work-related hazards that pose a risk of high-consequence injury, including (i) how these hazards have been determined, (ii) which of them have caused or contributed to high-consequence injuries during the reporting period, and (iii) actions taken or underway to eliminate these hazards and minimize risks using the hierarchy of controls?",
+          "hint": "Cover determination of hazards, contribution to injuries, and actions taken.",
+          "type": "text"
+        },
+        {
+          "item": "d",
+          "text": "Describe any actions taken or underway to eliminate other work-related hazards and minimize risks using the hierarchy of controls.",
+          "hint": "Actions for hazards other than those in part c.",
+          "type": "text"
+        },
+        {
+          "item": "e",
+          "text": "Have the rates been calculated based on 200,000 or 1,000,000 hours worked?",
+          "hint": "State 200,000 or 1,000,000 hours worked.",
+          "type": "text"
+        },
+        {
+          "item": "f",
+          "text": "Have any workers been excluded from this disclosure and, if so, why? Include the types of worker excluded.",
+          "hint": "State whether any workers are excluded, why, and which types.",
+          "type": "text"
+        },
+        {
+          "item": "g",
+          "text": "Provide any contextual information necessary to understand how the data have been compiled, such as standards, methodologies and assumptions used.",
+          "hint": "Standards, methodologies and assumptions.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "403-10",
+      "title": "Work-related ill health",
+      "questions": [
+        {
+          "item": "a",
+          "text": "For all employees, report (i) the number of fatalities as a result of work-related ill health, (ii) the number of cases of recordable work-related ill health, and (iii) the main types of work-related ill health.",
+          "hint": "Include fatalities in the number of recordable cases.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "For all workers who are not employees but whose work and/or workplace is controlled by the organization, report (i) the number of fatalities as a result of work-related ill health, (ii) the number of cases of recordable work-related ill health, and (iii) the main types of work-related ill health.",
+          "hint": "Same measures as for employees, for non-employee workers under the organization's control.",
+          "type": "text"
+        },
+        {
+          "item": "c",
+          "text": "What are the work-related hazards that pose a risk of ill health, including (i) how these hazards have been determined, (ii) which of them have caused or contributed to cases of ill health during the reporting period, and (iii) actions taken or underway to eliminate these hazards and minimize risks using the hierarchy of controls?",
+          "hint": "Cover determination of hazards, contribution to ill health, and actions taken.",
+          "type": "text"
+        },
+        {
+          "item": "d",
+          "text": "Have any workers been excluded from this disclosure and, if so, why? Include the types of worker excluded.",
+          "hint": "State whether any workers are excluded, why, and which types.",
+          "type": "text"
+        },
+        {
+          "item": "e",
+          "text": "Provide any contextual information necessary to understand how the data have been compiled, such as standards, methodologies and assumptions used.",
+          "hint": "Standards, methodologies and assumptions.",
+          "type": "text"
+        }
+      ]
+    }
+  ]
 }

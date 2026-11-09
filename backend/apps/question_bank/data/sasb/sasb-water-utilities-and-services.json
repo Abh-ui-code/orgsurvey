@@ -1,0 +1,203 @@
+{
+ "summary": "The Water Utilities & Services standard covers organisations that own and operate water supply and wastewater systems or provide water services to system owners. Its disclosure topics are energy management, distribution network efficiency, effluent and drinking water quality, affordability and access, end-use efficiency, supply resilience and climate resilience of networks.",
+ "disclosures": [
+  {
+   "ref": "IF-WU-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was your total energy consumed, what percentage was grid electricity and what percentage was renewable?",
+     "type": "text",
+     "hint": "Unit: gigajoules (GJ); percentage · Report (1) total energy consumed in GJ, (2) percentage grid electricity and (3) percentage renewable."
+    }
+   ]
+  },
+  {
+   "ref": "IF-WU-140a",
+   "title": "Distribution Network Efficiency",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your water main replacement rate?",
+     "type": "number",
+     "hint": "Unit: rate (percentage of main length replaced per year) · Report the rate for the reporting period and state how it is calculated."
+    },
+    {
+     "item": ".2",
+     "text": "What volume of non-revenue real water losses did you have, in thousand cubic metres?",
+     "type": "number",
+     "hint": "Unit: thousand cubic metres (m3) · Report the volume of non-revenue real losses (physical leakage) in thousand m3."
+    }
+   ]
+  },
+  {
+   "ref": "IF-WU-140b",
+   "title": "Effluent Quality Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many incidents of non-compliance with water effluent quality permits, standards and regulations did you have?",
+     "type": "number",
+     "hint": "Unit: number · Report the total number of incidents in the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "What strategies do you use to manage effluents of emerging concern?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how emerging-concern contaminants in effluent are identified, monitored and managed."
+    }
+   ]
+  },
+  {
+   "ref": "IF-WU-240a",
+   "title": "Water Affordability & Access",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your average retail water rate for (1) residential, (2) commercial and (3) industrial customers?",
+     "type": "text",
+     "hint": "Unit: rate (presentation currency per unit of water) · Report the average retail rate for each of the three customer categories."
+    },
+    {
+     "item": ".3",
+     "text": "How many residential customer water disconnections for non-payment did you make, and what percentage were reconnected within 30 days?",
+     "type": "text",
+     "hint": "Unit: number; percentage · Report (1) the number of residential disconnections for non-payment and (2) the percentage reconnected within 30 days."
+    },
+    {
+     "item": ".4",
+     "text": "How do external factors, including the economic conditions of your service territory, affect the affordability of water for your customers?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Discuss the external factors affecting affordability and their impact on customers."
+    }
+   ]
+  },
+  {
+   "ref": "IF-WU-250a",
+   "title": "Drinking Water Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many incidents of non-compliance with drinking water quality standards and regulations did you have?",
+     "type": "number",
+     "hint": "Unit: number · Report the total number of incidents in the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "What strategies do you use to manage drinking water contaminants of emerging concern?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how emerging contaminants are identified, monitored and managed."
+    }
+   ]
+  },
+  {
+   "ref": "IF-WU-420a",
+   "title": "End-Use Efficiency",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your water utility revenue comes from rate structures designed to promote conservation and revenue resilience?",
+     "type": "number",
+     "hint": "Unit: percentage · Report the percentage of water utility revenue from such rate structures."
+    },
+    {
+     "item": ".2",
+     "text": "How much customer water saving, in cubic metres, resulted from your efficiency measures, by market?",
+     "type": "text",
+     "hint": "Unit: cubic metres (m3) · Report customer water savings from efficiency programmes, broken down by market."
+    }
+   ]
+  },
+  {
+   "ref": "IF-WU-440a",
+   "title": "Water Supply Resilience",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What total volume of water did you source from regions with High or Extremely High Baseline Water Stress, and what percentage was purchased from a third party?",
+     "type": "text",
+     "hint": "Unit: thousand cubic metres; percentage · Report (1) volume sourced from such regions in thousand m3 and (2) the percentage purchased from a third party."
+    },
+    {
+     "item": ".2",
+     "text": "What volume of recycled water did you deliver to customers, in thousand cubic metres?",
+     "type": "number",
+     "hint": "Unit: thousand cubic metres (m3) · Report the volume of recycled water delivered in the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "What strategies do you use to manage risks associated with the quality and availability of water resources?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the risks to water quality and availability and the strategies used to manage them."
+    }
+   ]
+  },
+  {
+   "ref": "IF-WU-450a",
+   "title": "Network Resiliency & Impacts of Climate Change",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your wastewater treatment capacity located in 100-year flood zones, in cubic metres per day?",
+     "type": "number",
+     "hint": "Unit: cubic metres (m3) per day · Report the treatment capacity located in 100-year flood zones."
+    },
+    {
+     "item": ".2",
+     "text": "How many sanitary sewer overflows (SSOs) did you have, what was their volume, and what percentage of the volume was recovered?",
+     "type": "text",
+     "hint": "Unit: number; cubic metres; percentage · Report (1) the number of SSOs, (2) their volume in m3 and (3) the percentage of volume recovered."
+    },
+    {
+     "item": ".3",
+     "text": "How many unplanned service disruptions did you have, and how many customers were affected, each by duration category?",
+     "type": "text",
+     "hint": "Unit: number · Report (1) the number of unplanned disruptions and (2) customers affected, for each duration category."
+    },
+    {
+     "item": ".4",
+     "text": "What efforts do you make to identify and manage risks and opportunities related to the impact of climate change on your distribution and wastewater infrastructure?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how climate risks and opportunities are identified and managed for the infrastructure."
+    }
+   ]
+  },
+  {
+   "ref": "IF-WU-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many (1) residential, (2) commercial and (3) industrial customers do you serve, by service provided?",
+     "type": "text",
+     "hint": "Unit: number · Report customers in each category for each service (water, wastewater)."
+    },
+    {
+     "item": ".B",
+     "text": "What was your total water sourced, and what percentage came from each source type?",
+     "type": "text",
+     "hint": "Unit: cubic metres (m3); percentage · Report (1) total water sourced in m3 and (2) the percentage by source type."
+    },
+    {
+     "item": ".C",
+     "text": "How much water did you deliver to (1) residential, (2) commercial, (3) industrial and (4) all other customers?",
+     "type": "text",
+     "hint": "Unit: thousand cubic metres (m3) · Report volume delivered to each customer category."
+    },
+    {
+     "item": ".D",
+     "text": "What was your average volume of wastewater treated per day, by (1) sanitary sewer, (2) stormwater and (3) combined sewer?",
+     "type": "text",
+     "hint": "Unit: cubic metres (m3) per day · Report average daily volume for each sewer type."
+    },
+    {
+     "item": ".E",
+     "text": "What is the length of your (1) water mains and (2) sewer pipe, in kilometres?",
+     "type": "text",
+     "hint": "Unit: kilometres (km) · Report the length of each in km."
+    }
+   ]
+  }
+ ]
+}

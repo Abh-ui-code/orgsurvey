@@ -1,0 +1,119 @@
+{
+ "summary": "The Multiline and Specialty Retailers & Distributors standard covers department stores, mass merchants, home products stores, warehouse clubs and some wholesale distributors. Its disclosure topics are energy management, data security, labour practices, workforce diversity and inclusion, and product sourcing, packaging and marketing.",
+ "disclosures": [
+  {
+   "ref": "CG-MR-130a",
+   "title": "Energy Management in Retail & Distribution",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) your total energy consumed, (2) the percentage of it that is grid electricity and (3) the percentage that is renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy consumed in gigajoules, (2) the percentage that is grid electricity and (3) the percentage that is renewable, across retail and distribution operations."
+    }
+   ]
+  },
+  {
+   "ref": "CG-MR-230a",
+   "title": "Data Security",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your approach to identifying and addressing data security risks?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you identify data security risks and the controls, governance, standards and incident response you use to address them."
+    },
+    {
+     "item": ".2",
+     "text": "How many (1) data breaches occurred, (2) what percentage were personal data breaches, and (3) how many customers were affected?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the number of data breaches, (2) the percentage that were personal data breaches and (3) the number of customers affected."
+    }
+   ]
+  },
+  {
+   "ref": "CG-MR-310a",
+   "title": "Labour Practices",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the average hourly wage and (2) the percentage of in-store and distribution centre employees earning minimum wage, by region?",
+     "type": "text",
+     "hint": "Unit: Presentation currency, Percentage (%) · Report by region (1) the average hourly wage in the presentation currency and (2) the percentage of in-store and distribution centre employees earning minimum wage."
+    },
+    {
+     "item": ".2",
+     "text": "What were (1) the voluntary and (2) the involuntary turnover rates for in-store and distribution centre employees?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report separately (1) the voluntary and (2) the involuntary turnover rate, as percentages, for in-store and distribution centre employees."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses as a result of legal proceedings associated with labour law violations?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report total monetary losses from legal proceedings associated with labour law violations in the presentation currency, including settlements, judgements and fines."
+    }
+   ]
+  },
+  {
+   "ref": "CG-MR-330a",
+   "title": "Workforce Diversity & Inclusion",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your (1) gender and (2) diversity group representation is there for (a) executive management, (b) non-executive management and (c) all other employees?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report the percentage of (1) gender and (2) diversity group representation for each employee category listed, using the groups the organisation defines and stating them."
+    },
+    {
+     "item": ".2",
+     "text": "What was the total amount of monetary losses as a result of legal proceedings associated with employment discrimination?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report total monetary losses from legal proceedings associated with employment discrimination in the presentation currency, including settlements, judgements and fines."
+    }
+   ]
+  },
+  {
+   "ref": "CG-MR-410a",
+   "title": "Product Sourcing, Packaging & Marketing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What revenue do you earn from products that are third-party certified to environmental or social sustainability standards?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report revenue from third-party certified products in the presentation currency, and name the certification standards."
+    },
+    {
+     "item": ".2",
+     "text": "What processes do you use to assess and manage risks or hazards associated with chemicals in products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you identify chemicals of concern in products you sell, assess hazards and risks, and manage or phase them out."
+    },
+    {
+     "item": ".3",
+     "text": "What strategies do you use to reduce the environmental impact of packaging?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe strategies to reduce the environmental impact of packaging, such as lighter materials, recycled content and recyclability, with any targets and progress."
+    }
+   ]
+  },
+  {
+   "ref": "CG-MR-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many (1) retail locations and (2) distribution centres do you have?",
+     "type": "text",
+     "hint": "Unit: Number · Report separately the number of (1) retail locations and (2) distribution centres."
+    },
+    {
+     "item": ".B",
+     "text": "What is the total area of (1) your retail space and (2) your distribution centres, in square metres?",
+     "type": "text",
+     "hint": "Unit: Square metres (m²) · Report separately the total area in square metres of (1) retail space and (2) distribution centres."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "summary": "This standard covers telecommunication services entities, including wireless, wireline, cable and satellite providers that supply voice, data, internet and television services to subscribers. Its disclosure topics are the environmental footprint of operations, data privacy, data security, product end-of-life management, competitive behaviour and open internet, and managing systemic risks from technology disruptions.",
+ "disclosures": [
+  {
+   "ref": "TC-TL-130a",
+   "title": "Environmental Footprint of Operations",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was your organisation's (1) total energy consumed, (2) percentage of that energy purchased as grid electricity and (3) percentage that was renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report total energy consumed in GJ, then the grid electricity share and the renewable share as percentages. Include fuel, purchased and self-generated energy; renewable energy covers both purchased and own-generated sources."
+    }
+   ]
+  },
+  {
+   "ref": "TC-TL-220a",
+   "title": "Data Privacy",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's policies and practices relating to targeted advertising and customer privacy?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your policies and practices on collecting and using customer data, targeted advertising, consent and opt-out choices, data retention and sharing with third parties, and how these apply across your products and services."
+    },
+    {
+     "item": ".2",
+     "text": "How many customers have information that is used for secondary purposes?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of customers whose information is used for purposes other than that for which it was collected, such as targeted advertising or sale to third parties. Count only customers who have not opted out where relevant."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with customer privacy?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from customer privacy proceedings. Include any legal proceedings that ended in the period."
+    },
+    {
+     "item": ".4",
+     "text": "For law enforcement requests for customer information, what was (1) the number of requests, (2) the number of customer whose information was requested and (3) the percentage of requests that resulted in disclosure?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report the number of requests received, the number of customer whose information was requested, and the percentage of requests that led to disclosure of data. Include requests from all jurisdictions where permitted by law."
+    }
+   ]
+  },
+  {
+   "ref": "TC-TL-230a",
+   "title": "Data Security",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were (1) the number of data breaches your organisation experienced, (2) the percentage that were personal data breaches and (3) the number of customers affected?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report the number of data breaches, the percentage involving personal data, and the number of customers affected (all customers whose data was compromised)."
+    },
+    {
+     "item": ".2",
+     "text": "How does your organisation identify and address data security risks, including through the use of third-party cybersecurity standards?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you identify vulnerabilities and threats, the controls and governance in place, the third-party cybersecurity standards you use or are certified to (e.g. ISO 27001, SOC 2, NIST), and how risks are escalated."
+    }
+   ]
+  },
+  {
+   "ref": "TC-TL-440a",
+   "title": "Product End-of-life Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were (1) the materials your organisation recovered through take-back programmes, and what percentage of the recovered materials were (2) reused, (3) recycled and (4) landfilled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report the tonnes of materials recovered through take-back programmes, then the percentage reused, recycled and landfilled. The percentages should add up to 100%."
+    }
+   ]
+  },
+  {
+   "ref": "TC-TL-520a",
+   "title": "Competitive Behaviour & Open Internet",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with anti-competitive behaviour regulations?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from anti-competition, anti-trust or monopoly proceedings. Include any legal proceedings that ended in the period."
+    },
+    {
+     "item": ".2",
+     "text": "What was the average actual sustained download speed of (1) your owned and commercially-associated content and (2) non-associated content?",
+     "type": "text",
+     "hint": "Unit: Megabits per second (Mbps) · Report the average actual sustained download speed in Mbps for each of the two content categories, and describe how it was measured."
+    },
+    {
+     "item": ".3",
+     "text": "What risks and opportunities does your organisation see associated with net neutrality, paid peering, zero-rating and related practices?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the regulatory, commercial and reputational risks and opportunities, your practices on prioritisation, paid peering and zero-rating, and how you manage them."
+    }
+   ]
+  },
+  {
+   "ref": "TC-TL-550a",
+   "title": "Managing Systemic Risks from Technology Disruptions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your (1) system average interruption duration, (2) system average interruption frequency and (3) customer average interruption duration?",
+     "type": "text",
+     "hint": "Unit: Minutes, Number · Report the average duration of interruptions per customer served (SAIDI), the average number per customer served (SAIFI) and the average duration per customer affected (CAIDI). Note how interruptions are defined."
+    },
+    {
+     "item": ".2",
+     "text": "What systems does your organisation have to provide unimpeded service during service disruptions?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the network redundancy, backup power, failover and recovery systems and processes in place, and the types of disruption (e.g. natural disasters, cyber attacks, equipment failure) they cover."
+    }
+   ]
+  },
+  {
+   "ref": "TC-TL-000",
+   "title": "Activity Metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many wireless subscribers does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of wireless subscribers at the end of the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "How many wireline subscribers does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of wireline subscribers at the end of the reporting period."
+    },
+    {
+     "item": ".C",
+     "text": "How many broadband subscribers does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of broadband subscribers at the end of the reporting period."
+    },
+    {
+     "item": ".D",
+     "text": "What was your organisation's network traffic?",
+     "type": "number",
+     "hint": "Unit: Petabytes · Report total network traffic in petabytes over the reporting period."
+    }
+   ]
+  }
+ ]
+}

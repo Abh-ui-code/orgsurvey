@@ -16,7 +16,7 @@ import type { AnswerValue, SurveyDetail } from "@/types/survey";
 import { useSaveDraft, useSubmitResponse } from "../_hooks/use-survey-actions";
 import { commentsByQuestion, QuestionComments } from "./question-comments";
 import { AttachmentList, AttachmentPicker } from "./question-attachments";
-import { SectionedQuestions } from "./sectioned-questions";
+import { PdfNumber, SectionedQuestions } from "./sectioned-questions";
 
 const AUTOSAVE_MS = 1500;
 const same = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
@@ -174,6 +174,7 @@ export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: strin
                 <div className="flex items-start justify-between gap-3">
                   <p className="text-sm text-ink">
                     <span className="mr-1.5 font-mono-data text-xs text-ink-faint">Q{n}</span>
+                    <PdfNumber question={q} />
                     {q.text}
                   </p>
                   <QuestionStatusBadge status={q.status} />
@@ -190,6 +191,7 @@ export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: strin
             <li key={q.id} id={`q-${q.id}`} className={cn("space-y-2 border-b border-line px-5 py-4 last:border-b-0", flagged && "bg-rust-soft/40")}>
               <p className="text-sm text-ink">
                 <span className="mr-1.5 font-mono-data text-xs text-ink-faint">Q{n}</span>
+                    <PdfNumber question={q} />
                 {q.text} {q.required && <span className="text-rust">*</span>}
               </p>
               {q.hint && <p className="text-xs text-ink-faint">{q.hint}</p>}

@@ -1,0 +1,101 @@
+{
+ "summary": "This standard covers the Industrial Machinery & Goods industry, which makes equipment such as engines, earth-moving machinery, trucks, tractors, ships, pumps, locomotives and turbines. Its disclosure topics are energy management, workforce health and safety, fuel economy and emissions in use-phase, materials sourcing and remanufacturing design and services.",
+ "disclosures": [
+  {
+   "ref": "RT-IG-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your organisation's (1) total energy consumed, (2) percentage of that energy that is grid electricity and (3) percentage that is renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy consumed in GJ, (2) the percentage purchased from the grid and (3) the percentage from renewable sources, including self-generated renewable energy."
+    }
+   ]
+  },
+  {
+   "ref": "RT-IG-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total recordable incident rate (TRIR), (2) fatality rate and (3) near miss frequency rate (NMFR) for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate · Report TRIR, fatality rate and NMFR separately for direct employees and contract employees, stating the rate basis such as per 200,000 hours worked."
+    }
+   ]
+  },
+  {
+   "ref": "RT-IG-410a",
+   "title": "Fuel Economy & Emissions in Use-phase",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your sales-weighted fleet fuel efficiency for medium- and heavy-duty vehicles?",
+     "type": "number",
+     "hint": "Unit: Litres per 100 tonne-kilometres · Report the sales-weighted fleet fuel efficiency in litres per 100 tonne-kilometres."
+    },
+    {
+     "item": ".2",
+     "text": "What is your sales-weighted fuel efficiency for non-road equipment?",
+     "type": "number",
+     "hint": "Unit: Litres per hour · Report the sales-weighted fuel efficiency of non-road equipment in litres per hour."
+    },
+    {
+     "item": ".3",
+     "text": "What is your sales-weighted fuel efficiency for stationary generators?",
+     "type": "number",
+     "hint": "Unit: Kilojoules per litre · Report the sales-weighted fuel efficiency of stationary generators in kilojoules per litre."
+    },
+    {
+     "item": ".4",
+     "text": "What are your sales-weighted emissions of (1) nitrogen oxides (NOx) and (2) particulate matter (PM) for (a) marine diesel engines, (b) locomotive diesel engines, (c) on-road medium- and heavy-duty engines and (d) other non-road diesel engines?",
+     "type": "text",
+     "hint": "Unit: Grammes per kilojoule · Report sales-weighted NOx and PM emissions in grammes per kilojoule separately for each of the four engine categories (a) to (d)."
+    }
+   ]
+  },
+  {
+   "ref": "RT-IG-440a",
+   "title": "Materials Sourcing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation manage the risks associated with the use of critical materials?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe the critical materials used, the risks (supply, price, regulatory, reputational) and the actions taken to manage them, such as diversification, substitution or recycling."
+    }
+   ]
+  },
+  {
+   "ref": "RT-IG-440b",
+   "title": "Remanufacturing Design & Services",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was your organisation's revenue from remanufactured products and remanufacturing services?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report revenue from remanufactured products and remanufacturing services in your presentation currency for the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "RT-IG-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many units did your organisation produce, by product category?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of units produced for each product category."
+    },
+    {
+     "item": ".B",
+     "text": "How many employees does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of employees; state whether it is a headcount or full-time equivalent figure."
+    }
+   ]
+  }
+ ]
+}

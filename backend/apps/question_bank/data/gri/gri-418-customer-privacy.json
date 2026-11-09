@@ -1,17 +1,71 @@
 {
- "summary": "GRI 418 covers customer privacy, including losses of customer data and breaches of customer privacy. These can result from non-compliance with laws, regulations and/or voluntary standards on the protection of customer privacy.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "How does your organization manage the topic of customer privacy, including its impacts, policies, actions and tracking of effectiveness?",
-   "type": "text",
-   "hint": "Report how the organization manages this material topic using Disclosure 3-3 in GRI 3: Material Topics 2021."
-  },
-  {
-   "ref": "418-1",
-   "text": "How many substantiated complaints concerning breaches of customer privacy and losses of customer data did your organization receive?",
-   "type": "text",
-   "hint": "a. Total number of substantiated complaints concerning breaches of customer privacy, by: i. complaints from outside parties substantiated by the organization; ii. complaints from regulatory bodies. b. Total number of identified leaks, thefts, or losses of customer data. c. If none, a brief statement is sufficient."
-  }
- ]
+  "summary": "GRI 418 covers customer privacy, including losses of customer data and breaches of customer privacy. These can result from non-compliance with laws, regulations and/or voluntary standards on the protection of customer privacy.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to customer privacy.",
+          "hint": "Cover both actual and potential impacts, negative and positive, including impacts on human rights.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "Is the organization involved with the negative impacts related to customer privacy through its own activities or as a result of its business relationships? Describe those activities or business relationships.",
+          "hint": "State whether involvement is through the organization's activities or through its business relationships, and describe them.",
+          "type": "text"
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding customer privacy.",
+          "hint": "Describe the policies or commitments that apply to this material topic.",
+          "type": "text"
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage customer privacy and the related impacts, including (i) actions to prevent or mitigate potential negative impacts, (ii) actions to address actual negative impacts, including actions to provide for or cooperate in their remediation, and (iii) actions to manage actual and potential positive impacts.",
+          "hint": "Cover i. prevention or mitigation of potential negative impacts; ii. addressing actual negative impacts, including remediation; iii. managing positive impacts.",
+          "type": "text"
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of the actions taken? Describe (i) the processes used, (ii) the goals, targets and indicators used to evaluate progress, (iii) the effectiveness of the actions, including progress toward goals and targets, and (iv) lessons learned and how they have been incorporated into operational policies and procedures.",
+          "hint": "Cover i. tracking processes; ii. goals, targets and indicators; iii. effectiveness and progress; iv. lessons learned and how they were incorporated.",
+          "type": "text"
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e).",
+          "hint": "Explain the role of stakeholder engagement in shaping actions and in judging their effectiveness.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "418-1",
+      "title": "Substantiated complaints concerning breaches of customer privacy and losses of customer data",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What was the total number of substantiated complaints received concerning breaches of customer privacy, categorized by (i) complaints received from outside parties and substantiated by the organization, and (ii) complaints from regulatory bodies?",
+          "hint": "Indicate if a substantial number of breaches relate to events in preceding years.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "What was the total number of identified leaks, thefts or losses of customer data?",
+          "hint": "Total number identified.",
+          "type": "text"
+        },
+        {
+          "item": "c",
+          "text": "If the organization has not identified any substantiated complaints, provide a brief statement of this fact.",
+          "hint": "A brief statement is sufficient.",
+          "type": "text"
+        }
+      ]
+    }
+  ]
 }

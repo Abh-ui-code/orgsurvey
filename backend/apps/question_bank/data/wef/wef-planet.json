@@ -1,0 +1,634 @@
+{
+ "summary": "The Planet pillar of the World Economic Forum's Stakeholder Capitalism Metrics: climate change, nature loss, fresh water availability, air and water pollution, solid waste and resource availability. It has 4 core and 12 expanded metrics.",
+ "disclosures": [
+  {
+   "ref": "Core",
+   "title": "Climate change: Greenhouse gas (GHG) emissions",
+   "questions": [
+    {
+     "item": "1.1",
+     "text": "What was your reporting period for the GHG emissions you are reporting?",
+     "type": "text",
+     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. Give the start and end dates (e.g. calendar year 2024). Use the same period for all emissions figures below."
+    },
+    {
+     "item": "1.2",
+     "text": "What were your Scope 1 (direct) GHG emissions, in metric tonnes of carbon dioxide equivalent (tCO2e)?",
+     "type": "number",
+     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. Direct emissions from sources you own or control (e.g. fuel burnt in boilers, furnaces, company vehicles). Report in tCO2e per the GHG Protocol."
+    },
+    {
+     "item": "1.3",
+     "text": "What were your Scope 2 (purchased energy) GHG emissions, in tCO2e?",
+     "type": "number",
+     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. Indirect emissions from purchased electricity, steam, heating and cooling. Report in tCO2e per the GHG Protocol. State if location-based or market-based in the methodology question."
+    },
+    {
+     "item": "1.4",
+     "text": "Which greenhouse gases are included in your Scope 1 and Scope 2 figures?",
+     "type": "multi_choice",
+     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. Cover all relevant greenhouse gases as defined by the GHG Protocol. Select every gas that is included.",
+     "options": [
+      "Carbon dioxide (CO2)",
+      "Methane (CH4)",
+      "Nitrous oxide (N2O)",
+      "F-gases (HFCs, PFCs, SF6, NF3)",
+      "Other"
+     ]
+    },
+    {
+     "item": "1.5",
+     "text": "What methodology or standard did you use to calculate your Scope 1 and Scope 2 emissions?",
+     "type": "text",
+     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. For example the GHG Protocol Corporate Standard, emission factors used, and whether Scope 2 is location-based or market-based."
+    },
+    {
+     "item": "1.6",
+     "text": "What were your material upstream (Scope 3) GHG emissions, in tCO2e, where appropriate?",
+     "type": "number",
+     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. Estimate and report where appropriate: emissions from your supply chain, e.g. purchased goods and services, upstream transport, business travel, employee commuting. Report in tCO2e."
+    },
+    {
+     "item": "1.7",
+     "text": "What were your material downstream (Scope 3) GHG emissions, in tCO2e, where appropriate?",
+     "type": "number",
+     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. Estimate and report where appropriate: emissions from e.g. use of sold products, downstream transport, end-of-life treatment. Report in tCO2e."
+    },
+    {
+     "item": "1.8",
+     "text": "Which Scope 3 categories did you include in your Scope 3 estimate, and how did you decide they are material?",
+     "type": "text",
+     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. List the GHG Protocol Scope 3 categories covered and the basis for judging them material."
+    },
+    {
+     "item": "1.9",
+     "text": "Which organisational boundary approach did you use for reporting emissions?",
+     "type": "single_choice",
+     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. Boundary under the GHG Protocol: how you decide which operations' emissions are counted.",
+     "options": [
+      "Equity share",
+      "Financial control",
+      "Operational control"
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "Core",
+   "title": "Climate change: TCFD implementation",
+   "questions": [
+    {
+     "item": "2.1",
+     "text": "Have you fully implemented the recommendations of the Task Force on Climate-related Financial Disclosures (TCFD)?",
+     "type": "yes_no",
+     "hint": "Climate change · Source: Recommendations of the Task Force on Climate-related Financial Disclosures, Final Report; CDSB R01, R02, R03, R04 and R06; SASB 110. The core metric asks for full implementation of the TCFD recommendations."
+    },
+    {
+     "item": "2.2",
+     "text": "If not yet fully implemented, what is your timeline (at most three years) for full TCFD implementation?",
+     "type": "text",
+     "hint": "Climate change · Source: Recommendations of the Task Force on Climate-related Financial Disclosures, Final Report; CDSB R01, R02, R03, R04 and R06; SASB 110. Disclose a timeline of at most three years for full implementation, if necessary. Leave blank if already fully implemented."
+    },
+    {
+     "item": "2.3",
+     "text": "Do you disclose how your board oversees climate-related risks and opportunities (TCFD Governance)?",
+     "type": "yes_no",
+     "hint": "Climate change · Source: Recommendations of the Task Force on Climate-related Financial Disclosures, Final Report; CDSB R01, R02, R03, R04 and R06; SASB 110. TCFD Governance pillar: board oversight and management's role in assessing and managing climate-related risks and opportunities."
+    },
+    {
+     "item": "2.4",
+     "text": "Do you disclose the climate-related risks and opportunities you have identified and their impact on your business, strategy and financial planning (TCFD Strategy)?",
+     "type": "yes_no",
+     "hint": "Climate change · Source: Recommendations of the Task Force on Climate-related Financial Disclosures, Final Report; CDSB R01, R02, R03, R04 and R06; SASB 110. TCFD Strategy pillar, including the resilience of your strategy under different climate scenarios (including a 2°C or lower scenario)."
+    },
+    {
+     "item": "2.5",
+     "text": "Do you disclose how you identify, assess and manage climate-related risks (TCFD Risk management)?",
+     "type": "yes_no",
+     "hint": "Climate change · Source: Recommendations of the Task Force on Climate-related Financial Disclosures, Final Report; CDSB R01, R02, R03, R04 and R06; SASB 110. TCFD Risk Management pillar: processes for identifying, assessing and managing climate risks and integrating them into overall risk management."
+    },
+    {
+     "item": "2.6",
+     "text": "Do you disclose the metrics and targets you use to assess climate-related risks and opportunities (TCFD Metrics and targets)?",
+     "type": "yes_no",
+     "hint": "Climate change · Source: Recommendations of the Task Force on Climate-related Financial Disclosures, Final Report; CDSB R01, R02, R03, R04 and R06; SASB 110. TCFD Metrics and Targets pillar, including Scope 1, 2 and 3 GHG emissions and the targets used to manage climate risks."
+    },
+    {
+     "item": "2.7",
+     "text": "Have you set, or committed to set, GHG emissions targets in line with the goals of the Paris Agreement?",
+     "type": "yes_no",
+     "hint": "Climate change · Source: Recommendations of the Task Force on Climate-related Financial Disclosures, Final Report; CDSB R01, R02, R03, R04 and R06; SASB 110. Paris goals: limit global warming to well-below 2°C above pre-industrial levels and pursue efforts to limit warming to 1.5°C."
+    },
+    {
+     "item": "2.8",
+     "text": "Have you set, or committed to set, a target to achieve net-zero emissions before 2050?",
+     "type": "yes_no",
+     "hint": "Climate change · Source: Recommendations of the Task Force on Climate-related Financial Disclosures, Final Report; CDSB R01, R02, R03, R04 and R06; SASB 110. Disclose whether you have set, or committed to set, a net-zero target before 2050."
+    }
+   ]
+  },
+  {
+   "ref": "Core",
+   "title": "Nature loss: Land use and ecological sensitivity",
+   "questions": [
+    {
+     "item": "3.1",
+     "text": "How many sites that you own, lease or manage are in or adjacent to protected areas?",
+     "type": "number",
+     "hint": "Nature loss · Source: GRI (304-1). Count the sites owned, leased or managed in or adjacent to protected areas."
+    },
+    {
+     "item": "3.2",
+     "text": "What is the total area (in hectares) of the sites you own, lease or manage in or adjacent to protected areas?",
+     "type": "number",
+     "hint": "Nature loss · Source: GRI (304-1). Report in hectares."
+    },
+    {
+     "item": "3.3",
+     "text": "How many sites that you own, lease or manage are in or adjacent to key biodiversity areas (KBA)?",
+     "type": "number",
+     "hint": "Nature loss · Source: GRI (304-1). Count the sites owned, leased or managed in or adjacent to key biodiversity areas."
+    },
+    {
+     "item": "3.4",
+     "text": "What is the total area (in hectares) of the sites you own, lease or manage in or adjacent to key biodiversity areas (KBA)?",
+     "type": "number",
+     "hint": "Nature loss · Source: GRI (304-1). Report in hectares."
+    },
+    {
+     "item": "3.5",
+     "text": "Can you list these sites and say where they are?",
+     "type": "text",
+     "hint": "Nature loss · Source: GRI (304-1). Optional detail: site names, locations and the protected area or KBA concerned."
+    }
+   ]
+  },
+  {
+   "ref": "Core",
+   "title": "Fresh water availability: Water consumption and withdrawal in water-stressed areas",
+   "questions": [
+    {
+     "item": "4.1",
+     "text": "For your operations where it is material, how many megalitres of water did you withdraw in total?",
+     "type": "number",
+     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Report in megalitres (ML)."
+    },
+    {
+     "item": "4.2",
+     "text": "For your operations where it is material, how many megalitres of water did you consume in total?",
+     "type": "number",
+     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Report in megalitres (ML). Consumption is water withdrawn that is not returned to the source."
+    },
+    {
+     "item": "4.3",
+     "text": "What percentage of your water withdrawal is in regions with high or extremely high baseline water stress?",
+     "type": "number",
+     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Use the WRI Aqueduct water risk atlas tool to classify regions. Report a percentage."
+    },
+    {
+     "item": "4.4",
+     "text": "What percentage of your water consumption is in regions with high or extremely high baseline water stress?",
+     "type": "number",
+     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Use the WRI Aqueduct water risk atlas tool to classify regions. Report a percentage."
+    },
+    {
+     "item": "4.5",
+     "text": "Where appropriate, how many megalitres of water are withdrawn across your full value chain (upstream and downstream)?",
+     "type": "number",
+     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Estimate and report where appropriate, in megalitres."
+    },
+    {
+     "item": "4.6",
+     "text": "Where appropriate, how many megalitres of water are consumed across your full value chain (upstream and downstream)?",
+     "type": "number",
+     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Estimate and report where appropriate, in megalitres."
+    },
+    {
+     "item": "4.7",
+     "text": "Where appropriate, what percentage of your value-chain water withdrawal and consumption is in regions with high or extremely high baseline water stress?",
+     "type": "number",
+     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Estimate using WRI Aqueduct. If withdrawal and consumption differ, give both percentages in the notes."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Climate change: Paris-aligned GHG emissions targets",
+   "questions": [
+    {
+     "item": "1.1",
+     "text": "Have you defined time-bound, science-based GHG emissions targets in line with the Paris Agreement?",
+     "type": "yes_no",
+     "hint": "Climate change · Source: Science-Based Targets initiative. Targets in line with limiting warming to well-below 2°C and pursuing 1.5°C."
+    },
+    {
+     "item": "1.2",
+     "text": "By what year before 2050 do you aim to achieve net-zero greenhouse gas emissions?",
+     "type": "number",
+     "hint": "Climate change · Source: Science-Based Targets initiative. Enter the target year (must be before 2050)."
+    },
+    {
+     "item": "1.3",
+     "text": "What interim emissions reduction targets have you set (reduction amount and target year)?",
+     "type": "text",
+     "hint": "Climate change · Source: Science-Based Targets initiative. Interim targets based on Science Based Targets initiative methodologies, if applicable."
+    },
+    {
+     "item": "1.4",
+     "text": "Are your targets validated by the Science Based Targets initiative?",
+     "type": "single_choice",
+     "hint": "Climate change · Source: Science-Based Targets initiative. Select the status of your SBTi validation.",
+     "options": [
+      "Validated",
+      "Committed, not yet validated",
+      "Not applicable"
+     ]
+    },
+    {
+     "item": "1.5",
+     "text": "What progress have you made against your targets so far?",
+     "type": "text",
+     "hint": "Climate change · Source: Science-Based Targets initiative. Report progress against each target, e.g. percentage reduction achieved vs the base year."
+    },
+    {
+     "item": "1.6",
+     "text": "If you take an alternative approach to setting targets, what methodology did you use to calculate them?",
+     "type": "text",
+     "hint": "Climate change · Source: Science-Based Targets initiative. Answer only if you do not use the Science Based Targets initiative methodology."
+    },
+    {
+     "item": "1.7",
+     "text": "If you take an alternative approach, on what basis do your targets deliver the goals of the Paris Agreement?",
+     "type": "text",
+     "hint": "Climate change · Source: Science-Based Targets initiative. Answer only if an alternative approach is taken."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Climate change: Impact of greenhouse gas emissions",
+   "questions": [
+    {
+     "item": "2.1",
+     "text": "What is the valued societal impact (monetary value) of your Scope 1 GHG emissions, where material?",
+     "type": "number",
+     "hint": "Climate change · Source: US EPA fact sheet on the Social Cost of Carbon (2016); Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Value your Scope 1 emissions using a social cost of carbon. Report the amount and currency in notes."
+    },
+    {
+     "item": "2.2",
+     "text": "What is the valued societal impact of your Scope 2 GHG emissions, where material?",
+     "type": "number",
+     "hint": "Climate change · Source: US EPA fact sheet on the Social Cost of Carbon (2016); Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Value your Scope 2 emissions using a social cost of carbon."
+    },
+    {
+     "item": "2.3",
+     "text": "What is the valued societal impact of your Scope 3 GHG emissions along the value chain, where material?",
+     "type": "number",
+     "hint": "Climate change · Source: US EPA fact sheet on the Social Cost of Carbon (2016); Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Value your material Scope 3 emissions using a social cost of carbon."
+    },
+    {
+     "item": "2.4",
+     "text": "What estimate of the social cost of carbon did you use (per tonne of CO2e)?",
+     "type": "number",
+     "hint": "Climate change · Source: US EPA fact sheet on the Social Cost of Carbon (2016); Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. State the value used per tCO2e and its currency/year in notes."
+    },
+    {
+     "item": "2.5",
+     "text": "What is the source or basis of the social cost of carbon estimate you used?",
+     "type": "text",
+     "hint": "Climate change · Source: US EPA fact sheet on the Social Cost of Carbon (2016); Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. For example the US EPA social cost of carbon, ISO 14008, Natural Capital Protocol or Value Balancing Alliance."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Nature loss: Land use and ecological sensitivity",
+   "questions": [
+    {
+     "item": "3.1",
+     "text": "What area of land (in hectares) do your own operations use to produce basic plant, animal or mineral commodities?",
+     "type": "number",
+     "hint": "Nature loss · Source: New metric. For example land used for forestry, agriculture or mining. Report if applicable."
+    },
+    {
+     "item": "3.2",
+     "text": "What area of land (in hectares) is used to produce the basic commodities in your full supply chain, where material?",
+     "type": "number",
+     "hint": "Nature loss · Source: New metric. Supply-chain figures can initially be estimated from the mass of each commodity used and the average mass produced per unit of land in each sourcing location."
+    },
+    {
+     "item": "3.3",
+     "text": "What is the year-on-year change in the area of land used for your operations?",
+     "type": "number",
+     "hint": "Nature loss · Source: New metric. Report change versus the previous year (in hectares or percent, state in notes)."
+    },
+    {
+     "item": "3.4",
+     "text": "What is the year-on-year change in the area of land used in your supply chain?",
+     "type": "number",
+     "hint": "Nature loss · Source: New metric. Report change versus the previous year, estimated if necessary."
+    },
+    {
+     "item": "3.5",
+     "text": "What percentage of this land area, or of your commodity inputs by mass or cost, is covered by a sustainability certification standard or sustainable management programme?",
+     "type": "number",
+     "hint": "Nature loss · Source: New metric. State the basis (land area, mass or cost) in notes."
+    },
+    {
+     "item": "3.6",
+     "text": "Which certification standards or sustainable management programmes cover it?",
+     "type": "text",
+     "hint": "Nature loss · Source: New metric. Name each standard or programme, or describe it."
+    },
+    {
+     "item": "3.7",
+     "text": "What percentage of total land area, mass or cost is covered by each standard or programme?",
+     "type": "text",
+     "hint": "Nature loss · Source: New metric. List each standard/programme with its percentage."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Nature loss: Impact of land use and conversion",
+   "questions": [
+    {
+     "item": "4.1",
+     "text": "What is the valued societal impact (monetary value) of your use of land, where material?",
+     "type": "number",
+     "hint": "Nature loss · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+    },
+    {
+     "item": "4.2",
+     "text": "What is the valued societal impact of your conversion of ecosystems, where material?",
+     "type": "number",
+     "hint": "Nature loss · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+    },
+    {
+     "item": "4.3",
+     "text": "What valuation methodology did you use to value land use and conversion impacts?",
+     "type": "text",
+     "hint": "Nature loss · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. E.g. Natural Capital Protocol, ISO 14008, Value Balancing Alliance."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Fresh water availability: Impact of freshwater consumption and withdrawal",
+   "questions": [
+    {
+     "item": "5.1",
+     "text": "What is the valued societal impact (monetary value) of your freshwater withdrawal, where material?",
+     "type": "number",
+     "hint": "Fresh water availability · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+    },
+    {
+     "item": "5.2",
+     "text": "What is the valued societal impact of your freshwater consumption, where material?",
+     "type": "number",
+     "hint": "Fresh water availability · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+    },
+    {
+     "item": "5.3",
+     "text": "What valuation methodology did you use to value freshwater impacts?",
+     "type": "text",
+     "hint": "Fresh water availability · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. E.g. Natural Capital Protocol, ISO 14008, Value Balancing Alliance."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Air pollution: Air pollution",
+   "questions": [
+    {
+     "item": "6.1",
+     "text": "What were your nitrogen oxides (NOx) emissions, in metric tonnes, along the value chain where material?",
+     "type": "number",
+     "hint": "Air pollution · Source: GRI 305-7. Report wherever material along the value chain."
+    },
+    {
+     "item": "6.2",
+     "text": "What were your sulphur oxides (SOx) emissions, in metric tonnes, along the value chain where material?",
+     "type": "number",
+     "hint": "Air pollution · Source: GRI 305-7. Report wherever material along the value chain."
+    },
+    {
+     "item": "6.3",
+     "text": "What were your particulate matter emissions, in metric tonnes, along the value chain where material?",
+     "type": "number",
+     "hint": "Air pollution · Source: GRI 305-7. Report wherever material along the value chain."
+    },
+    {
+     "item": "6.4",
+     "text": "What other significant air emissions do you have, and in what quantities?",
+     "type": "text",
+     "hint": "Air pollution · Source: GRI 305-7. E.g. volatile organic compounds, hazardous air pollutants; give quantities and units."
+    },
+    {
+     "item": "6.5",
+     "text": "What proportion of these emissions occurs in or adjacent to urban or densely populated areas?",
+     "type": "number",
+     "hint": "Air pollution · Source: GRI 305-7. Estimate as a percentage wherever possible."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Air pollution: Impact of air pollution",
+   "questions": [
+    {
+     "item": "7.1",
+     "text": "What is the valued impact of your NOx and SOx emissions, where material?",
+     "type": "number",
+     "hint": "Air pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+    },
+    {
+     "item": "7.2",
+     "text": "What is the valued impact of your particulate matter emissions, where material?",
+     "type": "number",
+     "hint": "Air pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+    },
+    {
+     "item": "7.3",
+     "text": "What is the valued impact of your other significant air emissions, where material?",
+     "type": "number",
+     "hint": "Air pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+    },
+    {
+     "item": "7.4",
+     "text": "What valuation methodology did you use to value air pollution impacts?",
+     "type": "text",
+     "hint": "Air pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. E.g. Natural Capital Protocol, ISO 14008, Value Balancing Alliance."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Water pollution: Nutrients",
+   "questions": [
+    {
+     "item": "8.1",
+     "text": "How many metric tonnes of nitrogen in fertilizer did you consume, where material along the value chain?",
+     "type": "number",
+     "hint": "Water pollution · Source: SASB (CN0101-11). Estimate and report wherever material along the value chain."
+    },
+    {
+     "item": "8.2",
+     "text": "How many metric tonnes of phosphate in fertilizer did you consume, where material along the value chain?",
+     "type": "number",
+     "hint": "Water pollution · Source: SASB (CN0101-11). Estimate and report wherever material along the value chain."
+    },
+    {
+     "item": "8.3",
+     "text": "How many metric tonnes of potassium in fertilizer did you consume, where material along the value chain?",
+     "type": "number",
+     "hint": "Water pollution · Source: SASB (CN0101-11). Estimate and report wherever material along the value chain."
+    },
+    {
+     "item": "8.4",
+     "text": "How did you estimate your fertilizer consumption, and which parts of the value chain are covered?",
+     "type": "text",
+     "hint": "Water pollution · Source: SASB (CN0101-11). Describe the method and boundary (own operations, suppliers)."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Water pollution: Impact of water pollution",
+   "questions": [
+    {
+     "item": "9.1",
+     "text": "What is the valued societal impact of excess nutrients you release to water, where material?",
+     "type": "number",
+     "hint": "Water pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+    },
+    {
+     "item": "9.2",
+     "text": "What is the valued societal impact of heavy metals you release to water, where material?",
+     "type": "number",
+     "hint": "Water pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+    },
+    {
+     "item": "9.3",
+     "text": "What is the valued societal impact of other toxins you release to water, where material?",
+     "type": "number",
+     "hint": "Water pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+    },
+    {
+     "item": "9.4",
+     "text": "What valuation methodology did you use to value water pollution impacts?",
+     "type": "text",
+     "hint": "Water pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. E.g. Natural Capital Protocol, ISO 14008, Value Balancing Alliance."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Solid waste: Single use plastics",
+   "questions": [
+    {
+     "item": "10.1",
+     "text": "How many metric tonnes of single-use plastic did you consume across your full value chain?",
+     "type": "number",
+     "hint": "Solid waste · Source: New metric. Report an estimate in metric tonnes."
+    },
+    {
+     "item": "10.2",
+     "text": "What are the most significant applications of single-use plastic you identified?",
+     "type": "text",
+     "hint": "Solid waste · Source: New metric. E.g. packaging, cutlery, bags."
+    },
+    {
+     "item": "10.3",
+     "text": "What quantification approach did you use to estimate single-use plastic?",
+     "type": "text",
+     "hint": "Solid waste · Source: New metric. Describe how the tonnage was estimated."
+    },
+    {
+     "item": "10.4",
+     "text": "How do you define \"single-use plastic\"?",
+     "type": "text",
+     "hint": "Solid waste · Source: New metric. State the definition you adopted."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Solid waste: Impact of solid waste disposal",
+   "questions": [
+    {
+     "item": "11.1",
+     "text": "What is the valued societal impact of your plastic waste disposal, where material?",
+     "type": "number",
+     "hint": "Solid waste · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+    },
+    {
+     "item": "11.2",
+     "text": "What is the valued societal impact of your other solid waste streams disposed of, where material?",
+     "type": "number",
+     "hint": "Solid waste · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+    },
+    {
+     "item": "11.3",
+     "text": "What valuation methodology did you use to value solid waste disposal impacts?",
+     "type": "text",
+     "hint": "Solid waste · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. E.g. Natural Capital Protocol, ISO 14008, Value Balancing Alliance."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Resource availability: Resource circularity",
+   "questions": [
+    {
+     "item": "12.1",
+     "text": "Do you report a resource circularity metric?",
+     "type": "yes_no",
+     "hint": "Resource availability · Source: WBCSD & KPMG \"Circular Transition Indicators\"; Ellen MacArthur Foundation \"Circulytics™ indicators\". Report the most appropriate metric(s) for the company and/or a product, material or site."
+    },
+    {
+     "item": "12.2",
+     "text": "At what level do you measure circularity?",
+     "type": "multi_choice",
+     "hint": "Resource availability · Source: WBCSD & KPMG \"Circular Transition Indicators\"; Ellen MacArthur Foundation \"Circulytics™ indicators\". Select all that apply.",
+     "options": [
+      "Whole company",
+      "Product",
+      "Material",
+      "Site"
+     ]
+    },
+    {
+     "item": "12.3",
+     "text": "Which circularity metric(s) do you use?",
+     "type": "multi_choice",
+     "hint": "Resource availability · Source: WBCSD & KPMG \"Circular Transition Indicators\"; Ellen MacArthur Foundation \"Circulytics™ indicators\". Examples: Circular Transition Indicators (WBCSD & KPMG), Ellen MacArthur Foundation Circulytics, or a company-developed metric.",
+     "options": [
+      "Circular Transition Indicators (WBCSD & KPMG)",
+      "Ellen MacArthur Foundation Circulytics",
+      "Company-developed metric",
+      "Other"
+     ]
+    },
+    {
+     "item": "12.4",
+     "text": "What are the results of your chosen circularity metric(s)?",
+     "type": "text",
+     "hint": "Resource availability · Source: WBCSD & KPMG \"Circular Transition Indicators\"; Ellen MacArthur Foundation \"Circulytics™ indicators\". Report the value(s) with units and the scope they apply to."
+    },
+    {
+     "item": "12.5",
+     "text": "What methodological approach did you use to calculate the chosen metric(s)?",
+     "type": "text",
+     "hint": "Resource availability · Source: WBCSD & KPMG \"Circular Transition Indicators\"; Ellen MacArthur Foundation \"Circulytics™ indicators\". Describe the calculation approach."
+    },
+    {
+     "item": "12.6",
+     "text": "What is the rationale for choosing these metric(s)?",
+     "type": "text",
+     "hint": "Resource availability · Source: WBCSD & KPMG \"Circular Transition Indicators\"; Ellen MacArthur Foundation \"Circulytics™ indicators\". Explain why they are most appropriate for you."
+    }
+   ]
+  }
+ ]
+}

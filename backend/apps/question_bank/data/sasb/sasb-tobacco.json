@@ -1,0 +1,59 @@
+{
+ "summary": "Covers manufacturers of cigarettes, cigars, smokeless tobacco and next-generation nicotine products. Disclosures address public health, including harm-reduction products, and marketing practices such as legal losses and positions on WHO tobacco-control marketing rules.",
+ "disclosures": [
+  {
+   "ref": "FB-TB-260a",
+   "title": "Public Health",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) gross revenue and (2) revenue net of excise taxes from (a) non-tobacco nicotine products and (b) heated tobacco products?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Report gross revenue and revenue net of excise taxes, each separately for (a) non-tobacco nicotine products and (b) heated tobacco products, in your presentation currency."
+    },
+    {
+     "item": ".2",
+     "text": "What process does your organisation use to assess risks and opportunities associated with 'tobacco harm reduction' products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how risks and opportunities of harm-reduction products are assessed, including scientific evidence, regulation and public health considerations."
+    }
+   ]
+  },
+  {
+   "ref": "FB-TB-270a",
+   "title": "Marketing Practices",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of monetary losses as a result of legal proceedings associated with marketing, labelling or advertising practices?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Report the total monetary losses (fines, settlements, damages) from legal proceedings related to marketing, labelling or advertising practices, in your presentation currency."
+    },
+    {
+     "item": ".2",
+     "text": "What is your organisation's marketing policy, and what are your positions on Articles 11 and 13 of the World Health Organisation Framework Convention on Tobacco Control (WHO FCTC)?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the marketing policy and your positions on Article 11 (packaging and labelling) and Article 13 (advertising, promotion and sponsorship) of the WHO FCTC."
+    }
+   ]
+  },
+  {
+   "ref": "FB-TB-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was your combustible tobacco product sales volume for (1) cigarettes, (2) cigars and (3) other smoked tobacco products?",
+     "type": "text",
+     "hint": "Unit: Number, Metric tonnes (t) · Report sales volume for each of (1) cigarettes, (2) cigars and (3) other smoked tobacco products, in number of units or metric tonnes as appropriate."
+    },
+    {
+     "item": ".B",
+     "text": "What was your non-combustible product sales volume for (1) traditional smokeless tobacco, (2) non-tobacco nicotine products, (3) heated tobacco products and (4) nicotine replacement therapy products?",
+     "type": "text",
+     "hint": "Unit: Number · Report sales volume separately for each of (1) traditional smokeless tobacco, (2) non-tobacco nicotine products, (3) heated tobacco products and (4) nicotine replacement therapy products, in units."
+    }
+   ]
+  }
+ ]
+}

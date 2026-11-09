@@ -1,0 +1,155 @@
+{
+ "summary": "This standard covers insurers offering property, life, casualty, reinsurance and non-traditional products, along with their proprietary investments. Disclosure topics are transparent information and fair advice, ESG in investment management, policies incentivising responsible behaviour, financed emissions, physical risk exposure and systemic risk management.",
+ "disclosures": [
+  {
+   "ref": "FN-IN-270a",
+   "title": "Transparent Information & Fair Advice for Customers",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of monetary losses as a result of legal proceedings associated with marketing and communication of insurance product-related information to new and returning customers?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "What is your complaints-to-claims ratio?",
+     "type": "number",
+     "hint": "Unit: Rate · Report the ratio of complaints to claims as a rate for the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "What is your customer retention rate?",
+     "type": "number",
+     "hint": "Unit: Rate · Report the rate of customers retained over the reporting period."
+    },
+    {
+     "item": ".4",
+     "text": "How does your organisation approach informing customers about its products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how product information is communicated so that it is clear, fair and not misleading."
+    }
+   ]
+  },
+  {
+   "ref": "FN-IN-410a",
+   "title": "Incorporation of Environmental, Social and Governance Factors in Investment Management",
+   "questions": [
+    {
+     "item": ".2",
+     "text": "How does your organisation incorporate environmental, social and governance (ESG) factors in its investment management processes and strategies?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the ESG approaches used, which investments they apply to and how they influence decisions."
+    }
+   ]
+  },
+  {
+   "ref": "FN-IN-410b",
+   "title": "Policies Designed to Incentivise Responsible Behaviour",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your net premiums written related to energy efficiency and low carbon technology?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report net premiums written in your presentation currency for the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "What products or product features does your organisation offer that incentivise health, safety or environmentally responsible actions or behaviours?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe each product or feature, the behaviour it encourages and how the incentive works."
+    }
+   ]
+  },
+  {
+   "ref": "FN-IN-410c",
+   "title": "Financed Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your absolute gross financed emissions, disaggregated by (1) Scope 1, (2) Scope 2 and (3) Scope 3?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Give each of the three scopes separately in metric tonnes CO2-e, and note the calculation standard used."
+    },
+    {
+     "item": ".2",
+     "text": "What is your gross exposure for each industry, by asset class?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Give the exposure in your presentation currency for each industry, broken down by asset class."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of your gross exposure is included in the financed emissions calculation?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report a percentage (0 to 100) of gross exposure covered by the calculation."
+    },
+    {
+     "item": ".4",
+     "text": "What methodology does your organisation use to calculate financed emissions?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the calculation approach, standards, data sources and assumptions or limitations."
+    }
+   ]
+  },
+  {
+   "ref": "FN-IN-450a",
+   "title": "Physical Risk Exposure",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is the Probable Maximum Loss (PML) of your insured products from weather-related natural catastrophes?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Report PML in your presentation currency, by the relevant weather-related catastrophe types, and note the modelling approach."
+    },
+    {
+     "item": ".2",
+     "text": "What were the total monetary losses attributable to insurance pay-outs from (1) modelled natural catastrophes and (2) non-modelled natural catastrophes, by type of event and geographical segment, net and gross of reinsurance?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Give amounts in your presentation currency for each part, by event type and region, both net and gross of reinsurance."
+    },
+    {
+     "item": ".3",
+     "text": "How does your organisation incorporate environmental risks into (1) the underwriting process for individual contracts and (2) the management of entity-level risks and capital adequacy?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the approach for each of the two parts, including models, criteria and governance used."
+    }
+   ]
+  },
+  {
+   "ref": "FN-IN-550a",
+   "title": "Systemic Risk Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your exposure to derivative instruments by category: (1) total exposure to non-centrally cleared derivatives, (2) total fair value of acceptable collateral posted with a central clearinghouse, and (3) total exposure to centrally cleared derivatives?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Give each of the three amounts separately in your presentation currency."
+    },
+    {
+     "item": ".2",
+     "text": "What is the total fair value of your securities lending collateral assets?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total fair value in your presentation currency."
+    },
+    {
+     "item": ".3",
+     "text": "How does your organisation manage capital- and liquidity-related risks associated with systemic non-insurance activities?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the non-insurance activities concerned and the controls used to manage capital and liquidity risk."
+    }
+   ]
+  },
+  {
+   "ref": "FN-IN-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many policies do you have in force, by segment: (1) property and casualty, (2) life, and (3) assumed reinsurance?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of policies in force for each of the three segments."
+    }
+   ]
+  }
+ ]
+}

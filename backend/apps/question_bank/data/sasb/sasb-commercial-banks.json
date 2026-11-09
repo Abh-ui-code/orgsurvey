@@ -1,0 +1,149 @@
+{
+ "summary": "This standard covers banks that accept deposits and lend to individuals, businesses and projects. Disclosure topics are data security, financial inclusion and capacity building, ESG factors in credit analysis, financed emissions, business ethics and systemic risk management.",
+ "disclosures": [
+  {
+   "ref": "FN-CB-230a",
+   "title": "Data Security",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the number of data breaches, (2) the percentage that were personal data breaches, and (3) the number of account holders affected?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) a count, (2) a percentage and (3) a count of account holders affected; answer each part separately."
+    },
+    {
+     "item": ".2",
+     "text": "How does your organisation identify and address data security risks?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the approach to identifying risks, the controls and standards used, and how risks are addressed."
+    }
+   ]
+  },
+  {
+   "ref": "FN-CB-240a",
+   "title": "Financial Inclusion & Capacity Building",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the number and (2) the amount of loans outstanding that qualify for programmes designed to promote small business and community development?",
+     "type": "text",
+     "hint": "Unit: Number, Presentation currency · Report (1) a count and (2) the amount in your presentation currency; answer each part separately."
+    },
+    {
+     "item": ".2",
+     "text": "What are (1) the number and (2) the amount of past due and nonaccrual loans, or loans subject to forbearance, that qualify for programmes designed to promote small business and community development?",
+     "type": "text",
+     "hint": "Unit: Number, Presentation currency · Report (1) a count and (2) the amount in your presentation currency; answer each part separately."
+    },
+    {
+     "item": ".3",
+     "text": "How many no-cost retail checking accounts did you provide to previously unbanked or underbanked customers?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of such accounts for the reporting period."
+    },
+    {
+     "item": ".4",
+     "text": "How many participants were there in your financial literacy initiatives for unbanked, underbanked or underserved customers?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of participants in such initiatives for the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "FN-CB-410a",
+   "title": "Incorporation of Environmental, Social, and Governance Factors in Credit Analysis",
+   "questions": [
+    {
+     "item": ".2",
+     "text": "How does your organisation incorporate environmental, social and governance (ESG) factors in credit analysis?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe which ESG factors are considered, in which credit processes, and how they affect decisions."
+    }
+   ]
+  },
+  {
+   "ref": "FN-CB-410b",
+   "title": "Financed Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your absolute gross financed emissions, disaggregated by (1) Scope 1, (2) Scope 2 and (3) Scope 3?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Give each of the three scopes separately in metric tonnes CO2-e, and note the calculation standard used."
+    },
+    {
+     "item": ".2",
+     "text": "What is your gross exposure for each industry, by asset class?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Give the exposure in your presentation currency for each industry, broken down by asset class."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of your gross exposure is included in the financed emissions calculation?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report a percentage (0 to 100) of gross exposure covered by the calculation."
+    },
+    {
+     "item": ".4",
+     "text": "What methodology does your organisation use to calculate financed emissions?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the calculation approach, standards, data sources and assumptions or limitations."
+    }
+   ]
+  },
+  {
+   "ref": "FN-CB-510a",
+   "title": "Business Ethics",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of monetary losses as a result of legal proceedings associated with fraud, insider trading, antitrust, anti-competitive behaviour, market manipulation, malpractice, or other related financial industry laws or regulations?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period, covering all legal proceedings of these kinds."
+    },
+    {
+     "item": ".2",
+     "text": "How do you describe your whistleblower policies and procedures?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how employees can report concerns, how reports are handled and protections against retaliation."
+    }
+   ]
+  },
+  {
+   "ref": "FN-CB-550a",
+   "title": "Systemic Risk Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your Global Systemically Important Bank (G-SIB) score, by category?",
+     "type": "text",
+     "hint": "Unit: Basis points (bps) · Report the score in basis points for each G-SIB category, as used in the Basel Committee assessment."
+    },
+    {
+     "item": ".2",
+     "text": "How does your organisation integrate the results of mandatory and voluntary stress tests into capital adequacy planning, long-term corporate strategy, and other business activities?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how stress test results feed into capital planning, strategy and business decisions."
+    }
+   ]
+  },
+  {
+   "ref": "FN-CB-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What are (1) the number and (2) the value of your checking and savings accounts by segment: (a) personal and (b) small business?",
+     "type": "text",
+     "hint": "Unit: Number, Presentation currency · Report a count and a value (presentation currency) for each of the two segments."
+    },
+    {
+     "item": ".B",
+     "text": "What are (1) the number and (2) the value of your loans by segment: (a) personal, (b) small business and (c) corporate?",
+     "type": "text",
+     "hint": "Unit: Number, Presentation currency · Report a count and a value (presentation currency) for each of the three segments."
+    }
+   ]
+  }
+ ]
+}

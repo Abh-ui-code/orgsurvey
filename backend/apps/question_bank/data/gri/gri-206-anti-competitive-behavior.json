@@ -1,17 +1,65 @@
 {
- "summary": "GRI 206 covers anti-competitive behavior, including anti-trust and monopoly practices. It addresses actions that can result in collusion with competitors or barriers to entry, intended to limit market competition.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "How does the organization manage anti-competitive behavior as a material topic (GRI 3-3)?",
-   "type": "text",
-   "hint": "Describe how the organization manages the topic and its related impacts, as required by Disclosure 3-3 in GRI 3: Material Topics 2021."
-  },
-  {
-   "ref": "206-1",
-   "text": "What legal actions were pending or completed regarding anti-competitive behavior, anti-trust and monopoly practices?",
-   "type": "text",
-   "hint": "a. Number of legal actions pending or completed in the period regarding anti-competitive behavior and violations of anti-trust and monopoly legislation in which the organization was identified as a participant. b. Main outcomes of completed actions, including decisions or judgements."
-  }
- ]
+  "summary": "GRI 206 covers anti-competitive behavior, including anti-trust and monopoly practices. It addresses actions that can result in collusion with competitors or barriers to entry, intended to limit market competition.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to anti-competitive behavior.",
+          "type": "text",
+          "hint": "Describe the actual and potential, negative and positive impacts on the economy, environment, and people, including impacts on human rights (GRI 3-3-a)."
+        },
+        {
+          "item": "b",
+          "text": "State whether the organization is involved with the negative impacts related to anti-competitive behavior through its own activities or as a result of its business relationships, and describe how.",
+          "type": "text",
+          "hint": "Say whether the organization causes or contributes to the negative impacts through its activities, or whether they are linked to its operations, products or services through business relationships, and describe how (GRI 3-3-b)."
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding anti-competitive behavior.",
+          "type": "text",
+          "hint": "Describe policies or commitments regarding the material topic (GRI 3-3-c)."
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage anti-competitive behavior and the related impacts.",
+          "type": "text",
+          "hint": "Include: i. how negative impacts are prevented or mitigated; ii. how actual negative impacts are addressed, including actions to provide for or cooperate in remediation; iii. how actual and potential positive impacts are managed (GRI 3-3-d)."
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of its actions on anti-competitive behavior?",
+          "type": "text",
+          "hint": "Report: i. information about the effectiveness of the actions; ii. the goals, targets and indicators used to evaluate progress; iii. lessons learned and how they have been integrated into policies and operational procedures (GRI 3-3-e)."
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken on anti-competitive behavior and whether those actions have been effective.",
+          "type": "text",
+          "hint": "Describe how stakeholder engagement has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e) (GRI 3-3-f)."
+        }
+      ]
+    },
+    {
+      "ref": "206-1",
+      "title": "Legal actions for anti-competitive behavior, anti-trust, and monopoly practices",
+      "questions": [
+        {
+          "item": "a",
+          "text": "How many legal actions regarding anti-competitive behavior or violations of anti-trust and monopoly legislation were pending or completed during the reporting period?",
+          "type": "number",
+          "hint": "Only actions in which the organization has been identified as a participant."
+        },
+        {
+          "item": "b",
+          "text": "What were the main outcomes of completed legal actions, including any decisions or judgements?",
+          "type": "text",
+          "hint": "Main outcomes of completed legal actions, including any decisions or judgements."
+        }
+      ]
+    }
+  ]
 }

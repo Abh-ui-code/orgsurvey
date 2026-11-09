@@ -1,0 +1,125 @@
+{
+ "summary": "Covers manufacturers of passenger vehicles, light trucks and motorcycles. Disclosure topics are product safety, labour practices, fuel economy and use-phase emissions, materials sourcing, and materials efficiency and recycling.",
+ "disclosures": [
+  {
+   "ref": "TR-AU-250a",
+   "title": "Product Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your vehicle models are rated by NCAP with an overall 5-star safety rating, by region?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report the percentage by region, for models rated by a New Car Assessment Programme (NCAP) with an overall 5-star rating."
+    },
+    {
+     "item": ".2",
+     "text": "How many safety-related defect complaints did your organisation receive, and what percentage were investigated?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the number of safety-related defect complaints and (2) the percentage investigated."
+    },
+    {
+     "item": ".3",
+     "text": "How many vehicles did your organisation recall?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of vehicles recalled during the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "TR-AU-310a",
+   "title": "Labour Practices",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your active workforce is employed under collective agreements?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of active employees covered by collective bargaining or collective agreements."
+    },
+    {
+     "item": ".2",
+     "text": "How many work stoppages did your organisation experience, and how many total days were idle as a result?",
+     "type": "text",
+     "hint": "Unit: Number, Days idle · Report (1) the number of work stoppages and (2) the total days idle, for the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "TR-AU-410a",
+   "title": "Fuel Economy & Use-phase Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your sales-weighted average passenger fleet fuel economy, by region?",
+     "type": "text",
+     "hint": "Unit: Mpg, L/km, gCO2/km, km/L · Report by region, in mpg, L/km, gCO2/km or km/L, weighted by vehicle sales."
+    },
+    {
+     "item": ".2",
+     "text": "How many (1) zero emission vehicles (ZEV), (2) hybrid vehicles and (3) plug-in hybrid vehicles did you sell?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number sold for each of ZEV, hybrid and plug-in hybrid vehicles separately."
+    },
+    {
+     "item": ".3",
+     "text": "What is your strategy for managing fleet fuel economy and emissions risks and opportunities?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your strategy, including regulatory and market risks, product plans, and how you manage opportunities in fuel economy and emissions."
+    }
+   ]
+  },
+  {
+   "ref": "TR-AU-440a",
+   "title": "Materials Sourcing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation manage the risks associated with the use of critical materials?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how risks from critical materials (supply, price, availability, regulation) are identified and managed, including mitigation strategies such as substitution, recycling or supplier engagement."
+    }
+   ]
+  },
+  {
+   "ref": "TR-AU-440b",
+   "title": "Materials Efficiency & Recycling",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is (1) the total amount of waste from manufacturing and (2) the percentage recycled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) total manufacturing waste in metric tonnes and (2) the percentage recycled."
+    },
+    {
+     "item": ".2",
+     "text": "What is (1) the weight of end-of-life material your organisation recovered and (2) the percentage recycled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) the weight of end-of-life material recovered in metric tonnes and (2) the percentage recycled."
+    },
+    {
+     "item": ".3",
+     "text": "What is the average recyclability of the vehicles you sold?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by sales-weighted metric tonnes (t) · Report the average recyclability as a percentage, weighted by sales in metric tonnes, and state the calculation method used."
+    }
+   ]
+  },
+  {
+   "ref": "TR-AU-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many vehicles did your organisation manufacture?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of vehicles manufactured in the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "How many vehicles did your organisation sell?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of vehicles sold in the reporting period."
+    }
+   ]
+  }
+ ]
+}

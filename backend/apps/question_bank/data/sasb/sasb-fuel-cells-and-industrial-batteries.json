@@ -1,0 +1,131 @@
+{
+ "summary": "This standard covers manufacturers of fuel cells for energy production and batteries and other energy storage equipment, excluding automotive uses. Its disclosure topics are energy management, workforce health and safety, product efficiency, product end-of-life management and materials sourcing.",
+ "disclosures": [
+  {
+   "ref": "RR-FC-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was (1) your organisation's total energy consumed, in gigajoules, (2) the percentage of it that was grid electricity and (3) the percentage that was renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy consumed in gigajoules, (2) the percentage supplied as grid electricity and (3) the percentage from renewable sources. Include self-generated renewable energy and state how renewable is defined."
+    }
+   ]
+  },
+  {
+   "ref": "RR-FC-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) your total recordable incident rate (TRIR) and (2) your fatality rate for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate · Report the rate for each of: TRIR for direct employees, TRIR for contract employees, fatality rate for direct employees and fatality rate for contract employees. State the rate basis (for example per 200,000 hours worked)."
+    },
+    {
+     "item": ".2",
+     "text": "What efforts do you make to assess, monitor and reduce the exposure of your workforce to human health hazards?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the health hazards your workforce faces (for example chemical and electrical hazards), and the assessment, monitoring and reduction measures in place."
+    }
+   ]
+  },
+  {
+   "ref": "RR-FC-410a",
+   "title": "Product Efficiency",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is the average storage capacity of your batteries, in Wh/kg, by product application and technology type?",
+     "type": "text",
+     "hint": "Unit: Specific energy (Wh/kg) · Report average specific energy in Wh/kg broken down by product application and by battery technology type."
+    },
+    {
+     "item": ".2",
+     "text": "What is the average energy efficiency of your fuel cells, as (1) electrical efficiency and (2) thermal efficiency, by product application and technology type?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report average electrical and thermal efficiency as percentages for each product application and fuel cell technology type."
+    },
+    {
+     "item": ".3",
+     "text": "What is the average efficiency of your batteries, as coulombic efficiency, by product application and technology type?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report average coulombic efficiency as a percentage for each product application and battery technology type."
+    },
+    {
+     "item": ".4",
+     "text": "What is the average operating lifetime of your fuel cells, in hours, by product application and technology type?",
+     "type": "text",
+     "hint": "Unit: Hours (h) · Report average operating lifetime in hours for each product application and fuel cell technology type."
+    },
+    {
+     "item": ".5",
+     "text": "What is the average operating lifetime of your batteries, in number of cycles, by product application and technology type?",
+     "type": "text",
+     "hint": "Unit: Number of cycles · Report average operating lifetime in cycles for each product application and battery technology type."
+    }
+   ]
+  },
+  {
+   "ref": "RR-FC-410b",
+   "title": "Product End- of-life Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage, by weight, of the products you sold are recyclable or reusable?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by weight · Report the percentage by weight of products sold in the period that are recyclable or reusable."
+    },
+    {
+     "item": ".2",
+     "text": "What was (1) the weight of end-of-life material your organisation recovered, in metric tonnes, and (2) what percentage of it was recycled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) metric tonnes of end-of-life material recovered (for example through take-back or recycling programmes) and (2) the percentage of that material that was recycled. Note the scope of products covered."
+    },
+    {
+     "item": ".3",
+     "text": "What is your approach to managing the use, reclamation and disposal of hazardous materials?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the hazardous materials in your products and operations, and your approach to their use, reclamation and disposal, including take-back programmes and regulatory compliance."
+    }
+   ]
+  },
+  {
+   "ref": "RR-FC-440a",
+   "title": "Materials Sourcing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation manage the risks associated with the use of critical materials?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the critical materials used (for example rare earth or scarce metals), the supply, price or regulatory risks identified, and the actions taken to manage them such as substitution, recycling or supplier diversification."
+    }
+   ]
+  },
+  {
+   "ref": "RR-FC-000",
+   "title": "Activity Metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many units did your organisation sell?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of units sold in the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "What was the total storage capacity of the batteries you sold, in megawatt-hours?",
+     "type": "number",
+     "hint": "Unit: Megawatt-hours (MWh) · Report the total storage capacity of batteries sold in MWh for the reporting period."
+    },
+    {
+     "item": ".C",
+     "text": "What was the total energy production capacity of the fuel cells you sold, in megawatt-hours?",
+     "type": "number",
+     "hint": "Unit: Megawatt-hours (MWh) · Report the total energy production capacity of fuel cells sold in MWh for the reporting period."
+    }
+   ]
+  }
+ ]
+}

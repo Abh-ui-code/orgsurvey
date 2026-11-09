@@ -1,0 +1,107 @@
+{
+ "summary": "This standard covers manufacturers of wood pulp and paper products, including pulp fibre, packaging, sanitary and office paper, newsprint and industrial paper. Its disclosure topics are greenhouse gas emissions, air quality, energy management, water management and supply chain management.",
+ "disclosures": [
+  {
+   "ref": "RR-PP-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your gross global Scope 1 greenhouse gas emissions, in metric tonnes of CO2-e?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Report gross global Scope 1 emissions in metric tonnes of CO2-e for the reporting period, before any offsets."
+    },
+    {
+     "item": ".2",
+     "text": "What is your long- and short-term strategy or plan to manage Scope 1 emissions, what are your reduction targets, and how have you performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy or plan, the emissions reduction targets (scope, base year, target year) and an analysis of performance against those targets."
+    }
+   ]
+  },
+  {
+   "ref": "RR-PP-120a",
+   "title": "Air Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your organisation's air emissions, in metric tonnes, of (1) NOx (excluding N2O), (2) SOx, (3) volatile organic compounds (VOCs), (4) particulate matter (PM) and (5) hazardous air pollutants (HAPs)?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report the metric tonnes emitted for each of the five pollutants separately: NOx (excluding N2O), SOx, VOCs, PM and HAPs. State the reporting period and how emissions were estimated or measured."
+    }
+   ]
+  },
+  {
+   "ref": "RR-PP-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was (1) your total energy consumed, in gigajoules, and the percentage that was (2) grid electricity, (3) from biomass and (4) from other renewable energy, and (5) what was your total self-generated energy?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy consumed in GJ, (2) percentage grid electricity, (3) percentage from biomass, (4) percentage from other renewable energy and (5) total self-generated energy in GJ."
+    }
+   ]
+  },
+  {
+   "ref": "RR-PP-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were (1) the total water withdrawn and (2) the total water consumed by your organisation, in thousand cubic metres, and what percentage of each was in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report thousand cubic metres for (1) total water withdrawn and (2) total water consumed, plus the percentage of each in regions with High or Extremely High Baseline Water Stress. Note the tool used to assess water stress and the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "What are your organisation's water management risks, and what strategies and practices do you use to mitigate them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the water management risks (for example water availability, quality or regulation), the strategies and practices used to mitigate them, and any targets and performance against them."
+    }
+   ]
+  },
+  {
+   "ref": "RR-PP-430a",
+   "title": "Supply Chain Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your wood fibre, by weight, is sourced from (1) third-party certified forestlands, with the percentage for each standard, and (2) sources meeting other fibre sourcing standards, with the percentage for each standard?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) by weight · Report (1) the percentage of wood fibre from third-party certified forestlands and the share for each certification standard, and (2) the percentage meeting other fibre sourcing standards and the share for each such standard."
+    },
+    {
+     "item": ".2",
+     "text": "What amount of recycled and recovered fibre did your organisation procure, in metric tonnes?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) · Report the total recycled and recovered fibre procured in metric tonnes for the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "RR-PP-000",
+   "title": "Activity Metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was your pulp production, in air-dried metric tonnes?",
+     "type": "number",
+     "hint": "Unit: Air-dried metric tonnes (t) · Report total pulp production in air-dried metric tonnes for the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "What was your paper production, in air-dried metric tonnes?",
+     "type": "number",
+     "hint": "Unit: Air-dried metric tonnes (t) · Report total paper production in air-dried metric tonnes for the reporting period."
+    },
+    {
+     "item": ".C",
+     "text": "What was the total amount of wood fibre your organisation sourced, in metric tonnes?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) · Report total wood fibre sourced in metric tonnes for the reporting period."
+    }
+   ]
+  }
+ ]
+}

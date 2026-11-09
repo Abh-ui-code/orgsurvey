@@ -1,0 +1,77 @@
+{
+ "summary": "The Media & Entertainment standard covers entities that create or distribute content over cable or broadcast media, including news, entertainment, music, books, newspapers and radio. Its disclosure topics are media pluralism, journalistic integrity and sponsorship identification, and intellectual property protection and media piracy.",
+ "disclosures": [
+  {
+   "ref": "SV-ME-260a",
+   "title": "Media Pluralism",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your (1) gender and (2) diversity group representation is there for (a) executive management, (b) non-executive management, (c) professionals, and (d) all other employees?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report percentages for gender and for diversity groups in each of the four employee categories (executive management, non-executive management, professionals, all other employees), and say which diversity groups are counted."
+    },
+    {
+     "item": ".2",
+     "text": "What policies and procedures does your organisation have to ensure pluralism in news media content?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe policies and procedures that ensure a range of viewpoints and voices in news content, such as editorial independence, sourcing and diversity practices."
+    }
+   ]
+  },
+  {
+   "ref": "SV-ME-270a",
+   "title": "Journalistic Integrity & Sponsorship Identification",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with libel or slander?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to libel or slander."
+    },
+    {
+     "item": ".2",
+     "text": "What was your revenue from embedded advertising?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report revenue from embedded advertising, such as product placement and sponsored content, in your presentation currency."
+    },
+    {
+     "item": ".3",
+     "text": "How does your organisation ensure the journalistic integrity of news programming in relation to (1) truthfulness, accuracy, objectivity, fairness and accountability, (2) independence of content or transparency of potential bias, and (3) protection of privacy and limitation of harm?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your approach for each of three areas: (1) truthfulness, accuracy, objectivity, fairness and accountability, (2) independence of content or transparency of potential bias, and (3) protection of privacy and limitation of harm."
+    }
+   ]
+  },
+  {
+   "ref": "SV-ME-520a",
+   "title": "Intellectual Property Protection & Media Piracy",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation ensure intellectual property (IP) protection?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your approach to protecting intellectual property and addressing media piracy, including legal, technical and commercial measures."
+    }
+   ]
+  },
+  {
+   "ref": "SV-ME-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What are your (1) total recipients of media and the number of (2) households reached by broadcast TV, (3) subscribers to cable networks, and (4) circulation for magazines and newspapers?",
+     "type": "text",
+     "hint": "Unit: Number · Report each of the four figures as a number: total recipients of media, households reached by broadcast TV, cable network subscribers, and magazine and newspaper circulation."
+    },
+    {
+     "item": ".B",
+     "text": "What is the total number of media productions and publications your organisation produced?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of media productions and publications produced in the reporting period."
+    }
+   ]
+  }
+ ]
+}

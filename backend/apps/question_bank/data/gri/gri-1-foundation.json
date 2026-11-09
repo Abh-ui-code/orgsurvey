@@ -1,59 +1,143 @@
 {
  "summary": "GRI 1: Foundation 2021 introduces the purpose and system of the GRI Standards and explains key concepts for sustainability reporting. It specifies the requirements and reporting principles that organizations must comply with to report in accordance with the GRI Standards.",
- "questions": [
+ "disclosures": [
   {
-   "ref": "Req 1",
-   "text": "Do you apply all the reporting principles specified in section 4 of GRI 1?",
-   "type": "yes_no",
-   "hint": "Requirement 1: the organization shall apply all the reporting principles in section 4 of GRI 1: Foundation 2021."
+   "ref": "Requirement 1",
+   "title": "Apply the reporting principles",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Do you apply all the reporting principles specified in section 4 of GRI 1: Foundation 2021?",
+     "type": "yes_no",
+     "hint": "Requirement 1-a. The principles cover accuracy, balance, clarity, comparability, completeness, sustainability context, timeliness and verifiability."
+    }
+   ]
   },
   {
-   "ref": "Req 2",
-   "text": "Do you report all disclosures in GRI 2: General Disclosures 2021?",
-   "type": "yes_no",
-   "hint": "Requirement 2: report all disclosures in GRI 2. Reasons for omission are not permitted for 2-1 to 2-5; for other GRI 2 disclosures they are specified in the GRI content index."
+   "ref": "Requirement 2",
+   "title": "Report the disclosures in GRI 2: General Disclosures 2021",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Do you report all disclosures in GRI 2: General Disclosures 2021?",
+     "type": "yes_no",
+     "hint": "Requirement 2-a. Reasons for omission are permitted for all GRI 2 disclosures except 2-1 to 2-5; omissions must be specified in the GRI content index."
+    }
+   ]
   },
   {
-   "ref": "Req 3",
-   "text": "Have you determined your material topics and reviewed the applicable GRI Sector Standards?",
-   "type": "yes_no",
-   "hint": "Requirement 3: a. determine material topics; b. review applicable Sector Standard(s), determine whether each topic is material, and list in the content index any topics determined not material with an explanation."
+   "ref": "Requirement 3",
+   "title": "Determine material topics",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Have you determined your material topics? If so, describe how.",
+     "type": "text",
+     "hint": "Requirement 3-a. See section 1 of GRI 3: Material Topics 2021 for guidance on determining material topics."
+    },
+    {
+     "item": "b",
+     "text": "Have you reviewed the applicable GRI Sector Standard(s), determined whether each topic in them is a material topic for your organization, and listed in the GRI content index any topics you determined are not material with an explanation of why?",
+     "type": "text",
+     "hint": "Requirement 3-b applies only if GRI Sector Standards for your sector(s) are available. State (i) the determination for each Sector Standard topic and (ii) the explanation for each topic not material."
+    }
+   ]
   },
   {
-   "ref": "Req 4",
-   "text": "Do you report the disclosures in GRI 3: Material Topics 2021?",
-   "type": "yes_no",
-   "hint": "Requirement 4: a. report the process of determining material topics (3-1); b. report a list of material topics (3-2); c. report how each material topic is managed (3-3)."
+   "ref": "Requirement 4",
+   "title": "Report the disclosures in GRI 3: Material Topics 2021",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Do you report your process of determining material topics using Disclosure 3-1?",
+     "type": "text",
+     "hint": "Requirement 4-a. Reasons for omission are not permitted for 3-1."
+    },
+    {
+     "item": "b",
+     "text": "Do you report a list of your material topics using Disclosure 3-2?",
+     "type": "text",
+     "hint": "Requirement 4-b. Reasons for omission are not permitted for 3-2."
+    },
+    {
+     "item": "c",
+     "text": "Do you report how you manage each material topic using Disclosure 3-3?",
+     "type": "text",
+     "hint": "Requirement 4-c. Reasons for omission are permitted only for 3-3, and must be given in the GRI content index."
+    }
+   ]
   },
   {
-   "ref": "Req 5",
-   "text": "Do you report disclosures from the GRI Topic Standards for each material topic?",
-   "type": "yes_no",
-   "hint": "Requirement 5: a. report disclosures from the Topic Standards for each material topic; b. for topics covered in a Sector Standard, report the listed Topic Standard disclosures or give the 'not applicable' reason for omission with an explanation."
+   "ref": "Requirement 5",
+   "title": "Report disclosures from the GRI Topic Standards for each material topic",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Do you report disclosures from the GRI Topic Standards for each material topic?",
+     "type": "text",
+     "hint": "Requirement 5-a. Report only the disclosures relevant to your impacts in relation to each material topic; there is no minimum number of disclosures."
+    },
+    {
+     "item": "b",
+     "text": "For each material topic covered in an applicable GRI Sector Standard, do you either report the Topic Standard disclosures listed for that topic, or provide the 'not applicable' reason for omission with the required explanation in the GRI content index?",
+     "type": "text",
+     "hint": "Requirement 5-b applies only if GRI Sector Standards for your sector(s) are available."
+    }
+   ]
   },
   {
-   "ref": "Req 6",
-   "text": "Do you provide reasons for omission for disclosures and requirements you cannot comply with?",
-   "type": "yes_no",
-   "hint": "Requirement 6: in the GRI content index, specify the disclosure or requirement not complied with and give one of four reasons (not applicable, legal prohibitions, confidentiality constraints, information unavailable/incomplete) with the required explanation."
+   "ref": "Requirement 6",
+   "title": "Provide reasons for omission for disclosures and requirements that the organization cannot comply with",
+   "questions": [
+    {
+     "item": "a",
+     "text": "If you cannot comply with a disclosure or a requirement in a disclosure for which reasons for omission are permitted, do you specify in the GRI content index the disclosure or requirement and provide one of the four permitted reasons for omission with the required explanation?",
+     "type": "text",
+     "hint": "Requirement 6-a (i) specify the disclosure or requirement; (ii) give one reason from Table 1: not applicable, legal prohibitions, confidentiality constraints, or information unavailable / incomplete, with the required explanation."
+    }
+   ]
   },
   {
-   "ref": "Req 7",
-   "text": "Do you publish a GRI content index?",
-   "type": "yes_no",
-   "hint": "Requirement 7: a. publish a GRI content index with the title, statement of use, GRI 1 title, Sector Standards, material topics, non-material Sector topics, reported disclosures and locations, and reasons for omission; b. link to it from a standalone report if not included."
+   "ref": "Requirement 7",
+   "title": "Publish a GRI content index",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Do you publish a GRI content index that includes: the title 'GRI content index'; the statement of use; the title of GRI 1 used; the title(s) of the applicable GRI Sector Standard(s); a list of your material topics; a list of Sector Standard topics determined not material with explanations; a list of reported disclosures with titles; the titles of the Standards and other sources they come from; for omitted Topic Standard disclosures listed in a Sector Standard, the disclosures and reasons for omission; the Sector Standard reference numbers; the location of the information for each disclosure; and any reasons for omission used?",
+     "type": "text",
+     "hint": "Requirement 7-a (i to xii). Provide a link or reference to where the content index is published."
+    },
+    {
+     "item": "b",
+     "text": "If you publish a standalone sustainability report and the GRI content index is not included in the report itself, do you provide a link or reference to the GRI content index in the report?",
+     "type": "text",
+     "hint": "Requirement 7-b."
+    }
+   ]
   },
   {
-   "ref": "Req 8",
-   "text": "Do you provide a statement of use in your GRI content index?",
-   "type": "yes_no",
-   "hint": "Requirement 8: include the statement '[Name of organization] has reported in accordance with the GRI Standards for the period [reporting period start and end dates].'"
+   "ref": "Requirement 8",
+   "title": "Provide a statement of use",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Do you include the following statement in your GRI content index: '[Name of organization] has reported in accordance with the GRI Standards for the period [reporting period start and end dates]'?",
+     "type": "text",
+     "hint": "Requirement 8-a. Insert the organization's name and the start and end dates of the reporting period."
+    }
+   ]
   },
   {
-   "ref": "Req 9",
-   "text": "Have you notified GRI of your use of the GRI Standards and the statement of use?",
-   "type": "yes_no",
-   "hint": "Requirement 9: notify GRI by sending an email to reportregistration@globalreporting.org. Include legal name, content index link, report link, statement of use and a contact person."
+   "ref": "Requirement 9",
+   "title": "Notify GRI",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Have you notified GRI of your use of the GRI Standards and the statement of use by sending an email to reportregistration@globalreporting.org?",
+     "type": "text",
+     "hint": "Requirement 9-a. Include the legal name, the link to the GRI content index, the link to the report if a standalone report is published, the statement of use, and a contact person."
+    }
+   ]
   }
  ]
 }

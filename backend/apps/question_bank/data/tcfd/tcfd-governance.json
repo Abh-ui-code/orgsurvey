@@ -1,0 +1,59 @@
+{
+ "summary": "Disclose the organization's governance around climate-related risks and opportunities. Investors and other stakeholders want to understand the role the board plays in overseeing climate-related issues and management's role in assessing and managing them. This standard has the two recommended disclosures of the Governance pillar and the all-sector guidance for each.",
+ "disclosures": [
+  {
+   "ref": "Governance a)",
+   "title": "Describe the board's oversight of climate-related risks and opportunities.",
+   "questions": [
+    {
+     "text": "How often, and through what processes, are the board and/or board committees (e.g. audit, risk or other committees) informed about climate-related issues?",
+     "type": "text",
+     "hint": "Guidance for All Sectors: processes and frequency by which the board and/or board committees are informed about climate-related issues.",
+     "item": "1"
+    },
+    {
+     "text": "Do the board and/or board committees consider climate-related issues when reviewing and guiding strategy, major plans of action, risk management policies, annual budgets and business plans, setting performance objectives, monitoring implementation and performance, and overseeing major capital expenditures, acquisitions and divestitures?",
+     "type": "text",
+     "hint": "Guidance for All Sectors. Describe how, for each of these areas.",
+     "item": "2"
+    },
+    {
+     "text": "How does the board monitor and oversee progress against goals and targets for addressing climate-related issues?",
+     "type": "text",
+     "hint": "Guidance for All Sectors: how the board monitors and oversees progress against goals and targets.",
+     "item": "3"
+    }
+   ]
+  },
+  {
+   "ref": "Governance b)",
+   "title": "Describe management's role in assessing and managing climate-related risks and opportunities.",
+   "questions": [
+    {
+     "text": "Has the organization assigned climate-related responsibilities to management-level positions or committees? If so, do they report to the board or a board committee, and do the responsibilities include assessing and/or managing climate-related issues?",
+     "type": "yes_no",
+     "hint": "Guidance for All Sectors.",
+     "item": "1"
+    },
+    {
+     "text": "What organizational structure(s) are associated with these responsibilities?",
+     "type": "text",
+     "hint": "Guidance for All Sectors: a description of the associated organizational structure(s).",
+     "item": "2"
+    },
+    {
+     "text": "By what processes is management informed about climate-related issues?",
+     "type": "text",
+     "hint": "Guidance for All Sectors: processes by which management is informed about climate-related issues.",
+     "item": "3"
+    },
+    {
+     "text": "How does management (through specific positions and/or management committees) monitor climate-related issues?",
+     "type": "text",
+     "hint": "Guidance for All Sectors: how management monitors climate-related issues.",
+     "item": "4"
+    }
+   ]
+  }
+ ]
+}

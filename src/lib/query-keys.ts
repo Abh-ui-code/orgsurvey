@@ -31,7 +31,7 @@ export const bankKeys = {
 
 export const griKeys = {
   all: ["gri"] as const,
-  list: () => ["gri", "list"] as const,
+  list: (framework?: string) => ["gri", "list", framework ?? "all"] as const,
   detail: (id: string) => ["gri", "detail", id] as const,
 };
 

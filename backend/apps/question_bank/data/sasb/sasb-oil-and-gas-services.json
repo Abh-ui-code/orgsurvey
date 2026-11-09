@@ -1,0 +1,179 @@
+{
+ "summary": "This standard covers companies that drill under contract, manufacture equipment or provide support services to oil and gas producers. It addresses emissions and fuel management, water and chemicals management, ecological impacts, workforce health and safety, ethics and payments transparency, regulation and critical incident risk.",
+ "disclosures": [
+  {
+   "ref": "EM-SV-110a",
+   "title": "Emissions Reduction Services & Fuels Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your organisation's total fuel consumed, what percentage is renewable, and what percentage is used in (1) on-road equipment and vehicles and (2) off-road equipment?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report total fuel consumed in gigajoules, the percentage renewable, and the percentage used in on-road and off-road equipment."
+    },
+    {
+     "item": ".2",
+     "text": "What strategy or plans do you have to address air emissions-related risks, opportunities and impacts?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy or plans, targets, fleet or equipment measures and how risks and opportunities from air emissions are managed."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of your engines in service comply with the highest level of emissions standards for non-road diesel engine emissions?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of engines in service meeting the highest applicable non-road diesel emissions standard (e.g. EPA Tier 4 or EU Stage V)."
+    }
+   ]
+  },
+  {
+   "ref": "EM-SV-140a",
+   "title": "Water Management Services",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is the total volume of water handled in your operations, and what percentage was recycled?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report (1) total volume of water handled in thousand cubic metres and (2) the percentage recycled."
+    },
+    {
+     "item": ".2",
+     "text": "What strategy or plans do you have to address water consumption and disposal-related risks, opportunities and impacts?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy or plans, targets, water reuse or treatment measures and how water-related risks and opportunities are managed."
+    }
+   ]
+  },
+  {
+   "ref": "EM-SV-150a",
+   "title": "Chemicals Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What volume of hydraulic fracturing fluid did you use, and what percentage was hazardous?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report (1) volume of hydraulic fracturing fluid used in thousand cubic metres and (2) the percentage classed as hazardous."
+    },
+    {
+     "item": ".2",
+     "text": "What strategy or plans do you have to address chemical-related risks, opportunities and impacts?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy or plans, including chemical substitution, disclosure and handling practices, and how chemical risks and opportunities are managed."
+    }
+   ]
+  },
+  {
+   "ref": "EM-SV-160a",
+   "title": "Ecological Impact Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is the average disturbed land area per (1) oil well site and (2) gas well site?",
+     "type": "text",
+     "hint": "Unit: Hectares (ha) · Report the average disturbed land area in hectares for (1) oil well sites and (2) gas well sites separately."
+    },
+    {
+     "item": ".2",
+     "text": "What strategy or plan do you have to address risks and opportunities related to ecological impacts from your core activities?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy or plan, including site selection, impact minimisation and restoration, and how ecological risks and opportunities are managed."
+    }
+   ]
+  },
+  {
+   "ref": "EM-SV-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total recordable incident rate (TRIR), (2) fatality rate, (3) near miss frequency rate (NMFR) and (4) average hours of health, safety and emergency response training for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate · Report each of the four measures separately for (a) direct employees and (b) contract employees; rates in hours-worked basis and training in average hours."
+    },
+    {
+     "item": ".2",
+     "text": "What management systems do you use to integrate a culture of safety throughout the value chain and project lifecycle?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the management systems, leadership commitments, training, reporting and audit practices that embed safety culture across the value chain and project lifecycle."
+    },
+    {
+     "item": ".3",
+     "text": "How many road accidents and incidents did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of road accidents and incidents involving your vehicles or drivers in the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "EM-SV-510a",
+   "title": "Business Ethics & Payments Transparency",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was your organisation's net revenue in countries ranked among the 20 lowest in Transparency International's Corruption Perception Index?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report net revenue in presentation currency from those countries, stating the index year used."
+    },
+    {
+     "item": ".2",
+     "text": "What management system do you have to prevent corruption and bribery throughout the value chain?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the policies, controls, training, due diligence and monitoring used to prevent corruption and bribery across your operations, suppliers and business partners."
+    }
+   ]
+  },
+  {
+   "ref": "EM-SV-530a",
+   "title": "Management of the Legal & Regulatory Environment",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's corporate positions on government regulations or policy proposals that address environmental and social factors affecting the industry?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your positions on relevant regulations or policy proposals, how they were developed, and how you engage with policymakers (e.g. lobbying, trade associations)."
+    }
+   ]
+  },
+  {
+   "ref": "EM-SV-540a",
+   "title": "Critical Incident Risk Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What management systems do you use to identify and mitigate catastrophic and tail-end risks?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how catastrophic and low-probability, high-consequence risks are identified, assessed and mitigated, including governance, safety systems and emergency response."
+    }
+   ]
+  },
+  {
+   "ref": "EM-SV-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many active rig sites does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of active rig sites at the end of the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "How many active well sites does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of active well sites at the end of the reporting period."
+    },
+    {
+     "item": ".C",
+     "text": "What total amount of drilling did your organisation perform?",
+     "type": "number",
+     "hint": "Unit: Metres (m) · Report total drilling performed in metres for the reporting period."
+    },
+    {
+     "item": ".D",
+     "text": "What was the total number of hours worked by all your employees?",
+     "type": "number",
+     "hint": "Unit: Hours · Report total hours worked by all employees in the reporting period."
+    }
+   ]
+  }
+ ]
+}

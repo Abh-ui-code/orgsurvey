@@ -1,0 +1,137 @@
+{
+ "summary": "Covers producers of beer, wine and spirits. Disclosures address energy and water use, responsible drinking and marketing, packaging lifecycle, and the environmental and social impacts of ingredient supply chains and sourcing.",
+ "disclosures": [
+  {
+   "ref": "FB-AB-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the total energy consumed, (2) the percentage of that energy that is grid electricity and (3) the percentage that is renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy consumed in GJ, (2) the percentage supplied as grid electricity and (3) the percentage that is renewable. Include self-generated and purchased renewable energy where applicable."
+    }
+   ]
+  },
+  {
+   "ref": "FB-AB-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the total water withdrawn and (2) the total water consumed, and what percentage of each is in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report (1) total water withdrawn and (2) total water consumed in thousand m3, and the percentage of each located in regions with High or Extremely High Baseline Water Stress."
+    },
+    {
+     "item": ".2",
+     "text": "What water management risks does your organisation face, and what strategies and practices do you use to mitigate them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the main water management risks and the strategies and practices used to mitigate them, including any targets and performance against them."
+    }
+   ]
+  },
+  {
+   "ref": "FB-AB-270a",
+   "title": "Responsible Drinking & Marketing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your total advertising impressions were made on individuals at or above the legal drinking age?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of total advertising impressions reaching people at or above the legal drinking age, and note how audience composition was measured."
+    },
+    {
+     "item": ".2",
+     "text": "How many incidents of non-compliance with industry or regulatory labelling or marketing codes did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of incidents of non-compliance with industry or regulatory labelling or marketing codes in the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses as a result of legal proceedings associated with marketing or labelling practices?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Report the total monetary losses (fines, settlements, damages) from legal proceedings related to marketing or labelling practices, in your presentation currency."
+    },
+    {
+     "item": ".4",
+     "text": "What efforts does your organisation make to promote responsible consumption of alcohol?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe programmes, campaigns, labelling, partnerships and codes of practice that promote responsible drinking."
+    }
+   ]
+  },
+  {
+   "ref": "FB-AB-410a",
+   "title": "Packaging Lifecycle Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the total weight of your packaging, (2) the percentage made from recycled or renewable materials and (3) the percentage that is recyclable, reusable or compostable?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) total packaging weight in metric tonnes, (2) the percentage made from recycled or renewable materials and (3) the percentage that is recyclable, reusable or compostable."
+    },
+    {
+     "item": ".2",
+     "text": "What strategies does your organisation use to reduce the environmental impact of its packaging throughout its lifecycle?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe strategies to reduce packaging impacts across the lifecycle, such as material reduction, redesign, recycled content, and end-of-life recovery, with any targets."
+    }
+   ]
+  },
+  {
+   "ref": "FB-AB-430a",
+   "title": "Environmental & Social Impacts of Ingredient Supply Chain",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your suppliers' social and environmental responsibility audit (1) non-conformance rate and (2) associated corrective action rate for (a) major and (b) minor non-conformances?",
+     "type": "text",
+     "hint": "Unit: Rate · Report (1) the non-conformance rate and (2) the associated corrective action rate from supplier social and environmental audits, each split into (a) major and (b) minor non-conformances."
+    }
+   ]
+  },
+  {
+   "ref": "FB-AB-440a",
+   "title": "Ingredient Sourcing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your beverage ingredients, by cost, is sourced from regions with High or Extremely High Baseline Water Stress?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by cost · Report the percentage of beverage ingredients, by cost, (by cost or as specified) sourced from regions with High or Extremely High Baseline Water Stress."
+    },
+    {
+     "item": ".2",
+     "text": "What are your priority ingredients, and what sourcing risks related to environmental and social considerations do they present?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · List the priority ingredients and discuss the environmental and social sourcing risks for each, and how you manage them."
+    }
+   ]
+  },
+  {
+   "ref": "FB-AB-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was the volume of products you sold?",
+     "type": "number",
+     "hint": "Unit: Millions of hectoliters (Mhl) · Report the volume of products sold in millions of hectolitres (Mhl)."
+    },
+    {
+     "item": ".B",
+     "text": "How many production facilities does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of production facilities."
+    },
+    {
+     "item": ".C",
+     "text": "What was the total fleet road distance travelled by your organisation?",
+     "type": "number",
+     "hint": "Unit: Kilometres (km) · Report total fleet road kilometres travelled in the reporting period."
+    }
+   ]
+  }
+ ]
+}

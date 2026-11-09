@@ -1,36 +1,131 @@
 {
- "summary": "GRI 205 covers anti-corruption, including practices such as bribery, facilitation payments, fraud, extortion, collusion and money laundering. Organizations are expected to demonstrate integrity, governance and responsible business practices.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "How does the organization manage anti-corruption as a material topic (GRI 3-3)?",
-   "type": "text",
-   "hint": "Describe how the organization manages the topic and its related impacts, as required by Disclosure 3-3 in GRI 3: Material Topics 2021."
-  },
-  {
-   "ref": "205-1",
-   "text": "How many operations were assessed for risks related to corruption, and what significant risks were identified?",
-   "type": "text",
-   "hint": "a. Total number and percentage of operations assessed for corruption risks. b. Significant corruption-related risks identified through the risk assessment."
-  },
-  {
-   "ref": "205-2",
-   "text": "Who has received communication or training on anti-corruption policies and procedures?",
-   "type": "multi_choice",
-   "hint": "a. Number and percentage of governance body members informed of policies, by region. b. Employees informed, by category and region. c. Business partners informed, by type and region; other persons or organizations. d. Governance body members trained, by region. e. Employees trained, by category and region.",
-   "options": [
-    "Governance body members",
-    "Employees",
-    "Business partners",
-    "Suppliers",
-    "None"
-   ]
-  },
-  {
-   "ref": "205-3",
-   "text": "What confirmed incidents of corruption occurred, and what actions were taken?",
-   "type": "text",
-   "hint": "a. Total number and nature of confirmed incidents. b. Incidents in which employees were dismissed or disciplined. c. Incidents in which business partner contracts were terminated or not renewed. d. Public legal cases regarding corruption brought against the organization or its employees and their outcomes."
-  }
- ]
+  "summary": "GRI 205 covers anti-corruption, including practices such as bribery, facilitation payments, fraud, extortion, collusion and money laundering. Organizations are expected to demonstrate integrity, governance and responsible business practices.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to anti-corruption.",
+          "type": "text",
+          "hint": "Describe the actual and potential, negative and positive impacts on the economy, environment, and people, including impacts on human rights (GRI 3-3-a)."
+        },
+        {
+          "item": "b",
+          "text": "State whether the organization is involved with the negative impacts related to anti-corruption through its own activities or as a result of its business relationships, and describe how.",
+          "type": "text",
+          "hint": "Say whether the organization causes or contributes to the negative impacts through its activities, or whether they are linked to its operations, products or services through business relationships, and describe how (GRI 3-3-b)."
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding anti-corruption.",
+          "type": "text",
+          "hint": "Describe policies or commitments regarding the material topic (GRI 3-3-c)."
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage anti-corruption and the related impacts.",
+          "type": "text",
+          "hint": "Include: i. how negative impacts are prevented or mitigated; ii. how actual negative impacts are addressed, including actions to provide for or cooperate in remediation; iii. how actual and potential positive impacts are managed (GRI 3-3-d)."
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of its actions on anti-corruption?",
+          "type": "text",
+          "hint": "Report: i. information about the effectiveness of the actions; ii. the goals, targets and indicators used to evaluate progress; iii. lessons learned and how they have been integrated into policies and operational procedures (GRI 3-3-e)."
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken on anti-corruption and whether those actions have been effective.",
+          "type": "text",
+          "hint": "Describe how stakeholder engagement has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e) (GRI 3-3-f)."
+        }
+      ]
+    },
+    {
+      "ref": "205-1",
+      "title": "Operations assessed for risks related to corruption",
+      "questions": [
+        {
+          "item": "a",
+          "text": "How many operations, and what percentage of the total, have been assessed for risks related to corruption?",
+          "type": "text",
+          "hint": "Total number and percentage of operations assessed for risks related to corruption."
+        },
+        {
+          "item": "b",
+          "text": "What significant risks related to corruption were identified through the risk assessment?",
+          "type": "text",
+          "hint": "Significant risks related to corruption identified through the risk assessment."
+        }
+      ]
+    },
+    {
+      "ref": "205-2",
+      "title": "Communication and training about anti-corruption policies and procedures",
+      "questions": [
+        {
+          "item": "a",
+          "text": "To how many governance body members, and what percentage, have anti-corruption policies and procedures been communicated, by region?",
+          "type": "text",
+          "hint": "Total number and percentage of governance body members, broken down by region."
+        },
+        {
+          "item": "b",
+          "text": "To how many employees, and what percentage, have anti-corruption policies and procedures been communicated, by employee category and region?",
+          "type": "text",
+          "hint": "Total number and percentage of employees, broken down by employee category and region."
+        },
+        {
+          "item": "c",
+          "text": "To how many business partners, and what percentage, have anti-corruption policies and procedures been communicated, by type of partner and region?",
+          "type": "text",
+          "hint": "Broken down by type of business partner and region. Also describe whether they have been communicated to any other persons or organizations."
+        },
+        {
+          "item": "d",
+          "text": "How many governance body members, and what percentage, have received training on anti-corruption, by region?",
+          "type": "text",
+          "hint": "Total number and percentage of governance body members trained, broken down by region."
+        },
+        {
+          "item": "e",
+          "text": "How many employees, and what percentage, have received training on anti-corruption, by employee category and region?",
+          "type": "text",
+          "hint": "Total number and percentage of employees trained, broken down by employee category and region."
+        }
+      ]
+    },
+    {
+      "ref": "205-3",
+      "title": "Confirmed incidents of corruption and actions taken",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What is the total number and nature of confirmed incidents of corruption?",
+          "type": "text",
+          "hint": "Total number and nature of confirmed incidents of corruption."
+        },
+        {
+          "item": "b",
+          "text": "In how many confirmed incidents were employees dismissed or disciplined for corruption?",
+          "type": "text",
+          "hint": "Total number of confirmed incidents in which employees were dismissed or disciplined for corruption."
+        },
+        {
+          "item": "c",
+          "text": "In how many confirmed incidents were contracts with business partners terminated or not renewed due to corruption-related violations?",
+          "type": "text",
+          "hint": "Total number of confirmed incidents when contracts with business partners were terminated or not renewed due to violations related to corruption."
+        },
+        {
+          "item": "d",
+          "text": "What public legal cases regarding corruption were brought against the organization or its employees during the reporting period, and what were the outcomes?",
+          "type": "text",
+          "hint": "Public legal cases regarding corruption and their outcomes."
+        }
+      ]
+    }
+  ]
 }

@@ -1,0 +1,125 @@
+{
+ "summary": "Covers airlines providing passenger air transportation worldwide, including full-service, low-cost and regional carriers. Disclosure topics are greenhouse gas emissions, labour practices, competitive behaviour, and accident and safety management.",
+ "disclosures": [
+  {
+   "ref": "TR-AL-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's gross global Scope 1 greenhouse gas emissions?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) CO2-e · Report gross global Scope 1 emissions for the reporting period, in metric tonnes CO2-e, covering direct emissions from sources you own or control."
+    },
+    {
+     "item": ".2",
+     "text": "How does your organisation plan to manage its Scope 1 emissions over the short and long term, including any reduction targets and how you have performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your short- and long-term strategy or plan, the emissions reduction targets, and an analysis of performance against those targets."
+    },
+    {
+     "item": ".3",
+     "text": "What is your (1) total fuel consumed, (2) percentage alternative fuel and (3) percentage sustainable fuel?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total fuel in gigajoules (GJ), then (2) the percentage alternative and (3) the percentage sustainable."
+    }
+   ]
+  },
+  {
+   "ref": "TR-AL-310a",
+   "title": "Labour Practices",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your active workforce is employed under collective agreements?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of active employees covered by collective bargaining or collective agreements."
+    },
+    {
+     "item": ".2",
+     "text": "How many work stoppages did your organisation experience, and how many total days were idle as a result?",
+     "type": "text",
+     "hint": "Unit: Number, Days idle · Report (1) the number of work stoppages and (2) the total days idle, for the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "TR-AL-520a",
+   "title": "Competitive Behaviour",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with anti-competitive behaviour regulations?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses for the period in your presentation currency, covering fines, settlements and other legal costs from such proceedings."
+    }
+   ]
+  },
+  {
+   "ref": "TR-AL-540a",
+   "title": "Accident & Safety Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How has your organisation implemented a Safety Management System, and what have been the outcomes?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how the Safety Management System is implemented (scope, governance, key processes) and its outcomes, such as improvements in safety performance."
+    },
+    {
+     "item": ".2",
+     "text": "How many aviation accidents did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total count for the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "How many governmental enforcement actions of aviation safety regulations did your organisation face?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of enforcement actions taken by governmental authorities under aviation safety regulations."
+    }
+   ]
+  },
+  {
+   "ref": "TR-AL-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What are your available seat kilometres (ASK)?",
+     "type": "number",
+     "hint": "Unit: ASK · Report available seat kilometres (ASK) for the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "What is your passenger load factor?",
+     "type": "number",
+     "hint": "Unit: Rate · Report the passenger load factor as a rate (typically RPK divided by ASK) and state how it is calculated."
+    },
+    {
+     "item": ".C",
+     "text": "What are your revenue passenger kilometres (RPK)?",
+     "type": "number",
+     "hint": "Unit: RPK · Report revenue passenger kilometres (RPK) for the reporting period."
+    },
+    {
+     "item": ".D",
+     "text": "What are your revenue tonne-kilometres (RTK)?",
+     "type": "number",
+     "hint": "Unit: RTK · Report revenue tonne-kilometres for the reporting period."
+    },
+    {
+     "item": ".E",
+     "text": "How many departures did your organisation operate?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of departures in the reporting period."
+    },
+    {
+     "item": ".F",
+     "text": "What is the average age of your fleet?",
+     "type": "number",
+     "hint": "Unit: Years · Report the average fleet age in years."
+    }
+   ]
+  }
+ ]
+}

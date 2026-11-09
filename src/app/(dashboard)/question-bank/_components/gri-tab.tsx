@@ -6,21 +6,29 @@ import { Badge } from "@/components/ui/badge";
 import { EmptyState } from "@/components/ui/empty-state";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useGriStandards } from "@/hooks/use-gri-standards";
-import { GRI_SERIES } from "@/types/question";
+import { FRAMEWORKS, type StandardFramework } from "@/types/question";
 
-/** The value of the category filter that shows the GRI standards instead of questions. */
+/** The values of the category filter that show the GRI, SASB, TCFD, RSPO or WEF standards instead of questions. */
 export const GRI_CATEGORY = "gri";
+export const SASB_CATEGORY = "sasb";
+export const TCFD_CATEGORY = "tcfd";
+export const RSPO_CATEGORY = "rspo";
+export const WEF_CATEGORY = "wef";
 
-/** Every GRI standard, grouped by series. Each opens its own page. */
-export function GriTab({ search }: { search: string }) {
-  const standards = useGriStandards();
+/** The framework a category-filter value stands for, if it is one of the standards lists. */
+export const frameworkOf = (category: string): StandardFramework | null => (category === GRI_CATEGORY ? "gri" : category === SASB_CATEGORY ? "sasb" : category === TCFD_CATEGORY ? "tcfd" : category === RSPO_CATEGORY ? "rspo" : category === WEF_CATEGORY ? "wef" : null);
+
+/** Every standard of one framework, grouped by series (GRI) or sector (SASB). Each opens its own page. */
+export function GriTab({ search, framework = "gri" }: { search: string; framework?: StandardFramework }) {
+  const f = FRAMEWORKS[framework];
+  const standards = useGriStandards(framework);
   const q = search.trim().toLowerCase();
   const rows = (standards.data ?? []).filter((s) => !q || `${s.code} ${s.title}`.toLowerCase().includes(q));
 
   return (
     <div className="space-y-6">
       <p className="max-w-3xl text-sm text-ink-muted">
-        Each GRI standard is a ready-made section: a short summary, the PDF, and the questions it asks. Add it to a survey as a whole section and give
+        Each {f.short} standard is a ready-made section: a short summary, the PDF, and the questions it asks. Add it to a survey as a whole section and give
         it to one respondent.
       </p>
       {standards.isPending ? (
@@ -30,9 +38,9 @@ export function GriTab({ search }: { search: string }) {
           ))}
         </div>
       ) : rows.length === 0 ? (
-        <EmptyState icon={FileText} title="No GRI standard matches" description="Try a different search." />
+        <EmptyState icon={FileText} title={`No ${f.short} standard matches`} description="Try a different search." />
       ) : (
-        GRI_SERIES.map((series) => {
+        f.groups.map((series) => {
           const group = rows.filter((s) => s.series === series.value);
           if (group.length === 0) return null;
           return (

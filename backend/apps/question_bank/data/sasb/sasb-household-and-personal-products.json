@@ -1,0 +1,95 @@
+{
+ "summary": "The Household & Personal Products standard covers entities that make cosmetics, cleaning supplies, soaps and detergents, sanitary paper products, batteries, razors and kitchen utensils for sale through mass merchants and other retailers. Its disclosure topics are water management, product environmental, health and safety performance, packaging lifecycle management and the impacts of the palm oil supply chain.",
+ "disclosures": [
+  {
+   "ref": "CG-HP-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) your total water withdrawn and (2) your total water consumed, and what percentage of each is in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report (1) total water withdrawn and (2) total water consumed in thousand cubic metres, and for each the percentage located in High or Extremely High Baseline Water Stress regions."
+    },
+    {
+     "item": ".2",
+     "text": "What water management risks do you face, and what strategies and practices do you use to mitigate them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the water management risks identified, and the strategies and practices used to mitigate them, including targets and results."
+    }
+   ]
+  },
+  {
+   "ref": "CG-HP-250a",
+   "title": "Product Environmental, Health and Safety Performance",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What revenue do you earn from products that contain substances of high concern?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report revenue from products containing substances of high concern in the presentation currency, and state the list used to define them."
+    },
+    {
+     "item": ".3",
+     "text": "What process do you use to identify and manage emerging materials and chemicals of concern?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you identify emerging materials and chemicals of concern, assess them and manage or replace them in products."
+    },
+    {
+     "item": ".4",
+     "text": "What revenue do you earn from products designed with green chemistry principles?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report revenue from products designed with green chemistry principles in the presentation currency, and describe the principles or framework applied."
+    }
+   ]
+  },
+  {
+   "ref": "CG-HP-410a",
+   "title": "Packaging Lifecycle Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is (1) the total weight of your packaging, (2) the percentage made from recycled or renewable materials, and (3) the percentage that is recyclable, reusable or compostable?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) total packaging weight in metric tonnes, (2) the percentage made from recycled or renewable materials and (3) the percentage that is recyclable, reusable or compostable."
+    },
+    {
+     "item": ".2",
+     "text": "What strategies do you use to reduce the environmental impact of your packaging throughout its lifecycle?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe strategies covering design, material choice, use, and end-of-life of packaging, with any targets and progress."
+    }
+   ]
+  },
+  {
+   "ref": "CG-HP-430a",
+   "title": "Environmental & Social Impacts of Palm Oil Supply Chain",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What amount of palm oil do you source, and what percentage is certified through Roundtable on Sustainable Palm Oil (RSPO) supply chains as (a) Identity Preserved, (b) Segregated, (c) Mass Balance or (d) Book & Claim?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report the amount of palm oil sourced in metric tonnes and the percentage certified under each RSPO supply chain model: (a) Identity Preserved, (b) Segregated, (c) Mass Balance and (d) Book & Claim."
+    }
+   ]
+  },
+  {
+   "ref": "CG-HP-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many units of products did you sell, and what was the total weight of products sold?",
+     "type": "text",
+     "hint": "Unit: Number, Metric tonnes (t) · Report (1) the number of units sold and (2) the total weight of products sold in metric tonnes."
+    },
+    {
+     "item": ".B",
+     "text": "How many manufacturing facilities do you have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of manufacturing facilities operated by the organisation."
+    }
+   ]
+  }
+ ]
+}

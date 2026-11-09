@@ -1,0 +1,143 @@
+{
+ "summary": "This standard covers companies that research, develop and produce medical, surgical, dental, ophthalmic and veterinary instruments and devices used by hospitals, clinics and laboratories. Disclosure topics include pricing, product safety, ethical marketing, product design and lifecycle, supply chain management and business ethics.",
+ "disclosures": [
+  {
+   "ref": "HC-MS-240a",
+   "title": "Affordability & Pricing",
+   "questions": [
+    {
+     "item": ".2",
+     "text": "How is price information for each product disclosed to customers or their agents?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how and when prices are communicated, to whom, and any related transparency practices."
+    },
+    {
+     "item": ".3",
+     "text": "What was the percentage change in (1) the weighted average list price and (2) the weighted average net price across your product portfolio compared with the previous reporting period?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report both percentage changes separately, (1) list price and (2) net price, versus the previous period."
+    }
+   ]
+  },
+  {
+   "ref": "HC-MS-250a",
+   "title": "Product Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many product recalls did you issue, and how many units were recalled in total?",
+     "type": "text",
+     "hint": "Unit: Number · Report (1) the number of recalls issued and (2) the total units recalled during the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "Which of your products are listed in any public medical product safety or adverse event alert database?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Identify the products listed, the database concerned, and the actions taken in response; state if none."
+    },
+    {
+     "item": ".3",
+     "text": "How many fatalities were associated with your products?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of fatalities associated with your products in the reporting period."
+    },
+    {
+     "item": ".4",
+     "text": "How many enforcement actions were taken against your organisation for violations of good manufacturing practices (GMP) or equivalent standards, by type?",
+     "type": "text",
+     "hint": "Unit: Number · Report the total number of enforcement actions and break it down by type (for example warning letters, fines, product holds)."
+    }
+   ]
+  },
+  {
+   "ref": "HC-MS-270a",
+   "title": "Ethical Marketing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with false marketing claims?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+    },
+    {
+     "item": ".2",
+     "text": "What code of ethics governs the promotion of off-label use of your products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the code of ethics or policies, what they prohibit or permit, and how compliance is monitored."
+    }
+   ]
+  },
+  {
+   "ref": "HC-MS-410a",
+   "title": "Product Design & Lifecycle Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your process to assess and manage environmental and human health considerations associated with chemicals in products, and to meet demand for sustainable products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how chemicals of concern are identified and managed, and how you respond to demand for more sustainable products."
+    },
+    {
+     "item": ".2",
+     "text": "What total amount of products accepted for take-back was reused, recycled or donated, for (1) devices and equipment and (2) supplies?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report weight in metric tonnes separately for (1) devices and equipment and (2) supplies."
+    }
+   ]
+  },
+  {
+   "ref": "HC-MS-430a",
+   "title": "Supply Chain Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of (1) your own facilities and (2) your Tier 1 suppliers' facilities participate in third-party audit programmes for manufacturing and product quality?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report both percentages separately and name the audit programmes used."
+    },
+    {
+     "item": ".2",
+     "text": "What efforts do you make to maintain traceability within the distribution chain?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the tracking systems, identification standards and partner controls used."
+    },
+    {
+     "item": ".3",
+     "text": "How do you manage the risks associated with the use of critical materials?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how critical materials are identified, the supply, price and regulatory risks assessed, and mitigation measures."
+    }
+   ]
+  },
+  {
+   "ref": "HC-MS-510a",
+   "title": "Business Ethics",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with bribery or corruption?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+    },
+    {
+     "item": ".2",
+     "text": "What code of ethics governs your interactions with health care professionals?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the code of ethics or policies covering interactions such as gifts, payments, sponsorship and speaker fees, and how compliance is monitored."
+    }
+   ]
+  },
+  {
+   "ref": "HC-MS-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many units did you sell, by product category?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of units sold for each product category."
+    }
+   ]
+  }
+ ]
+}

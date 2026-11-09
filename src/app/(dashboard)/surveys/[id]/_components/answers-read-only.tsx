@@ -16,7 +16,7 @@ import { QUESTION_STATUSES, type QuestionStatus, type SurveyDetail } from "@/typ
 import { useAssignQuestions } from "../_hooks/use-survey-actions";
 import { commentsByQuestion, QuestionComments } from "./question-comments";
 import { AttachmentList, AttachmentPicker } from "./question-attachments";
-import { SectionedQuestions } from "./sectioned-questions";
+import { PdfNumber, SectionedQuestions } from "./sectioned-questions";
 
 /** One labelled row inside a question's answer box. */
 function Block({ label, children }: { label: string; children: React.ReactNode }) {
@@ -191,6 +191,7 @@ export function AnswersReadOnly({ survey, deciding, canReassign }: { survey: Sur
                   <div className="flex flex-wrap items-start justify-between gap-x-3 gap-y-1">
                     <p className="text-sm text-ink">
                       <span className="mr-1.5 font-mono-data text-xs text-ink-faint">Q{n}</span>
+                      <PdfNumber question={q} />
                       {q.text}
                     </p>
                     <QuestionStatusBadge status={q.status} />

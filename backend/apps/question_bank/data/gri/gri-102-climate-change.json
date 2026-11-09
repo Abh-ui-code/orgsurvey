@@ -1,82 +1,472 @@
 {
  "summary": "GRI 102 addresses climate change and organizations' responsibility to contribute to mitigation and adaptation. It covers transition and adaptation plans, just transition, GHG emissions targets, Scope 1, 2 and 3 emissions, intensity, removals and carbon credits.",
- "questions": [
+ "disclosures": [
   {
    "ref": "102-1",
-   "text": "Do you have a transition plan for climate change mitigation?",
-   "type": "single_choice",
-   "hint": "a. Plan, policies and actions; b. alignment with 1.5 C science, scenarios, methods; c. expenditure (amount and % of total); d. governance responsibility; e. embedding in strategy; f. targets (GHG, fossil fuel phase-out, other) and progress; g. just transition alignment and stakeholder engagement; h. impacts on people, environment and biodiversity; i. consistency of lobbying; j. if no plan, why and timeline.",
-   "options": [
-    "Yes, published",
-    "Yes, not published",
-    "In development",
-    "No"
+   "title": "Transition plan for climate change mitigation",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Describe your transition plan, including policies and actions to mitigate climate change. Do you have a transition plan?",
+     "type": "single_choice",
+     "hint": "102-1-a. Select the status and describe the plan in the notes.",
+     "options": [
+      "Yes, published",
+      "Yes, not published",
+      "In development",
+      "No"
+     ]
+    },
+    {
+     "item": "b",
+     "text": "Describe how the transition plan aligns with the latest scientific evidence on the global effort needed to limit global warming to 1.5°C, including the source of the climate change-related scenarios used, and the methodologies and assumptions used to develop the plan.",
+     "type": "text",
+     "hint": "102-1-b."
+    },
+    {
+     "item": "c",
+     "text": "Report the total expenditure incurred by the implementation of the transition plan as a monetary value and as a percentage of the total expenditure incurred in the reporting period.",
+     "type": "text",
+     "hint": "102-1-c."
+    },
+    {
+     "item": "d",
+     "text": "Report the governance bodies or individual roles responsible for overseeing and implementing the transition plan and their responsibilities.",
+     "type": "text",
+     "hint": "102-1-d."
+    },
+    {
+     "item": "e",
+     "text": "Describe how the transition plan is embedded in your business strategy.",
+     "type": "text",
+     "hint": "102-1-e."
+    },
+    {
+     "item": "f",
+     "text": "Report the targets to achieve the transition plan and progress toward them, including GHG emissions reduction targets reported under Disclosure 102-4, targets to phase out fossil fuels, and other climate change mitigation targets.",
+     "type": "text",
+     "hint": "102-1-f (i) GHG reduction targets (102-4); (ii) fossil fuel phase-out targets, base year, standards, methodologies, assumptions; (iii) other mitigation targets, how set, coverage, base year and role in the plan."
+    },
+    {
+     "item": "g",
+     "text": "Describe how the transition plan aligns with just transition principles and how engagement with stakeholders informs its development and implementation.",
+     "type": "text",
+     "hint": "102-1-g."
+    },
+    {
+     "item": "h",
+     "text": "Describe the impacts on people and the environment from implementing the transition plan and the actions taken to manage them, including for workers, local communities and Indigenous Peoples, and for biodiversity.",
+     "type": "text",
+     "hint": "102-1-h (i) workers, local communities and Indigenous Peoples; (ii) biodiversity."
+    },
+    {
+     "item": "i",
+     "text": "Describe how your public policy activities, including lobbying activities, are consistent with the transition plan.",
+     "type": "text",
+     "hint": "102-1-i."
+    },
+    {
+     "item": "j",
+     "text": "In the absence of a transition plan, explain why it does not exist, and describe the steps being taken to develop it and the expected time frame.",
+     "type": "text",
+     "hint": "102-1-j. Leave blank if you have a transition plan."
+    }
    ]
   },
   {
    "ref": "102-2",
-   "text": "Do you have a climate change adaptation plan?",
-   "type": "single_choice",
-   "hint": "a. Impacts on people and environment from climate risks and opportunities; b. plan: policies and actions, scenarios and temperature projection, expenditure, governance, targets and progress, just transition alignment; c. impacts of implementing the plan on workers, communities, Indigenous Peoples and biodiversity; d. if no plan, why and timeline.",
-   "options": [
-    "Yes, published",
-    "Yes, not published",
-    "In development",
-    "No"
+   "title": "Climate change adaptation plan",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Describe the impacts on people and the environment associated with your climate change-related risks and opportunities and how they were considered in the development of the adaptation plan.",
+     "type": "text",
+     "hint": "102-2-a."
+    },
+    {
+     "item": "b",
+     "text": "Describe your adaptation plan, including policies and actions, scenarios and methodologies used, total expenditure, responsible governance bodies or roles, targets and progress, and alignment with just transition principles. Do you have an adaptation plan?",
+     "type": "single_choice",
+     "hint": "102-2-b (i) policies and actions; (ii) scenario source, temperature projection, methodologies, assumptions; (iii) expenditure as monetary value and percentage of total; (iv) responsible bodies or roles; (v) targets and progress; (vi) just transition alignment and stakeholder engagement.",
+     "options": [
+      "Yes, published",
+      "Yes, not published",
+      "In development",
+      "No"
+     ]
+    },
+    {
+     "item": "c",
+     "text": "Describe the impacts on people and the environment from implementing the adaptation plan and the actions taken to manage them, including for workers, local communities and Indigenous Peoples, and for biodiversity.",
+     "type": "text",
+     "hint": "102-2-c (i) workers, local communities and Indigenous Peoples; (ii) biodiversity."
+    },
+    {
+     "item": "d",
+     "text": "In the absence of an adaptation plan, explain why it does not exist, and describe the steps being taken to develop it and the expected time frame.",
+     "type": "text",
+     "hint": "102-2-d. Leave blank if you have an adaptation plan."
+    }
    ]
   },
   {
    "ref": "102-3",
-   "text": "What are the workforce and community effects of your transition or adaptation efforts (just transition)?",
-   "type": "text",
-   "hint": "Numbers, by gender and employee type, of: a. new employees; b. terminated; c. redeployed; d. trained for up/re-skilling. e-f. Non-employee workers recruited and terminated by gender; g. new hires paid at/above cost-of-living and gap actions; h-i. locations affecting communities/Indigenous Peoples and % with agreements; j. methodologies."
+   "title": "Just transition",
+   "questions": [
+    {
+     "item": "a",
+     "text": "In the context of your transition or adaptation efforts, report the total number of new employees recruited and a breakdown by gender and employee type.",
+     "type": "text",
+     "hint": "102-3-a (i) gender; (ii) employee type."
+    },
+    {
+     "item": "b",
+     "text": "Report the total number of employees whose work was terminated and a breakdown by gender and employee type.",
+     "type": "text",
+     "hint": "102-3-b (i) gender; (ii) employee type."
+    },
+    {
+     "item": "c",
+     "text": "Report the total number of redeployed employees and a breakdown by gender and employee type.",
+     "type": "text",
+     "hint": "102-3-c (i) gender; (ii) employee type."
+    },
+    {
+     "item": "d",
+     "text": "Report the total number of employees who received training for up- and re-skilling, and a breakdown by gender and employee type.",
+     "type": "text",
+     "hint": "102-3-d (i) gender; (ii) employee type."
+    },
+    {
+     "item": "e",
+     "text": "Report the total number of new workers who are not employees recruited and a breakdown by gender.",
+     "type": "text",
+     "hint": "102-3-e."
+    },
+    {
+     "item": "f",
+     "text": "Report the total number of workers who are not employees whose work was terminated and a breakdown by gender.",
+     "type": "text",
+     "hint": "102-3-f."
+    },
+    {
+     "item": "g",
+     "text": "Report the total number and percentage of new employees recruited whose basic pay is at or above the cost-of-living estimate, and describe actions taken or commitments made to address any gaps between basic pay and the cost-of-living estimate for workers reported under 102-3-a and 102-3-e.",
+     "type": "text",
+     "hint": "102-3-g."
+    },
+    {
+     "item": "h",
+     "text": "List the locations of operation where you have impacts on local communities and Indigenous Peoples.",
+     "type": "text",
+     "hint": "102-3-h."
+    },
+    {
+     "item": "i",
+     "text": "Report the percentage of locations of operation listed under 102-3-h in which an agreement has been reached with affected or potentially affected local communities or Indigenous Peoples to safeguard their interests.",
+     "type": "text",
+     "hint": "102-3-i."
+    },
+    {
+     "item": "j",
+     "text": "Report contextual information necessary to understand the data reported under 102-3 and describe the methodologies and assumptions used to compile the data, including whether numbers are reported in head count, FTE or another methodology, and at the end of the period, as an average, or using another methodology.",
+     "type": "text",
+     "hint": "102-3-j (i) head count, FTE or other; (ii) period-end, average or other."
+    }
+   ]
   },
   {
    "ref": "102-4",
-   "text": "What kind of GHG emissions reduction target do you have?",
-   "type": "single_choice",
-   "hint": "a. Short-, medium-, long-term gross Scope 1, 2, 3 targets in tCO2e and % of base year; b. biogenic CO2 included; c. location- or market-based; d. Scope 3 categories; e. gases; f. alignment with 1.5 C; g. revision policy; h. base year details; i. progress; j. reductions due to initiatives or other factors; k. standards and tools.",
-   "options": [
-    "Science-based target (validated)",
-    "Own target",
-    "No target"
+   "title": "GHG emissions reduction targets and progress",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Report short-, medium- and long-term gross Scope 1, Scope 2 and Scope 3 GHG emissions reduction targets in metric tons of CO₂ equivalent and as a percentage of base year emissions.",
+     "type": "text",
+     "hint": "102-4-a (i) Scopes reported separately, or Scope 1 and 2 combined; (ii) Scope 1 and 2 targets cover the totals under 102-5 and 102-6; (iii) exclude GHG removals, trades and avoided emissions."
+    },
+    {
+     "item": "b",
+     "text": "For each gross GHG emissions reduction target, report whether biogenic CO₂ emissions are included in the target.",
+     "type": "text",
+     "hint": "102-4-b."
+    },
+    {
+     "item": "c",
+     "text": "For each gross Scope 2 GHG emissions reduction target, report whether the target uses the location-based or market-based method.",
+     "type": "text",
+     "hint": "102-4-c."
+    },
+    {
+     "item": "d",
+     "text": "For each gross Scope 3 GHG emissions reduction target, list the Scope 3 categories covered by the target.",
+     "type": "text",
+     "hint": "102-4-d."
+    },
+    {
+     "item": "e",
+     "text": "For each gross GHG emissions reduction target, report the gases covered by the target.",
+     "type": "text",
+     "hint": "102-4-e."
+    },
+    {
+     "item": "f",
+     "text": "Explain how the gross GHG emissions reduction targets align with the latest scientific evidence on the effort needed to limit global warming to 1.5°C.",
+     "type": "text",
+     "hint": "102-4-f."
+    },
+    {
+     "item": "g",
+     "text": "Describe your gross GHG emissions reduction target revision policy.",
+     "type": "text",
+     "hint": "102-4-g."
+    },
+    {
+     "item": "h",
+     "text": "For each gross GHG emissions reduction target, report the base year, including the rationale for choosing it, base year emissions in metric tons of CO₂ equivalent, the context for significant changes that triggered recalculations, and previously reported base year emissions if recalculated.",
+     "type": "text",
+     "hint": "102-4-h (i) rationale; (ii) base year emissions; (iii) context for recalculation triggers; (iv) previously reported base year emissions."
+    },
+    {
+     "item": "i",
+     "text": "Report the progress toward each gross GHG emissions reduction target using the inventory method, in metric tons of CO₂ equivalent and as a percentage of base year emissions.",
+     "type": "text",
+     "hint": "102-4-i."
+    },
+    {
+     "item": "j",
+     "text": "For each gross GHG emissions reduction target, explain how the progress toward the target was achieved and whether it is due to reductions as a result of your initiatives or to other factors.",
+     "type": "text",
+     "hint": "102-4-j (i) own initiatives; (ii) other factors."
+    },
+    {
+     "item": "k",
+     "text": "Report standards, methodologies, assumptions and calculation tools used.",
+     "type": "text",
+     "hint": "102-4-k."
+    }
    ]
   },
   {
    "ref": "102-5",
-   "text": "What are your gross Scope 1 GHG emissions?",
-   "type": "text",
-   "hint": "a. Gross Scope 1 in tCO2e (gases included, GWP 100-year, excluding removals and trades); b. breakdown by gas; c. biogenic CO2 separately; d. base year, rationale, recalculations; e. consolidation approach; f. standards, methodologies, tools, emission factor sources."
+   "title": "Scope 1 GHG emissions",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Report gross Scope 1 GHG emissions in metric tons of CO₂ equivalent.",
+     "type": "number",
+     "hint": "102-5-a. Include CO2, CH4, N2O, HFCs, PFCs, SF6, NF3 and biogenic non-CO2 emissions from owned or controlled sources; exclude removals, trades and avoided emissions; use 100-year GWP values from the latest IPCC assessment report."
+    },
+    {
+     "item": "b",
+     "text": "Provide a breakdown of gross Scope 1 GHG emissions by CO2, CH4, N2O, HFCs, PFCs, SF6 and NF3, in metric tons and metric tons of CO₂ equivalent.",
+     "type": "text",
+     "hint": "102-5-b."
+    },
+    {
+     "item": "c",
+     "text": "Report biogenic CO₂ emissions from the combustion or biodegradation of biomass from owned or controlled sources in metric tons, separately from gross Scope 1 GHG emissions.",
+     "type": "text",
+     "hint": "102-5-c."
+    },
+    {
+     "item": "d",
+     "text": "Report the base year for the calculation, including the rationale for choosing it, base year emissions in metric tons of CO₂ equivalent (separately for gross Scope 1 and biogenic CO2), the context for significant changes that triggered recalculations, and previously reported base year emissions if recalculated.",
+     "type": "text",
+     "hint": "102-5-d (i) rationale; (ii) base year emissions; (iii) recalculation context; (iv) previously reported emissions."
+    },
+    {
+     "item": "e",
+     "text": "Report the consolidation approach for Scope 1 GHG emissions that is consistently applied across Scope 1, 2 and 3: equity share, financial control or operational control.",
+     "type": "text",
+     "hint": "102-5-e."
+    },
+    {
+     "item": "f",
+     "text": "Report standards, methodologies, assumptions and calculation tools used, including the source of the emission factors used.",
+     "type": "text",
+     "hint": "102-5-f."
+    }
+   ]
   },
   {
    "ref": "102-6",
-   "text": "What are your gross Scope 2 GHG emissions?",
-   "type": "text",
-   "hint": "a. Gross location-based and, if applicable, market-based Scope 2 in tCO2e; b. breakdown by CO2, CH4, N2O; c. biogenic CO2 separately; d. base year, rationale, recalculations; e. consolidation approach; f. standards, methodologies, tools, emission factor sources."
+   "title": "Scope 2 GHG emissions",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Report gross location-based and, if applicable, market-based Scope 2 GHG emissions in metric tons of CO₂ equivalent.",
+     "type": "number",
+     "hint": "102-6-a. Include CO2, CH4, N2O and biogenic non-CO2 emissions from electricity use; exclude removals, trades and avoided emissions; use 100-year GWP values from the latest IPCC assessment report."
+    },
+    {
+     "item": "b",
+     "text": "Provide a breakdown of gross location-based Scope 2 GHG emissions by CO2, CH4 and N2O, in metric tons and metric tons of CO₂ equivalent.",
+     "type": "text",
+     "hint": "102-6-b."
+    },
+    {
+     "item": "c",
+     "text": "Report location-based and, if applicable, market-based biogenic CO₂ emissions from electricity use in metric tons, separately from gross Scope 2 GHG emissions.",
+     "type": "text",
+     "hint": "102-6-c."
+    },
+    {
+     "item": "d",
+     "text": "Report the base year for the calculation, including the rationale for choosing it, base year emissions in metric tons of CO₂ equivalent (separately for gross Scope 2 and biogenic CO2), the context for significant changes that triggered recalculations, and previously reported base year emissions if recalculated.",
+     "type": "text",
+     "hint": "102-6-d (i) rationale; (ii) base year emissions; (iii) recalculation context; (iv) previously reported emissions."
+    },
+    {
+     "item": "e",
+     "text": "Report the consolidation approach for Scope 2 GHG emissions that is consistently applied across Scope 1, 2 and 3: equity share, financial control or operational control.",
+     "type": "text",
+     "hint": "102-6-e."
+    },
+    {
+     "item": "f",
+     "text": "Report standards, methodologies, assumptions and calculation tools used, including the source of the emission factors used.",
+     "type": "text",
+     "hint": "102-6-f."
+    }
+   ]
   },
   {
    "ref": "102-7",
-   "text": "What are your gross Scope 3 GHG emissions?",
-   "type": "text",
-   "hint": "a. Gross Scope 3 in tCO2e including each category and gases, GWP 100-year; b. breakdown by the 15 Scope 3 categories; c. biogenic CO2 separately, by category; d. base year, rationale, recalculations; e. consolidation approach; f. standards, methodologies, tools, emission factor sources."
+   "title": "Scope 3 GHG emissions",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Report gross Scope 3 GHG emissions in metric tons of CO₂ equivalent.",
+     "type": "number",
+     "hint": "102-7-a. Include each Scope 3 category, CO2, CH4, N2O, HFCs, PFCs, SF6, NF3 and biogenic non-CO2 emissions in the upstream and downstream value chain; exclude removals, trades and avoided emissions; use 100-year GWP values from the latest IPCC assessment report."
+    },
+    {
+     "item": "b",
+     "text": "Provide a breakdown of gross Scope 3 GHG emissions by each of the 15 Scope 3 categories in metric tons of CO₂ equivalent.",
+     "type": "text",
+     "hint": "102-7-b."
+    },
+    {
+     "item": "c",
+     "text": "Report biogenic CO₂ emissions from the combustion or biodegradation of biomass in the upstream and downstream value chain in metric tons, separately from gross Scope 3 GHG emissions, with a breakdown by each of the 15 Scope 3 categories.",
+     "type": "text",
+     "hint": "102-7-c."
+    },
+    {
+     "item": "d",
+     "text": "Report the base year for the calculation, including the rationale for choosing it, base year emissions in metric tons of CO₂ equivalent (separately for gross Scope 3 and biogenic CO2), the context for significant changes that triggered recalculations, and previously reported base year emissions if recalculated.",
+     "type": "text",
+     "hint": "102-7-d (i) rationale; (ii) base year emissions; (iii) recalculation context; (iv) previously reported emissions."
+    },
+    {
+     "item": "e",
+     "text": "Report the consolidation approach for Scope 3 GHG emissions that is consistently applied across Scope 1, 2 and 3: equity share, financial control or operational control.",
+     "type": "text",
+     "hint": "102-7-e."
+    },
+    {
+     "item": "f",
+     "text": "Report standards, methodologies, assumptions and calculation tools used, including the sources of the emission factors used.",
+     "type": "text",
+     "hint": "102-7-f."
+    }
+   ]
   },
   {
    "ref": "102-8",
-   "text": "What is your GHG emissions intensity?",
-   "type": "text",
-   "hint": "a. Intensity ratio(s): gross GHG emissions in tCO2e (numerator) and the organization-specific metric (denominator); b. scope(s) included: Scope 1, 2 or 3."
+   "title": "GHG emissions intensity",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Report GHG emissions intensity ratio(s), including the gross GHG emissions in metric tons of CO₂ equivalent (the numerator) and the organization-specific metric (the denominator) chosen to calculate the ratio(s).",
+     "type": "text",
+     "hint": "102-8-a."
+    },
+    {
+     "item": "b",
+     "text": "Report the scope(s) of GHG emissions included in the intensity ratio(s).",
+     "type": "multi_choice",
+     "hint": "102-8-b.",
+     "options": [
+      "Scope 1",
+      "Scope 2",
+      "Scope 3"
+     ]
+    }
+   ]
   },
   {
    "ref": "102-9",
-   "text": "What are your Scope 1 GHG removals and how are they managed?",
-   "type": "text",
-   "hint": "a. Total Scope 1 removals in tCO2e, excluding trades, by storage pool; b. how quality criteria are monitored for non-permanence risk; c. intended use; d. impacts on people, environment and biodiversity and actions to manage them; e. standards, methodologies, assumptions, tools."
+   "title": "GHG removals in the value chain",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Report the total Scope 1 GHG removals in metric tons of CO₂ equivalent, excluding any GHG trades, and a breakdown of this total by each storage pool.",
+     "type": "text",
+     "hint": "102-9-a."
+    },
+    {
+     "item": "b",
+     "text": "For each type of storage pool, describe how quality criteria are monitored to manage the risk of non-permanence.",
+     "type": "text",
+     "hint": "102-9-b."
+    },
+    {
+     "item": "c",
+     "text": "Report the intended use of GHG removals.",
+     "type": "text",
+     "hint": "102-9-c."
+    },
+    {
+     "item": "d",
+     "text": "Describe the impacts on people and the environment from your Scope 1 GHG removals and the actions taken to manage them, including for workers, local communities and Indigenous Peoples, and for biodiversity.",
+     "type": "text",
+     "hint": "102-9-d (i) workers, local communities and Indigenous Peoples; (ii) biodiversity."
+    },
+    {
+     "item": "e",
+     "text": "Report standards, methodologies, assumptions and calculation tools used.",
+     "type": "text",
+     "hint": "102-9-e."
+    }
+   ]
   },
   {
    "ref": "102-10",
-   "text": "How many carbon credits did you cancel, and how do the projects meet quality criteria?",
-   "type": "text",
-   "hint": "a. Total credits canceled in tCO2e by project; b. per project: name/ID, type, serial number, date, vintage, host country, registry; c. adherence to quality criteria (additionality, baselines, permanence, leakage, unique claiming, monitoring, verification, governance); d. purpose; e. impacts on people and environment and monitoring."
+   "title": "Carbon credits",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Report the total amount of carbon credits canceled in metric tons of CO₂ equivalent and a breakdown of this total by removal or reduction projects.",
+     "type": "text",
+     "hint": "102-10-a."
+    },
+    {
+     "item": "b",
+     "text": "For each project where carbon credits have been canceled, report the project name and ID, project type, cancelation serial number, cancellation date and vintage, and host country and issuing registry.",
+     "type": "text",
+     "hint": "102-10-b (i) project name and ID; (ii) project type; (iii) serial number, cancellation date, vintage; (iv) host country and issuing registry."
+    },
+    {
+     "item": "c",
+     "text": "For each carbon credit project reported under 102-10-b, describe how the project adheres to the quality criteria of additionality, credible baselines, permanence, leakage avoidance, unique issuance and claiming, regular monitoring, independent validation and verification, and GHG program governance.",
+     "type": "text",
+     "hint": "102-10-c (i) additionality; (ii) credible baselines; (iii) permanence; (iv) leakage avoidance; (v) unique issuance and claiming; (vi) regular monitoring; (vii) independent validation and verification; (viii) GHG program governance."
+    },
+    {
+     "item": "d",
+     "text": "Report the purpose of carbon credit cancelation.",
+     "type": "text",
+     "hint": "102-10-d."
+    },
+    {
+     "item": "e",
+     "text": "Describe the impacts on people and the environment from projects where carbon credits are purchased and how you continuously monitor and evaluate them, including stakeholder categories consulted, how human rights are respected, how socio-economic benefits are provided to local communities and Indigenous Peoples, how biodiversity is conserved, and how trade-offs are assessed.",
+     "type": "text",
+     "hint": "102-10-e (i) stakeholders consulted; (ii) human rights; (iii) socio-economic benefits; (iv) biodiversity; (v) trade-offs."
+    }
+   ]
   }
  ]
 }

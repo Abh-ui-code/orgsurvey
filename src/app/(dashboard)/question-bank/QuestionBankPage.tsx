@@ -19,7 +19,7 @@ import { useBankCategories } from "@/hooks/use-bank-categories";
 import { useBankQuestions } from "@/hooks/use-bank-questions";
 import { useDebounced } from "@/hooks/use-debounced";
 import { questionTypeLabel, type BankQuestion } from "@/types/question";
-import { GRI_CATEGORY, GriTab } from "./_components/gri-tab";
+import { GRI_CATEGORY, SASB_CATEGORY, TCFD_CATEGORY, RSPO_CATEGORY, WEF_CATEGORY, GriTab, frameworkOf } from "./_components/gri-tab";
 import { CategoriesDialog } from "./_components/categories-dialog";
 import { QuestionDialog, type BankDraft } from "./_components/question-dialog";
 import { useDeleteBankQuestion } from "./_hooks/use-question-bank";
@@ -28,10 +28,16 @@ function QuestionBank() {
   const categories = useBankCategories();
   const del = useDeleteBankQuestion();
   const [search, setSearch] = useState("");
-  // Arriving from a GRI standard's page lands back on the GRI standards.
-  const [category, setCategory] = useState(useSearchParams().get("category") === GRI_CATEGORY ? GRI_CATEGORY : "");
-  const gri = category === GRI_CATEGORY;
-  const griCount = useGriStandards().data?.length;
+  // Arriving from a standard's page lands back on the GRI or SASB standards.
+  const fromUrl = useSearchParams().get("category") ?? "";
+  const [category, setCategory] = useState(frameworkOf(fromUrl) ? fromUrl : "");
+  const framework = frameworkOf(category);
+  const gri = framework !== null;
+  const griCount = useGriStandards("gri").data?.length;
+  const sasbCount = useGriStandards("sasb").data?.length;
+  const tcfdCount = useGriStandards("tcfd").data?.length;
+  const rspoCount = useGriStandards("rspo").data?.length;
+  const wefCount = useGriStandards("wef").data?.length;
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(25);
   const [draft, setDraft] = useState<BankDraft | null>(null);
@@ -96,7 +102,7 @@ function QuestionBank() {
             setSearch(v);
             setPage(1);
           }}
-          placeholder={gri ? "Search GRI standards" : "Search questions"}
+          placeholder={framework ? `Search ${framework.toUpperCase()} standards` : "Search questions"}
           className="w-72"
         />
         <Select
@@ -114,10 +120,14 @@ function QuestionBank() {
             </option>
           ))}
           <option value={GRI_CATEGORY}>GRI standards{griCount !== undefined ? ` (${griCount})` : ""}</option>
+          <option value={SASB_CATEGORY}>SASB standards{sasbCount !== undefined ? ` (${sasbCount})` : ""}</option>
+          <option value={TCFD_CATEGORY}>TCFD recommendations{tcfdCount !== undefined ? ` (${tcfdCount})` : ""}</option>
+          <option value={RSPO_CATEGORY}>RSPO standards{rspoCount !== undefined ? ` (${rspoCount})` : ""}</option>
+          <option value={WEF_CATEGORY}>WEF metrics{wefCount !== undefined ? ` (${wefCount})` : ""}</option>
         </Select>
       </div>
       {gri ? (
-        <GriTab search={search} />
+        <GriTab search={search} framework={framework ?? "gri"} />
       ) : (
         <DataTable
           columns={columns}

@@ -1,0 +1,137 @@
+{
+ "summary": "The E-Commerce standard covers online marketplaces and exclusively web-based retailers and wholesalers that sell to consumers and businesses worldwide. Its disclosure topics are energy and water use of hardware infrastructure, data privacy and advertising, data security, employee recruitment and inclusion, and product packaging and distribution.",
+ "disclosures": [
+  {
+   "ref": "CG-EC-130a",
+   "title": "Hardware Infrastructure Energy & Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) your total energy consumed, (2) the percentage of it that is grid electricity and (3) the percentage that is renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy consumed in gigajoules, (2) the percentage that is grid electricity and (3) the percentage that is renewable, covering data centres and other operations."
+    },
+    {
+     "item": ".2",
+     "text": "What are (1) your total water withdrawn and (2) your total water consumed, and what percentage of each is in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report (1) total water withdrawn and (2) total water consumed in thousand cubic metres, and for each the percentage located in High or Extremely High Baseline Water Stress regions."
+    },
+    {
+     "item": ".3",
+     "text": "How do you integrate environmental considerations into strategic planning for your data centre needs?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how factors such as energy and water use, location, efficiency and renewable energy shape decisions on data centre capacity, siting and outsourcing."
+    }
+   ]
+  },
+  {
+   "ref": "CG-EC-220a",
+   "title": "Data Privacy & Advertising Standards",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many users have information that is used for secondary purposes?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of users whose information is used for secondary purposes, meaning purposes other than those for which it was collected."
+    },
+    {
+     "item": ".2",
+     "text": "What are your policies and practices relating to targeted advertising and user privacy?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your policies on targeted advertising and user privacy, including consent and opt-out options, data collection and sharing, and how users are informed."
+    }
+   ]
+  },
+  {
+   "ref": "CG-EC-230a",
+   "title": "Data Security",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your approach to identifying and addressing data security risks?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you identify data security risks and the controls, governance, standards and incident response you use to address them."
+    },
+    {
+     "item": ".2",
+     "text": "How many (1) data breaches occurred, (2) what percentage were personal data breaches, and (3) how many users were affected?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the number of data breaches, (2) the percentage that were personal data breaches and (3) the number of users affected."
+    }
+   ]
+  },
+  {
+   "ref": "CG-EC-330a",
+   "title": "Employee Recruitment, Inclusion & Performance",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was your employee engagement, as a percentage?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report employee engagement as a percentage, and describe how it was measured, such as the survey used and the response rate."
+    },
+    {
+     "item": ".2",
+     "text": "What were your (1) voluntary and (2) involuntary turnover rates for all employees?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report separately (1) the voluntary and (2) the involuntary turnover rate for all employees, as percentages for the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of your (1) gender and (2) diversity group representation is there for (a) executive management, (b) non-executive management, (c) technical employees and (d) all other employees?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report the percentage of (1) gender and (2) diversity group representation for each employee category listed, using the groups the organisation defines and stating them."
+    },
+    {
+     "item": ".4",
+     "text": "What percentage of your technical employees require a work visa?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of technical employees who require a work visa to work for the organisation."
+    }
+   ]
+  },
+  {
+   "ref": "CG-EC-410a",
+   "title": "Product Packaging & Distribution",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is the total greenhouse gas (GHG) footprint of your product shipments?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Report the total GHG footprint of product shipments in metric tonnes CO2-equivalent, and state the scope and methodology used."
+    },
+    {
+     "item": ".2",
+     "text": "What strategies do you use to reduce the environmental impact of product delivery?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe strategies such as delivery-route optimisation, low-emission vehicles, consolidated shipments and packaging changes, and any results achieved."
+    }
+   ]
+  },
+  {
+   "ref": "CG-EC-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What is your entity-defined measure of user activity?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number for your chosen measure of user activity (for example active users, orders or visits), and state how it is defined."
+    },
+    {
+     "item": ".B",
+     "text": "What is your data processing capacity, and what percentage of it is outsourced?",
+     "type": "text",
+     "hint": "Unit: as defined by the entity · Report (1) data processing capacity in the unit you use and (2) the percentage of that capacity that is outsourced, such as to cloud providers."
+    },
+    {
+     "item": ".C",
+     "text": "How many shipments did you make?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of shipments during the reporting period."
+    }
+   ]
+  }
+ ]
+}

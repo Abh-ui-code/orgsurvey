@@ -1,0 +1,179 @@
+{
+ "summary": "This standard covers downstream companies that refine petroleum products, market oil and gas products or operate fuel stations. It addresses greenhouse gas and air emissions, water, hazardous materials, worker safety, clean fuel blends, pricing integrity, regulatory positions and process safety and critical incident risk.",
+ "disclosures": [
+  {
+   "ref": "EM-RM-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your organisation's gross global Scope 1 greenhouse gas emissions, and what percentage of them is covered under emissions-limiting regulations?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) CO₂-e, Percentage (%) · Report gross global Scope 1 emissions in metric tonnes CO2-e and, separately, the percentage covered under emissions-limiting regulations (e.g. cap-and-trade or carbon tax schemes)."
+    },
+    {
+     "item": ".2",
+     "text": "What is your long- and short-term strategy or plan to manage Scope 1 emissions, what are your emissions reduction targets, and how have you performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy or plan, the targets (scope, baseline year, target year), and an analysis of performance against those targets, including any activities or investments driving the change."
+    }
+   ]
+  },
+  {
+   "ref": "EM-RM-120a",
+   "title": "Air Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's air emissions of the following pollutants: (1) NOx (excluding N2O), (2) SOx, (3) particulate matter (PM10), (4) H2S and (5) volatile organic compounds (VOCs)?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report each pollutant separately in metric tonnes, covering all operations and noting estimation or measurement methods; state any pollutant that is not applicable."
+    },
+    {
+     "item": ".2",
+     "text": "How many of your refineries are in or near areas of dense population?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of refineries located in or near areas of dense population, and state the definition of dense population you use."
+    }
+   ]
+  },
+  {
+   "ref": "EM-RM-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's (1) total water withdrawn and (2) total water consumed, and what percentage of each is in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report (1) total water withdrawn and (2) total water consumed in thousand cubic metres, and the percentage of each in regions with High or Extremely High Baseline Water Stress (e.g. per the WRI Aqueduct tool)."
+    },
+    {
+     "item": ".2",
+     "text": "How many incidents of non-compliance with water quality permits, standards and regulations did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of incidents of non-compliance with water quality permits, standards and regulations in the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "EM-RM-150a",
+   "title": "Hazardous Materials Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is the amount of hazardous waste your organisation generated, and what percentage was recycled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) hazardous waste generated in metric tonnes and (2) the percentage recycled."
+    },
+    {
+     "item": ".2",
+     "text": "What are (1) the number of underground storage tanks (USTs) you operate, (2) the number of UST releases requiring clean up, and (3) the percentage in jurisdictions with UST financial assurance funds?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) number of USTs, (2) number of UST releases requiring clean up, and (3) the percentage of USTs in jurisdictions with financial assurance funds."
+    }
+   ]
+  },
+  {
+   "ref": "EM-RM-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total recordable incident rate (TRIR), (2) fatality rate, and (3) near miss frequency rate (NMFR) for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate · Report each rate separately for (a) direct employees and (b) contract employees, stating the basis used (e.g. per 200,000 or 1,000,000 hours worked)."
+    },
+    {
+     "item": ".2",
+     "text": "What management systems do you use to integrate a culture of safety?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the management systems, leadership commitments, training, reporting and audit practices that embed safety culture."
+    }
+   ]
+  },
+  {
+   "ref": "EM-RM-410a",
+   "title": "Product Specifications & Clean Fuel Blends",
+   "questions": [
+    {
+     "item": ".2",
+     "text": "What is the total addressable market and your share of the market for advanced biofuels and associated infrastructure?",
+     "type": "text",
+     "hint": "Unit: Presentation currency, Percentage (%) · Report the total addressable market in presentation currency and your market share as a percentage, describing the biofuels and infrastructure included."
+    },
+    {
+     "item": ".3",
+     "text": "What volumes of renewable fuels for fuel blending did you (1) produce (net) and (2) purchase (net)?",
+     "type": "text",
+     "hint": "Unit: Barrels of oil equivalent (BOE) · Report (1) the net amount produced and (2) the net amount purchased, in barrels of oil equivalent (BOE)."
+    }
+   ]
+  },
+  {
+   "ref": "EM-RM-520a",
+   "title": "Pricing Integrity & Transparency",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with price fixing or price manipulation?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses (fines, settlements, judgements) in presentation currency for the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "EM-RM-530a",
+   "title": "Management of the Legal & Regulatory Environment",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's corporate positions on government regulations or policy proposals that address environmental and social factors affecting the industry?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your positions on relevant regulations or policy proposals, how they were developed, and how you engage with policymakers (e.g. lobbying, trade associations)."
+    }
+   ]
+  },
+  {
+   "ref": "EM-RM-540a",
+   "title": "Critical Incident Risk Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your Process Safety Event (PSE) rates for Loss of Primary Containment (LOPC) of greater consequence (Tier 1) and lesser consequence (Tier 2)?",
+     "type": "text",
+     "hint": "Unit: Rate · Report the PSE rate(s) for each tier named per 200,000 hours worked (or the basis you use), covering employees and contractors."
+    },
+    {
+     "item": ".2",
+     "text": "What is your Challenges to Safety Systems indicator rate (Tier 3)?",
+     "type": "text",
+     "hint": "Unit: Rate · Report the Tier 3 process safety indicator rate (challenges to safety systems) per 200,000 hours worked, or the basis you use, and the definition applied."
+    },
+    {
+     "item": ".3",
+     "text": "How do you measure Operating Discipline and Management System Performance through Tier 4 indicators?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the Tier 4 leading indicators used (e.g. inspection completion, training, audit actions), how they are measured and how results are acted on."
+    }
+   ]
+  },
+  {
+   "ref": "EM-RM-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was your organisation's refining throughput of crude oil and other feedstocks?",
+     "type": "number",
+     "hint": "Unit: Barrels of oil equivalent (BOE) · Report refining throughput in barrels of oil equivalent (BOE) for the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "What is your organisation's refining operating capacity?",
+     "type": "number",
+     "hint": "Unit: Million barrels per calendar day (MBPD) · Report refining operating capacity in million barrels per calendar day (MBPD)."
+    }
+   ]
+  }
+ ]
+}

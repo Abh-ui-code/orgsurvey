@@ -1,23 +1,95 @@
 {
- "summary": "GRI 414 covers supplier social assessment: due diligence by an organization to prevent, mitigate and address actual and potential negative social impacts in its supply chain. Suppliers can be assessed on criteria such as human rights, employment practices, and health and safety.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "How does your organization manage the topic of supplier social assessment, including its impacts, policies, actions and tracking of effectiveness?",
-   "type": "text",
-   "hint": "Report how the organization manages this material topic using Disclosure 3-3 in GRI 3: Material Topics 2021."
-  },
-  {
-   "ref": "414-1",
-   "text": "What percentage of new suppliers were screened using social criteria?",
-   "type": "number",
-   "hint": "a. Percentage of new suppliers that were screened using social criteria."
-  },
-  {
-   "ref": "414-2",
-   "text": "What negative social impacts exist in your supply chain, and what actions have you taken?",
-   "type": "text",
-   "hint": "a. Number of suppliers assessed for social impacts. b. Number identified with significant actual and potential negative social impacts. c. Significant negative impacts identified in the supply chain. d. Percentage with which improvements were agreed. e. Percentage with which relationships were terminated, and why."
-  }
- ]
+  "summary": "GRI 414 covers supplier social assessment: due diligence by an organization to prevent, mitigate and address actual and potential negative social impacts in its supply chain. Suppliers can be assessed on criteria such as human rights, employment practices, and health and safety.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to supplier social assessment.",
+          "hint": "Cover both actual and potential impacts, negative and positive, including impacts on human rights.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "Is the organization involved with the negative impacts related to supplier social assessment through its own activities or as a result of its business relationships? Describe those activities or business relationships.",
+          "hint": "State whether involvement is through the organization's activities or through its business relationships, and describe them.",
+          "type": "text"
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding supplier social assessment.",
+          "hint": "Describe the policies or commitments that apply to this material topic.",
+          "type": "text"
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage supplier social assessment and the related impacts, including (i) actions to prevent or mitigate potential negative impacts, (ii) actions to address actual negative impacts, including actions to provide for or cooperate in their remediation, and (iii) actions to manage actual and potential positive impacts.",
+          "hint": "Cover i. prevention or mitigation of potential negative impacts; ii. addressing actual negative impacts, including remediation; iii. managing positive impacts.",
+          "type": "text"
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of the actions taken? Describe (i) the processes used, (ii) the goals, targets and indicators used to evaluate progress, (iii) the effectiveness of the actions, including progress toward goals and targets, and (iv) lessons learned and how they have been incorporated into operational policies and procedures.",
+          "hint": "Cover i. tracking processes; ii. goals, targets and indicators; iii. effectiveness and progress; iv. lessons learned and how they were incorporated.",
+          "type": "text"
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e).",
+          "hint": "Explain the role of stakeholder engagement in shaping actions and in judging their effectiveness.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "414-1",
+      "title": "New suppliers that were screened using social criteria",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What percentage of new suppliers were screened using social criteria?",
+          "hint": "Enter the percentage of new suppliers screened.",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "ref": "414-2",
+      "title": "Negative social impacts in the supply chain and actions taken",
+      "questions": [
+        {
+          "item": "a",
+          "text": "How many suppliers were assessed for social impacts?",
+          "hint": "Number of suppliers assessed.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "How many suppliers were identified as having significant actual and potential negative social impacts?",
+          "hint": "Number of suppliers identified.",
+          "type": "text"
+        },
+        {
+          "item": "c",
+          "text": "What significant actual and potential negative social impacts were identified in the supply chain?",
+          "hint": "Describe the impacts identified.",
+          "type": "text"
+        },
+        {
+          "item": "d",
+          "text": "What percentage of suppliers identified as having significant actual and potential negative social impacts had improvements agreed upon as a result of the assessment?",
+          "hint": "Percentage of identified suppliers.",
+          "type": "text"
+        },
+        {
+          "item": "e",
+          "text": "What percentage of suppliers identified as having significant actual and potential negative social impacts had relationships terminated as a result of the assessment, and why?",
+          "hint": "Percentage of identified suppliers, and the reasons for termination.",
+          "type": "text"
+        }
+      ]
+    }
+  ]
 }

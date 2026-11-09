@@ -1,0 +1,239 @@
+{
+  "summary": "RSPO Growers respect community and human rights, and deliver benefits. This principle covers resolving land conflicts, community development, free, prior and informed consent (FPIC) for land use, compensation for lost rights, and securing the right to use land.",
+  "disclosures": [
+    {
+      "ref": "4.1",
+      "title": "There is a mutually agreed and documented process for dealing with conflict or dispute over land and other resources which is implemented and accepted by all affected parties.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Does your Unit of Certification have a mutually agreed process, open to all affected parties, to resolve conflicts or disputes over land and other resources in an effective, timely and appropriate way, including keeping complainants, HRDs, community spokespersons and whistleblowers anonymous where requested?",
+          "type": "yes_no",
+          "hint": "Indicator 4.1.1 (Critical). Process must resolve disputes effectively and on time, protect anonymity without risk of reprisal or intimidation, and follow the latest RSPO policy on respect for Human Rights Defenders. Attach the documented process."
+        },
+        {
+          "item": ".2",
+          "text": "Does the process include access to independent legal and technical advice, the ability for complainants to choose who supports them or observes, and the option of a third-party mediator?",
+          "type": "yes_no",
+          "hint": "Indicator 4.1.2. The process must include all of: independent legal/technical advice, complainants' choice of supporters/observers, and the option of a third-party mediator. Attach the process document."
+        },
+        {
+          "item": ".3",
+          "text": "Is the process understood by the affected parties, including people who cannot read?",
+          "type": "yes_no",
+          "hint": "Indicator 4.1.3. Evidence of how the process was explained to affected parties, including illiterate parties (e.g. verbal briefings, pictorial materials, meeting records)."
+        },
+        {
+          "item": ".4",
+          "text": "Does your Unit of Certification keep parties to a conflict or dispute informed of progress against agreed timeframes, and communicate the outcome to relevant stakeholders?",
+          "type": "yes_no",
+          "hint": "Indicator 4.1.4. Attach records of progress updates, agreed timeframes and communication of outcomes to relevant stakeholders."
+        }
+      ]
+    },
+    {
+      "ref": "4.2",
+      "title": "The Unit of Certification contributes to local sustainable development as agreed through consultation with local communities.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Can your Unit of Certification show contributions to community development that are based on the results of consultation with local communities?",
+          "type": "yes_no",
+          "hint": "Indicator 4.2.1. Demonstrate community development contributions that follow from consultation results. Attach consultation records and evidence of contributions made."
+        }
+      ]
+    },
+    {
+      "ref": "4.3",
+      "title": "Use of the land for oil palm does not diminish the legal, customary, or user rights of other users without their Free, Prior and Informed Consent.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Do you have documents showing legal ownership or lease, or authorised use of customary land approved by customary landowners through a Free, Prior and Informed Consent (FPIC) process, along with documents on the history of land tenure and actual legal or customary use of the land?",
+          "type": "yes_no",
+          "hint": "Indicator 4.3.1 (Critical). Documents on ownership/lease or customary land use authorised through FPIC, plus the land tenure history and actual legal or customary use, must be available."
+        },
+        {
+          "item": ".2 A",
+          "text": "Do you have evidence that a plan was developed through good-faith consultation with all affected community groups (with particular assurance that vulnerable, minority and gender groups were consulted), and that all affected groups received information, including the steps to involve them in decision making?",
+          "type": "yes_no",
+          "hint": "Indicator 4.3.2 A. Part of the FPIC documents required under 4.3.2: copies of documents evidencing agreement-making processes and negotiated agreements. Attach consultation records and plan."
+        },
+        {
+          "item": ".2 B",
+          "text": "Do you have evidence that your Unit of Certification respected communities' decisions to give or withhold consent to the operation at the time those decisions were taken?",
+          "type": "yes_no",
+          "hint": "Indicator 4.3.2 B. Part of the FPIC documents required under 4.3.2. Attach agreement-making records showing how consent decisions were respected."
+        },
+        {
+          "item": ".2 C",
+          "text": "Do you have evidence that affected communities understood and accepted the legal, economic, environmental and social implications of permitting operations on their land, including the legal status of the land when your title, concession or lease expires?",
+          "type": "yes_no",
+          "hint": "Indicator 4.3.2 C. Part of the FPIC documents required under 4.3.2. Attach evidence of the information given and communities' acceptance."
+        },
+        {
+          "item": ".3",
+          "text": "Have maps of an appropriate scale showing the extent of recognised legal, customary or user rights been developed through participatory mapping involving affected parties (including neighbouring communities where applicable, and relevant authorities)?",
+          "type": "yes_no",
+          "hint": "Indicator 4.3.3 (Critical). Attach the participatory maps and records of who took part."
+        },
+        {
+          "item": ".4",
+          "text": "Is all relevant information, including impact assessments, proposed benefit sharing and legal arrangements, available in appropriate forms and languages?",
+          "type": "yes_no",
+          "hint": "Indicator 4.3.4. Attach examples of the information provided and the forms and languages used."
+        },
+        {
+          "item": ".5",
+          "text": "Do you have evidence that communities are represented through institutions or representatives of their own choosing, including by legal counsel if they choose?",
+          "type": "yes_no",
+          "hint": "Indicator 4.3.5 (Critical). Attach evidence of community-chosen representation and the option of legal counsel."
+        },
+        {
+          "item": ".6",
+          "text": "Is the implementation of agreements negotiated through FPIC reviewed every year in consultation with affected parties?",
+          "type": "yes_no",
+          "hint": "Indicator 4.3.6. Evidence of annual review of FPIC agreements with affected parties. Attach review records."
+        }
+      ]
+    },
+    {
+      "ref": "4.4",
+      "title": "No new plantings are established on local peoples' land where it can be demonstrated that there are legal, customary, or user rights, without their FPIC. This is dealt with through a documented system that enables these and other stakeholders to express their views through their own representative institutions.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Do you have documents showing the identification and assessment of demonstrable legal, customary and user rights?",
+          "type": "yes_no",
+          "hint": "Indicator 4.4.1 (Critical). Attach the rights identification and assessment documents."
+        },
+        {
+          "item": ".2",
+          "text": "Is FPIC obtained for all oil palm development through a comprehensive, documented, long-term, two-way consultation and negotiation process, including full respect for legal and customary rights via communities' own representative institutions, all relevant information made available, and the option of resourced independent advice?",
+          "type": "yes_no",
+          "hint": "Indicator 4.4.2 (Critical). FPIC must be obtained for all oil palm development. Attach evidence of the consultation and negotiation process."
+        },
+        {
+          "item": ".3",
+          "text": "Do you have evidence that affected local peoples understand they have the right to say 'no' at every stage up until an agreement is signed and ratified, and that agreements are non-coercive, voluntary and made before new operations begin?",
+          "type": "yes_no",
+          "hint": "Indicator 4.4.3. Right to say 'no' before and during initial discussions, information gathering, consultations and negotiations, until agreement is signed and ratified. Attach evidence."
+        },
+        {
+          "item": ".4",
+          "text": "To ensure local food and water security, did the FPIC process, participatory SEIA and participatory land-use planning consider the full range of food and water provisioning options, and is the land allocation process transparent?",
+          "type": "yes_no",
+          "hint": "Indicator 4.4.4. Attach evidence of how food and water provisioning options were considered and how land allocation was made transparent."
+        },
+        {
+          "item": ".5",
+          "text": "Do you have evidence that affected communities and rights holders had the option to access information and advice independent of the project proponent on the legal, economic, environmental and social implications of the proposed operations?",
+          "type": "yes_no",
+          "hint": "Indicator 4.4.5. Attach evidence of independent information or advice offered or accessed."
+        },
+        {
+          "item": ".6",
+          "text": "Do you have evidence that communities (or their representatives) gave consent to the initial planning phases before a new concession or land title was issued to the operator?",
+          "type": "yes_no",
+          "hint": "Indicator 4.4.6. Attach consent records dated before issuance of the new concession or land title."
+        },
+        {
+          "item": ".7",
+          "text": "Is it true that no new lands have been acquired for plantations and mills after 15 November 2018 as a result of recent (2005 or later) expropriations in the national interest without consent (eminent domain)?",
+          "type": "yes_no",
+          "hint": "Indicator 4.4.7. Exception: smallholders benefitting from agrarian reform or anti-drug programmes. Answer Yes if no such acquisitions occurred; otherwise attach details."
+        },
+        {
+          "item": ".8",
+          "text": "Is it true that no new lands have been acquired in areas inhabited by communities in voluntary isolation?",
+          "type": "yes_no",
+          "hint": "Indicator 4.4.8 (Critical). Answer Yes if no such acquisitions occurred."
+        }
+      ]
+    },
+    {
+      "ref": "4.5",
+      "title": "Any negotiations concerning compensation for loss of legal, customary, or user rights are dealt with through a documented system that enables indigenous peoples, local communities, and other stakeholders to express their views through their own representative institutions.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification developed a mutually agreed procedure for identifying legal, customary or user rights, and put in place a procedure for identifying people entitled to compensation?",
+          "type": "yes_no",
+          "hint": "Indicator 4.5.1 (Critical). Both procedures must be in place. Attach the procedures and evidence of mutual agreement."
+        },
+        {
+          "item": ".2",
+          "text": "Has your Unit of Certification developed a mutually agreed procedure for calculating and distributing fair and gender-equal compensation (monetary or otherwise), and is it implemented, monitored and evaluated in a participatory way, with corrective actions taken as a result?",
+          "type": "yes_no",
+          "hint": "Indicator 4.5.2 (Critical). Attach the procedure, monitoring and evaluation records, and any corrective actions."
+        },
+        {
+          "item": ".3",
+          "text": "Can your Unit of Certification show that men and women have equal opportunities to hold land titles for smallholdings?",
+          "type": "yes_no",
+          "hint": "Indicator 4.5.3. Attach evidence of equal opportunity for men and women to hold land titles for smallholdings."
+        },
+        {
+          "item": ".4",
+          "text": "Does your Unit of Certification document the process and outcomes of negotiated agreements, compensation and payments, with evidence of participation of affected parties, and make this publicly available to them?",
+          "type": "yes_no",
+          "hint": "Indicator 4.5.4. Attach the documentation and show how it is made available to affected parties."
+        }
+      ]
+    },
+    {
+      "ref": "4.6",
+      "title": "Where it can be demonstrated that local peoples have legal, customary, or user rights, they are compensated for any agreed land acquisitions and relinquishment of rights, subject to their FPIC and negotiated agreements.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Is there a mutually agreed procedure in place for identifying people entitled to compensation?",
+          "type": "yes_no",
+          "hint": "Indicator 4.6.1 (Critical). Attach the procedure and evidence it was mutually agreed."
+        },
+        {
+          "item": ".2",
+          "text": "Is there a mutually agreed procedure in place for calculating and distributing fair compensation (monetary or otherwise), documented and made available to affected parties?",
+          "type": "yes_no",
+          "hint": "Indicator 4.6.2 (Critical). Attach the documented procedure and show how it was made available to affected parties."
+        },
+        {
+          "item": ".3",
+          "text": "Have communities that lost access and rights to land for plantation expansion been given opportunities to benefit from plantation development?",
+          "type": "yes_no",
+          "hint": "Indicator 4.6.3. Describe and attach evidence of the benefit opportunities provided."
+        }
+      ]
+    },
+    {
+      "ref": "4.7",
+      "title": "The right to use the land is demonstrated and is not legitimately contested by local people who can demonstrate that they have legal, customary, or user rights.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Where there are or have been disputes, can your Unit of Certification provide proof of legal acquisition of title and evidence that mutually agreed compensation was made to everyone who held legal, customary or user rights at the time of acquisition, accepted through a documented FPIC process?",
+          "type": "yes_no",
+          "hint": "Indicator 4.7.1. Applies where there are or have been disputes. Proof of title and compensation evidence must also be provided to the parties to the dispute."
+        },
+        {
+          "item": ".2",
+          "text": "Is your area free of land conflict, or, where land conflict exists, are acceptable conflict resolution processes (see Criteria 4.1 and 4.5) implemented and accepted by the parties involved?",
+          "type": "yes_no",
+          "hint": "Indicator 4.7.2 (Critical). For newly acquired plantations, unresolved conflicts must be addressed through appropriate conflict resolution mechanisms. Attach details of any conflicts and resolution."
+        },
+        {
+          "item": ".3",
+          "text": "Where land was acquired through dispossession or forced abandonment of customary and user rights before current operations and parties with demonstrable rights remain, have the claims been settled using the requirements of Indicators 4.3.2, 4.3.3 and 4.3.4?",
+          "type": "yes_no",
+          "hint": "Indicator 4.7.3. Applies only where such dispossession or forced abandonment is evidenced. Answer Yes if claims are settled; attach evidence."
+        },
+        {
+          "item": ".4",
+          "text": "For any conflict or dispute over the land, has the extent of the disputed area been mapped in a participatory way with the involvement of affected parties (including neighbouring communities where applicable)?",
+          "type": "yes_no",
+          "hint": "Indicator 4.7.4. Attach participatory maps of disputed areas and records of participation."
+        }
+      ]
+    }
+  ]
+}

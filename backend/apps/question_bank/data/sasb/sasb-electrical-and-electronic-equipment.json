@@ -1,0 +1,131 @@
+{
+ "summary": "This standard covers the Electrical & Electronic Equipment industry, which makes components such as power generation equipment, transformers, motors, switchgear, automation, HVAC, lighting and cables. Its disclosure topics are energy management, hazardous waste, product safety, product lifecycle management, materials sourcing and business ethics.",
+ "disclosures": [
+  {
+   "ref": "RT-EE-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your organisation's (1) total energy consumed, (2) percentage of that energy that is grid electricity and (3) percentage that is renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy consumed in GJ, (2) the percentage purchased from the grid and (3) the percentage from renewable sources, including self-generated renewable energy."
+    }
+   ]
+  },
+  {
+   "ref": "RT-EE-150a",
+   "title": "Hazardous Waste Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What (1) amount of hazardous waste did your organisation generate, and (2) what percentage of it was recycled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) the total hazardous waste generated in tonnes and (2) the percentage recycled, using the applicable regulatory definition of hazardous waste."
+    },
+    {
+     "item": ".2",
+     "text": "What are (1) the number and aggregate quantity of your reportable spills, and (2) the quantity recovered?",
+     "type": "text",
+     "hint": "Unit: Number, Kilogrammes (kg) · Report (1) the number of reportable spills and their aggregate quantity in kg, and (2) the quantity recovered in kg."
+    }
+   ]
+  },
+  {
+   "ref": "RT-EE-250a",
+   "title": "Product Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "(1) How many product recalls did your organisation issue, and (2) how many units were recalled in total?",
+     "type": "text",
+     "hint": "Unit: Number · Report (1) the number of recalls issued and (2) the total units recalled, covering voluntary and mandated recalls in the period."
+    },
+    {
+     "item": ".2",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with product safety?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses from legal proceedings associated with product safety, in your presentation currency, including settlements, fines and penalties."
+    }
+   ]
+  },
+  {
+   "ref": "RT-EE-410a",
+   "title": "Product Lifecycle Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your products, by revenue, contain IEC 62474 declarable substances?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by revenue · Report the percentage of products by revenue that contain substances declarable under IEC 62474."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your eligible products, by revenue, are certified to an energy efficiency certification?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by revenue · Report the percentage of eligible products by revenue certified to an energy efficiency certification, naming the certifications used and how eligibility is defined."
+    },
+    {
+     "item": ".3",
+     "text": "What was your organisation's revenue from renewable energy-related and energy efficiency-related products?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report revenue from renewable energy-related and energy efficiency-related products in your presentation currency for the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "RT-EE-440a",
+   "title": "Materials Sourcing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation manage the risks associated with the use of critical materials?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe the critical materials used, the risks (supply, price, regulatory, reputational) and the actions taken to manage them, such as diversification, substitution or recycling."
+    }
+   ]
+  },
+  {
+   "ref": "RT-EE-510a",
+   "title": "Business Ethics",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's policies and practices for the prevention of (1) corruption and bribery and (2) anti-competitive behaviour?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe the policies, training, monitoring and reporting practices covering (1) corruption and bribery and (2) anti-competitive behaviour."
+    },
+    {
+     "item": ".2",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with bribery or corruption?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses from legal proceedings associated with bribery or corruption, in your presentation currency, including settlements, fines and penalties."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with anti-competitive behaviour regulations?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses from legal proceedings associated with anti-competitive behaviour regulations, in your presentation currency, including settlements, fines and penalties."
+    }
+   ]
+  },
+  {
+   "ref": "RT-EE-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many units did your organisation produce, by product category?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of units produced for each product category."
+    },
+    {
+     "item": ".B",
+     "text": "How many employees does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of employees; state whether it is a headcount or full-time equivalent figure."
+    }
+   ]
+  }
+ ]
+}

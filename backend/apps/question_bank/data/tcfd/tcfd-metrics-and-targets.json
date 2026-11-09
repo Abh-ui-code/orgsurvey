@@ -1,0 +1,130 @@
+{
+ "summary": "Disclose the metrics and targets used to assess and manage relevant climate-related risks and opportunities where such information is material. Investors and other stakeholders need to understand how an organization measures and monitors its climate-related risks and opportunities, and its progress in managing or adapting to them.",
+ "disclosures": [
+  {
+   "ref": "Metrics and Targets a)",
+   "title": "Disclose the metrics used by the organization to assess climate-related risks and opportunities in line with its strategy and risk management process.",
+   "questions": [
+    {
+     "text": "What key metrics do you use to measure and manage climate-related risks and opportunities?",
+     "type": "text",
+     "hint": "Guidance for All Sectors: as described in the TCFD's Tables A1 and A2.",
+     "item": "1"
+    },
+    {
+     "text": "Do you use metrics on climate-related risks associated with water, energy, land use and waste management? If so, what are they?",
+     "type": "yes_no",
+     "hint": "Guidance for All Sectors: consider including these where relevant and applicable.",
+     "item": "2"
+    },
+    {
+     "text": "Are climate-related performance metrics incorporated into remuneration policies? If so, how?",
+     "type": "yes_no",
+     "hint": "Guidance for All Sectors: where climate-related issues are material.",
+     "item": "3"
+    },
+    {
+     "text": "What internal carbon price(s) do you use, if any?",
+     "type": "text",
+     "hint": "Guidance for All Sectors: where relevant, provide internal carbon prices.",
+     "item": "4"
+    },
+    {
+     "text": "What climate-related opportunity metrics do you report, such as revenue from products and services designed for a lower-carbon economy?",
+     "type": "text",
+     "hint": "Guidance for All Sectors.",
+     "item": "5"
+    },
+    {
+     "text": "What do these metrics show for historical periods, and what methodologies are used to calculate or estimate them?",
+     "type": "text",
+     "hint": "Guidance for All Sectors: metrics should be provided for historical periods to allow for trend analysis, with the methodologies described where not apparent.",
+     "item": "6"
+    }
+   ]
+  },
+  {
+   "ref": "Metrics and Targets b)",
+   "title": "Disclose Scope 1, Scope 2, and, if appropriate, Scope 3 greenhouse gas (GHG) emissions, and the related risks.",
+   "questions": [
+    {
+     "text": "What were your Scope 1 and Scope 2 GHG emissions?",
+     "type": "number",
+     "hint": "Guidance for All Sectors. Calculate in line with the GHG Protocol methodology to allow aggregation and comparability; national methodologies may be used if consistent with it.",
+     "item": "1"
+    },
+    {
+     "text": "What were your Scope 3 GHG emissions, if appropriate?",
+     "type": "number",
+     "hint": "Guidance for All Sectors: if appropriate, and the related risks.",
+     "item": "2"
+    },
+    {
+     "text": "What risks are related to your GHG emissions?",
+     "type": "text",
+     "hint": "Guidance for All Sectors: emissions are a key driver of transition risk.",
+     "item": "3"
+    },
+    {
+     "text": "Do you report industry-specific GHG efficiency ratios (emissions intensity, e.g. per unit of production, employee or value-added)?",
+     "type": "yes_no",
+     "hint": "Guidance for All Sectors: as appropriate, related generally accepted industry-specific GHG efficiency ratios. Especially important for industries with high energy consumption.",
+     "item": "4"
+    },
+    {
+     "text": "What were your GHG emissions for historical periods, and what methodologies were used to calculate or estimate them?",
+     "type": "text",
+     "hint": "Guidance for All Sectors: emissions should be provided for historical periods to allow trend analysis.",
+     "item": "5"
+    }
+   ]
+  },
+  {
+   "ref": "Metrics and Targets c)",
+   "title": "Describe the targets used by the organization to manage climate-related risks and opportunities and performance against targets.",
+   "questions": [
+    {
+     "text": "What are your key climate-related targets (e.g. GHG emissions, water usage, energy usage), in line with anticipated regulatory requirements, market constraints or other goals?",
+     "type": "text",
+     "hint": "Guidance for All Sectors. Other goals may include efficiency or financial goals, financial loss tolerances, avoided GHG emissions through the product life cycle, or net revenue goals for products and services designed for a lower-carbon economy.",
+     "item": "1"
+    },
+    {
+     "text": "Is each target absolute or intensity based?",
+     "type": "single_choice",
+     "hint": "Guidance for All Sectors.",
+     "options": [
+      "Absolute",
+      "Intensity based",
+      "Both"
+     ],
+     "item": "2"
+    },
+    {
+     "text": "Over what time frames does each target apply?",
+     "type": "text",
+     "hint": "Guidance for All Sectors.",
+     "item": "3"
+    },
+    {
+     "text": "What is the base year from which progress is measured?",
+     "type": "text",
+     "hint": "Guidance for All Sectors.",
+     "item": "4"
+    },
+    {
+     "text": "What key performance indicators do you use to assess progress against targets, and what is your performance against them?",
+     "type": "text",
+     "hint": "Guidance for All Sectors.",
+     "item": "5"
+    },
+    {
+     "text": "What methodologies are used to calculate your targets and measures?",
+     "type": "text",
+     "hint": "Guidance for All Sectors: where not apparent.",
+     "item": "6"
+    }
+   ]
+  }
+ ]
+}

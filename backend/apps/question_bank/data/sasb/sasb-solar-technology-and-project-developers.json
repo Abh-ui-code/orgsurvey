@@ -1,0 +1,161 @@
+{
+ "summary": "This standard covers manufacturers of solar energy equipment such as PV modules, polysilicon and inverters, and developers that build and manage solar projects. Its disclosure topics are energy and water management in manufacturing, hazardous waste, ecological impacts of project development, energy infrastructure integration, product end-of-life management and materials sourcing.",
+ "disclosures": [
+  {
+   "ref": "RR-ST-130a",
+   "title": "Energy Management in Manufacturing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was (1) your organisation's total energy consumed, in gigajoules, (2) the percentage of it that was grid electricity and (3) the percentage that was renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy consumed in gigajoules, (2) the percentage supplied as grid electricity and (3) the percentage from renewable sources. Include self-generated renewable energy and state how renewable is defined."
+    }
+   ]
+  },
+  {
+   "ref": "RR-ST-140a",
+   "title": "Water Management in Manufacturing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were (1) the total water withdrawn and (2) the total water consumed by your organisation, in thousand cubic metres, and what percentage of each was in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report thousand cubic metres for (1) total water withdrawn and (2) total water consumed, plus the percentage of each in regions with High or Extremely High Baseline Water Stress. Note the tool used to assess water stress and the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "What are your organisation's water management risks, and what strategies and practices do you use to mitigate them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the water management risks (for example water availability, quality or regulation), the strategies and practices used to mitigate them, and any targets and performance against them."
+    }
+   ]
+  },
+  {
+   "ref": "RR-ST-150a",
+   "title": "Hazardous Waste Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was (1) the amount of hazardous waste your organisation generated, in metric tonnes, and (2) what percentage was recycled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) metric tonnes of hazardous waste generated and (2) the percentage of it that was recycled. Use the definitions of hazardous waste in the regulations where you operate."
+    },
+    {
+     "item": ".2",
+     "text": "What were (1) the number and aggregate quantity, in kilogrammes, of your reportable spills, and (2) the quantity recovered?",
+     "type": "text",
+     "hint": "Unit: Number, Kilogrammes (kg) · Report (1) the number of reportable spills and their aggregate quantity in kg, and (2) the quantity recovered in kg."
+    }
+   ]
+  },
+  {
+   "ref": "RR-ST-160a",
+   "title": "Ecological Impacts of Project Development",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many project delays related to ecological impacts did you have, and what was their duration in days?",
+     "type": "text",
+     "hint": "Unit: Number, Days · Report (1) the number of project delays related to ecological impacts and (2) their duration in days."
+    },
+    {
+     "item": ".2",
+     "text": "What efforts do you make in solar energy system project development to address community and ecological impacts?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the community and ecological impacts considered (such as land use, habitat and local engagement) and the efforts taken to avoid, minimise or mitigate them."
+    }
+   ]
+  },
+  {
+   "ref": "RR-ST-410a",
+   "title": "Management of Energy Infrastructure Integration & Related Regulations",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What risks are associated with integrating solar energy into existing energy infrastructure, and how do you manage them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the integration risks (for example grid stability, intermittency and interconnection) and the efforts you are making to manage them."
+    },
+    {
+     "item": ".2",
+     "text": "What risks and opportunities does energy policy create for the integration of solar energy into existing energy infrastructure?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the energy policies (such as incentives, tariffs and grid regulation) that affect solar integration, and the resulting risks and opportunities for your organisation."
+    }
+   ]
+  },
+  {
+   "ref": "RR-ST-410b",
+   "title": "Product End- of-life Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of the products you sold are recyclable or reusable?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of products sold that are recyclable or reusable, and state whether it is measured by weight, units or revenue."
+    },
+    {
+     "item": ".2",
+     "text": "What was (1) the weight of end-of-life material your organisation recovered, in metric tonnes, and (2) what percentage of it was recycled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) metric tonnes of end-of-life material recovered (for example through take-back or recycling programmes) and (2) the percentage of that material that was recycled. Note the scope of products covered."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of your products, by revenue, contain IEC 62474 declarable substances, arsenic compounds, antimony compounds or beryllium compounds?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of product revenue from products containing IEC 62474 declarable substances, arsenic compounds, antimony compounds or beryllium compounds."
+    },
+    {
+     "item": ".4",
+     "text": "What is your approach and what strategies do you use to design products for high-value recycling?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe design choices, materials selection and partnerships that enable recovery of high-value materials at end of life."
+    }
+   ]
+  },
+  {
+   "ref": "RR-ST-440a",
+   "title": "Materials Sourcing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation manage the risks associated with the use of critical materials?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the critical materials used (for example rare earth or scarce metals), the supply, price or regulatory risks identified, and the actions taken to manage them such as substitution, recycling or supplier diversification."
+    },
+    {
+     "item": ".2",
+     "text": "How does your organisation manage the environmental risks associated with the polysilicon supply chain?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the environmental risks in the polysilicon supply chain (such as energy use, emissions and chemical handling) and the supplier standards, audits or sourcing practices used to manage them."
+    }
+   ]
+  },
+  {
+   "ref": "RR-ST-000",
+   "title": "Activity Metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was the total capacity of the photovoltaic (PV) solar modules you produced, in megawatts?",
+     "type": "number",
+     "hint": "Unit: Megawatts (MW) · Report total capacity of PV solar modules produced in MW for the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "What was the total capacity of the completed solar energy systems, in megawatts?",
+     "type": "number",
+     "hint": "Unit: Megawatts (MW) · Report total capacity of completed solar energy systems in MW for the reporting period."
+    },
+    {
+     "item": ".C",
+     "text": "What was the total value of your project development assets?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total value of project development assets in your presentation currency."
+    }
+   ]
+  }
+ ]
+}

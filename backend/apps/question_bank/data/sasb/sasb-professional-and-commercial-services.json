@@ -1,0 +1,89 @@
+{
+ "summary": "The Professional & Commercial Services standard covers knowledge-based service providers such as consulting, staffing, legal, accounting, tax and information services. Its disclosure topics are data security, workforce diversity and engagement, and professional integrity.",
+ "disclosures": [
+  {
+   "ref": "SV-PS-230a",
+   "title": "Data Security",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation identify and address data security risks?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your approach to identifying and addressing data security risks, including governance, controls, testing, incident response and any standards or certifications used."
+    },
+    {
+     "item": ".2",
+     "text": "What policies and practices does your organisation have for the collection, usage and retention of customer information?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how customer information is collected, what it is used for, how long it is retained, who can access it and how customers are informed or can control it."
+    },
+    {
+     "item": ".3",
+     "text": "What were (1) the number of data breaches, (2) the percentage that (a) involved customers' confidential business information and (b) were personal data breaches, and (3) the number of (a) customers and (b) individuals affected?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the total number of data breaches, (2) the percentages involving customers' confidential business information and personal data, and (3) the numbers of customers and individuals affected."
+    }
+   ]
+  },
+  {
+   "ref": "SV-PS-330a",
+   "title": "Workforce Diversity & Engagement",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your (1) gender and (2) diversity group representation is there for (a) executive management, (b) non-executive management, and (c) all other employees?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report percentages for gender and for diversity groups in each of the three employee categories (executive management, non-executive management, all other employees), and say which diversity groups are counted."
+    },
+    {
+     "item": ".2",
+     "text": "What are your (1) voluntary and (2) involuntary turnover rates for employees?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report the voluntary turnover rate and the involuntary turnover rate for employees as percentages."
+    },
+    {
+     "item": ".3",
+     "text": "What is your employee engagement, as a percentage?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report employee engagement as a percentage, and describe how it was measured (for example via an employee survey) and the response rate."
+    }
+   ]
+  },
+  {
+   "ref": "SV-PS-510a",
+   "title": "Professional Integrity",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation ensure professional integrity?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your approach to professional integrity, such as codes of conduct, ethics training, conflict-of-interest controls, quality review and whistleblowing channels."
+    },
+    {
+     "item": ".2",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with professional integrity?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to professional integrity."
+    }
+   ]
+  },
+  {
+   "ref": "SV-PS-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many employees does your organisation have by (1) full-time and part-time, (2) temporary, and (3) contract?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of employees in each group: full-time and part-time, temporary, and contract."
+    },
+    {
+     "item": ".B",
+     "text": "What were your employee hours worked, and what percentage of them were billable?",
+     "type": "text",
+     "hint": "Unit: Hours, Percentage (%) · Report (1) total employee hours worked and (2) the percentage of those hours that were billable."
+    }
+   ]
+  }
+ ]
+}

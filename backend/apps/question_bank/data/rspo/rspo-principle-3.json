@@ -1,0 +1,185 @@
+{
+  "summary": "Principle 3 states that RSPO Growers optimise productivity, demonstrate traceability, and create positive impacts. It covers long-term business and replanting plans, productivity SOPs, social and environmental impact assessment before new plantings or operations, good agricultural practices for yield and soil management, and supply chain requirements for mills.",
+  "disclosures": [
+    {
+      "ref": "3.1",
+      "title": "The Unit of Certification shall develop and implement business plans to ensure long-term viability of the UoC.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification developed and implemented a long-term business management plan (including, where applicable, a jointly-developed business case for scheme smallholders)?",
+          "type": "yes_no",
+          "hint": "Indicator 3.1.1 (Critical). Develop and implement a long-term business management plan. Where applicable, it shall include a jointly-developed business case for scheme smallholders. Attach the plan."
+        },
+        {
+          "item": ".2",
+          "text": "Do you have an annual long-term replanting plan that is reviewed every year?",
+          "type": "yes_no",
+          "hint": "Indicator 3.1.2. An annual long-term replanting plan shall be developed and reviewed annually. Attach the plan and latest review record."
+        },
+        {
+          "item": ".3",
+          "text": "Does your management review the business management plan every year to address risks, allow adaptive planning, and drive continuous improvement?",
+          "type": "yes_no",
+          "hint": "Indicator 3.1.3. The plan shall be reviewed annually by management to address risks, allow adaptive business planning and for continuous improvements. Attach review records."
+        }
+      ]
+    },
+    {
+      "ref": "3.2",
+      "title": "The Unit of Certification shall ensure that operating procedures to optimise productivity are consistently documented, implemented, and monitored.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification developed and implemented Standard Operating Procedures (SOPs) for its production operations aimed at optimising productivity?",
+          "type": "yes_no",
+          "hint": "Indicator 3.2.1 (Critical). Develop and implement SOPs for production operations aimed at optimising productivity. Attach the SOPs."
+        },
+        {
+          "item": ".2",
+          "text": "Do you monitor that your SOPs are consistently implemented, and keep and make available records of monitoring and any actions taken?",
+          "type": "yes_no",
+          "hint": "Indicator 3.2.2. SOPs shall be monitored for consistent implementation; records of monitoring, and any actions taken, shall be maintained and made available."
+        }
+      ]
+    },
+    {
+      "ref": "3.3",
+      "title": "The Unit of Certification shall conduct a comprehensive assessment of social and environmental impacts prior to development of any new plantings or operations, with a social and environmental management & monitoring plan developed.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "For any new plantings or operations (including mills), has an independent Social and Environmental Impact Assessment (SEIA) been conducted using a participatory method involving affected stakeholders?",
+          "type": "yes_no",
+          "hint": "Indicator 3.3.1 (Critical). In any new plantings or operations including mills, conduct an independent SEIA through a participatory methodology involving affected stakeholders. National Interpretations determine country-specific legal requirements. Attach the SEIA."
+        },
+        {
+          "item": ".2",
+          "text": "Are the SEIA(s) available, and have social and environmental management and monitoring plans been developed with the participation of affected stakeholders?",
+          "type": "yes_no",
+          "hint": "Indicator 3.3.2 (Critical). SEIA(s) must be available, and social and environmental management & monitoring plans developed with participation of affected stakeholders. Attach the plans and participation records."
+        },
+        {
+          "item": ".3",
+          "text": "Is your social and environmental management and monitoring plan implemented, and reviewed and updated at least every two years with affected communities and relevant stakeholders?",
+          "type": "yes_no",
+          "hint": "Indicator 3.3.3 (Critical). The plan shall be implemented, reviewed and updated at least once every two (2) years with participation of affected communities and relevant stakeholders. Attach the latest review record."
+        }
+      ]
+    },
+    {
+      "ref": "3.4",
+      "title": "The Unit of Certification shall manage land responsibly and adopt Good Agriculture Practices (GAPs), towards optimising FFB yields and productivity.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Does your Unit of Certification make annual estimates of its Fresh Fruit Bunch (FFB) yield potential?",
+          "type": "yes_no",
+          "hint": "Indicator 3.4.1. Conduct annual estimates of FFB yield potential. Attach the latest estimate."
+        },
+        {
+          "item": ".2",
+          "text": "Do you monitor, document, and manage changes in soil fertility and plant nutrient levels?",
+          "type": "yes_no",
+          "hint": "Indicator 3.4.2. Changes in soil fertility and plant nutrient levels shall be monitored, documented and managed. National Interpretations determine legal requirements and GAPs on oil palm nutrient management. Attach monitoring records."
+        },
+        {
+          "item": ".3",
+          "text": "Are the Good Agriculture Practices (GAPs) in your SOPs followed to manage soil fertility, optimise yields, and minimise environmental impacts?",
+          "type": "yes_no",
+          "hint": "Indicator 3.4.3. GAPs contained in the UoC's SOPs shall be followed to manage soil fertility, optimise yields and minimise environmental impacts. Attach evidence of implementation."
+        }
+      ]
+    },
+    {
+      "ref": "3.5",
+      "title": "Supply Chain Requirements for Mills (not applicable to medium growers and scheme smallholders)",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Do you record and make available the actual annual production tonnage of RSPO certified crude palm oil (CPO) and palm kernel (PK) at your mill(s) for the previous year or previous 12 months?",
+          "type": "number",
+          "hint": "Indicator 3.5.1 (Critical). Record and make available actual annual tonnage of RSPO certified CPO and PK for the previous year or 12-month period. Enter the CPO tonnage here and give PK tonnage in your notes. Refer to the latest RSPO SCC Standard."
+        },
+        {
+          "item": ".2",
+          "text": "Do you record and make available the estimated annual production tonnage of RSPO certified CPO and PK, based on your documented mill-specific Oil Extraction Rate (OER) and Kernel Extraction Rate (KER)?",
+          "type": "yes_no",
+          "hint": "Indicator 3.5.2 (Critical). Estimated annual tonnage of RSPO certified CPO and PK must be recorded and available, based on documented, recorded mill-specific OER and KER. Attach calculations."
+        },
+        {
+          "item": ".3",
+          "text": "Do you have complete and up-to-date documented procedures for all elements of the RSPO supply chain model (Mass Balance or Identity Preserved) that applies to your mill(s)?",
+          "type": "yes_no",
+          "hint": "Indicator 3.5.3 (Critical), Documented Procedures. Procedures must cover all elements of the applicable RSPO supply chain model. Attach the procedures."
+        },
+        {
+          "item": ".4",
+          "text": "Do you have a documented procedure for an annual internal audit of your mill(s) against the RSPO Supply Chain Requirements for Mills and the RSPO Rules on Market Communications and Claims?",
+          "type": "yes_no",
+          "hint": "Indicator 3.5.4 (Critical), Internal Audit. Documented procedure for an annual internal audit of conformity with Criterion 3.5 and the 'RSPO Rules on Market Communications and Claims'. Attach the procedure and latest audit."
+        },
+        {
+          "item": ".5 A",
+          "text": "Do you verify and document the tonnage and sources of certified and non-certified FFB received at your mill(s)?",
+          "type": "yes_no",
+          "hint": "Indicator 3.5.5 A) (Critical), Purchasing and Goods In. Monitor the level of FFB sourcing, including verification and documentation of tonnage and sources of certified and non-certified FFB received. Attach records."
+        },
+        {
+          "item": ".5 B",
+          "text": "Do you inform your Certification Body immediately when overproduction of certified volume is projected?",
+          "type": "yes_no",
+          "hint": "Indicator 3.5.5 B) (Critical). Monitoring of FFB sourcing shall include informing the UoC's Certification Body immediately in cases of projected overproduction of certified volume."
+        },
+        {
+          "item": ".5 C",
+          "text": "Do you have processes or procedures for handling and/or documenting non-conforming FFB?",
+          "type": "yes_no",
+          "hint": "Indicator 3.5.5 C) (Critical). Monitoring shall include process(es)/procedure(s) for handling and/or documentation of non-conforming FFB. Attach the procedure."
+        },
+        {
+          "item": ".6",
+          "text": "Is the key information for your RSPO certified palm oil and oil palm products complete and available in document form for sales and goods out?",
+          "type": "yes_no",
+          "hint": "Indicator 3.5.6 (Critical), Sales and Goods Out. Key information necessary for RSPO certified palm oil and oil palm products must be complete and available in document form. Attach sample sales documents."
+        },
+        {
+          "item": ".7",
+          "text": "Do you avoid outsourcing milling activities, and where other activities (e.g. storage or transport) are outsourced to independent third parties, do you ensure they comply with the RSPO Supply Chain Requirements for Mills?",
+          "type": "yes_no",
+          "hint": "Indicator 3.5.7 (Critical), Outsourcing Activities. The UoC shall not outsource milling activities. If any activities are outsourced to independent third parties, the UoC shall ensure they comply with Criterion 3.5 requirements. List any outsourced activities."
+        },
+        {
+          "item": ".8",
+          "text": "Before your next audit, do you record and give your Certification Body the details of all contractors that physically handle your RSPO certified palm oil and oil palm products?",
+          "type": "yes_no",
+          "hint": "Indicator 3.5.8 (Critical). Prior to the next audit, record and make available in advance to the appointed Certification Body the details of all contractors that physically handle the UoC's RSPO certified products. Attach the contractor list."
+        },
+        {
+          "item": ".9",
+          "text": "Do you keep accurate, complete, up-to-date, and accessible records and reports covering all relevant requirements of the RSPO Supply Chain Certification (SCC) Standard?",
+          "type": "yes_no",
+          "hint": "Indicator 3.5.9 (Critical), Record Keeping. Maintain accurate, complete, up-to-date and accessible records/reports covering all relevant aspects of the RSPO SCC Standard requirements."
+        },
+        {
+          "item": ".10",
+          "text": "If you use the Identity Preserved supply chain model, do documented procedures and records verify that RSPO certified palm oil and oil palm products are kept separate from non-certified products at your mill(s)?",
+          "type": "yes_no",
+          "hint": "Indicator 3.5.10 (Critical), Processing. For the Identity Preserved module only: assure and verify through documented procedures and record keeping that certified products are kept separated from non-certified products at the mill(s). Answer Yes if compliant; attach procedures. Not applicable for Mass Balance."
+        },
+        {
+          "item": ".11",
+          "text": "Do you and your mill(s) comply with all registration and reporting requirements for your RSPO supply chain model (Mass Balance or Identity Preserved) through the RSPO Information System?",
+          "type": "yes_no",
+          "hint": "Indicator 3.5.11 (Critical). Comply with all registration/reporting requirements for the appropriate supply chain module through the RSPO Information System. Attach evidence of registration/reporting."
+        },
+        {
+          "item": ".12",
+          "text": "Do you and your mill(s) make sustainability claims about RSPO certified palm oil and oil palm products only in line with the RSPO Rules on Market Communications & Claims?",
+          "type": "yes_no",
+          "hint": "Indicator 3.5.12 (Critical). Only make sustainability claims regarding production of RSPO certified palm oil and oil palm products that comply with the 'RSPO Rules on Market Communications & Claims'. Attach examples of claims made, if any."
+        }
+      ]
+    }
+  ]
+}

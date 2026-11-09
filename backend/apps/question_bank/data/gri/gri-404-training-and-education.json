@@ -1,37 +1,101 @@
 {
- "summary": "GRI 404 covers an organization's approach to training and upgrading employee skills, and to performance and career development reviews. It also covers transition assistance for continued employability and for career endings through retirement or termination.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "Describe how the organization manages this material topic and its related impacts, as required by Disclosure 3-3 in GRI 3 (Material Topics 2021).",
-   "type": "text",
-   "hint": "Per GRI 3-3: the actual and potential impacts, policy commitments, actions taken, tracking of effectiveness and stakeholder engagement for the topic."
-  },
-  {
-   "ref": "404-1",
-   "text": "What was the average number of training hours per employee during the reporting period, by gender and by employee category?",
-   "type": "text",
-   "hint": "a. Average hours of training undertaken by employees during the reporting period, by gender and by employee category."
-  },
-  {
-   "ref": "404-2",
-   "text": "Which skills upgrade or transition assistance programs do you offer?",
-   "type": "multi_choice",
-   "hint": "a. Type and scope of programs and assistance to upgrade employee skills. b. Transition assistance programs for continued employability and career endings from retirement or termination.",
-   "options": [
-    "Internal training",
-    "External courses",
-    "Tuition assistance",
-    "Sabbaticals",
-    "Retirement preparation",
-    "Outplacement"
-   ]
-  },
-  {
-   "ref": "404-3",
-   "text": "What percentage of employees, by gender and employee category, received a regular performance and career development review during the reporting period?",
-   "type": "text",
-   "hint": "a. Percentage of total employees by gender and employee category who received a regular performance and career development review."
-  }
- ]
+  "summary": "GRI 404 covers an organization's approach to training and upgrading employee skills, and to performance and career development reviews. It also covers transition assistance for continued employability and for career endings through retirement or termination.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to training and education.",
+          "hint": "Cover both actual and potential impacts, negative and positive, including impacts on human rights.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "Is the organization involved with the negative impacts related to training and education through its own activities or as a result of its business relationships? Describe those activities or business relationships.",
+          "hint": "State whether involvement is through the organization's activities or through its business relationships, and describe them.",
+          "type": "text"
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding training and education.",
+          "hint": "Describe the policies or commitments that apply to this material topic.",
+          "type": "text"
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage training and education and the related impacts, including (i) actions to prevent or mitigate potential negative impacts, (ii) actions to address actual negative impacts, including actions to provide for or cooperate in their remediation, and (iii) actions to manage actual and potential positive impacts.",
+          "hint": "Cover i. prevention or mitigation of potential negative impacts; ii. addressing actual negative impacts, including remediation; iii. managing positive impacts.",
+          "type": "text"
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of the actions taken? Describe (i) the processes used, (ii) the goals, targets and indicators used to evaluate progress, (iii) the effectiveness of the actions, including progress toward goals and targets, and (iv) lessons learned and how they have been incorporated into operational policies and procedures.",
+          "hint": "Cover i. tracking processes; ii. goals, targets and indicators; iii. effectiveness and progress; iv. lessons learned and how they were incorporated.",
+          "type": "text"
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e).",
+          "hint": "Explain the role of stakeholder engagement in shaping actions and in judging their effectiveness.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "404-1",
+      "title": "Average hours of training per year per employee",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What were the average hours of training that the organization's employees undertook during the reporting period, by (i) gender and (ii) employee category?",
+          "hint": "Report averages by gender and by employee category.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "404-2",
+      "title": "Programs for upgrading employee skills and transition assistance programs",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What type and scope of programs have been implemented, and assistance provided, to upgrade employee skills?",
+          "hint": "Select the programs offered; describe scope in your notes.",
+          "type": "multi_choice",
+          "options": [
+            "Internal training",
+            "External courses",
+            "Tuition assistance",
+            "Sabbaticals"
+          ]
+        },
+        {
+          "item": "b",
+          "text": "What transition assistance programs are provided to facilitate continued employability and the management of career endings resulting from retirement or termination of employment?",
+          "hint": "Select the programs offered; describe scope in your notes.",
+          "type": "multi_choice",
+          "options": [
+            "Retirement preparation",
+            "Outplacement",
+            "Severance pay",
+            "Retraining"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "404-3",
+      "title": "Percentage of employees receiving regular performance and career development reviews",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What percentage of total employees, by gender and by employee category, received a regular performance and career development review during the reporting period?",
+          "hint": "Report percentages by gender and employee category.",
+          "type": "text"
+        }
+      ]
+    }
+  ]
 }

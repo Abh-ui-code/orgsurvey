@@ -37,8 +37,8 @@ def at(day):
 def test_workbook_describes_the_whole_flow(monkeypatch):
     section = NS(title="Processes")
     people = {k: NS(pk=k, full_name=k.title(), email=f"{k}@x") for k in ("responder", "reviewer", "approver")}
-    q1 = NS(pk="q1", id="q1", section=section, text="Documented?", type="yes_no", options=[], required=True, hint="", responder=people["responder"], status="approved")
-    q2 = NS(pk="q2", id="q2", section=section, text="Rate it", type="rating", options=[], required=True, hint="", responder=people["responder"], status="approved")
+    q1 = NS(pk="q1", id="q1", section=section, text="Documented?", type="yes_no", options=[], required=True, hint="", responder=people["responder"], status="approved", bank_question_id=None)
+    q2 = NS(pk="q2", id="q2", section=section, text="Rate it", type="rating", options=[], required=True, hint="", responder=people["responder"], status="approved", bank_question_id=None)
     monkeypatch.setattr(audit.SurveyQuestion, "objects", NS(filter=lambda **kw: FakeQS([q1, q2])))
     both = Many([q1, q2])
     note = NS(question_id="q2", pk="n1", text="Too high, explain", author=people["approver"], attachments=Many([NS(name="benchmark.pdf")]))
@@ -86,3 +86,20 @@ def test_workbook_describes_the_whole_flow(monkeypatch):
     # An answer that changed since the previous submission is highlighted.
     ws = wb["Audit report"]
     assert ws.cell(start + 3, 6).fill.fgColor.rgb.endswith("FFF4CF") and ws.cell(start + 2, 6).fill.fgColor.rgb.endswith("FFF4CF") is False
+
+
+def test_a_standard_question_is_shown_with_its_pdf_number():
+    from types import SimpleNamespace as NS
+
+    def q(ref, item, in_standard=True, bank=True):
+        return NS(text="What?", bank_question_id="b" if bank else None, section=NS(gri_standard_id="s" if in_standard else None),
+                  bank_question=NS(gri_ref=ref, gri_item=item))
+
+    assert audit._numbered(q("305-1", "a")) == "[305-1 a] What?"
+    assert audit._numbered(q("Governance a)", "2")) == "[Governance a) 2] What?"
+    assert audit._numbered(q("SV-AD-220a", ".1")) == "[SV-AD-220a.1] What?"
+    assert audit._numbered(q("1.2", ".1 A")) == "[1.2.1 A] What?"
+    assert audit._numbered(q("Core", "3.2")) == "[Core 3.2] What?"
+    assert audit._numbered(q("305-1", "")) == "[305-1] What?"
+    assert audit._numbered(q("305-1", "a", in_standard=False)) == "What?"
+    assert audit._numbered(q("305-1", "a", bank=False)) == "What?"

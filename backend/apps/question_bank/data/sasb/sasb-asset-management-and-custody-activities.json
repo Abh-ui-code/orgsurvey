@@ -1,0 +1,131 @@
+{
+ "summary": "This standard covers firms that manage investment portfolios for institutional, retail and high net-worth clients, and provide wealth management, advice and custody. Disclosure topics are transparent information and fair advice, employee diversity and inclusion, ESG integration in investment management, financed emissions and business ethics.",
+ "disclosures": [
+  {
+   "ref": "FN-AC-270a",
+   "title": "Transparent Information & Fair Advice for Customers",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the number and (2) the percentage of licensed employees and identified decision-makers with a record of investment-related investigations, consumer-initiated complaints, private civil litigations, or other regulatory proceedings?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) a count and (2) a percentage of licensed employees and decision-makers with such a record."
+    },
+    {
+     "item": ".2",
+     "text": "What was the total amount of monetary losses as a result of legal proceedings associated with marketing and communication of financial product-related information to new and returning customers?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "How does your organisation approach informing customers about its products and services?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how product and service information is communicated to customers so that it is clear, fair and not misleading."
+    }
+   ]
+  },
+  {
+   "ref": "FN-AC-330a",
+   "title": "Employee Diversity & Inclusion",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of (1) gender and (2) diversity group representation do you have for (a) executive management, (b) non-executive management, (c) professionals, and (d) all other employees?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Give percentages for each gender and diversity group in each of the four employee categories; state the diversity groups used."
+    }
+   ]
+  },
+  {
+   "ref": "FN-AC-410a",
+   "title": "Incorporation of Environmental, Social, and Governance Factors in Investment Management & Advisory",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What amount of assets under management, by asset class, employs (1) integration of environmental, social and governance (ESG) issues, (2) sustainability themed investing and (3) screening?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Give the amount in your presentation currency for each of the three approaches, broken down by asset class."
+    },
+    {
+     "item": ".2",
+     "text": "How does your organisation incorporate environmental, social and governance (ESG) factors in its investment or wealth management processes and strategies?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the ESG approaches used, which strategies they apply to and how they influence decisions."
+    },
+    {
+     "item": ".3",
+     "text": "What are your proxy voting and investee engagement policies and procedures?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how voting decisions are made, how you engage with investees and how outcomes are tracked."
+    }
+   ]
+  },
+  {
+   "ref": "FN-AC-410b",
+   "title": "Financed Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your absolute gross financed emissions, disaggregated by (1) Scope 1, (2) Scope 2 and (3) Scope 3?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Give each of the three scopes separately in metric tonnes CO2-e, and note the calculation standard used."
+    },
+    {
+     "item": ".2",
+     "text": "What total amount of assets under management (AUM) is included in your financed emissions disclosure?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the AUM covered in your presentation currency."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of your total assets under management (AUM) is included in the financed emissions calculation?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report a percentage (0 to 100) of total AUM covered by the calculation."
+    },
+    {
+     "item": ".4",
+     "text": "What methodology does your organisation use to calculate financed emissions?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the calculation approach, standards, data sources and assumptions or limitations."
+    }
+   ]
+  },
+  {
+   "ref": "FN-AC-510a",
+   "title": "Business Ethics",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of monetary losses as a result of legal proceedings associated with fraud, insider trading, antitrust, anti-competitive behaviour, market manipulation, malpractice, or other related financial industry laws or regulations?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period, covering all legal proceedings of these kinds."
+    },
+    {
+     "item": ".2",
+     "text": "How do you describe your whistleblower policies and procedures?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how employees can report concerns, how reports are handled and protections against retaliation."
+    }
+   ]
+  },
+  {
+   "ref": "FN-AC-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What is your total assets under management (AUM)?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report total AUM in your presentation currency."
+    },
+    {
+     "item": ".B",
+     "text": "What is the total amount of assets under custody and supervision?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report total assets under custody and supervision in your presentation currency."
+    }
+   ]
+  }
+ ]
+}

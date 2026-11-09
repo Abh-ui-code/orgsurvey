@@ -1,5 +1,5 @@
 import type { Person, Ref } from "@/types/common";
-import type { Attachment, SurveyQuestion } from "@/types/question";
+import type { Attachment, StandardFramework, SurveyQuestion } from "@/types/question";
 
 /** The workflow runs per question (see QuestionStatus). A survey is a draft, then in progress
  * until every question is approved, then approved; `closed` is an administrator withdrawing it. */
@@ -115,7 +115,7 @@ export interface SurveySection {
   title: string;
   description: string;
   /** Set when this section is a whole GRI standard: its questions are fixed and it goes to one respondent. */
-  gri: { id: string; code: string; title: string; pdf: string } | null;
+  gri: { id: string; framework: StandardFramework; code: string; title: string; pdf: string } | null;
   questions: SurveyQuestion[];
 }
 

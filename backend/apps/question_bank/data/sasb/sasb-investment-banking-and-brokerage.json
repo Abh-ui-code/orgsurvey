@@ -1,0 +1,155 @@
+{
+ "summary": "This standard covers firms in capital markets that raise and allocate capital, make markets and provide advisory and brokerage services. Disclosure topics are employee diversity and inclusion, ESG integration in banking activities, business ethics, professional integrity, systemic risk management and employee incentives and risk-taking.",
+ "disclosures": [
+  {
+   "ref": "FN-IB-330a",
+   "title": "Employee Diversity & Inclusion",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of (1) gender and (2) diversity group representation do you have for (a) executive management, (b) non-executive management, (c) professionals, and (d) all other employees?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Give percentages for each gender and diversity group in each of the four employee categories; state the diversity groups used."
+    }
+   ]
+  },
+  {
+   "ref": "FN-IB-410a",
+   "title": "Incorporation of Environmental, Social, and Governance Factors in Investment Banking & Brokerage Activities",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What revenue do you earn from (1) underwriting, (2) advisory and (3) securitisation transactions incorporating integration of environmental, social and governance (ESG) factors, by industry?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Give revenue in your presentation currency for each of the three transaction types, broken down by industry."
+    },
+    {
+     "item": ".2",
+     "text": "What are (1) the number and (2) the total value of your investments and loans incorporating integration of environmental, social and governance (ESG) factors, by industry?",
+     "type": "text",
+     "hint": "Unit: Number, Presentation currency · Report a count and a value (presentation currency) for each industry."
+    },
+    {
+     "item": ".3",
+     "text": "How does your organisation incorporate environmental, social and governance (ESG) factors in its investment banking and brokerage activities?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the ESG approaches used, which activities they apply to and how they influence decisions."
+    }
+   ]
+  },
+  {
+   "ref": "FN-IB-510a",
+   "title": "Business Ethics",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of monetary losses as a result of legal proceedings associated with fraud, insider trading, antitrust, anti-competitive behaviour, market manipulation, malpractice, or other related financial industry laws or regulations?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period, covering all legal proceedings of these kinds."
+    },
+    {
+     "item": ".2",
+     "text": "How do you describe your whistleblower policies and procedures?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how employees can report concerns, how reports are handled and protections against retaliation."
+    }
+   ]
+  },
+  {
+   "ref": "FN-IB-510b",
+   "title": "Professional Integrity",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the number and (2) the percentage of licensed employees and identified decision-makers with a record of investment-related investigations, consumer-initiated complaints, private civil litigations, or other regulatory proceedings?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) a count and (2) a percentage of licensed employees and decision-makers with such a record."
+    },
+    {
+     "item": ".2",
+     "text": "How many mediation and arbitration cases associated with professional integrity, including duty of care, did you have, by party?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of cases, broken down by party involved."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses as a result of legal proceedings associated with professional integrity, including duty of care?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period."
+    },
+    {
+     "item": ".4",
+     "text": "How does your organisation ensure professional integrity, including duty of care?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the policies, training, supervision and controls used to uphold professional integrity and duty of care."
+    }
+   ]
+  },
+  {
+   "ref": "FN-IB-550a",
+   "title": "Systemic Risk Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your Global Systemically Important Bank (G-SIB) score, by category?",
+     "type": "text",
+     "hint": "Unit: Basis points (bps) · Report the score in basis points for each G-SIB category, as used in the Basel Committee assessment."
+    },
+    {
+     "item": ".2",
+     "text": "How does your organisation integrate the results of mandatory and voluntary stress tests into capital adequacy planning, long-term corporate strategy, and other business activities?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how stress test results feed into capital planning, strategy and business decisions."
+    }
+   ]
+  },
+  {
+   "ref": "FN-IB-550b",
+   "title": "Employee Incentives & Risk-taking",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of total remuneration is variable for Material Risk Takers (MRTs)?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report a percentage (0 to 100) of total remuneration that is variable for MRTs."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of the variable remuneration of Material Risk Takers (MRTs) had malus or clawback provisions applied?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report a percentage (0 to 100) of MRT variable remuneration to which malus or clawback was applied."
+    },
+    {
+     "item": ".3",
+     "text": "What are your policies around supervision, control and validation of traders' pricing of Level 3 assets and liabilities?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the oversight, independent price verification and validation processes for Level 3 valuations."
+    }
+   ]
+  },
+  {
+   "ref": "FN-IB-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What are (1) the number and (2) the value of (a) underwriting, (b) advisory and (c) securitisation transactions?",
+     "type": "text",
+     "hint": "Unit: Number, Presentation currency · Report a count and a value (presentation currency) for each of the three transaction types."
+    },
+    {
+     "item": ".B",
+     "text": "What are (1) the number and (2) the value of your proprietary investments and loans, by sector?",
+     "type": "text",
+     "hint": "Unit: Number, Presentation currency · Report a count and a value (presentation currency) for each sector."
+    },
+    {
+     "item": ".C",
+     "text": "What are (1) the number and (2) the value of your market making transactions in (a) fixed income, (b) equity, (c) currency, (d) derivatives and (e) commodity products?",
+     "type": "text",
+     "hint": "Unit: Number, Presentation currency · Report a count and a value (presentation currency) for each of the five product types."
+    }
+   ]
+  }
+ ]
+}

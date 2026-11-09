@@ -1,0 +1,167 @@
+{
+ "summary": "This standard covers the Containers & Packaging industry, which converts metal, plastic, paper and glass into packaging such as cardboard, bottles, cans and drums. Its disclosure topics are greenhouse gas emissions, air quality, energy and water management, waste, product safety, product lifecycle management and supply chain management.",
+ "disclosures": [
+  {
+   "ref": "RT-CP-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's gross global Scope 1 emissions, and what percentage is covered under emissions-limiting regulations?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) CO2-e, Percentage (%) · Report gross global Scope 1 GHG emissions in tonnes CO2-e and the percentage covered under emissions-limiting regulations such as an emissions trading scheme."
+    },
+    {
+     "item": ".2",
+     "text": "What is your organisation's long- and short-term strategy or plan to manage Scope 1 emissions, what are your emissions reduction targets, and how have you performed against them?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe the strategy or plan, the targets (scope, base year, timeframe) and an analysis of performance against those targets, including any factors affecting progress."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CP-120a",
+   "title": "Air Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What quantities of the following air pollutants did your organisation emit: (1) NOx (excluding N2O), (2) SOx, (3) volatile organic compounds (VOCs) and (4) particulate matter (PM)?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report emissions in tonnes separately for (1) NOx excluding N2O, (2) SOx, (3) VOCs and (4) PM."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CP-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your organisation's (1) total energy consumed, (2) percentage grid electricity, (3) percentage renewable and (4) total self-generated energy?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy consumed in GJ, (2) percentage from grid electricity, (3) percentage from renewable sources and (4) total self-generated energy in GJ."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CP-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's (1) total water withdrawn and (2) total water consumed, and what percentage of each is in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m3), Percentage (%) · Report (1) total water withdrawn and (2) total water consumed in thousand m3, and the percentage of each in High or Extremely High Baseline Water Stress regions."
+    },
+    {
+     "item": ".2",
+     "text": "What water management risks does your organisation face, and what strategies and practices do you use to mitigate them?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe water-related risks (scarcity, quality, regulation, cost), the mitigation strategies and practices, and any targets and performance against them."
+    },
+    {
+     "item": ".3",
+     "text": "How many incidents of non-compliance associated with water quality permits, standards and regulations did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of non-compliance incidents with water quality permits, standards and regulations in the period."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CP-150a",
+   "title": "Waste Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What amount of hazardous waste did your organisation generate, and what percentage was recycled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report the total hazardous waste generated in tonnes and the percentage recycled, using the applicable regulatory definition."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CP-250a",
+   "title": "Product Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "(1) How many product recalls did your organisation issue, and (2) how many units were recalled in total?",
+     "type": "text",
+     "hint": "Unit: Number · Report (1) the number of recalls issued and (2) the total units recalled, covering voluntary and mandated recalls in the period."
+    },
+    {
+     "item": ".2",
+     "text": "What process does your organisation use to identify and manage emerging materials and chemicals of concern?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe how emerging materials and chemicals of concern are identified, assessed and managed, including regulatory monitoring, customer requirements and substitution efforts."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CP-410a",
+   "title": "Product Lifecycle Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your raw materials, by weight, come from (1) recycled content, (2) renewable resources, and (3) renewable and recycled content?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) by weight · Report the percentage of raw materials by weight for each of (1) recycled content, (2) renewable resources and (3) combined renewable and recycled content."
+    },
+    {
+     "item": ".2",
+     "text": "What was your organisation's revenue from products that are reusable, recyclable or compostable?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report revenue from products that are reusable, recyclable or compostable in your presentation currency for the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "What strategies does your organisation use to reduce the environmental impact of its packaging throughout its lifecycle?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe strategies across the packaging lifecycle, such as lightweighting, recycled content, design for recyclability, reuse and end-of-life programmes, with any targets and progress."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CP-430a",
+   "title": "Supply Chain Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What total amount of wood fibre did your organisation procure, and what percentage came from certified sources?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report total wood fibre procured in tonnes and the percentage from certified sources, naming the certification schemes (for example FSC or PEFC)."
+    },
+    {
+     "item": ".2",
+     "text": "What total amount of aluminium did your organisation purchase, and what percentage came from certified sources?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report total aluminium purchased in tonnes and the percentage from certified sources, naming the certification schemes (for example ASI)."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CP-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was your organisation's amount of production, by substrate?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report production in tonnes for each substrate, such as paper/wood, glass, metal and plastic."
+    },
+    {
+     "item": ".B",
+     "text": "What percentage of your production, by revenue, is (1) paper/wood, (2) glass, (3) metal and (4) plastic?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) by revenue · Report the percentage of production by revenue for each of (1) paper/wood, (2) glass, (3) metal and (4) plastic."
+    },
+    {
+     "item": ".C",
+     "text": "How many employees does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of employees; state whether it is a headcount or full-time equivalent figure."
+    }
+   ]
+  }
+ ]
+}

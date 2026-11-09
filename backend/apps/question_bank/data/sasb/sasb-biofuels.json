@@ -1,0 +1,131 @@
+{
+ "summary": "This standard covers biofuels producers that turn organic feedstocks such as food and oil crops into fuels like ethanol and biodiesel. Its disclosure topics are air quality, water management in manufacturing, lifecycle emissions balance, feedstock sourcing and environmental impacts, legal and regulatory environment, and operational safety and emergency response.",
+ "disclosures": [
+  {
+   "ref": "RR-BI-120a",
+   "title": "Air Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your organisation's air emissions, in metric tonnes, of (1) NOx (excluding N2O), (2) SOx, (3) volatile organic compounds (VOCs), (4) particulate matter (PM10) and (5) hazardous air pollutants (HAPs)?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report the metric tonnes emitted for each of the five pollutants separately: NOx (excluding N2O), SOx, VOCs, PM10 and HAPs. State the reporting period and how emissions were estimated or measured."
+    },
+    {
+     "item": ".2",
+     "text": "How many incidents of non-compliance with air quality permits, standards and regulations did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of non-compliance incidents in the reporting period. Include incidents involving permits, standards and regulations."
+    }
+   ]
+  },
+  {
+   "ref": "RR-BI-140a",
+   "title": "Water Management in Manufacturing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were (1) the total water withdrawn and (2) the total water consumed by your organisation, in thousand cubic metres, and what percentage of each was in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report thousand cubic metres for (1) total water withdrawn and (2) total water consumed, plus the percentage of each in regions with High or Extremely High Baseline Water Stress. Note the tool used to assess water stress and the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "What are your organisation's water management risks, and what strategies and practices do you use to mitigate them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the water management risks (for example water availability, quality or regulation), the strategies and practices used to mitigate them, and any targets and performance against them."
+    },
+    {
+     "item": ".3",
+     "text": "How many incidents of non-compliance with water quality permits, standards and regulations did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of non-compliance incidents in the reporting period. Include incidents involving water quality permits, standards and regulations."
+    }
+   ]
+  },
+  {
+   "ref": "RR-BI-410a",
+   "title": "Lifecycle Emissions Balance",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your lifecycle greenhouse gas (GHG) emissions, in grammes of CO2-e per megajoule, for each type of biofuel you produce?",
+     "type": "text",
+     "hint": "Unit: Grammes of CO₂-e per megajoule (MJ) · Report the lifecycle GHG emissions for each biofuel type (for example ethanol, biodiesel, biogas) in g CO2-e/MJ. State the lifecycle methodology or regulatory pathway used."
+    }
+   ]
+  },
+  {
+   "ref": "RR-BI-430a",
+   "title": "Sourcing & Environmental Impacts of Feedstock Production",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your organisation's strategy to manage the risks associated with the environmental impacts of feedstock production?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the environmental impacts of feedstock production (such as land use change, water use and biodiversity), the risks they create and the strategy, standards or sourcing practices used to manage them."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your biofuel production, by volume in litres, is third-party certified to an environmental sustainability standard?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) of litres · Report the percentage of litres of biofuel production certified. Name the certification standards in the answer notes if known."
+    }
+   ]
+  },
+  {
+   "ref": "RR-BI-530a",
+   "title": "Management of the Legal & Regulatory Environment",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the amount of subsidies your organisation received through government programmes?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total value of subsidies received through government programmes in your presentation currency for the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "What are your organisation's positions on government regulations or policy proposals that address the environmental and social factors affecting the biofuels industry?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your corporate positions on relevant regulations or policy proposals (for example renewable fuel mandates and carbon policy) and how you engage with policymakers."
+    }
+   ]
+  },
+  {
+   "ref": "RR-BI-540a",
+   "title": "Operational Safety, Emergency Preparedness & Response",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your Process Safety Incidents Count (PSIC), Process Safety Total Incident Rate (PSTIR) and Process Safety Incident Severity Rate (PSISR)?",
+     "type": "text",
+     "hint": "Unit: Number, Rate · Report all three measures: the count of process safety incidents (PSIC), the total incident rate (PSTIR) and the severity rate (PSISR). State the hours-worked basis for the rates."
+    }
+   ]
+  },
+  {
+   "ref": "RR-BI-000",
+   "title": "Activity Metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What is your organisation's biofuel production capacity, in millions of litres?",
+     "type": "number",
+     "hint": "Unit: Millions of litres (ML) · Report total biofuel production capacity in millions of litres for the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "What was your production, in millions of litres, of (1) renewable fuel, (2) advanced biofuel, (3) biodiesel and (4) cellulosic biofuel?",
+     "type": "text",
+     "hint": "Unit: Millions of litres (ML) · Report production volumes separately for renewable fuel, advanced biofuel, biodiesel and cellulosic biofuel."
+    },
+    {
+     "item": ".C",
+     "text": "What amount of feedstock did your organisation consume in production, in metric tonnes?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) · Report the total feedstock consumed in production in metric tonnes for the reporting period."
+    }
+   ]
+  }
+ ]
+}

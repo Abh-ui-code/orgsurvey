@@ -1,0 +1,83 @@
+{
+ "summary": "The Building Products & Furnishings standard covers entities that make home improvement products, home and office furnishings and structural wood building materials such as flooring, furniture, plywood and lumber. Its disclosure topics are energy management in manufacturing, chemicals in products, product lifecycle impacts and wood supply chain management.",
+ "disclosures": [
+  {
+   "ref": "CG-BF-130a",
+   "title": "Energy Management in Manufacturing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) your total energy consumed, (2) the percentage of it that is grid electricity and (3) the percentage that is renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy consumed in gigajoules, (2) the percentage that is grid electricity and (3) the percentage that is renewable, including self-generated renewable energy."
+    }
+   ]
+  },
+  {
+   "ref": "CG-BF-250a",
+   "title": "Management of Chemicals in Products",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What processes do you use to assess and manage risks or hazards associated with chemicals in your products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you identify chemicals of concern in products, assess their hazards and risks, and manage or substitute them."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your eligible products, by revenue, meet volatile organic compound (VOC) emissions and content standards?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by revenue · Report the percentage of revenue from eligible products meeting VOC emissions and content standards, and name the standards applied."
+    }
+   ]
+  },
+  {
+   "ref": "CG-BF-410a",
+   "title": "Product Lifecycle Environmental Impacts",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What efforts do you make to manage product lifecycle impacts and to meet demand for sustainable products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your efforts to reduce lifecycle environmental impacts and meet demand for sustainable products, such as recycled content, certifications and design changes."
+    },
+    {
+     "item": ".2",
+     "text": "What is (1) the weight of end-of-life material you recovered, and (2) what percentage of the recovered materials was recycled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) by weight · Report (1) the weight of end-of-life material recovered in metric tonnes and (2) the percentage of that recovered material, by weight, that was recycled."
+    }
+   ]
+  },
+  {
+   "ref": "CG-BF-430a",
+   "title": "Wood Supply Chain Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is (1) the total weight of wood fibre materials you purchased, (2) the percentage from third-party certified forestlands, (3) the percentage by standard, (4) the percentage certified to other wood fibre standards and (5) the percentage by standard?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) by weight · Report (1) total wood fibre purchased in metric tonnes, (2) the percentage by weight from third-party certified forestlands, (3) the split by standard, (4) the percentage certified to other wood fibre standards and (5) the split by standard."
+    }
+   ]
+  },
+  {
+   "ref": "CG-BF-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was your annual production?",
+     "type": "text",
+     "hint": "Unit: as defined by the entity · Report annual production in the units that suit your products (for example tonnes, cubic metres or units), stating the unit used."
+    },
+    {
+     "item": ".B",
+     "text": "What is the area of your manufacturing facilities, in square metres?",
+     "type": "number",
+     "hint": "Unit: Square metres (m²) · Report the total area of manufacturing facilities in square metres."
+    }
+   ]
+  }
+ ]
+}

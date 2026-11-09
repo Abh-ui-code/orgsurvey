@@ -15,13 +15,13 @@ import { SearchInput } from "@/components/ui/search-input";
 import { Select } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { GRI_CATEGORY } from "@/app/(dashboard)/question-bank/_components/gri-tab";
+import { GRI_CATEGORY, SASB_CATEGORY, TCFD_CATEGORY, RSPO_CATEGORY, WEF_CATEGORY, frameworkOf } from "@/app/(dashboard)/question-bank/_components/gri-tab";
 import { useGriStandards } from "@/hooks/use-gri-standards";
 import { useBankCategories } from "@/hooks/use-bank-categories";
 import { useBankQuestions } from "@/hooks/use-bank-questions";
 import { useDebounced } from "@/hooks/use-debounced";
 import { useSurvey } from "@/hooks/use-surveys";
-import { GRI_SERIES, questionTypeLabel } from "@/types/question";
+import { FRAMEWORKS, questionTypeLabel, type StandardFramework } from "@/types/question";
 import type { SurveyDetail } from "@/types/survey";
 import { useAddQuestion, useDeleteQuestion, useDeleteSection } from "../_hooks/use-survey-builder";
 
@@ -33,9 +33,12 @@ function BankPicker({ survey, sectionId }: { survey: SurveyDetail; sectionId: st
   const add = useAddQuestion(survey.id);
   const remove = useDeleteQuestion(survey.id);
   const [search, setSearch] = useState("");
-  const [category, setCategory] = useState(useSearchParams().get("gri") ? GRI_CATEGORY : "");
+  // Coming back from a standard's question page (?gri=gri or ?gri=sasb) reopens that standards list.
+  const fromUrl = useSearchParams().get("gri");
+  const [category, setCategory] = useState(fromUrl === "sasb" ? SASB_CATEGORY : fromUrl === "tcfd" ? TCFD_CATEGORY : fromUrl === "rspo" ? RSPO_CATEGORY : fromUrl === "wef" ? WEF_CATEGORY : fromUrl ? GRI_CATEGORY : "");
   const [size, setSize] = useState(PAGE);
-  const gri = category === GRI_CATEGORY;
+  const framework = frameworkOf(category);
+  const gri = framework !== null;
   const bank = useBankQuestions({ search: useDebounced(search), category: gri ? "" : category, page_size: size }, !gri);
 
   // Which survey question (in any section) each bank question became, so "Added" can be undone.
@@ -56,7 +59,7 @@ function BankPicker({ survey, sectionId }: { survey: SurveyDetail; sectionId: st
             setSearch(v);
             setSize(PAGE);
           }}
-          placeholder={gri ? "Search GRI standards" : "Search the question bank"}
+          placeholder={framework ? `Search ${framework.toUpperCase()} standards` : "Search the question bank"}
           className="min-w-60 flex-1"
         />
         <Select
@@ -74,11 +77,15 @@ function BankPicker({ survey, sectionId }: { survey: SurveyDetail; sectionId: st
             </option>
           ))}
           <option value={GRI_CATEGORY}>GRI standards</option>
+          <option value={SASB_CATEGORY}>SASB standards</option>
+          <option value={TCFD_CATEGORY}>TCFD recommendations</option>
+          <option value={RSPO_CATEGORY}>RSPO standards</option>
+          <option value={WEF_CATEGORY}>WEF metrics</option>
         </Select>
       </div>
 
       {gri ? (
-        <GriPicker survey={survey} search={search} sectionId={sectionId} />
+        <GriPicker survey={survey} search={search} sectionId={sectionId} framework={framework} />
       ) : (
         <>
           {bank.isPending ? (
@@ -156,9 +163,10 @@ function BankPicker({ survey, sectionId }: { survey: SurveyDetail; sectionId: st
   );
 }
 
-/** Choose which questions of a GRI standard go into the survey. */
-function GriPicker({ survey, search, sectionId }: { survey: SurveyDetail; search: string; sectionId: string }) {
-  const standards = useGriStandards();
+/** Choose which questions of a GRI or SASB standard go into the survey. */
+function GriPicker({ survey, search, sectionId, framework }: { survey: SurveyDetail; search: string; sectionId: string; framework: StandardFramework }) {
+  const f = FRAMEWORKS[framework];
+  const standards = useGriStandards(framework);
   const remove = useDeleteSection(survey.id);
   const router = useRouter();
   const open = (standardId: string) => router.push(`/surveys/${survey.id}/add-question/gri/${standardId}?section=${sectionId}`);
@@ -170,14 +178,14 @@ function GriPicker({ survey, search, sectionId }: { survey: SurveyDetail; search
   return (
     <div className="space-y-4">
       <p className="text-sm text-ink-muted">
-        Open a GRI standard and tick the questions you want. Only the ticked questions are added, as one section you then assign to one respondent.
+        Open a {f.short} standard and tick the questions you want. Only the ticked questions are added, as one section you then assign to one respondent.
       </p>
       {standards.isPending ? (
         <Skeleton className="h-40" />
       ) : rows.length === 0 ? (
-        <EmptyState icon={FileText} title="No GRI standard matches" description="Try a different search." />
+        <EmptyState icon={FileText} title={`No ${f.short} standard matches`} description="Try a different search." />
       ) : (
-        GRI_SERIES.map((series) => {
+        f.groups.map((series) => {
           const group = rows.filter((s) => s.series === series.value);
           if (group.length === 0) return null;
           return (

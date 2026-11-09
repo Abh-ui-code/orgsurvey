@@ -1,0 +1,89 @@
+{
+ "summary": "The Real Estate Services standard covers organisations that provide property management, brokerage, appraisal and information services to owners, tenants, investors and developers. Its disclosure topics are sustainability services and transparent information and management of conflicts of interest.",
+ "disclosures": [
+  {
+   "ref": "IF-RS-410a",
+   "title": "Sustainability Services",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was your revenue from energy and sustainability services?",
+     "type": "number",
+     "hint": "Unit: presentation currency · Report revenue from energy and sustainability services in your presentation currency."
+    },
+    {
+     "item": ".2",
+     "text": "What (1) floor area and (2) number of buildings under management were provided with energy and sustainability services?",
+     "type": "text",
+     "hint": "Unit: square metres; number · Report both the floor area in m2 and the number of buildings."
+    },
+    {
+     "item": ".3",
+     "text": "What (1) floor area and (2) number of buildings under management obtained an energy rating?",
+     "type": "text",
+     "hint": "Unit: square metres; number · Report both the floor area in m2 and the number of buildings, naming the rating scheme."
+    }
+   ]
+  },
+  {
+   "ref": "IF-RS-510a",
+   "title": "Transparent Information & Management of Conflict of Interest",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was your brokerage revenue from dual agency transactions?",
+     "type": "number",
+     "hint": "Unit: presentation currency · Report brokerage revenue from transactions where you acted for both parties."
+    },
+    {
+     "item": ".2",
+     "text": "What was your revenue from transactions associated with appraisal services?",
+     "type": "number",
+     "hint": "Unit: presentation currency · Report revenue from transactions associated with appraisal services."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with professional integrity, including duty of care?",
+     "type": "number",
+     "hint": "Unit: presentation currency · Report total monetary losses from such legal proceedings in your presentation currency."
+    }
+   ]
+  },
+  {
+   "ref": "IF-RS-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many property management clients do you have, categorised by (1) tenants and (2) real estate owners?",
+     "type": "text",
+     "hint": "Unit: number · Report the number of clients in each category."
+    },
+    {
+     "item": ".B",
+     "text": "What floor area do you manage where you have owner operational control?",
+     "type": "number",
+     "hint": "Unit: square metres (m2) · Report floor area under management with owner operational control."
+    },
+    {
+     "item": ".C",
+     "text": "How many buildings do you manage where you have owner operational control?",
+     "type": "number",
+     "hint": "Unit: number · Report the number of buildings under management with owner operational control."
+    },
+    {
+     "item": ".D",
+     "text": "How many leases did you transact, categorised by (1) tenants and (2) real estate owners?",
+     "type": "text",
+     "hint": "Unit: number · Report the number of leases transacted for each category."
+    },
+    {
+     "item": ".E",
+     "text": "How many appraisals did you provide?",
+     "type": "number",
+     "hint": "Unit: number · Report the number of appraisals provided in the reporting period."
+    }
+   ]
+  }
+ ]
+}

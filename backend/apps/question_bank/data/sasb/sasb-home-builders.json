@@ -1,0 +1,143 @@
+{
+ "summary": "The Home Builders standard covers organisations that build new homes and develop residential communities, from land acquisition through construction and sales. Its disclosure topics are land use and ecological impacts, workforce health and safety, design for resource efficiency, community impacts of new developments and climate change adaptation.",
+ "disclosures": [
+  {
+   "ref": "IF-HB-160a",
+   "title": "Land Use & Ecological Impacts",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many (1) lots and (2) homes did you deliver on redevelopment sites?",
+     "type": "text",
+     "hint": "Unit: number · Report the number of lots and the number of homes delivered on redevelopment sites."
+    },
+    {
+     "item": ".2",
+     "text": "How many (1) lots and (2) homes did you deliver in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: number · Report lots and homes delivered in such regions."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with environmental regulations?",
+     "type": "number",
+     "hint": "Unit: presentation currency · Report total monetary losses from such legal proceedings in your presentation currency."
+    },
+    {
+     "item": ".4",
+     "text": "What process do you use to integrate environmental considerations into site selection, site design, and site development and construction?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how environmental considerations are built into each of the three stages."
+    }
+   ]
+  },
+  {
+   "ref": "IF-HB-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total recordable incident rate (TRIR) and (2) fatality rate for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: rate · Report both rates separately for direct employees and contract employees."
+    }
+   ]
+  },
+  {
+   "ref": "IF-HB-410a",
+   "title": "Design for Resource Efficiency",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many homes obtained a certified residential energy efficiency rating, and what was the average rating?",
+     "type": "text",
+     "hint": "Unit: number; rating · Report (1) the number of certified homes and (2) the average rating, naming the rating system used."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your installed water fixtures are certified to a water efficiency standard?",
+     "type": "number",
+     "hint": "Unit: percentage · Report the percentage of installed fixtures certified, naming the standard."
+    },
+    {
+     "item": ".3",
+     "text": "How many homes did you deliver that were certified to a third-party multi-attribute green building standard?",
+     "type": "number",
+     "hint": "Unit: number · Report the number of homes delivered and name the green building standards."
+    },
+    {
+     "item": ".4",
+     "text": "What risks and opportunities arise from incorporating resource efficiency into home design, and how do you communicate the benefits to customers?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the risks and opportunities and how benefits are communicated to buyers."
+    }
+   ]
+  },
+  {
+   "ref": "IF-HB-410b",
+   "title": "Community Impacts of New Developments",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How do proximity and access to infrastructure, services and economic centres affect your site selection and development decisions?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how these factors are weighed in site selection and development."
+    },
+    {
+     "item": ".2",
+     "text": "How many (1) lots and (2) homes did you deliver on infill sites?",
+     "type": "text",
+     "hint": "Unit: number · Report the number of lots and homes delivered on infill sites."
+    },
+    {
+     "item": ".3",
+     "text": "How many homes did you deliver in compact developments, and what was the average density?",
+     "type": "text",
+     "hint": "Unit: number; units per hectare · Report (1) homes delivered in compact developments and (2) average density in units per hectare."
+    }
+   ]
+  },
+  {
+   "ref": "IF-HB-420a",
+   "title": "Climate Change Adaptation",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many of your lots are located in 100-year flood zones?",
+     "type": "number",
+     "hint": "Unit: number · Report the number of lots located in 100-year flood zones."
+    },
+    {
+     "item": ".2",
+     "text": "How do you analyse climate change risk exposure, how systematic is your portfolio exposure, and what strategies do you use to mitigate the risks?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the exposure analysis, the degree of portfolio-wide exposure and the mitigation strategies."
+    }
+   ]
+  },
+  {
+   "ref": "IF-HB-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many controlled lots do you have?",
+     "type": "number",
+     "hint": "Unit: number · Report the number of controlled lots at the end of the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "How many homes did you deliver?",
+     "type": "number",
+     "hint": "Unit: number · Report the number of homes delivered in the reporting period."
+    },
+    {
+     "item": ".C",
+     "text": "How many active selling communities do you have?",
+     "type": "number",
+     "hint": "Unit: number · Report the number of active selling communities at the end of the reporting period."
+    }
+   ]
+  }
+ ]
+}

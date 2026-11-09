@@ -1,0 +1,107 @@
+{
+ "summary": "This standard covers manufacturers of wind turbines, blades, towers and other wind power components, and developers that build and manage wind energy projects. Its disclosure topics are workforce health and safety, ecological impacts of project development, materials sourcing and materials efficiency.",
+ "disclosures": [
+  {
+   "ref": "RR-WT-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) your total recordable incident rate (TRIR) and (2) your fatality rate for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate · Report the rate for each of: TRIR for direct employees, TRIR for contract employees, fatality rate for direct employees and fatality rate for contract employees. State the rate basis (for example per 200,000 hours worked)."
+    }
+   ]
+  },
+  {
+   "ref": "RR-WT-410a",
+   "title": "Ecological Impacts of Project Development",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is the average A-weighted sound power level of your wind turbines, in dB(A), by wind turbine class?",
+     "type": "text",
+     "hint": "Unit: dB(A) · Report the average A-weighted sound power level in dB(A) for each wind turbine class."
+    },
+    {
+     "item": ".2",
+     "text": "What was the value of your backlog cancellations associated with community or ecological impacts?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the value of backlog cancellations linked to community or ecological impacts in your presentation currency."
+    },
+    {
+     "item": ".3",
+     "text": "What efforts do you make to address the ecological and community impacts of wind energy production through turbine design?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the impacts addressed (such as noise, wildlife and visual effects) and the turbine design features or measures used to reduce them."
+    }
+   ]
+  },
+  {
+   "ref": "RR-WT-440a",
+   "title": "Materials Sourcing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation manage the risks associated with the use of critical materials?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the critical materials used (for example rare earth or scarce metals), the supply, price or regulatory risks identified, and the actions taken to manage them such as substitution, recycling or supplier diversification."
+    }
+   ]
+  },
+  {
+   "ref": "RR-WT-440b",
+   "title": "Materials Efficiency",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were the top five materials your organisation consumed, by weight, in metric tonnes?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · List the five materials consumed in the greatest quantity and the weight of each in metric tonnes."
+    },
+    {
+     "item": ".2",
+     "text": "What is the average top head mass per turbine capacity, in tonnes per megawatt, by wind turbine class?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes per megawatts (t/MW) · Report average top head mass divided by turbine capacity in t/MW for each wind turbine class."
+    },
+    {
+     "item": ".3",
+     "text": "What is your approach to optimising the materials efficiency of your wind turbine design?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe design approaches that reduce material use per unit of capacity, such as lightweighting, material substitution and durability."
+    }
+   ]
+  },
+  {
+   "ref": "RR-WT-000",
+   "title": "Activity Metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many wind turbines did you deliver, by wind turbine class?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of wind turbines delivered in the period for each wind turbine class."
+    },
+    {
+     "item": ".B",
+     "text": "What was the aggregate capacity of the wind turbines you delivered, in megawatts, by wind turbine class?",
+     "type": "text",
+     "hint": "Unit: Megawatts (MW) · Report aggregate delivered turbine capacity in MW for each wind turbine class."
+    },
+    {
+     "item": ".C",
+     "text": "What was the amount of your turbine backlog?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the value of the turbine backlog in your presentation currency."
+    },
+    {
+     "item": ".D",
+     "text": "What was the aggregate capacity of your turbine backlog, in megawatts?",
+     "type": "number",
+     "hint": "Unit: Megawatts (MW) · Report aggregate capacity of the turbine backlog in MW."
+    }
+   ]
+  }
+ ]
+}

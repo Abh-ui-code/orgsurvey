@@ -1,0 +1,335 @@
+{
+  "summary": "Principle 7 - RSPO Growers protect, conserve, and enhance ecosystems as responsible environmental stewards. It covers integrated pest management and pesticide use, waste and nutrient recycling, soil conservation, peatland protection, water management, greenhouse gas and air pollution reduction, and the protection of HCVs and HCS forests from land clearing.",
+  "disclosures": [
+    {
+      "ref": "7.1",
+      "title": "The Unit of Certification shall practise Integrated Pest Management to effectively manage pests, diseases, weeds and invasive introduced species.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification developed and implemented an Integrated Pest Management (IPM) plan to reduce the negative impacts of unsustainable pest management methods on the environment and human health?",
+          "type": "yes_no",
+          "hint": "Indicator 7.1.1 (Critical). Requires an IPM plan that is developed and implemented to mitigate negative impacts of unsustainable pest management on the environment and human health. Attach the IPM plan and implementation records."
+        },
+        {
+          "item": ".2",
+          "text": "Does your Unit of Certification avoid using restricted and hazardous pesticides that endanger the health of workers, families, communities or the environment (unless validated by a due diligence process or authorised by government for pest outbreaks)?",
+          "type": "yes_no",
+          "hint": "Indicator 7.1.2 (Critical). Covers pesticides that are WHO Class 1A/1B; GHS carcinogenic/mutagenic/reprotoxic Cat. 1A/1B; listed by the Stockholm or Rotterdam Conventions; restricted or prohibited nationally; and/or paraquat. Attach due diligence or government authorisation if any exception was used."
+        },
+        {
+          "item": ".3",
+          "text": "Does your Unit of Certification record all pesticide usage, including trade name, active ingredient, LD50, quantity of active ingredient used, period of usage, location/area of application and reason for usage?",
+          "type": "yes_no",
+          "hint": "Indicator 7.1.3 (Critical). Records must include trade name, active ingredient, LD50, quantity of active ingredient used, period of usage, location/area of application and reason for usage. Attach sample records."
+        },
+        {
+          "item": ".4",
+          "text": "Is your Unit of Certification free of prophylactic use of pesticides (except in exceptional circumstances identified in national best practice guidelines)?",
+          "type": "yes_no",
+          "hint": "Indicator 7.1.4 (Critical). No prophylactic use of pesticides unless in exceptional circumstances identified in national best practice guidelines. If an exception applies, describe it and attach the supporting guideline."
+        },
+        {
+          "item": ".5",
+          "text": "Does your Unit of Certification avoid aerial spraying of pesticides (or, where unavoidable, obtain prior government approval and inform affected local communities at least 48 hours before)?",
+          "type": "yes_no",
+          "hint": "Indicator 7.1.5 (Critical). No aerial spraying unless exceptional and no viable alternative exists. If unavoidable: prior government approval and detailed information to potentially affected communities at least 48 hours before. Targeted spraying with drones is permitted. Attach approvals and notices."
+        },
+        {
+          "item": ".6",
+          "text": "Does your Unit of Certification prohibit the introduction of species listed in the Global Invasive Species Database, the CABI Digital Library and/or national regulation?",
+          "type": "yes_no",
+          "hint": "Indicator 7.1.6 (Critical). Introduction of species referenced in the Global Invasive Species Database and/or CABI Digital Library and/or national regulation is prohibited. Attach the relevant policy or procedure."
+        },
+        {
+          "item": ".7",
+          "text": "Where invasive or prohibited species were already in use before November 2024, does your Unit of Certification manage their use in line with internationally accepted scientific protocols or national regulations?",
+          "type": "yes_no",
+          "hint": "Indicator 7.1.7 (Critical). Applies to invasive or prohibited species already in use before November 2024. Use must be managed according to internationally accepted scientific protocols or national regulations. Answer yes if not applicable and say so; attach management evidence."
+        },
+        {
+          "item": ".8",
+          "text": "Does your Unit of Certification avoid using fire for pest or disease control (or, where fire must be used, hold prior government approval and implement a plan to prevent, mitigate and/or repair environmental damage)?",
+          "type": "yes_no",
+          "hint": "Indicator 7.1.8. Fire for pest or disease control is prohibited unless in exceptional circumstances. If used, evidence of prior government approval and a plan to prevent, mitigate and/or repair environmental damage are required. Attach both."
+        }
+      ]
+    },
+    {
+      "ref": "7.2",
+      "title": "The Unit of Certification shall reduce, recycle, reuse, and dispose of waste/by-products in an environmentally and socially responsible manner.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification developed and implemented a waste management plan to reduce, minimise, recycle and reuse waste from its operations and non-operational activities, including responsible disposal of waste or by-products where applicable?",
+          "type": "yes_no",
+          "hint": "Indicator 7.2.1. The plan must cover waste from operations and non-operational activities, and include responsible disposal of waste or by-products where applicable. Attach the plan and implementation records."
+        },
+        {
+          "item": ".2",
+          "text": "Has your Unit of Certification developed and implemented a nutrient recycling plan that includes recycling of biomass (EFB, POME, palm residues) and optimal use of inorganic fertilisers?",
+          "type": "yes_no",
+          "hint": "Indicator 7.2.2. The nutrient recycling plan shall include recycling of biomass (Empty Fruit Bunches/EFB, Palm Oil Mill Effluent/POME, palm residues) and optimal use of inorganic fertilisers. Attach the plan."
+        },
+        {
+          "item": ".3",
+          "text": "Can your Unit of Certification demonstrate that workers have job-specific training to implement the waste management plan?",
+          "type": "yes_no",
+          "hint": "Indicator 7.2.3 (Critical). Attach training records, attendance lists or curricula showing job-specific training for workers on implementing the waste management plan."
+        },
+        {
+          "item": ".4",
+          "text": "Does your Unit of Certification avoid using fire for waste disposal (except in exceptional circumstances) and avoid direct disposal of waste into watercourses or other ecosystems?",
+          "type": "yes_no",
+          "hint": "Indicator 7.2.4. Use of fire for waste disposal is prohibited unless in exceptional circumstances; direct disposal of waste into watercourses or other ecosystems is prohibited. Describe any exceptional use."
+        }
+      ]
+    },
+    {
+      "ref": "7.3",
+      "title": "The Unit of Certification shall not conduct new plantings on steep terrain, marginal soil(s), and fragile soil(s). The UoC shall adopt best soil conservation practices for minimising soil erosion and soil degradation in these areas.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification identified and mapped areas of steep terrain, marginal soils and fragile soils, and used soil surveys and topographic information to plan drainage, irrigation, roads and other infrastructure?",
+          "type": "yes_no",
+          "hint": "Indicator 7.3.1 (Critical). Areas of steep terrain, marginal and fragile soils must be identified and mapped. Soil surveys and topographic information must guide planning of drainage, irrigation, roads and infrastructure, and be taken into account in plans and operations. Attach maps and surveys."
+        },
+        {
+          "item": ".2",
+          "text": "Is your Unit of Certification free of new plantings and extensive replanting of oil palm on steep terrain?",
+          "type": "yes_no",
+          "hint": "Indicator 7.3.2 (Critical). No new plantings and no extensive replanting of oil palm on steep terrain. National Interpretations may define slope limits and 'extensive planting'. Attach slope maps and planting records."
+        },
+        {
+          "item": ".3",
+          "text": "Is your Unit of Certification free of new plantings and/or new development on marginal and/or fragile soils?",
+          "type": "yes_no",
+          "hint": "Indicator 7.3.3 (Critical). No new plantings and/or new development on marginal soil(s) and/or fragile soil(s). Procedural note: the RSPO New Planting Procedure is to be updated to reflect this. Attach soil maps and planting records."
+        },
+        {
+          "item": ".4",
+          "text": "Where replanting has taken place or is planned on marginal and/or fragile soils, does your Unit of Certification manage the area in line with the 'RSPO Best Management Practices (BMPs) for Soil'?",
+          "type": "yes_no",
+          "hint": "Indicator 7.3.4 (Critical). Replanting areas on marginal/fragile soils should be managed per the 'RSPO BMPs for Soil' (guidance still to be developed by RSPO); other approaches maintaining environmental integrity may apply. Answer yes if not applicable and say so."
+        }
+      ]
+    },
+    {
+      "ref": "7.4",
+      "title": "The Unit of Certification shall prohibit land clearing on peatland (regardless of depth) after the cut-off date of 15 November 2018. All plantings on peatland before the cut-off date shall be managed responsibly. All unplanted and set-aside peatlands are protected and conserved.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Is your Unit of Certification free of new plantings and/or development on peatland, regardless of depth, after 15 November 2018?",
+          "type": "yes_no",
+          "hint": "Indicator 7.4.1 (Critical). No new plantings and/or development on peatlands, regardless of depth, after 15 November 2018. Attach land-use history or maps as evidence."
+        },
+        {
+          "item": ".2",
+          "text": "Has your Unit of Certification mapped and inventoried all peatland areas (planted and unplanted) per RSPO Peat Inventory procedures, and made the map and inventory available to the RSPO Secretariat?",
+          "type": "yes_no",
+          "hint": "Indicator 7.4.2. Map and inventory all peatland areas, planted and unplanted, in accordance with RSPO procedures on Peat Inventory, and make the map and other inventory information available to the RSPO Secretariat. Attach the map and inventory."
+        },
+        {
+          "item": ".3",
+          "text": "Does your Unit of Certification prohibit activities that may disrupt peatland ecosystem integrity or hydrology on unplanted and set-aside peatlands, such as new drains, roads, dams, bunds, levees and power lines?",
+          "type": "yes_no",
+          "hint": "Indicator 7.4.3 (Critical). Any activities that may disrupt peatland ecosystem integrity or hydrology, including new construction of drains, roads, dams, bunds, levees and/or power lines on unplanted and set-aside peatlands, are prohibited."
+        },
+        {
+          "item": ".4",
+          "text": "Does your Unit of Certification protect and manage all unplanted and set-aside peatlands following the latest 'RSPO Manual on BMPs for Management and Rehabilitation of Peatlands' and associated audit guidance?",
+          "type": "yes_no",
+          "hint": "Indicator 7.4.4 (Critical). Protect and manage all unplanted and set-aside peatlands, guided by the latest version of the 'RSPO Manual on Best Management Practices (BMPs) for Management and Rehabilitation of Peatlands' and associated audit guidance. Attach management plans."
+        },
+        {
+          "item": ".5",
+          "text": "Are all existing plantings on peat managed according to the latest 'RSPO Manual on BMPs for Existing Oil Palm Cultivation on Peat' and associated audit guidance?",
+          "type": "yes_no",
+          "hint": "Indicator 7.4.5 (Critical). All existing plantings on peat must be managed according to the latest version of the 'RSPO Manual on Best Management Practices (BMPs) for Existing Oil Palm Cultivation on Peat' and associated audit guidance. Answer yes if not applicable and say so."
+        },
+        {
+          "item": ".6",
+          "text": "Has your Unit of Certification conducted a drainability assessment for oil palm planted on peat, in accordance with the latest 'RSPO Drainability Assessment Procedure', to determine suitability of replanting?",
+          "type": "yes_no",
+          "hint": "Indicator 7.4.6 (Critical). A drainability assessment must be conducted for oil palm planted on peat to determine replanting suitability, following the latest 'RSPO Drainability Assessment Procedure'. Attach the assessment report."
+        },
+        {
+          "item": ".7",
+          "text": "Where your RSPO Drainability Assessment shows oil palm must be phased out within at least 40 years or two cycles (whichever is greater) before reaching the natural gravity drainability limit, have you developed and implemented a plan to replace it with crops suited to a higher water table or rehabilitate with natural vegetation?",
+          "type": "yes_no",
+          "hint": "Indicator 7.4.7 (Critical). Applies where the report indicates phasing out of oil palm of at least 40 years, or two cycles (whichever is greater), before the natural gravity drainability limit. Plan to replace with crops for a higher water table (e.g. paludiculture) or rehabilitate with natural vegetation."
+        }
+      ]
+    },
+    {
+      "ref": "7.5",
+      "title": "The Unit of Certification shall demonstrate efforts to maintain the quality and availability of surface and groundwater, and mitigate/remedy those that occur.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification developed and implemented a water management plan, in consultation with affected communities, to promote efficient water use and maintain the quality and continued availability of surface and groundwater?",
+          "type": "yes_no",
+          "hint": "Indicator 7.5.1 (Critical). Water management plan to promote efficient use and maintain quality and continued availability of surface and groundwater, developed in consultation with affected communities. National Interpretations may further define the process. Attach the plan and consultation records."
+        },
+        {
+          "item": ".1 A",
+          "text": "Does your water management plan ensure the Unit of Certification does not restrict communities' access to clean water or contribute to pollution of water used by communities?",
+          "type": "yes_no",
+          "hint": "Indicator 7.5.1 A (Critical). The plan shall address that the UoC does not restrict access to clean water or contribute to pollution of water used by communities. Attach supporting evidence such as water quality monitoring or community feedback."
+        },
+        {
+          "item": ".1 B",
+          "text": "Does your water management plan ensure workers have adequate access to clean water?",
+          "type": "yes_no",
+          "hint": "Indicator 7.5.1 B (Critical). The plan shall address that workers have adequate access to clean water. Attach supporting evidence such as site inspection records or water quality tests."
+        },
+        {
+          "item": ".2",
+          "text": "Does your Unit of Certification record water consumption (mill water use per metric tonne of product) and water withdrawal (total volume extracted from surface and groundwater sources) at its mill(s)?",
+          "type": "yes_no",
+          "hint": "Indicator 7.5.2. Record water consumption (mill water use per metric tonne of product) and water withdrawal (total water volume extracted from surface and groundwater source) at the UoC's mill(s). Attach records. Answer yes if not applicable and say so."
+        },
+        {
+          "item": ".3",
+          "text": "Does your Unit of Certification protect watercourses and wetlands by maintaining and restoring riparian reserves and other buffer zones in line with the latest 'RSPO Manual on BMPs for the Management and Rehabilitation of Riparian Reserves'?",
+          "type": "yes_no",
+          "hint": "Indicator 7.5.3 (Critical). Maintain and restore appropriate riparian reserves and other buffer zones in line with the latest version of the 'RSPO Manual on Best Management Practices (BMPs) for the Management and Rehabilitation of Riparian Reserves'. Attach maps and restoration records."
+        },
+        {
+          "item": ".4",
+          "text": "Does your Unit of Certification treat and process palm oil mill effluent (POME) in compliance with national regulations and regularly monitor its discharge quantity and quality, especially BOD?",
+          "type": "yes_no",
+          "hint": "Indicator 7.5.4 (Critical). Treat and process POME in compliance with applicable national regulations. Discharge quantity and quality, especially Biochemical Oxygen Demand (BOD), must be regularly monitored. Attach monitoring results. Answer yes if not applicable and say so."
+        }
+      ]
+    },
+    {
+      "ref": "7.6",
+      "title": "The Unit of Certification shall demonstrate efforts to minimise and reduce greenhouse gas (GHG) emissions, air pollution associated with its existing activities and new developments, and reduce fossil fuel consumption by optimising the use of renewable energy.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification assessed its GHG emissions using the latest RSPO PalmGHG calculator, and developed, implemented and monitored an emissions reduction plan?",
+          "type": "yes_no",
+          "hint": "Indicator 7.6.1 (Critical). Identify and assess GHG emissions through the latest version of the RSPO PalmGHG calculator, develop and implement an emissions reduction plan, and implement and monitor the plan to reduce or minimise GHG emissions. Attach the calculator output and the plan."
+        },
+        {
+          "item": ".2",
+          "text": "Does your Unit of Certification publicly report its GHG emissions per product, as estimated with the latest RSPO PalmGHG calculator?",
+          "type": "yes_no",
+          "hint": "Indicator 7.6.2 (Critical). Publicly report GHG emissions per product, as estimated through the latest version of the RSPO PalmGHG calculator. Provide the link or location of the public report."
+        },
+        {
+          "item": ".3",
+          "text": "Has your Unit of Certification estimated the carbon stock of the proposed development area and the major potential sources of emissions from development since 2014, and prepared and implemented a plan to protect the carbon stock?",
+          "type": "yes_no",
+          "hint": "Indicator 7.6.3 (Critical). Estimate carbon stock of the proposed development area and major potential emission sources resulting directly from development since 2014; prepare and implement a plan to protect the carbon stock, following the 'RSPO GHG Assessment Procedure for New Development'."
+        },
+        {
+          "item": ".4",
+          "text": "Has your Unit of Certification developed and implemented a plan to reduce or minimise significant air pollutants (other than greenhouse gases)?",
+          "type": "yes_no",
+          "hint": "Indicator 7.6.4 (Critical). Develop and implement a plan to reduce or minimise significant air pollutants apart from GHGs. National Interpretations should determine relevant national air pollution standards or thresholds. Attach the plan."
+        },
+        {
+          "item": ".5",
+          "text": "Does your Unit of Certification prohibit the use of fire for land preparation for new plantings, development and/or replanting?",
+          "type": "yes_no",
+          "hint": "Indicator 7.6.5 (Critical). Use of fire for land preparation of new plantings, development and/or replanting must be prohibited. Attach the relevant policy or procedure."
+        },
+        {
+          "item": ".6",
+          "text": "Has your Unit of Certification developed and implemented fire prevention processes/procedures, in engagement with relevant stakeholders, to reduce fire risk in all areas under the Unit of Certification?",
+          "type": "yes_no",
+          "hint": "Indicator 7.6.6. Develop and implement fire prevention process(es)/procedure(s) to reduce fire risk in all areas under the UoC. They should be developed in engagement with relevant stakeholders. Attach the procedures and engagement records."
+        },
+        {
+          "item": ".7",
+          "text": "Has your Unit of Certification developed and implemented a plan to improve the efficiency of, or minimise, fossil fuel use, considering the role of renewable energy to replace or reduce fossil fuels?",
+          "type": "yes_no",
+          "hint": "Indicator 7.6.7. A plan for improving efficiency of, or minimising, fossil fuel usage shall be developed and implemented, considering the role and use of renewable energy to replace or reduce fossil fuels. Attach the plan."
+        }
+      ]
+    },
+    {
+      "ref": "7.7",
+      "title": "Land clearing does not cause deforestation or damage any area required to protect and/or enhance High Conservation Values (HCVs) and/or High Carbon Stock (HCS) forests. HCVs and HCS forests in the managed area are identified, protected, and/or enhanced.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification avoided damage to primary forest and HCVs (from November 2005) and HCS forests (from 15 November 2018)?",
+          "type": "yes_no",
+          "hint": "Indicator 7.7.1 (Critical). A UoC shall not damage primary forest and HCVs (from November 2005) and HCS forests (from 15 November 2018). Scenario evidence is requested in the questions below. Attach maps of conservation areas."
+        },
+        {
+          "item": ".1 (1)",
+          "text": "Scenario 1: If your Unit of Certification (or parts of it) has existing plantations and no new land clearing after November 2018, can you provide evidence of a valid HCV assessment?",
+          "type": "yes_no",
+          "hint": "Indicator 7.7.1 scenario 1 (Critical). Applies to a UoC (or parts) with existing plantations and no new land clearing after November 2018: evidence of a valid HCV assessment is required. Answer yes if not applicable and say so. Attach the assessment."
+        },
+        {
+          "item": ".1 (2)",
+          "text": "Scenario 2: If your Unit of Certification (or parts of it) followed the transitional measures in P&C 2018, can you provide evidence that a valid HCV, standalone HCSA and/or integrated HCV-HCS assessment was done before any new land clearing?",
+          "type": "yes_no",
+          "hint": "Indicator 7.7.1 scenario 2 (Critical). Applies to a UoC (or parts) that followed the P&C 2018 transitional measures (see Interpretation of Indicator 7.12.2 and Annex 5 of P&C 2018). Evidence of a valid HCV and/or HCSA and/or integrated HCV-HCS assessment, as applicable, before new clearing. Answer yes if not applicable."
+        },
+        {
+          "item": ".1 (3)",
+          "text": "Scenario 3: If your Unit of Certification (or parts of it) has had new land clearing after 15 November 2018 (and is not covered by Scenario 2), can you provide evidence of a prior ALS-integrated HCV-HCS assessment and compliance with the New Planting Procedure (NPP) 2015 and later revisions?",
+          "type": "yes_no",
+          "hint": "Indicator 7.7.1 scenario 3 (Critical). Evidence needed: (a) clearing preceded by an Assessor Licensing Scheme (ALS) integrated HCV-HCS assessment using the Integrated HCV-HCSA Assessment Manual valid at the time (Nov 2017 or June 2023 version); (b) compliance with the NPP 2015 and later revisions. Answer yes if not applicable."
+        },
+        {
+          "item": ".2",
+          "text": "For all land clearing since November 2005, can your Unit of Certification provide evidence of a historic Land Use Change Analysis (LUCA)?",
+          "type": "yes_no",
+          "hint": "Indicator 7.7.2 (Critical). Provide evidence of a historic LUCA for all land clearing since November 2005. Where clearing occurred without prior HCV assessment since November 2005, or without a prior Integrated HCV-HCSA Assessment since 15 November 2018, the RSPO Remediation and Compensation Procedure (RaCP) applies."
+        },
+        {
+          "item": ".3",
+          "text": "Where HCVs and/or HCS forests have been identified, has your Unit of Certification developed and implemented a management and monitoring plan to protect and/or enhance them?",
+          "type": "yes_no",
+          "hint": "Indicator 7.7.3 (Critical). The plan must make clear the roles of affected communities in implementation, be developed in consultation with relevant stakeholders, and cover the directly managed area and relevant wider landscape considerations. Attach the plan."
+        },
+        {
+          "item": ".3 A",
+          "text": "Does the management and monitoring plan cover all rare, threatened and endangered (RTE) species (HCV-1)?",
+          "type": "yes_no",
+          "hint": "Indicator 7.7.3 A (Critical). The plan shall include all RTE species (HCV-1), if applicable. Answer yes if not applicable and say so."
+        },
+        {
+          "item": ".3 B",
+          "text": "Does the management and monitoring plan cover management of human-wildlife conflict (threats to HCVs)?",
+          "type": "yes_no",
+          "hint": "Indicator 7.7.3 B (Critical). The plan shall include management of human-wildlife conflict (threats to HCVs), if applicable. Answer yes if not applicable and say so."
+        },
+        {
+          "item": ".3 C",
+          "text": "Does the management and monitoring plan cover other conservation areas?",
+          "type": "yes_no",
+          "hint": "Indicator 7.7.3 C (Critical). The plan shall include other conservation areas, if applicable. Answer yes if not applicable and say so."
+        },
+        {
+          "item": ".3 D",
+          "text": "Does the management and monitoring plan include a programme to socialise the status of RTE species to the workforce?",
+          "type": "yes_no",
+          "hint": "Indicator 7.7.3 D (Critical). The plan shall include a programme to socialise the status of RTE species to the workforce, if applicable. Attach awareness materials or training records."
+        },
+        {
+          "item": ".4",
+          "text": "Does your Unit of Certification adapt the HCV/HCS management and monitoring plan where necessary, review it at least once every five years, and use monitoring outcomes to update it?",
+          "type": "yes_no",
+          "hint": "Indicator 7.7.4 (Critical). Adapt the plan where necessary (see 7.7.3), review it at least once every five years, and use monitoring outcomes to update it. Procedural note: RSPO will develop guidance on changes in HCV conditions and status. Attach review records."
+        },
+        {
+          "item": ".5",
+          "text": "Where rights of local communities have been identified in HCV areas, HCS forest (after 15 November 2018) and other conservation areas, have those rights been preserved, or diminished only with a negotiated agreement obtained through FPIC?",
+          "type": "yes_no",
+          "hint": "Indicator 7.7.5. There shall be no diminishment of identified rights of local communities in HCV areas, HCS forest after 15 November 2018 and other conservation areas without evidence of a negotiated agreement obtained through FPIC. Attach FPIC agreements where applicable."
+        }
+      ]
+    }
+  ]
+}

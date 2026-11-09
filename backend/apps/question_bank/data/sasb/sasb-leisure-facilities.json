@@ -1,0 +1,65 @@
+{
+ "summary": "The Leisure Facilities standard covers operators of entertainment and recreation venues such as amusement parks, film theatres, ski resorts, sports stadiums and athletic clubs. Its disclosure topics are energy management, customer safety and workforce health and safety.",
+ "disclosures": [
+  {
+   "ref": "SV-LF-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total energy consumed, (2) percentage grid electricity and (3) percentage renewable energy?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy in gigajoules, (2) the percentage supplied by grid electricity and (3) the percentage that is renewable, including self-generated and purchased renewable energy."
+    }
+   ]
+  },
+  {
+   "ref": "SV-LF-250a",
+   "title": "Customer Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) fatality rate and (2) injury rate for customers?",
+     "type": "text",
+     "hint": "Unit: Rate · Report the customer fatality rate and the customer injury rate, and state the basis used for the rates (for example per number of customer-days or attendance)."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your facilities were (1) inspected for safety and (2) failed inspection?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report (1) the percentage of facilities inspected for safety and (2) the percentage that failed inspection, and note whether inspections were internal or by third parties."
+    }
+   ]
+  },
+  {
+   "ref": "SV-LF-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total recordable incident rate (TRIR) and (2) near miss frequency rate (NMFR) for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate · Report TRIR and NMFR separately for direct employees and for contract employees, stating the hours basis used for the rates."
+    }
+   ]
+  },
+  {
+   "ref": "SV-LF-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was your attendance?",
+     "type": "number",
+     "hint": "Unit: Number · Report total attendance across your facilities in the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "How many customer-days did your organisation record?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of customer-days in the reporting period."
+    }
+   ]
+  }
+ ]
+}

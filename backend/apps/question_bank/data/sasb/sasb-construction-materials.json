@@ -1,0 +1,149 @@
+{
+ "summary": "This standard covers producers of cement, aggregates, glass, bricks, insulation and similar construction materials, including their quarrying operations. It addresses greenhouse gas emissions, air quality, energy, water and waste, biodiversity, worker health and safety, product innovation and pricing integrity.",
+ "disclosures": [
+  {
+   "ref": "EM-CM-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your organisation's gross global Scope 1 greenhouse gas emissions, and what percentage of them is covered under emissions-limiting regulations?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) CO₂-e, Percentage (%) · Report gross global Scope 1 emissions in metric tonnes CO2-e and, separately, the percentage covered under emissions-limiting regulations (e.g. cap-and-trade or carbon tax schemes)."
+    },
+    {
+     "item": ".2",
+     "text": "What is your long- and short-term strategy or plan to manage Scope 1 emissions, what are your emissions reduction targets, and how have you performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy or plan, the targets (scope, baseline year, target year), and an analysis of performance against those targets, including any activities or investments driving the change."
+    }
+   ]
+  },
+  {
+   "ref": "EM-CM-120a",
+   "title": "Air Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's air emissions of the following pollutants: (1) NOx (excluding N2O), (2) SOx, (3) particulate matter (PM10), (4) dioxins/furans, (5) volatile organic compounds (VOCs), (6) polycyclic aromatic hydrocarbons (PAHs) and (7) heavy metals?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report each pollutant separately in metric tonnes, covering all operations and noting estimation or measurement methods; state any pollutant that is not applicable."
+    }
+   ]
+  },
+  {
+   "ref": "EM-CM-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your organisation's (1) total energy consumed, (2) percentage grid electricity, (3) percentage alternative and (4) percentage renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report each part: total energy consumed in gigajoules, plus the percentages listed, calculated against total energy consumed."
+    }
+   ]
+  },
+  {
+   "ref": "EM-CM-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's (1) total water withdrawn and (2) total water consumed, and what percentage of each is in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report (1) total water withdrawn and (2) total water consumed in thousand cubic metres, and the percentage of each in regions with High or Extremely High Baseline Water Stress (e.g. per the WRI Aqueduct tool)."
+    }
+   ]
+  },
+  {
+   "ref": "EM-CM-150a",
+   "title": "Waste Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is the amount of waste your organisation generated, what percentage of it was hazardous, and what percentage was recycled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report the total waste generated in metric tonnes, the percentage classed as hazardous and the percentage recycled."
+    }
+   ]
+  },
+  {
+   "ref": "EM-CM-160a",
+   "title": "Biodiversity Impacts",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What environmental management policies and practices does your organisation have for its active sites?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the policies and practices (e.g. impact assessments, site management plans, rehabilitation commitments) and how they are applied across active sites, including any certifications or standards used."
+    },
+    {
+     "item": ".2",
+     "text": "What is the terrestrial land area your organisation disturbed, and what percentage of the impacted area has been restored?",
+     "type": "text",
+     "hint": "Unit: Hectares (ha), Percentage (%) · Report the terrestrial land area disturbed in hectares and the percentage of the impacted area restored."
+    }
+   ]
+  },
+  {
+   "ref": "EM-CM-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total recordable incident rate (TRIR) and (2) near miss frequency rate (NMFR) for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate · Report TRIR and NMFR separately for (a) direct employees and (b) contract employees, stating the hours-worked basis used."
+    },
+    {
+     "item": ".2",
+     "text": "How many cases of silicosis were reported among your workforce?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of reported cases of silicosis in the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "EM-CM-410a",
+   "title": "Product Innovation",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your products, by annual sales revenue, qualify for credits in sustainable building design and construction certifications?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by annual sales revenue · Report the percentage of products by annual sales revenue that qualify for credits in certifications such as LEED, BREEAM or similar, and name the schemes."
+    },
+    {
+     "item": ".2",
+     "text": "What is the total addressable market and your share of the market for products that reduce energy, water or material impacts during usage or production?",
+     "type": "text",
+     "hint": "Unit: Presentation currency, Percentage (%) · Report the total addressable market in presentation currency and your market share as a percentage, and describe which products are included."
+    }
+   ]
+  },
+  {
+   "ref": "EM-CM-520a",
+   "title": "Pricing Integrity & Transparency",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with cartel activities, price fixing and antitrust activities?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses (fines, settlements, judgements) in presentation currency for the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "EM-CM-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was your organisation's production by major product line?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report production for each major product line (e.g. cement, aggregates) in metric tonnes."
+    }
+   ]
+  }
+ ]
+}

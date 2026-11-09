@@ -1,0 +1,65 @@
+{
+ "summary": "The Toys & Sporting Goods standard covers entities that make toys, games and sporting and athletic goods such as bicycles, golf clubs and fitness equipment, sold mainly through retail stores. Its disclosure topics are chemical and safety hazards of products and labour conditions in the supply chain.",
+ "disclosures": [
+  {
+   "ref": "CG-TS-250a",
+   "title": "Chemical & Safety Hazards of Products",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many (1) recalls did you issue and (2) total units were recalled?",
+     "type": "text",
+     "hint": "Unit: Number · Report (1) the number of recalls issued and (2) the total number of units recalled during the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses as a result of legal proceedings associated with product safety?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses from legal proceedings related to product safety in the presentation currency, including settlements, judgements and related fees."
+    },
+    {
+     "item": ".4",
+     "text": "What processes do you use to assess and manage risks or hazards associated with chemicals in your products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you identify chemicals of concern in products, assess their hazards and risks, and manage or substitute them."
+    }
+   ]
+  },
+  {
+   "ref": "CG-TS-430a",
+   "title": "Labour Conditions in the Supply Chain",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many facilities have been audited to a social responsibility code of conduct?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of facilities audited to a social responsibility code of conduct during the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "What are your direct suppliers' social responsibility audit (1) non-conformance rate and (2) associated corrective action rate, for (a) priority non-conformances and (b) other non-conformances?",
+     "type": "text",
+     "hint": "Unit: Rate · Report the (1) non-conformance rate and (2) associated corrective action rate, each separately for (a) priority non-conformances and (b) other non-conformances."
+    }
+   ]
+  },
+  {
+   "ref": "CG-TS-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was your annual production, in number of units?",
+     "type": "number",
+     "hint": "Unit: Number of units · Report the total number of units produced during the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "How many manufacturing facilities do you have, and what percentage of them are outsourced?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the number of manufacturing facilities and (2) the percentage of them that are outsourced."
+    }
+   ]
+  }
+ ]
+}

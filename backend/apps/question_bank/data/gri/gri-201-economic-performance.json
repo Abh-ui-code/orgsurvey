@@ -1,58 +1,156 @@
 {
- "summary": "GRI 201 covers the organization's economic performance and how it manages related impacts. It addresses economic value generated and distributed, defined benefit plan obligations, government financial assistance, and the financial implications of climate change.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "How does the organization manage economic performance as a material topic (GRI 3-3)?",
-   "type": "text",
-   "hint": "Describe how the organization manages the topic and its related impacts, as required by Disclosure 3-3 in GRI 3: Material Topics 2021."
-  },
-  {
-   "ref": "201-1",
-   "text": "What direct economic value did the organization generate and distribute?",
-   "type": "text",
-   "hint": "a. Direct economic value generated (revenues), distributed (operating costs, employee wages and benefits, payments to capital providers, payments to government by country, community investments) and retained, on an accruals basis (justify if cash basis). b. Where significant, EVG&D by country, region or market, and the significance criteria."
-  },
-  {
-   "ref": "201-2",
-   "text": "Which climate-related risks and opportunities have financial implications for your organization?",
-   "type": "multi_choice",
-   "hint": "a. Climate risks and opportunities with potential substantive changes in operations, revenue or expenditure: i. description and classification (physical, regulatory, other); ii. impact; iii. financial implications before action; iv. management methods; v. cost of actions.",
-   "options": [
-    "Physical risk",
-    "Regulatory risk",
-    "Market risk",
-    "Reputational risk",
-    "Opportunities",
-    "None assessed"
-   ]
-  },
-  {
-   "ref": "201-3",
-   "text": "Which retirement plans do you provide?",
-   "type": "multi_choice",
-   "hint": "a. Estimated value of liabilities if met from general resources. b. If a separate fund exists: extent of coverage, basis and date of estimate. c. Strategy and timescale if not fully covered. d. Percentage of salary contributed by employee or employer. e. Level of participation in retirement plans.",
-   "options": [
-    "Defined benefit",
-    "Defined contribution",
-    "Provident fund",
-    "Gratuity",
-    "None"
-   ]
-  },
-  {
-   "ref": "201-4",
-   "text": "What financial assistance did you receive from any government?",
-   "type": "multi_choice",
-   "hint": "a. Total monetary value of assistance received in the period (tax relief and credits, subsidies, grants, awards, royalty holidays, ECA assistance, incentives, other). b. The same by country. c. Whether and to what extent any government is in the shareholding structure.",
-   "options": [
-    "Tax relief",
-    "Subsidies",
-    "Grants",
-    "Export credit",
-    "Other",
-    "None"
-   ]
-  }
- ]
+  "summary": "GRI 201 covers the organization's economic performance and how it manages related impacts. It addresses economic value generated and distributed, defined benefit plan obligations, government financial assistance, and the financial implications of climate change.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to economic performance.",
+          "type": "text",
+          "hint": "Describe the actual and potential, negative and positive impacts on the economy, environment, and people, including impacts on human rights (GRI 3-3-a)."
+        },
+        {
+          "item": "b",
+          "text": "State whether the organization is involved with the negative impacts related to economic performance through its own activities or as a result of its business relationships, and describe how.",
+          "type": "text",
+          "hint": "Say whether the organization causes or contributes to the negative impacts through its activities, or whether they are linked to its operations, products or services through business relationships, and describe how (GRI 3-3-b)."
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding economic performance.",
+          "type": "text",
+          "hint": "Describe policies or commitments regarding the material topic (GRI 3-3-c)."
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage economic performance and the related impacts.",
+          "type": "text",
+          "hint": "Include: i. how negative impacts are prevented or mitigated; ii. how actual negative impacts are addressed, including actions to provide for or cooperate in remediation; iii. how actual and potential positive impacts are managed (GRI 3-3-d)."
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of its actions on economic performance?",
+          "type": "text",
+          "hint": "Report: i. information about the effectiveness of the actions; ii. the goals, targets and indicators used to evaluate progress; iii. lessons learned and how they have been integrated into policies and operational procedures (GRI 3-3-e)."
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken on economic performance and whether those actions have been effective.",
+          "type": "text",
+          "hint": "Describe how stakeholder engagement has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e) (GRI 3-3-f)."
+        }
+      ]
+    },
+    {
+      "ref": "201-1",
+      "title": "Direct economic value generated and distributed",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What direct economic value did the organization generate, distribute and retain, on an accruals basis?",
+          "type": "text",
+          "hint": "Report EVG&D on an accruals basis for global operations: i. direct economic value generated (revenues); ii. economic value distributed (operating costs, employee wages and benefits, payments to providers of capital, payments to government by country, community investments); iii. economic value retained (generated less distributed). If data are on a cash basis, justify the decision."
+        },
+        {
+          "item": "b",
+          "text": "Where significant, what is the economic value generated and distributed at country, regional or market level, and what criteria define significance?",
+          "type": "text",
+          "hint": "Report EVG&D separately at country, regional or market levels where significant, and the criteria used for defining significance."
+        }
+      ]
+    },
+    {
+      "ref": "201-2",
+      "title": "Financial implications and other risks and opportunities due to climate change",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Which risks and opportunities posed by climate change could generate substantive changes in your operations, revenue or expenditure?",
+          "type": "multi_choice",
+          "hint": "For each: i. description and classification (physical, regulatory or other); ii. the associated impact; iii. financial implications before action is taken; iv. methods used to manage it; v. costs of actions taken to manage it.",
+          "options": [
+            "Physical risk",
+            "Regulatory risk",
+            "Market risk",
+            "Reputational risk",
+            "Opportunities",
+            "None assessed"
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "201-3",
+      "title": "Defined benefit plan obligations and other retirement plans",
+      "questions": [
+        {
+          "item": "a",
+          "text": "If the plan's liabilities are met by the organization's general resources, what is the estimated value of those liabilities?",
+          "type": "text",
+          "hint": "Estimated value of the defined benefit plan liabilities met from general resources."
+        },
+        {
+          "item": "b",
+          "text": "If a separate fund exists to pay the plan's pension liabilities, to what extent are they covered by the assets set aside?",
+          "type": "text",
+          "hint": "i. Extent to which liabilities are estimated to be covered by assets set aside; ii. basis on which the estimate was arrived at; iii. when the estimate was made."
+        },
+        {
+          "item": "c",
+          "text": "If the fund is not fully covered, what strategy and timescale does the employer have to reach full coverage?",
+          "type": "text",
+          "hint": "Explain the strategy, if any, to work towards full coverage and the timescale, if any, by which full coverage is expected."
+        },
+        {
+          "item": "d",
+          "text": "What percentage of salary is contributed by the employee or the employer?",
+          "type": "text",
+          "hint": "Percentage of salary contributed by employee or employer."
+        },
+        {
+          "item": "e",
+          "text": "What is the level of participation in retirement plans?",
+          "type": "text",
+          "hint": "Participation in mandatory or voluntary schemes, regional or country-based schemes, or those with financial impact."
+        }
+      ]
+    },
+    {
+      "ref": "201-4",
+      "title": "Financial assistance received from government",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What is the total monetary value of financial assistance received from any government during the reporting period?",
+          "type": "multi_choice",
+          "hint": "Include: i. tax relief and tax credits; ii. subsidies; iii. investment, R&D and other grants; iv. awards; v. royalty holidays; vi. Export Credit Agency assistance; vii. financial incentives; viii. other financial benefits received or receivable from any government for any operation.",
+          "options": [
+            "Tax relief and tax credits",
+            "Subsidies",
+            "Grants",
+            "Awards",
+            "Royalty holidays",
+            "Export credit agency assistance",
+            "Financial incentives",
+            "Other",
+            "None"
+          ]
+        },
+        {
+          "item": "b",
+          "text": "What is the financial assistance received from government, broken down by country?",
+          "type": "text",
+          "hint": "The information in 201-4-a by country."
+        },
+        {
+          "item": "c",
+          "text": "Is any government present in the shareholding structure and, if so, to what extent?",
+          "type": "text",
+          "hint": "Whether, and the extent to which, any government is present in the shareholding structure."
+        }
+      ]
+    }
+  ]
 }

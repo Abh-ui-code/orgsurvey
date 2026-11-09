@@ -1,5 +1,6 @@
 "use client";
 
+import { questionNumber } from "@/lib/gri";
 import { ArrowDown, ArrowUp, GripVertical, Pencil, Plus, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -179,7 +180,7 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
               <div className="min-w-0">
                 <CardTitle className="flex items-center gap-2">
                   {section.title}
-                  {section.gri && <Badge tone="brand">GRI</Badge>}
+                  {section.gri && <Badge tone="brand">{section.gri.framework.toUpperCase()}</Badge>}
                 </CardTitle>
                 {section.description && <p className="mt-0.5 line-clamp-2 text-xs text-ink-muted">{section.description}</p>}
               </div>
@@ -263,7 +264,7 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
                       {q.text} {q.required && <span className="text-rust">*</span>}
                     </p>
                     <p className="mt-0.5 flex flex-wrap items-center gap-2 text-xs text-ink-faint">
-                      <span className="font-mono-data">{`Q${qi + 1}`}</span>
+                      <span className="font-mono-data">{section.gri && q.gri_title ? questionNumber(q.gri_ref, q.gri_item) : `Q${qi + 1}`}</span>
                       <span>·</span>
                       <span>{questionTypeLabel(q.type)}</span>
                       {q.bank_question_id && !q.gri_ref && <Badge tone="brand">From bank</Badge>}

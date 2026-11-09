@@ -1,0 +1,740 @@
+{
+ "summary": "The People pillar of the World Economic Forum's Stakeholder Capitalism Metrics: dignity and equality, health and well-being, and skills for the future. It has 6 core and 9 expanded metrics.",
+ "disclosures": [
+  {
+   "ref": "Core",
+   "title": "Dignity and equality: Diversity and inclusion (%)",
+   "questions": [
+    {
+     "item": "1.1",
+     "text": "Does your company track the composition of its employees by employee category (e.g. senior management, professionals, operations)?",
+     "type": "yes_no",
+     "hint": "Dignity and equality · Source: GRI 405-1(b). Report yes if you break down headcount by employee category."
+    },
+    {
+     "item": "1.2",
+     "text": "How many employees did your company have at the end of the reporting period?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 405-1(b). Total headcount. Use the same count as the base for the percentages in the next questions."
+    },
+    {
+     "item": "1.3",
+     "text": "What percentage of employees in each employee category is under 30 years old?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 405-1(b). Give the percentage per employee category (share of that category, 0-100). Under-30 age group."
+    },
+    {
+     "item": "1.4",
+     "text": "What percentage of employees in each employee category is aged 30 to 50?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 405-1(b). Percentage per employee category aged 30-50."
+    },
+    {
+     "item": "1.5",
+     "text": "What percentage of employees in each employee category is over 50 years old?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 405-1(b). Percentage per employee category over 50."
+    },
+    {
+     "item": "1.6",
+     "text": "What percentage of employees in each employee category is women?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 405-1(b). Percentage of women per employee category (share of that category)."
+    },
+    {
+     "item": "1.7",
+     "text": "What percentage of employees in each employee category is men?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 405-1(b). Percentage of men per employee category (share of that category)."
+    },
+    {
+     "item": "1.8",
+     "text": "What percentage of employees in each employee category belongs to an ethnic minority or other under-represented group?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 405-1(b). Other indicators of diversity, e.g. ethnicity. State the group definition used in notes."
+    },
+    {
+     "item": "1.9",
+     "text": "Which other indicators of diversity does your company track among employees?",
+     "type": "multi_choice",
+     "hint": "Dignity and equality · Source: GRI 405-1(b). Select all that you track and can report.",
+     "options": [
+      "Ethnicity",
+      "Disability",
+      "Nationality",
+      "Religion",
+      "LGBTQ+ status",
+      "Veteran status",
+      "Other",
+      "None"
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "Core",
+   "title": "Dignity and equality: Pay equality",
+   "questions": [
+    {
+     "item": "2.1",
+     "text": "Which employee categories does your company use when comparing pay?",
+     "type": "text",
+     "hint": "Dignity and equality · Source: Adapted from GRI 405-2. List the categories (e.g. management, professional, operations) used to compare basic salary and remuneration."
+    },
+    {
+     "item": "2.2",
+     "text": "Which significant locations of operation does your company include when comparing pay?",
+     "type": "text",
+     "hint": "Dignity and equality · Source: Adapted from GRI 405-2. List the locations (country/site) that are significant. Used as the reporting boundary."
+    },
+    {
+     "item": "2.3",
+     "text": "What is the ratio of the basic salary of women to men for each employee category and significant location?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: Adapted from GRI 405-2. Ratio = women's basic salary / men's basic salary (1.0 = equal). Report per category and location."
+    },
+    {
+     "item": "2.4",
+     "text": "What is the ratio of the total remuneration of women to men for each employee category and significant location?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: Adapted from GRI 405-2. Remuneration = basic salary plus bonuses, allowances, overtime and other cash/benefits. Ratio of women to men."
+    },
+    {
+     "item": "2.5",
+     "text": "What is the ratio of the basic salary of minor ethnic groups to major ethnic groups for each employee category and significant location?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: Adapted from GRI 405-2. Ratio of minor to major ethnic group basic salary (1.0 = equal), if you collect ethnicity data."
+    },
+    {
+     "item": "2.6",
+     "text": "What is the ratio of the total remuneration of minor ethnic groups to major ethnic groups for each employee category and significant location?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: Adapted from GRI 405-2. Ratio of total remuneration, minor to major ethnic groups."
+    },
+    {
+     "item": "2.7",
+     "text": "Which other equality areas does your company consider relevant for pay comparison?",
+     "type": "text",
+     "hint": "Dignity and equality · Source: Adapted from GRI 405-2. E.g. disability, age, nationality. Describe the group compared and the ratio found."
+    }
+   ]
+  },
+  {
+   "ref": "Core",
+   "title": "Dignity and equality: Wage level (%)",
+   "questions": [
+    {
+     "item": "3.1",
+     "text": "What is the standard entry-level wage for women at your company?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 202-1, UK Companies (Miscellaneous Reporting) Regulations 2018, Dodd-Frank Act. Local currency per hour/month; state the period used. Use the standard entry-level wage, not trainee or intern rates."
+    },
+    {
+     "item": "3.2",
+     "text": "What is the standard entry-level wage for men at your company?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 202-1, UK Companies (Miscellaneous Reporting) Regulations 2018, Dodd-Frank Act. Same currency and period as for women."
+    },
+    {
+     "item": "3.3",
+     "text": "What is the local minimum wage in your main locations of operation?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 202-1, UK Companies (Miscellaneous Reporting) Regulations 2018, Dodd-Frank Act. Same currency and period. If several locations, give the main one and list others in notes."
+    },
+    {
+     "item": "3.4",
+     "text": "What is the ratio of the entry-level wage for women to the local minimum wage?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 202-1, UK Companies (Miscellaneous Reporting) Regulations 2018, Dodd-Frank Act. Ratio = entry-level wage for women / local minimum wage."
+    },
+    {
+     "item": "3.5",
+     "text": "What is the ratio of the entry-level wage for men to the local minimum wage?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 202-1, UK Companies (Miscellaneous Reporting) Regulations 2018, Dodd-Frank Act. Ratio = entry-level wage for men / local minimum wage."
+    },
+    {
+     "item": "3.6",
+     "text": "What was the CEO's total annual compensation?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 202-1, UK Companies (Miscellaneous Reporting) Regulations 2018, Dodd-Frank Act. Include salary, bonus, stock, options and other pay for the reporting period."
+    },
+    {
+     "item": "3.7",
+     "text": "What was the median total annual compensation of all employees, excluding the CEO?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 202-1, UK Companies (Miscellaneous Reporting) Regulations 2018, Dodd-Frank Act. Median (middle value), not average. Use the same period and currency as for the CEO."
+    },
+    {
+     "item": "3.8",
+     "text": "What is the ratio of the CEO's total annual compensation to the median employee's total annual compensation?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 202-1, UK Companies (Miscellaneous Reporting) Regulations 2018, Dodd-Frank Act. Ratio = CEO total annual compensation / median total annual compensation of all other employees."
+    }
+   ]
+  },
+  {
+   "ref": "Core",
+   "title": "Dignity and equality: Risk for incidents of child, forced or compulsory labour",
+   "questions": [
+    {
+     "item": "4.1",
+     "text": "Does your company have any operations considered to be at significant risk for child labour?",
+     "type": "yes_no",
+     "hint": "Dignity and equality · Source: GRI 408-1(b), GRI 409. Consider type of operation (e.g. manufacturing plant) and country or area of operation."
+    },
+    {
+     "item": "4.2",
+     "text": "Does your company have any operations considered to be at significant risk for forced or compulsory labour?",
+     "type": "yes_no",
+     "hint": "Dignity and equality · Source: GRI 408-1(b), GRI 409. Same considerations as child labour risk."
+    },
+    {
+     "item": "4.3",
+     "text": "Does your company have any suppliers considered to be at significant risk for child labour?",
+     "type": "yes_no",
+     "hint": "Dignity and equality · Source: GRI 408-1(b), GRI 409. Consider type of supplier and country or area where they operate."
+    },
+    {
+     "item": "4.4",
+     "text": "Does your company have any suppliers considered to be at significant risk for forced or compulsory labour?",
+     "type": "yes_no",
+     "hint": "Dignity and equality · Source: GRI 408-1(b), GRI 409. Same considerations as child labour risk."
+    },
+    {
+     "item": "4.5",
+     "text": "Which types of operation or supplier are considered at risk?",
+     "type": "text",
+     "hint": "Dignity and equality · Source: GRI 408-1(b), GRI 409. E.g. manufacturing plant, agriculture, mining, contract labour. Explain why they are considered at risk."
+    },
+    {
+     "item": "4.6",
+     "text": "Which countries or geographic areas with operations or suppliers are considered at risk?",
+     "type": "text",
+     "hint": "Dignity and equality · Source: GRI 408-1(b), GRI 409. List the countries or areas and say whether they relate to operations, suppliers or both."
+    }
+   ]
+  },
+  {
+   "ref": "Core",
+   "title": "Health and well-being: Health and safety (%)",
+   "questions": [
+    {
+     "item": "5.1",
+     "text": "How many work-related fatalities occurred among employees and workers in the reporting period?",
+     "type": "number",
+     "hint": "Health and well-being · Source: GRI 403-9(a & b), GRI 403-6(a). Deaths resulting from work-related injury."
+    },
+    {
+     "item": "5.2",
+     "text": "What was the rate of work-related fatalities?",
+     "type": "number",
+     "hint": "Health and well-being · Source: GRI 403-9(a & b), GRI 403-6(a). Rate = fatalities / hours worked x 200,000 (or x 1,000,000; state which)."
+    },
+    {
+     "item": "5.3",
+     "text": "How many high-consequence work-related injuries (excluding fatalities) occurred?",
+     "type": "number",
+     "hint": "Health and well-being · Source: GRI 403-9(a & b), GRI 403-6(a). Injuries from which the worker cannot, or is not expected to, recover fully within 6 months."
+    },
+    {
+     "item": "5.4",
+     "text": "What was the rate of high-consequence work-related injuries?",
+     "type": "number",
+     "hint": "Health and well-being · Source: GRI 403-9(a & b), GRI 403-6(a). Rate = number / hours worked x 200,000 (or x 1,000,000; state which)."
+    },
+    {
+     "item": "5.5",
+     "text": "How many recordable work-related injuries occurred?",
+     "type": "number",
+     "hint": "Health and well-being · Source: GRI 403-9(a & b), GRI 403-6(a). All work-related injuries that must be recorded under local law or your system."
+    },
+    {
+     "item": "5.6",
+     "text": "What was the rate of recordable work-related injuries?",
+     "type": "number",
+     "hint": "Health and well-being · Source: GRI 403-9(a & b), GRI 403-6(a). Rate = number / hours worked x 200,000 (or x 1,000,000; state which)."
+    },
+    {
+     "item": "5.7",
+     "text": "What were the main types of work-related injury?",
+     "type": "text",
+     "hint": "Health and well-being · Source: GRI 403-9(a & b), GRI 403-6(a). E.g. cuts, falls, burns, strains, crush injuries."
+    },
+    {
+     "item": "5.8",
+     "text": "How many hours were worked in total by employees and workers in the reporting period?",
+     "type": "number",
+     "hint": "Health and well-being · Source: GRI 403-9(a & b), GRI 403-6(a). Total hours worked; the base for all injury rates above."
+    },
+    {
+     "item": "5.9",
+     "text": "Does your company help employees and workers access non-occupational medical and healthcare services?",
+     "type": "yes_no",
+     "hint": "Health and well-being · Source: GRI 403-9(a & b), GRI 403-6(a). E.g. health insurance, on-site clinic, referral programs."
+    },
+    {
+     "item": "5.10",
+     "text": "Which non-occupational medical and healthcare services does your company help workers access?",
+     "type": "text",
+     "hint": "Health and well-being · Source: GRI 403-9(a & b), GRI 403-6(a). Describe how access is facilitated and the scope (services covered)."
+    },
+    {
+     "item": "5.11",
+     "text": "Which groups of employees and workers have access to these healthcare services?",
+     "type": "text",
+     "hint": "Health and well-being · Source: GRI 403-9(a & b), GRI 403-6(a). Say who is covered: full-time, part-time, contractors, family members, etc."
+    }
+   ]
+  },
+  {
+   "ref": "Core",
+   "title": "Skills for the future: Training provided (#)",
+   "questions": [
+    {
+     "item": "6.1",
+     "text": "What was the total number of training hours provided to employees in the reporting period?",
+     "type": "number",
+     "hint": "Skills for the future · Source: GRI 404-1, SASB HC0101-15. Sum of training hours for all employees."
+    },
+    {
+     "item": "6.2",
+     "text": "What was the average hours of training per employee in the reporting period?",
+     "type": "number",
+     "hint": "Skills for the future · Source: GRI 404-1, SASB HC0101-15. Total training hours / total number of employees."
+    },
+    {
+     "item": "6.3",
+     "text": "What was the average hours of training per female employee?",
+     "type": "number",
+     "hint": "Skills for the future · Source: GRI 404-1, SASB HC0101-15. Training hours of female employees / number of female employees."
+    },
+    {
+     "item": "6.4",
+     "text": "What was the average hours of training per male employee?",
+     "type": "number",
+     "hint": "Skills for the future · Source: GRI 404-1, SASB HC0101-15. Training hours of male employees / number of male employees."
+    },
+    {
+     "item": "6.5",
+     "text": "What was the average hours of training per employee in each employee category?",
+     "type": "number",
+     "hint": "Skills for the future · Source: GRI 404-1, SASB HC0101-15. Report per category (e.g. senior management, professionals, operations)."
+    },
+    {
+     "item": "6.6",
+     "text": "What was the total training and development expenditure in the reporting period?",
+     "type": "number",
+     "hint": "Skills for the future · Source: GRI 404-1, SASB HC0101-15. Include course fees, trainer costs, materials and training-related travel; state currency."
+    },
+    {
+     "item": "6.7",
+     "text": "What was the average training and development expenditure per full-time employee?",
+     "type": "number",
+     "hint": "Skills for the future · Source: GRI 404-1, SASB HC0101-15. Total training and development expenditure / number of full-time employees; state currency."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Dignity and equality: Pay gap (%)",
+   "questions": [
+    {
+     "item": "1.1",
+     "text": "What is the mean pay gap in basic salary between women and men among full-time relevant employees?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: Adapted from UK Government guidance on gender and ethnicity pay gap reporting, GRI 102-38. Percentage gap = (men's mean - women's mean) / men's mean x 100. Company level or by significant location."
+    },
+    {
+     "item": "1.2",
+     "text": "What is the mean pay gap in total remuneration between women and men among full-time relevant employees?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: Adapted from UK Government guidance on gender and ethnicity pay gap reporting, GRI 102-38. Remuneration includes bonuses and allowances. Same formula as basic salary."
+    },
+    {
+     "item": "1.3",
+     "text": "What is the mean pay gap in basic salary between minority ethnic and other employees (e.g. BAME to non-BAME)?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: Adapted from UK Government guidance on gender and ethnicity pay gap reporting, GRI 102-38. Percentage gap for another indicator of diversity; state the groups compared."
+    },
+    {
+     "item": "1.4",
+     "text": "Is the pay gap reported at company level or by significant location of operation?",
+     "type": "single_choice",
+     "hint": "Dignity and equality · Source: Adapted from UK Government guidance on gender and ethnicity pay gap reporting, GRI 102-38. Pick the level used for the figures above.",
+     "options": [
+      "Company level",
+      "By significant location",
+      "Both"
+     ]
+    },
+    {
+     "item": "1.5",
+     "text": "What is the ratio of total annual compensation of the highest-paid individual to the median employee in each country of significant operations?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: Adapted from UK Government guidance on gender and ethnicity pay gap reporting, GRI 102-38. Ratio = highest-paid individual / median of all other employees in the same country. Give one ratio per country."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Dignity and equality: Discrimination and harassment incidents (#) and the total amount of monetary losses ($)",
+   "questions": [
+    {
+     "item": "2.1",
+     "text": "How many incidents of discrimination occurred in the reporting period?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 406-1, SASB FB-FR-310a.4. Total confirmed or reported incidents of discrimination."
+    },
+    {
+     "item": "2.2",
+     "text": "How many incidents of harassment occurred in the reporting period?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 406-1, SASB FB-FR-310a.4. Total confirmed or reported incidents of harassment."
+    },
+    {
+     "item": "2.3",
+     "text": "What is the status of these incidents?",
+     "type": "text",
+     "hint": "Dignity and equality · Source: GRI 406-1, SASB FB-FR-310a.4. E.g. under review, remediation underway, resolved, no longer subject to action."
+    },
+    {
+     "item": "2.4",
+     "text": "What actions has your company taken in response to these incidents?",
+     "type": "text",
+     "hint": "Dignity and equality · Source: GRI 406-1, SASB FB-FR-310a.4. E.g. disciplinary action, training, policy changes, remediation."
+    },
+    {
+     "item": "2.5",
+     "text": "What were the total monetary losses from legal proceedings associated with law violations?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 406-1, SASB FB-FR-310a.4. Fines, settlements and legal costs for law violations; state currency."
+    },
+    {
+     "item": "2.6",
+     "text": "What were the total monetary losses from legal proceedings associated with employment discrimination?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 406-1, SASB FB-FR-310a.4. Settlements, fines and legal costs; state currency."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Dignity and equality: Human rights review, grievance impact and modern slavery (#, %)",
+   "questions": [
+    {
+     "item": "3.1",
+     "text": "How many operations were subject to human rights reviews or human rights impact assessments?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 412-1, UN Guiding Principles, GRI 408-1(a), GRI 409-1, WDI 7.5. Count in the reporting period."
+    },
+    {
+     "item": "3.2",
+     "text": "What percentage of operations were subject to human rights reviews or impact assessments?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 412-1, UN Guiding Principles, GRI 408-1(a), GRI 409-1, WDI 7.5. Operations reviewed / total operations x 100."
+    },
+    {
+     "item": "3.3",
+     "text": "In which countries were human rights reviews or impact assessments carried out?",
+     "type": "text",
+     "hint": "Dignity and equality · Source: GRI 412-1, UN Guiding Principles, GRI 408-1(a), GRI 409-1, WDI 7.5. List the countries (report by country)."
+    },
+    {
+     "item": "3.4",
+     "text": "How many grievances related to salient human rights issues were reported?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 412-1, UN Guiding Principles, GRI 408-1(a), GRI 409-1, WDI 7.5. Count in the reporting period."
+    },
+    {
+     "item": "3.5",
+     "text": "What types of human rights grievances were reported?",
+     "type": "text",
+     "hint": "Dignity and equality · Source: GRI 412-1, UN Guiding Principles, GRI 408-1(a), GRI 409-1, WDI 7.5. E.g. discrimination, working hours, freedom of association, child labour."
+    },
+    {
+     "item": "3.6",
+     "text": "What impacts resulted from these grievances?",
+     "type": "text",
+     "hint": "Dignity and equality · Source: GRI 412-1, UN Guiding Principles, GRI 408-1(a), GRI 409-1, WDI 7.5. Explain the impacts on people and on the company."
+    },
+    {
+     "item": "3.7",
+     "text": "How many operations are considered at significant risk for child labour, forced or compulsory labour?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 412-1, UN Guiding Principles, GRI 408-1(a), GRI 409-1, WDI 7.5. Count of operations at risk."
+    },
+    {
+     "item": "3.8",
+     "text": "What percentage of operations are considered at significant risk for child labour, forced or compulsory labour?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 412-1, UN Guiding Principles, GRI 408-1(a), GRI 409-1, WDI 7.5. At-risk operations / total operations x 100."
+    },
+    {
+     "item": "3.9",
+     "text": "How many suppliers are considered at significant risk for child labour, forced or compulsory labour?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 412-1, UN Guiding Principles, GRI 408-1(a), GRI 409-1, WDI 7.5. Count of suppliers at risk."
+    },
+    {
+     "item": "3.10",
+     "text": "What percentage of suppliers are considered at significant risk for child labour, forced or compulsory labour?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 412-1, UN Guiding Principles, GRI 408-1(a), GRI 409-1, WDI 7.5. At-risk suppliers / total suppliers x 100."
+    },
+    {
+     "item": "3.11",
+     "text": "Which types of operation or supplier, and which countries or areas, are considered at risk?",
+     "type": "text",
+     "hint": "Dignity and equality · Source: GRI 412-1, UN Guiding Principles, GRI 408-1(a), GRI 409-1, WDI 7.5. Type of operation (e.g. manufacturing plant) or supplier, and countries or areas considered at risk."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Dignity and equality: Living wage (%)",
+   "questions": [
+    {
+     "item": "4.1",
+     "text": "Does your company compare its wages with the living wage in the places where it operates?",
+     "type": "yes_no",
+     "hint": "Dignity and equality · Source: MIT Living Wage Tool, EPIC Report, IMP. Living wage = pay needed to meet basic needs locally (e.g. MIT Living Wage Tool)."
+    },
+    {
+     "item": "4.2",
+     "text": "In which states or localities does your company operate?",
+     "type": "text",
+     "hint": "Dignity and equality · Source: MIT Living Wage Tool, EPIC Report, IMP. List the places used for the living wage comparison."
+    },
+    {
+     "item": "4.3",
+     "text": "What percentage of employees are paid at or above the living wage?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: MIT Living Wage Tool, EPIC Report, IMP. Employees paid at or above local living wage / total employees x 100."
+    },
+    {
+     "item": "4.4",
+     "text": "What percentage of contractors are paid at or above the living wage?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: MIT Living Wage Tool, EPIC Report, IMP. Contractors paid at or above local living wage / total contractors x 100."
+    },
+    {
+     "item": "4.5",
+     "text": "What is the lowest wage paid to employees compared with the living wage in each location?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: MIT Living Wage Tool, EPIC Report, IMP. Give lowest current wage as a percentage of the living wage (100 = equal)."
+    },
+    {
+     "item": "4.6",
+     "text": "Which living wage source or tool does your company use?",
+     "type": "text",
+     "hint": "Dignity and equality · Source: MIT Living Wage Tool, EPIC Report, IMP. E.g. MIT Living Wage Tool, local benchmark."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Dignity and equality: Annual total compensation ratio",
+   "questions": [
+    {
+     "item": "5.1",
+     "text": "Which countries are your significant operations?",
+     "type": "text",
+     "hint": "Dignity and equality · Source: GRI 102-38. The countries for which you report the ratio."
+    },
+    {
+     "item": "5.2",
+     "text": "What is the annual total compensation of the highest-paid individual in each country of significant operations?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 102-38. Salary, bonus, stock, benefits; state currency per country."
+    },
+    {
+     "item": "5.3",
+     "text": "What is the median annual total compensation of all other employees in each country of significant operations?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 102-38. Median excluding the highest-paid individual, in the same country and currency."
+    },
+    {
+     "item": "5.4",
+     "text": "What is the ratio of the highest-paid individual's compensation to the median employee in each country?",
+     "type": "number",
+     "hint": "Dignity and equality · Source: GRI 102-38. Ratio = highest-paid / median of all other employees in that country."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Health and well-being: Monetized impacts of work-related incidents on organization (#, $)",
+   "questions": [
+    {
+     "item": "6.1",
+     "text": "How many occupational incidents occurred, by type of incident?",
+     "type": "number",
+     "hint": "Health and well-being · Source: Adapted indicator based on European Commission, Safe Work Australia. Number of incidents per type (e.g. injury, illness, fatality)."
+    },
+    {
+     "item": "6.2",
+     "text": "What was the direct cost per incident for healthcare?",
+     "type": "number",
+     "hint": "Health and well-being · Source: Adapted indicator based on European Commission, Safe Work Australia. Average healthcare cost per incident; state currency."
+    },
+    {
+     "item": "6.3",
+     "text": "What was the direct cost per incident for compensation paid to employees?",
+     "type": "number",
+     "hint": "Health and well-being · Source: Adapted indicator based on European Commission, Safe Work Australia. Average compensation cost per incident."
+    },
+    {
+     "item": "6.4",
+     "text": "What was the direct cost per incident for property damage?",
+     "type": "number",
+     "hint": "Health and well-being · Source: Adapted indicator based on European Commission, Safe Work Australia. Average property damage cost per incident."
+    },
+    {
+     "item": "6.5",
+     "text": "What were the total actions and fines from regulators for work-related incidents?",
+     "type": "number",
+     "hint": "Health and well-being · Source: Adapted indicator based on European Commission, Safe Work Australia. Total fines and regulator-driven action costs."
+    },
+    {
+     "item": "6.6",
+     "text": "What was the total monetized cost of work-related incidents to your company?",
+     "type": "number",
+     "hint": "Health and well-being · Source: Adapted indicator based on European Commission, Safe Work Australia. Number of incidents of each type x direct cost per incident, summed across types."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Health and well-being: Well-being (%)",
+   "questions": [
+    {
+     "item": "7.1",
+     "text": "How many fatalities resulted from work-related ill-health?",
+     "type": "number",
+     "hint": "Health and well-being · Source: GRI 403-10(a & b), GRI 403-2(a), Embankment Project. Employees and workers, reporting period."
+    },
+    {
+     "item": "7.2",
+     "text": "What was the rate of fatalities from work-related ill-health?",
+     "type": "number",
+     "hint": "Health and well-being · Source: GRI 403-10(a & b), GRI 403-2(a), Embankment Project. Rate = fatalities / hours worked x 200,000 (or x 1,000,000; state which)."
+    },
+    {
+     "item": "7.3",
+     "text": "How many cases of recordable work-related ill-health were there?",
+     "type": "number",
+     "hint": "Health and well-being · Source: GRI 403-10(a & b), GRI 403-2(a), Embankment Project. Cases recorded under local law or your system."
+    },
+    {
+     "item": "7.4",
+     "text": "What were the main types of work-related ill-health?",
+     "type": "text",
+     "hint": "Health and well-being · Source: GRI 403-10(a & b), GRI 403-2(a), Embankment Project. E.g. musculoskeletal disorders, stress, hearing loss, respiratory disease."
+    },
+    {
+     "item": "7.5",
+     "text": "Does your company run best-practice health and well-being programs?",
+     "type": "yes_no",
+     "hint": "Health and well-being · Source: GRI 403-10(a & b), GRI 403-2(a), Embankment Project. Programs that reduce absenteeism and improve productivity."
+    },
+    {
+     "item": "7.6",
+     "text": "What percentage of employees participate in best-practice health and well-being programs?",
+     "type": "number",
+     "hint": "Health and well-being · Source: GRI 403-10(a & b), GRI 403-2(a), Embankment Project. Participating employees / total employees x 100."
+    },
+    {
+     "item": "7.7",
+     "text": "What is the employee absentee rate?",
+     "type": "number",
+     "hint": "Health and well-being · Source: GRI 403-10(a & b), GRI 403-2(a), Embankment Project. Absentee rate = days lost / total days scheduled to be worked x 100, all employees."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Skills for the future: Number of unfilled 'skilled' positions (#, %)",
+   "questions": [
+    {
+     "item": "8.1",
+     "text": "How many skilled positions were unfilled at the end of the reporting period?",
+     "type": "number",
+     "hint": "Skills for the future · Source: WBCSD Measuring Impact Framework Methodology Version 1.0 (2008). Positions open for which no suitable skilled candidate was found."
+    },
+    {
+     "item": "8.2",
+     "text": "What percentage of all skilled positions is unfilled?",
+     "type": "number",
+     "hint": "Skills for the future · Source: WBCSD Measuring Impact Framework Methodology Version 1.0 (2008). Unfilled skilled positions / total skilled positions x 100."
+    },
+    {
+     "item": "8.3",
+     "text": "For what percentage of unfilled skilled positions will your company hire unskilled candidates and train them?",
+     "type": "number",
+     "hint": "Skills for the future · Source: WBCSD Measuring Impact Framework Methodology Version 1.0 (2008). Unfilled skilled positions to be filled by hiring and training unskilled candidates / total unfilled skilled positions x 100."
+    },
+    {
+     "item": "8.4",
+     "text": "Which skilled roles are hardest to fill?",
+     "type": "text",
+     "hint": "Skills for the future · Source: WBCSD Measuring Impact Framework Methodology Version 1.0 (2008). Optional context: role types and reasons."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Skills for the future: Monetized impacts of training - increased earning capacity as a result of training intervention (%, $)",
+   "questions": [
+    {
+     "item": "9.1",
+     "text": "What was your company's total investment in training?",
+     "type": "number",
+     "hint": "Skills for the future · Source: OECD, United Nations, WDI 5.5. Total training spend; state currency."
+    },
+    {
+     "item": "9.2",
+     "text": "What was total payroll in the reporting period?",
+     "type": "number",
+     "hint": "Skills for the future · Source: OECD, United Nations, WDI 5.5. Same period and currency as the training spend."
+    },
+    {
+     "item": "9.3",
+     "text": "What is your training investment as a percentage of payroll?",
+     "type": "number",
+     "hint": "Skills for the future · Source: OECD, United Nations, WDI 5.5. Training investment / total payroll x 100."
+    },
+    {
+     "item": "9.4",
+     "text": "Has training led to increased revenue?",
+     "type": "yes_no",
+     "hint": "Skills for the future · Source: OECD, United Nations, WDI 5.5. Answer yes if you measure it."
+    },
+    {
+     "item": "9.5",
+     "text": "Has training led to productivity gains?",
+     "type": "yes_no",
+     "hint": "Skills for the future · Source: OECD, United Nations, WDI 5.5. Answer yes if you measure it."
+    },
+    {
+     "item": "9.6",
+     "text": "Has training led to higher employee engagement?",
+     "type": "yes_no",
+     "hint": "Skills for the future · Source: OECD, United Nations, WDI 5.5. Answer yes if you measure it."
+    },
+    {
+     "item": "9.7",
+     "text": "Has training led to higher internal hire rates?",
+     "type": "yes_no",
+     "hint": "Skills for the future · Source: OECD, United Nations, WDI 5.5. Answer yes if you measure it."
+    },
+    {
+     "item": "9.8",
+     "text": "How does your company measure the effectiveness of training?",
+     "type": "text",
+     "hint": "Skills for the future · Source: OECD, United Nations, WDI 5.5. Describe the method and results, in % or monetary value."
+    }
+   ]
+  }
+ ]
+}

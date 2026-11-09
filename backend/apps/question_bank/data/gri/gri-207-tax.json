@@ -1,35 +1,119 @@
 {
- "summary": "GRI 207 covers tax, an important source of government revenue and a key way organizations contribute to the economies where they operate. It sets out disclosures on approach to tax, tax governance, stakeholder engagement and country-by-country reporting.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "How does the organization manage tax as a material topic (GRI 3-3)?",
-   "type": "text",
-   "hint": "Describe how the organization manages the topic and its related impacts, as required by Disclosure 3-3 in GRI 3: Material Topics 2021."
-  },
-  {
-   "ref": "207-1",
-   "text": "What is the organization's approach to tax?",
-   "type": "text",
-   "hint": "a. Description of the approach to tax: i. whether there is a tax strategy and a link if public; ii. governance body or executive position that approves it and review frequency; iii. approach to regulatory compliance; iv. link to business and sustainable development strategies."
-  },
-  {
-   "ref": "207-2",
-   "text": "How are tax governance, control and risk management handled?",
-   "type": "text",
-   "hint": "a. Tax governance and control framework: i. body or position accountable for compliance; ii. how approach to tax is embedded; iii. approach to tax risks; iv. how compliance is evaluated. b. Mechanisms to raise concerns about tax conduct and integrity. c. Assurance process for tax disclosures, with a link to any external assurance report."
-  },
-  {
-   "ref": "207-3",
-   "text": "How does the organization engage stakeholders and manage their concerns related to tax?",
-   "type": "text",
-   "hint": "a. Approach to stakeholder engagement and management of tax concerns: i. engagement with tax authorities; ii. public policy advocacy on tax; iii. processes for collecting and considering stakeholder views and concerns, including external stakeholders."
-  },
-  {
-   "ref": "207-4",
-   "text": "What country-by-country tax and financial information does the organization report?",
-   "type": "text",
-   "hint": "a. All tax jurisdictions where entities are resident for tax purposes. b. For each: resident entity names, primary activities, employees, third-party and intra-group revenues, profit/loss before tax, tangible assets, corporate income tax paid and accrued, reasons for difference from the statutory rate. c. Time period covered."
-  }
- ]
+  "summary": "GRI 207 covers tax, an important source of government revenue and a key way organizations contribute to the economies where they operate. It sets out disclosures on approach to tax, tax governance, stakeholder engagement and country-by-country reporting.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to tax.",
+          "type": "text",
+          "hint": "Describe the actual and potential, negative and positive impacts on the economy, environment, and people, including impacts on human rights (GRI 3-3-a)."
+        },
+        {
+          "item": "b",
+          "text": "State whether the organization is involved with the negative impacts related to tax through its own activities or as a result of its business relationships, and describe how.",
+          "type": "text",
+          "hint": "Say whether the organization causes or contributes to the negative impacts through its activities, or whether they are linked to its operations, products or services through business relationships, and describe how (GRI 3-3-b)."
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding tax.",
+          "type": "text",
+          "hint": "Describe policies or commitments regarding the material topic (GRI 3-3-c)."
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage tax and the related impacts.",
+          "type": "text",
+          "hint": "Include: i. how negative impacts are prevented or mitigated; ii. how actual negative impacts are addressed, including actions to provide for or cooperate in remediation; iii. how actual and potential positive impacts are managed (GRI 3-3-d)."
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of its actions on tax?",
+          "type": "text",
+          "hint": "Report: i. information about the effectiveness of the actions; ii. the goals, targets and indicators used to evaluate progress; iii. lessons learned and how they have been integrated into policies and operational procedures (GRI 3-3-e)."
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken on tax and whether those actions have been effective.",
+          "type": "text",
+          "hint": "Describe how stakeholder engagement has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e) (GRI 3-3-f)."
+        }
+      ]
+    },
+    {
+      "ref": "207-1",
+      "title": "Approach to tax",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the organization's approach to tax.",
+          "type": "text",
+          "hint": "Include: i. whether there is a tax strategy and a link if public; ii. the governance body or executive-level position that approves the strategy and the review frequency; iii. the approach to regulatory compliance; iv. how the approach to tax is linked to business and sustainable development strategies."
+        }
+      ]
+    },
+    {
+      "ref": "207-2",
+      "title": "Tax governance, control, and risk management",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the tax governance and control framework.",
+          "type": "text",
+          "hint": "Include: i. the governance body or executive-level position accountable for compliance with the tax strategy; ii. how the approach to tax is embedded in the organization; iii. the approach to tax risks (identification, management, monitoring); iv. how compliance with the framework is evaluated."
+        },
+        {
+          "item": "b",
+          "text": "What mechanisms exist to raise concerns about the organization's business conduct and integrity in relation to tax?",
+          "type": "text",
+          "hint": "Description of the mechanisms to raise concerns about business conduct and integrity in relation to tax."
+        },
+        {
+          "item": "c",
+          "text": "Describe the assurance process for tax disclosures.",
+          "type": "text",
+          "hint": "Include, if applicable, a link or reference to the external assurance report(s) or statement(s)."
+        }
+      ]
+    },
+    {
+      "ref": "207-3",
+      "title": "Stakeholder engagement and management of concerns related to tax",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the approach to stakeholder engagement and management of stakeholder concerns related to tax.",
+          "type": "text",
+          "hint": "Include: i. engagement with tax authorities; ii. public policy advocacy on tax; iii. processes for collecting and considering the views and concerns of stakeholders, including external stakeholders."
+        }
+      ]
+    },
+    {
+      "ref": "207-4",
+      "title": "Country-by-country reporting",
+      "questions": [
+        {
+          "item": "a",
+          "text": "In which tax jurisdictions are the entities included in the audited consolidated financial statements resident for tax purposes?",
+          "type": "text",
+          "hint": "All tax jurisdictions where the entities in the audited consolidated financial statements, or financial information filed on public record, are resident for tax purposes."
+        },
+        {
+          "item": "b",
+          "text": "For each tax jurisdiction, what are the entities, activities, workforce, financial and tax figures?",
+          "type": "text",
+          "hint": "For each jurisdiction: i. names of resident entities; ii. primary activities; iii. employees and basis of calculation; iv. third-party sales revenue; v. intra-group revenue with other jurisdictions; vi. profit/loss before tax; vii. tangible assets other than cash; viii. corporate income tax paid (cash basis); ix. corporate income tax accrued; x. reasons for difference from statutory rate."
+        },
+        {
+          "item": "c",
+          "text": "What time period is covered by the country-by-country information reported?",
+          "type": "text",
+          "hint": "The time period covered by the information reported in Disclosure 207-4."
+        }
+      ]
+    }
+  ]
 }

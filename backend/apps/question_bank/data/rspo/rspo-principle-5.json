@@ -1,0 +1,131 @@
+{
+  "summary": "RSPO Growers support and provide opportunities for smallholder inclusion. This principle covers fair and transparent trading with smallholders, including contracts and payments, and support for smallholders to improve practices and livelihoods.",
+  "disclosures": [
+    {
+      "ref": "5.1",
+      "title": "The Unit of Certification shall engage and trade with interested smallholders in a fair and transparent way. Smallholder inclusion in the UoC's RSPO certified supply chain should be strengthened.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification developed and implemented process(es)/procedure(s) to deal fairly and transparently with all smallholders, including interested RSPO certified independent smallholders?",
+          "type": "yes_no",
+          "hint": "Indicator 5.1.1 (Critical). Process(es)/procedure(s) must be developed and implemented; they must include items A) to E) asked in the following questions. Attach the documents."
+        },
+        {
+          "item": ".1 A",
+          "text": "Do your procedures include making current and historical prices paid for FFB supplied to your mill(s) publicly available or available upon request?",
+          "type": "yes_no",
+          "hint": "Indicator 5.1.1 A (Critical). Part of Indicator 5.1.1 procedures. Prices may be public or provided on request."
+        },
+        {
+          "item": ".1 B",
+          "text": "Do your procedures include a transparent and clear explanation of your FFB supply pricing mechanism (if requested)?",
+          "type": "yes_no",
+          "hint": "Indicator 5.1.1 B (Critical). Part of Indicator 5.1.1 procedures. Explanation is given if requested."
+        },
+        {
+          "item": ".1 C",
+          "text": "Do your procedures include fair pricing, including premium FFB pricing (where applicable)?",
+          "type": "yes_no",
+          "hint": "Indicator 5.1.1 C (Critical). Part of Indicator 5.1.1 procedures. Premium pricing applies where applicable."
+        },
+        {
+          "item": ".1 D",
+          "text": "Do your procedures include mutual agreement of terms, schedule of activities, budget, beneficiaries, characterisation of the producers, and timeframe of payments for FFB supplied?",
+          "type": "yes_no",
+          "hint": "Indicator 5.1.1 D (Critical). Part of Indicator 5.1.1 procedures. Attach agreements or records of mutual agreement."
+        },
+        {
+          "item": ".1 E",
+          "text": "Do your procedures include annual inspection and verification of your FFB weighing scale by an appropriate independent third party or a government authority?",
+          "type": "yes_no",
+          "hint": "Indicator 5.1.1 E (Critical). Part of Indicator 5.1.1 procedures. Attach the latest inspection/verification record."
+        },
+        {
+          "item": ".2",
+          "text": "Where you have contractual agreement(s) with smallholder(s) for FFB supply, can you provide evidence that they were mutually agreed through a fair and transparent process?",
+          "type": "yes_no",
+          "hint": "Indicator 5.1.2 (Critical). Applies where there are contractual agreements for FFB supply. Attach evidence of the process."
+        },
+        {
+          "item": ".3",
+          "text": "Where you have contractual agreement(s) with smallholder(s) for FFB supply, can you show that smallholders understand the key contract terms and received payments in line with those terms, with evidence showing at least date of receipt, price per unit and payment timeline, weight of FFB, deductions (if any) and total price paid?",
+          "type": "yes_no",
+          "hint": "Indicator 5.1.3 (Critical). Applies where there are contractual agreements. Evidence must specify: A) date of receipt/documentation; B) price per unit and payment timeline; C) weight of FFB; D) deductions (if any); E) total price paid."
+        },
+        {
+          "item": ".4",
+          "text": "Does your Unit of Certification actively engage, consult and give opportunities to all smallholders (including interested RSPO certified independent smallholders) to access your RSPO certified supply chain where feasible?",
+          "type": "yes_no",
+          "hint": "Indicator 5.1.4 (Critical). Intended to support smallholder inclusion and strengthen downstream traceability. Attach engagement and consultation records."
+        },
+        {
+          "item": ".4 A",
+          "text": "Where a partnership with non-RSPO certified independent smallholder groups is identified and feasible, do mutually agreed terms specify how the RSPO certification process is managed?",
+          "type": "yes_no",
+          "hint": "Indicator 5.1.4 A (Critical). Applies to non-RSPO certified independent smallholder groups where partnership is identified and feasible. Attach the agreement."
+        },
+        {
+          "item": ".4 B",
+          "text": "For such non-RSPO certified smallholder groups, do the agreed terms specify the roles and responsibilities of your Unit of Certification and the smallholders for operating the internal control system (ICS)?",
+          "type": "yes_no",
+          "hint": "Indicator 5.1.4 B (Critical). Applies to non-RSPO certified independent smallholder groups where partnership is identified and feasible."
+        },
+        {
+          "item": ".4 C",
+          "text": "For such non-RSPO certified smallholder groups, do the agreed terms specify certificate ownership?",
+          "type": "yes_no",
+          "hint": "Indicator 5.1.4 C (Critical). Applies to non-RSPO certified independent smallholder groups where partnership is identified and feasible."
+        },
+        {
+          "item": ".4 D",
+          "text": "For RSPO certified independent smallholder groups, where a partnership is identified and feasible, do the agreed terms specify distribution, handling and marketing of physical certified FFB (where possible)?",
+          "type": "yes_no",
+          "hint": "Indicator 5.1.4 D (Critical). Applies to RSPO certified independent smallholder groups. Listed as item A under the certified-group heading in the PDF."
+        }
+      ]
+    },
+    {
+      "ref": "5.2",
+      "title": "The Unit of Certification shall support interested smallholders within its supply base to develop, operate, and improve their livelihoods; in particular interested certified independent smallholders.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "In collaboration with interested smallholders in your supply base, have you developed, implemented and annually reviewed a smallholder support plan to improve agricultural practices?",
+          "type": "yes_no",
+          "hint": "Indicator 5.2.1. Plan must be developed with interested smallholders, implemented and reviewed annually. Attach the plan and latest review."
+        },
+        {
+          "item": ".1 A",
+          "text": "Does the smallholder support plan include training on sustainable agricultural practices?",
+          "type": "yes_no",
+          "hint": "Indicator 5.2.1 A. Minimum content of the plan under Indicator 5.2.1. Attach training records."
+        },
+        {
+          "item": ".1 B",
+          "text": "Does the smallholder support plan include support to enhance the legality of smallholder FFB production?",
+          "type": "yes_no",
+          "hint": "Indicator 5.2.1 B. Minimum content of the plan under Indicator 5.2.1."
+        },
+        {
+          "item": ".1 C",
+          "text": "Does the smallholder support plan include support to identify the geolocation of FFB origins?",
+          "type": "yes_no",
+          "hint": "Indicator 5.2.1 C. Minimum content of the plan under Indicator 5.2.1."
+        },
+        {
+          "item": ".2",
+          "text": "Are smallholders participating in your support plan trained, and can they show understanding of key sustainable agricultural practices needed to increase FFB productivity?",
+          "type": "yes_no",
+          "hint": "Indicator 5.2.2. Training should prioritise topics relevant to RSPO, aligned with RSPO Principles and Criteria 2024 requirements/guidance. Attach training and assessment records."
+        },
+        {
+          "item": ".3",
+          "text": "Has your Unit of Certification identified and implemented additional activities that improve the livelihoods of smallholders in your supply base, taking into account results of participatory consultations with them?",
+          "type": "yes_no",
+          "hint": "Indicator 5.2.3. Attach the activities and consultation results considered."
+        }
+      ]
+    }
+  ]
+}

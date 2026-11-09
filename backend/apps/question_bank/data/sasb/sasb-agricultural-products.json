@@ -1,0 +1,185 @@
+{
+ "summary": "Covers companies that grow, process, trade and distribute fruit, vegetables and agricultural commodities such as grains, sugar, oils, maize, soybeans and animal feed. Disclosures address greenhouse gas emissions, energy, water, food safety, worker health and safety, supply chain impacts, GMOs and ingredient sourcing, including climate risks to crops.",
+ "disclosures": [
+  {
+   "ref": "FB-AG-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your gross global Scope 1 emissions?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Report gross global Scope 1 greenhouse gas emissions in metric tonnes CO2-e, covering all seven GHGs under the Kyoto Protocol where applicable."
+    },
+    {
+     "item": ".2",
+     "text": "What long- and short-term strategy or plan do you have to manage Scope 1 emissions, what emissions reduction targets have you set, and how have you performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy or plan, the targets (scope, baseline, timeframe) and an analysis of performance against those targets, including any factors affecting results."
+    },
+    {
+     "item": ".3",
+     "text": "How much fleet fuel did your organisation consume, and what percentage was renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) fleet fuel consumed in GJ and (2) the percentage of that fuel that is renewable."
+    }
+   ]
+  },
+  {
+   "ref": "FB-AG-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the operational energy consumed, (2) the percentage of that energy that is grid electricity and (3) the percentage that is renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) operational energy consumed in GJ, (2) the percentage supplied as grid electricity and (3) the percentage that is renewable."
+    }
+   ]
+  },
+  {
+   "ref": "FB-AG-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the total water withdrawn and (2) the total water consumed, and what percentage of each is in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report (1) total water withdrawn and (2) total water consumed in thousand m3, and the percentage of each located in regions with High or Extremely High Baseline Water Stress."
+    },
+    {
+     "item": ".2",
+     "text": "What water management risks does your organisation face, and what strategies and practices do you use to mitigate them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the main water management risks and the strategies and practices used to mitigate them, including any targets and performance against them."
+    },
+    {
+     "item": ".3",
+     "text": "How many incidents of non-compliance with water quality permits, standards and regulations did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of incidents of non-compliance associated with water quality permits, standards and regulations in the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "FB-AG-250a",
+   "title": "Food Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your Global Food Safety Initiative (GFSI) audit (1) non-conformance rates and (2) associated corrective action rates for (a) major and (b) minor non-conformances?",
+     "type": "text",
+     "hint": "Unit: Rate · Report the rates separately for (1) non-conformances and (2) associated corrective actions, split into (a) major and (b) minor non-conformances, across GFSI audits."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of the agricultural products you source, by cost, comes from suppliers certified to a Global Food Safety Initiative (GFSI) recognised food safety certification programme?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by cost · Report the percentage, by cost, of agricultural products sourced from suppliers certified to a GFSI-recognised food safety programme."
+    },
+    {
+     "item": ".3",
+     "text": "How many food product recalls did you issue, and what was the total amount of food product recalled?",
+     "type": "text",
+     "hint": "Unit: Number, Metric tonnes (t) · Report (1) the number of recalls issued and (2) the total amount of food product recalled in metric tonnes."
+    }
+   ]
+  },
+  {
+   "ref": "FB-AG-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total recordable incident rate (TRIR), (2) fatality rate and (3) near miss frequency rate (NMFR) for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate · Report each of the three rates separately for (a) direct employees and (b) contract employees, stating the base (for example per 200,000 hours worked) used."
+    }
+   ]
+  },
+  {
+   "ref": "FB-AG-430a",
+   "title": "Environmental & Social Impacts of Ingredient Supply Chain",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of the agricultural products you source, by cost, is certified to a third-party environmental or social standard, and what is the percentage for each standard?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) by cost · Report (1) the total percentage sourced, by cost, certified to a third-party environmental or social standard and (2) the percentage by each standard (for example Rainforest Alliance, Fairtrade)."
+    },
+    {
+     "item": ".2",
+     "text": "What were your suppliers' social and environmental responsibility audit (1) non-conformance rate and (2) associated corrective action rate for (a) major and (b) minor non-conformances?",
+     "type": "text",
+     "hint": "Unit: Rate · Report (1) the non-conformance rate and (2) the associated corrective action rate from supplier social and environmental audits, each split into (a) major and (b) minor non-conformances."
+    },
+    {
+     "item": ".3",
+     "text": "What is your strategy to manage environmental and social risks arising from contract growing and commodity sourcing?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy, including supplier standards, monitoring, engagement and support for contract growers and commodity suppliers."
+    }
+   ]
+  },
+  {
+   "ref": "FB-AG-430b",
+   "title": "GMO Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What strategies does your organisation use to manage the use of genetically modified organisms (GMOs)?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe strategies covering GMO use in products and supply, such as segregation, testing, labelling, and regulatory and consumer-preference risks."
+    }
+   ]
+  },
+  {
+   "ref": "FB-AG-440a",
+   "title": "Ingredient Sourcing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "Which are your principal crops, and what risks and opportunities does climate change present to them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Identify the principal crops and describe the climate-related risks and opportunities (for example changing yields, water availability, extreme weather, new growing regions)."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your agricultural products, by cost, is sourced from regions with High or Extremely High Baseline Water Stress?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by cost · Report the percentage of agricultural products, by cost, (by cost or as specified) sourced from regions with High or Extremely High Baseline Water Stress."
+    }
+   ]
+  },
+  {
+   "ref": "FB-AG-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was your production by principal crop?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report production for each principal crop in metric tonnes."
+    },
+    {
+     "item": ".B",
+     "text": "How many processing facilities does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of processing facilities."
+    },
+    {
+     "item": ".C",
+     "text": "What is the total land area under active production?",
+     "type": "number",
+     "hint": "Unit: Hectares · Report the total land area under active production in hectares."
+    },
+    {
+     "item": ".D",
+     "text": "What was the cost of agricultural products sourced externally?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the cost of agricultural products sourced externally in your presentation currency."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,131 @@
+{
+ "summary": "Covers rail freight shipping and support services, including containerised and bulk freight, with entities that typically own and operate their rail networks. Disclosure topics are greenhouse gas emissions, air quality, workforce health and safety, competitive behaviour, and accident and safety management.",
+ "disclosures": [
+  {
+   "ref": "TR-RA-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's gross global Scope 1 greenhouse gas emissions?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) CO2-e · Report gross global Scope 1 emissions for the reporting period, in metric tonnes CO2-e, covering direct emissions from sources you own or control."
+    },
+    {
+     "item": ".2",
+     "text": "How does your organisation plan to manage its Scope 1 emissions over the short and long term, including any reduction targets and how you have performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your short- and long-term strategy or plan, the emissions reduction targets, and an analysis of performance against those targets."
+    },
+    {
+     "item": ".3",
+     "text": "What is your total fuel consumed, and what percentage of it is renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report total fuel in gigajoules (GJ) and the percentage that is renewable."
+    }
+   ]
+  },
+  {
+   "ref": "TR-RA-120a",
+   "title": "Air Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your organisation's air emissions of the following pollutants: (1) NOx (excluding N2O) and (2) particulate matter (PM10)?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report the quantity of each pollutant separately in metric tonnes, stating how each was calculated or estimated."
+    }
+   ]
+  },
+  {
+   "ref": "TR-RA-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total recordable incident rate (TRIR), (2) fatality rate and (3) near miss frequency rate (NMFR) for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate · Report each rate separately for direct employees and contract employees, stating the exposure-hours basis used."
+    }
+   ]
+  },
+  {
+   "ref": "TR-RA-520a",
+   "title": "Competitive Behaviour",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with anti-competitive behaviour regulations?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses for the period in your presentation currency, covering fines, settlements and other legal costs from such proceedings."
+    }
+   ]
+  },
+  {
+   "ref": "TR-RA-540a",
+   "title": "Accident & Safety Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many accidents and incidents did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total count for the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "How many (1) accident releases and (2) non-accident releases (NARs) did your organisation have?",
+     "type": "text",
+     "hint": "Unit: Number · Report (1) the number of accident releases and (2) the number of non-accident releases."
+    },
+    {
+     "item": ".3",
+     "text": "How many rail safety standard defects cited by relevant authorities that may result in fines or other penalties did you have, by jurisdiction?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of cited defects by jurisdiction."
+    },
+    {
+     "item": ".4",
+     "text": "How frequently do you carry out internal railway integrity inspections?",
+     "type": "text",
+     "hint": "Unit: Rate · Report the inspection frequency as a rate, and describe the inspection methods and the network covered."
+    }
+   ]
+  },
+  {
+   "ref": "TR-RA-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many carloads did your organisation transport?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of carloads transported in the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "How many intermodal units did your organisation transport?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of intermodal units transported in the reporting period."
+    },
+    {
+     "item": ".C",
+     "text": "How many track kilometres does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Kilometres · Report total track length in kilometres."
+    },
+    {
+     "item": ".D",
+     "text": "What are your revenue tonne-kilometres (RTK)?",
+     "type": "number",
+     "hint": "Unit: RTK · Report revenue tonne-kilometres for the reporting period."
+    },
+    {
+     "item": ".E",
+     "text": "How many employees does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of employees."
+    }
+   ]
+  }
+ ]
+}

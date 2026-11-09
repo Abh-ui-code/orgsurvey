@@ -1,17 +1,71 @@
 {
- "summary": "GRI 204 covers procurement practices, including an organization's support for local suppliers or those owned by women or members of vulnerable groups. It also covers how procurement practices cause or contribute to negative impacts in the supply chain.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "How does the organization manage procurement practices as a material topic (GRI 3-3)?",
-   "type": "text",
-   "hint": "Describe how the organization manages the topic and its related impacts, as required by Disclosure 3-3 in GRI 3: Material Topics 2021."
-  },
-  {
-   "ref": "204-1",
-   "text": "What proportion of spending at significant locations of operation goes to local suppliers?",
-   "type": "number",
-   "hint": "a. Percentage of the procurement budget for significant locations spent on local suppliers. b. Geographical definition of 'local'. c. Definition of 'significant locations of operation'."
-  }
- ]
+  "summary": "GRI 204 covers procurement practices, including an organization's support for local suppliers or those owned by women or members of vulnerable groups. It also covers how procurement practices cause or contribute to negative impacts in the supply chain.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to procurement practices.",
+          "type": "text",
+          "hint": "Describe the actual and potential, negative and positive impacts on the economy, environment, and people, including impacts on human rights (GRI 3-3-a)."
+        },
+        {
+          "item": "b",
+          "text": "State whether the organization is involved with the negative impacts related to procurement practices through its own activities or as a result of its business relationships, and describe how.",
+          "type": "text",
+          "hint": "Say whether the organization causes or contributes to the negative impacts through its activities, or whether they are linked to its operations, products or services through business relationships, and describe how (GRI 3-3-b)."
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding procurement practices.",
+          "type": "text",
+          "hint": "Describe policies or commitments regarding the material topic (GRI 3-3-c)."
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage procurement practices and the related impacts.",
+          "type": "text",
+          "hint": "Include: i. how negative impacts are prevented or mitigated; ii. how actual negative impacts are addressed, including actions to provide for or cooperate in remediation; iii. how actual and potential positive impacts are managed (GRI 3-3-d)."
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of its actions on procurement practices?",
+          "type": "text",
+          "hint": "Report: i. information about the effectiveness of the actions; ii. the goals, targets and indicators used to evaluate progress; iii. lessons learned and how they have been integrated into policies and operational procedures (GRI 3-3-e)."
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken on procurement practices and whether those actions have been effective.",
+          "type": "text",
+          "hint": "Describe how stakeholder engagement has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e) (GRI 3-3-f)."
+        }
+      ]
+    },
+    {
+      "ref": "204-1",
+      "title": "Proportion of spending on local suppliers",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What percentage of the procurement budget for significant locations of operation is spent on suppliers local to that operation?",
+          "type": "number",
+          "hint": "E.g. percentage of products and services purchased locally."
+        },
+        {
+          "item": "b",
+          "text": "What is the organization's geographical definition of 'local'?",
+          "type": "text",
+          "hint": "The organization's geographical definition of local."
+        },
+        {
+          "item": "c",
+          "text": "How does the organization define 'significant locations of operation'?",
+          "type": "text",
+          "hint": "The definition used for significant locations of operation."
+        }
+      ]
+    }
+  ]
 }

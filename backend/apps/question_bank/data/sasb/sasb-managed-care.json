@@ -1,0 +1,119 @@
+{
+ "summary": "This standard covers companies that offer health insurance for individual, commercial, Medicare and Medicaid members, provide administrative services for self-funded plans and manage pharmacy benefits. Disclosure topics include customer privacy, access to coverage, plan performance, improved health outcomes and climate change impacts on human health.",
+ "disclosures": [
+  {
+   "ref": "HC-MC-230a",
+   "title": "Customer Privacy & Technology Standards",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What policies and practices does your organisation have to secure customers' personal health data records and other personal data?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you identify data security vulnerabilities and risks, the controls in place, and any standards or certifications followed."
+    },
+    {
+     "item": ".2",
+     "text": "How many data breaches did you have, what percentage involved (a) personal data only and (b) personal health data, and how many customers were affected in each category?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the number of breaches, (2) the percentage involving personal data only and personal health data, and (3) the number of customers affected in each category."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with data security and privacy?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+    }
+   ]
+  },
+  {
+   "ref": "HC-MC-240a",
+   "title": "Access to Coverage",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of total health care insurance premiums is spent directly on medical claims and efforts to improve the quality of care?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of premiums spent on medical claims and quality-improvement efforts (medical loss ratio basis) and state the period."
+    },
+    {
+     "item": ".4",
+     "text": "What policies and practices do you have regarding customer access to coverage?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe enrolment, eligibility, underwriting and affordability policies and how coverage access is maintained for customers."
+    }
+   ]
+  },
+  {
+   "ref": "HC-MC-250a",
+   "title": "Plan Performance",
+   "questions": [
+    {
+     "item": ".2",
+     "text": "What is your enrolee retention rate by plan type?",
+     "type": "text",
+     "hint": "Unit: Rate · Report the retention rate for each plan type and state how the rate is calculated."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of claims denied that were appealed by customers were ultimately reversed?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of denied claims that were appealed and ultimately reversed in the reporting period."
+    },
+    {
+     "item": ".4",
+     "text": "What is your plan enrolee grievance rate?",
+     "type": "number",
+     "hint": "Unit: Rate · Report grievances per number of enrolees (state the denominator and period used)."
+    },
+    {
+     "item": ".5",
+     "text": "How did your plans perform and how were they rated, for each plan type offered, by region?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe plan performance and any external ratings (for example star ratings) for each plan type in each region."
+    }
+   ]
+  },
+  {
+   "ref": "HC-MC-260a",
+   "title": "Improved Outcomes",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of enrolees participate in wellness programmes, by type: (1) diet and nutrition, (2) exercise, (3) stress management, (4) mental health, (5) smoking or alcohol cessation, or (6) other?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report the percentage of enrolees participating in each of the six programme types."
+    },
+    {
+     "item": ".4",
+     "text": "What initiatives and programmes do you have to maintain and improve enrolee health?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the programmes, who they target and any outcomes measured."
+    }
+   ]
+  },
+  {
+   "ref": "HC-MC-450a",
+   "title": "Climate Change Impacts on Human Health",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your strategy to address the effects of climate change on your operations, and how are risks from changes in the geographical incidence, morbidity and mortality of illnesses incorporated into risk models?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy, the specific climate-related health risks considered, and how they feed into risk models."
+    }
+   ]
+  },
+  {
+   "ref": "HC-MC-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many enrolees do you have, by plan type?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of enrolees for each plan type at the end of the reporting period."
+    }
+   ]
+  }
+ ]
+}

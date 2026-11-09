@@ -1,0 +1,79 @@
+[
+ {
+  "order": 1,
+  "code": "Principle 1",
+  "number": 1,
+  "title": "Act transparently, ethically, and responsibly",
+  "edition": "2024 (v4.1)",
+  "series": "rspo",
+  "slug": "rspo-principle-1",
+  "pdf": "/rspo/rspo-principles-and-criteria-2024.pdf",
+  "source": "/home/abhishek-kumar/Downloads/ENG_PC-2024_V4-1_updated_100725.pdf"
+ },
+ {
+  "order": 2,
+  "code": "Principle 2",
+  "number": 2,
+  "title": "Operate legally and with accountability",
+  "edition": "2024 (v4.1)",
+  "series": "rspo",
+  "slug": "rspo-principle-2",
+  "pdf": "/rspo/rspo-principles-and-criteria-2024.pdf",
+  "source": "/home/abhishek-kumar/Downloads/ENG_PC-2024_V4-1_updated_100725.pdf"
+ },
+ {
+  "order": 3,
+  "code": "Principle 3",
+  "number": 3,
+  "title": "Optimise productivity, demonstrate traceability, and create positive impacts",
+  "edition": "2024 (v4.1)",
+  "series": "rspo",
+  "slug": "rspo-principle-3",
+  "pdf": "/rspo/rspo-principles-and-criteria-2024.pdf",
+  "source": "/home/abhishek-kumar/Downloads/ENG_PC-2024_V4-1_updated_100725.pdf"
+ },
+ {
+  "order": 4,
+  "code": "Principle 4",
+  "number": 4,
+  "title": "Respect community and human rights, and deliver benefits",
+  "edition": "2024 (v4.1)",
+  "series": "rspo",
+  "slug": "rspo-principle-4",
+  "pdf": "/rspo/rspo-principles-and-criteria-2024.pdf",
+  "source": "/home/abhishek-kumar/Downloads/ENG_PC-2024_V4-1_updated_100725.pdf"
+ },
+ {
+  "order": 5,
+  "code": "Principle 5",
+  "number": 5,
+  "title": "Support and provide opportunities for smallholder inclusion",
+  "edition": "2024 (v4.1)",
+  "series": "rspo",
+  "slug": "rspo-principle-5",
+  "pdf": "/rspo/rspo-principles-and-criteria-2024.pdf",
+  "source": "/home/abhishek-kumar/Downloads/ENG_PC-2024_V4-1_updated_100725.pdf"
+ },
+ {
+  "order": 6,
+  "code": "Principle 6",
+  "number": 6,
+  "title": "Respect workers’ rights and working conditions",
+  "edition": "2024 (v4.1)",
+  "series": "rspo",
+  "slug": "rspo-principle-6",
+  "pdf": "/rspo/rspo-principles-and-criteria-2024.pdf",
+  "source": "/home/abhishek-kumar/Downloads/ENG_PC-2024_V4-1_updated_100725.pdf"
+ },
+ {
+  "order": 7,
+  "code": "Principle 7",
+  "number": 7,
+  "title": "Protect, conserve, and enhance ecosystems as responsible environmental stewards",
+  "edition": "2024 (v4.1)",
+  "series": "rspo",
+  "slug": "rspo-principle-7",
+  "pdf": "/rspo/rspo-principles-and-criteria-2024.pdf",
+  "source": "/home/abhishek-kumar/Downloads/ENG_PC-2024_V4-1_updated_100725.pdf"
+ }
+]

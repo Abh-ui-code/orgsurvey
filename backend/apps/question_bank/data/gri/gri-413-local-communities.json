@@ -1,23 +1,71 @@
 {
- "summary": "GRI 413 covers an organization's impacts on local communities, meaning people living or working in areas affected or potentially affected by its activities, and how it manages them. It includes community engagement, impact assessments and development programs.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "How does your organization manage the topic of local communities, including its impacts, policies, actions and tracking of effectiveness?",
-   "type": "text",
-   "hint": "Report how the organization manages this material topic using Disclosure 3-3 in GRI 3: Material Topics 2021."
-  },
-  {
-   "ref": "413-1",
-   "text": "What percentage of your operations have implemented local community engagement, impact assessments, and/or development programs?",
-   "type": "number",
-   "hint": "a. Percentage of operations with engagement, impact assessments and/or development programs, incl.: i. social impact assessments (incl. gender), participatory; ii. environmental assessments and monitoring; iii. public disclosure of results; iv. development programs; v. stakeholder engagement plans; vi. consultation committees incl. vulnerable groups; vii. works councils/OHS committees; viii. grievance processes."
-  },
-  {
-   "ref": "413-2",
-   "text": "Which of your operations have significant actual and potential negative impacts on local communities, where are they located, and what are those impacts?",
-   "type": "text",
-   "hint": "a. Operations with significant actual and potential negative impacts on local communities, including: i. the location of the operations; ii. the significant actual and potential negative impacts of the operations."
-  }
- ]
+  "summary": "GRI 413 covers an organization's impacts on local communities, meaning people living or working in areas affected or potentially affected by its activities, and how it manages them. It includes community engagement, impact assessments and development programs.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to local communities.",
+          "hint": "Cover both actual and potential impacts, negative and positive, including impacts on human rights.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "Is the organization involved with the negative impacts related to local communities through its own activities or as a result of its business relationships? Describe those activities or business relationships.",
+          "hint": "State whether involvement is through the organization's activities or through its business relationships, and describe them.",
+          "type": "text"
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding local communities.",
+          "hint": "Describe the policies or commitments that apply to this material topic.",
+          "type": "text"
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage local communities and the related impacts, including (i) actions to prevent or mitigate potential negative impacts, (ii) actions to address actual negative impacts, including actions to provide for or cooperate in their remediation, and (iii) actions to manage actual and potential positive impacts.",
+          "hint": "Cover i. prevention or mitigation of potential negative impacts; ii. addressing actual negative impacts, including remediation; iii. managing positive impacts.",
+          "type": "text"
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of the actions taken? Describe (i) the processes used, (ii) the goals, targets and indicators used to evaluate progress, (iii) the effectiveness of the actions, including progress toward goals and targets, and (iv) lessons learned and how they have been incorporated into operational policies and procedures.",
+          "hint": "Cover i. tracking processes; ii. goals, targets and indicators; iii. effectiveness and progress; iv. lessons learned and how they were incorporated.",
+          "type": "text"
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e).",
+          "hint": "Explain the role of stakeholder engagement in shaping actions and in judging their effectiveness.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "413-1",
+      "title": "Operations with local community engagement, impact assessments, and development programs",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What percentage of operations have implemented local community engagement, impact assessments and/or development programs, including the use of: (i) social impact assessments, including gender impact assessments, based on participatory processes; (ii) environmental impact assessments and ongoing monitoring; (iii) public disclosure of results of environmental and social impact assessments; (iv) local community development programs based on local communities' needs; (v) stakeholder engagement plans based on stakeholder mapping; (vi) broad based local community consultation committees and processes that include vulnerable groups; (vii) works councils, occupational health and safety committees and other worker representation bodies to deal with impacts; (viii) formal local community grievance processes?",
+          "hint": "Enter the percentage of operations; describe which of items i to viii are used in your notes.",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "ref": "413-2",
+      "title": "Operations with significant actual and potential negative impacts on local communities",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Which operations have significant actual and potential negative impacts on local communities, including (i) the location of the operations and (ii) the significant actual and potential negative impacts of the operations?",
+          "hint": "Give the location and the significant impacts for each operation.",
+          "type": "text"
+        }
+      ]
+    }
+  ]
 }

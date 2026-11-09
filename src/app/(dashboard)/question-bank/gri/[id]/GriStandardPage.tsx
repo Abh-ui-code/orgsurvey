@@ -10,14 +10,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { EmptyState } from "@/components/ui/empty-state";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useGriStandard } from "@/hooks/use-gri-standards";
-import { GRI_SERIES, questionTypeLabel } from "@/types/question";
+import { disclosureLabel, groupByDisclosure, questionNumber } from "@/lib/gri";
+import { FRAMEWORKS, questionTypeLabel } from "@/types/question";
 
 /** One GRI standard on its own page: what it is, its PDF, and its questions. */
 function GriStandard() {
   const { id } = useParams<{ id: string }>();
   const standard = useGriStandard(id);
-  const back = "/question-bank?category=gri";
 
+  const back = `/question-bank?category=${standard.data?.framework ?? "gri"}`;
   if (standard.isPending) return <Skeleton className="h-96 w-full" />;
   if (standard.isError || !standard.data) {
     return (
@@ -34,14 +35,15 @@ function GriStandard() {
   }
 
   const s = standard.data;
-  const series = GRI_SERIES.find((x) => x.value === s.series);
+  const framework = FRAMEWORKS[s.framework];
+  const series = framework.groups.find((x) => x.value === s.series);
 
   return (
     <div className="space-y-5">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div className="min-w-0">
           <Link href={back} className="mb-2 inline-flex items-center gap-1 text-sm text-ink-muted hover:text-ink">
-            <ArrowLeft className="h-3.5 w-3.5" /> GRI standards
+            <ArrowLeft className="h-3.5 w-3.5" /> {framework.label}
           </Link>
           <div className="flex flex-wrap items-center gap-2">
             <h1 className="font-display text-2xl font-semibold text-ink">{`${s.code}: ${s.title}`}</h1>
@@ -70,18 +72,29 @@ function GriStandard() {
           <CardTitle>Questions in this standard</CardTitle>
           <Badge>{s.questions.length}</Badge>
         </CardHeader>
-        <ol className="divide-y divide-line">
-          {s.questions.map((q, i) => (
-            <li key={q.id} className="flex gap-4 px-5 py-3.5">
-              <span className="w-8 shrink-0 pt-0.5 font-mono-data text-xs text-brand-strong">{`Q${i + 1}`}</span>
-              <div className="min-w-0 flex-1">
-                <p className="text-sm text-ink">{q.text}</p>
-                {q.hint && <p className="mt-1 text-xs text-ink-muted">{q.hint}</p>}
-                <p className="mt-1 text-xs text-ink-faint">{questionTypeLabel(q.type)}</p>
-              </div>
-            </li>
+        <div className="divide-y divide-line">
+          {groupByDisclosure(s.questions).map((group) => (
+            <section key={`${group.ref}-${group.items[0].id}`}>
+              {group.title && (
+                <h3 className="bg-paper-sunken/60 px-5 py-2.5 text-sm font-semibold text-ink">
+                  <span className="font-mono-data text-brand-strong">{disclosureLabel(group.ref)}</span> {group.title}
+                </h3>
+              )}
+              <ol className="divide-y divide-line">
+                {group.items.map((q) => (
+                  <li key={q.id} className="flex gap-4 px-5 py-3.5">
+                    <span className="w-24 shrink-0 pt-0.5 font-mono-data text-xs text-brand-strong">{questionNumber(q.ref, q.item)}</span>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm text-ink">{q.text}</p>
+                      {q.hint && <p className="mt-1 text-xs text-ink-muted">{q.hint}</p>}
+                      <p className="mt-1 text-xs text-ink-faint">{questionTypeLabel(q.type)}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </section>
           ))}
-        </ol>
+        </div>
       </Card>
     </div>
   );

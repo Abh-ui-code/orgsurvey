@@ -1,0 +1,113 @@
+{
+ "summary": "This standard covers electronic manufacturing services (EMS) and original design manufacturing (ODM) entities, which assemble products and provide logistics, after-market and engineering design services for original equipment manufacturers. Its disclosure topics are water management, waste management, labour practices, workforce conditions, health and safety, product lifecycle management and materials sourcing.",
+ "disclosures": [
+  {
+   "ref": "TC-ES-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your organisation's (1) total water withdrawn and (2) total water consumed, and what percentage of each was in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report water withdrawn and water consumed in thousand m³, plus the percentage of each located in regions with High or Extremely High Baseline Water Stress (for example per the WRI Aqueduct tool)."
+    }
+   ]
+  },
+  {
+   "ref": "TC-ES-150a",
+   "title": "Waste Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were (1) the amount of hazardous waste from your manufacturing and (2) the percentage of that waste that was recycled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report hazardous waste generated in metric tonnes and the share recycled, including reuse and recovery. Explain how hazardous waste is defined in the jurisdictions where you operate."
+    }
+   ]
+  },
+  {
+   "ref": "TC-ES-310a",
+   "title": "Labour Practices",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were (1) the number of work stoppages and (2) the total days idle at your organisation?",
+     "type": "text",
+     "hint": "Unit: Number, Days idle · Report the number of work stoppages (strikes and lockouts) and the total working days lost, in the reporting period. Cover stoppages involving 1,000 or more workers if that is the scope you apply, and state it."
+    }
+   ]
+  },
+  {
+   "ref": "TC-ES-320a",
+   "title": "Workforce Conditions, Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your (1) total recordable incident rate (TRIR) and (2) near miss frequency rate (NMFR) for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate · Report TRIR and NMFR separately for direct employees and for contract employees, using hours worked as the base. State the rate basis used (e.g. per 200,000 hours)."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of (1) your organisation's facilities and (2) your Tier 1 supplier facilities were audited in the RBA Validated Audit Process (VAP) or equivalent, for (a) all facilities and (b) high-risk facilities?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report the percentage audited for both your own and Tier 1 supplier facilities, split between all facilities and high-risk facilities. Name the audit process used if equivalent to the RBA VAP."
+    },
+    {
+     "item": ".3",
+     "text": "What were (1) your non-conformance rate with the RBA Validated Audit Process (VAP) or equivalent and (2) the associated corrective action rate, for (a) priority and (b) other non-conformances, for (i) your own facilities and (ii) your Tier 1 supplier facilities?",
+     "type": "text",
+     "hint": "Unit: Rate · Report the non-conformance rate and the corrective action rate separately for priority and other non-conformances, for your own facilities and for Tier 1 supplier facilities. Include the audit scheme used."
+    }
+   ]
+  },
+  {
+   "ref": "TC-ES-410a",
+   "title": "Product Lifecycle Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What weight of end-of-life products and e-waste did your organisation recover, and what percentage of it was recycled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report the weight of end-of-life products and e-waste recovered through take-back or similar programmes, and the percentage recycled. Describe the scope of the recovery programmes covered."
+    }
+   ]
+  },
+  {
+   "ref": "TC-ES-440a",
+   "title": "Materials Sourcing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation manage the risks associated with the use of critical materials in its products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Identify the critical materials you use, the risks they pose (supply, price, regulatory, reputational) and how you manage them, e.g. through substitution, reuse and recycling, supplier engagement or stockpiling."
+    }
+   ]
+  },
+  {
+   "ref": "TC-ES-000",
+   "title": "Activity Metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many manufacturing facilities does your organisation operate?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of manufacturing facilities you own or operate at the end of the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "What is the total area of your organisation's manufacturing facilities?",
+     "type": "number",
+     "hint": "Unit: Square metres (m²) · Report the combined floor area of all manufacturing facilities in square metres at the end of the reporting period."
+    },
+    {
+     "item": ".C",
+     "text": "How many employees does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of employees, stating whether the figure is headcount or full-time equivalent."
+    }
+   ]
+  }
+ ]
+}

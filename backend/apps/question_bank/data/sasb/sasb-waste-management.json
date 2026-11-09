@@ -1,0 +1,191 @@
+{
+ "summary": "The Waste Management standard covers organisations that collect, store, treat, dispose of and recycle municipal, commercial, industrial and hazardous waste. Its disclosure topics are greenhouse gas emissions, fleet fuel, air quality, leachate and hazardous waste, labour practices, workforce safety and recycling and resource recovery.",
+ "disclosures": [
+  {
+   "ref": "IF-WM-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your gross global Scope 1 emissions, and what percentage of them are covered under (2) emissions-limiting regulations and (3) emissions-reporting regulations?",
+     "type": "text",
+     "hint": "Unit: metric tonnes CO2-e; percentage · Give (1) gross global Scope 1 emissions in tonnes CO2-e, (2) the percentage under emissions-limiting regulations and (3) the percentage under emissions-reporting regulations."
+    },
+    {
+     "item": ".2",
+     "text": "How much landfill gas did you generate, what percentage was flared and what percentage was used for energy?",
+     "type": "text",
+     "hint": "Unit: million British thermal units (MMBtu); percentage · Report (1) total landfill gas generated in MMBtu, (2) percentage flared and (3) percentage used for energy."
+    },
+    {
+     "item": ".3",
+     "text": "What is your long- and short-term strategy or plan to manage Scope 1 emissions, what are your emissions reduction targets, and how have you performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy, the targets (scope, base year, target year), and an analysis of performance against those targets."
+    }
+   ]
+  },
+  {
+   "ref": "IF-WM-110b",
+   "title": "Fleet Fuel Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How much fleet fuel did you consume, what percentage was natural gas and what percentage was renewable?",
+     "type": "text",
+     "hint": "Unit: gigajoules (GJ); percentage · Report (1) fleet fuel consumed in GJ, (2) percentage natural gas and (3) percentage renewable."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of the vehicles in your fleet are alternative fuel vehicles?",
+     "type": "number",
+     "hint": "Unit: percentage · Report alternative fuel vehicles as a percentage of the total fleet."
+    }
+   ]
+  },
+  {
+   "ref": "IF-WM-120a",
+   "title": "Air Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How much of the following pollutants did you emit to air: (1) NOx (excluding N2O), (2) SOx, (3) volatile organic compounds (VOCs) and (4) hazardous air pollutants (HAPs)?",
+     "type": "text",
+     "hint": "Unit: metric tonnes · Report tonnes emitted for each of the four pollutants."
+    },
+    {
+     "item": ".2",
+     "text": "How many of your facilities are in or near areas of dense population?",
+     "type": "number",
+     "hint": "Unit: number · Report the number of facilities in or near areas of dense population."
+    },
+    {
+     "item": ".3",
+     "text": "How many incidents of non-compliance with air quality permits, standards and regulations did you have?",
+     "type": "number",
+     "hint": "Unit: number · Report the total number of incidents in the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "IF-WM-150a",
+   "title": "Management of Leachate & Hazardous Waste",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your total Toxic Release Inventory (TRI) releases, and what percentage was released to water?",
+     "type": "text",
+     "hint": "Unit: metric tonnes; percentage · Report (1) total TRI releases in tonnes and (2) the percentage released to water."
+    },
+    {
+     "item": ".2",
+     "text": "How many corrective actions did you implement for landfill releases?",
+     "type": "number",
+     "hint": "Unit: number · Report the number of corrective actions implemented in the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "How many incidents of non-compliance associated with environmental impacts did you have?",
+     "type": "number",
+     "hint": "Unit: number · Report the total number of incidents in the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "IF-WM-310a",
+   "title": "Labour Practices",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your active workforce is employed under collective agreements?",
+     "type": "number",
+     "hint": "Unit: percentage · Report the percentage of the active workforce covered by collective agreements."
+    },
+    {
+     "item": ".2",
+     "text": "How many work stoppages did you have, and what was the total number of days idle?",
+     "type": "text",
+     "hint": "Unit: number; days idle · Report (1) the number of work stoppages and (2) the total days idle."
+    }
+   ]
+  },
+  {
+   "ref": "IF-WM-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total recordable incident rate (TRIR), (2) fatality rate and (3) near miss frequency rate (NMFR) for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: rate · Report all three rates separately for direct employees and contract employees."
+    },
+    {
+     "item": ".3",
+     "text": "How many road accidents and incidents did you have?",
+     "type": "number",
+     "hint": "Unit: number · Report the total number of road accidents and incidents involving your fleet."
+    }
+   ]
+  },
+  {
+   "ref": "IF-WM-420a",
+   "title": "Recycling & Resource Recovery",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What amount of waste did you incinerate, what percentage was hazardous and what percentage was used for energy recovery?",
+     "type": "text",
+     "hint": "Unit: metric tonnes; percentage · Report (1) tonnes incinerated, (2) percentage hazardous and (3) percentage used for energy recovery."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your customers receive (1) recycling and (2) composting services, by customer type?",
+     "type": "text",
+     "hint": "Unit: percentage · Report both percentages for each customer type."
+    },
+    {
+     "item": ".3",
+     "text": "What amount of material did you (1) recycle, (2) compost and (3) process as waste-to-energy?",
+     "type": "text",
+     "hint": "Unit: metric tonnes · Report tonnes for each of the three treatment routes."
+    },
+    {
+     "item": ".4",
+     "text": "What amount of electronic waste did you collect, and what percentage was recovered through recycling?",
+     "type": "text",
+     "hint": "Unit: metric tonnes; percentage · Report (1) tonnes of e-waste collected and (2) the percentage recovered through recycling."
+    }
+   ]
+  },
+  {
+   "ref": "IF-WM-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many customers do you have in each category: (1) municipal, (2) commercial, (3) industrial, (4) residential and (5) other?",
+     "type": "text",
+     "hint": "Unit: number · Report the number of customers in each category."
+    },
+    {
+     "item": ".B",
+     "text": "What is the size of your vehicle fleet?",
+     "type": "number",
+     "hint": "Unit: number · Report the total number of vehicles in your fleet."
+    },
+    {
+     "item": ".C",
+     "text": "How many (1) landfills, (2) transfer stations, (3) recycling centres, (4) composting centres, (5) incinerators and (6) all other facilities do you have?",
+     "type": "text",
+     "hint": "Unit: number · Report the number of facilities of each type."
+    },
+    {
+     "item": ".D",
+     "text": "What total amount of materials did you manage, by customer category: (1) municipal, (2) commercial, (3) industrial, (4) residential and (5) other?",
+     "type": "text",
+     "hint": "Unit: metric tonnes · Report tonnes managed for each customer category."
+    }
+   ]
+  }
+ ]
+}

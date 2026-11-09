@@ -1,74 +1,332 @@
 {
- "summary": "GRI 305: Emissions 2016 contains disclosures for reporting an organization's emissions-related impacts and how it manages them. It addresses emissions into the air, including greenhouse gases, ozone-depleting substances, nitrogen oxides, sulfur oxides and other significant air emissions.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "How does your organization manage its emissions-related impacts?",
-   "type": "text",
-   "hint": "Report how you manage this material topic using Disclosure 3-3 of GRI 3: Material Topics 2021."
-  },
-  {
-   "ref": "305-1",
-   "text": "What were your gross direct (Scope 1) GHG emissions?",
-   "type": "text",
-   "hint": "a. Gross Scope 1 emissions in metric tons CO2e. b. Gases included. c. Biogenic CO2 emissions. d. Base year, rationale, base year emissions, recalculation context. e. Emission factor and GWP source. f. Consolidation approach. g. Standards, methodologies, tools."
-  },
-  {
-   "ref": "305-2",
-   "text": "What were your gross energy indirect (Scope 2) GHG emissions?",
-   "type": "text",
-   "hint": "a. Gross location-based Scope 2 emissions in metric tons CO2e. b. Market-based emissions, if applicable. c. Gases included. d. Base year details. e. Emission factor and GWP source. f. Consolidation approach. g. Standards, methodologies, tools."
-  },
-  {
-   "ref": "305-3",
-   "text": "Which Scope 3 categories are included in your emissions reporting?",
-   "type": "multi_choice",
-   "hint": "a. Gross Scope 3 emissions in metric tons CO2e. b. Gases included. c. Biogenic CO2 emissions. d. Scope 3 categories and activities included. e. Base year details. f. Emission factor and GWP source. g. Standards, methodologies, tools.",
-   "options": [
-    "Purchased goods and services",
-    "Capital goods",
-    "Fuel and energy related",
-    "Transport",
-    "Waste",
-    "Business travel",
-    "Employee commuting",
-    "Use of sold products",
-    "End of life of sold products",
-    "Other"
-   ]
-  },
-  {
-   "ref": "305-4",
-   "text": "What is your GHG emissions intensity?",
-   "type": "text",
-   "hint": "a. GHG emissions intensity ratio. b. Organization-specific metric (denominator) chosen. c. Types of emissions included (Scope 1, 2 and/or 3). d. Gases included."
-  },
-  {
-   "ref": "305-5",
-   "text": "What reductions in GHG emissions did you achieve?",
-   "type": "text",
-   "hint": "a. GHG emissions reduced as a direct result of reduction initiatives, in metric tons CO2e. b. Gases included. c. Base year or baseline and rationale. d. Scopes in which reductions took place. e. Standards, methodologies, assumptions, tools."
-  },
-  {
-   "ref": "305-6",
-   "text": "What were your production, imports and exports of ozone-depleting substances (ODS)?",
-   "type": "text",
-   "hint": "a. Production, imports and exports of ODS in metric tons of CFC-11 equivalent. b. Substances included. c. Source of emission factors. d. Standards, methodologies, assumptions, tools."
-  },
-  {
-   "ref": "305-7",
-   "text": "Which significant air emissions do you track?",
-   "type": "multi_choice",
-   "hint": "a. Significant air emissions in kg or multiples for: NOx, SOx, POP, VOC, HAP, particulate matter, other categories in regulations. b. Source of emission factors. c. Standards, methodologies, assumptions, tools.",
-   "options": [
-    "NOx",
-    "SOx",
-    "Particulate matter",
-    "VOCs",
-    "Persistent organic pollutants",
-    "Hazardous air pollutants",
-    "Other"
-   ]
-  }
- ]
+  "summary": "GRI 305: Emissions 2016 contains disclosures for reporting an organization's emissions-related impacts and how it manages them. It addresses emissions into the air, including greenhouse gases, ozone-depleting substances, nitrogen oxides, sulfur oxides and other significant air emissions.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to emissions.",
+          "type": "text",
+          "hint": "Describe the actual and potential, negative and positive impacts on the economy, environment, and people, including impacts on human rights (GRI 3-3-a)."
+        },
+        {
+          "item": "b",
+          "text": "State whether the organization is involved with the negative impacts related to emissions through its own activities or as a result of its business relationships, and describe how.",
+          "type": "text",
+          "hint": "Say whether the organization causes or contributes to the negative impacts through its activities, or whether they are linked to its operations, products or services through business relationships, and describe how (GRI 3-3-b)."
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding emissions.",
+          "type": "text",
+          "hint": "Describe policies or commitments regarding the material topic (GRI 3-3-c)."
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage emissions and the related impacts.",
+          "type": "text",
+          "hint": "Include: i. how negative impacts are prevented or mitigated; ii. how actual negative impacts are addressed, including actions to provide for or cooperate in remediation; iii. how actual and potential positive impacts are managed (GRI 3-3-d)."
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of its actions on emissions?",
+          "type": "text",
+          "hint": "Report: i. information about the effectiveness of the actions; ii. the goals, targets and indicators used to evaluate progress; iii. lessons learned and how they have been integrated into policies and operational procedures (GRI 3-3-e)."
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken on emissions and whether those actions have been effective.",
+          "type": "text",
+          "hint": "Describe how stakeholder engagement has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e) (GRI 3-3-f)."
+        }
+      ]
+    },
+    {
+      "ref": "305-1",
+      "title": "Direct (Scope 1) GHG emissions",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What are the gross direct (Scope 1) GHG emissions?",
+          "type": "text",
+          "hint": "In metric tons of CO2 equivalent."
+        },
+        {
+          "item": "b",
+          "text": "Which gases are included in the calculation?",
+          "type": "text",
+          "hint": "Whether CO2, CH4, N2O, HFCs, PFCs, SF6, NF3, or all."
+        },
+        {
+          "item": "c",
+          "text": "What are the biogenic CO2 emissions?",
+          "type": "text",
+          "hint": "In metric tons of CO2 equivalent."
+        },
+        {
+          "item": "d",
+          "text": "What base year is used for the calculation, if applicable?",
+          "type": "text",
+          "hint": "Include: i. the rationale for choosing it; ii. emissions in the base year; iii. the context for any significant changes in emissions that triggered recalculation of base year emissions."
+        },
+        {
+          "item": "e",
+          "text": "What is the source of the emission factors and the global warming potential (GWP) rates used?",
+          "type": "text",
+          "hint": "Source of the emission factors and GWP rates used, or a reference to the GWP source."
+        },
+        {
+          "item": "f",
+          "text": "Which consolidation approach is used for emissions?",
+          "type": "text",
+          "hint": "Whether equity share, financial control, or operational control."
+        },
+        {
+          "item": "g",
+          "text": "Which standards, methodologies, assumptions and/or calculation tools were used?",
+          "type": "text",
+          "hint": "Standards, methodologies, assumptions, and/or calculation tools used."
+        }
+      ]
+    },
+    {
+      "ref": "305-2",
+      "title": "Energy indirect (Scope 2) GHG emissions",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What are the gross location-based energy indirect (Scope 2) GHG emissions?",
+          "type": "text",
+          "hint": "In metric tons of CO2 equivalent."
+        },
+        {
+          "item": "b",
+          "text": "If applicable, what are the gross market-based energy indirect (Scope 2) GHG emissions?",
+          "type": "text",
+          "hint": "In metric tons of CO2 equivalent."
+        },
+        {
+          "item": "c",
+          "text": "If available, which gases are included in the calculation?",
+          "type": "text",
+          "hint": "Whether CO2, CH4, N2O, HFCs, PFCs, SF6, NF3, or all."
+        },
+        {
+          "item": "d",
+          "text": "What base year is used for the calculation, if applicable?",
+          "type": "text",
+          "hint": "Include: i. the rationale for choosing it; ii. emissions in the base year; iii. the context for any significant changes in emissions that triggered recalculation of base year emissions."
+        },
+        {
+          "item": "e",
+          "text": "What is the source of the emission factors and the global warming potential (GWP) rates used?",
+          "type": "text",
+          "hint": "Source of the emission factors and GWP rates used, or a reference to the GWP source."
+        },
+        {
+          "item": "f",
+          "text": "Which consolidation approach is used for emissions?",
+          "type": "text",
+          "hint": "Whether equity share, financial control, or operational control."
+        },
+        {
+          "item": "g",
+          "text": "Which standards, methodologies, assumptions and/or calculation tools were used?",
+          "type": "text",
+          "hint": "Standards, methodologies, assumptions, and/or calculation tools used."
+        }
+      ]
+    },
+    {
+      "ref": "305-3",
+      "title": "Other indirect (Scope 3) GHG emissions",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What are the gross other indirect (Scope 3) GHG emissions?",
+          "type": "text",
+          "hint": "In metric tons of CO2 equivalent."
+        },
+        {
+          "item": "b",
+          "text": "If available, which gases are included in the calculation?",
+          "type": "text",
+          "hint": "Whether CO2, CH4, N2O, HFCs, PFCs, SF6, NF3, or all."
+        },
+        {
+          "item": "c",
+          "text": "What are the biogenic CO2 emissions?",
+          "type": "text",
+          "hint": "In metric tons of CO2 equivalent."
+        },
+        {
+          "item": "d",
+          "text": "Which other indirect (Scope 3) emissions categories and activities are included in the calculation?",
+          "type": "multi_choice",
+          "hint": "Other indirect (Scope 3) GHG emissions categories and activities included.",
+          "options": [
+            "Purchased goods and services",
+            "Capital goods",
+            "Fuel and energy related",
+            "Transport",
+            "Waste",
+            "Business travel",
+            "Employee commuting",
+            "Use of sold products",
+            "End of life of sold products",
+            "Other"
+          ]
+        },
+        {
+          "item": "e",
+          "text": "What base year is used for the calculation, if applicable?",
+          "type": "text",
+          "hint": "Include: i. the rationale for choosing it; ii. emissions in the base year; iii. the context for any significant changes in emissions that triggered recalculation of base year emissions."
+        },
+        {
+          "item": "f",
+          "text": "What is the source of the emission factors and the global warming potential (GWP) rates used?",
+          "type": "text",
+          "hint": "Source of the emission factors and GWP rates used, or a reference to the GWP source."
+        },
+        {
+          "item": "g",
+          "text": "Which standards, methodologies, assumptions and/or calculation tools were used?",
+          "type": "text",
+          "hint": "Standards, methodologies, assumptions, and/or calculation tools used."
+        }
+      ]
+    },
+    {
+      "ref": "305-4",
+      "title": "GHG emissions intensity",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What is the GHG emissions intensity ratio for the organization?",
+          "type": "text",
+          "hint": "GHG emissions intensity ratio for the organization."
+        },
+        {
+          "item": "b",
+          "text": "Which organization-specific metric (the denominator) was chosen to calculate the ratio?",
+          "type": "text",
+          "hint": "Organization-specific metric (the denominator) chosen."
+        },
+        {
+          "item": "c",
+          "text": "Which types of GHG emissions are included in the intensity ratio?",
+          "type": "text",
+          "hint": "Whether direct (Scope 1), energy indirect (Scope 2), and/or other indirect (Scope 3)."
+        },
+        {
+          "item": "d",
+          "text": "Which gases are included in the calculation?",
+          "type": "text",
+          "hint": "Whether CO2, CH4, N2O, HFCs, PFCs, SF6, NF3, or all."
+        }
+      ]
+    },
+    {
+      "ref": "305-5",
+      "title": "Reduction of GHG emissions",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What GHG emissions were reduced as a direct result of reduction initiatives?",
+          "type": "text",
+          "hint": "In metric tons of CO2 equivalent."
+        },
+        {
+          "item": "b",
+          "text": "Which gases are included in the calculation?",
+          "type": "text",
+          "hint": "Whether CO2, CH4, N2O, HFCs, PFCs, SF6, NF3, or all."
+        },
+        {
+          "item": "c",
+          "text": "What is the base year or baseline, and why was it chosen?",
+          "type": "text",
+          "hint": "Base year or baseline, including the rationale for choosing it."
+        },
+        {
+          "item": "d",
+          "text": "In which scopes did reductions take place?",
+          "type": "text",
+          "hint": "Whether direct (Scope 1), energy indirect (Scope 2), and/or other indirect (Scope 3)."
+        },
+        {
+          "item": "e",
+          "text": "Which standards, methodologies, assumptions and/or calculation tools were used?",
+          "type": "text",
+          "hint": "Standards, methodologies, assumptions, and/or calculation tools used."
+        }
+      ]
+    },
+    {
+      "ref": "305-6",
+      "title": "Emissions of ozone-depleting substances (ODS)",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What are the production, imports and exports of ODS?",
+          "type": "text",
+          "hint": "In metric tons of CFC-11 (trichlorofluoromethane) equivalent."
+        },
+        {
+          "item": "b",
+          "text": "Which substances are included in the calculation?",
+          "type": "text",
+          "hint": "Substances included in the calculation."
+        },
+        {
+          "item": "c",
+          "text": "What is the source of the emission factors used?",
+          "type": "text",
+          "hint": "Source of the emission factors used."
+        },
+        {
+          "item": "d",
+          "text": "Which standards, methodologies, assumptions and/or calculation tools were used?",
+          "type": "text",
+          "hint": "Standards, methodologies, assumptions, and/or calculation tools used."
+        }
+      ]
+    },
+    {
+      "ref": "305-7",
+      "title": "Nitrogen oxides (NOx), sulfur oxides (SOx), and other significant air emissions",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What are the significant air emissions for each category?",
+          "type": "multi_choice",
+          "hint": "In kilograms or multiples: i. NOx; ii. SOx; iii. persistent organic pollutants (POP); iv. volatile organic compounds (VOC); v. hazardous air pollutants (HAP); vi. particulate matter (PM); vii. other standard categories of air emissions identified in relevant regulations.",
+          "options": [
+            "NOx",
+            "SOx",
+            "Particulate matter",
+            "VOCs",
+            "Persistent organic pollutants",
+            "Hazardous air pollutants",
+            "Other"
+          ]
+        },
+        {
+          "item": "b",
+          "text": "What is the source of the emission factors used?",
+          "type": "text",
+          "hint": "Source of the emission factors used."
+        },
+        {
+          "item": "c",
+          "text": "Which standards, methodologies, assumptions and/or calculation tools were used?",
+          "type": "text",
+          "hint": "Standards, methodologies, assumptions, and/or calculation tools used."
+        }
+      ]
+    }
+  ]
 }

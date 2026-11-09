@@ -1,0 +1,95 @@
+{
+ "summary": "The Apparel, Accessories & Footwear standard covers entities that design, manufacture, wholesale and retail clothing, handbags, jewellery, watches and footwear, largely through vendors in emerging markets. Its disclosure topics are management of chemicals in products, environmental impacts and labour conditions in the supply chain, and raw materials sourcing.",
+ "disclosures": [
+  {
+   "ref": "CG-AA-250a",
+   "title": "Management of Chemicals in Products",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What processes do you have to maintain compliance with restricted substances regulations?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you keep products compliant with restricted substances regulations, including the regions covered, testing or supplier controls and how non-compliance is handled."
+    },
+    {
+     "item": ".2",
+     "text": "What processes do you use to assess and manage risks or hazards associated with chemicals in your products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you identify chemicals of concern, assess their risks or hazards to human health and the environment, and manage or substitute them."
+    }
+   ]
+  },
+  {
+   "ref": "CG-AA-430a",
+   "title": "Environmental Impacts in the Supply Chain",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your (1) Tier 1 supplier facilities and (2) supplier facilities beyond Tier 1 are in compliance with wastewater discharge permits or contractual agreements?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report separately the percentage for (1) Tier 1 supplier facilities and (2) supplier facilities beyond Tier 1, and state whether compliance is measured against permits or contractual agreements."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your (1) Tier 1 supplier facilities and (2) supplier facilities beyond Tier 1 have completed the Higg Facility Environmental Module (Higg FEM) assessment or an equivalent environmental data assessment?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report separately the percentage for (1) Tier 1 supplier facilities and (2) supplier facilities beyond Tier 1, and name the equivalent assessment if Higg FEM was not used."
+    }
+   ]
+  },
+  {
+   "ref": "CG-AA-430b",
+   "title": "Labour Conditions in the Supply Chain",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your (1) Tier 1 supplier facilities and (2) supplier facilities beyond Tier 1 have been audited to a labour code of conduct, and (3) what percentage of total audits were conducted by a third-party auditor?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report (1) the percentage of Tier 1 supplier facilities audited, (2) the percentage of supplier facilities beyond Tier 1 audited and (3) the percentage of all audits carried out by a third-party auditor."
+    },
+    {
+     "item": ".2",
+     "text": "What are (1) the priority non-conformance rate and (2) the associated corrective action rate for your suppliers' labour code of conduct audits?",
+     "type": "text",
+     "hint": "Unit: Rate · Report (1) the priority non-conformance rate as non-conformances per audit and (2) the associated corrective action rate as corrective actions completed relative to those identified, for the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "What are the greatest (1) labour and (2) environmental, health and safety risks in your supply chain?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the most significant (1) labour risks and (2) environmental, health and safety risks, with the regions, supplier tiers or practices involved and how you respond."
+    }
+   ]
+  },
+  {
+   "ref": "CG-AA-440a",
+   "title": "Raw Materials Sourcing",
+   "questions": [
+    {
+     "item": ".3",
+     "text": "Which are your priority raw materials, and for each, (2) which environmental or social factors most threaten sourcing, (3) what business risks or opportunities arise and (4) what is your management strategy?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · (1) List the priority raw materials. For each give (2) the environmental or social factors most likely to threaten sourcing, (3) related business risks or opportunities and (4) your management strategy."
+    },
+    {
+     "item": ".4",
+     "text": "What amount of each priority raw material did you purchase, and how much of each is certified to a third-party environmental or social standard, by standard?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report in metric tonnes (1) the amount of each priority raw material purchased and (2) the amount of each certified to a third-party standard, broken down by standard."
+    }
+   ]
+  },
+  {
+   "ref": "CG-AA-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many (1) Tier 1 suppliers and (2) suppliers beyond Tier 1 do you have?",
+     "type": "text",
+     "hint": "Unit: Number · Report separately the number of (1) Tier 1 suppliers and (2) suppliers beyond Tier 1."
+    }
+   ]
+  }
+ ]
+}

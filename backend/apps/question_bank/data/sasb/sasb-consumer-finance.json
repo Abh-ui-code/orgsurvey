@@ -1,0 +1,101 @@
+{
+ "summary": "This standard covers companies that lend to consumers, mainly through credit cards, and may also offer auto, micro and student loans, money transfers and pre-paid cards. Disclosure topics are customer privacy, data security and selling practices.",
+ "disclosures": [
+  {
+   "ref": "FN-CF-220a",
+   "title": "Customer Privacy",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many account holders had their information used for secondary purposes?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of account holders whose information was used for purposes other than those it was collected for."
+    },
+    {
+     "item": ".2",
+     "text": "What was the total amount of monetary losses as a result of legal proceedings associated with customer privacy?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "FN-CF-230a",
+   "title": "Data Security",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the number of data breaches, (2) the percentage that were personal data breaches, and (3) the number of account holders affected?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) a count, (2) a percentage and (3) a count of account holders affected; answer each part separately."
+    },
+    {
+     "item": ".2",
+     "text": "What were your card-related fraud losses from (1) card-not-present fraud and (2) card-present and other fraud?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Report each loss amount separately in your presentation currency."
+    },
+    {
+     "item": ".3",
+     "text": "How does your organisation identify and address data security risks?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the approach to identifying risks, the controls and standards used, and how risks are addressed."
+    }
+   ]
+  },
+  {
+   "ref": "FN-CF-270a",
+   "title": "Selling Practices",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of total remuneration for covered employees is variable and linked to the amount of products and services sold?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report a percentage (0 to 100); note which employees are treated as covered."
+    },
+    {
+     "item": ".2",
+     "text": "What is your approval rate for (1) credit and (2) pre-paid products for applicants?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report an approval percentage for each of the two product types."
+    },
+    {
+     "item": ".3",
+     "text": "What are (1) your average fees from add-on products, (2) average APR of credit products, (3) average age of credit products, (4) average number of credit accounts, and (5) average annual fees for pre-paid products?",
+     "type": "text",
+     "hint": "Unit: Presentation currency, Percentage (%), Months, Number · Give each value separately: (1) and (5) in presentation currency, (2) as a percentage, (3) in months, (4) as a number."
+    },
+    {
+     "item": ".4",
+     "text": "What are (1) the number of customer complaints filed and (2) the percentage with monetary or non-monetary relief?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) a count of complaints and (2) the percentage that resulted in relief."
+    },
+    {
+     "item": ".5",
+     "text": "What was the total amount of monetary losses as a result of legal proceedings associated with the selling and servicing of products?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "FN-CF-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many unique consumers have an active (1) credit card account and (2) pre-paid debit card account?",
+     "type": "text",
+     "hint": "Unit: Number · Report a count of unique consumers for each of the two account types."
+    },
+    {
+     "item": ".B",
+     "text": "How many (1) credit card accounts and (2) pre-paid debit card accounts do you have?",
+     "type": "text",
+     "hint": "Unit: Number · Report a count of accounts for each of the two account types."
+    }
+   ]
+  }
+ ]
+}

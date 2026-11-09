@@ -1,0 +1,119 @@
+{
+ "summary": "This standard covers companies that transport, store and process natural gas, crude oil and refined petroleum products by pipeline, rail and other modes. It addresses greenhouse gas and air emissions, ecological impacts such as spills and land disturbance, competitive behaviour, and operational safety and emergency preparedness.",
+ "disclosures": [
+  {
+   "ref": "EM-MD-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your organisation's gross global Scope 1 greenhouse gas emissions, what percentage of them is methane, and what percentage is covered under emissions-limiting regulations?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) CO₂-e, Percentage (%) · Report gross global Scope 1 emissions in metric tonnes CO2-e, the percentage that is methane, and the percentage covered under emissions-limiting regulations."
+    },
+    {
+     "item": ".2",
+     "text": "What is your long- and short-term strategy or plan to manage Scope 1 emissions, what are your emissions reduction targets, and how have you performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy or plan, the targets (scope, baseline year, target year), and an analysis of performance against those targets, including any activities or investments driving the change."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MD-120a",
+   "title": "Air Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's air emissions of the following pollutants: (1) NOx (excluding N2O), (2) SOx, (3) volatile organic compounds (VOCs) and (4) particulate matter (PM10)?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report each pollutant separately in metric tonnes, covering all operations and noting estimation or measurement methods; state any pollutant that is not applicable."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MD-160a",
+   "title": "Ecological Impacts",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What environmental management policies and practices does your organisation have for its active operations?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the policies and practices (e.g. impact assessments, spill prevention, habitat protection and restoration) applied across active operations, including any certifications or standards used."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of the land you own, lease or operate is within areas of protected conservation status or endangered species habitat?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by land area · Report the percentage by land area owned, leased or operated that lies within protected conservation areas or endangered species habitat."
+    },
+    {
+     "item": ".3",
+     "text": "What terrestrial land area did your organisation disturb, and what percentage of the impacted area has been restored?",
+     "type": "text",
+     "hint": "Unit: Hectares (ha), Percentage (%) · Report (1) terrestrial land area disturbed in hectares and (2) the percentage of the impacted area restored."
+    },
+    {
+     "item": ".4",
+     "text": "What were (1) the number and (2) the aggregate volume of hydrocarbon spills, (3) the volume in the Arctic, (4) the volume in sites with high biodiversity significance, and (5) the volume recovered?",
+     "type": "text",
+     "hint": "Unit: Number, Barrels (bbls) · Report (1) number of spills, (2) aggregate volume in barrels, (3) volume in the Arctic, (4) volume in sites with high biodiversity significance and (5) volume recovered, for reportable spills."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MD-520a",
+   "title": "Competitive Behaviour",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with pipeline and storage regulations?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses (fines, settlements, judgements) in presentation currency for the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MD-540a",
+   "title": "Operational Safety, Emergency Preparedness & Response",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many reportable pipeline incidents did you have, and what percentage were significant?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the number of reportable pipeline incidents and (2) the percentage classed as significant, using the regulator's definitions."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your (1) natural gas pipelines and (2) hazardous liquid pipelines were inspected?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report the percentage of (1) natural gas pipelines and (2) hazardous liquid pipelines inspected in the reporting period, and the inspection methods used."
+    },
+    {
+     "item": ".3",
+     "text": "How many (1) accident releases and (2) non-accident releases (NARs) did you have from rail transportation?",
+     "type": "text",
+     "hint": "Unit: Number · Report (1) the number of accident releases and (2) the number of non-accident releases from rail transportation."
+    },
+    {
+     "item": ".4",
+     "text": "What management systems do you use to integrate a culture of safety and emergency preparedness throughout the value chain and throughout project lifecycles?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the management systems, training, drills, reporting and audit practices that embed safety and emergency preparedness across the value chain and project lifecycles."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MD-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What were the total metric tonne-kilometres of (1) natural gas, (2) crude oil and (3) refined petroleum products you transported, by mode of transport?",
+     "type": "text",
+     "hint": "Unit: Metric tonne (t) kilometres · Report each product in metric tonne-kilometres, broken down by mode of transport (e.g. pipeline, rail, truck, marine)."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "summary": "Disclose how the organization identifies, assesses and manages climate-related risks. Investors and other stakeholders need to understand how climate-related risks are identified, assessed and managed, and whether those processes are integrated into existing risk management processes.",
+ "disclosures": [
+  {
+   "ref": "Risk Management a)",
+   "title": "Describe the organization's processes for identifying and assessing climate-related risks.",
+   "questions": [
+    {
+     "text": "What are your risk management processes for identifying and assessing climate-related risks, and how do you determine the relative significance of climate-related risks in relation to other risks?",
+     "type": "text",
+     "hint": "Guidance for All Sectors.",
+     "item": "1"
+    },
+    {
+     "text": "Do you consider existing and emerging regulatory requirements related to climate change (e.g. limits on emissions), and other relevant factors, when assessing climate-related risks?",
+     "type": "yes_no",
+     "hint": "Guidance for All Sectors. Describe which requirements and factors are considered.",
+     "item": "2"
+    },
+    {
+     "text": "What processes do you use to assess the potential size and scope of identified climate-related risks?",
+     "type": "text",
+     "hint": "Guidance for All Sectors (consider disclosing).",
+     "item": "3"
+    },
+    {
+     "text": "What risk terminology do you use, or which existing risk classification frameworks do you refer to?",
+     "type": "text",
+     "hint": "Guidance for All Sectors (consider disclosing): definitions of risk terminology used or references to existing risk classification frameworks.",
+     "item": "4"
+    }
+   ]
+  },
+  {
+   "ref": "Risk Management b)",
+   "title": "Describe the organization's processes for managing climate-related risks.",
+   "questions": [
+    {
+     "text": "How do you decide whether to mitigate, transfer, accept or control climate-related risks?",
+     "type": "text",
+     "hint": "Guidance for All Sectors: processes for managing climate-related risks, including how decisions to mitigate, transfer, accept or control risks are made.",
+     "item": "1"
+    },
+    {
+     "text": "How do you prioritize climate-related risks, including how materiality determinations are made within your organization?",
+     "type": "text",
+     "hint": "Guidance for All Sectors.",
+     "item": "2"
+    },
+    {
+     "text": "Do your management processes address the risks listed in the TCFD's Tables A1 and A2 (policy and legal, technology, market, reputation, acute and chronic physical risks), as appropriate?",
+     "type": "yes_no",
+     "hint": "Guidance for All Sectors. Describe how each is addressed.",
+     "item": "3"
+    }
+   ]
+  },
+  {
+   "ref": "Risk Management c)",
+   "title": "Describe how processes for identifying, assessing, and managing climate-related risks are integrated into the organization's overall risk management.",
+   "questions": [
+    {
+     "text": "How are your processes for identifying, assessing and managing climate-related risks integrated into your overall risk management?",
+     "type": "text",
+     "hint": "Guidance for All Sectors.",
+     "item": "1"
+    }
+   ]
+  }
+ ]
+}

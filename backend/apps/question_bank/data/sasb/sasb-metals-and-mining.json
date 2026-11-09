@@ -1,0 +1,269 @@
+{
+ "summary": "This standard covers companies that extract metals and minerals, quarry stone, smelt and refine metals, and provide mining support activities. It addresses emissions, air quality, energy, water, waste and tailings, biodiversity, human and indigenous rights, community relations, labour practices, worker safety and business ethics.",
+ "disclosures": [
+  {
+   "ref": "EM-MM-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your organisation's gross global Scope 1 greenhouse gas emissions, and what percentage of them is covered under emissions-limiting regulations?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) CO₂-e, Percentage (%) · Report gross global Scope 1 emissions in metric tonnes CO2-e and, separately, the percentage covered under emissions-limiting regulations (e.g. cap-and-trade or carbon tax schemes)."
+    },
+    {
+     "item": ".2",
+     "text": "What is your long- and short-term strategy or plan to manage Scope 1 emissions, what are your emissions reduction targets, and how have you performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy or plan, the targets (scope, baseline year, target year), and an analysis of performance against those targets, including any activities or investments driving the change."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MM-120a",
+   "title": "Air Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's air emissions of the following pollutants: (1) CO, (2) NOx (excluding N2O), (3) SOx, (4) particulate matter (PM10), (5) mercury (Hg), (6) lead (Pb) and (7) volatile organic compounds (VOCs)?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report each pollutant separately in metric tonnes, covering all operations and noting estimation or measurement methods; state any pollutant that is not applicable."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MM-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your organisation's (1) total energy consumed, (2) percentage grid electricity and (3) percentage renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report each part: total energy consumed in gigajoules, plus the percentages listed, calculated against total energy consumed."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MM-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's (1) total water withdrawn and (2) total water consumed, and what percentage of each is in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report (1) total water withdrawn and (2) total water consumed in thousand cubic metres, and the percentage of each in regions with High or Extremely High Baseline Water Stress (e.g. per the WRI Aqueduct tool)."
+    },
+    {
+     "item": ".2",
+     "text": "How many incidents of non-compliance with water quality permits, standards and regulations did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of incidents of non-compliance with water quality permits, standards and regulations in the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MM-150a",
+   "title": "Waste & Hazardous Materials Management",
+   "questions": [
+    {
+     "item": ".4",
+     "text": "What is the total weight of non-mineral waste your organisation generated?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) · Report the total weight of non-mineral waste generated in metric tonnes for the reporting period."
+    },
+    {
+     "item": ".5",
+     "text": "What is the total weight of tailings your organisation produced?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) · Report the total weight of tailings produced in metric tonnes for the reporting period."
+    },
+    {
+     "item": ".6",
+     "text": "What is the total weight of waste rock your organisation generated?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) · Report the total weight of waste rock generated in metric tonnes for the reporting period."
+    },
+    {
+     "item": ".7",
+     "text": "What is the total weight of hazardous waste your organisation generated?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) · Report the total weight of hazardous waste generated in metric tonnes, using the regulatory definition in each jurisdiction."
+    },
+    {
+     "item": ".8",
+     "text": "What is the total weight of hazardous waste your organisation recycled?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) · Report the total weight of hazardous waste recycled in metric tonnes for the reporting period."
+    },
+    {
+     "item": ".9",
+     "text": "How many significant incidents associated with hazardous materials and waste management did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of significant incidents (as defined by regulators or your own criteria) involving hazardous materials and waste management."
+    },
+    {
+     "item": ".10",
+     "text": "What waste and hazardous materials management policies and procedures do you have for your active and inactive operations?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the policies and procedures for handling, storage, disposal and closure of waste and hazardous materials at both active and inactive (e.g. closed or legacy) operations."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MM-160a",
+   "title": "Biodiversity Impacts",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What environmental management policies and practices does your organisation have for its active sites?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the policies and practices (e.g. impact assessments, site management plans, rehabilitation commitments) and how they are applied across active sites, including any certifications or standards used."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your mine sites have acid rock drainage that is (1) predicted to occur, (2) actively mitigated, and (3) under treatment or remediation?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report each of the three percentages (1) predicted to occur, (2) actively mitigated, (3) under treatment or remediation, as a share of all mine sites."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of your (1) proved and (2) probable reserves are in or near sites with protected conservation status or endangered species habitat?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report (1) the percentage of proved reserves and (2) the percentage of probable reserves located in or near protected conservation areas or endangered species habitat, and state how 'near' is defined."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MM-210a",
+   "title": "Security, Human Rights & Rights of Indigenous Peoples",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your (1) proved and (2) probable reserves are in or near areas of conflict?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report (1) the percentage of proved reserves and (2) the percentage of probable reserves in or near areas of conflict, and state how areas of conflict are identified."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your (1) proved and (2) probable reserves are in or near indigenous land?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report (1) the percentage of proved reserves and (2) the percentage of probable reserves in or near indigenous land, and state how 'near' is defined."
+    },
+    {
+     "item": ".3",
+     "text": "What engagement processes and due diligence practices do you use to manage human rights, indigenous rights, and operations in areas of conflict?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe engagement processes (e.g. free, prior and informed consent), due diligence practices and how risks relating to human rights, indigenous rights and areas of conflict are identified and managed."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MM-210b",
+   "title": "Community Relations",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What process does your organisation use to manage risks and opportunities associated with community rights and interests?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the process for identifying, engaging on and managing community rights and interests, including grievance mechanisms and how outcomes are tracked."
+    },
+    {
+     "item": ".2",
+     "text": "What were (1) the number and (2) the duration of non-technical delays at your operations?",
+     "type": "text",
+     "hint": "Unit: Number, Days · Report (1) the number of non-technical delays (e.g. protests, blockades, permit or community disputes) and (2) their total duration in days."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MM-310a",
+   "title": "Labour Practices",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your active workforce is employed under collective agreements?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of the active workforce covered by collective bargaining agreements."
+    },
+    {
+     "item": ".2",
+     "text": "What were (1) the number and (2) the duration of strikes and lockouts at your organisation?",
+     "type": "text",
+     "hint": "Unit: Number, Days · Report (1) the number of strikes and lockouts and (2) their total duration in days; include work stoppages involving the active workforce."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MM-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) all-incidence rate, (2) fatality rate, (3) near miss frequency rate (NMFR) and (4) average hours of health, safety and emergency response training for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate · Report each of the four measures separately for (a) direct employees and (b) contract employees, stating the hours-worked basis used for the rates."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MM-510a",
+   "title": "Business Ethics & Transparency",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What management system do you have to prevent corruption and bribery throughout the value chain?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the policies, controls, training, due diligence and monitoring used to prevent corruption and bribery across your operations, suppliers and business partners."
+    },
+    {
+     "item": ".2",
+     "text": "What was your organisation's saleable production in countries ranked among the 20 lowest in Transparency International's Corruption Perception Index?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) saleable · Report saleable production in metric tonnes in those countries, stating the index year used."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MM-540a",
+   "title": "Tailings Storage Facilities Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "Can you provide an inventory table of your tailings storage facilities, with the twelve required fields for each facility from (1) facility name to (12) site-specific EPRP?",
+     "type": "text",
+     "hint": "Unit: Various · One row per facility: name, location, ownership status, operational status, construction method, maximum permitted storage capacity, tailings currently stored, consequence classification, date of latest independent technical review, material findings, mitigation measures, site-specific EPRP."
+    },
+    {
+     "item": ".2",
+     "text": "What tailings management systems and governance structure do you use to monitor and maintain the stability of your tailings storage facilities?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Summarise the management systems, accountable roles, independent reviews, monitoring and the standards followed to maintain tailings storage facility stability."
+    },
+    {
+     "item": ".3",
+     "text": "What is your approach to developing Emergency Preparedness and Response Plans (EPRPs) for your tailings storage facilities?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how EPRPs are developed (e.g. dam-break analysis, affected-community involvement), tested, reviewed and updated for each tailings storage facility."
+    }
+   ]
+  },
+  {
+   "ref": "EM-MM-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was your organisation's production of (1) metal ores and (2) finished metal products?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) saleable · Report (1) metal ore production and (2) finished metal product production separately, in saleable metric tonnes."
+    },
+    {
+     "item": ".B",
+     "text": "What is the total number of employees in your organisation, and what percentage are contractors?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report the total number of employees and the percentage of the workforce who are contractors."
+    }
+   ]
+  }
+ ]
+}

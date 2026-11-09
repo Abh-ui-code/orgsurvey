@@ -1,0 +1,113 @@
+{
+ "summary": "This standard covers entities that design and sell technology hardware such as computers, consumer electronics, communications equipment, storage devices, components and peripherals, many of which rely on contract manufacturers. Its disclosure topics are product security, employee diversity and inclusion, product lifecycle management, supply chain management and materials sourcing.",
+ "disclosures": [
+  {
+   "ref": "TC-HW-230a",
+   "title": "Product Security",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation identify and address data security risks in its products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you identify vulnerabilities in hardware, firmware and embedded software, secure product design and testing, update and patch practices, and any third-party security standards or certifications used."
+    }
+   ]
+  },
+  {
+   "ref": "TC-HW-330a",
+   "title": "Employee Diversity & Inclusion",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your organisation's (1) gender and (2) diversity group representation is there for (a) executive management, (b) non-executive management, (c) technical employees and (d) all other employees?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · For each of the four employee categories, report the percentage by gender and the percentage for each diversity group you track (for example race or ethnicity), in line with the laws where you operate."
+    }
+   ]
+  },
+  {
+   "ref": "TC-HW-410a",
+   "title": "Product Lifecycle Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your products, by revenue, contain IEC 62474 declarable substances?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of total product revenue from products that contain substances declarable under the IEC 62474 material declaration standard. Note the version of the declarable substance list used."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your eligible products, by revenue, meet the requirements for EPEAT registration or equivalent?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of eligible product revenue from products meeting EPEAT registration requirements or an equivalent scheme. Define which products are eligible and name the scheme if not EPEAT."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of your eligible products, by revenue, are certified to an energy efficiency certification?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of eligible product revenue from products certified to an energy efficiency scheme such as ENERGY STAR. Name the certifications used and define eligibility."
+    },
+    {
+     "item": ".4",
+     "text": "What weight of end-of-life products and e-waste did your organisation recover, and what percentage of it was recycled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report the weight of end-of-life products and e-waste recovered through take-back or similar programmes, and the percentage recycled. Describe the scope of the recovery programmes covered."
+    }
+   ]
+  },
+  {
+   "ref": "TC-HW-430a",
+   "title": "Supply Chain Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your Tier 1 supplier facilities were audited in the RBA Validated Audit Process (VAP) or equivalent, for (a) all facilities and (b) high-risk facilities?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report the percentage of Tier 1 supplier facilities audited, split between all facilities and high-risk facilities. Name the audit process used if equivalent to the RBA VAP."
+    },
+    {
+     "item": ".2",
+     "text": "What were your Tier 1 suppliers' (1) non-conformance rate with the RBA Validated Audit Process (VAP) or equivalent and (2) associated corrective action rate, for (a) priority and (b) other non-conformances?",
+     "type": "text",
+     "hint": "Unit: Rate · Report the non-conformance rate and the corrective action rate for Tier 1 supplier facilities, separately for priority and other non-conformances. Include the audit scheme used."
+    }
+   ]
+  },
+  {
+   "ref": "TC-HW-440a",
+   "title": "Materials Sourcing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation manage the risks associated with the use of critical materials in its products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Identify the critical materials you use, the risks they pose (supply, price, regulatory, reputational) and how you manage them, e.g. through substitution, reuse and recycling, supplier engagement or stockpiling."
+    }
+   ]
+  },
+  {
+   "ref": "TC-HW-000",
+   "title": "Activity Metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many units did your organisation produce, by product category?",
+     "type": "text",
+     "hint": "Unit: Number · List the number of units produced in the period for each product category you sell, such as computers, consumer electronics or storage devices. State how categories are defined."
+    },
+    {
+     "item": ".B",
+     "text": "What is the total area of your organisation's manufacturing facilities?",
+     "type": "number",
+     "hint": "Unit: Square metres (m²) · Report the combined floor area of all manufacturing facilities in square metres at the end of the reporting period."
+    },
+    {
+     "item": ".C",
+     "text": "What percentage of your production comes from facilities you own?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the share of total production (by units or volume) made in owned facilities rather than by contract manufacturers. State the basis used."
+    }
+   ]
+  }
+ ]
+}

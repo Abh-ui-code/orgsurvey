@@ -1,0 +1,227 @@
+{
+ "summary": "Covers companies that raise, process and sell meat, poultry, eggs and dairy products. Disclosures address greenhouse gas emissions, energy, water, land use, food safety, antibiotic use, worker health and safety, animal welfare, and the environmental and social impacts of animal and feed supply chains.",
+ "disclosures": [
+  {
+   "ref": "FB-MP-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your gross global Scope 1 emissions?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Report gross global Scope 1 greenhouse gas emissions in metric tonnes CO2-e, covering all seven GHGs under the Kyoto Protocol where applicable."
+    },
+    {
+     "item": ".2",
+     "text": "What long- and short-term strategy or plan do you have to manage Scope 1 emissions, what emissions reduction targets have you set, and how have you performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy or plan, the targets (scope, baseline, timeframe) and an analysis of performance against those targets, including any factors affecting results."
+    }
+   ]
+  },
+  {
+   "ref": "FB-MP-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the total energy consumed, (2) the percentage of that energy that is grid electricity and (3) the percentage that is renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy consumed in GJ, (2) the percentage supplied as grid electricity and (3) the percentage that is renewable. Include self-generated and purchased renewable energy where applicable."
+    }
+   ]
+  },
+  {
+   "ref": "FB-MP-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the total water withdrawn and (2) the total water consumed, and what percentage of each is in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report (1) total water withdrawn and (2) total water consumed in thousand m3, and the percentage of each located in regions with High or Extremely High Baseline Water Stress."
+    },
+    {
+     "item": ".2",
+     "text": "What water management risks does your organisation face, and what strategies and practices do you use to mitigate them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the main water management risks and the strategies and practices used to mitigate them, including any targets and performance against them."
+    },
+    {
+     "item": ".3",
+     "text": "How many incidents of non-compliance with water quality permits, standards and regulations did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of incidents of non-compliance associated with water quality permits, standards and regulations in the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "FB-MP-160a",
+   "title": "Land Use & Ecological Impacts",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How much animal litter and manure did you generate, and what percentage was managed according to a nutrient management plan?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) animal litter and manure generated in metric tonnes and (2) the percentage managed according to a nutrient management plan."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your pasture and grazing land, by hectares, is managed to conservation plan criteria?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by hectares · Report the percentage of pasture and grazing land, by hectares, managed to conservation plan criteria."
+    },
+    {
+     "item": ".3",
+     "text": "What was your animal protein production from confined animal feeding operations?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) · Report animal protein production from confined animal feeding operations in metric tonnes."
+    }
+   ]
+  },
+  {
+   "ref": "FB-MP-250a",
+   "title": "Food Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your Global Food Safety Initiative (GFSI) audit (1) non-conformance rates and (2) associated corrective action rates for (a) major and (b) minor non-conformances?",
+     "type": "text",
+     "hint": "Unit: Rate · Report the rates separately for (1) non-conformances and (2) associated corrective actions, split into (a) major and (b) minor non-conformances, across GFSI audits."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your supplier facilities are certified to a Global Food Safety Initiative (GFSI) food safety certification programme?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of supplier facilities certified to a GFSI-recognised food safety programme."
+    },
+    {
+     "item": ".3",
+     "text": "How many recalls did you issue, and what was the total weight of products recalled?",
+     "type": "text",
+     "hint": "Unit: Number, Metric tonnes (t) · Report (1) the number of recalls issued and (2) the total weight of products recalled in metric tonnes."
+    },
+    {
+     "item": ".4",
+     "text": "Which markets ban imports of your organisation's products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Discuss the markets that ban imports of your products, the reasons for the bans, and the effect on your business."
+    }
+   ]
+  },
+  {
+   "ref": "FB-MP-260a",
+   "title": "Antibiotic Use in Animal Production",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "By animal type, what percentage of your animal production, by weight, received (1) medically important antibiotics and (2) not medically important antibiotics?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) by weight · Report by animal type the percentage of production (by weight) that received (1) medically important antibiotics and (2) not medically important antibiotics."
+    }
+   ]
+  },
+  {
+   "ref": "FB-MP-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total recordable incident rate (TRIR) and (2) fatality rate for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate · Report TRIR and fatality rate separately for (a) direct employees and (b) contract employees, stating the base used."
+    },
+    {
+     "item": ".2",
+     "text": "What efforts does your organisation make to assess, monitor and mitigate acute and chronic respiratory health conditions?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe efforts to address respiratory health conditions among workers, such as air quality monitoring, protective equipment, screening and training."
+    }
+   ]
+  },
+  {
+   "ref": "FB-MP-410a",
+   "title": "Animal Care & Welfare",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your pork, by weight, was produced without the use of gestation crates?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by weight · Report the percentage of pork produced, by weight, without gestation crates."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your shell egg sales were cage-free?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of shell egg sales that were cage-free."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of your production, by weight, is certified to a third-party animal welfare standard?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by weight · Report the percentage of production, by weight, certified to a third-party animal welfare standard, and name the standards."
+    }
+   ]
+  },
+  {
+   "ref": "FB-MP-430a",
+   "title": "Environmental & Social Impacts of Animal Supply Chain",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your livestock, by weight, comes from suppliers implementing conservation plan criteria?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by weight · Report the percentage of livestock sourced, by weight, from suppliers that implement conservation plan criteria."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your supplier and contract production facilities have been verified to meet animal welfare standards?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of supplier and contract production facilities verified to meet animal welfare standards."
+    }
+   ]
+  },
+  {
+   "ref": "FB-MP-440a",
+   "title": "Animal & Feed Sourcing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your animal feed, by weight, is sourced from regions with High or Extremely High Baseline Water Stress?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by weight · Report the percentage of animal feed, by weight, (by cost or as specified) sourced from regions with High or Extremely High Baseline Water Stress."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your contracts, by value, are with producers located in regions with High or Extremely High Baseline Water Stress?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by contract value · Report the percentage of contracts, by contract value, with producers in regions with High or Extremely High Baseline Water Stress."
+    },
+    {
+     "item": ".3",
+     "text": "What is your strategy to manage opportunities and risks to feed sourcing and livestock supply presented by climate change?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the climate-related risks and opportunities to feed and livestock supply and the strategy to manage them."
+    }
+   ]
+  },
+  {
+   "ref": "FB-MP-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many processing and manufacturing facilities does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of processing and manufacturing facilities."
+    },
+    {
+     "item": ".B",
+     "text": "What was your animal protein production by category, and what percentage was outsourced?",
+     "type": "text",
+     "hint": "Unit: Various, Percentage (%) · Report production for each category (for example pork, chicken, beef, dairy) in metric tonnes or other suitable units, and the percentage outsourced."
+    }
+   ]
+  }
+ ]
+}

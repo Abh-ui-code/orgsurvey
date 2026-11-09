@@ -1,0 +1,46 @@
+[
+ {
+  "order": 1,
+  "code": "Pillar 1",
+  "number": 1,
+  "title": "Principles of Governance",
+  "edition": "Mar 2021",
+  "series": "wef",
+  "slug": "wef-principles-of-governance",
+  "pdf": "/wef/wef-stakeholder-capitalism-metrics-2021.pdf",
+  "source": "WEF Measuring Stakeholder Capitalism: Full List of Revised Core and Expanded Metrics, March 2021"
+ },
+ {
+  "order": 2,
+  "code": "Pillar 2",
+  "number": 2,
+  "title": "Planet",
+  "edition": "Mar 2021",
+  "series": "wef",
+  "slug": "wef-planet",
+  "pdf": "/wef/wef-stakeholder-capitalism-metrics-2021.pdf",
+  "source": "WEF Measuring Stakeholder Capitalism: Full List of Revised Core and Expanded Metrics, March 2021"
+ },
+ {
+  "order": 3,
+  "code": "Pillar 3",
+  "number": 3,
+  "title": "People",
+  "edition": "Mar 2021",
+  "series": "wef",
+  "slug": "wef-people",
+  "pdf": "/wef/wef-stakeholder-capitalism-metrics-2021.pdf",
+  "source": "WEF Measuring Stakeholder Capitalism: Full List of Revised Core and Expanded Metrics, March 2021"
+ },
+ {
+  "order": 4,
+  "code": "Pillar 4",
+  "number": 4,
+  "title": "Prosperity",
+  "edition": "Mar 2021",
+  "series": "wef",
+  "slug": "wef-prosperity",
+  "pdf": "/wef/wef-stakeholder-capitalism-metrics-2021.pdf",
+  "source": "WEF Measuring Stakeholder Capitalism: Full List of Revised Core and Expanded Metrics, March 2021"
+ }
+]

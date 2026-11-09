@@ -1,0 +1,721 @@
+{
+ "summary": "The Governance pillar of the World Economic Forum's Stakeholder Capitalism Metrics: how the company's purpose, governing body, stakeholder engagement, ethical behaviour and risk and opportunity oversight are run. It has 6 core and 6 expanded metrics.",
+ "disclosures": [
+  {
+   "ref": "Core",
+   "title": "Governing purpose: Setting purpose",
+   "questions": [
+    {
+     "item": "1.1",
+     "text": "Does your company have a formally stated purpose?",
+     "type": "yes_no",
+     "hint": "Governing purpose · Source: The British Academy and Colin Mayer, GRI (102-26), EPIC, and others. Answer yes if the purpose is written down and approved by the company, not just informal."
+    },
+    {
+     "item": "1.2",
+     "text": "What is your company's stated purpose, in the company's own words?",
+     "type": "text",
+     "hint": "Governing purpose · Source: The British Academy and Colin Mayer, GRI (102-26), EPIC, and others. Quote or summarise the purpose statement. It should express how the business proposes solutions to economic, environmental and social issues."
+    },
+    {
+     "item": "1.3",
+     "text": "Does your stated purpose describe how the company solves economic, environmental or social problems?",
+     "type": "yes_no",
+     "hint": "Governing purpose · Source: The British Academy and Colin Mayer, GRI (102-26), EPIC, and others. Purpose is the expression of the means by which a business proposes solutions to economic, environmental and social issues."
+    },
+    {
+     "item": "1.4",
+     "text": "Which stakeholder groups does your stated purpose say the company creates value for?",
+     "type": "multi_choice",
+     "hint": "Governing purpose · Source: The British Academy and Colin Mayer, GRI (102-26), EPIC, and others. Corporate purpose should create value for all stakeholders, including shareholders. Select every group named in the purpose.",
+     "options": [
+      "Shareholders/investors",
+      "Employees",
+      "Customers",
+      "Suppliers/business partners",
+      "Communities",
+      "Environment/planet",
+      "Government/regulators"
+     ]
+    },
+    {
+     "item": "1.5",
+     "text": "Who approved the company's stated purpose?",
+     "type": "single_choice",
+     "hint": "Governing purpose · Source: The British Academy and Colin Mayer, GRI (102-26), EPIC, and others. Choose the highest body or person that formally approved the purpose statement.",
+     "options": [
+      "Board / highest governance body",
+      "Senior executives",
+      "Shareholders",
+      "Not formally approved"
+     ]
+    },
+    {
+     "item": "1.6",
+     "text": "Where is your stated purpose publicly available?",
+     "type": "text",
+     "hint": "Governing purpose · Source: The British Academy and Colin Mayer, GRI (102-26), EPIC, and others. Give the document or web page, for example the annual report or website."
+    }
+   ]
+  },
+  {
+   "ref": "Core",
+   "title": "Quality of governing body: Governance body composition",
+   "questions": [
+    {
+     "item": "2.1",
+     "text": "How many members does your highest governance body have in total?",
+     "type": "number",
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count all current members of the highest governance body (for example the board). Report a whole number."
+    },
+    {
+     "item": "2.2",
+     "text": "What are the names of the committees of your highest governance body?",
+     "type": "text",
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). List each committee, for example audit, remuneration, nomination, sustainability. Composition questions apply to the body and each committee."
+    },
+    {
+     "item": "2.3",
+     "text": "How many members of the highest governance body have competencies relating to economic topics?",
+     "type": "number",
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members with experience or expertise in economic topics such as finance, strategy or markets."
+    },
+    {
+     "item": "2.4",
+     "text": "How many members of the highest governance body have competencies relating to environmental topics?",
+     "type": "number",
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members with experience or expertise in environmental topics such as climate, resources or biodiversity."
+    },
+    {
+     "item": "2.5",
+     "text": "How many members of the highest governance body have competencies relating to social topics?",
+     "type": "number",
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members with experience or expertise in social topics such as labour, human rights, health and safety or community."
+    },
+    {
+     "item": "2.6",
+     "text": "How many members of the highest governance body are executive members?",
+     "type": "number",
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Executive members are also employed in management roles of the company. Report a whole number."
+    },
+    {
+     "item": "2.7",
+     "text": "How many members of the highest governance body are non-executive members?",
+     "type": "number",
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Non-executive members do not hold management roles in the company. Report a whole number."
+    },
+    {
+     "item": "2.8",
+     "text": "How many members of the highest governance body are independent?",
+     "type": "number",
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members who meet your or your regulator's independence criteria. State the criteria used in your notes if possible."
+    },
+    {
+     "item": "2.9",
+     "text": "What is the average tenure, in years, of members on the highest governance body?",
+     "type": "number",
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Average number of years members have served on the governance body. Also note the longest tenure if available."
+    },
+    {
+     "item": "2.10",
+     "text": "How many members of the highest governance body hold other significant positions or commitments?",
+     "type": "number",
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members with significant positions elsewhere, such as other boards or major organisations."
+    },
+    {
+     "item": "2.11",
+     "text": "What is the nature of the other significant positions and commitments held by governance body members?",
+     "type": "text",
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Describe the nature of the commitments, for example other company boards, public office or non-profit roles, and the number held by each member."
+    },
+    {
+     "item": "2.12",
+     "text": "How many members of the highest governance body are women?",
+     "type": "number",
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Report the number by gender. Also report any members of another gender identity, if applicable."
+    },
+    {
+     "item": "2.13",
+     "text": "How many members of the highest governance body belong to under-represented social groups?",
+     "type": "number",
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members from groups under-represented in your context, such as minority or indigenous groups, or people with disabilities, where you can lawfully collect this."
+    },
+    {
+     "item": "2.14",
+     "text": "How are stakeholders represented on the highest governance body?",
+     "type": "text",
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Describe how stakeholders such as employees, shareholders or communities have representation, for example elected employee representatives."
+    }
+   ]
+  },
+  {
+   "ref": "Core",
+   "title": "Stakeholder engagement: Material issues impacting stakeholders",
+   "questions": [
+    {
+     "item": "3.1",
+     "text": "Who are your key stakeholder groups?",
+     "type": "text",
+     "hint": "Stakeholder engagement · Source: GRI (102-21), GRI (102-43), GRI (102-47). List the groups your company has identified as key stakeholders, for example employees, customers, suppliers, communities, investors."
+    },
+    {
+     "item": "3.2",
+     "text": "Which topics are material to your key stakeholders?",
+     "type": "text",
+     "hint": "Stakeholder engagement · Source: GRI (102-21), GRI (102-43), GRI (102-47). Provide the list of topics that matter most to your stakeholders."
+    },
+    {
+     "item": "3.3",
+     "text": "Which topics are material to the company itself?",
+     "type": "text",
+     "hint": "Stakeholder engagement · Source: GRI (102-21), GRI (102-43), GRI (102-47). Provide the list of topics that matter most to the company's success and impacts."
+    },
+    {
+     "item": "3.4",
+     "text": "How were the material topics identified?",
+     "type": "text",
+     "hint": "Stakeholder engagement · Source: GRI (102-21), GRI (102-43), GRI (102-47). Describe the process, such as materiality assessment, surveys, interviews or benchmarking."
+    },
+    {
+     "item": "3.5",
+     "text": "How were stakeholders engaged in identifying the material topics?",
+     "type": "text",
+     "hint": "Stakeholder engagement · Source: GRI (102-21), GRI (102-43), GRI (102-47). Describe the methods used, such as surveys, interviews, workshops or consultations, and how often."
+    },
+    {
+     "item": "3.6",
+     "text": "Which methods did you use to engage stakeholders?",
+     "type": "multi_choice",
+     "hint": "Stakeholder engagement · Source: GRI (102-21), GRI (102-43), GRI (102-47). Select all that apply.",
+     "options": [
+      "Surveys",
+      "Interviews",
+      "Focus groups/workshops",
+      "Public consultation",
+      "Grievance or feedback channels",
+      "Meetings with representatives",
+      "Other"
+     ]
+    },
+    {
+     "item": "3.7",
+     "text": "When was your list of material topics last reviewed or updated?",
+     "type": "text",
+     "hint": "Stakeholder engagement · Source: GRI (102-21), GRI (102-43), GRI (102-47). Give the month and year of the latest review."
+    }
+   ]
+  },
+  {
+   "ref": "Core",
+   "title": "Ethical behaviour: Anti-corruption",
+   "questions": [
+    {
+     "item": "4.1",
+     "text": "Does your company have anti-corruption policies and procedures?",
+     "type": "yes_no",
+     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Answer yes if written policies and procedures exist."
+    },
+    {
+     "item": "4.2",
+     "text": "What percentage of governance body members received training on your anti-corruption policies and procedures?",
+     "type": "number",
+     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Governance body members trained divided by total members, times 100."
+    },
+    {
+     "item": "4.3",
+     "text": "What percentage of employees received training on your anti-corruption policies and procedures?",
+     "type": "number",
+     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Employees trained divided by total employees, times 100."
+    },
+    {
+     "item": "4.4",
+     "text": "What percentage of business partners received training on your anti-corruption policies and procedures?",
+     "type": "number",
+     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Business partners trained divided by total business partners, times 100."
+    },
+    {
+     "item": "4.5",
+     "text": "How does anti-corruption training coverage differ by region?",
+     "type": "text",
+     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). For each region, give the percentage of governance body members, employees and business partners trained."
+    },
+    {
+     "item": "4.6",
+     "text": "How many incidents of corruption were confirmed during this year but related to previous years?",
+     "type": "number",
+     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Count only incidents confirmed in the current reporting year that occurred in earlier years."
+    },
+    {
+     "item": "4.7",
+     "text": "What was the nature of the corruption incidents confirmed this year that related to previous years?",
+     "type": "text",
+     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Describe the type, for example bribery, facilitation payments, kickbacks or fraud."
+    },
+    {
+     "item": "4.8",
+     "text": "How many incidents of corruption were confirmed this year and related to this year?",
+     "type": "number",
+     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Count incidents both occurring and confirmed in the current reporting year."
+    },
+    {
+     "item": "4.9",
+     "text": "What was the nature of the corruption incidents confirmed this year that related to this year?",
+     "type": "text",
+     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Describe the type, for example bribery, facilitation payments, kickbacks or fraud."
+    },
+    {
+     "item": "4.10",
+     "text": "What initiatives do you have to improve the broader operating environment and culture to combat corruption?",
+     "type": "text",
+     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Describe initiatives such as collective action, industry codes or support for anti-corruption programmes."
+    },
+    {
+     "item": "4.11",
+     "text": "What stakeholder engagement do you do to combat corruption?",
+     "type": "text",
+     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Describe how you work with stakeholders such as suppliers, peers, governments and civil society on anti-corruption."
+    }
+   ]
+  },
+  {
+   "ref": "Core",
+   "title": "Ethical behaviour: Protected ethics advice and reporting mechanisms",
+   "questions": [
+    {
+     "item": "5.1",
+     "text": "Does your company have an internal mechanism for seeking advice about ethical and lawful behaviour?",
+     "type": "yes_no",
+     "hint": "Ethical behaviour · Source: GRI (102-17). For example an ethics helpline, ethics officer or compliance contact."
+    },
+    {
+     "item": "5.2",
+     "text": "What internal mechanisms can people use to seek advice about ethical and lawful behaviour and organizational integrity?",
+     "type": "text",
+     "hint": "Ethical behaviour · Source: GRI (102-17). Describe each mechanism and who can use it."
+    },
+    {
+     "item": "5.3",
+     "text": "Does your company have an external mechanism for seeking advice about ethical and lawful behaviour?",
+     "type": "yes_no",
+     "hint": "Ethical behaviour · Source: GRI (102-17). For example an independent third-party advice line."
+    },
+    {
+     "item": "5.4",
+     "text": "What external mechanisms can people use to seek advice about ethical and lawful behaviour and organizational integrity?",
+     "type": "text",
+     "hint": "Ethical behaviour · Source: GRI (102-17). Describe each mechanism and who can use it."
+    },
+    {
+     "item": "5.5",
+     "text": "Does your company have an internal mechanism for reporting concerns about unethical or unlawful behaviour?",
+     "type": "yes_no",
+     "hint": "Ethical behaviour · Source: GRI (102-17). For example a whistleblowing line or reporting to a manager or compliance function."
+    },
+    {
+     "item": "5.6",
+     "text": "What internal mechanisms can people use to report concerns about unethical or unlawful behaviour and lack of organizational integrity?",
+     "type": "text",
+     "hint": "Ethical behaviour · Source: GRI (102-17). Describe each mechanism and who can use it."
+    },
+    {
+     "item": "5.7",
+     "text": "Does your company have an external mechanism for reporting concerns about unethical or unlawful behaviour?",
+     "type": "yes_no",
+     "hint": "Ethical behaviour · Source: GRI (102-17). For example an independent hotline run by a third party."
+    },
+    {
+     "item": "5.8",
+     "text": "What external mechanisms can people use to report concerns about unethical or unlawful behaviour and lack of organizational integrity?",
+     "type": "text",
+     "hint": "Ethical behaviour · Source: GRI (102-17). Describe each mechanism and who can use it."
+    },
+    {
+     "item": "5.9",
+     "text": "Can concerns be reported anonymously?",
+     "type": "yes_no",
+     "hint": "Ethical behaviour · Source: GRI (102-17). Answer yes if people can report without giving their identity."
+    },
+    {
+     "item": "5.10",
+     "text": "Are people who report concerns protected from retaliation?",
+     "type": "yes_no",
+     "hint": "Ethical behaviour · Source: GRI (102-17). The metric refers to protected mechanisms. Describe the protection in your notes if possible."
+    },
+    {
+     "item": "5.11",
+     "text": "Who can use your advice and reporting mechanisms?",
+     "type": "multi_choice",
+     "hint": "Ethical behaviour · Source: GRI (102-17). Select all that apply.",
+     "options": [
+      "Employees",
+      "Contractors",
+      "Suppliers/business partners",
+      "Customers",
+      "Community members",
+      "Anyone"
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "Core",
+   "title": "Risk and opportunity oversight: Integrating risk and opportunity into business process",
+   "questions": [
+    {
+     "item": "6.1",
+     "text": "Does your company publicly disclose its risk factors and opportunities?",
+     "type": "yes_no",
+     "hint": "Risk and opportunity oversight · Source: EPIC, GRI (102-15), WEF Integrated Corporate Governance, IR (4D). For example in an annual report or other public filing."
+    },
+    {
+     "item": "6.2",
+     "text": "What are the principal material risks facing your company specifically?",
+     "type": "text",
+     "hint": "Risk and opportunity oversight · Source: EPIC, GRI (102-15), WEF Integrated Corporate Governance, IR (4D). List risks specific to your company, not generic sector risks."
+    },
+    {
+     "item": "6.3",
+     "text": "What are the principal material opportunities facing your company specifically?",
+     "type": "text",
+     "hint": "Risk and opportunity oversight · Source: EPIC, GRI (102-15), WEF Integrated Corporate Governance, IR (4D). List opportunities specific to your company, not generic sector opportunities."
+    },
+    {
+     "item": "6.4",
+     "text": "What is your company's appetite in respect of these risks?",
+     "type": "text",
+     "hint": "Risk and opportunity oversight · Source: EPIC, GRI (102-15), WEF Integrated Corporate Governance, IR (4D). Describe how much risk the company is willing to accept for each principal risk."
+    },
+    {
+     "item": "6.5",
+     "text": "How have these risks and opportunities moved over time?",
+     "type": "text",
+     "hint": "Risk and opportunity oversight · Source: EPIC, GRI (102-15), WEF Integrated Corporate Governance, IR (4D). Describe whether each has grown, shrunk or changed compared with earlier periods."
+    },
+    {
+     "item": "6.6",
+     "text": "How did your company respond to these changes in risks and opportunities?",
+     "type": "text",
+     "hint": "Risk and opportunity oversight · Source: EPIC, GRI (102-15), WEF Integrated Corporate Governance, IR (4D). Describe the actions taken."
+    },
+    {
+     "item": "6.7",
+     "text": "Do your risk and opportunity disclosures include material economic issues?",
+     "type": "yes_no",
+     "hint": "Risk and opportunity oversight · Source: EPIC, GRI (102-15), WEF Integrated Corporate Governance, IR (4D). Answer yes if economic issues are integrated into the risk and opportunity process."
+    },
+    {
+     "item": "6.8",
+     "text": "Do your risk and opportunity disclosures include material environmental issues?",
+     "type": "yes_no",
+     "hint": "Risk and opportunity oversight · Source: EPIC, GRI (102-15), WEF Integrated Corporate Governance, IR (4D). Answer yes if environmental issues are integrated into the risk and opportunity process."
+    },
+    {
+     "item": "6.9",
+     "text": "Do your risk and opportunity disclosures include material social issues?",
+     "type": "yes_no",
+     "hint": "Risk and opportunity oversight · Source: EPIC, GRI (102-15), WEF Integrated Corporate Governance, IR (4D). Answer yes if social issues are integrated into the risk and opportunity process."
+    },
+    {
+     "item": "6.10",
+     "text": "Do your risk and opportunity disclosures include climate change?",
+     "type": "yes_no",
+     "hint": "Risk and opportunity oversight · Source: EPIC, GRI (102-15), WEF Integrated Corporate Governance, IR (4D). Answer yes if climate-related risks and opportunities are covered."
+    },
+    {
+     "item": "6.11",
+     "text": "Do your risk and opportunity disclosures include data stewardship?",
+     "type": "yes_no",
+     "hint": "Risk and opportunity oversight · Source: EPIC, GRI (102-15), WEF Integrated Corporate Governance, IR (4D). Answer yes if risks and opportunities relating to data protection, privacy and ethical use of data are covered."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Governing purpose: Purpose-led management",
+   "questions": [
+    {
+     "item": "1.1",
+     "text": "Is your stated purpose reflected in your company strategy?",
+     "type": "yes_no",
+     "hint": "Governing purpose · Source: GRI (102-26). Answer yes if the strategy explicitly refers to or is built from the purpose."
+    },
+    {
+     "item": "1.2",
+     "text": "How is your stated purpose embedded in your company strategies?",
+     "type": "text",
+     "hint": "Governing purpose · Source: GRI (102-26). Give examples of how strategic decisions reflect the purpose."
+    },
+    {
+     "item": "1.3",
+     "text": "Is your stated purpose reflected in your company policies?",
+     "type": "yes_no",
+     "hint": "Governing purpose · Source: GRI (102-26). Answer yes if policies refer to or are aligned with the purpose."
+    },
+    {
+     "item": "1.4",
+     "text": "How is your stated purpose embedded in your company policies?",
+     "type": "text",
+     "hint": "Governing purpose · Source: GRI (102-26). Give examples of policies shaped by the purpose."
+    },
+    {
+     "item": "1.5",
+     "text": "Is your stated purpose reflected in your company goals?",
+     "type": "yes_no",
+     "hint": "Governing purpose · Source: GRI (102-26). Answer yes if company goals or targets are linked to the purpose."
+    },
+    {
+     "item": "1.6",
+     "text": "How is your stated purpose embedded in your company goals?",
+     "type": "text",
+     "hint": "Governing purpose · Source: GRI (102-26). Give examples of goals or targets linked to the purpose."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Quality of governing body: Progress against strategic milestones",
+   "questions": [
+    {
+     "item": "2.1",
+     "text": "Which material economic strategic milestones do you expect to achieve in the following year?",
+     "type": "text",
+     "hint": "Quality of governing body · Source: EPIC. List the material economic milestones expected next year."
+    },
+    {
+     "item": "2.2",
+     "text": "Which material environmental strategic milestones do you expect to achieve in the following year?",
+     "type": "text",
+     "hint": "Quality of governing body · Source: EPIC. List the material environmental milestones expected next year."
+    },
+    {
+     "item": "2.3",
+     "text": "Which material social strategic milestones do you expect to achieve in the following year?",
+     "type": "text",
+     "hint": "Quality of governing body · Source: EPIC. List the material social milestones expected next year."
+    },
+    {
+     "item": "2.4",
+     "text": "Which material strategic milestones from the previous year did you achieve?",
+     "type": "text",
+     "hint": "Quality of governing body · Source: EPIC. List the economic, environmental and social milestones achieved."
+    },
+    {
+     "item": "2.5",
+     "text": "What percentage of last year's planned strategic milestones did you achieve?",
+     "type": "number",
+     "hint": "Quality of governing body · Source: EPIC. Milestones achieved divided by milestones planned, times 100."
+    },
+    {
+     "item": "2.6",
+     "text": "How are the expected milestones expected to contribute to long-term value?",
+     "type": "text",
+     "hint": "Quality of governing body · Source: EPIC. Explain the link between next year's milestones and long-term value."
+    },
+    {
+     "item": "2.7",
+     "text": "How have the milestones achieved in the previous year contributed to long-term value?",
+     "type": "text",
+     "hint": "Quality of governing body · Source: EPIC. Explain the actual contribution to long-term value."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Quality of governing body: Remuneration",
+   "questions": [
+    {
+     "item": "3.1",
+     "text": "Do the performance criteria in the remuneration policies relate to economic objectives of the highest governance body and senior executives?",
+     "type": "yes_no",
+     "hint": "Quality of governing body · Source: GRI (102-35). Answer yes if pay is linked to economic objectives connected to purpose, strategy and long-term value."
+    },
+    {
+     "item": "3.2",
+     "text": "Do the performance criteria in the remuneration policies relate to environmental objectives of the highest governance body and senior executives?",
+     "type": "yes_no",
+     "hint": "Quality of governing body · Source: GRI (102-35). Answer yes if pay is linked to environmental objectives connected to purpose, strategy and long-term value."
+    },
+    {
+     "item": "3.3",
+     "text": "Do the performance criteria in the remuneration policies relate to social objectives of the highest governance body and senior executives?",
+     "type": "yes_no",
+     "hint": "Quality of governing body · Source: GRI (102-35). Answer yes if pay is linked to social objectives connected to purpose, strategy and long-term value."
+    },
+    {
+     "item": "3.4",
+     "text": "How do the performance criteria connect to your stated purpose, strategy and long-term value?",
+     "type": "text",
+     "hint": "Quality of governing body · Source: GRI (102-35). Describe the link between remuneration criteria and purpose, strategy and long-term value."
+    },
+    {
+     "item": "3.5",
+     "text": "What are your policies on fixed pay and variable pay for the highest governance body and senior executives?",
+     "type": "text",
+     "hint": "Quality of governing body · Source: GRI (102-35). Include performance-based pay, equity-based pay, bonuses, and deferred or vested shares."
+    },
+    {
+     "item": "3.6",
+     "text": "What is your policy on sign-on bonuses or recruitment incentive payments?",
+     "type": "text",
+     "hint": "Quality of governing body · Source: GRI (102-35). Describe the policy for the highest governance body and senior executives."
+    },
+    {
+     "item": "3.7",
+     "text": "What is your policy on termination payments?",
+     "type": "text",
+     "hint": "Quality of governing body · Source: GRI (102-35). Describe the policy for the highest governance body and senior executives."
+    },
+    {
+     "item": "3.8",
+     "text": "Do you have clawback provisions in remuneration policies?",
+     "type": "yes_no",
+     "hint": "Quality of governing body · Source: GRI (102-35). Clawbacks allow the company to recover pay already given, for example after misconduct or restatements."
+    },
+    {
+     "item": "3.9",
+     "text": "What are your clawback policies?",
+     "type": "text",
+     "hint": "Quality of governing body · Source: GRI (102-35). Describe when and how pay can be recovered."
+    },
+    {
+     "item": "3.10",
+     "text": "What are your retirement benefit policies for the highest governance body and senior executives?",
+     "type": "text",
+     "hint": "Quality of governing body · Source: GRI (102-35). Describe the benefit schemes and contribution rates."
+    },
+    {
+     "item": "3.11",
+     "text": "How do retirement benefit schemes and contribution rates for the highest governance body and senior executives differ from those of all other employees?",
+     "type": "text",
+     "hint": "Quality of governing body · Source: GRI (102-35). Describe differences in schemes and contribution rates."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Ethical behaviour: Alignment of strategy and policies to lobbying",
+   "questions": [
+    {
+     "item": "4.1",
+     "text": "Does your company participate in public policy development or lobbying?",
+     "type": "yes_no",
+     "hint": "Ethical behaviour · Source: GRI 415: Public Policy 2016. Include direct lobbying and lobbying through associations."
+    },
+    {
+     "item": "4.2",
+     "text": "Which significant issues are the focus of your participation in public policy development and lobbying?",
+     "type": "text",
+     "hint": "Ethical behaviour · Source: GRI 415: Public Policy 2016. List the main areas of focus."
+    },
+    {
+     "item": "4.3",
+     "text": "What is your company's strategy relevant to these areas of focus?",
+     "type": "text",
+     "hint": "Ethical behaviour · Source: GRI 415: Public Policy 2016. Describe the company strategy for each lobbying focus area."
+    },
+    {
+     "item": "4.4",
+     "text": "Do your lobbying positions differ from your stated purpose, policies, goals or other public positions?",
+     "type": "yes_no",
+     "hint": "Ethical behaviour · Source: GRI 415: Public Policy 2016. Answer yes if any lobbying position differs from what you say publicly."
+    },
+    {
+     "item": "4.5",
+     "text": "What are the differences between your lobbying positions and your stated purpose, policies, goals or other public positions?",
+     "type": "text",
+     "hint": "Ethical behaviour · Source: GRI 415: Public Policy 2016. Describe each difference and the reason for it."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Ethical behaviour: Monetary losses from unethical behaviour",
+   "questions": [
+    {
+     "item": "5.1",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with fraud?",
+     "type": "number",
+     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year."
+    },
+    {
+     "item": "5.2",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with insider trading?",
+     "type": "number",
+     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year."
+    },
+    {
+     "item": "5.3",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with anti-trust or anti-competitive behaviour?",
+     "type": "number",
+     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year."
+    },
+    {
+     "item": "5.4",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with market manipulation?",
+     "type": "number",
+     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year."
+    },
+    {
+     "item": "5.5",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with malpractice?",
+     "type": "number",
+     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year."
+    },
+    {
+     "item": "5.6",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with violations of other related industry laws or regulations?",
+     "type": "number",
+     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year."
+    },
+    {
+     "item": "5.7",
+     "text": "What was the total amount of monetary losses from all of these legal proceedings?",
+     "type": "number",
+     "hint": "Ethical behaviour · Source: SASB (510a.1). Sum of fraud, insider trading, anti-trust, anti-competitive behaviour, market manipulation, malpractice and other related violations. Include fines, settlements and legal costs."
+    }
+   ]
+  },
+  {
+   "ref": "Expanded",
+   "title": "Risk and opportunity oversight: Economic, environmental, and social topics in capital allocation framework",
+   "questions": [
+    {
+     "item": "6.1",
+     "text": "Does the highest governance body consider economic issues when overseeing major capital allocation decisions?",
+     "type": "yes_no",
+     "hint": "Risk and opportunity oversight · Source: CDSB (REQ-02). Major decisions include expenditures, acquisitions and divestures."
+    },
+    {
+     "item": "6.2",
+     "text": "Does the highest governance body consider environmental issues when overseeing major capital allocation decisions?",
+     "type": "yes_no",
+     "hint": "Risk and opportunity oversight · Source: CDSB (REQ-02). Major decisions include expenditures, acquisitions and divestures."
+    },
+    {
+     "item": "6.3",
+     "text": "Does the highest governance body consider social issues when overseeing major capital allocation decisions?",
+     "type": "yes_no",
+     "hint": "Risk and opportunity oversight · Source: CDSB (REQ-02). Major decisions include expenditures, acquisitions and divestures."
+    },
+    {
+     "item": "6.4",
+     "text": "How does the highest governance body consider these issues in major expenditure decisions?",
+     "type": "text",
+     "hint": "Risk and opportunity oversight · Source: CDSB (REQ-02). Describe the process or criteria used."
+    },
+    {
+     "item": "6.5",
+     "text": "How does the highest governance body consider these issues in acquisitions?",
+     "type": "text",
+     "hint": "Risk and opportunity oversight · Source: CDSB (REQ-02). Describe the process or criteria used."
+    },
+    {
+     "item": "6.6",
+     "text": "How does the highest governance body consider these issues in divestures?",
+     "type": "text",
+     "hint": "Risk and opportunity oversight · Source: CDSB (REQ-02). Describe the process or criteria used."
+    }
+   ]
+  }
+ ]
+}

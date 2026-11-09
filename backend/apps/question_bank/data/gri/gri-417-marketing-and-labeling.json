@@ -1,36 +1,108 @@
 {
- "summary": "GRI 417 covers product and service information and labeling and marketing communications, including customer access to accurate and adequate information on the impacts of products and services. Fair marketing and information on composition, use and disposal help customers make informed choices.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "How does your organization manage the topic of marketing and labeling, including its impacts, policies, actions and tracking of effectiveness?",
-   "type": "text",
-   "hint": "Report how the organization manages this material topic using Disclosure 3-3 in GRI 3: Material Topics 2021."
-  },
-  {
-   "ref": "417-1",
-   "text": "Which types of product and service information are required by your procedures?",
-   "type": "multi_choice",
-   "hint": "a. Whether required by procedures: i. sourcing of components; ii. content, esp. substances with environmental or social impact; iii. safe use; iv. disposal and impacts; v. other (explain). b. Percentage of significant product or service categories covered by and assessed for compliance with such procedures.",
-   "options": [
-    "Sourcing of components",
-    "Substance content",
-    "Safe use",
-    "Disposal",
-    "Other"
-   ]
-  },
-  {
-   "ref": "417-2",
-   "text": "How many incidents of non-compliance concerning product and service information and labeling occurred?",
-   "type": "text",
-   "hint": "a. Total number of incidents of non-compliance with regulations and/or voluntary codes, by: i. regulations resulting in a fine or penalty; ii. regulations resulting in a warning; iii. voluntary codes. b. If none identified, a brief statement of this fact is sufficient."
-  },
-  {
-   "ref": "417-3",
-   "text": "How many incidents of non-compliance concerning marketing communications, including advertising, promotion and sponsorship, occurred?",
-   "type": "text",
-   "hint": "a. Total number of incidents of non-compliance with regulations and/or voluntary codes, by: i. regulations resulting in a fine or penalty; ii. regulations resulting in a warning; iii. voluntary codes. b. If none identified, a brief statement of this fact is sufficient."
-  }
- ]
+  "summary": "GRI 417 covers product and service information and labeling and marketing communications, including customer access to accurate and adequate information on the impacts of products and services. Fair marketing and information on composition, use and disposal help customers make informed choices.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to marketing and labeling.",
+          "hint": "Cover both actual and potential impacts, negative and positive, including impacts on human rights.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "Is the organization involved with the negative impacts related to marketing and labeling through its own activities or as a result of its business relationships? Describe those activities or business relationships.",
+          "hint": "State whether involvement is through the organization's activities or through its business relationships, and describe them.",
+          "type": "text"
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding marketing and labeling.",
+          "hint": "Describe the policies or commitments that apply to this material topic.",
+          "type": "text"
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage marketing and labeling and the related impacts, including (i) actions to prevent or mitigate potential negative impacts, (ii) actions to address actual negative impacts, including actions to provide for or cooperate in their remediation, and (iii) actions to manage actual and potential positive impacts.",
+          "hint": "Cover i. prevention or mitigation of potential negative impacts; ii. addressing actual negative impacts, including remediation; iii. managing positive impacts.",
+          "type": "text"
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of the actions taken? Describe (i) the processes used, (ii) the goals, targets and indicators used to evaluate progress, (iii) the effectiveness of the actions, including progress toward goals and targets, and (iv) lessons learned and how they have been incorporated into operational policies and procedures.",
+          "hint": "Cover i. tracking processes; ii. goals, targets and indicators; iii. effectiveness and progress; iv. lessons learned and how they were incorporated.",
+          "type": "text"
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e).",
+          "hint": "Explain the role of stakeholder engagement in shaping actions and in judging their effectiveness.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "417-1",
+      "title": "Requirements for product and service information and labeling",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Which of the following types of information are required by the organization's procedures for product and service information and labeling: (i) sourcing of components of the product or service; (ii) content, particularly substances that might produce an environmental or social impact; (iii) safe use of the product or service; (iv) disposal of the product and environmental or social impacts; (v) other (explain)?",
+          "hint": "Select all that apply; explain 'Other' in your notes.",
+          "type": "multi_choice",
+          "options": [
+            "Sourcing of components",
+            "Substance content",
+            "Safe use",
+            "Disposal",
+            "Other"
+          ]
+        },
+        {
+          "item": "b",
+          "text": "What percentage of significant product or service categories are covered by and assessed for compliance with such procedures?",
+          "hint": "Enter the percentage of significant product or service categories.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "417-2",
+      "title": "Incidents of non-compliance concerning product and service information and labeling",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What was the total number of incidents of non-compliance with regulations and/or voluntary codes concerning product and service information and labeling, by (i) incidents of non-compliance with regulations resulting in a fine or penalty, (ii) incidents resulting in a warning, and (iii) incidents of non-compliance with voluntary codes?",
+          "hint": "Exclude incidents where the organization was not at fault; identify incidents relating to prior periods.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "If the organization has not identified any non-compliance with regulations and/or voluntary codes, provide a brief statement of this fact.",
+          "hint": "A brief statement is sufficient.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "ref": "417-3",
+      "title": "Incidents of non-compliance concerning marketing communications",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What was the total number of incidents of non-compliance with regulations and/or voluntary codes concerning marketing communications, including advertising, promotion and sponsorship, by (i) incidents of non-compliance with regulations resulting in a fine or penalty, (ii) incidents resulting in a warning, and (iii) incidents of non-compliance with voluntary codes?",
+          "hint": "Exclude incidents where the organization was not at fault; identify incidents relating to prior periods.",
+          "type": "text"
+        },
+        {
+          "item": "b",
+          "text": "If the organization has not identified any non-compliance with regulations and/or voluntary codes, provide a brief statement of this fact.",
+          "hint": "A brief statement is sufficient.",
+          "type": "text"
+        }
+      ]
+    }
+  ]
 }

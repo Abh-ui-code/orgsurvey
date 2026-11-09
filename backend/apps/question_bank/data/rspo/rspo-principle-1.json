@@ -1,0 +1,71 @@
+{
+  "summary": "Principle 1 states that RSPO Growers act transparently, ethically, and responsibly. It covers transparency and responsible conduct towards stakeholders (making management documents and information available), a commitment to ethical business behaviour including anti-corruption, and identifying, addressing and monitoring human rights impacts through Human Rights Due Diligence.",
+  "disclosures": [
+    {
+      "ref": "1.1",
+      "title": "The Unit of Certification shall demonstrate transparency and responsible conduct with relevant stakeholders on issues related to the RSPO Principles and Criteria standard. Information provided shall be in appropriate language(s) and format(s), through a transparent process, to allow for effective participation in decision-making.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Does your Unit of Certification make the management documents required by the RSPO Principles and Criteria publicly available (excluding confidential information)?",
+          "type": "yes_no",
+          "hint": "Indicator 1.1.1 (Critical). Management documents specified in the RSPO P&C must be publicly available; confidential information is excluded. Attach the list of documents and where/how they are made available."
+        },
+        {
+          "item": ".2",
+          "text": "Does your Unit of Certification have documented and implemented procedures for consultation and communication with relevant stakeholders, made available to them and explained by a nominated management official in an appropriate language and format?",
+          "type": "yes_no",
+          "hint": "Indicator 1.1.2 (Critical). Process(es)/procedure(s) must be documented, implemented and made available. Explanations must be given by nominated management official(s) in an appropriate language and format. Attach the procedures and evidence of explanation."
+        },
+        {
+          "item": ".3",
+          "text": "Does your Unit of Certification keep a list of relevant stakeholders and records of their information requests and your responses?",
+          "type": "yes_no",
+          "hint": "Indicator 1.1.3 (Critical). A list of relevant stakeholders must be maintained, along with records of any information requests from stakeholders and the UoC's responses. Attach the stakeholder list and request log."
+        }
+      ]
+    },
+    {
+      "ref": "1.2",
+      "title": "The Unit of Certification shall commit to ethical behaviour in all business operations, transactions, and conduct.",
+      "questions": [
+        {
+          "item": ".1 A",
+          "text": "Does your Unit of Certification have a policy committing to a code of ethical conduct, communicated to all levels of the workforce and operations, that includes respect for fair conduct of business?",
+          "type": "yes_no",
+          "hint": "Indicator 1.2.1 A). The policy commits the UoC to a code of ethical conduct in all business operations and transactions, is communicated to all levels of workforce and operations, and includes, at a minimum, respect for fair conduct of business. Attach the policy and communication evidence."
+        },
+        {
+          "item": ".1 B",
+          "text": "Does this policy prohibit all forms of corruption, bribery, and fraudulent use of funds and resources?",
+          "type": "yes_no",
+          "hint": "Indicator 1.2.1 B). The policy shall include, at a minimum, prohibition of all forms of corruption, bribery and fraudulent use of funds and resources. National Interpretations determine relevant national anti-corruption regulations. Attach the policy."
+        },
+        {
+          "item": ".2",
+          "text": "Has your Unit of Certification developed and implemented procedures for managing ethical misconduct?",
+          "type": "yes_no",
+          "hint": "Indicator 1.2.2. Process(es) or procedure(s) for managing ethical misconduct must be developed and implemented. Attach the procedure and examples of its implementation."
+        }
+      ]
+    },
+    {
+      "ref": "1.3",
+      "title": "The Unit of Certification shall identify, address, and monitor human rights impacts in its operations, through implementation of Human Rights Due Diligence (HRDD).",
+      "questions": [
+        {
+          "item": ".1 A",
+          "text": "Has your Unit of Certification implemented Human Rights Due Diligence (HRDD) to identify existing and potential human rights impacts in its operations and among its direct suppliers?",
+          "type": "yes_no",
+          "hint": "Indicator 1.3.1 (Critical). HRDD must identify existing and potential human rights impacts in the UoC's operations and direct suppliers. The RSPO HRWG will provide guidance and a list of recognised HRDD methodologies (e.g. UN Guiding Principles, OECD; see Annex 4). Attach HRDD records."
+        },
+        {
+          "item": ".1 B",
+          "text": "Have you developed an action plan to address the human rights impacts identified through HRDD, and is it reviewed at least once every 2 years?",
+          "type": "yes_no",
+          "hint": "Indicator 1.3.1 (Critical). Identified existing and potential impacts must be addressed through an action plan developed by the UoC, reviewed at least once every 2 years. Attach the action plan and latest review record."
+        }
+      ]
+    }
+  ]
+}

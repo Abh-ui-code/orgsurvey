@@ -1,0 +1,149 @@
+{
+ "summary": "This standard covers entities that design or manufacture semiconductor devices and integrated circuits, their raw materials and components, or related capital equipment, including outsourced manufacturing and assembly. Its disclosure topics are greenhouse gas emissions, energy and water management and waste in manufacturing, workforce health and safety, skilled workforce, product lifecycle management, materials sourcing, and intellectual property and competitive behaviour.",
+ "disclosures": [
+  {
+   "ref": "TC-SC-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your organisation's (1) gross global Scope 1 emissions and (2) amount of total emissions from perfluorinated compounds?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Report gross global Scope 1 emissions in tonnes CO₂-e and, separately, the part of total emissions from perfluorinated compounds (PFCs). State the consolidation approach and calculation method used."
+    },
+    {
+     "item": ".2",
+     "text": "What is your organisation's long- and short-term strategy or plan to manage Scope 1 emissions, what are your emissions reduction targets, and how have you performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy, the targets (scope, base year, target year, % reduction), activities to achieve them and performance against them, noting factors that affected results."
+    }
+   ]
+  },
+  {
+   "ref": "TC-SC-130a",
+   "title": "Energy Management in Manufacturing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was your organisation's (1) total energy consumed, (2) percentage of that energy purchased as grid electricity and (3) percentage that was renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report total energy consumed in GJ, then the grid electricity share and the renewable share as percentages. Include fuel, purchased and self-generated energy; renewable energy covers both purchased and own-generated sources."
+    }
+   ]
+  },
+  {
+   "ref": "TC-SC-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your organisation's (1) total water withdrawn and (2) total water consumed, and what percentage of each was in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report water withdrawn and water consumed in thousand m³, plus the percentage of each located in regions with High or Extremely High Baseline Water Stress (for example per the WRI Aqueduct tool)."
+    }
+   ]
+  },
+  {
+   "ref": "TC-SC-150a",
+   "title": "Waste Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were (1) the amount of hazardous waste from your manufacturing and (2) the percentage of that waste that was recycled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report hazardous waste generated in metric tonnes and the share recycled, including reuse and recovery. Explain how hazardous waste is defined in the jurisdictions where you operate."
+    }
+   ]
+  },
+  {
+   "ref": "TC-SC-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What efforts does your organisation make to assess, monitor and reduce the exposure of its workforce to human health hazards?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the hazards workers face (e.g. hazardous chemicals, radiation), how exposure is assessed and monitored, and the controls, training and protective measures used to reduce it."
+    },
+    {
+     "item": ".2",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with employee health and safety violations?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from employee health and safety proceedings. Include any legal proceedings that ended in the period."
+    }
+   ]
+  },
+  {
+   "ref": "TC-SC-330a",
+   "title": "Recruiting & Managing a Global & Skilled Workforce",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your organisation's employees require a work visa?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the share of total employees who require a work visa to work in the country where they are employed, as a percentage of all employees."
+    }
+   ]
+  },
+  {
+   "ref": "TC-SC-410a",
+   "title": "Product Lifecycle Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your products, by revenue, contain IEC 62474 declarable substances?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of total product revenue from products that contain substances declarable under the IEC 62474 material declaration standard. Note the version of the declarable substance list used."
+    },
+    {
+     "item": ".2",
+     "text": "What is the processor energy efficiency at a system level for (1) servers, (2) desktops and (3) laptops?",
+     "type": "text",
+     "hint": "Unit: Various, by product category · Report processor energy efficiency for each of the three product categories, using the metric appropriate to each, and explain the benchmark or method used."
+    }
+   ]
+  },
+  {
+   "ref": "TC-SC-440a",
+   "title": "Materials Sourcing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation manage the risks associated with the use of critical materials in its products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Identify the critical materials you use, the risks they pose (supply, price, regulatory, reputational) and how you manage them, e.g. through substitution, reuse and recycling, supplier engagement or stockpiling."
+    }
+   ]
+  },
+  {
+   "ref": "TC-SC-520a",
+   "title": "Intellectual Property Protection & Competitive Behaviour",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with anti-competitive behaviour regulations?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from anti-competition, anti-trust or monopoly proceedings. Include any legal proceedings that ended in the period."
+    }
+   ]
+  },
+  {
+   "ref": "TC-SC-000",
+   "title": "Activity Metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was your organisation's total production?",
+     "type": "text",
+     "hint": "Unit: See note · Report total production in the unit appropriate to your business (e.g. wafers, units or revenue-based measures) and state the unit used."
+    },
+    {
+     "item": ".B",
+     "text": "What percentage of your organisation's production comes from facilities you own?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the share of total production made in owned facilities rather than by third-party foundries or contract manufacturers. State the basis used."
+    }
+   ]
+  }
+ ]
+}

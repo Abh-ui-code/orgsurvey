@@ -1,0 +1,107 @@
+{
+ "summary": "Covers long- and short-haul freight trucking services, including truckload and less-than-truckload operations. Disclosure topics are greenhouse gas emissions, air quality, workforce conditions, health and safety, and accident and safety management.",
+ "disclosures": [
+  {
+   "ref": "TR-RO-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's gross global Scope 1 greenhouse gas emissions?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) CO2-e · Report gross global Scope 1 emissions for the reporting period, in metric tonnes CO2-e, covering direct emissions from sources you own or control."
+    },
+    {
+     "item": ".2",
+     "text": "How does your organisation plan to manage its Scope 1 emissions over the short and long term, including any reduction targets and how you have performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your short- and long-term strategy or plan, the emissions reduction targets, and an analysis of performance against those targets."
+    },
+    {
+     "item": ".3",
+     "text": "What are your (1) total fuel consumed, (2) percentage natural gas and (3) percentage renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total fuel in gigajoules (GJ), then the percentages for (2) natural gas and (3) renewable."
+    }
+   ]
+  },
+  {
+   "ref": "TR-RO-120a",
+   "title": "Air Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your organisation's air emissions of the following pollutants: (1) NOx (excluding N2O), (2) SOx and (3) particulate matter (PM10)?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report the quantity of each pollutant separately in metric tonnes, stating how each was calculated or estimated."
+    }
+   ]
+  },
+  {
+   "ref": "TR-RO-320a",
+   "title": "Workforce Conditions, Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total recordable incident rate (TRIR) and (2) fatality rate for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate · Report each rate separately for direct employees and for contract employees, stating the exposure-hours basis used."
+    },
+    {
+     "item": ".2",
+     "text": "What are your (1) voluntary and (2) involuntary turnover rates for all employees?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report the voluntary and involuntary turnover rates separately, as percentages."
+    },
+    {
+     "item": ".3",
+     "text": "How does your organisation manage short-term and long-term driver health risks?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your approach to driver health risks, such as fatigue, sedentary work and chronic conditions, including programmes and monitoring."
+    }
+   ]
+  },
+  {
+   "ref": "TR-RO-540a",
+   "title": "Accident & Safety Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many road accidents and incidents did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total count for the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "What were the (1) number and (2) aggregate volume of spills and releases to the environment?",
+     "type": "text",
+     "hint": "Unit: Number, Cubic metres (m³) · Report (1) the number of spills and releases and (2) their aggregate volume in cubic metres."
+    }
+   ]
+  },
+  {
+   "ref": "TR-RO-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What are your revenue tonne-kilometres (RTK)?",
+     "type": "number",
+     "hint": "Unit: RTK · Report revenue tonne-kilometres for the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "What is your load factor?",
+     "type": "number",
+     "hint": "Unit: Number · Report the load factor as a number and state how it is calculated."
+    },
+    {
+     "item": ".C",
+     "text": "How many employees and how many truck drivers does your organisation have?",
+     "type": "text",
+     "hint": "Unit: Number · Report (1) the total number of employees and (2) the number of truck drivers."
+    }
+   ]
+  }
+ ]
+}

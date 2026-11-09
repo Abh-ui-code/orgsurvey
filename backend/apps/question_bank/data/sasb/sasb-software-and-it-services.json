@@ -1,0 +1,161 @@
+{
+ "summary": "This standard covers entities that develop and sell application, infrastructure and middleware software and provide IT services, including cloud computing and software as a service. Its disclosure topics are the environmental footprint of hardware infrastructure, data privacy and freedom of expression, data security, recruiting and managing a diverse and skilled workforce, intellectual property and competitive behaviour, and managing systemic risks from technology disruptions.",
+ "disclosures": [
+  {
+   "ref": "TC-SI-130a",
+   "title": "Environmental Footprint of Hardware Infrastructure",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was your organisation's (1) total energy consumed, (2) percentage of that energy purchased as grid electricity and (3) percentage that was renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report total energy consumed in GJ, then the grid electricity share and the renewable share as percentages. Include fuel, purchased and self-generated energy; renewable energy covers both purchased and own-generated sources."
+    },
+    {
+     "item": ".2",
+     "text": "What were your organisation's (1) total water withdrawn and (2) total water consumed, and what percentage of each was in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report water withdrawn and water consumed in thousand m³, plus the percentage of each located in regions with High or Extremely High Baseline Water Stress (for example per the WRI Aqueduct tool)."
+    },
+    {
+     "item": ".3",
+     "text": "How does your organisation integrate environmental considerations into strategic planning for its data centre needs?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how energy and water use, emissions and siting are weighed in decisions on data centre capacity (owned, leased or outsourced), including efficiency measures, renewable energy sourcing and trade-offs with cost, reliability and growth."
+    }
+   ]
+  },
+  {
+   "ref": "TC-SI-220a",
+   "title": "Data Privacy & Freedom of Expression",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's policies and practices relating to targeted advertising and user privacy?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your policies and practices on collecting and using user data, targeted advertising, consent and opt-out choices, data retention and sharing with third parties, and how these apply across your products and services."
+    },
+    {
+     "item": ".2",
+     "text": "How many users have information that is used for secondary purposes?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of users whose information is used for purposes other than that for which it was collected, such as targeted advertising or sale to third parties. Count only users who have not opted out where relevant."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with user privacy?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from user privacy proceedings. Include any legal proceedings that ended in the period."
+    },
+    {
+     "item": ".4",
+     "text": "For law enforcement requests for user information, what was (1) the number of requests, (2) the number of user whose information was requested and (3) the percentage of requests that resulted in disclosure?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report the number of requests received, the number of user whose information was requested, and the percentage of requests that led to disclosure of data. Include requests from all jurisdictions where permitted by law."
+    },
+    {
+     "item": ".5",
+     "text": "In which countries are your organisation's core products or services subject to government-required monitoring, blocking, content filtering or censoring?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · List the countries where core products or services are subject to such government requirements, and say whether you operate there. Describe the impact on your products or services and how you respond."
+    }
+   ]
+  },
+  {
+   "ref": "TC-SI-230a",
+   "title": "Data Security",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were (1) the number of data breaches your organisation experienced, (2) the percentage that were personal data breaches and (3) the number of users affected?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report the number of data breaches, the percentage involving personal data, and the number of users affected (all users whose data was compromised)."
+    },
+    {
+     "item": ".2",
+     "text": "How does your organisation identify and address data security risks, including through the use of third-party cybersecurity standards?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you identify vulnerabilities and threats, the controls and governance in place, the third-party cybersecurity standards you use or are certified to (e.g. ISO 27001, SOC 2, NIST), and how risks are escalated."
+    }
+   ]
+  },
+  {
+   "ref": "TC-SI-330a",
+   "title": "Recruiting & Managing a Global, Diverse & Skilled Workforce",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your organisation's employees require a work visa?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the share of total employees who require a work visa to work in the country where they are employed, as a percentage of all employees."
+    },
+    {
+     "item": ".2",
+     "text": "What is your organisation's employee engagement, expressed as a percentage?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of employees who are engaged, based on a survey. Note the survey method, whether it was run by you or a third party, and the response rate or scope."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of your organisation's (1) gender and (2) diversity group representation is there for (a) executive management, (b) non-executive management, (c) technical employees and (d) all other employees?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · For each of the four employee categories, report the percentage by gender and the percentage for each diversity group you track (for example race or ethnicity), in line with the laws where you operate."
+    }
+   ]
+  },
+  {
+   "ref": "TC-SI-520a",
+   "title": "Intellectual Property Protection & Competitive Behaviour",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with anti-competitive behaviour regulations?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from anti-competition, anti-trust or monopoly proceedings. Include any legal proceedings that ended in the period."
+    }
+   ]
+  },
+  {
+   "ref": "TC-SI-550a",
+   "title": "Managing Systemic Risks from Technology Disruptions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were the number of (1) performance issues and (2) service disruptions, and (3) the total customer downtime, at your organisation?",
+     "type": "text",
+     "hint": "Unit: Number, Days · Report the number of performance issues, the number of service disruptions, and total customer downtime in days over the period. Note how each is defined and counted."
+    },
+    {
+     "item": ".2",
+     "text": "What business continuity risks related to disruptions of operations does your organisation face?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the main risks to continuity (e.g. outages, cyber incidents, supplier failures), the potential impact on customers and operations, and the plans, redundancy and recovery measures in place. Identify any critical systems."
+    }
+   ]
+  },
+  {
+   "ref": "TC-SI-000",
+   "title": "Activity Metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What were (1) the number of licences or subscriptions your organisation has and (2) the percentage that are cloud-based?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report the total number of licences or subscriptions and the share delivered through the cloud (SaaS, hosted or similar)."
+    },
+    {
+     "item": ".B",
+     "text": "What are (1) your organisation's data processing capacity and (2) the percentage of it that is outsourced?",
+     "type": "text",
+     "hint": "Unit: See note · Report data processing capacity in a unit appropriate to your business (e.g. servers, MIPS or compute hours), state the unit used, and give the percentage outsourced to third-party or cloud providers."
+    },
+    {
+     "item": ".C",
+     "text": "What are (1) the amount of data storage your organisation uses and (2) the percentage of it that is outsourced?",
+     "type": "text",
+     "hint": "Unit: Petabytes, Percentage (%) · Report the total data storage in petabytes and the percentage provided by third parties, such as colocation or cloud storage providers."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,197 @@
+{
+ "summary": "This standard covers the Chemicals industry, which turns organic and inorganic feedstocks into basic, agricultural and specialty chemicals. Its disclosure topics include greenhouse gas emissions, air quality, energy and water management, hazardous waste, community relations, workforce health and safety, product stewardship, GMOs, regulatory positions and operational safety.",
+ "disclosures": [
+  {
+   "ref": "RT-CH-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's gross global Scope 1 emissions, and what percentage is covered under emissions-limiting regulations?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) CO2-e, Percentage (%) · Report gross global Scope 1 GHG emissions in tonnes CO2-e and the percentage covered under emissions-limiting regulations such as an emissions trading scheme."
+    },
+    {
+     "item": ".2",
+     "text": "What is your organisation's long- and short-term strategy or plan to manage Scope 1 emissions, what are your emissions reduction targets, and how have you performed against them?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe the strategy or plan, the targets (scope, base year, timeframe) and an analysis of performance against those targets, including any factors affecting progress."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CH-120a",
+   "title": "Air Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What quantities of the following air pollutants did your organisation emit: (1) NOx (excluding N2O), (2) SOx, (3) volatile organic compounds (VOCs) and (4) hazardous air pollutants (HAPs)?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report emissions in tonnes separately for (1) NOx excluding N2O, (2) SOx, (3) VOCs and (4) HAPs."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CH-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your organisation's (1) total energy consumed, (2) percentage grid electricity, (3) percentage renewable and (4) total self-generated energy?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy consumed in GJ, (2) percentage from grid electricity, (3) percentage from renewable sources and (4) total self-generated energy in GJ."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CH-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's (1) total water withdrawn and (2) total water consumed, and what percentage of each is in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m3), Percentage (%) · Report (1) total water withdrawn and (2) total water consumed in thousand m3, and the percentage of each in High or Extremely High Baseline Water Stress regions."
+    },
+    {
+     "item": ".2",
+     "text": "How many incidents of non-compliance associated with water quality permits, standards and regulations did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of non-compliance incidents with water quality permits, standards and regulations in the period."
+    },
+    {
+     "item": ".3",
+     "text": "What water management risks does your organisation face, and what strategies and practices do you use to mitigate them?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe water-related risks (scarcity, quality, regulation, cost), the mitigation strategies and practices, and any targets and performance against them."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CH-150a",
+   "title": "Hazardous Waste Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What (1) amount of hazardous waste did your organisation generate, and (2) what percentage of it was recycled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) the total hazardous waste generated in tonnes and (2) the percentage recycled, using the applicable regulatory definition of hazardous waste."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CH-210a",
+   "title": "Community Relations",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What engagement processes does your organisation use to manage risks and opportunities associated with community interests?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe how you engage local communities, the community interests and concerns identified, and how engagement shapes your management of related risks and opportunities."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CH-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total recordable incident rate (TRIR) and (2) fatality rate for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate · Report TRIR and fatality rate separately for direct employees and contract employees, stating the rate basis such as per 200,000 hours worked."
+    },
+    {
+     "item": ".2",
+     "text": "What efforts does your organisation make to assess, monitor and reduce the exposure of employees and contract workers to long-term (chronic) health risks?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe the chronic health risks identified, how exposure is assessed and monitored, and the measures taken to reduce exposure for employees and contract workers."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CH-410a",
+   "title": "Product Design for Use-phase Efficiency",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was your organisation's revenue from products designed for use-phase resource efficiency?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report revenue from products designed for use-phase resource efficiency in your presentation currency for the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CH-410b",
+   "title": "Safety & Environmental Stewardship of Chemicals",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "(1) What percentage of your products contain Globally Harmonised System (GHS) Category 1 and 2 Health and Environmental Hazardous Substances, and (2) what percentage of such products have undergone a hazard assessment?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) by revenue, Percentage (%) · Report (1) the percentage of products, by revenue, containing GHS Category 1 and 2 health and environmental hazardous substances and (2) the percentage of those products that have undergone a hazard assessment."
+    },
+    {
+     "item": ".2",
+     "text": "What is your organisation's strategy to (1) manage chemicals of concern and (2) develop alternatives with reduced human or environmental impact?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe how (1) chemicals of concern are identified and managed and (2) alternatives with lower human or environmental impact are developed, including relevant regulations and R&D efforts."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CH-410c",
+   "title": "Genetically Modified Organisms",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your products, by revenue, contain genetically modified organisms (GMOs)?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by revenue · Report the percentage of products by revenue that contain GMOs."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CH-530a",
+   "title": "Management of the Legal & Regulatory Environment",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's positions on government regulations or policy proposals that address environmental and social factors affecting the industry?",
+     "type": "text",
+     "hint": "Unit: Discussion, no unit · Describe your corporate positions on relevant regulations and policy proposals, the issues covered and how you engage with policymakers, directly or through industry associations."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CH-540a",
+   "title": "Operational Safety, Emergency Preparedness & Response",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your Process Safety Incidents Count (PSIC), Process Safety Total Incident Rate (PSTIR) and Process Safety Incident Severity Rate (PSISR)?",
+     "type": "text",
+     "hint": "Unit: Number, Rate · Report PSIC as a number and PSTIR and PSISR as rates, using the industry process safety incident definitions (for example API RP 754 or ANSI/CCPS)."
+    },
+    {
+     "item": ".2",
+     "text": "How many transport incidents did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of transport incidents involving your products in the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "RT-CH-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was your organisation's production by reportable segment?",
+     "type": "text",
+     "hint": "Unit: Cubic metres (m3) or metric tonnes (t) · Report production volume for each reportable segment, in cubic metres or tonnes as appropriate."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,137 @@
+{
+ "summary": "Covers freight services and transportation logistics for businesses and individuals, including air freight, post and courier services and logistics. Disclosure topics are greenhouse gas emissions, air quality, labour practices, workforce health and safety, supply chain management, and accident and safety management.",
+ "disclosures": [
+  {
+   "ref": "TR-AF-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's gross global Scope 1 greenhouse gas emissions?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) CO2-e · Report gross global Scope 1 emissions for the reporting period, in metric tonnes CO2-e, covering direct emissions from sources you own or control."
+    },
+    {
+     "item": ".2",
+     "text": "How does your organisation plan to manage its Scope 1 emissions over the short and long term, including any reduction targets and how you have performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your short- and long-term strategy or plan, the emissions reduction targets, and an analysis of performance against those targets."
+    },
+    {
+     "item": ".3",
+     "text": "How much fuel did your organisation consume in (1) road transport, with the percentage that was (a) natural gas and (b) renewable, and (2) air transport, with the percentage that was (a) alternative and (b) sustainable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report fuel consumed in gigajoules (GJ) for each of road and air transport, and the percentages for each fuel category as numbered."
+    }
+   ]
+  },
+  {
+   "ref": "TR-AF-120a",
+   "title": "Air Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your organisation's air emissions of the following pollutants: (1) NOx (excluding N2O), (2) SOx and (3) particulate matter (PM10)?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report the quantity of each pollutant separately in metric tonnes, stating how each was calculated or estimated."
+    }
+   ]
+  },
+  {
+   "ref": "TR-AF-310a",
+   "title": "Labour Practices",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your drivers are classified as independent contractors?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of drivers classified as independent contractors rather than employees."
+    },
+    {
+     "item": ".2",
+     "text": "What is the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with labour law violations?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses for the period in your presentation currency, covering fines, settlements and other legal costs from such proceedings."
+    }
+   ]
+  },
+  {
+   "ref": "TR-AF-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total recordable incident rate (TRIR) and (2) fatality rate for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate · Report each rate separately for direct employees and for contract employees, stating the exposure-hours basis used."
+    }
+   ]
+  },
+  {
+   "ref": "TR-AF-430a",
+   "title": "Supply Chain Management",
+   "questions": [
+    {
+     "item": ".2",
+     "text": "What is your total greenhouse gas (GHG) footprint across transport modes?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) CO2-e per tonne-kilometre · Report the GHG footprint in metric tonnes CO2-e per tonne-kilometre, across all transport modes used."
+    },
+    {
+     "item": ".3",
+     "text": "What policies and strategies does your organisation use to identify, assess and manage business disruption risks associated with contract carrier safety?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the policies and strategies for identifying, assessing and managing disruption risks linked to contract carrier safety, such as carrier vetting and safety monitoring."
+    }
+   ]
+  },
+  {
+   "ref": "TR-AF-540a",
+   "title": "Accident & Safety Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How has your organisation implemented a Safety Management System, and what have been the outcomes?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how the Safety Management System is implemented (scope, governance, key processes) and its outcomes, such as improvements in safety performance."
+    },
+    {
+     "item": ".2",
+     "text": "How many aviation accidents did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total count for the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "How many road accidents and incidents did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total count for the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "TR-AF-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What are your revenue tonne-kilometres (RTK) for (1) road transport and (2) air transport?",
+     "type": "text",
+     "hint": "Unit: RTK · Report RTK separately for road transport and for air transport."
+    },
+    {
+     "item": ".B",
+     "text": "What is your load factor for (1) road transport and (2) air transport?",
+     "type": "text",
+     "hint": "Unit: Rate · Report the load factor separately for road and for air transport, and state how it is calculated."
+    },
+    {
+     "item": ".C",
+     "text": "How many employees and how many truck drivers does your organisation have?",
+     "type": "text",
+     "hint": "Unit: Number · Report (1) the total number of employees and (2) the number of truck drivers."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,467 @@
+{
+  "summary": "Principle 6: RSPO Growers respect workers' rights and working conditions. It covers non-discrimination and equal opportunity, employment contracts, pay, living wage and housing, freedom of association, child labour, harassment and violence, women workers' rights, forced labour and trafficking, and occupational health and safety.",
+  "disclosures": [
+    {
+      "ref": "6.1",
+      "title": "All forms of discrimination are prohibited against all workers.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification established and implemented a non-discrimination policy covering recruitment, hiring, work scope, pay and benefits, access to training, promotion, facilities and work equipment, and is it publicly available and socialised to the workforce and contractors?",
+          "type": "yes_no",
+          "hint": "Indicator 6.1.1 (Critical). Attach the policy and evidence that it is publicly available and has been socialised (e.g. training or briefing records for workers and contractors)."
+        },
+        {
+          "item": ".2",
+          "text": "Does your Unit of Certification provide equal opportunities to all workers?",
+          "type": "yes_no",
+          "hint": "Indicator 6.1.2 (Critical). Describe or attach evidence of how equal opportunities are provided (e.g. recruitment, promotion and training records)."
+        },
+        {
+          "item": ".3",
+          "text": "Does your Unit of Certification ensure that all workers receive remuneration for work of equal value and evaluation, based on both their experience and the quality of their work?",
+          "type": "yes_no",
+          "hint": "Indicator 6.1.3. Attach evidence such as pay scales or payroll records showing equal pay for work of equal value."
+        }
+      ]
+    },
+    {
+      "ref": "6.2",
+      "title": "Working conditions for all workers shall meet at least legal or industry standards",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification established and implemented documented procedure(s) for recruitment, selection, hiring, promotion, retirement, suspension and termination, socialised to all workers and available on request?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.1 (Critical). Attach the procedure(s) and evidence of socialisation to workers. The document must be made available upon request."
+        },
+        {
+          "item": ".2 A",
+          "text": "Do employment contracts set out the terms and conditions of employment in line with national legal requirements or any collective bargaining agreement (if applicable), including pay, regular working hours, deductions, overtime, sick leave, leave entitlement, maternity leave, reasons for dismissal, repatriation (if applicable) and termination notice?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.2 A (Critical). Attach sample employment contracts and any collective bargaining agreement."
+        },
+        {
+          "item": ".2 B",
+          "text": "Are the terms and conditions of the contract or collective bargaining agreement, and applicable labour laws, made available and explained to workers in a language they understand before they sign, and do you obtain the workers' acknowledgment that they understand them?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.2 B (Critical). Attach signed acknowledgments or other evidence that terms were explained in an understood language before signing."
+        },
+        {
+          "item": ".2 C",
+          "text": "Is a copy of the employment contract given to each worker?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.2 C (Critical). Describe how copies are provided and attach evidence (e.g. signed receipts)."
+        },
+        {
+          "item": ".2 D",
+          "text": "Do you ensure there is no contract substitution, and where national regulations require more than one contract to be signed, do the higher standard or provisions apply?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.2 D (Critical). Attach evidence such as contract comparisons or worker interview records."
+        },
+        {
+          "item": ".2 E",
+          "text": "Are any amendments to the employment contract agreed to by the worker (this does not include terms in a collective bargaining agreement, if applicable)?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.2 E (Critical). Attach examples of contract amendments with worker agreement."
+        },
+        {
+          "item": ".3",
+          "text": "Can your Unit of Certification demonstrate that international migrant workers signed the UoC's employment contract in the country where they were hired?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.3. Attach signed contracts and evidence of the place of signing for international migrant workers. Answer yes only if you can demonstrate this."
+        },
+        {
+          "item": ".4",
+          "text": "Does your Unit of Certification maintain a worker register for up to five years from the date of resignation or termination (or as national regulation determines), and keep records of remediation for forced labour, trafficking in persons and repayment of recruitment fees (where applicable) for up to five years?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.4. Attach the worker register and remediation records. Records must be kept up to five years from the worker's resignation or termination."
+        },
+        {
+          "item": ".5",
+          "text": "Is permanent, full-time employment used for all core work in your Unit of Certification, and are casual or short-term workers rehired more than three successive times offered permanent full-time employment on the fourth rehiring?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.5. Attach workforce records showing employment type for core work and the handling of repeated rehiring of casual and short-term workers."
+        },
+        {
+          "item": ".6 A",
+          "text": "Are all workers paid, and given payslips, in accordance with the terms of their employment contracts (monthly, weekly, daily or piece rate, as relevant)?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.6 A (Critical). Attach sample payslips and payment records."
+        },
+        {
+          "item": ".6 B",
+          "text": "Are the details on the payslips, including the calculation of wages and lawful deductions, clearly explained to workers in a language they understand?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.6 B (Critical). Describe how payslips are explained and attach supporting evidence."
+        },
+        {
+          "item": ".6 C",
+          "text": "Do you keep records for each type of worker showing hours worked (regular and overtime), the calculation of wages and lawful deductions, and the actual wages paid?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.6 C (Critical). Attach sample time and wage records for each worker type."
+        },
+        {
+          "item": ".6 D",
+          "text": "Where several members of a family are employed by your Unit of Certification, does each family member have a separate payslip reflecting their own wages?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.6 D (Critical). Attach sample payslips for family members employed by the UoC, if applicable."
+        },
+        {
+          "item": ".7 A",
+          "text": "Are piece-rate wages at least the legal piece-rate minimum wage or the rate in the Collective Bargaining Agreement (or, where neither exists, calculated proportionately and not below the legal minimum or CBA wage), with work targets achievable within regular working hours?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.7 A (Critical). Attach piece-rate calculations and evidence that targets are achievable within regular hours."
+        },
+        {
+          "item": ".7 B",
+          "text": "Is the overtime wage rate at least the national legal overtime rate or the Collective Bargaining Agreement rate (or, where neither is available, at least one-and-one-quarter times the regular wage rate)?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.7 B (Critical). Attach overtime rate calculations and sample payroll records."
+        },
+        {
+          "item": ".7 C",
+          "text": "Where a work day is cut short because of a workplace injury (caused by a work-related accident), is the affected worker paid a full day's wage, or as per the legal or Collective Bargaining Agreement provision, regardless of worker type?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.7 C (Critical). Attach examples of payment records for injury cases, if any."
+        },
+        {
+          "item": ".8 A",
+          "text": "For workers living within your Unit of Certification, does the housing ensure structural safety?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.8 A (Critical). Housing for workers living within the UoC. Attach inspection reports or photos."
+        },
+        {
+          "item": ".8 B",
+          "text": "Does the worker housing provide at least the minimum space per worker?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.8 B (Critical). State the applicable minimum space standard and attach evidence."
+        },
+        {
+          "item": ".8 C",
+          "text": "Does the worker housing provide sewage and garbage disposal?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.8 C (Critical). Attach inspection reports or photos."
+        },
+        {
+          "item": ".8 D",
+          "text": "Does the worker housing provide a water supply, including water that is safe to drink?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.8 D (Critical). Attach water quality test results or other evidence."
+        },
+        {
+          "item": ".8 E",
+          "text": "Does the worker housing provide a supply of electricity?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.8 E (Critical). Attach evidence of electricity supply."
+        },
+        {
+          "item": ".8 F",
+          "text": "Does the worker housing provide sanitary, washing and cooking facilities?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.8 F (Critical). Attach inspection reports or photos."
+        },
+        {
+          "item": ".8 G",
+          "text": "Does the worker housing provide appropriate protection against weather elements?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.8 G (Critical). Attach inspection reports or photos."
+        },
+        {
+          "item": ".8 H",
+          "text": "Do workers and their families (if applicable) have access to healthcare, education for workers' children, and welfare amenities that comply with applicable national and/or international law requirements?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.8 (Critical), additional requirement. Describe the facilities and amenities provided and attach supporting evidence."
+        },
+        {
+          "item": ".8 I",
+          "text": "If you have acquired a non-certified supply base, have you developed a plan for upgrading infrastructure (if necessary), to be implemented within 5 years from when FFB production starts and reviewed annually?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.8 (Critical), acquisitions. Plan must meet applicable national and/or international law requirements. Answer yes if not applicable only if no acquisition occurred, and say so in your notes."
+        },
+        {
+          "item": ".9",
+          "text": "Does your Unit of Certification ensure workers have access to safe, sufficient and affordable food?",
+          "type": "yes_no",
+          "hint": "Indicator 6.2.9. Describe how food access is provided (e.g. canteen, shops, food allowances) and attach evidence."
+        }
+      ]
+    },
+    {
+      "ref": "6.3",
+      "title": "Living Wage shall be paid to all workers, progressively",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Aligned with the Revised RSPO Living Wage Strategy 2023, is a Living Wage paid to all workers, and does your Unit of Certification calculate prevailing wages annually in accordance with the 'RSPO Prevailing Wage Calculation Procedure'?",
+          "type": "yes_no",
+          "hint": "Indicator 6.3.1 (Critical). Procedural note: use the 'RSPO Guidance on Calculating Prevailing Wages' until the Procedure is available. Strategy steps: 1) calculate prevailing wage, 2) identify Living Wage gaps, 3) verify and close gaps. Attach calculations."
+        }
+      ]
+    },
+    {
+      "ref": "6.4",
+      "title": "The Unit of Certification shall respect the rights of all workers to form and join trade unions, associations of their choice, or worker organisations with their own representatives to bargain collectively. Where the right to freedom of association and collective bargaining is restricted under law, the employer facilitates a parallel means of independent and free association and bargaining for all workers through representatives of their choice.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification established and implemented a policy recognising freedom of association, the right to collective bargaining, and Collective Bargaining Agreements (where available), and is it publicly available?",
+          "type": "yes_no",
+          "hint": "Indicator 6.4.1 (Critical). Attach the policy and evidence that it is publicly available, plus any Collective Bargaining Agreement."
+        },
+        {
+          "item": ".2",
+          "text": "Does your Unit of Certification allow the nomination, formation, functioning and administration of Workers' Organisations and registered trade unions free from interference, protect participating workers from discrimination, retaliation, intimidation and harassment, and provide facilities free of charge within its premises for workers to engage with each other and their representatives?",
+          "type": "yes_no",
+          "hint": "Indicator 6.4.2. Attach evidence such as records of worker organisations and details of the free facilities provided."
+        },
+        {
+          "item": ".3",
+          "text": "Does your Unit of Certification document minutes of meetings with trade unions or workers' representatives, make them accessible on request, explain them in language(s) workers understand, implement the actions agreed and keep the status of actions updated?",
+          "type": "yes_no",
+          "hint": "Indicator 6.4.3. Attach sample meeting minutes and an action status tracker."
+        }
+      ]
+    },
+    {
+      "ref": "6.5",
+      "title": "There is no use of child labour",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification established and implemented a policy for the protection of children and the prohibition and remediation of child labour, made it publicly available, and socialised it with the workforce, contractors, suppliers and relevant stakeholders in a language they understand?",
+          "type": "yes_no",
+          "hint": "Indicator 6.5.1 (Critical). Attach the policy and evidence of public availability and socialisation (including the negative effects of child labour)."
+        },
+        {
+          "item": ".2",
+          "text": "If you employ young workers for non-hazardous work (from age 15, at or above the higher of the national minimum age or your company policy's minimum age), does the work avoid interfering with schooling or harming their health or development, and are they paid and given individual payslips?",
+          "type": "yes_no",
+          "hint": "Indicator 6.5.2 (Critical). Attach records of young workers, their ages, work performed and payslips. Describe if you employ none."
+        },
+        {
+          "item": ".3",
+          "text": "Has your Unit of Certification documented and implemented an age screening verification procedure, and does it carry out remediation if child labour is found, as guided by the latest 'RSPO Guidance on Child Rights for Palm Oil Producers'?",
+          "type": "yes_no",
+          "hint": "Indicator 6.5.3 (Critical). Attach the procedure, screening records and any remediation records."
+        }
+      ]
+    },
+    {
+      "ref": "6.6",
+      "title": "All forms of intimidation, harassment, abuse, or violence in the workplace are prevented, mitigated, and addressed.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification established and implemented a policy prohibiting all forms of intimidation, harassment (including threats), sexual harassment, abuse and violence, with procedures for investigation, disciplinary action/sanctions and remediation, publicly available and socialised to the workforce, suppliers and contractors in a language they understand?",
+          "type": "yes_no",
+          "hint": "Indicator 6.6.1 (Critical). Attach the policy and procedures, and evidence of public availability and socialisation."
+        }
+      ]
+    },
+    {
+      "ref": "6.7",
+      "title": "Rights of women workers are respected and promoted and where violations are found, women shall be provided access to remediation.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification established and implemented a policy to protect the rights of women workers (e.g. reproductive rights, maternal health, women's safety), publicly available and socialised to the workforce in a language they understand?",
+          "type": "yes_no",
+          "hint": "Indicator 6.7.1 (Critical). Attach the policy and evidence of public availability and socialisation."
+        },
+        {
+          "item": ".2",
+          "text": "Has your Unit of Certification facilitated the formation of a Women's Welfare and Empowerment Committee, allowed it to decide its meeting frequency, held meetings in a language its members understand in a safe and secure place, responded to issues raised, and documented actions taken (or reasons where none were taken)?",
+          "type": "yes_no",
+          "hint": "Indicator 6.7.2 (Critical). Attach committee membership, meeting minutes and records of UoC responses."
+        },
+        {
+          "item": ".3",
+          "text": "Do you ensure pregnant or breastfeeding women workers do no work with hazardous chemicals, provide them safe alternative work with equivalent pay, and provide pregnancy tests only when legally mandated and with the worker's consent?",
+          "type": "yes_no",
+          "hint": "Indicator 6.7.3 (Critical). Attach evidence such as job reassignment records and pay records."
+        },
+        {
+          "item": ".4",
+          "text": "Does your Unit of Certification assess the medical and maternity needs of expectant and new mothers in consultation with them, and take action to address the needs identified?",
+          "type": "yes_no",
+          "hint": "Indicator 6.7.4. Attach assessment records and actions taken."
+        }
+      ]
+    },
+    {
+      "ref": "6.8",
+      "title": "Forced Labour and Trafficking in Persons is prohibited. Prevention and remediation procedures are in place.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification developed and implemented policies and procedures on preventing and remediating forced labour and trafficking in persons (with reference to the ILO Indicators of Forced Labour), made them publicly available and socialised them in a language workers, suppliers and contractors understand?",
+          "type": "yes_no",
+          "hint": "Indicator 6.8.1 (Critical). Also: specific labour procedures where migrant workers are employed, and evaluation of any third-party labour recruiters against this indicator. Attach policies, procedures and evaluations."
+        },
+        {
+          "item": ".2",
+          "text": "Does your Unit of Certification ensure there is no debt bondage, withholding of wages, or collection of payments directly or indirectly (including through wage deductions or benefits)?",
+          "type": "yes_no",
+          "hint": "Indicator 6.8.2 (Critical). Includes: A) deductions for unachievable targets; B) accumulated wage arrears or non-payment; C) deception in wage calculation or unlawful deductions; D) worker deposits; E) advances/loans above legal limits; F) recruitment fees and related costs."
+        },
+        {
+          "item": ".3",
+          "text": "Has your Unit of Certification repaid active workers (as of, and from, the adoption date of the RSPO Principles & Criteria 2024) who paid recruitment fees or related costs?",
+          "type": "yes_no",
+          "hint": "Indicator 6.8.3 (Critical). Attach repayment records and evidence of worker acknowledgment."
+        },
+        {
+          "item": ".4",
+          "text": "Do you refrain from keeping workers' government-issued identity documents and other personal documents (except for mandatory legal or immigration processing with consent, returned without undue delay), and provide freely accessible secure storage for workers you accommodate?",
+          "type": "yes_no",
+          "hint": "Indicator 6.8.4 (Critical). Attach evidence such as the document handling procedure and storage arrangements."
+        },
+        {
+          "item": ".5",
+          "text": "Can workers enter and exit your Unit of Certification's work and accommodation premises, subject only to reasonable measures related to health, safety, security and employment terms?",
+          "type": "yes_no",
+          "hint": "Indicator 6.8.5 (Critical). Describe entry/exit rules and attach supporting evidence."
+        },
+        {
+          "item": ".6",
+          "text": "Do workers who live on-site have access to transport and/or means of communication (e.g. telephones, SIM cards, phone credits), without restriction of these being used as a disciplinary measure?",
+          "type": "yes_no",
+          "hint": "Indicator 6.8.6 (Critical). Describe the provisions and attach supporting evidence."
+        },
+        {
+          "item": ".7",
+          "text": "For overtime work, do you obtain workers' informed consent, allow breaks and rest periods as required by local/national laws including at least 24 consecutive hours of rest in every 7-day period, and obtain consent for work on rest days with no more than 14 days of continuous work?",
+          "type": "yes_no",
+          "hint": "Indicator 6.8.7 (Critical). Attach consent records and time and attendance records."
+        },
+        {
+          "item": ".8",
+          "text": "Do workers have the right to enter into and terminate their employment, with termination in accordance with their terms of employment and no penalty for termination?",
+          "type": "yes_no",
+          "hint": "Indicator 6.8.8 (Critical). Attach contract terms and evidence that no penalties are applied on termination."
+        }
+      ]
+    },
+    {
+      "ref": "6.9",
+      "title": "The Unit of Certification shall implement health and safety practices to protect workers from occupational illness, disease, and injury.",
+      "questions": [
+        {
+          "item": ".1",
+          "text": "Has your Unit of Certification established and implemented Occupational Health and Safety policies, publicly available and socialised to the workforce in a language they understand, that assure a safe and healthy workplace, prevent work-related illness and injury, provide a reporting mechanism, comply with national laws and CBAs, provide safe drinking water, and set out roles and responsibilities?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.1 (Critical). Policy provisions: A) safe workplace; B) prevention; C) reporting mechanism; D) legal/CBA compliance; E) safe drinking water at work; F) roles of UoC, H&S Committees and workers. Attach the policies."
+        },
+        {
+          "item": ".2",
+          "text": "Has your Unit of Certification established Health and Safety (H&S) Committees at its mill(s) and estate(s) with members from management, worker representatives, worker organisations and registered trade unions (where applicable), meeting quarterly in a language all members understand, with the UoC responding to issues raised?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.2 (Critical). Attach committee membership, quarterly meeting minutes and records of responses."
+        },
+        {
+          "item": ".2 A",
+          "text": "Does the H&S Committee manage workplace health and safety issues, including regular worksite safety inspections, training and continuous improvements?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.2 A (Critical). Attach inspection and training records."
+        },
+        {
+          "item": ".2 B",
+          "text": "Does the H&S Committee review the Hazard Identification, Risk Assessment and Risk Control (HIRARC) in consultation with the Health and Safety Committees?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.2 B (Critical). Attach HIRARC review records."
+        },
+        {
+          "item": ".2 C",
+          "text": "Does the H&S Committee identify the necessary controls for eliminating workplace hazards?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.2 C (Critical). Attach records of controls identified."
+        },
+        {
+          "item": ".2 D",
+          "text": "Does the H&S Committee handle the identification, safe storage, mixing and use of chemicals including pesticides, with a documented procedure for safe storage, handling, mixing, use and disposal?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.2 D (Critical). Attach the documented chemical procedure."
+        },
+        {
+          "item": ".2 E",
+          "text": "Does the H&S Committee work on continued improvement of the management system to enhance H&S performance?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.2 E (Critical). Attach evidence of improvements."
+        },
+        {
+          "item": ".2 F",
+          "text": "Does the H&S Committee address concerns raised by workers about health, safety and welfare?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.2 F (Critical). Attach records of concerns and responses."
+        },
+        {
+          "item": ".2 G",
+          "text": "Does the H&S Committee collaborate with the Women's Welfare and Empowerment Committee to address specific health and safety risks for women workers?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.2 G (Critical). Attach records of collaboration."
+        },
+        {
+          "item": ".3",
+          "text": "Has your Unit of Certification conducted a HIRARC at its mill(s) and estate(s), covering gender-specific impacts, suitable job-specific PPE and persons with disabilities, carried out by trained competent personnel and reviewed and approved by an authorised health and safety officer?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.3 (Critical). Gender-specific impacts e.g. pesticides and reproductive health, pregnant women, young workers. National Interpretations should identify requirements for competent personnel. Attach the HIRARC and trainer/approver records."
+        },
+        {
+          "item": ".4",
+          "text": "Has your Unit of Certification developed and implemented an H&S Plan (risk mitigation practices and corrective actions) in consultation with the H&S Committees for its mill(s) and estate(s), based on its HIRARC, and is it monitored and reviewed annually?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.4 (Critical). Attach the H&S Plan and annual review records."
+        },
+        {
+          "item": ".5",
+          "text": "Does your Unit of Certification provide suitable, good-condition PPE free of charge to all workers as determined by the HIRARC, train workers on its proper use and maintenance, keep PPE issuance records, provide free replacements, and provide facilities for chemical applicators to change, wash and a designated area for washing PPE?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.5 (Critical). Attach PPE issuance records, training records and photos of the sanitation and PPE washing facilities."
+        },
+        {
+          "item": ".6",
+          "text": "Does your Unit of Certification provide training on updated job-specific occupational health and safety procedures to relevant workers (e.g. operational supervisors), taking account of gender-specific needs, in a form and language they understand, with assessment of the training and records maintained?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.6 (Critical). Attach training materials, assessments and training records."
+        },
+        {
+          "item": ".7",
+          "text": "Does your Unit of Certification assign personnel trained in first aid to all operations, and do workers have access to first aid kits at all times?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.7. Attach first aid training certificates and evidence of first aid kit availability."
+        },
+        {
+          "item": ".8",
+          "text": "Has your Unit of Certification established an Emergency Response Procedure (ERP) based on its risk assessment, socialised in a language workers understand, including an Emergency Response Team trained in first aid, emergency contacts, nearest medical facilities and safety drills, and reviewed annually with results documented?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.8. ERP contents: A) trained Emergency Response Team; B) contacts of responsible personnel; C) contact details and address of nearest medical facilities; D) safety drills (e.g. fire evacuation). Attach the ERP and annual review."
+        },
+        {
+          "item": ".9",
+          "text": "Does your Unit of Certification provide annual medical surveillance, free of charge, for workers handling hazardous chemicals, and document actions to treat related health conditions?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.9 (Critical). Attach medical surveillance records and documented actions."
+        },
+        {
+          "item": ".10",
+          "text": "Does your Unit of Certification record occupational injuries and illnesses using Lost Time Incident (LTI) metrics, and develop and implement processes to investigate work-related incidents with documented investigation reports?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.10. Attach LTI records, the investigation process and sample investigation reports."
+        },
+        {
+          "item": ".11",
+          "text": "Does your Unit of Certification provide all workers with medical care and accident insurance coverage, with costs of work-related incidents covered in accordance with national law, or by the UoC where national law does not provide protection?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.11. Attach insurance documents and evidence of medical care provision."
+        },
+        {
+          "item": ".12",
+          "text": "Does your Unit of Certification ensure that only trained workers handle, use or apply chemicals in line with the manufacturers' or suppliers' instructions and precautions, and that they demonstrate up-to-date knowledge related to their assigned tasks?",
+          "type": "yes_no",
+          "hint": "Indicator 6.9.12 (Critical). Attach chemical handler training records and competency assessments."
+        }
+      ]
+    }
+  ]
+}

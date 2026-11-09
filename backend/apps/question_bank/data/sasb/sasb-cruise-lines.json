@@ -1,0 +1,203 @@
+{
+ "summary": "Covers cruise operators providing passenger transportation and leisure on deep sea and river cruises. Disclosure topics are greenhouse gas emissions, air quality, discharge management and ecological impacts, customer health and safety, labour practices, workforce health and safety, and accident management.",
+ "disclosures": [
+  {
+   "ref": "TR-CL-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's gross global Scope 1 greenhouse gas emissions?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) CO2-e · Report gross global Scope 1 emissions for the reporting period, in metric tonnes CO2-e, covering direct emissions from sources you own or control."
+    },
+    {
+     "item": ".2",
+     "text": "How does your organisation plan to manage its Scope 1 emissions over the short and long term, including any reduction targets and how you have performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your short- and long-term strategy or plan, the emissions reduction targets, and an analysis of performance against those targets."
+    },
+    {
+     "item": ".3",
+     "text": "What are your (1) total energy consumed, (2) percentage heavy fuel oil, (3) percentage onshore power supply (OPS) and (4) percentage renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy in gigajoules (GJ), then the percentages for (2) heavy fuel oil, (3) onshore power supply and (4) renewable."
+    },
+    {
+     "item": ".4",
+     "text": "What is the average Energy Efficiency Design Index (EEDI) for your new ships?",
+     "type": "number",
+     "hint": "Unit: Grammes of CO2 per ton-nautical mile · Report the average EEDI of newly built ships, in grammes of CO2 per ton-nautical mile."
+    }
+   ]
+  },
+  {
+   "ref": "TR-CL-120a",
+   "title": "Air Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your organisation's air emissions of the following pollutants: (1) NOx (excluding N2O), (2) SOx and (3) particulate matter (PM10)?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report the quantity of each pollutant separately in metric tonnes, stating how each was calculated or estimated."
+    }
+   ]
+  },
+  {
+   "ref": "TR-CL-160a",
+   "title": "Discharge Management & Ecological Impacts",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is (1) the total amount of ship waste discharged to the environment and (2) the percentage treated prior to discharge?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) total ship waste discharged in metric tonnes and (2) the percentage treated before discharge."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your fleet implements ballast water (1) exchange and (2) treatment?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report (1) the percentage of the fleet using ballast water exchange and (2) the percentage using ballast water treatment."
+    },
+    {
+     "item": ".3",
+     "text": "How long did your cruises spend in marine protected areas or areas of protected conservation status?",
+     "type": "number",
+     "hint": "Unit: Number of travel days · Report the cruise duration in marine protected areas or areas of protected conservation status, in travel days."
+    },
+    {
+     "item": ".4",
+     "text": "How many notices of violations for dumping did your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total count for the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "TR-CL-250a",
+   "title": "Customer Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many alleged crime incidents involving passengers or employees were reported?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of alleged crime incidents involving passengers or employees during the period."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your fleet inspections were failed?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of fleet inspections that were failed, out of all inspections carried out."
+    },
+    {
+     "item": ".3",
+     "text": "What are your (1) serious injuries per million passengers and (2) number of voyages with a gastrointestinal illness count exceeding 2%?",
+     "type": "text",
+     "hint": "Unit: Rate, Number · Report (1) the rate of serious injuries per million passengers and (2) the number of voyages where gastrointestinal illness exceeded 2% of passengers or crew."
+    }
+   ]
+  },
+  {
+   "ref": "TR-CL-310a",
+   "title": "Labour Practices",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is the average hourly wage for your seafarers, by region?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Report the average hourly wage by region in your presentation currency."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your seafarers work the maximum permitted hours?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of seafarers working the maximum hours allowed under applicable rules."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of your seafarers are paid for overtime?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of seafarers who are paid for overtime work."
+    },
+    {
+     "item": ".4",
+     "text": "What is the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with labour law violations?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses for the period in your presentation currency, covering fines, settlements and other legal costs from such proceedings."
+    }
+   ]
+  },
+  {
+   "ref": "TR-CL-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your seafarer lost time incident rate (LTIR)?",
+     "type": "number",
+     "hint": "Unit: Rate · Report the lost time incident rate for the period and state the exposure-hours basis used (for example per 200,000 hours)."
+    }
+   ]
+  },
+  {
+   "ref": "TR-CL-540a",
+   "title": "Accident Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many Conditions of Class or Recommendations did your organisation receive?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of Conditions of Class or Recommendations issued by classification societies."
+    },
+    {
+     "item": ".2",
+     "text": "How many port state control (1) deficiencies and (2) detentions did your organisation have?",
+     "type": "text",
+     "hint": "Unit: Number · Report (1) the number of deficiencies and (2) the number of detentions recorded in port state control inspections."
+    },
+    {
+     "item": ".3",
+     "text": "How many marine casualties did your organisation have, and what percentage were classified as very serious?",
+     "type": "text",
+     "hint": "Unit: Number · Report (1) the number of marine casualties and (2) the percentage classified as very serious under the IMO Casualty Investigation Code."
+    }
+   ]
+  },
+  {
+   "ref": "TR-CL-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What are your available lower berth kilometres (ALB-KM)?",
+     "type": "number",
+     "hint": "Unit: ALB-KM · Report available lower berth kilometres (ALB-KM) for the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "What are your average passenger cruise days (APCD)?",
+     "type": "number",
+     "hint": "Unit: APCD · Report average passenger cruise days (APCD) for the reporting period."
+    },
+    {
+     "item": ".C",
+     "text": "How many shipboard employees does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of shipboard employees."
+    },
+    {
+     "item": ".D",
+     "text": "How many cruise passengers did you carry?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of cruise passengers in the reporting period."
+    },
+    {
+     "item": ".E",
+     "text": "How many vessel port calls did your organisation make?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of vessel port calls in the reporting period."
+    }
+   ]
+  }
+ ]
+}

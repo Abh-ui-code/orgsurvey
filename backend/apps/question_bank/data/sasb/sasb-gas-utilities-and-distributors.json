@@ -1,0 +1,95 @@
+{
+ "summary": "The Gas Utilities & Distributors standard covers organisations that distribute and market natural gas to end users through local pipe networks. Its disclosure topics are energy affordability, end-use efficiency and the integrity of gas delivery infrastructure.",
+ "disclosures": [
+  {
+   "ref": "IF-GU-240a",
+   "title": "Energy Affordability",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your average retail gas rate for (1) residential, (2) commercial, (3) industrial customers and (4) transportation services only?",
+     "type": "text",
+     "hint": "Unit: rate (presentation currency per unit of gas) · Report the average retail rate for each of the four categories."
+    },
+    {
+     "item": ".3",
+     "text": "How many residential customer gas disconnections for non-payment did you make, and what percentage were reconnected within 30 days?",
+     "type": "text",
+     "hint": "Unit: number; percentage · Report (1) the number of residential disconnections for non-payment and (2) the percentage reconnected within 30 days."
+    },
+    {
+     "item": ".4",
+     "text": "How do external factors, including the economic conditions of your service territory, affect the affordability of gas for your customers?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Discuss the external factors affecting affordability and their impact on customers."
+    }
+   ]
+  },
+  {
+   "ref": "IF-GU-420a",
+   "title": "End-Use Efficiency",
+   "questions": [
+    {
+     "item": ".2",
+     "text": "How much customer gas saving, in MMBtu, resulted from your efficiency measures, by market?",
+     "type": "text",
+     "hint": "Unit: million British thermal units (MMBtu) · Report MMBtu of customer gas savings from efficiency programmes, broken down by market."
+    }
+   ]
+  },
+  {
+   "ref": "IF-GU-540a",
+   "title": "Integrity of Gas Delivery Infrastructure",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many (1) reportable pipeline incidents, (2) corrective actions received and (3) violations of pipeline safety statutes did you have?",
+     "type": "text",
+     "hint": "Unit: number · Report the count for each of the three items in the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your distribution pipeline, by length, is (1) cast or wrought iron and (2) unprotected steel?",
+     "type": "text",
+     "hint": "Unit: percentage by length · Report the percentage of distribution pipeline length for each material."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of your gas (1) transmission and (2) distribution pipelines, by length, were inspected?",
+     "type": "text",
+     "hint": "Unit: percentage by length · Report the percentage inspected separately for transmission and distribution pipelines."
+    },
+    {
+     "item": ".4",
+     "text": "What efforts do you make to manage the integrity of gas delivery infrastructure, including risks related to safety and emissions?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe integrity management efforts and how safety and emissions risks are addressed."
+    }
+   ]
+  },
+  {
+   "ref": "IF-GU-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many (1) residential, (2) commercial and (3) industrial customers do you serve?",
+     "type": "text",
+     "hint": "Unit: number · Report the number of customers in each category."
+    },
+    {
+     "item": ".B",
+     "text": "How much natural gas did you deliver to (1) residential, (2) commercial and (3) industrial customers, and (4) transfer to a third party?",
+     "type": "text",
+     "hint": "Unit: million British thermal units (MMBtu) · Report MMBtu for each of the four categories."
+    },
+    {
+     "item": ".C",
+     "text": "What is the length of your gas (1) transmission and (2) distribution pipelines, in kilometres?",
+     "type": "text",
+     "hint": "Unit: kilometres (km) · Report pipeline length separately for transmission and distribution."
+    }
+   ]
+  }
+ ]
+}

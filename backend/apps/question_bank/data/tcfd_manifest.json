@@ -1,0 +1,46 @@
+[
+ {
+  "order": 1,
+  "code": "TCFD 1",
+  "number": 1,
+  "title": "Governance",
+  "edition": "2017",
+  "series": "tcfd",
+  "slug": "tcfd-governance",
+  "pdf": "/tcfd/tcfd-implementing-the-recommendations-2017.pdf",
+  "source": "Implementing the Recommendations of the TCFD (Annex), 2017; Recommendations of the TCFD (Final Report), 2017"
+ },
+ {
+  "order": 2,
+  "code": "TCFD 2",
+  "number": 2,
+  "title": "Strategy",
+  "edition": "2017",
+  "series": "tcfd",
+  "slug": "tcfd-strategy",
+  "pdf": "/tcfd/tcfd-implementing-the-recommendations-2017.pdf",
+  "source": "Implementing the Recommendations of the TCFD (Annex), 2017; Recommendations of the TCFD (Final Report), 2017"
+ },
+ {
+  "order": 3,
+  "code": "TCFD 3",
+  "number": 3,
+  "title": "Risk Management",
+  "edition": "2017",
+  "series": "tcfd",
+  "slug": "tcfd-risk-management",
+  "pdf": "/tcfd/tcfd-implementing-the-recommendations-2017.pdf",
+  "source": "Implementing the Recommendations of the TCFD (Annex), 2017; Recommendations of the TCFD (Final Report), 2017"
+ },
+ {
+  "order": 4,
+  "code": "TCFD 4",
+  "number": 4,
+  "title": "Metrics and Targets",
+  "edition": "2017",
+  "series": "tcfd",
+  "slug": "tcfd-metrics-and-targets",
+  "pdf": "/tcfd/tcfd-implementing-the-recommendations-2017.pdf",
+  "source": "Implementing the Recommendations of the TCFD (Annex), 2017; Recommendations of the TCFD (Final Report), 2017"
+ }
+]

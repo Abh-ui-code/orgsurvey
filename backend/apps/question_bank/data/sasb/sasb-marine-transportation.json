@@ -1,0 +1,173 @@
+{
+ "summary": "Covers deep-sea, coastal and river-way freight shipping, including containerised and bulk cargo. Disclosure topics are greenhouse gas emissions, air quality, ecological impacts, workforce health and safety, business ethics, and accident and safety management.",
+ "disclosures": [
+  {
+   "ref": "TR-MT-110a",
+   "title": "Greenhouse Gas Emissions",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your organisation's gross global Scope 1 greenhouse gas emissions?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) CO2-e · Report gross global Scope 1 emissions for the reporting period, in metric tonnes CO2-e, covering direct emissions from sources you own or control."
+    },
+    {
+     "item": ".2",
+     "text": "How does your organisation plan to manage its Scope 1 emissions over the short and long term, including any reduction targets and how you have performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your short- and long-term strategy or plan, the emissions reduction targets, and an analysis of performance against those targets."
+    },
+    {
+     "item": ".3",
+     "text": "What are your (1) total energy consumed, (2) percentage heavy fuel oil and (3) percentage renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy in gigajoules (GJ), then the percentages for (2) heavy fuel oil and (3) renewable."
+    },
+    {
+     "item": ".4",
+     "text": "What is the average Energy Efficiency Design Index (EEDI) for your new ships?",
+     "type": "number",
+     "hint": "Unit: Grammes of CO2 per ton-nautical mile · Report the average EEDI of newly built ships, in grammes of CO2 per ton-nautical mile."
+    }
+   ]
+  },
+  {
+   "ref": "TR-MT-120a",
+   "title": "Air Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What were your organisation's air emissions of the following pollutants: (1) NOx (excluding N2O), (2) SOx and (3) particulate matter (PM10)?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report the quantity of each pollutant separately in metric tonnes, stating how each was calculated or estimated."
+    }
+   ]
+  },
+  {
+   "ref": "TR-MT-160a",
+   "title": "Ecological Impacts",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How long did your vessels spend shipping in marine protected areas or areas of protected conservation status?",
+     "type": "number",
+     "hint": "Unit: Number of travel days · Report the shipping duration in marine protected areas or areas of protected conservation status, in travel days."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your fleet implements ballast water (1) exchange and (2) treatment?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report (1) the percentage of the fleet using ballast water exchange and (2) the percentage using ballast water treatment."
+    },
+    {
+     "item": ".3",
+     "text": "What were the (1) number and (2) aggregate volume of spills and releases to the environment?",
+     "type": "text",
+     "hint": "Unit: Number, Cubic metres (m³) · Report (1) the number of spills and releases and (2) their aggregate volume in cubic metres."
+    }
+   ]
+  },
+  {
+   "ref": "TR-MT-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your lost time incident rate (LTIR)?",
+     "type": "number",
+     "hint": "Unit: Rate · Report the lost time incident rate for the period and state the exposure-hours basis used (for example per 200,000 hours)."
+    }
+   ]
+  },
+  {
+   "ref": "TR-MT-510a",
+   "title": "Business Ethics",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many port calls did your vessels make in countries ranked among the 20 lowest in Transparency International's Corruption Perception Index?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of calls at ports in the 20 lowest-ranked countries in the Corruption Perception Index."
+    },
+    {
+     "item": ".2",
+     "text": "What is the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with bribery or corruption?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses for the period in your presentation currency, covering fines, settlements and other legal costs from such proceedings."
+    }
+   ]
+  },
+  {
+   "ref": "TR-MT-540a",
+   "title": "Accident & Safety Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many marine casualties did your organisation have, and what percentage were classified as very serious?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the number of marine casualties and (2) the percentage classified as very serious under the IMO Casualty Investigation Code."
+    },
+    {
+     "item": ".2",
+     "text": "How many Conditions of Class or Recommendations did your organisation receive?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of Conditions of Class or Recommendations issued by classification societies."
+    },
+    {
+     "item": ".3",
+     "text": "How many port state control (1) deficiencies and (2) detentions did your organisation have?",
+     "type": "text",
+     "hint": "Unit: Number · Report (1) the number of deficiencies and (2) the number of detentions recorded in port state control inspections."
+    }
+   ]
+  },
+  {
+   "ref": "TR-MT-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many shipboard employees does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of shipboard employees."
+    },
+    {
+     "item": ".B",
+     "text": "What total distance did your vessels travel?",
+     "type": "number",
+     "hint": "Unit: Nautical miles (nm) · Report the total distance travelled by vessels in nautical miles (nm)."
+    },
+    {
+     "item": ".C",
+     "text": "How many operating days did your vessels have?",
+     "type": "number",
+     "hint": "Unit: Days · Report total operating days for the reporting period."
+    },
+    {
+     "item": ".D",
+     "text": "What is your fleet's deadweight tonnage?",
+     "type": "number",
+     "hint": "Unit: Thousand deadweight tonnes · Report deadweight tonnage in thousand deadweight tonnes."
+    },
+    {
+     "item": ".E",
+     "text": "How many vessels are in your total shipping fleet?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of vessels in your total shipping fleet."
+    },
+    {
+     "item": ".F",
+     "text": "How many vessel port calls did your organisation make?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of vessel port calls in the reporting period."
+    },
+    {
+     "item": ".G",
+     "text": "What is your twenty-foot equivalent unit (TEU) capacity?",
+     "type": "number",
+     "hint": "Unit: TEU · Report your container capacity in TEU."
+    }
+   ]
+  }
+ ]
+}

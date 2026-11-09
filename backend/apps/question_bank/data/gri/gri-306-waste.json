@@ -1,50 +1,173 @@
 {
- "summary": "GRI 306: Waste 2020 contains disclosures for reporting an organization's waste-related impacts and how it manages them. It covers waste generated in the organization's own activities and in its upstream and downstream value chain, including waste diverted from and directed to disposal.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "How does your organization manage waste and its waste-related impacts?",
-   "type": "text",
-   "hint": "Report how you manage this material topic using Disclosure 3-3 of GRI 3: Material Topics 2021."
-  },
-  {
-   "ref": "306-1",
-   "text": "What are your waste generation and significant waste-related impacts?",
-   "type": "text",
-   "hint": "a. For significant actual and potential waste-related impacts, describe: i. the inputs, activities and outputs leading to them; ii. whether they relate to own activities or upstream/downstream waste in the value chain."
-  },
-  {
-   "ref": "306-2",
-   "text": "Which waste disposal methods do you use?",
-   "type": "multi_choice",
-   "hint": "a. Actions, including circularity measures, to prevent waste and manage significant impacts. b. If waste is managed by a third party, how you determine it complies with contractual or legislative obligations. c. Processes to collect and monitor waste-related data.",
-   "options": [
-    "Reuse",
-    "Recycling",
-    "Composting",
-    "Recovery",
-    "Incineration",
-    "Landfill",
-    "On-site storage"
-   ]
-  },
-  {
-   "ref": "306-3",
-   "text": "What was the total weight of waste generated?",
-   "type": "text",
-   "hint": "a. Total weight of waste generated in metric tons, with a breakdown by waste composition. b. Contextual information necessary to understand the data and how they were compiled."
-  },
-  {
-   "ref": "306-4",
-   "text": "What was the total weight of waste diverted from disposal?",
-   "type": "text",
-   "hint": "a. Total weight diverted, in metric tons, by composition. b. Hazardous waste by recovery operation (reuse, recycling, other). c. Non-hazardous waste by recovery operation. d. Each operation split onsite and offsite. e. Context on data compilation."
-  },
-  {
-   "ref": "306-5",
-   "text": "What was the total weight of waste directed to disposal?",
-   "type": "text",
-   "hint": "a. Total weight directed to disposal, in metric tons, by composition. b. Hazardous waste by disposal operation (incineration with/without energy recovery, landfilling, other). c. Non-hazardous waste likewise. d. Each operation split onsite and offsite. e. Context on data compilation."
-  }
- ]
+  "summary": "GRI 306: Waste 2020 contains disclosures for reporting an organization's waste-related impacts and how it manages them. It covers waste generated in the organization's own activities and in its upstream and downstream value chain, including waste diverted from and directed to disposal.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to waste.",
+          "type": "text",
+          "hint": "Describe the actual and potential, negative and positive impacts on the economy, environment, and people, including impacts on human rights (GRI 3-3-a)."
+        },
+        {
+          "item": "b",
+          "text": "State whether the organization is involved with the negative impacts related to waste through its own activities or as a result of its business relationships, and describe how.",
+          "type": "text",
+          "hint": "Say whether the organization causes or contributes to the negative impacts through its activities, or whether they are linked to its operations, products or services through business relationships, and describe how (GRI 3-3-b)."
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding waste.",
+          "type": "text",
+          "hint": "Describe policies or commitments regarding the material topic (GRI 3-3-c)."
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage waste and the related impacts.",
+          "type": "text",
+          "hint": "Include: i. how negative impacts are prevented or mitigated; ii. how actual negative impacts are addressed, including actions to provide for or cooperate in remediation; iii. how actual and potential positive impacts are managed (GRI 3-3-d)."
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of its actions on waste?",
+          "type": "text",
+          "hint": "Report: i. information about the effectiveness of the actions; ii. the goals, targets and indicators used to evaluate progress; iii. lessons learned and how they have been integrated into policies and operational procedures (GRI 3-3-e)."
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken on waste and whether those actions have been effective.",
+          "type": "text",
+          "hint": "Describe how stakeholder engagement has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e) (GRI 3-3-f)."
+        }
+      ]
+    },
+    {
+      "ref": "306-1",
+      "title": "Waste generation and significant waste-related impacts",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the significant actual and potential waste-related impacts of the organization.",
+          "type": "text",
+          "hint": "Describe: i. the inputs, activities and outputs that lead or could lead to these impacts; ii. whether they relate to waste generated in own activities or upstream or downstream in the value chain."
+        }
+      ]
+    },
+    {
+      "ref": "306-2",
+      "title": "Management of significant waste-related impacts",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What actions, including circularity measures, are taken to prevent waste generation and manage significant impacts from waste generated?",
+          "type": "text",
+          "hint": "Actions in own activities and upstream and downstream in the value chain."
+        },
+        {
+          "item": "b",
+          "text": "If waste from own activities is managed by a third party, how do you determine that the third party manages it in line with contractual or legislative obligations?",
+          "type": "text",
+          "hint": "Describe the processes used to make this determination."
+        },
+        {
+          "item": "c",
+          "text": "What processes are used to collect and monitor waste-related data?",
+          "type": "text",
+          "hint": "Processes used to collect and monitor waste-related data."
+        }
+      ]
+    },
+    {
+      "ref": "306-3",
+      "title": "Waste generated",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What is the total weight of waste generated, and its composition?",
+          "type": "text",
+          "hint": "In metric tons, with a breakdown of the total by composition of the waste."
+        },
+        {
+          "item": "b",
+          "text": "What contextual information is needed to understand the data and how they were compiled?",
+          "type": "text",
+          "hint": "Contextual information necessary to understand the data and how the data has been compiled."
+        }
+      ]
+    },
+    {
+      "ref": "306-4",
+      "title": "Waste diverted from disposal",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What is the total weight of waste diverted from disposal, and its composition?",
+          "type": "text",
+          "hint": "In metric tons, with a breakdown by composition of the waste."
+        },
+        {
+          "item": "b",
+          "text": "What is the total weight of hazardous waste diverted from disposal, by recovery operation?",
+          "type": "text",
+          "hint": "In metric tons. Break down by: i. preparation for reuse; ii. recycling; iii. other recovery operations."
+        },
+        {
+          "item": "c",
+          "text": "What is the total weight of non-hazardous waste diverted from disposal, by recovery operation?",
+          "type": "text",
+          "hint": "In metric tons. Break down by: i. preparation for reuse; ii. recycling; iii. other recovery operations."
+        },
+        {
+          "item": "d",
+          "text": "For each recovery operation in 306-4-b and 306-4-c, what is the weight diverted onsite and offsite?",
+          "type": "text",
+          "hint": "For hazardous and non-hazardous waste: i. onsite; ii. offsite."
+        },
+        {
+          "item": "e",
+          "text": "What contextual information is needed to understand the data and how they were compiled?",
+          "type": "text",
+          "hint": "Contextual information necessary to understand the data and how the data has been compiled."
+        }
+      ]
+    },
+    {
+      "ref": "306-5",
+      "title": "Waste directed to disposal",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What is the total weight of waste directed to disposal, and its composition?",
+          "type": "text",
+          "hint": "In metric tons, with a breakdown by composition of the waste."
+        },
+        {
+          "item": "b",
+          "text": "What is the total weight of hazardous waste directed to disposal, by disposal operation?",
+          "type": "text",
+          "hint": "In metric tons. Break down by: i. incineration (with energy recovery); ii. incineration (without energy recovery); iii. landfilling; iv. other disposal operations."
+        },
+        {
+          "item": "c",
+          "text": "What is the total weight of non-hazardous waste directed to disposal, by disposal operation?",
+          "type": "text",
+          "hint": "In metric tons. Break down by: i. incineration (with energy recovery); ii. incineration (without energy recovery); iii. landfilling; iv. other disposal operations."
+        },
+        {
+          "item": "d",
+          "text": "For each disposal operation in 306-5-b and 306-5-c, what is the weight disposed onsite and offsite?",
+          "type": "text",
+          "hint": "For hazardous and non-hazardous waste: i. onsite; ii. offsite."
+        },
+        {
+          "item": "e",
+          "text": "What contextual information is needed to understand the data and how they were compiled?",
+          "type": "text",
+          "hint": "Contextual information necessary to understand the data and how the data has been compiled."
+        }
+      ]
+    }
+  ]
 }

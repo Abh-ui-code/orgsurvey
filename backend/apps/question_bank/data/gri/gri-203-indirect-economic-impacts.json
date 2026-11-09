@@ -1,32 +1,98 @@
 {
- "summary": "GRI 203 covers an organization's indirect economic impacts, including the impacts of its infrastructure investments and services supported. Indirect impacts are additional consequences of financial transactions and money flows, and can be monetary or non-monetary.",
- "questions": [
-  {
-   "ref": "mgmt",
-   "text": "How does the organization manage indirect economic impacts as a material topic (GRI 3-3)?",
-   "type": "text",
-   "hint": "Describe how the organization manages the topic and its related impacts, as required by Disclosure 3-3 in GRI 3: Material Topics 2021."
-  },
-  {
-   "ref": "203-1",
-   "text": "What infrastructure or services have you supported?",
-   "type": "multi_choice",
-   "hint": "a. Extent of development of significant infrastructure investments and services supported. b. Current or expected impacts on communities and local economies, positive and negative. c. Whether these are commercial, in-kind or pro bono engagements.",
-   "options": [
-    "Transport",
-    "Energy",
-    "Health",
-    "Education",
-    "Community facilities",
-    "Other",
-    "None"
-   ]
-  },
-  {
-   "ref": "203-2",
-   "text": "What are the organization's significant indirect economic impacts?",
-   "type": "text",
-   "hint": "a. Examples of significant identified indirect economic impacts, positive and negative. b. Significance of these impacts in the context of external benchmarks and stakeholder priorities, such as national and international standards, protocols and policy agendas."
-  }
- ]
+  "summary": "GRI 203 covers an organization's indirect economic impacts, including the impacts of its infrastructure investments and services supported. Indirect impacts are additional consequences of financial transactions and money flows, and can be monetary or non-monetary.",
+  "disclosures": [
+    {
+      "ref": "3-3",
+      "title": "Management of material topics",
+      "questions": [
+        {
+          "item": "a",
+          "text": "Describe the actual and potential, negative and positive impacts of the organization on the economy, environment and people, including impacts on their human rights, in relation to indirect economic impacts.",
+          "type": "text",
+          "hint": "Describe the actual and potential, negative and positive impacts on the economy, environment, and people, including impacts on human rights (GRI 3-3-a)."
+        },
+        {
+          "item": "b",
+          "text": "State whether the organization is involved with the negative impacts related to indirect economic impacts through its own activities or as a result of its business relationships, and describe how.",
+          "type": "text",
+          "hint": "Say whether the organization causes or contributes to the negative impacts through its activities, or whether they are linked to its operations, products or services through business relationships, and describe how (GRI 3-3-b)."
+        },
+        {
+          "item": "c",
+          "text": "Describe the organization's policies or commitments regarding indirect economic impacts.",
+          "type": "text",
+          "hint": "Describe policies or commitments regarding the material topic (GRI 3-3-c)."
+        },
+        {
+          "item": "d",
+          "text": "Describe the actions taken to manage indirect economic impacts and the related impacts.",
+          "type": "text",
+          "hint": "Include: i. how negative impacts are prevented or mitigated; ii. how actual negative impacts are addressed, including actions to provide for or cooperate in remediation; iii. how actual and potential positive impacts are managed (GRI 3-3-d)."
+        },
+        {
+          "item": "e",
+          "text": "How does the organization track the effectiveness of its actions on indirect economic impacts?",
+          "type": "text",
+          "hint": "Report: i. information about the effectiveness of the actions; ii. the goals, targets and indicators used to evaluate progress; iii. lessons learned and how they have been integrated into policies and operational procedures (GRI 3-3-e)."
+        },
+        {
+          "item": "f",
+          "text": "Describe how engagement with stakeholders has informed the actions taken on indirect economic impacts and whether those actions have been effective.",
+          "type": "text",
+          "hint": "Describe how stakeholder engagement has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e) (GRI 3-3-f)."
+        }
+      ]
+    },
+    {
+      "ref": "203-1",
+      "title": "Infrastructure investments and services supported",
+      "questions": [
+        {
+          "item": "a",
+          "text": "To what extent have significant infrastructure investments and services been developed and supported?",
+          "type": "multi_choice",
+          "hint": "Extent of development of significant infrastructure investments and services supported.",
+          "options": [
+            "Transport",
+            "Energy",
+            "Health",
+            "Education",
+            "Community facilities",
+            "Other",
+            "None"
+          ]
+        },
+        {
+          "item": "b",
+          "text": "What are the current or expected impacts on communities and local economies?",
+          "type": "text",
+          "hint": "Include positive and negative impacts where relevant."
+        },
+        {
+          "item": "c",
+          "text": "Are these investments and services commercial, in-kind or pro bono engagements?",
+          "type": "text",
+          "hint": "Whether the investments and services are commercial, in-kind, or pro bono engagements."
+        }
+      ]
+    },
+    {
+      "ref": "203-2",
+      "title": "Significant indirect economic impacts",
+      "questions": [
+        {
+          "item": "a",
+          "text": "What are examples of significant identified indirect economic impacts of the organization?",
+          "type": "text",
+          "hint": "Include positive and negative impacts."
+        },
+        {
+          "item": "b",
+          "text": "How significant are these indirect economic impacts in the context of external benchmarks and stakeholder priorities?",
+          "type": "text",
+          "hint": "Such as national and international standards, protocols and policy agendas."
+        }
+      ]
+    }
+  ]
 }

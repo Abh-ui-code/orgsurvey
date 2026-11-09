@@ -1,0 +1,209 @@
+{
+ "summary": "The Electric Utilities & Power Generators standard covers organisations that generate electricity, operate transmission and distribution networks and sell power. Its disclosure topics are greenhouse gas emissions and energy resource planning, air quality, water management, coal ash, energy affordability, workforce safety, end-use efficiency, nuclear safety and grid resiliency.",
+ "disclosures": [
+  {
+   "ref": "IF-EU-110a",
+   "title": "Greenhouse Gas Emissions & Energy Resource Planning",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your gross global Scope 1 emissions, and what percentage of them are covered under (2) emissions-limiting regulations and (3) emissions-reporting regulations?",
+     "type": "text",
+     "hint": "Unit: metric tonnes CO2-e; percentage · Give (1) gross global Scope 1 emissions in tonnes CO2-e, (2) the percentage covered by emissions-limiting regulations and (3) the percentage covered by emissions-reporting regulations."
+    },
+    {
+     "item": ".2",
+     "text": "What were the greenhouse gas emissions associated with your power deliveries, in metric tonnes CO2-e?",
+     "type": "number",
+     "hint": "Unit: metric tonnes CO2-e · Report total GHG emissions associated with the power you delivered, stating the method and reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "What is your long- and short-term strategy or plan to manage Scope 1 emissions, what are your emissions reduction targets, and how have you performed against them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy, the targets (scope, base year, target year), and an analysis of performance against those targets."
+    }
+   ]
+  },
+  {
+   "ref": "IF-EU-120a",
+   "title": "Air Quality",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How much of the following pollutants did you emit to air: (1) NOx (excluding N2O), (2) SOx, (3) particulate matter (PM10), (4) lead (Pb) and (5) mercury (Hg), and what percentage of each was in or near areas of dense population?",
+     "type": "text",
+     "hint": "Unit: metric tonnes; percentage · Report tonnes emitted for each of the five pollutants and, for each, the percentage emitted in or near areas of dense population."
+    }
+   ]
+  },
+  {
+   "ref": "IF-EU-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was (1) your total water withdrawn and (2) your total water consumed, and what percentage of each was in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: thousand cubic metres; percentage · Report both volumes in thousand m3 and the percentage of each in regions with High or Extremely High Baseline Water Stress."
+    },
+    {
+     "item": ".2",
+     "text": "How many incidents of non-compliance with water quality permits, standards and regulations did you have?",
+     "type": "number",
+     "hint": "Unit: number · Report the total number of incidents in the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "What are your water management risks, and what strategies and practices do you use to mitigate them?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the main water-related risks and the strategies and practices used to mitigate them."
+    }
+   ]
+  },
+  {
+   "ref": "IF-EU-150a",
+   "title": "Coal Ash Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What amount of coal combustion products (CCPs) did you generate, and what percentage was recycled?",
+     "type": "text",
+     "hint": "Unit: metric tonnes; percentage · Report (1) tonnes of CCPs generated and (2) the percentage recycled."
+    },
+    {
+     "item": ".3",
+     "text": "What are your policies and procedures for managing coal combustion products (CCPs) at active and inactive operations?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe CCP management policies and procedures, covering both active and inactive operations."
+    }
+   ]
+  },
+  {
+   "ref": "IF-EU-240a",
+   "title": "Energy Affordability",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your average retail electric rate for (1) residential, (2) commercial and (3) industrial customers?",
+     "type": "text",
+     "hint": "Unit: rate (presentation currency per kWh) · Report the average retail rate separately for residential, commercial and industrial customers."
+    },
+    {
+     "item": ".3",
+     "text": "How many residential customer electric disconnections for non-payment did you make, and what percentage of those customers were reconnected within 30 days?",
+     "type": "text",
+     "hint": "Unit: number; percentage · Report (1) the number of residential disconnections for non-payment and (2) the percentage reconnected within 30 days."
+    },
+    {
+     "item": ".4",
+     "text": "How do external factors, including the economic conditions of your service territory, affect the affordability of electricity for your customers?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Discuss the external factors affecting affordability and their impact on customers."
+    }
+   ]
+  },
+  {
+   "ref": "IF-EU-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total recordable incident rate (TRIR), (2) fatality rate and (3) near miss frequency rate (NMFR) for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: rate · Report all three rates separately for direct employees and for contract employees."
+    }
+   ]
+  },
+  {
+   "ref": "IF-EU-420a",
+   "title": "End-Use Efficiency & Demand",
+   "questions": [
+    {
+     "item": ".2",
+     "text": "What percentage of your electric load, by megawatt hours, is served by smart grid technology?",
+     "type": "number",
+     "hint": "Unit: percentage by MWh · Report smart-grid-served load as a percentage of total electric load in MWh."
+    },
+    {
+     "item": ".3",
+     "text": "How much customer electricity saving, in megawatt hours, resulted from your efficiency measures, by market?",
+     "type": "text",
+     "hint": "Unit: megawatt hours (MWh) · Report MWh of customer electricity savings from efficiency programmes, broken down by market."
+    }
+   ]
+  },
+  {
+   "ref": "IF-EU-540a",
+   "title": "Nuclear Safety & Emergency Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many nuclear power units do you operate in total, broken down by the results of the most recent independent safety review?",
+     "type": "text",
+     "hint": "Unit: number · Give the total number of units and the number of units for each safety review result."
+    },
+    {
+     "item": ".2",
+     "text": "What efforts do you make to manage nuclear safety and emergency preparedness?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe safety management and emergency preparedness efforts for nuclear operations."
+    }
+   ]
+  },
+  {
+   "ref": "IF-EU-550a",
+   "title": "Grid Resiliency",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many incidents of non-compliance with physical or cybersecurity standards or regulations did you have?",
+     "type": "number",
+     "hint": "Unit: number · Report the total number of non-compliance incidents in the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "What are your (1) System Average Interruption Duration Index (SAIDI), (2) System Average Interruption Frequency Index (SAIFI) and (3) Customer Average Interruption Duration Index (CAIDI), including major event days?",
+     "type": "text",
+     "hint": "Unit: minutes; number · Report all three indices inclusive of major event days: SAIDI and CAIDI in minutes, SAIFI as a number."
+    }
+   ]
+  },
+  {
+   "ref": "IF-EU-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many (1) residential, (2) commercial and (3) industrial customers do you serve?",
+     "type": "text",
+     "hint": "Unit: number · Report the number of customers in each of the three categories."
+    },
+    {
+     "item": ".B",
+     "text": "How much electricity did you deliver to (1) residential, (2) commercial, (3) industrial, (4) all other retail customers and (5) wholesale customers?",
+     "type": "text",
+     "hint": "Unit: megawatt hours (MWh) · Report MWh delivered to each customer category."
+    },
+    {
+     "item": ".C",
+     "text": "What is the length of your transmission and distribution lines, in kilometres?",
+     "type": "number",
+     "hint": "Unit: kilometres (km) · Report the total length of transmission and distribution lines."
+    },
+    {
+     "item": ".D",
+     "text": "What was your total electricity generated, what percentage came from each major energy source, and what percentage was in regulated markets?",
+     "type": "text",
+     "hint": "Unit: megawatt hours (MWh); percentage · Report total MWh generated, the percentage by major energy source, and the percentage in regulated markets."
+    },
+    {
+     "item": ".E",
+     "text": "What was your total wholesale electricity purchased, in megawatt hours?",
+     "type": "number",
+     "hint": "Unit: megawatt hours (MWh) · Report the total MWh of wholesale electricity purchased."
+    }
+   ]
+  }
+ ]
+}

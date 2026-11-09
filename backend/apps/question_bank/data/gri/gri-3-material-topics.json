@@ -1,23 +1,83 @@
 {
  "summary": "GRI 3: Material Topics 2021 gives step-by-step guidance on how to determine material topics, i.e. topics representing an organization's most significant impacts on the economy, environment and people. It also contains disclosures on the process of determining material topics, the list of topics, and how each is managed.",
- "questions": [
+ "disclosures": [
   {
    "ref": "3-1",
-   "text": "Describe the process you followed to determine your material topics and the stakeholders and experts whose views informed it.",
-   "type": "text",
-   "hint": "Report: a. the process followed, incl. i. how actual and potential, negative and positive impacts were identified; ii. how impacts were prioritized by significance; b. stakeholders and experts whose views informed the process."
+   "title": "Process to determine material topics",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Describe the process you followed to determine your material topics, including how you identified actual and potential, negative and positive impacts on the economy, environment and people, including impacts on their human rights, across your activities and business relationships, and how you prioritized the impacts for reporting based on their significance.",
+     "type": "text",
+     "hint": "3-1-a (i) identification of impacts; (ii) prioritization by significance."
+    },
+    {
+     "item": "b",
+     "text": "Specify the stakeholders and experts whose views have informed the process of determining your material topics.",
+     "type": "text",
+     "hint": "3-1-b."
+    }
+   ]
   },
   {
    "ref": "3-2",
-   "text": "List your material topics and report any changes compared to the previous reporting period.",
-   "type": "text",
-   "hint": "Report: a. list of material topics; b. changes to the list of material topics compared to the previous reporting period."
+   "title": "List of material topics",
+   "questions": [
+    {
+     "item": "a",
+     "text": "List your material topics.",
+     "type": "text",
+     "hint": "3-2-a."
+    },
+    {
+     "item": "b",
+     "text": "Report changes to the list of material topics compared to the previous reporting period.",
+     "type": "text",
+     "hint": "3-2-b."
+    }
+   ]
   },
   {
    "ref": "3-3",
-   "text": "Management of material topics: for each material topic, describe the impacts, your involvement, policies, actions, tracking of effectiveness and stakeholder engagement.",
-   "type": "text",
-   "hint": "Report for each material topic: a. actual and potential impacts; b. involvement with negative impacts; c. policies or commitments; d. actions to prevent, mitigate, remediate and manage impacts; e. tracking effectiveness: processes, goals, targets, results, lessons; f. stakeholder engagement."
+   "title": "Management of material topics",
+   "questions": [
+    {
+     "item": "a",
+     "text": "For each material topic, describe the actual and potential, negative and positive impacts on the economy, environment and people, including impacts on their human rights.",
+     "type": "text",
+     "hint": "3-3-a."
+    },
+    {
+     "item": "b",
+     "text": "For each material topic, report whether you are involved with the negative impacts through your activities or as a result of your business relationships, and describe the activities or business relationships.",
+     "type": "text",
+     "hint": "3-3-b."
+    },
+    {
+     "item": "c",
+     "text": "For each material topic, describe your policies or commitments regarding the material topic.",
+     "type": "text",
+     "hint": "3-3-c."
+    },
+    {
+     "item": "d",
+     "text": "For each material topic, describe actions taken to manage the topic and related impacts, including actions to prevent or mitigate potential negative impacts, actions to address actual negative impacts (including to provide for or cooperate in their remediation), and actions to manage actual and potential positive impacts.",
+     "type": "text",
+     "hint": "3-3-d (i) prevent or mitigate potential negative impacts; (ii) address actual negative impacts; (iii) manage positive impacts."
+    },
+    {
+     "item": "e",
+     "text": "For each material topic, report information about tracking the effectiveness of the actions taken: processes used, goals, targets and indicators used to evaluate progress, the effectiveness of the actions including progress toward goals and targets, and lessons learned and how these have been incorporated into operational policies and procedures.",
+     "type": "text",
+     "hint": "3-3-e (i) tracking processes; (ii) goals, targets, indicators; (iii) effectiveness and progress; (iv) lessons learned."
+    },
+    {
+     "item": "f",
+     "text": "For each material topic, describe how engagement with stakeholders has informed the actions taken (3-3-d) and how it has informed whether the actions have been effective (3-3-e).",
+     "type": "text",
+     "hint": "3-3-f."
+    }
+   ]
   }
  ]
 }

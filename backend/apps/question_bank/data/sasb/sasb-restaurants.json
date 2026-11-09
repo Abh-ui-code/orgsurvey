@@ -1,0 +1,161 @@
+{
+ "summary": "Covers restaurant chains, quick-service and casual dining operators, and franchisors. Disclosures address energy, water, food and packaging waste, food safety, nutritional content, labour practices, and supply chain management and food sourcing including animal welfare.",
+ "disclosures": [
+  {
+   "ref": "FB-RN-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the total energy consumed, (2) the percentage of that energy that is grid electricity and (3) the percentage that is renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy consumed in GJ, (2) the percentage supplied as grid electricity and (3) the percentage that is renewable. Include self-generated and purchased renewable energy where applicable."
+    }
+   ]
+  },
+  {
+   "ref": "FB-RN-140a",
+   "title": "Water Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the total water withdrawn and (2) the total water consumed, and what percentage of each is in regions with High or Extremely High Baseline Water Stress?",
+     "type": "text",
+     "hint": "Unit: Thousand cubic metres (m³), Percentage (%) · Report (1) total water withdrawn and (2) total water consumed in thousand m3, and the percentage of each located in regions with High or Extremely High Baseline Water Stress."
+    }
+   ]
+  },
+  {
+   "ref": "FB-RN-150a",
+   "title": "Food & Packaging Waste Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the total amount of waste your organisation generated, (2) the percentage that is food waste and (3) the percentage diverted?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) total waste in metric tonnes, (2) the percentage that is food waste and (3) the percentage diverted from landfill or incineration."
+    },
+    {
+     "item": ".2",
+     "text": "What are (1) the total weight of your packaging, (2) the percentage made from recycled or renewable materials and (3) the percentage that is recyclable, reusable or compostable?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) total packaging weight in metric tonnes, (2) the percentage made from recycled or renewable materials and (3) the percentage that is recyclable, reusable or compostable."
+    }
+   ]
+  },
+  {
+   "ref": "FB-RN-250a",
+   "title": "Food Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your restaurants were (1) inspected by a food safety oversight body and (2) found to have critical violations?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report (1) the percentage of restaurants inspected by a food safety oversight body and (2) the percentage receiving critical violations."
+    },
+    {
+     "item": ".2",
+     "text": "How many food product recalls did you issue, and what was the total amount of food product recalled?",
+     "type": "text",
+     "hint": "Unit: Number, Metric tonnes (t) · Report (1) the number of recalls issued and (2) the total amount of food product recalled in metric tonnes."
+    },
+    {
+     "item": ".3",
+     "text": "How many confirmed foodborne disease outbreaks were linked to your organisation, and what percentage resulted in a public health authority investigation?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the number of confirmed foodborne disease outbreaks and (2) the percentage that resulted in a public health authority investigation."
+    }
+   ]
+  },
+  {
+   "ref": "FB-RN-260a",
+   "title": "Nutritional Content",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are (1) the percentage of your meal options consistent with dietary guidelines and (2) the revenue from these options?",
+     "type": "text",
+     "hint": "Unit: Percentage (%), Presentation currency · Report (1) the percentage of meal options consistent with dietary guidelines and (2) revenue from these options in your presentation currency. State the guidelines used."
+    },
+    {
+     "item": ".2",
+     "text": "What are (1) the percentage of your children's meal options consistent with dietary guidelines for children and (2) the revenue from these options?",
+     "type": "text",
+     "hint": "Unit: Percentage (%), Presentation currency · Report (1) the percentage of children's meal options consistent with dietary guidelines for children and (2) revenue from these options in your presentation currency."
+    },
+    {
+     "item": ".3",
+     "text": "What percentage of your advertising impressions were (1) made on children and (2) made on children promoting products that meet dietary guidelines for children?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report (1) the percentage of advertising impressions made on children and (2) the percentage of those promoting products meeting dietary guidelines for children."
+    }
+   ]
+  },
+  {
+   "ref": "FB-RN-310a",
+   "title": "Labour Practices",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are the (1) voluntary and (2) involuntary turnover rates for your restaurant employees?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report the voluntary and involuntary turnover rates for restaurant employees as percentages."
+    },
+    {
+     "item": ".2",
+     "text": "By region, what are (1) the average hourly wage and (2) the percentage of your restaurant employees earning minimum wage?",
+     "type": "text",
+     "hint": "Unit: Presentation currency, Percentage (%) · Report by region (1) the average hourly wage in your presentation currency and (2) the percentage of restaurant employees earning minimum wage."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with (1) labour law violations and (2) employment discrimination?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Report monetary losses separately for (1) labour law violations and (2) employment discrimination, in your presentation currency."
+    }
+   ]
+  },
+  {
+   "ref": "FB-RN-430a",
+   "title": "Supply Chain Management & Food Sourcing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of the food you purchase (1) meets environmental and social sourcing standards and (2) is certified to third-party environmental or social standards?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) by cost · Report by cost (1) the percentage of food purchased meeting environmental and social sourcing standards and (2) the percentage certified to third-party standards."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your (1) eggs originated from a cage-free environment and (2) pork was produced without the use of gestation crates?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) by number, Percentage (%) by weight · Report (1) the percentage of eggs, by number, that were cage-free and (2) the percentage of pork, by weight, produced without gestation crates."
+    },
+    {
+     "item": ".3",
+     "text": "What is your strategy to manage environmental and social risks within the supply chain, including animal welfare?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the strategy, covering supplier standards, monitoring, engagement and animal welfare commitments."
+    }
+   ]
+  },
+  {
+   "ref": "FB-RN-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many (1) entity-owned and (2) franchise restaurants do you have?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of (1) entity-owned and (2) franchise restaurants."
+    },
+    {
+     "item": ".B",
+     "text": "How many employees work at (1) entity-owned and (2) franchise locations?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of employees at (1) entity-owned and (2) franchise locations."
+    }
+   ]
+  }
+ ]
+}

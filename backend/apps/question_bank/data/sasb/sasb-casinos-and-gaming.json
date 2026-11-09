@@ -1,0 +1,101 @@
+{
+ "summary": "The Casinos & Gaming standard covers operators of gambling facilities and platforms, including casinos, online gambling and racetracks. Its disclosure topics are energy management, responsible gaming, smoke-free casinos and internal controls on money laundering.",
+ "disclosures": [
+  {
+   "ref": "SV-CA-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) total energy consumed, (2) percentage grid electricity and (3) percentage renewable energy?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy in gigajoules, (2) the percentage supplied by grid electricity and (3) the percentage that is renewable, including self-generated and purchased renewable energy."
+    }
+   ]
+  },
+  {
+   "ref": "SV-CA-260a",
+   "title": "Responsible Gaming",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your gaming facilities implement the Responsible Gambling Standards and Criteria for Venues?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by revenue · Report a single percentage by revenue of gaming facilities that implement the Responsible Gambling Council standards and criteria for venues."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your online gaming operations implement the Responsible Gambling Council (RGC) Standards and Criteria for iGaming?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by revenue · Report a single percentage by revenue of online gaming operations that implement the RGC standards and criteria for iGaming."
+    }
+   ]
+  },
+  {
+   "ref": "SV-CA-320a",
+   "title": "Smoke-free Casinos",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your gaming floor area allows smoking?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) of gaming floor area · Report the percentage of total gaming floor area where smoking is allowed."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of gaming staff hours are worked in areas where smoking is allowed?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) of man-hours · Report the percentage of gaming staff man-hours worked in areas where smoking is allowed."
+    }
+   ]
+  },
+  {
+   "ref": "SV-CA-510a",
+   "title": "Internal Controls on Money Laundering",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What anti-money laundering policies and practices does your organisation have?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your anti-money laundering policies and practices, such as customer due diligence, transaction monitoring, staff training, suspicious activity reporting and independent testing."
+    },
+    {
+     "item": ".2",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with money laundering?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to money laundering."
+    }
+   ]
+  },
+  {
+   "ref": "SV-CA-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many gaming tables does your organisation operate?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of tables across your gaming facilities."
+    },
+    {
+     "item": ".B",
+     "text": "How many slot machines does your organisation operate?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of slots across your gaming facilities."
+    },
+    {
+     "item": ".C",
+     "text": "How many active online gaming customers does your organisation have?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of active online gaming customers, and state how you define an active customer."
+    },
+    {
+     "item": ".D",
+     "text": "What is the total area of your gaming floor?",
+     "type": "number",
+     "hint": "Unit: Square metres (m²) · Report the total gaming floor area in square metres across all facilities."
+    }
+   ]
+  }
+ ]
+}

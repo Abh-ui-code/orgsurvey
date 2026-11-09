@@ -1,0 +1,119 @@
+{
+ "summary": "The Education standard covers profit-seeking education institutions that earn revenue from student fees, from primary and secondary providers to colleges and universities. Its disclosure topics are data security, quality of education and gainful employment, and marketing and recruiting practices.",
+ "disclosures": [
+  {
+   "ref": "SV-ED-230a",
+   "title": "Data Security",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation identify and address data security risks?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your approach to identifying and addressing data security risks, including governance, controls, testing, incident response and any standards or certifications used."
+    },
+    {
+     "item": ".2",
+     "text": "What policies and practices does your organisation have for the collection, usage and retention of student information?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how student information is collected, what it is used for, how long it is retained, who can access it and how students are informed or can control it."
+    },
+    {
+     "item": ".3",
+     "text": "What were (1) the number of data breaches, (2) the percentage that were personal data breaches, and (3) the number of students affected?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the total number of data breaches, (2) the percentage that were personal data breaches and (3) the number of students affected, for the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "SV-ED-260a",
+   "title": "Quality of Education & Gainful Employment",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your graduation rate?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of students who graduate, and state the cohort and time frame used to calculate it."
+    },
+    {
+     "item": ".2",
+     "text": "What is your on-time completion rate?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of students who complete their programme within the expected time, and state how on-time is defined."
+    },
+    {
+     "item": ".3",
+     "text": "What is your job placement rate?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) · Report the percentage of graduates placed in jobs, and state the time frame and definition of placement used."
+    },
+    {
+     "item": ".6",
+     "text": "What policies does your organisation have relating to student indebtedness and programme loan defaults?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe policies on student debt and loan defaults, such as financial counselling, repayment support, default monitoring and steps taken to reduce defaults."
+    }
+   ]
+  },
+  {
+   "ref": "SV-ED-270a",
+   "title": "Marketing & Recruiting Practices",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "(1) What policies does your organisation have to ensure key performance statistics are disclosed to prospective students before any fees are collected, and (2) what were the outcomes?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe (1) your policies on disclosing key performance statistics to prospective students in advance of collecting fees, and (2) discuss the outcomes of those policies."
+    },
+    {
+     "item": ".2",
+     "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with advertising, marketing and mandatory disclosures?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to advertising, marketing and mandatory disclosures."
+    },
+    {
+     "item": ".3",
+     "text": "What were your (1) instruction and student services expenses and (2) marketing and recruiting expenses?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Report both amounts in your presentation currency: (1) instruction and student services expenses and (2) marketing and recruiting expenses."
+    },
+    {
+     "item": ".4",
+     "text": "What was your revenue from (1) government-funded student aid and (2) private student loans?",
+     "type": "text",
+     "hint": "Unit: Presentation currency · Report both revenue amounts in your presentation currency: (1) government-funded student aid and (2) private student loans."
+    }
+   ]
+  },
+  {
+   "ref": "SV-ED-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many students are enrolled at your organisation?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of students enrolled in the reporting period."
+    },
+    {
+     "item": ".B",
+     "text": "How many applications for enrolment did your organisation receive?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of applications received for enrolment in the reporting period."
+    },
+    {
+     "item": ".C",
+     "text": "What is the average number of registered credits per student, and what percentage of those credits are online?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the average registered credits per student and (2) the percentage of credits taken online."
+    },
+    {
+     "item": ".D",
+     "text": "How many (1) teaching staff and (2) all other staff does your organisation have?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of teaching staff and the number of all other staff separately."
+    }
+   ]
+  }
+ ]
+}

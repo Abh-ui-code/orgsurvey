@@ -1,0 +1,65 @@
+{
+ "summary": "The Appliance Manufacturing standard covers entities that design and manufacture household appliances and hand tools, sold worldwide mainly to consumers through retailers. Its disclosure topics are product safety and the environmental impacts of products across their lifecycle.",
+ "disclosures": [
+  {
+   "ref": "CG-AM-250a",
+   "title": "Product Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How many (1) recalls did you issue and (2) total units were recalled?",
+     "type": "text",
+     "hint": "Unit: Number · Report (1) the number of recalls issued and (2) the total number of units recalled during the reporting period."
+    },
+    {
+     "item": ".2",
+     "text": "What process do you use to identify and manage safety risks associated with the use of your products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you identify product safety risks, monitor incidents and complaints, and manage or mitigate those risks, including any recall procedures."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses because of legal proceedings associated with product safety?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total monetary losses from legal proceedings related to product safety in the presentation currency, including settlements, judgements and related fees."
+    }
+   ]
+  },
+  {
+   "ref": "CG-AM-410a",
+   "title": "Product Lifecycle Environmental Impacts",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of your eligible products, by revenue, are certified to an energy efficiency certification?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by revenue · Report the percentage of revenue from eligible products certified to an energy efficiency certification, and name the certification schemes used."
+    },
+    {
+     "item": ".2",
+     "text": "What percentage of your eligible products, by revenue, are certified to an environmental product lifecycle standard?",
+     "type": "number",
+     "hint": "Unit: Percentage (%) by revenue · Report the percentage of revenue from eligible products certified to an environmental product lifecycle standard, and name the standards used."
+    },
+    {
+     "item": ".3",
+     "text": "What efforts do you make to manage your products' end-of-life impacts?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe take-back, recycling, refurbishment and design-for-disassembly efforts, and how you address end-of-life impacts of your products."
+    }
+   ]
+  },
+  {
+   "ref": "CG-AM-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "What was your annual production, in number of units?",
+     "type": "number",
+     "hint": "Unit: Number of units · Report the total number of units produced during the reporting period."
+    }
+   ]
+  }
+ ]
+}

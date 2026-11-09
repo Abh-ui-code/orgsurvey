@@ -1,72 +1,220 @@
 {
  "summary": "GRI 101 covers the organization's impacts on biodiversity: the variety of organisms in terrestrial, marine and aquatic ecosystems. It addresses direct drivers of biodiversity loss such as land and sea use change, resource exploitation, climate change, pollution and invasive alien species, and how impacts are managed.",
- "questions": [
+ "disclosures": [
   {
    "ref": "101-1",
-   "text": "Do you have a published commitment to halt and reverse biodiversity loss?",
-   "type": "single_choice",
-   "hint": "a. Policies/commitments and how informed by the Kunming-Montreal Global Biodiversity Framework 2050 Goals and 2030 Targets; b. extent they apply to activities and business relationships; c. goals and targets, whether informed by scientific consensus, base year, and progress indicators.",
-   "options": [
-    "Yes, with targets",
-    "Yes, without targets",
-    "In development",
-    "No"
+   "title": "Policies to halt and reverse biodiversity loss",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Describe your policies or commitments to halt and reverse biodiversity loss, and how they are informed by the 2050 Goals and 2030 Targets in the Kunming-Montreal Global Biodiversity Framework. Do you have a published commitment?",
+     "type": "single_choice",
+     "hint": "101-1-a. Select the status and describe the policies and their link to the Kunming-Montreal framework in the notes.",
+     "options": [
+      "Yes, with targets",
+      "Yes, without targets",
+      "In development",
+      "No"
+     ]
+    },
+    {
+     "item": "b",
+     "text": "Report the extent to which these policies or commitments apply to your activities and to your business relationships.",
+     "type": "text",
+     "hint": "101-1-b."
+    },
+    {
+     "item": "c",
+     "text": "Report the goals and targets to halt and reverse biodiversity loss, whether they are informed by scientific consensus, the base year, and the indicators used to evaluate progress.",
+     "type": "text",
+     "hint": "101-1-c."
+    }
    ]
   },
   {
    "ref": "101-2",
-   "text": "How do you manage your biodiversity impacts, including how you apply the mitigation hierarchy?",
-   "type": "text",
-   "hint": "a. Actions to avoid, minimize, restore/rehabilitate (with goals and stakeholder engagement), offset, plus transformative and conservation actions; b. hectares under restoration and restored per significant site; c. per offset: goals, location, good-practice principles, third-party certification; d. sites with biodiversity management plans and why others lack one; e. synergies with climate actions; f. impacts on stakeholders."
+   "title": "Management of biodiversity impacts",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Report how you apply the mitigation hierarchy by describing actions taken to avoid, minimize, restore and rehabilitate, and offset negative impacts on biodiversity, and transformative and additional conservation actions taken.",
+     "type": "text",
+     "hint": "101-2-a (i) avoid; (ii) minimize impacts not avoided; (iii) restore and rehabilitate, with goals and stakeholder engagement; (iv) offset residual impacts; (v) transformative and additional conservation actions."
+    },
+    {
+     "item": "b",
+     "text": "With reference to 101-2-a-iii, report for each site with the most significant impacts on biodiversity the size in hectares of the area under restoration or rehabilitation and the size in hectares of the area restored or rehabilitated.",
+     "type": "text",
+     "hint": "101-2-b (i) hectares under restoration or rehabilitation; (ii) hectares restored or rehabilitated."
+    },
+    {
+     "item": "c",
+     "text": "With reference to 101-2-a-iv, report for each offset its goals, its geographic location, whether and how principles of good offset practices are met, and whether and how the offset is certified or verified by a third party.",
+     "type": "text",
+     "hint": "101-2-c (i) goals; (ii) geographic location; (iii) good offset practice principles; (iv) third-party certification or verification."
+    },
+    {
+     "item": "d",
+     "text": "List which of your sites with the most significant impacts on biodiversity have a biodiversity management plan and explain why the other sites do not have a management plan.",
+     "type": "text",
+     "hint": "101-2-d."
+    },
+    {
+     "item": "e",
+     "text": "Describe how you enhance synergies and reduce trade-offs between actions taken to manage your biodiversity and climate change impacts.",
+     "type": "text",
+     "hint": "101-2-e."
+    },
+    {
+     "item": "f",
+     "text": "Describe how you ensure that the actions taken to manage your impacts on biodiversity avoid and minimize negative impacts and maximize positive impacts for stakeholders.",
+     "type": "text",
+     "hint": "101-2-f."
+    }
+   ]
   },
   {
    "ref": "101-3",
-   "text": "How do you ensure compliance with access and benefit-sharing regulations, and what voluntary actions do you take?",
-   "type": "text",
-   "hint": "a. Process to ensure compliance with access and benefit-sharing regulations and measures; b. voluntary actions to advance access and benefit-sharing beyond legal obligations or where no regulations exist."
+   "title": "Access and benefit-sharing",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Describe the process to ensure compliance with access and benefit-sharing regulations and measures.",
+     "type": "text",
+     "hint": "101-3-a."
+    },
+    {
+     "item": "b",
+     "text": "Describe voluntary actions taken to advance access and benefit-sharing that are additional to legal obligations or when there are no regulations and measures.",
+     "type": "text",
+     "hint": "101-3-b."
+    }
+   ]
   },
   {
    "ref": "101-4",
-   "text": "How have you determined which of your sites and which products and services in your supply chain have the most significant actual and potential impacts on biodiversity?",
-   "type": "text",
-   "hint": "a. Explain how the sites and the supply chain products and services with the most significant actual and potential biodiversity impacts were determined, including methods and assumptions."
+   "title": "Identification of biodiversity impacts",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Explain how you have determined which of your sites and which products and services in your supply chain have the most significant actual and potential impacts on biodiversity.",
+     "type": "text",
+     "hint": "101-4-a."
+    }
+   ]
   },
   {
    "ref": "101-5",
-   "text": "Where are your sites with the most significant biodiversity impacts, and which supply chain products and services have the most significant impacts?",
-   "type": "text",
-   "hint": "a. Location and size in hectares of sites; b. per site, whether in or near ecologically sensitive areas, distance, and type (biodiversity importance, high or declining ecosystem integrity, high physical water risk, ecosystem service areas); c. activities at each site; d. supply chain products/services and the countries or jurisdictions of their activities."
+   "title": "Locations with biodiversity impacts",
+   "questions": [
+    {
+     "item": "a",
+     "text": "Report the location and size in hectares of your sites with the most significant impacts on biodiversity.",
+     "type": "text",
+     "hint": "101-5-a."
+    },
+    {
+     "item": "b",
+     "text": "For each site reported under 101-5-a, report whether it is in or near an ecologically sensitive area, the distance to these areas, and whether they are areas of biodiversity importance, high ecosystem integrity, rapid decline in ecosystem integrity, high physical water risks, or importance for ecosystem service benefits to Indigenous Peoples, local communities and other stakeholders.",
+     "type": "text",
+     "hint": "101-5-b (i) biodiversity importance; (ii) high ecosystem integrity; (iii) rapid decline in ecosystem integrity; (iv) high physical water risks; (v) ecosystem service benefits to Indigenous Peoples, local communities and other stakeholders."
+    },
+    {
+     "item": "c",
+     "text": "Report the activities that take place in each site reported under 101-5-a.",
+     "type": "text",
+     "hint": "101-5-c."
+    },
+    {
+     "item": "d",
+     "text": "Report the products and services in your supply chain with the most significant impacts on biodiversity and the countries or jurisdictions where the activities associated with these products and services take place.",
+     "type": "text",
+     "hint": "101-5-d."
+    }
+   ]
   },
   {
    "ref": "101-6",
-   "text": "Which direct drivers of biodiversity loss are associated with your sites and supply chain?",
-   "type": "multi_choice",
-   "hint": "a. Land and sea use change: hectares of natural ecosystem converted, cut-off date, ecosystem types; hectares converted between modified ecosystems; b. exploitation: wild species harvested (quantity, type, extinction risk), water withdrawal and consumption in megaliters; c. pollutants by type and quantity; d. invasive alien species introduction; e. supply chain by country; f. methodologies and assumptions.",
-   "options": [
-    "Land or sea use change",
-    "Overexploitation",
-    "Climate change",
-    "Pollution",
-    "Invasive species",
-    "Other"
+   "title": "Direct drivers of biodiversity loss",
+   "questions": [
+    {
+     "item": "a",
+     "text": "For each site reported under 101-5-a where your activities lead or could lead to land and sea use change, report the hectares of natural ecosystem converted since a cut-off or reference date, that date, and the ecosystem type before and after conversion, and the hectares of land and sea converted from one intensively used or modified ecosystem to another during the reporting period, with ecosystem types before and after.",
+     "type": "text",
+     "hint": "101-6-a (i) natural ecosystem converted since cut-off or reference date; (ii) conversion between intensively used or modified ecosystems in the period."
+    },
+    {
+     "item": "b",
+     "text": "For each site reported under 101-5-a where your activities lead or could lead to the exploitation of natural resources, report for each wild species harvested the quantity, type and extinction risk, and water withdrawal and water consumption in megaliters.",
+     "type": "text",
+     "hint": "101-6-b (i) wild species harvested: quantity, type, extinction risk; (ii) water withdrawal and consumption in megaliters."
+    },
+    {
+     "item": "c",
+     "text": "For each site reported under 101-5-a where your activities lead or could lead to pollution, report the quantity and the type of each pollutant generated.",
+     "type": "text",
+     "hint": "101-6-c."
+    },
+    {
+     "item": "d",
+     "text": "For each site reported under 101-5-a where your activities lead or could lead to the introduction of invasive alien species, describe how invasive alien species are or may be introduced.",
+     "type": "text",
+     "hint": "101-6-d."
+    },
+    {
+     "item": "e",
+     "text": "For each product and service in your supply chain reported under 101-5-d, report the information required under 101-6-a, 101-6-b, 101-6-c and 101-6-d, with a breakdown by country or jurisdiction.",
+     "type": "text",
+     "hint": "101-6-e."
+    },
+    {
+     "item": "f",
+     "text": "Report contextual information necessary to understand how the data has been compiled, including standards, methodologies and assumptions used.",
+     "type": "text",
+     "hint": "101-6-f."
+    }
    ]
   },
   {
    "ref": "101-7",
-   "text": "How has the state of biodiversity changed at your sites with the most significant impacts?",
-   "type": "text",
-   "hint": "a. Per site, affected ecosystems: type and size in hectares for the base year, and condition for the base year and current reporting period; b. contextual information on standards, methodologies and assumptions."
+   "title": "Changes to the state of biodiversity",
+   "questions": [
+    {
+     "item": "a",
+     "text": "For each site reported under 101-5-a, report for affected or potentially affected ecosystems the ecosystem type for the base year, the ecosystem size in hectares for the base year, and the ecosystem condition for the base year and the current reporting period.",
+     "type": "text",
+     "hint": "101-7-a (i) ecosystem type, base year; (ii) size in hectares, base year; (iii) condition, base year and current period."
+    },
+    {
+     "item": "b",
+     "text": "Report contextual information necessary to understand how the data has been compiled, including standards, methodologies and assumptions used.",
+     "type": "text",
+     "hint": "101-7-b."
+    }
+   ]
   },
   {
    "ref": "101-8",
-   "text": "Which types of ecosystem services are affected by your activities?",
-   "type": "multi_choice",
-   "hint": "a. Per site, list the ecosystem services and beneficiaries affected or potentially affected; b. explain how the ecosystem services and beneficiaries are or could be affected.",
-   "options": [
-    "Provisioning (food, water, materials)",
-    "Regulating (climate, flood, disease)",
-    "Cultural",
-    "Supporting (soil, nutrients)"
+   "title": "Ecosystem services",
+   "questions": [
+    {
+     "item": "a",
+     "text": "For each site reported under 101-5-a, list the ecosystem services and beneficiaries affected or potentially affected by your activities. Which types of ecosystem services are affected?",
+     "type": "multi_choice",
+     "hint": "101-8-a. Select the types, and list the specific services and beneficiaries per site in the notes.",
+     "options": [
+      "Provisioning (food, water, materials)",
+      "Regulating (climate, flood, disease)",
+      "Cultural",
+      "Supporting (soil, nutrients)"
+     ]
+    },
+    {
+     "item": "b",
+     "text": "Explain how the ecosystem services and beneficiaries are or could be affected by your activities.",
+     "type": "text",
+     "hint": "101-8-b."
+    }
    ]
   }
  ]

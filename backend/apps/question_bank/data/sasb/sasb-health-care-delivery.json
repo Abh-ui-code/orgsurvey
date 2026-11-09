@@ -1,0 +1,203 @@
+{
+ "summary": "This standard covers organisations that own and manage hospitals, clinics and other health care facilities providing inpatient, outpatient, surgical, mental health, rehabilitation and laboratory services. Its disclosure topics include energy and waste, patient privacy, access for low-income patients, quality of care, controlled substances, pricing transparency, workforce safety and retention, climate impacts and fraud.",
+ "disclosures": [
+  {
+   "ref": "HC-DY-130a",
+   "title": "Energy Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was your total energy consumed, and what percentage was (1) grid electricity and (2) renewable?",
+     "type": "text",
+     "hint": "Unit: Gigajoules (GJ), Percentage (%) · Report (1) total energy consumed in gigajoules, (2) the percentage from grid electricity and (3) the percentage from renewable sources."
+    }
+   ]
+  },
+  {
+   "ref": "HC-DY-150a",
+   "title": "Waste Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of medical waste, and what percentage was (a) incinerated, (b) recycled or treated and (c) landfilled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t) · Report total medical waste in metric tonnes and the percentage handled by each of the three disposal methods."
+    },
+    {
+     "item": ".2",
+     "text": "What was the total amount of (1) hazardous and (2) non-hazardous pharmaceutical waste, and what percentage was (a) incinerated, (b) recycled or treated and (c) landfilled?",
+     "type": "text",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report tonnes for each waste class and, for each, the percentage incinerated, recycled or treated, and landfilled."
+    }
+   ]
+  },
+  {
+   "ref": "HC-DY-230a",
+   "title": "Patient Privacy & Electronic Health Records",
+   "questions": [
+    {
+     "item": ".2",
+     "text": "What policies and practices does your organisation have to secure customers' personal health data records and other personal data?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you identify data security vulnerabilities and risks, the controls in place, and any standards or certifications followed."
+    },
+    {
+     "item": ".3",
+     "text": "How many data breaches did you have, what percentage involved (a) personal data only and (b) personal health data, and how many customers were affected in each category?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the number of breaches, (2) the percentage involving personal data only and personal health data, and (3) the number of customers affected in each category."
+    },
+    {
+     "item": ".4",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with data security and privacy?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+    }
+   ]
+  },
+  {
+   "ref": "HC-DY-240a",
+   "title": "Access for Low-Income Patients",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your strategy to manage the mix of patient insurance status?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how you manage the share of insured, uninsured and publicly insured patients and how low-income patient access to care is maintained."
+    }
+   ]
+  },
+  {
+   "ref": "HC-DY-250a",
+   "title": "Quality of Care & Patient Satisfaction",
+   "questions": [
+    {
+     "item": ".2",
+     "text": "How many serious reportable events occurred?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of serious reportable events (never events) in the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "What are your hospital-acquired condition rates per hospital?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report the percentage rate of hospital-acquired conditions for each hospital and state the conditions and definitions used."
+    },
+    {
+     "item": ".6",
+     "text": "How many (1) unplanned and (2) total readmissions occurred per hospital?",
+     "type": "text",
+     "hint": "Unit: Number · Report both counts for each hospital and state the readmission window used."
+    }
+   ]
+  },
+  {
+   "ref": "HC-DY-260a",
+   "title": "Management of Controlled Substances",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What policies and practices do you have to manage the number of prescriptions issued for controlled substances?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe prescribing guidelines, monitoring, prescriber training and any controls on controlled-substance prescriptions."
+    }
+   ]
+  },
+  {
+   "ref": "HC-DY-270a",
+   "title": "Pricing & Billing Transparency",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What policies or initiatives ensure that patients are adequately informed about price before undergoing a procedure?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how price estimates are given to patients, when, and in what form."
+    },
+    {
+     "item": ".2",
+     "text": "How is pricing information for your services made publicly available?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the channels used, such as websites, price lists or tools, and the services covered."
+    },
+    {
+     "item": ".3",
+     "text": "For how many of your 25 most common services is pricing information publicly available, and what percentage of total services performed (by volume) do these represent?",
+     "type": "text",
+     "hint": "Unit: Number, Percentage (%) · Report (1) the number of the 25 most common services with public prices and (2) the percentage of total services by volume that these represent."
+    }
+   ]
+  },
+  {
+   "ref": "HC-DY-320a",
+   "title": "Workforce Health & Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What is your total recordable incident rate (TRIR) for (a) direct employees and (b) contract employees?",
+     "type": "text",
+     "hint": "Unit: Rate · Report TRIR separately for direct employees and contract employees, and state the hours-worked basis used for the rate."
+    }
+   ]
+  },
+  {
+   "ref": "HC-DY-330a",
+   "title": "Employee Recruitment, Development & Retention",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What are your (1) voluntary and (2) involuntary turnover rates for (a) physicians, (b) non-physician health care practitioners and (c) all other employees?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report percentage turnover rates for each of the three employee groups, separately for voluntary and involuntary turnover."
+    },
+    {
+     "item": ".2",
+     "text": "What efforts do you make to recruit and retain health care practitioners?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe recruitment and retention initiatives such as training, career development, compensation and working conditions."
+    }
+   ]
+  },
+  {
+   "ref": "HC-DY-450a",
+   "title": "Climate Change Impacts on Human Health & Infrastructure",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What policies and practices do you have to address (1) physical risks from more frequent and intense extreme weather events, (2) changes in morbidity and mortality of illnesses associated with climate change and (3) emergency preparedness and response?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe your approach to each of the three areas, including infrastructure resilience, patient demand planning and emergency plans."
+    }
+   ]
+  },
+  {
+   "ref": "HC-DY-510a",
+   "title": "Fraud & Unnecessary Procedures",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with medical fraud?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+    }
+   ]
+  },
+  {
+   "ref": "HC-DY-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many (1) facilities and (2) beds do you have, by type?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of facilities and the number of beds, broken down by facility type (for example hospitals, clinics, long-term care)."
+    },
+    {
+     "item": ".B",
+     "text": "How many (1) inpatient admissions and (2) outpatient visits did you have?",
+     "type": "text",
+     "hint": "Unit: Number · Report both totals for the reporting period."
+    }
+   ]
+  }
+ ]
+}

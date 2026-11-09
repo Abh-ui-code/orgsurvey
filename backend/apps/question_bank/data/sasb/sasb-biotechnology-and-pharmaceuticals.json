@@ -1,0 +1,209 @@
+{
+ "summary": "This standard covers companies that develop, manufacture and market brand-name and generic medicines. Its disclosure topics include clinical trial safety, access to medicines, pricing, drug safety, counterfeit drugs, ethical marketing, talent retention, supply chain management and business ethics.",
+ "disclosures": [
+  {
+   "ref": "HC-BP-210a",
+   "title": "Safety of Clinical Trial Participants",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "How does your organisation ensure quality and patient safety during clinical trials, by region?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe, region by region, the management processes, oversight and controls used to protect clinical trial participants and maintain trial quality."
+    },
+    {
+     "item": ".2",
+     "text": "How many inspections related to clinical trial management and pharmacovigilance resulted in (1) voluntary remediation by your organisation or (2) regulatory or administrative actions against it?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of inspections for each of (1) and (2) separately, for the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with clinical trials in developing countries?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+    }
+   ]
+  },
+  {
+   "ref": "HC-BP-240a",
+   "title": "Access to Medicines",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What actions and initiatives does your organisation have to promote access to health care products for priority diseases and in priority countries as defined by the Access to Medicine Index?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the actions and initiatives, the priority diseases and countries they target, and any outcomes achieved."
+    },
+    {
+     "item": ".2",
+     "text": "Which of your products are on the WHO List of Prequalified Medicinal Products under its Prequalification of Medicines Programme (PQP)?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · List the products included on the WHO prequalification list; state if none apply."
+    }
+   ]
+  },
+  {
+   "ref": "HC-BP-240b",
+   "title": "Affordability & Pricing",
+   "questions": [
+    {
+     "item": ".2",
+     "text": "What was the percentage change in (1) the weighted average list price and (2) the weighted average net price across your product portfolio compared with the previous reporting period?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report both percentage changes separately, (1) list price and (2) net price, for the whole portfolio versus the previous period."
+    },
+    {
+     "item": ".3",
+     "text": "What was the percentage change in (1) the list price and (2) the net price of the product with the largest price increase compared with the previous reporting period?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Identify the product and report both percentage changes, (1) list price and (2) net price, versus the previous period."
+    }
+   ]
+  },
+  {
+   "ref": "HC-BP-250a",
+   "title": "Drug Safety",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "Which of your products are listed in public medical product safety or adverse event alert databases?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Identify the products listed, the database concerned, and the actions taken in response; state if none."
+    },
+    {
+     "item": ".2",
+     "text": "How many fatalities were associated with your products?",
+     "type": "number",
+     "hint": "Unit: Number · Report the total number of fatalities associated with your products in the reporting period."
+    },
+    {
+     "item": ".3",
+     "text": "How many product recalls did you issue, and how many units were recalled in total?",
+     "type": "text",
+     "hint": "Unit: Number · Report (1) the number of recalls issued and (2) the total units recalled during the reporting period."
+    },
+    {
+     "item": ".4",
+     "text": "What total amount of product, in metric tonnes, did you accept for take-back, reuse or disposal?",
+     "type": "number",
+     "hint": "Unit: Metric tonnes (t) · Report the total weight of product accepted for take-back, reuse or disposal during the reporting period."
+    },
+    {
+     "item": ".5",
+     "text": "How many enforcement actions were taken against your organisation for violations of good manufacturing practices (GMP) or equivalent standards, by type?",
+     "type": "text",
+     "hint": "Unit: Number · Report the total number of enforcement actions and break it down by type (for example warning letters, fines, product holds, suspensions)."
+    }
+   ]
+  },
+  {
+   "ref": "HC-BP-260a",
+   "title": "Counterfeit Drugs",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What methods and technologies do you use to maintain traceability of products throughout the supply chain and prevent counterfeiting?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the traceability systems, serialisation or authentication technologies, and partner controls used along the supply chain."
+    },
+    {
+     "item": ".2",
+     "text": "What is your process for alerting customers and business partners to potential or known risks associated with counterfeit products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe how risks are identified, who is notified, through which channels and how quickly."
+    },
+    {
+     "item": ".3",
+     "text": "How many actions did you take that led to raids, seizures, arrests or the filing of criminal charges related to counterfeit products?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of such actions in the reporting period."
+    }
+   ]
+  },
+  {
+   "ref": "HC-BP-270a",
+   "title": "Ethical Marketing",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with false marketing claims?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+    },
+    {
+     "item": ".2",
+     "text": "What code of ethics governs the promotion of off-label use of your products?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the code of ethics or policies, what they prohibit or permit, and how compliance is monitored."
+    }
+   ]
+  },
+  {
+   "ref": "HC-BP-330a",
+   "title": "Employee Recruitment, Development & Retention",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What efforts do you make to recruit and retain scientists and research and development staff?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe recruitment and retention initiatives, such as training, career paths, compensation and working conditions, aimed at scientific and R&D staff."
+    },
+    {
+     "item": ".2",
+     "text": "What are your (1) voluntary and (2) involuntary employee turnover rates for (a) executives/senior managers, (b) mid-level managers, (c) professionals and (d) all others?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report percentage turnover rates for each of the four employee categories, separately for voluntary and involuntary turnover."
+    }
+   ]
+  },
+  {
+   "ref": "HC-BP-430a",
+   "title": "Supply Chain Management",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What percentage of (1) your own facilities and (2) your Tier I suppliers' facilities participate in the Rx-360 International Pharmaceutical Supply Chain Consortium audit programme or an equivalent third-party audit programme?",
+     "type": "text",
+     "hint": "Unit: Percentage (%) · Report both percentages separately and name the audit programme used if it is not Rx-360."
+    }
+   ]
+  },
+  {
+   "ref": "HC-BP-510a",
+   "title": "Business Ethics",
+   "questions": [
+    {
+     "item": ".1",
+     "text": "What was the total amount of monetary losses from legal proceedings associated with corruption and bribery?",
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+    },
+    {
+     "item": ".2",
+     "text": "What code of ethics governs your interactions with health care professionals?",
+     "type": "text",
+     "hint": "Unit: discussion, no unit · Describe the code of ethics or policies covering interactions such as gifts, payments, sponsorship and speaker fees, and how compliance is monitored."
+    }
+   ]
+  },
+  {
+   "ref": "HC-BP-000",
+   "title": "Activity metrics",
+   "questions": [
+    {
+     "item": ".A",
+     "text": "How many patients were treated with your products?",
+     "type": "number",
+     "hint": "Unit: Number · Report the number of patients treated in the reporting period and state how the figure was estimated."
+    },
+    {
+     "item": ".B",
+     "text": "How many drugs do you have (1) in your portfolio and (2) in research and development (Phases 1-3)?",
+     "type": "text",
+     "hint": "Unit: Number · Report the number of drugs in the commercial portfolio and the number in R&D, Phases 1 to 3."
+    }
+   ]
+  }
+ ]
+}
