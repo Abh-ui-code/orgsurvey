@@ -21,7 +21,8 @@
      "item": ".3",
      "text": "What was the total amount of monetary losses from legal proceedings associated with data security and privacy?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -33,7 +34,8 @@
      "item": ".1",
      "text": "What percentage of total health care insurance premiums is spent directly on medical claims and efforts to improve the quality of care?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of premiums spent on medical claims and quality-improvement efforts (medical loss ratio basis) and state the period."
+     "hint": "Unit: Percentage (%) · Report the percentage of premiums spent on medical claims and quality-improvement efforts (medical loss ratio basis) and state the period.",
+     "unit": "%"
     },
     {
      "item": ".4",
@@ -63,7 +65,8 @@
      "item": ".4",
      "text": "What is your plan enrolee grievance rate?",
      "type": "number",
-     "hint": "Unit: Rate · Report grievances per number of enrolees (state the denominator and period used)."
+     "hint": "Unit: Rate · Report grievances per number of enrolees (state the denominator and period used).",
+     "unit": ""
     },
     {
      "item": ".5",

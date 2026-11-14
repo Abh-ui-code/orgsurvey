@@ -51,7 +51,8 @@
           "item": "a",
           "text": "What was the total number of incidents of discrimination during the reporting period?",
           "hint": "Include discrimination on grounds of race, color, sex, religion, political opinion, national extraction or social origin, and other relevant forms.",
-          "type": "text"
+          "type": "number",
+          "unit": "incidents"
         },
         {
           "item": "b",

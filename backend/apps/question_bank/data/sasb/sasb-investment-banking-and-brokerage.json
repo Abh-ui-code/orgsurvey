@@ -75,7 +75,8 @@
      "item": ".3",
      "text": "What was the total amount of monetary losses as a result of legal proceedings associated with professional integrity, including duty of care?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period."
+     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period.",
+     "unit": "presentation currency"
     },
     {
      "item": ".4",
@@ -111,7 +112,8 @@
      "item": ".1",
      "text": "What percentage of total remuneration is variable for Material Risk Takers (MRTs)?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report a percentage (0 to 100) of total remuneration that is variable for MRTs."
+     "hint": "Unit: Percentage (%) · Report a percentage (0 to 100) of total remuneration that is variable for MRTs.",
+     "unit": "%"
     },
     {
      "item": ".2",

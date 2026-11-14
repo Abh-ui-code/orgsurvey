@@ -26,8 +26,35 @@
     {
      "item": ".1",
      "text": "What are your organisation's air emissions of the following pollutants: (1) NOx (excluding N2O), (2) SOx, (3) particulate matter (PM10), (4) H2S and (5) volatile organic compounds (VOCs)?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes (t) · Report each pollutant separately in metric tonnes, covering all operations and noting estimation or measurement methods; state any pollutant that is not applicable."
+     "type": "table",
+     "hint": "Unit: Metric tonnes (t) · Report each pollutant separately in metric tonnes, covering all operations and noting estimation or measurement methods; state any pollutant that is not applicable.",
+     "parts": [
+      {
+       "label": "NOx (excluding N2O)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "SOx",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Particulate matter (PM10)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "H2S",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Volatile organic compounds (VOCs)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      }
+     ]
     },
     {
      "item": ".2",
@@ -51,7 +78,8 @@
      "item": ".2",
      "text": "How many incidents of non-compliance with water quality permits, standards and regulations did your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of incidents of non-compliance with water quality permits, standards and regulations in the reporting period."
+     "hint": "Unit: Number · Report the total number of incidents of non-compliance with water quality permits, standards and regulations in the reporting period.",
+     "unit": ""
     }
    ]
   },
@@ -104,8 +132,20 @@
     {
      "item": ".3",
      "text": "What volumes of renewable fuels for fuel blending did you (1) produce (net) and (2) purchase (net)?",
-     "type": "text",
-     "hint": "Unit: Barrels of oil equivalent (BOE) · Report (1) the net amount produced and (2) the net amount purchased, in barrels of oil equivalent (BOE)."
+     "type": "table",
+     "hint": "Unit: Barrels of oil equivalent (BOE) · Report (1) the net amount produced and (2) the net amount purchased, in barrels of oil equivalent (BOE).",
+     "parts": [
+      {
+       "label": "Produce (net)",
+       "kind": "number",
+       "unit": "barrels of oil equivalent (BOE)"
+      },
+      {
+       "label": "Purchase (net)",
+       "kind": "number",
+       "unit": "barrels of oil equivalent (BOE)"
+      }
+     ]
     }
    ]
   },
@@ -140,14 +180,16 @@
     {
      "item": ".1",
      "text": "What are your Process Safety Event (PSE) rates for Loss of Primary Containment (LOPC) of greater consequence (Tier 1) and lesser consequence (Tier 2)?",
-     "type": "text",
-     "hint": "Unit: Rate · Report the PSE rate(s) for each tier named per 200,000 hours worked (or the basis you use), covering employees and contractors."
+     "type": "number",
+     "hint": "Unit: Rate · Report the PSE rate(s) for each tier named per 200,000 hours worked (or the basis you use), covering employees and contractors.",
+     "unit": ""
     },
     {
      "item": ".2",
      "text": "What is your Challenges to Safety Systems indicator rate (Tier 3)?",
-     "type": "text",
-     "hint": "Unit: Rate · Report the Tier 3 process safety indicator rate (challenges to safety systems) per 200,000 hours worked, or the basis you use, and the definition applied."
+     "type": "number",
+     "hint": "Unit: Rate · Report the Tier 3 process safety indicator rate (challenges to safety systems) per 200,000 hours worked, or the basis you use, and the definition applied.",
+     "unit": ""
     },
     {
      "item": ".3",
@@ -165,13 +207,15 @@
      "item": ".A",
      "text": "What was your organisation's refining throughput of crude oil and other feedstocks?",
      "type": "number",
-     "hint": "Unit: Barrels of oil equivalent (BOE) · Report refining throughput in barrels of oil equivalent (BOE) for the reporting period."
+     "hint": "Unit: Barrels of oil equivalent (BOE) · Report refining throughput in barrels of oil equivalent (BOE) for the reporting period.",
+     "unit": "barrels of oil equivalent (BOE)"
     },
     {
      "item": ".B",
      "text": "What is your organisation's refining operating capacity?",
      "type": "number",
-     "hint": "Unit: Million barrels per calendar day (MBPD) · Report refining operating capacity in million barrels per calendar day (MBPD)."
+     "hint": "Unit: Million barrels per calendar day (MBPD) · Report refining operating capacity in million barrels per calendar day (MBPD).",
+     "unit": "million barrels per calendar day (MBPD)"
     }
    ]
   }

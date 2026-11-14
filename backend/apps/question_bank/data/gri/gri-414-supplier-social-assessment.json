@@ -51,7 +51,8 @@
           "item": "a",
           "text": "What percentage of new suppliers were screened using social criteria?",
           "hint": "Enter the percentage of new suppliers screened.",
-          "type": "number"
+          "type": "number",
+          "unit": "%"
         }
       ]
     },
@@ -63,13 +64,15 @@
           "item": "a",
           "text": "How many suppliers were assessed for social impacts?",
           "hint": "Number of suppliers assessed.",
-          "type": "text"
+          "type": "number",
+          "unit": "suppliers"
         },
         {
           "item": "b",
           "text": "How many suppliers were identified as having significant actual and potential negative social impacts?",
           "hint": "Number of suppliers identified.",
-          "type": "text"
+          "type": "number",
+          "unit": "suppliers"
         },
         {
           "item": "c",
@@ -81,13 +84,26 @@
           "item": "d",
           "text": "What percentage of suppliers identified as having significant actual and potential negative social impacts had improvements agreed upon as a result of the assessment?",
           "hint": "Percentage of identified suppliers.",
-          "type": "text"
+          "type": "number",
+          "unit": "%"
         },
         {
           "item": "e",
           "text": "What percentage of suppliers identified as having significant actual and potential negative social impacts had relationships terminated as a result of the assessment, and why?",
           "hint": "Percentage of identified suppliers, and the reasons for termination.",
-          "type": "text"
+          "type": "table",
+          "parts": [
+            {
+              "label": "Suppliers whose relationships were terminated",
+              "kind": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Why",
+              "kind": "text",
+              "unit": ""
+            }
+          ]
         }
       ]
     }

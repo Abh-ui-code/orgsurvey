@@ -15,13 +15,15 @@
      "item": "1.2",
      "text": "What were your Scope 1 (direct) GHG emissions, in metric tonnes of carbon dioxide equivalent (tCO2e)?",
      "type": "number",
-     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. Direct emissions from sources you own or control (e.g. fuel burnt in boilers, furnaces, company vehicles). Report in tCO2e per the GHG Protocol."
+     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. Direct emissions from sources you own or control (e.g. fuel burnt in boilers, furnaces, company vehicles). Report in tCO2e per the GHG Protocol.",
+     "unit": "metric tonnes CO₂-e"
     },
     {
      "item": "1.3",
      "text": "What were your Scope 2 (purchased energy) GHG emissions, in tCO2e?",
      "type": "number",
-     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. Indirect emissions from purchased electricity, steam, heating and cooling. Report in tCO2e per the GHG Protocol. State if location-based or market-based in the methodology question."
+     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. Indirect emissions from purchased electricity, steam, heating and cooling. Report in tCO2e per the GHG Protocol. State if location-based or market-based in the methodology question.",
+     "unit": "metric tonnes CO₂-e"
     },
     {
      "item": "1.4",
@@ -46,13 +48,15 @@
      "item": "1.6",
      "text": "What were your material upstream (Scope 3) GHG emissions, in tCO2e, where appropriate?",
      "type": "number",
-     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. Estimate and report where appropriate: emissions from your supply chain, e.g. purchased goods and services, upstream transport, business travel, employee commuting. Report in tCO2e."
+     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. Estimate and report where appropriate: emissions from your supply chain, e.g. purchased goods and services, upstream transport, business travel, employee commuting. Report in tCO2e.",
+     "unit": "metric tonnes CO₂-e"
     },
     {
      "item": "1.7",
      "text": "What were your material downstream (Scope 3) GHG emissions, in tCO2e, where appropriate?",
      "type": "number",
-     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. Estimate and report where appropriate: emissions from e.g. use of sold products, downstream transport, end-of-life treatment. Report in tCO2e."
+     "hint": "Climate change · Source: Adapted from GRI 305:1-3, GHG Protocol. Estimate and report where appropriate: emissions from e.g. use of sold products, downstream transport, end-of-life treatment. Report in tCO2e.",
+     "unit": "metric tonnes CO₂-e"
     },
     {
      "item": "1.8",
@@ -135,25 +139,29 @@
      "item": "3.1",
      "text": "How many sites that you own, lease or manage are in or adjacent to protected areas?",
      "type": "number",
-     "hint": "Nature loss · Source: GRI (304-1). Count the sites owned, leased or managed in or adjacent to protected areas."
+     "hint": "Nature loss · Source: GRI (304-1). Count the sites owned, leased or managed in or adjacent to protected areas.",
+     "unit": ""
     },
     {
      "item": "3.2",
      "text": "What is the total area (in hectares) of the sites you own, lease or manage in or adjacent to protected areas?",
      "type": "number",
-     "hint": "Nature loss · Source: GRI (304-1). Report in hectares."
+     "hint": "Nature loss · Source: GRI (304-1). Report in hectares.",
+     "unit": "hectares (ha)"
     },
     {
      "item": "3.3",
      "text": "How many sites that you own, lease or manage are in or adjacent to key biodiversity areas (KBA)?",
      "type": "number",
-     "hint": "Nature loss · Source: GRI (304-1). Count the sites owned, leased or managed in or adjacent to key biodiversity areas."
+     "hint": "Nature loss · Source: GRI (304-1). Count the sites owned, leased or managed in or adjacent to key biodiversity areas.",
+     "unit": ""
     },
     {
      "item": "3.4",
      "text": "What is the total area (in hectares) of the sites you own, lease or manage in or adjacent to key biodiversity areas (KBA)?",
      "type": "number",
-     "hint": "Nature loss · Source: GRI (304-1). Report in hectares."
+     "hint": "Nature loss · Source: GRI (304-1). Report in hectares.",
+     "unit": "hectares (ha)"
     },
     {
      "item": "3.5",
@@ -171,43 +179,50 @@
      "item": "4.1",
      "text": "For your operations where it is material, how many megalitres of water did you withdraw in total?",
      "type": "number",
-     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Report in megalitres (ML)."
+     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Report in megalitres (ML).",
+     "unit": "megalitres (ML)"
     },
     {
      "item": "4.2",
      "text": "For your operations where it is material, how many megalitres of water did you consume in total?",
      "type": "number",
-     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Report in megalitres (ML). Consumption is water withdrawn that is not returned to the source."
+     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Report in megalitres (ML). Consumption is water withdrawn that is not returned to the source.",
+     "unit": "megalitres (ML)"
     },
     {
      "item": "4.3",
      "text": "What percentage of your water withdrawal is in regions with high or extremely high baseline water stress?",
      "type": "number",
-     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Use the WRI Aqueduct water risk atlas tool to classify regions. Report a percentage."
+     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Use the WRI Aqueduct water risk atlas tool to classify regions. Report a percentage.",
+     "unit": "%"
     },
     {
      "item": "4.4",
      "text": "What percentage of your water consumption is in regions with high or extremely high baseline water stress?",
      "type": "number",
-     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Use the WRI Aqueduct water risk atlas tool to classify regions. Report a percentage."
+     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Use the WRI Aqueduct water risk atlas tool to classify regions. Report a percentage.",
+     "unit": "%"
     },
     {
      "item": "4.5",
      "text": "Where appropriate, how many megalitres of water are withdrawn across your full value chain (upstream and downstream)?",
      "type": "number",
-     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Estimate and report where appropriate, in megalitres."
+     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Estimate and report where appropriate, in megalitres.",
+     "unit": "megalitres (ML)"
     },
     {
      "item": "4.6",
      "text": "Where appropriate, how many megalitres of water are consumed across your full value chain (upstream and downstream)?",
      "type": "number",
-     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Estimate and report where appropriate, in megalitres."
+     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Estimate and report where appropriate, in megalitres.",
+     "unit": "megalitres (ML)"
     },
     {
      "item": "4.7",
      "text": "Where appropriate, what percentage of your value-chain water withdrawal and consumption is in regions with high or extremely high baseline water stress?",
      "type": "number",
-     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Estimate using WRI Aqueduct. If withdrawal and consumption differ, give both percentages in the notes."
+     "hint": "Fresh water availability · Source: SASB (CG-HP-140a.1.), WRI Aqueduct water risk atlas tool. Estimate using WRI Aqueduct. If withdrawal and consumption differ, give both percentages in the notes.",
+     "unit": "%"
     }
    ]
   },
@@ -225,7 +240,8 @@
      "item": "1.2",
      "text": "By what year before 2050 do you aim to achieve net-zero greenhouse gas emissions?",
      "type": "number",
-     "hint": "Climate change · Source: Science-Based Targets initiative. Enter the target year (must be before 2050)."
+     "hint": "Climate change · Source: Science-Based Targets initiative. Enter the target year (must be before 2050).",
+     "unit": "year"
     },
     {
      "item": "1.3",
@@ -272,25 +288,29 @@
      "item": "2.1",
      "text": "What is the valued societal impact (monetary value) of your Scope 1 GHG emissions, where material?",
      "type": "number",
-     "hint": "Climate change · Source: US EPA fact sheet on the Social Cost of Carbon (2016); Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Value your Scope 1 emissions using a social cost of carbon. Report the amount and currency in notes."
+     "hint": "Climate change · Source: US EPA fact sheet on the Social Cost of Carbon (2016); Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Value your Scope 1 emissions using a social cost of carbon. Report the amount and currency in notes.",
+     "unit": "currency"
     },
     {
      "item": "2.2",
      "text": "What is the valued societal impact of your Scope 2 GHG emissions, where material?",
      "type": "number",
-     "hint": "Climate change · Source: US EPA fact sheet on the Social Cost of Carbon (2016); Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Value your Scope 2 emissions using a social cost of carbon."
+     "hint": "Climate change · Source: US EPA fact sheet on the Social Cost of Carbon (2016); Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Value your Scope 2 emissions using a social cost of carbon.",
+     "unit": "currency"
     },
     {
      "item": "2.3",
      "text": "What is the valued societal impact of your Scope 3 GHG emissions along the value chain, where material?",
      "type": "number",
-     "hint": "Climate change · Source: US EPA fact sheet on the Social Cost of Carbon (2016); Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Value your material Scope 3 emissions using a social cost of carbon."
+     "hint": "Climate change · Source: US EPA fact sheet on the Social Cost of Carbon (2016); Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Value your material Scope 3 emissions using a social cost of carbon.",
+     "unit": "currency"
     },
     {
      "item": "2.4",
      "text": "What estimate of the social cost of carbon did you use (per tonne of CO2e)?",
      "type": "number",
-     "hint": "Climate change · Source: US EPA fact sheet on the Social Cost of Carbon (2016); Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. State the value used per tCO2e and its currency/year in notes."
+     "hint": "Climate change · Source: US EPA fact sheet on the Social Cost of Carbon (2016); Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. State the value used per tCO2e and its currency/year in notes.",
+     "unit": "currency per tCO₂e"
     },
     {
      "item": "2.5",
@@ -308,31 +328,36 @@
      "item": "3.1",
      "text": "What area of land (in hectares) do your own operations use to produce basic plant, animal or mineral commodities?",
      "type": "number",
-     "hint": "Nature loss · Source: New metric. For example land used for forestry, agriculture or mining. Report if applicable."
+     "hint": "Nature loss · Source: New metric. For example land used for forestry, agriculture or mining. Report if applicable.",
+     "unit": "hectares (ha)"
     },
     {
      "item": "3.2",
      "text": "What area of land (in hectares) is used to produce the basic commodities in your full supply chain, where material?",
      "type": "number",
-     "hint": "Nature loss · Source: New metric. Supply-chain figures can initially be estimated from the mass of each commodity used and the average mass produced per unit of land in each sourcing location."
+     "hint": "Nature loss · Source: New metric. Supply-chain figures can initially be estimated from the mass of each commodity used and the average mass produced per unit of land in each sourcing location.",
+     "unit": "hectares (ha)"
     },
     {
      "item": "3.3",
      "text": "What is the year-on-year change in the area of land used for your operations?",
      "type": "number",
-     "hint": "Nature loss · Source: New metric. Report change versus the previous year (in hectares or percent, state in notes)."
+     "hint": "Nature loss · Source: New metric. Report change versus the previous year (in hectares or percent, state in notes).",
+     "unit": "hectares (ha)"
     },
     {
      "item": "3.4",
      "text": "What is the year-on-year change in the area of land used in your supply chain?",
      "type": "number",
-     "hint": "Nature loss · Source: New metric. Report change versus the previous year, estimated if necessary."
+     "hint": "Nature loss · Source: New metric. Report change versus the previous year, estimated if necessary.",
+     "unit": ""
     },
     {
      "item": "3.5",
      "text": "What percentage of this land area, or of your commodity inputs by mass or cost, is covered by a sustainability certification standard or sustainable management programme?",
      "type": "number",
-     "hint": "Nature loss · Source: New metric. State the basis (land area, mass or cost) in notes."
+     "hint": "Nature loss · Source: New metric. State the basis (land area, mass or cost) in notes.",
+     "unit": "%"
     },
     {
      "item": "3.6",
@@ -356,13 +381,15 @@
      "item": "4.1",
      "text": "What is the valued societal impact (monetary value) of your use of land, where material?",
      "type": "number",
-     "hint": "Nature loss · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+     "hint": "Nature loss · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes.",
+     "unit": "currency"
     },
     {
      "item": "4.2",
      "text": "What is the valued societal impact of your conversion of ecosystems, where material?",
      "type": "number",
-     "hint": "Nature loss · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+     "hint": "Nature loss · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes.",
+     "unit": "currency"
     },
     {
      "item": "4.3",
@@ -380,13 +407,15 @@
      "item": "5.1",
      "text": "What is the valued societal impact (monetary value) of your freshwater withdrawal, where material?",
      "type": "number",
-     "hint": "Fresh water availability · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+     "hint": "Fresh water availability · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes.",
+     "unit": "currency"
     },
     {
      "item": "5.2",
      "text": "What is the valued societal impact of your freshwater consumption, where material?",
      "type": "number",
-     "hint": "Fresh water availability · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+     "hint": "Fresh water availability · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes.",
+     "unit": "currency"
     },
     {
      "item": "5.3",
@@ -404,19 +433,22 @@
      "item": "6.1",
      "text": "What were your nitrogen oxides (NOx) emissions, in metric tonnes, along the value chain where material?",
      "type": "number",
-     "hint": "Air pollution · Source: GRI 305-7. Report wherever material along the value chain."
+     "hint": "Air pollution · Source: GRI 305-7. Report wherever material along the value chain.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": "6.2",
      "text": "What were your sulphur oxides (SOx) emissions, in metric tonnes, along the value chain where material?",
      "type": "number",
-     "hint": "Air pollution · Source: GRI 305-7. Report wherever material along the value chain."
+     "hint": "Air pollution · Source: GRI 305-7. Report wherever material along the value chain.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": "6.3",
      "text": "What were your particulate matter emissions, in metric tonnes, along the value chain where material?",
      "type": "number",
-     "hint": "Air pollution · Source: GRI 305-7. Report wherever material along the value chain."
+     "hint": "Air pollution · Source: GRI 305-7. Report wherever material along the value chain.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": "6.4",
@@ -428,7 +460,8 @@
      "item": "6.5",
      "text": "What proportion of these emissions occurs in or adjacent to urban or densely populated areas?",
      "type": "number",
-     "hint": "Air pollution · Source: GRI 305-7. Estimate as a percentage wherever possible."
+     "hint": "Air pollution · Source: GRI 305-7. Estimate as a percentage wherever possible.",
+     "unit": "%"
     }
    ]
   },
@@ -440,19 +473,22 @@
      "item": "7.1",
      "text": "What is the valued impact of your NOx and SOx emissions, where material?",
      "type": "number",
-     "hint": "Air pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+     "hint": "Air pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes.",
+     "unit": "currency"
     },
     {
      "item": "7.2",
      "text": "What is the valued impact of your particulate matter emissions, where material?",
      "type": "number",
-     "hint": "Air pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+     "hint": "Air pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes.",
+     "unit": "currency"
     },
     {
      "item": "7.3",
      "text": "What is the valued impact of your other significant air emissions, where material?",
      "type": "number",
-     "hint": "Air pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+     "hint": "Air pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes.",
+     "unit": "currency"
     },
     {
      "item": "7.4",
@@ -470,19 +506,22 @@
      "item": "8.1",
      "text": "How many metric tonnes of nitrogen in fertilizer did you consume, where material along the value chain?",
      "type": "number",
-     "hint": "Water pollution · Source: SASB (CN0101-11). Estimate and report wherever material along the value chain."
+     "hint": "Water pollution · Source: SASB (CN0101-11). Estimate and report wherever material along the value chain.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": "8.2",
      "text": "How many metric tonnes of phosphate in fertilizer did you consume, where material along the value chain?",
      "type": "number",
-     "hint": "Water pollution · Source: SASB (CN0101-11). Estimate and report wherever material along the value chain."
+     "hint": "Water pollution · Source: SASB (CN0101-11). Estimate and report wherever material along the value chain.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": "8.3",
      "text": "How many metric tonnes of potassium in fertilizer did you consume, where material along the value chain?",
      "type": "number",
-     "hint": "Water pollution · Source: SASB (CN0101-11). Estimate and report wherever material along the value chain."
+     "hint": "Water pollution · Source: SASB (CN0101-11). Estimate and report wherever material along the value chain.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": "8.4",
@@ -500,19 +539,22 @@
      "item": "9.1",
      "text": "What is the valued societal impact of excess nutrients you release to water, where material?",
      "type": "number",
-     "hint": "Water pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+     "hint": "Water pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes.",
+     "unit": "currency"
     },
     {
      "item": "9.2",
      "text": "What is the valued societal impact of heavy metals you release to water, where material?",
      "type": "number",
-     "hint": "Water pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+     "hint": "Water pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes.",
+     "unit": "currency"
     },
     {
      "item": "9.3",
      "text": "What is the valued societal impact of other toxins you release to water, where material?",
      "type": "number",
-     "hint": "Water pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+     "hint": "Water pollution · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes.",
+     "unit": "currency"
     },
     {
      "item": "9.4",
@@ -530,7 +572,8 @@
      "item": "10.1",
      "text": "How many metric tonnes of single-use plastic did you consume across your full value chain?",
      "type": "number",
-     "hint": "Solid waste · Source: New metric. Report an estimate in metric tonnes."
+     "hint": "Solid waste · Source: New metric. Report an estimate in metric tonnes.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": "10.2",
@@ -560,13 +603,15 @@
      "item": "11.1",
      "text": "What is the valued societal impact of your plastic waste disposal, where material?",
      "type": "number",
-     "hint": "Solid waste · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+     "hint": "Solid waste · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes.",
+     "unit": "currency"
     },
     {
      "item": "11.2",
      "text": "What is the valued societal impact of your other solid waste streams disposed of, where material?",
      "type": "number",
-     "hint": "Solid waste · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes."
+     "hint": "Solid waste · Source: Natural Capital Protocol (2016); ISO 14008 (2019); Value Balancing Alliance. Report along the value chain wherever material; state currency in notes.",
+     "unit": "currency"
     },
     {
      "item": "11.3",

@@ -9,7 +9,8 @@
      "item": ".1",
      "text": "What were your gross global Scope 1 emissions?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) CO₂-e · Report gross global Scope 1 greenhouse gas emissions in metric tonnes CO2-e, covering all seven GHGs under the Kyoto Protocol where applicable."
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Report gross global Scope 1 greenhouse gas emissions in metric tonnes CO2-e, covering all seven GHGs under the Kyoto Protocol where applicable.",
+     "unit": "metric tonnes (t) CO₂-e"
     },
     {
      "item": ".2",
@@ -57,7 +58,8 @@
      "item": ".3",
      "text": "How many incidents of non-compliance with water quality permits, standards and regulations did your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of incidents of non-compliance associated with water quality permits, standards and regulations in the reporting period."
+     "hint": "Unit: Number · Report the total number of incidents of non-compliance associated with water quality permits, standards and regulations in the reporting period.",
+     "unit": ""
     }
    ]
   },
@@ -165,19 +167,22 @@
      "item": ".B",
      "text": "How many processing facilities does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of processing facilities."
+     "hint": "Unit: Number · Report the total number of processing facilities.",
+     "unit": ""
     },
     {
      "item": ".C",
      "text": "What is the total land area under active production?",
      "type": "number",
-     "hint": "Unit: Hectares · Report the total land area under active production in hectares."
+     "hint": "Unit: Hectares · Report the total land area under active production in hectares.",
+     "unit": "hectares"
     },
     {
      "item": ".D",
      "text": "What was the cost of agricultural products sourced externally?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the cost of agricultural products sourced externally in your presentation currency."
+     "hint": "Unit: Presentation currency · Report the cost of agricultural products sourced externally in your presentation currency.",
+     "unit": "presentation currency"
     }
    ]
   }

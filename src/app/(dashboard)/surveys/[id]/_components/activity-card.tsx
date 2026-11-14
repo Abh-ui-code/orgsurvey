@@ -1,5 +1,4 @@
 import { CheckCheck, CircleCheck, CirclePlus, Rocket, Send, Undo2, XCircle, type LucideIcon } from "lucide-react";
-import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatDateTime, questionRange } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import type { HistoryAction, SurveyDetail } from "@/types/survey";
@@ -15,48 +14,56 @@ export const ACTION_META: Record<HistoryAction, { label: string; icon: LucideIco
   closed: { label: "Closed", icon: XCircle, tone: "bg-slate-soft text-slate" },
 };
 
-/** The survey's activity log as a vertical timeline, newest first. Each step
- * that was about particular questions says which. */
-export function ActivityCard({ survey }: { survey: SurveyDetail }) {
+/** The survey's activity log as a horizontal timeline, newest first, shown
+ * inside the progress card. Each step that was about particular questions says
+ * which. */
+export function ActivityTimeline({ survey }: { survey: SurveyDetail }) {
   const items = [...survey.history].reverse();
   const numbers = new Map(survey.sections.flatMap((s) => s.questions).map((q) => [q.id, q.number]));
+  if (items.length === 0) return null;
   return (
-    <Card>
-      <CardHeader className="py-3">
-        <CardTitle>Activity</CardTitle>
-        <span className="text-xs text-ink-faint">{items.length} events</span>
-      </CardHeader>
-      <ul>
-        {items.map((h) => {
+    <div className="border-t border-line pt-4">
+      <div className="mb-3 flex items-baseline justify-between">
+        <div className="text-2xs font-semibold uppercase tracking-wider text-ink-faint">Activity</div>
+        <span className="text-xs text-ink-faint">{items.length} event{items.length === 1 ? "" : "s"}</span>
+      </div>
+      <ol className="-mx-1 flex gap-3 overflow-x-auto px-1 pb-2">
+        {items.map((h, i) => {
           const m = ACTION_META[h.action];
+          const nums = h.question_ids.map((id) => numbers.get(id) ?? 0).filter(Boolean);
           return (
-            <li key={h.id} className="flex gap-3 border-b border-line px-5 py-3 text-sm last:border-b-0">
-              <span className={cn("mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full", m.tone)}>
-                <m.icon className="h-3.5 w-3.5" />
-              </span>
-              <div className="min-w-0">
-                <p className="text-ink">{h.action === "returned" && h.audience ? AUDIENCE_LABEL[h.audience] : m.label}</p>
-                <p className="mt-0.5 text-xs text-ink-faint">
-                  {h.by?.full_name ?? "Unknown"} · {formatDateTime(h.at)}
-                </p>
-                {h.question_ids.length > 0 && (
-                  <p className="mt-1 text-xs text-ink-muted">
-                    <span className="font-mono-data font-medium text-ink">{questionRange(h.question_ids.map((id) => numbers.get(id) ?? 0).filter(Boolean))}</span>
-                    {" · "}
-                    {h.question_ids.length} question{h.question_ids.length === 1 ? "" : "s"}
+            <li key={h.id} className="relative min-w-[230px] flex-1 basis-0 rounded-lg border border-line bg-paper-sunken/50 p-3 text-sm">
+              <div className="flex items-start gap-2.5">
+                <span className={cn("flex h-8 w-8 shrink-0 items-center justify-center rounded-full", m.tone)}>
+                  <m.icon className="h-4 w-4" />
+                </span>
+                <div className="min-w-0">
+                  <p className="flex items-center gap-1.5 font-medium text-ink">
+                    <span className="truncate">{h.action === "returned" && h.audience ? AUDIENCE_LABEL[h.audience] : m.label}</span>
+                    {i === 0 && items.length > 1 && <span className="rounded bg-brand-soft px-1.5 py-0.5 text-2xs font-semibold text-brand-strong">Latest</span>}
                   </p>
-                )}
-                {h.comment && <p className="mt-1.5 text-xs italic text-ink-muted">“{h.comment}”</p>}
-                {h.question_comments.length > 0 && (
-                  <p className="mt-1 text-xs text-ink-faint">
-                    {h.question_comments.length} question note{h.question_comments.length === 1 ? "" : "s"}
+                  <p className="mt-0.5 text-xs text-ink-faint">
+                    {h.by?.full_name ?? "Unknown"} · {formatDateTime(h.at)}
                   </p>
-                )}
+                </div>
               </div>
+              {nums.length > 0 && (
+                <p className="mt-2 text-xs text-ink-muted">
+                  <span className="font-mono-data font-medium text-ink">{questionRange(nums)}</span>
+                  {" · "}
+                  {nums.length} question{nums.length === 1 ? "" : "s"}
+                </p>
+              )}
+              {h.comment && <p className="mt-1.5 line-clamp-2 text-xs italic text-ink-muted">“{h.comment}”</p>}
+              {h.question_comments.length > 0 && (
+                <p className="mt-1 text-xs text-ink-faint">
+                  {h.question_comments.length} question note{h.question_comments.length === 1 ? "" : "s"}
+                </p>
+              )}
             </li>
           );
         })}
-      </ul>
-    </Card>
+      </ol>
+    </div>
   );
 }

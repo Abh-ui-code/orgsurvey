@@ -9,7 +9,8 @@
      "item": ".1",
      "text": "What was your revenue from energy and sustainability services?",
      "type": "number",
-     "hint": "Unit: presentation currency · Report revenue from energy and sustainability services in your presentation currency."
+     "hint": "Unit: presentation currency · Report revenue from energy and sustainability services in your presentation currency.",
+     "unit": "presentation currency"
     },
     {
      "item": ".2",
@@ -33,19 +34,22 @@
      "item": ".1",
      "text": "What was your brokerage revenue from dual agency transactions?",
      "type": "number",
-     "hint": "Unit: presentation currency · Report brokerage revenue from transactions where you acted for both parties."
+     "hint": "Unit: presentation currency · Report brokerage revenue from transactions where you acted for both parties.",
+     "unit": "presentation currency"
     },
     {
      "item": ".2",
      "text": "What was your revenue from transactions associated with appraisal services?",
      "type": "number",
-     "hint": "Unit: presentation currency · Report revenue from transactions associated with appraisal services."
+     "hint": "Unit: presentation currency · Report revenue from transactions associated with appraisal services.",
+     "unit": "presentation currency"
     },
     {
      "item": ".3",
      "text": "What was the total amount of monetary losses from legal proceedings associated with professional integrity, including duty of care?",
      "type": "number",
-     "hint": "Unit: presentation currency · Report total monetary losses from such legal proceedings in your presentation currency."
+     "hint": "Unit: presentation currency · Report total monetary losses from such legal proceedings in your presentation currency.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -63,13 +67,15 @@
      "item": ".B",
      "text": "What floor area do you manage where you have owner operational control?",
      "type": "number",
-     "hint": "Unit: square metres (m2) · Report floor area under management with owner operational control."
+     "hint": "Unit: square metres (m2) · Report floor area under management with owner operational control.",
+     "unit": "square metres (m2)"
     },
     {
      "item": ".C",
      "text": "How many buildings do you manage where you have owner operational control?",
      "type": "number",
-     "hint": "Unit: number · Report the number of buildings under management with owner operational control."
+     "hint": "Unit: number · Report the number of buildings under management with owner operational control.",
+     "unit": ""
     },
     {
      "item": ".D",
@@ -81,7 +87,8 @@
      "item": ".E",
      "text": "How many appraisals did you provide?",
      "type": "number",
-     "hint": "Unit: number · Report the number of appraisals provided in the reporting period."
+     "hint": "Unit: number · Report the number of appraisals provided in the reporting period.",
+     "unit": ""
     }
    ]
   }

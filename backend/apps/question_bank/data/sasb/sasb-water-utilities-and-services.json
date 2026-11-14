@@ -21,13 +21,15 @@
      "item": ".1",
      "text": "What is your water main replacement rate?",
      "type": "number",
-     "hint": "Unit: rate (percentage of main length replaced per year) · Report the rate for the reporting period and state how it is calculated."
+     "hint": "Unit: rate (percentage of main length replaced per year) · Report the rate for the reporting period and state how it is calculated.",
+     "unit": "% of main length per year"
     },
     {
      "item": ".2",
      "text": "What volume of non-revenue real water losses did you have, in thousand cubic metres?",
      "type": "number",
-     "hint": "Unit: thousand cubic metres (m3) · Report the volume of non-revenue real losses (physical leakage) in thousand m3."
+     "hint": "Unit: thousand cubic metres (m3) · Report the volume of non-revenue real losses (physical leakage) in thousand m3.",
+     "unit": "thousand cubic metres (m3)"
     }
    ]
   },
@@ -39,7 +41,8 @@
      "item": ".1",
      "text": "How many incidents of non-compliance with water effluent quality permits, standards and regulations did you have?",
      "type": "number",
-     "hint": "Unit: number · Report the total number of incidents in the reporting period."
+     "hint": "Unit: number · Report the total number of incidents in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".2",
@@ -56,8 +59,25 @@
     {
      "item": ".1",
      "text": "What is your average retail water rate for (1) residential, (2) commercial and (3) industrial customers?",
-     "type": "text",
-     "hint": "Unit: rate (presentation currency per unit of water) · Report the average retail rate for each of the three customer categories."
+     "type": "table",
+     "hint": "Unit: rate (presentation currency per unit of water) · Report the average retail rate for each of the three customer categories.",
+     "parts": [
+      {
+       "label": "Residential",
+       "kind": "number",
+       "unit": "presentation currency per unit of water"
+      },
+      {
+       "label": "Commercial",
+       "kind": "number",
+       "unit": "presentation currency per unit of water"
+      },
+      {
+       "label": "Industrial customers",
+       "kind": "number",
+       "unit": "presentation currency per unit of water"
+      }
+     ]
     },
     {
      "item": ".3",
@@ -81,7 +101,8 @@
      "item": ".1",
      "text": "How many incidents of non-compliance with drinking water quality standards and regulations did you have?",
      "type": "number",
-     "hint": "Unit: number · Report the total number of incidents in the reporting period."
+     "hint": "Unit: number · Report the total number of incidents in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".2",
@@ -99,7 +120,8 @@
      "item": ".1",
      "text": "What percentage of your water utility revenue comes from rate structures designed to promote conservation and revenue resilience?",
      "type": "number",
-     "hint": "Unit: percentage · Report the percentage of water utility revenue from such rate structures."
+     "hint": "Unit: percentage · Report the percentage of water utility revenue from such rate structures.",
+     "unit": "%"
     },
     {
      "item": ".2",
@@ -123,7 +145,8 @@
      "item": ".2",
      "text": "What volume of recycled water did you deliver to customers, in thousand cubic metres?",
      "type": "number",
-     "hint": "Unit: thousand cubic metres (m3) · Report the volume of recycled water delivered in the reporting period."
+     "hint": "Unit: thousand cubic metres (m3) · Report the volume of recycled water delivered in the reporting period.",
+     "unit": "thousand cubic metres (m3)"
     },
     {
      "item": ".3",
@@ -182,8 +205,30 @@
     {
      "item": ".C",
      "text": "How much water did you deliver to (1) residential, (2) commercial, (3) industrial and (4) all other customers?",
-     "type": "text",
-     "hint": "Unit: thousand cubic metres (m3) · Report volume delivered to each customer category."
+     "type": "table",
+     "hint": "Unit: thousand cubic metres (m3) · Report volume delivered to each customer category.",
+     "parts": [
+      {
+       "label": "Residential",
+       "kind": "number",
+       "unit": "thousand cubic metres (m3)"
+      },
+      {
+       "label": "Commercial",
+       "kind": "number",
+       "unit": "thousand cubic metres (m3)"
+      },
+      {
+       "label": "Industrial",
+       "kind": "number",
+       "unit": "thousand cubic metres (m3)"
+      },
+      {
+       "label": "All other customers",
+       "kind": "number",
+       "unit": "thousand cubic metres (m3)"
+      }
+     ]
     },
     {
      "item": ".D",
@@ -194,8 +239,20 @@
     {
      "item": ".E",
      "text": "What is the length of your (1) water mains and (2) sewer pipe, in kilometres?",
-     "type": "text",
-     "hint": "Unit: kilometres (km) · Report the length of each in km."
+     "type": "table",
+     "hint": "Unit: kilometres (km) · Report the length of each in km.",
+     "parts": [
+      {
+       "label": "Water mains",
+       "kind": "number",
+       "unit": "kilometres (km)"
+      },
+      {
+       "label": "Sewer pipe",
+       "kind": "number",
+       "unit": "kilometres (km)"
+      }
+     ]
     }
    ]
   }

@@ -51,7 +51,8 @@
      "item": ".3",
      "text": "What was the total amount of monetary losses as a result of legal proceedings associated with labour law violations?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report total monetary losses from legal proceedings associated with labour law violations in the presentation currency, including settlements, judgements and fines."
+     "hint": "Unit: Presentation currency · Report total monetary losses from legal proceedings associated with labour law violations in the presentation currency, including settlements, judgements and fines.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -69,7 +70,8 @@
      "item": ".2",
      "text": "What was the total amount of monetary losses as a result of legal proceedings associated with employment discrimination?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report total monetary losses from legal proceedings associated with employment discrimination in the presentation currency, including settlements, judgements and fines."
+     "hint": "Unit: Presentation currency · Report total monetary losses from legal proceedings associated with employment discrimination in the presentation currency, including settlements, judgements and fines.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -110,8 +112,20 @@
     {
      "item": ".B",
      "text": "What is the total area of (1) your retail space and (2) your distribution centres, in square metres?",
-     "type": "text",
-     "hint": "Unit: Square metres (m²) · Report separately the total area in square metres of (1) retail space and (2) distribution centres."
+     "type": "table",
+     "hint": "Unit: Square metres (m²) · Report separately the total area in square metres of (1) retail space and (2) distribution centres.",
+     "parts": [
+      {
+       "label": "Retail space",
+       "kind": "number",
+       "unit": "square metres (m²)"
+      },
+      {
+       "label": "Distribution centres",
+       "kind": "number",
+       "unit": "square metres (m²)"
+      }
+     ]
     }
    ]
   }

@@ -111,19 +111,22 @@
      "item": ".A",
      "text": "How many units did your organisation sell?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of units sold in the reporting period."
+     "hint": "Unit: Number · Report the total number of units sold in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".B",
      "text": "What was the total storage capacity of the batteries you sold, in megawatt-hours?",
      "type": "number",
-     "hint": "Unit: Megawatt-hours (MWh) · Report the total storage capacity of batteries sold in MWh for the reporting period."
+     "hint": "Unit: Megawatt-hours (MWh) · Report the total storage capacity of batteries sold in MWh for the reporting period.",
+     "unit": "megawatt-hours (MWh)"
     },
     {
      "item": ".C",
      "text": "What was the total energy production capacity of the fuel cells you sold, in megawatt-hours?",
      "type": "number",
-     "hint": "Unit: Megawatt-hours (MWh) · Report the total energy production capacity of fuel cells sold in MWh for the reporting period."
+     "hint": "Unit: Megawatt-hours (MWh) · Report the total energy production capacity of fuel cells sold in MWh for the reporting period.",
+     "unit": "megawatt-hours (MWh)"
     }
    ]
   }

@@ -9,7 +9,8 @@
      "item": ".1",
      "text": "What are your organisation's gross global Scope 1 greenhouse gas emissions?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) CO2-e · Report gross global Scope 1 emissions for the reporting period, in metric tonnes CO2-e, covering direct emissions from sources you own or control."
+     "hint": "Unit: Metric tonnes (t) CO2-e · Report gross global Scope 1 emissions for the reporting period, in metric tonnes CO2-e, covering direct emissions from sources you own or control.",
+     "unit": "metric tonnes (t) CO₂-e"
     },
     {
      "item": ".2",
@@ -33,7 +34,8 @@
      "item": ".1",
      "text": "What percentage of your active workforce is employed under collective agreements?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of active employees covered by collective bargaining or collective agreements."
+     "hint": "Unit: Percentage (%) · Report the percentage of active employees covered by collective bargaining or collective agreements.",
+     "unit": "%"
     },
     {
      "item": ".2",
@@ -51,7 +53,8 @@
      "item": ".1",
      "text": "What is the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with anti-competitive behaviour regulations?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses for the period in your presentation currency, covering fines, settlements and other legal costs from such proceedings."
+     "hint": "Unit: Presentation currency · Report the total monetary losses for the period in your presentation currency, covering fines, settlements and other legal costs from such proceedings.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -69,13 +72,15 @@
      "item": ".2",
      "text": "How many aviation accidents did your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total count for the reporting period."
+     "hint": "Unit: Number · Report the total count for the reporting period.",
+     "unit": ""
     },
     {
      "item": ".3",
      "text": "How many governmental enforcement actions of aviation safety regulations did your organisation face?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of enforcement actions taken by governmental authorities under aviation safety regulations."
+     "hint": "Unit: Number · Report the number of enforcement actions taken by governmental authorities under aviation safety regulations.",
+     "unit": ""
     }
    ]
   },
@@ -87,37 +92,43 @@
      "item": ".A",
      "text": "What are your available seat kilometres (ASK)?",
      "type": "number",
-     "hint": "Unit: ASK · Report available seat kilometres (ASK) for the reporting period."
+     "hint": "Unit: ASK · Report available seat kilometres (ASK) for the reporting period.",
+     "unit": "ASK"
     },
     {
      "item": ".B",
      "text": "What is your passenger load factor?",
      "type": "number",
-     "hint": "Unit: Rate · Report the passenger load factor as a rate (typically RPK divided by ASK) and state how it is calculated."
+     "hint": "Unit: Rate · Report the passenger load factor as a rate (typically RPK divided by ASK) and state how it is calculated.",
+     "unit": ""
     },
     {
      "item": ".C",
      "text": "What are your revenue passenger kilometres (RPK)?",
      "type": "number",
-     "hint": "Unit: RPK · Report revenue passenger kilometres (RPK) for the reporting period."
+     "hint": "Unit: RPK · Report revenue passenger kilometres (RPK) for the reporting period.",
+     "unit": "RPK"
     },
     {
      "item": ".D",
      "text": "What are your revenue tonne-kilometres (RTK)?",
      "type": "number",
-     "hint": "Unit: RTK · Report revenue tonne-kilometres for the reporting period."
+     "hint": "Unit: RTK · Report revenue tonne-kilometres for the reporting period.",
+     "unit": "RTK"
     },
     {
      "item": ".E",
      "text": "How many departures did your organisation operate?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of departures in the reporting period."
+     "hint": "Unit: Number · Report the total number of departures in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".F",
      "text": "What is the average age of your fleet?",
      "type": "number",
-     "hint": "Unit: Years · Report the average fleet age in years."
+     "hint": "Unit: Years · Report the average fleet age in years.",
+     "unit": "years"
     }
    ]
   }

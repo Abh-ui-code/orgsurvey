@@ -41,7 +41,7 @@ class QuestionFieldsSerializer(serializers.ModelSerializer):
 
         current = {}
         if self.instance is not None:
-            current = {f: getattr(self.instance, f) for f in ("text", "type", "options", "hint", "required")}
+            current = {f: getattr(self.instance, f) for f in ("text", "type", "unit", "parts", "options", "hint", "required")}
         try:
             cleaned = clean_question_fields({**current, **attrs})
         except ApiError as exc:

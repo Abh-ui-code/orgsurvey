@@ -21,7 +21,8 @@
      "item": ".1",
      "text": "What were your gross global Scope 1 emissions from refrigerants?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) CO₂-e · Report gross global Scope 1 emissions from refrigerants in metric tonnes CO2-e."
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Report gross global Scope 1 emissions from refrigerants in metric tonnes CO2-e.",
+     "unit": "metric tonnes (t) CO₂-e"
     },
     {
      "item": ".2",
@@ -33,7 +34,8 @@
      "item": ".3",
      "text": "What was your average refrigerant emissions rate?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the average refrigerant emissions rate as a percentage of refrigerant charge, and state how it was calculated."
+     "hint": "Unit: Percentage (%) · Report the average refrigerant emissions rate as a percentage of refrigerant charge, and state how it was calculated.",
+     "unit": "%"
     }
    ]
   },
@@ -87,7 +89,8 @@
      "item": ".1",
      "text": "What was your high-risk food safety violation rate?",
      "type": "number",
-     "hint": "Unit: Rate · Report the rate of high-risk food safety violations from inspections, stating the basis (for example violations per inspection)."
+     "hint": "Unit: Rate · Report the rate of high-risk food safety violations from inspections, stating the basis (for example violations per inspection).",
+     "unit": ""
     },
     {
      "item": ".2",
@@ -134,8 +137,20 @@
     {
      "item": ".3",
      "text": "What revenue does your organisation earn from products labelled as (1) containing genetically modified organisms (GMOs) and (2) non-GMO?",
-     "type": "text",
-     "hint": "Unit: Presentation currency · Report (1) revenue from products labelled as containing GMOs and (2) revenue from products labelled non-GMO, each in your presentation currency."
+     "type": "table",
+     "hint": "Unit: Presentation currency · Report (1) revenue from products labelled as containing GMOs and (2) revenue from products labelled non-GMO, each in your presentation currency.",
+     "parts": [
+      {
+       "label": "Containing genetically modified organisms (GMOs)",
+       "kind": "number",
+       "unit": "presentation currency"
+      },
+      {
+       "label": "Non-GMO",
+       "kind": "number",
+       "unit": "presentation currency"
+      }
+     ]
     }
    ]
   },
@@ -153,7 +168,8 @@
      "item": ".2",
      "text": "What percentage of your active workforce is employed under collective agreements?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of the active workforce covered by collective agreements."
+     "hint": "Unit: Percentage (%) · Report the percentage of the active workforce covered by collective agreements.",
+     "unit": "%"
     },
     {
      "item": ".3",
@@ -164,8 +180,20 @@
     {
      "item": ".4",
      "text": "What was the total amount of monetary losses from legal proceedings associated with (1) labour law violations and (2) employment discrimination?",
-     "type": "text",
-     "hint": "Unit: Presentation currency · Report monetary losses separately for (1) labour law violations and (2) employment discrimination, in your presentation currency."
+     "type": "table",
+     "hint": "Unit: Presentation currency · Report monetary losses separately for (1) labour law violations and (2) employment discrimination, in your presentation currency.",
+     "parts": [
+      {
+       "label": "Labour law violations",
+       "kind": "number",
+       "unit": "presentation currency"
+      },
+      {
+       "label": "Employment discrimination",
+       "kind": "number",
+       "unit": "presentation currency"
+      }
+     ]
     }
    ]
   },
@@ -182,8 +210,20 @@
     {
      "item": ".2",
      "text": "What percentage of your revenue comes from (1) eggs that originated from a cage-free environment and (2) pork produced without the use of gestation crates?",
-     "type": "text",
-     "hint": "Unit: Percentage (%) by revenue · Report separately (1) the percentage of revenue from cage-free eggs and (2) the percentage of revenue from pork produced without gestation crates."
+     "type": "table",
+     "hint": "Unit: Percentage (%) by revenue · Report separately (1) the percentage of revenue from cage-free eggs and (2) the percentage of revenue from pork produced without gestation crates.",
+     "parts": [
+      {
+       "label": "Eggs that originated from a cage-free environment",
+       "kind": "number",
+       "unit": "% by revenue"
+      },
+      {
+       "label": "Pork produced without the use of gestation crates",
+       "kind": "number",
+       "unit": "% by revenue"
+      }
+     ]
     },
     {
      "item": ".3",
@@ -212,20 +252,34 @@
     {
      "item": ".B",
      "text": "What is the total area of (1) your retail space and (2) your distribution centres?",
-     "type": "text",
-     "hint": "Unit: Square metres (m²) · Report total area in square metres of (1) retail space and (2) distribution centres."
+     "type": "table",
+     "hint": "Unit: Square metres (m²) · Report total area in square metres of (1) retail space and (2) distribution centres.",
+     "parts": [
+      {
+       "label": "Retail space",
+       "kind": "number",
+       "unit": "square metres (m²)"
+      },
+      {
+       "label": "Distribution centres",
+       "kind": "number",
+       "unit": "square metres (m²)"
+      }
+     ]
     },
     {
      "item": ".C",
      "text": "How many vehicles are in your commercial fleet?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of vehicles in the commercial fleet."
+     "hint": "Unit: Number · Report the number of vehicles in the commercial fleet.",
+     "unit": ""
     },
     {
      "item": ".D",
      "text": "How many tonne-kilometres did your organisation travel?",
      "type": "number",
-     "hint": "Unit: Tonne- kilometres · Report total tonne-kilometres travelled in the reporting period."
+     "hint": "Unit: Tonne- kilometres · Report total tonne-kilometres travelled in the reporting period.",
+     "unit": "tonne- kilometres"
     }
    ]
   }

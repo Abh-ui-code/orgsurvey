@@ -16,7 +16,7 @@ from openpyxl.cell.text import InlineFont
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
-from apps.core.question_types import is_empty
+from apps.core.question_types import answer_text
 from apps.surveys.models import Survey, SurveyQuestion
 
 STATUS_LABELS = dict(SurveyQuestion.STATUSES)
@@ -78,13 +78,11 @@ def _numbered(question):
     return f"[{number}] {question.text}"
 
 
-def _text(value):
-    """An answer as a spreadsheet cell: lists joined, empties as a dash."""
-    if is_empty(value):
-        return "—"
-    if isinstance(value, list):
-        return ", ".join(str(v) for v in value)
-    return value if isinstance(value, (int, float)) else str(value)
+def _cell(question, value):
+    """An answer as a spreadsheet cell: a plain number stays a number, everything else is text."""
+    if isinstance(value, (int, float)) and not isinstance(value, bool) and not getattr(question, "unit", ""):
+        return value
+    return answer_text(question, value)
 
 
 SHEET = "Audit report"
@@ -346,7 +344,7 @@ def build_workbook(survey: Survey) -> bytes:
         for i, (_, e) in enumerate(recorded):
             if q.pk not in {x.pk for x in e.questions.all()}:
                 continue  # this submission was about other questions
-            value = _text(e.snapshot.get(str(q.id)))
+            value = _cell(q, e.snapshot.get(str(q.id)))
             extras = _submission_extras(e, q)
             cell = ws.cell(r, sub_col(i), f"{value}\n\n{extras}" if extras else value)
             cell.alignment = Alignment(wrap_text=True, vertical="top", horizontal="left")
@@ -367,7 +365,7 @@ def build_workbook(survey: Survey) -> bytes:
                 continue
             if e.action == "submitted":
                 revisions += 1
-                answer = _text(e.snapshot.get(str(q.id)))
+                answer = _cell(q, e.snapshot.get(str(q.id)))
                 changed_from = last_answer if last_answer is not None and last_answer != answer else ""
                 step = "Answer submitted" if revisions == 1 else f"Answer resubmitted (revision {revisions})"
                 last_answer = answer

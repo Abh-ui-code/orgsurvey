@@ -99,13 +99,15 @@
      "item": ".B",
      "text": "What is the total area of your organisation's manufacturing facilities?",
      "type": "number",
-     "hint": "Unit: Square metres (m²) · Report the combined floor area of all manufacturing facilities in square metres at the end of the reporting period."
+     "hint": "Unit: Square metres (m²) · Report the combined floor area of all manufacturing facilities in square metres at the end of the reporting period.",
+     "unit": "square metres (m²)"
     },
     {
      "item": ".C",
      "text": "What percentage of your production comes from facilities you own?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the share of total production (by units or volume) made in owned facilities rather than by contract manufacturers. State the basis used."
+     "hint": "Unit: Percentage (%) · Report the share of total production (by units or volume) made in owned facilities rather than by contract manufacturers. State the basis used.",
+     "unit": "%"
     }
    ]
   }

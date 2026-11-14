@@ -51,7 +51,8 @@
           "item": "a",
           "text": "How many legal actions regarding anti-competitive behavior or violations of anti-trust and monopoly legislation were pending or completed during the reporting period?",
           "type": "number",
-          "hint": "Only actions in which the organization has been identified as a participant."
+          "hint": "Only actions in which the organization has been identified as a participant.",
+          "unit": "legal actions"
         },
         {
           "item": "b",

@@ -66,7 +66,7 @@ class SurveyQuestionSerializer(QuestionFieldsSerializer):
     class Meta:
         model = SurveyQuestion
         fields = [
-            "id", "order", "text", "type", "options", "hint", "required", "bank_question_id", "gri_ref",
+            "id", "order", "text", "type", "unit", "parts", "options", "hint", "required", "bank_question_id", "gri_ref",
             "gri_title", "gri_item", "responder", "responder_id", "status", "progress",
         ]
         read_only_fields = ["order", "status", "progress"]

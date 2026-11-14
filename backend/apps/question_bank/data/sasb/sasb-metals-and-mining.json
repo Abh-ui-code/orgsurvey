@@ -26,8 +26,45 @@
     {
      "item": ".1",
      "text": "What are your organisation's air emissions of the following pollutants: (1) CO, (2) NOx (excluding N2O), (3) SOx, (4) particulate matter (PM10), (5) mercury (Hg), (6) lead (Pb) and (7) volatile organic compounds (VOCs)?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes (t) · Report each pollutant separately in metric tonnes, covering all operations and noting estimation or measurement methods; state any pollutant that is not applicable."
+     "type": "table",
+     "hint": "Unit: Metric tonnes (t) · Report each pollutant separately in metric tonnes, covering all operations and noting estimation or measurement methods; state any pollutant that is not applicable.",
+     "parts": [
+      {
+       "label": "CO",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "NOx (excluding N2O)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "SOx",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Particulate matter (PM10)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Mercury (Hg)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Lead (Pb)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Volatile organic compounds (VOCs)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      }
+     ]
     }
    ]
   },
@@ -57,7 +94,8 @@
      "item": ".2",
      "text": "How many incidents of non-compliance with water quality permits, standards and regulations did your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of incidents of non-compliance with water quality permits, standards and regulations in the reporting period."
+     "hint": "Unit: Number · Report the total number of incidents of non-compliance with water quality permits, standards and regulations in the reporting period.",
+     "unit": ""
     }
    ]
   },
@@ -69,37 +107,43 @@
      "item": ".4",
      "text": "What is the total weight of non-mineral waste your organisation generated?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report the total weight of non-mineral waste generated in metric tonnes for the reporting period."
+     "hint": "Unit: Metric tonnes (t) · Report the total weight of non-mineral waste generated in metric tonnes for the reporting period.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": ".5",
      "text": "What is the total weight of tailings your organisation produced?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report the total weight of tailings produced in metric tonnes for the reporting period."
+     "hint": "Unit: Metric tonnes (t) · Report the total weight of tailings produced in metric tonnes for the reporting period.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": ".6",
      "text": "What is the total weight of waste rock your organisation generated?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report the total weight of waste rock generated in metric tonnes for the reporting period."
+     "hint": "Unit: Metric tonnes (t) · Report the total weight of waste rock generated in metric tonnes for the reporting period.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": ".7",
      "text": "What is the total weight of hazardous waste your organisation generated?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report the total weight of hazardous waste generated in metric tonnes, using the regulatory definition in each jurisdiction."
+     "hint": "Unit: Metric tonnes (t) · Report the total weight of hazardous waste generated in metric tonnes, using the regulatory definition in each jurisdiction.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": ".8",
      "text": "What is the total weight of hazardous waste your organisation recycled?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report the total weight of hazardous waste recycled in metric tonnes for the reporting period."
+     "hint": "Unit: Metric tonnes (t) · Report the total weight of hazardous waste recycled in metric tonnes for the reporting period.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": ".9",
      "text": "How many significant incidents associated with hazardous materials and waste management did your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of significant incidents (as defined by regulators or your own criteria) involving hazardous materials and waste management."
+     "hint": "Unit: Number · Report the number of significant incidents (as defined by regulators or your own criteria) involving hazardous materials and waste management.",
+     "unit": ""
     },
     {
      "item": ".10",
@@ -122,8 +166,25 @@
     {
      "item": ".2",
      "text": "What percentage of your mine sites have acid rock drainage that is (1) predicted to occur, (2) actively mitigated, and (3) under treatment or remediation?",
-     "type": "text",
-     "hint": "Unit: Percentage (%) · Report each of the three percentages (1) predicted to occur, (2) actively mitigated, (3) under treatment or remediation, as a share of all mine sites."
+     "type": "table",
+     "hint": "Unit: Percentage (%) · Report each of the three percentages (1) predicted to occur, (2) actively mitigated, (3) under treatment or remediation, as a share of all mine sites.",
+     "parts": [
+      {
+       "label": "Predicted to occur",
+       "kind": "number",
+       "unit": "%"
+      },
+      {
+       "label": "Actively mitigated",
+       "kind": "number",
+       "unit": "%"
+      },
+      {
+       "label": "Under treatment or remediation",
+       "kind": "number",
+       "unit": "%"
+      }
+     ]
     },
     {
      "item": ".3",
@@ -183,7 +244,8 @@
      "item": ".1",
      "text": "What percentage of your active workforce is employed under collective agreements?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of the active workforce covered by collective bargaining agreements."
+     "hint": "Unit: Percentage (%) · Report the percentage of the active workforce covered by collective bargaining agreements.",
+     "unit": "%"
     },
     {
      "item": ".2",
@@ -219,7 +281,8 @@
      "item": ".2",
      "text": "What was your organisation's saleable production in countries ranked among the 20 lowest in Transparency International's Corruption Perception Index?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) saleable · Report saleable production in metric tonnes in those countries, stating the index year used."
+     "hint": "Unit: Metric tonnes (t) saleable · Report saleable production in metric tonnes in those countries, stating the index year used.",
+     "unit": "metric tonnes (t) saleable"
     }
    ]
   },
@@ -254,8 +317,20 @@
     {
      "item": ".A",
      "text": "What was your organisation's production of (1) metal ores and (2) finished metal products?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes (t) saleable · Report (1) metal ore production and (2) finished metal product production separately, in saleable metric tonnes."
+     "type": "table",
+     "hint": "Unit: Metric tonnes (t) saleable · Report (1) metal ore production and (2) finished metal product production separately, in saleable metric tonnes.",
+     "parts": [
+      {
+       "label": "Metal ores",
+       "kind": "number",
+       "unit": "metric tonnes (t) saleable"
+      },
+      {
+       "label": "Finished metal products",
+       "kind": "number",
+       "unit": "metric tonnes (t) saleable"
+      }
+     ]
     },
     {
      "item": ".B",

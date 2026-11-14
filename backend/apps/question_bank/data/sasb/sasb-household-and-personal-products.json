@@ -27,7 +27,8 @@
      "item": ".1",
      "text": "What revenue do you earn from products that contain substances of high concern?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report revenue from products containing substances of high concern in the presentation currency, and state the list used to define them."
+     "hint": "Unit: Presentation currency · Report revenue from products containing substances of high concern in the presentation currency, and state the list used to define them.",
+     "unit": "presentation currency"
     },
     {
      "item": ".3",
@@ -39,7 +40,8 @@
      "item": ".4",
      "text": "What revenue do you earn from products designed with green chemistry principles?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report revenue from products designed with green chemistry principles in the presentation currency, and describe the principles or framework applied."
+     "hint": "Unit: Presentation currency · Report revenue from products designed with green chemistry principles in the presentation currency, and describe the principles or framework applied.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -87,7 +89,8 @@
      "item": ".B",
      "text": "How many manufacturing facilities do you have?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of manufacturing facilities operated by the organisation."
+     "hint": "Unit: Number · Report the number of manufacturing facilities operated by the organisation.",
+     "unit": ""
     }
    ]
   }

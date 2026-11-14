@@ -9,7 +9,8 @@
      "item": ".1",
      "text": "What were your gross global Scope 1 greenhouse gas emissions, in metric tonnes of CO2-e?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) CO₂-e · Report gross global Scope 1 emissions in metric tonnes of CO2-e for the reporting period, before any offsets."
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Report gross global Scope 1 emissions in metric tonnes of CO2-e for the reporting period, before any offsets.",
+     "unit": "metric tonnes (t) CO₂-e"
     },
     {
      "item": ".2",
@@ -26,8 +27,35 @@
     {
      "item": ".1",
      "text": "What were your organisation's air emissions, in metric tonnes, of (1) NOx (excluding N2O), (2) SOx, (3) volatile organic compounds (VOCs), (4) particulate matter (PM) and (5) hazardous air pollutants (HAPs)?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes (t) · Report the metric tonnes emitted for each of the five pollutants separately: NOx (excluding N2O), SOx, VOCs, PM and HAPs. State the reporting period and how emissions were estimated or measured."
+     "type": "table",
+     "hint": "Unit: Metric tonnes (t) · Report the metric tonnes emitted for each of the five pollutants separately: NOx (excluding N2O), SOx, VOCs, PM and HAPs. State the reporting period and how emissions were estimated or measured.",
+     "parts": [
+      {
+       "label": "NOx (excluding N2O)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "SOx",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Volatile organic compounds (VOCs)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Particulate matter (PM)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Hazardous air pollutants (HAPs)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      }
+     ]
     }
    ]
   },
@@ -75,7 +103,8 @@
      "item": ".2",
      "text": "What amount of recycled and recovered fibre did your organisation procure, in metric tonnes?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report the total recycled and recovered fibre procured in metric tonnes for the reporting period."
+     "hint": "Unit: Metric tonnes (t) · Report the total recycled and recovered fibre procured in metric tonnes for the reporting period.",
+     "unit": "metric tonnes (t)"
     }
    ]
   },
@@ -87,7 +116,8 @@
      "item": ".A",
      "text": "What was your pulp production, in air-dried metric tonnes?",
      "type": "number",
-     "hint": "Unit: Air-dried metric tonnes (t) · Report total pulp production in air-dried metric tonnes for the reporting period."
+     "hint": "Unit: Air-dried metric tonnes (t) · Report total pulp production in air-dried metric tonnes for the reporting period.",
+     "unit": "air-dried metric tonnes (t)"
     },
     {
      "item": ".B",
@@ -99,7 +129,8 @@
      "item": ".C",
      "text": "What was the total amount of wood fibre your organisation sourced, in metric tonnes?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report total wood fibre sourced in metric tonnes for the reporting period."
+     "hint": "Unit: Metric tonnes (t) · Report total wood fibre sourced in metric tonnes for the reporting period.",
+     "unit": "metric tonnes (t)"
     }
    ]
   }

@@ -39,7 +39,8 @@
      "item": ".2",
      "text": "What percentage of the vehicles in your fleet are alternative fuel vehicles?",
      "type": "number",
-     "hint": "Unit: percentage · Report alternative fuel vehicles as a percentage of the total fleet."
+     "hint": "Unit: percentage · Report alternative fuel vehicles as a percentage of the total fleet.",
+     "unit": "%"
     }
    ]
   },
@@ -50,8 +51,30 @@
     {
      "item": ".1",
      "text": "How much of the following pollutants did you emit to air: (1) NOx (excluding N2O), (2) SOx, (3) volatile organic compounds (VOCs) and (4) hazardous air pollutants (HAPs)?",
-     "type": "text",
-     "hint": "Unit: metric tonnes · Report tonnes emitted for each of the four pollutants."
+     "type": "table",
+     "hint": "Unit: metric tonnes · Report tonnes emitted for each of the four pollutants.",
+     "parts": [
+      {
+       "label": "NOx (excluding N2O)",
+       "kind": "number",
+       "unit": "metric tonnes"
+      },
+      {
+       "label": "SOx",
+       "kind": "number",
+       "unit": "metric tonnes"
+      },
+      {
+       "label": "Volatile organic compounds (VOCs)",
+       "kind": "number",
+       "unit": "metric tonnes"
+      },
+      {
+       "label": "Hazardous air pollutants (HAPs)",
+       "kind": "number",
+       "unit": "metric tonnes"
+      }
+     ]
     },
     {
      "item": ".2",
@@ -63,7 +86,8 @@
      "item": ".3",
      "text": "How many incidents of non-compliance with air quality permits, standards and regulations did you have?",
      "type": "number",
-     "hint": "Unit: number · Report the total number of incidents in the reporting period."
+     "hint": "Unit: number · Report the total number of incidents in the reporting period.",
+     "unit": ""
     }
    ]
   },
@@ -81,13 +105,15 @@
      "item": ".2",
      "text": "How many corrective actions did you implement for landfill releases?",
      "type": "number",
-     "hint": "Unit: number · Report the number of corrective actions implemented in the reporting period."
+     "hint": "Unit: number · Report the number of corrective actions implemented in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".3",
      "text": "How many incidents of non-compliance associated with environmental impacts did you have?",
      "type": "number",
-     "hint": "Unit: number · Report the total number of incidents in the reporting period."
+     "hint": "Unit: number · Report the total number of incidents in the reporting period.",
+     "unit": ""
     }
    ]
   },
@@ -99,7 +125,8 @@
      "item": ".1",
      "text": "What percentage of your active workforce is employed under collective agreements?",
      "type": "number",
-     "hint": "Unit: percentage · Report the percentage of the active workforce covered by collective agreements."
+     "hint": "Unit: percentage · Report the percentage of the active workforce covered by collective agreements.",
+     "unit": "%"
     },
     {
      "item": ".2",
@@ -123,7 +150,8 @@
      "item": ".3",
      "text": "How many road accidents and incidents did you have?",
      "type": "number",
-     "hint": "Unit: number · Report the total number of road accidents and incidents involving your fleet."
+     "hint": "Unit: number · Report the total number of road accidents and incidents involving your fleet.",
+     "unit": ""
     }
    ]
   },
@@ -146,8 +174,25 @@
     {
      "item": ".3",
      "text": "What amount of material did you (1) recycle, (2) compost and (3) process as waste-to-energy?",
-     "type": "text",
-     "hint": "Unit: metric tonnes · Report tonnes for each of the three treatment routes."
+     "type": "table",
+     "hint": "Unit: metric tonnes · Report tonnes for each of the three treatment routes.",
+     "parts": [
+      {
+       "label": "Recycle",
+       "kind": "number",
+       "unit": "metric tonnes"
+      },
+      {
+       "label": "Compost",
+       "kind": "number",
+       "unit": "metric tonnes"
+      },
+      {
+       "label": "Process as waste-to-energy",
+       "kind": "number",
+       "unit": "metric tonnes"
+      }
+     ]
     },
     {
      "item": ".4",
@@ -164,14 +209,42 @@
     {
      "item": ".A",
      "text": "How many customers do you have in each category: (1) municipal, (2) commercial, (3) industrial, (4) residential and (5) other?",
-     "type": "text",
-     "hint": "Unit: number · Report the number of customers in each category."
+     "type": "table",
+     "hint": "Unit: number · Report the number of customers in each category.",
+     "parts": [
+      {
+       "label": "Municipal",
+       "kind": "number",
+       "unit": ""
+      },
+      {
+       "label": "Commercial",
+       "kind": "number",
+       "unit": ""
+      },
+      {
+       "label": "Industrial",
+       "kind": "number",
+       "unit": ""
+      },
+      {
+       "label": "Residential",
+       "kind": "number",
+       "unit": ""
+      },
+      {
+       "label": "Other",
+       "kind": "number",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": ".B",
      "text": "What is the size of your vehicle fleet?",
      "type": "number",
-     "hint": "Unit: number · Report the total number of vehicles in your fleet."
+     "hint": "Unit: number · Report the total number of vehicles in your fleet.",
+     "unit": ""
     },
     {
      "item": ".C",

@@ -33,7 +33,8 @@
      "item": ".1",
      "text": "How many vehicles did your organisation recall?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of vehicles recalled during the reporting period."
+     "hint": "Unit: Number · Report the total number of vehicles recalled during the reporting period.",
+     "unit": ""
     }
    ]
   },
@@ -69,7 +70,8 @@
      "item": ".1",
      "text": "What percentage of the products you sold are recyclable?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of products sold that are recyclable, and state the basis (for example by weight or revenue)."
+     "hint": "Unit: Percentage (%) · Report the percentage of products sold that are recyclable, and state the basis (for example by weight or revenue).",
+     "unit": "%"
     },
     {
      "item": ".2",
@@ -87,7 +89,8 @@
      "item": ".1",
      "text": "What is the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with anti-competitive behaviour regulations?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses for the period in your presentation currency, covering fines, settlements and other legal costs from such proceedings."
+     "hint": "Unit: Presentation currency · Report the total monetary losses for the period in your presentation currency, covering fines, settlements and other legal costs from such proceedings.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -99,19 +102,22 @@
      "item": ".A",
      "text": "How many parts did your organisation produce?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of parts produced in the reporting period."
+     "hint": "Unit: Number · Report the total number of parts produced in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".B",
      "text": "What was the total weight of parts your organisation produced?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report the weight of parts produced in metric tonnes."
+     "hint": "Unit: Metric tonnes (t) · Report the weight of parts produced in metric tonnes.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": ".C",
      "text": "What is the total area of your manufacturing plants?",
      "type": "number",
-     "hint": "Unit: Square metres (m²) · Report the total manufacturing plant area in square metres."
+     "hint": "Unit: Square metres (m²) · Report the total manufacturing plant area in square metres.",
+     "unit": "square metres (m²)"
     }
    ]
   }

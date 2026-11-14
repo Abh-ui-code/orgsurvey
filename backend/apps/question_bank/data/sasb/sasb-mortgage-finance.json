@@ -45,7 +45,8 @@
      "item": ".2",
      "text": "What was the total amount of monetary losses as a result of legal proceedings associated with discriminatory mortgage lending?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period."
+     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period.",
+     "unit": "presentation currency"
     },
     {
      "item": ".3",

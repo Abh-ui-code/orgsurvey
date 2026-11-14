@@ -63,7 +63,8 @@
           "item": "a",
           "text": "What percentage of recycled input materials is used to manufacture the organization's primary products and services?",
           "type": "number",
-          "hint": "Percentage of recycled input materials used."
+          "hint": "Percentage of recycled input materials used.",
+          "unit": "%"
         }
       ]
     },

@@ -3,7 +3,7 @@
 import { Check, Loader2, MessageSquarePlus } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
-import { AnswerField, formatAnswer, isAnswered } from "@/components/shared/answer-field";
+import { AnswerField, AnswerView, isAnswered } from "@/components/shared/answer-field";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ConfirmDialog } from "@/components/ui/confirm-dialog";
@@ -88,7 +88,7 @@ export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: strin
 
   const pinned = commentsByQuestion(survey.history, "responder");
   const required = open.filter((q) => q.required);
-  const missing = required.filter((q) => !isAnswered(answers[q.id]));
+  const missing = required.filter((q) => !isAnswered(answers[q.id], q));
   const done = required.length - missing.length;
   const percent = required.length ? Math.round((done / required.length) * 100) : 100;
 
@@ -97,17 +97,17 @@ export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: strin
   // Sections left untouched stay open for later.
   const sections = survey.sections.map((section) => {
     const mine = section.questions.filter((q) => openIds.has(q.id));
-    const started = mine.some((q) => isAnswered(answers[q.id]));
-    const incomplete = !section.gri && started && mine.some((q) => !isAnswered(answers[q.id]));
+    const started = mine.some((q) => isAnswered(answers[q.id], q));
+    const incomplete = !section.gri && started && mine.some((q) => !isAnswered(answers[q.id], q));
     return { mine, started, incomplete };
   });
-  const ready = sections.filter((s) => s.started && !s.incomplete).flatMap((s) => s.mine.filter((q) => isAnswered(answers[q.id])));
+  const ready = sections.filter((s) => s.started && !s.incomplete).flatMap((s) => s.mine.filter((q) => isAnswered(answers[q.id], q)));
   const incompleteIds = new Set(sections.filter((s) => s.incomplete).flatMap((s) => s.mine.map((q) => q.id)));
 
   function trySubmit(ids: string[]) {
     if (incompleteIds.size > 0) {
       setShowMissing(true);
-      const first = open.find((q) => incompleteIds.has(q.id) && !isAnswered(answers[q.id]));
+      const first = open.find((q) => incompleteIds.has(q.id) && !isAnswered(answers[q.id], q));
       document.getElementById(`q-${first?.id}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
       toast.error("Answer every question in a section you started, or clear it, before submitting");
       return;
@@ -168,7 +168,6 @@ export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: strin
         survey={survey}
         render={(q, n) => {
           if (!openIds.has(q.id)) {
-            const answer = formatAnswer(survey.answers[q.id]);
             return (
               <li key={q.id} className="space-y-1 border-b border-line bg-paper-sunken/40 px-5 py-3 last:border-b-0">
                 <div className="flex items-start justify-between gap-3">
@@ -179,17 +178,17 @@ export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: strin
                   </p>
                   <QuestionStatusBadge status={q.status} />
                 </div>
-                <p className="whitespace-pre-wrap text-sm font-medium text-ink-muted">{answer && answer !== "—" ? answer : "No answer"}</p>
+                <AnswerView question={q} value={survey.answers[q.id]} />
                 {survey.notes[q.id] && <p className="whitespace-pre-wrap text-xs text-ink-muted">Your note: {survey.notes[q.id]}</p>}
                 <AttachmentList surveyId={survey.id} files={q.attachments.filter((f) => f.kind === "response")} />
                 <QuestionComments comments={pinned[q.id]} surveyId={survey.id} />
               </li>
             );
           }
-          const flagged = showMissing && incompleteIds.has(q.id) && !isAnswered(answers[q.id]);
+          const flagged = showMissing && incompleteIds.has(q.id) && !isAnswered(answers[q.id], q);
           return (
             <li key={q.id} id={`q-${q.id}`} className={cn("space-y-2 border-b border-line px-5 py-4 last:border-b-0", flagged && "bg-rust-soft/40")}>
-              <p className="text-sm text-ink">
+              <p className="whitespace-pre-line text-sm text-ink">
                 <span className="mr-1.5 font-mono-data text-xs text-ink-faint">Q{n}</span>
                     <PdfNumber question={q} />
                 {q.text} {q.required && <span className="text-rust">*</span>}
@@ -225,7 +224,7 @@ export function AnswerForm({ survey, meId }: { survey: SurveyDetail; meId: strin
         }}
       />
 
-      <Card className="sticky bottom-4 flex flex-wrap items-center justify-between gap-3 px-5 py-3">
+      <Card className="sticky -bottom-4 z-10 flex flex-wrap rounded-b-none border-b-0 sm:-bottom-6 items-center justify-between gap-3 px-5 py-3">
         <p className="text-xs text-ink-faint">Your reviewer sees these answers only after you submit.</p>
         <Button onClick={() => trySubmit(ready.map((q) => q.id))} loading={submit.isPending} disabled={ready.length === 0 && incompleteIds.size === 0}>
           Submit {ready.length} question{ready.length === 1 ? "" : "s"} for review

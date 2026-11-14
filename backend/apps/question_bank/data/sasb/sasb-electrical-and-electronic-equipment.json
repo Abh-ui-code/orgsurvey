@@ -45,7 +45,8 @@
      "item": ".2",
      "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with product safety?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses from legal proceedings associated with product safety, in your presentation currency, including settlements, fines and penalties."
+     "hint": "Unit: Presentation currency · Report the total monetary losses from legal proceedings associated with product safety, in your presentation currency, including settlements, fines and penalties.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -69,7 +70,8 @@
      "item": ".3",
      "text": "What was your organisation's revenue from renewable energy-related and energy efficiency-related products?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report revenue from renewable energy-related and energy efficiency-related products in your presentation currency for the reporting period."
+     "hint": "Unit: Presentation currency · Report revenue from renewable energy-related and energy efficiency-related products in your presentation currency for the reporting period.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -105,7 +107,8 @@
      "item": ".3",
      "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with anti-competitive behaviour regulations?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses from legal proceedings associated with anti-competitive behaviour regulations, in your presentation currency, including settlements, fines and penalties."
+     "hint": "Unit: Presentation currency · Report the total monetary losses from legal proceedings associated with anti-competitive behaviour regulations, in your presentation currency, including settlements, fines and penalties.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -123,7 +126,8 @@
      "item": ".B",
      "text": "How many employees does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of employees; state whether it is a headcount or full-time equivalent figure."
+     "hint": "Unit: Number · Report the total number of employees; state whether it is a headcount or full-time equivalent figure.",
+     "unit": ""
     }
    ]
   }

@@ -9,7 +9,8 @@
      "item": ".1",
      "text": "What were your gross global Scope 1 emissions?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) CO₂-e · Report gross global Scope 1 greenhouse gas emissions in metric tonnes CO2-e, covering all seven GHGs under the Kyoto Protocol where applicable."
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Report gross global Scope 1 greenhouse gas emissions in metric tonnes CO2-e, covering all seven GHGs under the Kyoto Protocol where applicable.",
+     "unit": "metric tonnes (t) CO₂-e"
     },
     {
      "item": ".2",
@@ -51,7 +52,8 @@
      "item": ".3",
      "text": "How many incidents of non-compliance with water quality permits, standards and regulations did your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of incidents of non-compliance associated with water quality permits, standards and regulations in the reporting period."
+     "hint": "Unit: Number · Report the total number of incidents of non-compliance associated with water quality permits, standards and regulations in the reporting period.",
+     "unit": ""
     }
    ]
   },
@@ -75,7 +77,8 @@
      "item": ".3",
      "text": "What was your animal protein production from confined animal feeding operations?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report animal protein production from confined animal feeding operations in metric tonnes."
+     "hint": "Unit: Metric tonnes (t) · Report animal protein production from confined animal feeding operations in metric tonnes.",
+     "unit": "metric tonnes (t)"
     }
    ]
   },
@@ -93,7 +96,8 @@
      "item": ".2",
      "text": "What percentage of your supplier facilities are certified to a Global Food Safety Initiative (GFSI) food safety certification programme?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of supplier facilities certified to a GFSI-recognised food safety programme."
+     "hint": "Unit: Percentage (%) · Report the percentage of supplier facilities certified to a GFSI-recognised food safety programme.",
+     "unit": "%"
     },
     {
      "item": ".3",
@@ -153,7 +157,8 @@
      "item": ".2",
      "text": "What percentage of your shell egg sales were cage-free?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of shell egg sales that were cage-free."
+     "hint": "Unit: Percentage (%) · Report the percentage of shell egg sales that were cage-free.",
+     "unit": "%"
     },
     {
      "item": ".3",
@@ -177,7 +182,8 @@
      "item": ".2",
      "text": "What percentage of your supplier and contract production facilities have been verified to meet animal welfare standards?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of supplier and contract production facilities verified to meet animal welfare standards."
+     "hint": "Unit: Percentage (%) · Report the percentage of supplier and contract production facilities verified to meet animal welfare standards.",
+     "unit": "%"
     }
    ]
   },
@@ -213,7 +219,8 @@
      "item": ".A",
      "text": "How many processing and manufacturing facilities does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of processing and manufacturing facilities."
+     "hint": "Unit: Number · Report the number of processing and manufacturing facilities.",
+     "unit": ""
     },
     {
      "item": ".B",

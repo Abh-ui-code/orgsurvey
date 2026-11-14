@@ -15,7 +15,8 @@
      "item": ".2",
      "text": "How many vehicles did your organisation recall?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of vehicles recalled during the reporting period."
+     "hint": "Unit: Number · Report the total number of vehicles recalled during the reporting period.",
+     "unit": ""
     }
    ]
   },
@@ -33,7 +34,8 @@
      "item": ".2",
      "text": "What is your fleet utilisation rate?",
      "type": "number",
-     "hint": "Unit: Rate · Report fleet utilisation as a rate (for example rental days divided by available rental days) and state the calculation."
+     "hint": "Unit: Rate · Report fleet utilisation as a rate (for example rental days divided by available rental days) and state the calculation.",
+     "unit": ""
     }
    ]
   },
@@ -45,19 +47,22 @@
      "item": ".A",
      "text": "What is the average age of your vehicles?",
      "type": "number",
-     "hint": "Unit: Months · Report the average vehicle age in months."
+     "hint": "Unit: Months · Report the average vehicle age in months.",
+     "unit": "months"
     },
     {
      "item": ".B",
      "text": "What are your total available rental days?",
      "type": "number",
-     "hint": "Unit: Days · Report total available rental days for the reporting period."
+     "hint": "Unit: Days · Report total available rental days for the reporting period.",
+     "unit": "days"
     },
     {
      "item": ".C",
      "text": "What was your average rental fleet size?",
      "type": "number",
-     "hint": "Unit: Number of vehicles · Report the average rental fleet size as a number of vehicles."
+     "hint": "Unit: Number of vehicles · Report the average rental fleet size as a number of vehicles.",
+     "unit": "vehicles"
     }
    ]
   }

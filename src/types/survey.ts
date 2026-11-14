@@ -107,7 +107,16 @@ export interface Survey {
   created_at: string;
 }
 
-export type AnswerValue = string | string[] | number;
+/** A row the respondent added beyond the question: anything on the left, anything on the right. */
+export interface ExtraRow {
+  label: string;
+  value: string;
+}
+
+/** What one question was answered with: a text, number, choice or list of choices, a table's values (one per row,
+ * in order), or any of those with extra rows: {answer, extra}. */
+export type AnswerBase = string | number | string[] | (string | number)[];
+export type AnswerValue = AnswerBase | { answer: AnswerBase | null; extra: ExtraRow[] };
 
 export interface SurveySection {
   id: string;

@@ -33,7 +33,8 @@
      "item": ".3",
      "text": "What was the total amount of monetary losses from legal proceedings associated with data security and privacy?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -63,7 +64,8 @@
      "item": ".2",
      "text": "What was the total amount of monetary losses from legal proceedings associated with controlled substances?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -75,7 +77,8 @@
      "item": ".1",
      "text": "What is your first fill adherence rate?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of new prescriptions that patients pick up on the first fill, and state the calculation method and period."
+     "hint": "Unit: Percentage (%) · Report the percentage of new prescriptions that patients pick up on the first fill, and state the calculation method and period.",
+     "unit": "%"
     },
     {
      "item": ".2",
@@ -87,7 +90,8 @@
      "item": ".3",
      "text": "What was the total amount of monetary losses from legal proceedings associated with prescription dispensing errors?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -99,13 +103,15 @@
      "item": ".A",
      "text": "How many pharmacy locations do you operate?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of pharmacy locations at the end of the reporting period."
+     "hint": "Unit: Number · Report the total number of pharmacy locations at the end of the reporting period.",
+     "unit": ""
     },
     {
      "item": ".B",
      "text": "What is the total area of your retail space in square metres?",
      "type": "number",
-     "hint": "Unit: Square metres (m²) · Report the total retail floor area in square metres at the end of the reporting period."
+     "hint": "Unit: Square metres (m²) · Report the total retail floor area in square metres at the end of the reporting period.",
+     "unit": "square metres (m²)"
     },
     {
      "item": ".C",
@@ -117,7 +123,8 @@
      "item": ".D",
      "text": "How many pharmacists does your organisation employ?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of pharmacists at the end of the reporting period."
+     "hint": "Unit: Number · Report the number of pharmacists at the end of the reporting period.",
+     "unit": ""
     }
    ]
   }

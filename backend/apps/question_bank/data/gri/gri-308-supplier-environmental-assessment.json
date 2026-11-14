@@ -51,7 +51,8 @@
           "item": "a",
           "text": "What percentage of new suppliers were screened using environmental criteria?",
           "type": "number",
-          "hint": "Percentage of new suppliers screened using environmental criteria."
+          "hint": "Percentage of new suppliers screened using environmental criteria.",
+          "unit": "%"
         }
       ]
     },
@@ -62,14 +63,16 @@
         {
           "item": "a",
           "text": "How many suppliers were assessed for environmental impacts?",
-          "type": "text",
-          "hint": "Number of suppliers assessed for environmental impacts."
+          "type": "number",
+          "hint": "Number of suppliers assessed for environmental impacts.",
+          "unit": "suppliers"
         },
         {
           "item": "b",
           "text": "How many suppliers were identified as having significant actual and potential negative environmental impacts?",
-          "type": "text",
-          "hint": "Number of suppliers identified with significant actual and potential negative environmental impacts."
+          "type": "number",
+          "hint": "Number of suppliers identified with significant actual and potential negative environmental impacts.",
+          "unit": "suppliers"
         },
         {
           "item": "c",
@@ -80,14 +83,27 @@
         {
           "item": "d",
           "text": "What percentage of those suppliers agreed improvements as a result of the assessment?",
-          "type": "text",
-          "hint": "Percentage of suppliers identified as having significant actual and potential negative environmental impacts with which improvements were agreed upon as a result of assessment."
+          "type": "number",
+          "hint": "Percentage of suppliers identified as having significant actual and potential negative environmental impacts with which improvements were agreed upon as a result of assessment.",
+          "unit": "%"
         },
         {
           "item": "e",
           "text": "What percentage of those suppliers had relationships terminated as a result of the assessment, and why?",
-          "type": "text",
-          "hint": "Percentage of suppliers identified as having significant actual and potential negative environmental impacts with which relationships were terminated as a result of assessment, and why."
+          "type": "table",
+          "hint": "Percentage of suppliers identified as having significant actual and potential negative environmental impacts with which relationships were terminated as a result of assessment, and why.",
+          "parts": [
+            {
+              "label": "Suppliers whose relationships were terminated",
+              "kind": "number",
+              "unit": "%"
+            },
+            {
+              "label": "Why",
+              "kind": "text",
+              "unit": ""
+            }
+          ]
         }
       ]
     }

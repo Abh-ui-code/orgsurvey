@@ -51,7 +51,8 @@
           "item": "a",
           "text": "What percentage of the procurement budget for significant locations of operation is spent on suppliers local to that operation?",
           "type": "number",
-          "hint": "E.g. percentage of products and services purchased locally."
+          "hint": "E.g. percentage of products and services purchased locally.",
+          "unit": "%"
         },
         {
           "item": "b",

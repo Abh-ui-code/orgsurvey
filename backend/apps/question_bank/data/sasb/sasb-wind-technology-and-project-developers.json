@@ -93,13 +93,15 @@
      "item": ".C",
      "text": "What was the amount of your turbine backlog?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the value of the turbine backlog in your presentation currency."
+     "hint": "Unit: Presentation currency · Report the value of the turbine backlog in your presentation currency.",
+     "unit": "presentation currency"
     },
     {
      "item": ".D",
      "text": "What was the aggregate capacity of your turbine backlog, in megawatts?",
      "type": "number",
-     "hint": "Unit: Megawatts (MW) · Report aggregate capacity of the turbine backlog in MW."
+     "hint": "Unit: Megawatts (MW) · Report aggregate capacity of the turbine backlog in MW.",
+     "unit": "megawatts (MW)"
     }
    ]
   }

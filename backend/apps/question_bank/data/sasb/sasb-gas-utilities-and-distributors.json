@@ -8,8 +8,30 @@
     {
      "item": ".1",
      "text": "What is your average retail gas rate for (1) residential, (2) commercial, (3) industrial customers and (4) transportation services only?",
-     "type": "text",
-     "hint": "Unit: rate (presentation currency per unit of gas) · Report the average retail rate for each of the four categories."
+     "type": "table",
+     "hint": "Unit: rate (presentation currency per unit of gas) · Report the average retail rate for each of the four categories.",
+     "parts": [
+      {
+       "label": "Residential",
+       "kind": "number",
+       "unit": "presentation currency per unit of gas"
+      },
+      {
+       "label": "Commercial",
+       "kind": "number",
+       "unit": "presentation currency per unit of gas"
+      },
+      {
+       "label": "Industrial customers",
+       "kind": "number",
+       "unit": "presentation currency per unit of gas"
+      },
+      {
+       "label": "Transportation services only",
+       "kind": "number",
+       "unit": "presentation currency per unit of gas"
+      }
+     ]
     },
     {
      "item": ".3",
@@ -80,14 +102,48 @@
     {
      "item": ".B",
      "text": "How much natural gas did you deliver to (1) residential, (2) commercial and (3) industrial customers, and (4) transfer to a third party?",
-     "type": "text",
-     "hint": "Unit: million British thermal units (MMBtu) · Report MMBtu for each of the four categories."
+     "type": "table",
+     "hint": "Unit: million British thermal units (MMBtu) · Report MMBtu for each of the four categories.",
+     "parts": [
+      {
+       "label": "Residential",
+       "kind": "number",
+       "unit": "million British thermal units (MMBtu)"
+      },
+      {
+       "label": "Commercial",
+       "kind": "number",
+       "unit": "million British thermal units (MMBtu)"
+      },
+      {
+       "label": "Industrial customers",
+       "kind": "number",
+       "unit": "million British thermal units (MMBtu)"
+      },
+      {
+       "label": "Transfer to a third party",
+       "kind": "number",
+       "unit": "million British thermal units (MMBtu)"
+      }
+     ]
     },
     {
      "item": ".C",
      "text": "What is the length of your gas (1) transmission and (2) distribution pipelines, in kilometres?",
-     "type": "text",
-     "hint": "Unit: kilometres (km) · Report pipeline length separately for transmission and distribution."
+     "type": "table",
+     "hint": "Unit: kilometres (km) · Report pipeline length separately for transmission and distribution.",
+     "parts": [
+      {
+       "label": "Transmission",
+       "kind": "number",
+       "unit": "kilometres (km)"
+      },
+      {
+       "label": "Distribution pipelines",
+       "kind": "number",
+       "unit": "kilometres (km)"
+      }
+     ]
     }
    ]
   }

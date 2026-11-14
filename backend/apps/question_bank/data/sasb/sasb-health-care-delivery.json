@@ -51,7 +51,8 @@
      "item": ".4",
      "text": "What was the total amount of monetary losses from legal proceedings associated with data security and privacy?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -75,7 +76,8 @@
      "item": ".2",
      "text": "How many serious reportable events occurred?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of serious reportable events (never events) in the reporting period."
+     "hint": "Unit: Number · Report the number of serious reportable events (never events) in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".3",
@@ -177,7 +179,8 @@
      "item": ".1",
      "text": "What was the total amount of monetary losses from legal proceedings associated with medical fraud?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency.",
+     "unit": "presentation currency"
     }
    ]
   },

@@ -61,7 +61,7 @@ export function Returns({ survey }: { survey: SurveyDetail }) {
                   {event.question_comments.map((c) => {
                     const q = questions.get(c.question_id);
                     const sent = sentFor(c.question_id);
-                    const answer = sent ? formatAnswer(sent.snapshot[c.question_id]) : "";
+                    const answer = sent ? formatAnswer(sent.snapshot[c.question_id], q?.question) : "";
                     return (
                       <li key={c.id} className="grid gap-3 px-4 py-3 md:grid-cols-2">
                         <div>

@@ -7,9 +7,37 @@
    "questions": [
     {
      "item": "a",
+     "text": "Reporting in accordance with the GRI Standards enables an organization to provide a comprehensive picture of its most significant impacts on the economy, environment, and people, including impacts on their human rights, and how it manages these impacts. This allows information users to make informed assessments and decisions about the organization’s impacts and its contribution to sustainable development.\n\nIf the organization does not comply with all nine requirements, it cannot claim that it has prepared the reported information in accordance with the GRI Standards. In such a case, the organization may be able to claim that it has prepared the reported information with reference to the GRI Standards, provided it complies with the requirements specified in ‘Reporting with reference to the GRI Standards’ at the end of this section",
+     "type": "table",
+     "hint": "Requirement 1-a. Fill in every row.",
+     "parts": [
+      {
+       "label": "a. Name of the organization",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "b. Reporting period: start date",
+       "kind": "date",
+       "unit": ""
+      },
+      {
+       "label": "b. Reporting period: end date",
+       "kind": "date",
+       "unit": ""
+      },
+      {
+       "label": "c. Has the organization reported in accordance with the GRI Standards for the mentioned reporting period?",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
+    },
+    {
+     "item": "b",
      "text": "Do you apply all the reporting principles specified in section 4 of GRI 1: Foundation 2021?",
      "type": "yes_no",
-     "hint": "Requirement 1-a. The principles cover accuracy, balance, clarity, comparability, completeness, sustainability context, timeliness and verifiability."
+     "hint": "Requirement 1-b. The principles cover accuracy, balance, clarity, comparability, completeness, sustainability context, timeliness and verifiability."
     }
    ]
   },
@@ -49,19 +77,19 @@
    "questions": [
     {
      "item": "a",
-     "text": "Do you report your process of determining material topics using Disclosure 3-1?",
+     "text": "Do you report your process of determining material topics using Disclosure 3-1? Describe how and where it is reported.",
      "type": "text",
      "hint": "Requirement 4-a. Reasons for omission are not permitted for 3-1."
     },
     {
      "item": "b",
-     "text": "Do you report a list of your material topics using Disclosure 3-2?",
+     "text": "Do you report a list of your material topics using Disclosure 3-2? Describe how and where it is reported.",
      "type": "text",
      "hint": "Requirement 4-b. Reasons for omission are not permitted for 3-2."
     },
     {
      "item": "c",
-     "text": "Do you report how you manage each material topic using Disclosure 3-3?",
+     "text": "Do you report how you manage each material topic using Disclosure 3-3? Describe how and where it is reported.",
      "type": "text",
      "hint": "Requirement 4-c. Reasons for omission are permitted only for 3-3, and must be given in the GRI content index."
     }
@@ -73,7 +101,7 @@
    "questions": [
     {
      "item": "a",
-     "text": "Do you report disclosures from the GRI Topic Standards for each material topic?",
+     "text": "Do you report disclosures from the GRI Topic Standards for each material topic? List the Topic Standard disclosures reported for each material topic.",
      "type": "text",
      "hint": "Requirement 5-a. Report only the disclosures relevant to your impacts in relation to each material topic; there is no minimum number of disclosures."
     },
@@ -109,7 +137,7 @@
     },
     {
      "item": "b",
-     "text": "If you publish a standalone sustainability report and the GRI content index is not included in the report itself, do you provide a link or reference to the GRI content index in the report?",
+     "text": "If you publish a standalone sustainability report and the GRI content index is not included in the report itself, do you provide a link or reference to the GRI content index in the report? Provide the link or reference.",
      "type": "text",
      "hint": "Requirement 7-b."
     }
@@ -121,7 +149,7 @@
    "questions": [
     {
      "item": "a",
-     "text": "Do you include the following statement in your GRI content index: '[Name of organization] has reported in accordance with the GRI Standards for the period [reporting period start and end dates]'?",
+     "text": "Do you include the following statement in your GRI content index: '[Name of organization] has reported in accordance with the GRI Standards for the period [reporting period start and end dates]'? Provide the statement as published.",
      "type": "text",
      "hint": "Requirement 8-a. Insert the organization's name and the start and end dates of the reporting period."
     }
@@ -133,7 +161,7 @@
    "questions": [
     {
      "item": "a",
-     "text": "Have you notified GRI of your use of the GRI Standards and the statement of use by sending an email to reportregistration@globalreporting.org?",
+     "text": "Have you notified GRI of your use of the GRI Standards and the statement of use by sending an email to reportregistration@globalreporting.org? State when and by whom you notified GRI.",
      "type": "text",
      "hint": "Requirement 9-a. Include the legal name, the link to the GRI content index, the link to the report if a standalone report is published, the statement of use, and a contact person."
     }

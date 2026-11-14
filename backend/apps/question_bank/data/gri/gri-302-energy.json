@@ -68,20 +68,65 @@
         {
           "item": "c",
           "text": "What is the total electricity, heating, cooling and steam consumption?",
-          "type": "text",
-          "hint": "In joules, watt-hours or multiples: i. electricity; ii. heating; iii. cooling; iv. steam consumption."
+          "type": "table",
+          "hint": "In joules, watt-hours or multiples: i. electricity; ii. heating; iii. cooling; iv. steam consumption.",
+          "parts": [
+            {
+              "label": "Electricity consumption",
+              "kind": "number",
+              "unit": "joules or multiples (e.g. GJ)"
+            },
+            {
+              "label": "Heating consumption",
+              "kind": "number",
+              "unit": "joules or multiples (e.g. GJ)"
+            },
+            {
+              "label": "Cooling consumption",
+              "kind": "number",
+              "unit": "joules or multiples (e.g. GJ)"
+            },
+            {
+              "label": "Steam consumption",
+              "kind": "number",
+              "unit": "joules or multiples (e.g. GJ)"
+            }
+          ]
         },
         {
           "item": "d",
           "text": "What is the total electricity, heating, cooling and steam sold?",
-          "type": "text",
-          "hint": "In joules, watt-hours or multiples: i. electricity sold; ii. heating sold; iii. cooling sold; iv. steam sold."
+          "type": "table",
+          "hint": "In joules, watt-hours or multiples: i. electricity sold; ii. heating sold; iii. cooling sold; iv. steam sold.",
+          "parts": [
+            {
+              "label": "Electricity sold",
+              "kind": "number",
+              "unit": "joules or multiples (e.g. GJ)"
+            },
+            {
+              "label": "Heating sold",
+              "kind": "number",
+              "unit": "joules or multiples (e.g. GJ)"
+            },
+            {
+              "label": "Cooling sold",
+              "kind": "number",
+              "unit": "joules or multiples (e.g. GJ)"
+            },
+            {
+              "label": "Steam sold",
+              "kind": "number",
+              "unit": "joules or multiples (e.g. GJ)"
+            }
+          ]
         },
         {
           "item": "e",
           "text": "What is the total energy consumption within the organization?",
-          "type": "text",
-          "hint": "In joules or multiples."
+          "type": "number",
+          "hint": "In joules or multiples.",
+          "unit": "joules or multiples (e.g. GJ)"
         },
         {
           "item": "f",

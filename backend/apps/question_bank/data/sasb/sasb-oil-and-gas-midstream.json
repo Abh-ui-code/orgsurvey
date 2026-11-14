@@ -26,8 +26,30 @@
     {
      "item": ".1",
      "text": "What are your organisation's air emissions of the following pollutants: (1) NOx (excluding N2O), (2) SOx, (3) volatile organic compounds (VOCs) and (4) particulate matter (PM10)?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes (t) · Report each pollutant separately in metric tonnes, covering all operations and noting estimation or measurement methods; state any pollutant that is not applicable."
+     "type": "table",
+     "hint": "Unit: Metric tonnes (t) · Report each pollutant separately in metric tonnes, covering all operations and noting estimation or measurement methods; state any pollutant that is not applicable.",
+     "parts": [
+      {
+       "label": "NOx (excluding N2O)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "SOx",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Volatile organic compounds (VOCs)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Particulate matter (PM10)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      }
+     ]
     }
    ]
   },
@@ -69,7 +91,8 @@
      "item": ".1",
      "text": "What is the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with pipeline and storage regulations?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses (fines, settlements, judgements) in presentation currency for the reporting period."
+     "hint": "Unit: Presentation currency · Report the total monetary losses (fines, settlements, judgements) in presentation currency for the reporting period.",
+     "unit": "presentation currency"
     }
    ]
   },

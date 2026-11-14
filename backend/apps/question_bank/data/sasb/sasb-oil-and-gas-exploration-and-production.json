@@ -14,8 +14,35 @@
     {
      "item": ".2",
      "text": "What is the amount of your gross global Scope 1 emissions from (1) flared hydrocarbons, (2) other combustion, (3) process emissions, (4) other vented emissions and (5) fugitive emissions?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes CO₂-e · Report each of the five sources separately in metric tonnes CO2-e, and the calculation methods used."
+     "type": "table",
+     "hint": "Unit: Metric tonnes CO₂-e · Report each of the five sources separately in metric tonnes CO2-e, and the calculation methods used.",
+     "parts": [
+      {
+       "label": "Flared hydrocarbons",
+       "kind": "number",
+       "unit": "metric tonnes CO₂-e"
+      },
+      {
+       "label": "Other combustion",
+       "kind": "number",
+       "unit": "metric tonnes CO₂-e"
+      },
+      {
+       "label": "Process emissions",
+       "kind": "number",
+       "unit": "metric tonnes CO₂-e"
+      },
+      {
+       "label": "Other vented emissions",
+       "kind": "number",
+       "unit": "metric tonnes CO₂-e"
+      },
+      {
+       "label": "Fugitive emissions",
+       "kind": "number",
+       "unit": "metric tonnes CO₂-e"
+      }
+     ]
     },
     {
      "item": ".3",
@@ -32,8 +59,30 @@
     {
      "item": ".1",
      "text": "What are your organisation's air emissions of the following pollutants: (1) NOx (excluding N2O), (2) SOx, (3) volatile organic compounds (VOCs) and (4) particulate matter (PM10)?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes (t) · Report each pollutant separately in metric tonnes, covering all operations and noting estimation or measurement methods; state any pollutant that is not applicable."
+     "type": "table",
+     "hint": "Unit: Metric tonnes (t) · Report each pollutant separately in metric tonnes, covering all operations and noting estimation or measurement methods; state any pollutant that is not applicable.",
+     "parts": [
+      {
+       "label": "NOx (excluding N2O)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "SOx",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Volatile organic compounds (VOCs)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Particulate matter (PM10)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      }
+     ]
     }
    ]
   },
@@ -57,7 +106,8 @@
      "item": ".3",
      "text": "What percentage of your hydraulically fractured wells have public disclosure of all fracturing fluid chemicals used?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of hydraulically fractured wells with full public disclosure of fracturing fluid chemicals (e.g. via FracFocus)."
+     "hint": "Unit: Percentage (%) · Report the percentage of hydraulically fractured wells with full public disclosure of fracturing fluid chemicals (e.g. via FracFocus).",
+     "unit": "%"
     },
     {
      "item": ".4",
@@ -165,7 +215,8 @@
      "item": ".2",
      "text": "What is the estimated carbon dioxide emissions embedded in your proved hydrocarbon reserves?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) CO₂-e · Report estimated CO2 emissions embedded in proved reserves in metric tonnes CO2-e, and state the method and emission factors used."
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Report estimated CO2 emissions embedded in proved reserves in metric tonnes CO2-e, and state the method and emission factors used.",
+     "unit": "metric tonnes (t) CO₂-e"
     },
     {
      "item": ".3",
@@ -218,8 +269,9 @@
     {
      "item": ".1",
      "text": "What are your Process Safety Event (PSE) rates for Loss of Primary Containment (LOPC) of greater consequence (Tier 1)?",
-     "type": "text",
-     "hint": "Unit: Rate · Report the PSE rate(s) for each tier named per 200,000 hours worked (or the basis you use), covering employees and contractors."
+     "type": "number",
+     "hint": "Unit: Rate · Report the PSE rate(s) for each tier named per 200,000 hours worked (or the basis you use), covering employees and contractors.",
+     "unit": ""
     },
     {
      "item": ".2",
@@ -243,13 +295,15 @@
      "item": ".B",
      "text": "How many offshore sites does your organisation operate?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of offshore sites at the end of the reporting period."
+     "hint": "Unit: Number · Report the number of offshore sites at the end of the reporting period.",
+     "unit": ""
     },
     {
      "item": ".C",
      "text": "How many terrestrial sites does your organisation operate?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of terrestrial (onshore) sites at the end of the reporting period."
+     "hint": "Unit: Number · Report the number of terrestrial (onshore) sites at the end of the reporting period.",
+     "unit": ""
     }
    ]
   }

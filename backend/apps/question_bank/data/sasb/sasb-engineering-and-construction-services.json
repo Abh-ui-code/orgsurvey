@@ -9,7 +9,8 @@
      "item": ".1",
      "text": "How many incidents of non-compliance with environmental permits, standards and regulations did you have?",
      "type": "number",
-     "hint": "Unit: number · Report the total number of incidents in the reporting period."
+     "hint": "Unit: number · Report the total number of incidents in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".2",
@@ -27,13 +28,15 @@
      "item": ".1",
      "text": "What was the amount of your defect- and safety-related rework costs?",
      "type": "number",
-     "hint": "Unit: presentation currency · Report the total rework cost for the reporting period in your presentation currency."
+     "hint": "Unit: presentation currency · Report the total rework cost for the reporting period in your presentation currency.",
+     "unit": "presentation currency"
     },
     {
      "item": ".2",
      "text": "What was the total amount of monetary losses from legal proceedings associated with defect- and safety-related incidents?",
      "type": "number",
-     "hint": "Unit: presentation currency · Report total monetary losses from such legal proceedings in your presentation currency."
+     "hint": "Unit: presentation currency · Report total monetary losses from such legal proceedings in your presentation currency.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -74,20 +77,34 @@
     {
      "item": ".1",
      "text": "What is the amount of your backlog for (1) hydrocarbon-related projects and (2) renewable energy projects?",
-     "type": "text",
-     "hint": "Unit: presentation currency · Report backlog separately for hydrocarbon-related and renewable energy projects."
+     "type": "table",
+     "hint": "Unit: presentation currency · Report backlog separately for hydrocarbon-related and renewable energy projects.",
+     "parts": [
+      {
+       "label": "Hydrocarbon-related projects",
+       "kind": "number",
+       "unit": "presentation currency"
+      },
+      {
+       "label": "Renewable energy projects",
+       "kind": "number",
+       "unit": "presentation currency"
+      }
+     ]
     },
     {
      "item": ".2",
      "text": "What was the amount of backlog cancellations associated with hydrocarbon-related projects?",
      "type": "number",
-     "hint": "Unit: presentation currency · Report the value of backlog cancellations for hydrocarbon-related projects in the period."
+     "hint": "Unit: presentation currency · Report the value of backlog cancellations for hydrocarbon-related projects in the period.",
+     "unit": "presentation currency"
     },
     {
      "item": ".3",
      "text": "What is the amount of your backlog for non-energy projects associated with climate change mitigation?",
      "type": "number",
-     "hint": "Unit: presentation currency · Report backlog value for non-energy projects that contribute to climate change mitigation."
+     "hint": "Unit: presentation currency · Report backlog value for non-energy projects that contribute to climate change mitigation.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -104,8 +121,20 @@
     {
      "item": ".2",
      "text": "What was the total amount of monetary losses from legal proceedings associated with charges of (1) bribery or corruption and (2) anti-competitive practices?",
-     "type": "text",
-     "hint": "Unit: presentation currency · Report losses separately for bribery or corruption and for anti-competitive practices."
+     "type": "table",
+     "hint": "Unit: presentation currency · Report losses separately for bribery or corruption and for anti-competitive practices.",
+     "parts": [
+      {
+       "label": "Bribery or corruption",
+       "kind": "number",
+       "unit": "presentation currency"
+      },
+      {
+       "label": "Anti-competitive practices",
+       "kind": "number",
+       "unit": "presentation currency"
+      }
+     ]
     },
     {
      "item": ".3",
@@ -123,19 +152,22 @@
      "item": ".A",
      "text": "How many active projects do you have?",
      "type": "number",
-     "hint": "Unit: number · Report the number of active projects at the end of the reporting period."
+     "hint": "Unit: number · Report the number of active projects at the end of the reporting period.",
+     "unit": ""
     },
     {
      "item": ".B",
      "text": "How many projects did you commission?",
      "type": "number",
-     "hint": "Unit: number · Report the number of projects commissioned in the reporting period."
+     "hint": "Unit: number · Report the number of projects commissioned in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".C",
      "text": "What is your total backlog?",
      "type": "number",
-     "hint": "Unit: presentation currency · Report the total value of backlog in your presentation currency."
+     "hint": "Unit: presentation currency · Report the total value of backlog in your presentation currency.",
+     "unit": "presentation currency"
     }
    ]
   }

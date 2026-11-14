@@ -21,7 +21,7 @@ import { useBankCategories } from "@/hooks/use-bank-categories";
 import { useBankQuestions } from "@/hooks/use-bank-questions";
 import { useDebounced } from "@/hooks/use-debounced";
 import { useSurvey } from "@/hooks/use-surveys";
-import { FRAMEWORKS, questionTypeLabel, type StandardFramework } from "@/types/question";
+import { FRAMEWORKS, questionKindLabel, type StandardFramework } from "@/types/question";
 import type { SurveyDetail } from "@/types/survey";
 import { useAddQuestion, useDeleteQuestion, useDeleteSection } from "../_hooks/use-survey-builder";
 
@@ -106,7 +106,7 @@ function BankPicker({ survey, sectionId }: { survey: SurveyDetail; sectionId: st
                     <div className="flex items-center justify-between gap-2">
                       <p className="flex flex-wrap items-center gap-1.5 text-xs text-ink-faint">
                         <Badge>{q.category.label}</Badge>
-                        {questionTypeLabel(q.type)}
+                        {questionKindLabel(q)}
                       </p>
                       {added ? (
                         <span className="flex shrink-0 items-center gap-2">
@@ -376,7 +376,7 @@ export default function AddQuestionPage() {
                         <span className="mr-1.5 font-medium text-ink-muted">Q{q.number}</span>
                         {q.text}
                       </p>
-                      <p className="text-xs text-ink-faint">{questionTypeLabel(q.type)}</p>
+                      <p className="text-xs text-ink-faint">{questionKindLabel(q)}</p>
                     </div>
                     <IconButton
                       label="Remove question"

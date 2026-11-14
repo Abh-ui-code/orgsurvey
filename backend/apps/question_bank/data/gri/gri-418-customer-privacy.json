@@ -51,13 +51,31 @@
           "item": "a",
           "text": "What was the total number of substantiated complaints received concerning breaches of customer privacy, categorized by (i) complaints received from outside parties and substantiated by the organization, and (ii) complaints from regulatory bodies?",
           "hint": "Indicate if a substantial number of breaches relate to events in preceding years.",
-          "type": "text"
+          "type": "table",
+          "parts": [
+            {
+              "label": "Total substantiated complaints",
+              "kind": "number",
+              "unit": "complaints"
+            },
+            {
+              "label": "From outside parties and substantiated by the organization",
+              "kind": "number",
+              "unit": "complaints"
+            },
+            {
+              "label": "From regulatory bodies",
+              "kind": "number",
+              "unit": "complaints"
+            }
+          ]
         },
         {
           "item": "b",
           "text": "What was the total number of identified leaks, thefts or losses of customer data?",
           "hint": "Total number identified.",
-          "type": "text"
+          "type": "number",
+          "unit": "incidents"
         },
         {
           "item": "c",

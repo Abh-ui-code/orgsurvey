@@ -117,6 +117,10 @@ class SurveyQuestion(BaseModel):
     text = models.TextField()
     type = models.CharField(max_length=20, default="text")
     options = models.JSONField(default=list, blank=True)
+    # A number question's unit ("hectares", "%"), shown beside the box so the respondent only types the figure.
+    unit = models.CharField(max_length=40, blank=True)
+    # A table question's rows: [{"label", "kind": "number" | "text", "unit"}], one answer box per row.
+    parts = models.JSONField(default=list, blank=True)
     hint = models.CharField(max_length=500, blank=True)
     required = models.BooleanField(default=True)
     bank_question = models.ForeignKey(

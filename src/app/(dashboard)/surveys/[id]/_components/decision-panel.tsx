@@ -79,7 +79,7 @@ export function DecisionPanel({
   }
 
   return (
-    <Card className="sticky bottom-4 z-10 shadow-lg">
+    <Card className="sticky -bottom-4 z-10 rounded-b-none border-b-0 shadow-lg sm:-bottom-6">
       <CardHeader className="py-3">
         <CardTitle>{role === "reviewer" ? "Your review" : "Your approval"}</CardTitle>
         <span className="flex items-center gap-2 text-xs">

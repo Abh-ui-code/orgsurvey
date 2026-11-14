@@ -9,19 +9,22 @@
      "item": ".1",
      "text": "What was the total amount of monetary losses as a result of legal proceedings associated with marketing and communication of insurance product-related information to new and returning customers?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period."
+     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period.",
+     "unit": "presentation currency"
     },
     {
      "item": ".2",
      "text": "What is your complaints-to-claims ratio?",
      "type": "number",
-     "hint": "Unit: Rate · Report the ratio of complaints to claims as a rate for the reporting period."
+     "hint": "Unit: Rate · Report the ratio of complaints to claims as a rate for the reporting period.",
+     "unit": ""
     },
     {
      "item": ".3",
      "text": "What is your customer retention rate?",
      "type": "number",
-     "hint": "Unit: Rate · Report the rate of customers retained over the reporting period."
+     "hint": "Unit: Rate · Report the rate of customers retained over the reporting period.",
+     "unit": ""
     },
     {
      "item": ".4",
@@ -51,7 +54,8 @@
      "item": ".1",
      "text": "What were your net premiums written related to energy efficiency and low carbon technology?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report net premiums written in your presentation currency for the reporting period."
+     "hint": "Unit: Presentation currency · Report net premiums written in your presentation currency for the reporting period.",
+     "unit": "presentation currency"
     },
     {
      "item": ".2",
@@ -81,7 +85,8 @@
      "item": ".3",
      "text": "What percentage of your gross exposure is included in the financed emissions calculation?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report a percentage (0 to 100) of gross exposure covered by the calculation."
+     "hint": "Unit: Percentage (%) · Report a percentage (0 to 100) of gross exposure covered by the calculation.",
+     "unit": "%"
     },
     {
      "item": ".4",
@@ -98,8 +103,9 @@
     {
      "item": ".1",
      "text": "What is the Probable Maximum Loss (PML) of your insured products from weather-related natural catastrophes?",
-     "type": "text",
-     "hint": "Unit: Presentation currency · Report PML in your presentation currency, by the relevant weather-related catastrophe types, and note the modelling approach."
+     "type": "number",
+     "hint": "Unit: Presentation currency · Report PML in your presentation currency, by the relevant weather-related catastrophe types, and note the modelling approach.",
+     "unit": "presentation currency"
     },
     {
      "item": ".2",
@@ -129,7 +135,8 @@
      "item": ".2",
      "text": "What is the total fair value of your securities lending collateral assets?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total fair value in your presentation currency."
+     "hint": "Unit: Presentation currency · Report the total fair value in your presentation currency.",
+     "unit": "presentation currency"
     },
     {
      "item": ".3",

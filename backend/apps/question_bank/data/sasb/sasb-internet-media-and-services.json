@@ -39,13 +39,15 @@
      "item": ".2",
      "text": "How many users have information that is used for secondary purposes?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of users whose information is used for purposes other than that for which it was collected, such as targeted advertising or sale to third parties. Count only users who have not opted out where relevant."
+     "hint": "Unit: Number · Report the number of users whose information is used for purposes other than that for which it was collected, such as targeted advertising or sale to third parties. Count only users who have not opted out where relevant.",
+     "unit": ""
     },
     {
      "item": ".3",
      "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with user privacy?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from user privacy proceedings. Include any legal proceedings that ended in the period."
+     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from user privacy proceedings. Include any legal proceedings that ended in the period.",
+     "unit": "presentation currency"
     },
     {
      "item": ".4",
@@ -93,13 +95,15 @@
      "item": ".1",
      "text": "What percentage of your organisation's employees require a work visa?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the share of total employees who require a work visa to work in the country where they are employed, as a percentage of all employees."
+     "hint": "Unit: Percentage (%) · Report the share of total employees who require a work visa to work in the country where they are employed, as a percentage of all employees.",
+     "unit": "%"
     },
     {
      "item": ".2",
      "text": "What is your organisation's employee engagement, expressed as a percentage?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of employees who are engaged, based on a survey. Note the survey method, whether it was run by you or a third party, and the response rate or scope."
+     "hint": "Unit: Percentage (%) · Report the percentage of employees who are engaged, based on a survey. Note the survey method, whether it was run by you or a third party, and the response rate or scope.",
+     "unit": "%"
     },
     {
      "item": ".3",
@@ -117,7 +121,8 @@
      "item": ".1",
      "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with anti-competitive behaviour regulations?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from anti-competition, anti-trust or monopoly proceedings. Include any legal proceedings that ended in the period."
+     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from anti-competition, anti-trust or monopoly proceedings. Include any legal proceedings that ended in the period.",
+     "unit": "presentation currency"
     }
    ]
   },

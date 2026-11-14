@@ -141,19 +141,22 @@
      "item": ".A",
      "text": "What was the total capacity of the photovoltaic (PV) solar modules you produced, in megawatts?",
      "type": "number",
-     "hint": "Unit: Megawatts (MW) · Report total capacity of PV solar modules produced in MW for the reporting period."
+     "hint": "Unit: Megawatts (MW) · Report total capacity of PV solar modules produced in MW for the reporting period.",
+     "unit": "megawatts (MW)"
     },
     {
      "item": ".B",
      "text": "What was the total capacity of the completed solar energy systems, in megawatts?",
      "type": "number",
-     "hint": "Unit: Megawatts (MW) · Report total capacity of completed solar energy systems in MW for the reporting period."
+     "hint": "Unit: Megawatts (MW) · Report total capacity of completed solar energy systems in MW for the reporting period.",
+     "unit": "megawatts (MW)"
     },
     {
      "item": ".C",
      "text": "What was the total value of your project development assets?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total value of project development assets in your presentation currency."
+     "hint": "Unit: Presentation currency · Report the total value of project development assets in your presentation currency.",
+     "unit": "presentation currency"
     }
    ]
   }

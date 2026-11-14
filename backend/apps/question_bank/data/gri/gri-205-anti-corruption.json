@@ -50,8 +50,20 @@
         {
           "item": "a",
           "text": "How many operations, and what percentage of the total, have been assessed for risks related to corruption?",
-          "type": "text",
-          "hint": "Total number and percentage of operations assessed for risks related to corruption."
+          "type": "table",
+          "hint": "Total number and percentage of operations assessed for risks related to corruption.",
+          "parts": [
+            {
+              "label": "Operations assessed for corruption risks",
+              "kind": "number",
+              "unit": "operations"
+            },
+            {
+              "label": "Percentage of total operations",
+              "kind": "number",
+              "unit": "%"
+            }
+          ]
         },
         {
           "item": "b",
@@ -86,14 +98,38 @@
         {
           "item": "d",
           "text": "How many governance body members, and what percentage, have received training on anti-corruption, by region?",
-          "type": "text",
-          "hint": "Total number and percentage of governance body members trained, broken down by region."
+          "type": "table",
+          "hint": "Total number and percentage of governance body members trained, broken down by region.",
+          "parts": [
+            {
+              "label": "Governance body members trained",
+              "kind": "number",
+              "unit": "members"
+            },
+            {
+              "label": "Percentage of governance body members",
+              "kind": "number",
+              "unit": "%"
+            }
+          ]
         },
         {
           "item": "e",
           "text": "How many employees, and what percentage, have received training on anti-corruption, by employee category and region?",
-          "type": "text",
-          "hint": "Total number and percentage of employees trained, broken down by employee category and region."
+          "type": "table",
+          "hint": "Total number and percentage of employees trained, broken down by employee category and region.",
+          "parts": [
+            {
+              "label": "Employees trained",
+              "kind": "number",
+              "unit": "employees"
+            },
+            {
+              "label": "Percentage of employees",
+              "kind": "number",
+              "unit": "%"
+            }
+          ]
         }
       ]
     },
@@ -104,8 +140,20 @@
         {
           "item": "a",
           "text": "What is the total number and nature of confirmed incidents of corruption?",
-          "type": "text",
-          "hint": "Total number and nature of confirmed incidents of corruption."
+          "type": "table",
+          "hint": "Total number and nature of confirmed incidents of corruption.",
+          "parts": [
+            {
+              "label": "Total confirmed incidents of corruption",
+              "kind": "number",
+              "unit": "incidents"
+            },
+            {
+              "label": "Nature of the confirmed incidents",
+              "kind": "text",
+              "unit": ""
+            }
+          ]
         },
         {
           "item": "b",

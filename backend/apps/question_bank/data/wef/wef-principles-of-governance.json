@@ -66,7 +66,8 @@
      "item": "2.1",
      "text": "How many members does your highest governance body have in total?",
      "type": "number",
-     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count all current members of the highest governance body (for example the board). Report a whole number."
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count all current members of the highest governance body (for example the board). Report a whole number.",
+     "unit": ""
     },
     {
      "item": "2.2",
@@ -78,49 +79,57 @@
      "item": "2.3",
      "text": "How many members of the highest governance body have competencies relating to economic topics?",
      "type": "number",
-     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members with experience or expertise in economic topics such as finance, strategy or markets."
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members with experience or expertise in economic topics such as finance, strategy or markets.",
+     "unit": ""
     },
     {
      "item": "2.4",
      "text": "How many members of the highest governance body have competencies relating to environmental topics?",
      "type": "number",
-     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members with experience or expertise in environmental topics such as climate, resources or biodiversity."
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members with experience or expertise in environmental topics such as climate, resources or biodiversity.",
+     "unit": ""
     },
     {
      "item": "2.5",
      "text": "How many members of the highest governance body have competencies relating to social topics?",
      "type": "number",
-     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members with experience or expertise in social topics such as labour, human rights, health and safety or community."
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members with experience or expertise in social topics such as labour, human rights, health and safety or community.",
+     "unit": ""
     },
     {
      "item": "2.6",
      "text": "How many members of the highest governance body are executive members?",
      "type": "number",
-     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Executive members are also employed in management roles of the company. Report a whole number."
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Executive members are also employed in management roles of the company. Report a whole number.",
+     "unit": ""
     },
     {
      "item": "2.7",
      "text": "How many members of the highest governance body are non-executive members?",
      "type": "number",
-     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Non-executive members do not hold management roles in the company. Report a whole number."
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Non-executive members do not hold management roles in the company. Report a whole number.",
+     "unit": ""
     },
     {
      "item": "2.8",
      "text": "How many members of the highest governance body are independent?",
      "type": "number",
-     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members who meet your or your regulator's independence criteria. State the criteria used in your notes if possible."
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members who meet your or your regulator's independence criteria. State the criteria used in your notes if possible.",
+     "unit": ""
     },
     {
      "item": "2.9",
      "text": "What is the average tenure, in years, of members on the highest governance body?",
      "type": "number",
-     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Average number of years members have served on the governance body. Also note the longest tenure if available."
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Average number of years members have served on the governance body. Also note the longest tenure if available.",
+     "unit": "years"
     },
     {
      "item": "2.10",
      "text": "How many members of the highest governance body hold other significant positions or commitments?",
      "type": "number",
-     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members with significant positions elsewhere, such as other boards or major organisations."
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members with significant positions elsewhere, such as other boards or major organisations.",
+     "unit": ""
     },
     {
      "item": "2.11",
@@ -132,13 +141,15 @@
      "item": "2.12",
      "text": "How many members of the highest governance body are women?",
      "type": "number",
-     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Report the number by gender. Also report any members of another gender identity, if applicable."
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Report the number by gender. Also report any members of another gender identity, if applicable.",
+     "unit": ""
     },
     {
      "item": "2.13",
      "text": "How many members of the highest governance body belong to under-represented social groups?",
      "type": "number",
-     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members from groups under-represented in your context, such as minority or indigenous groups, or people with disabilities, where you can lawfully collect this."
+     "hint": "Quality of governing body · Source: GRI (102-22), GRI (405-1a), IR (4B). Count members from groups under-represented in your context, such as minority or indigenous groups, or people with disabilities, where you can lawfully collect this.",
+     "unit": ""
     },
     {
      "item": "2.14",
@@ -219,19 +230,22 @@
      "item": "4.2",
      "text": "What percentage of governance body members received training on your anti-corruption policies and procedures?",
      "type": "number",
-     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Governance body members trained divided by total members, times 100."
+     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Governance body members trained divided by total members, times 100.",
+     "unit": "%"
     },
     {
      "item": "4.3",
      "text": "What percentage of employees received training on your anti-corruption policies and procedures?",
      "type": "number",
-     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Employees trained divided by total employees, times 100."
+     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Employees trained divided by total employees, times 100.",
+     "unit": "%"
     },
     {
      "item": "4.4",
      "text": "What percentage of business partners received training on your anti-corruption policies and procedures?",
      "type": "number",
-     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Business partners trained divided by total business partners, times 100."
+     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Business partners trained divided by total business partners, times 100.",
+     "unit": "%"
     },
     {
      "item": "4.5",
@@ -243,7 +257,8 @@
      "item": "4.6",
      "text": "How many incidents of corruption were confirmed during this year but related to previous years?",
      "type": "number",
-     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Count only incidents confirmed in the current reporting year that occurred in earlier years."
+     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Count only incidents confirmed in the current reporting year that occurred in earlier years.",
+     "unit": ""
     },
     {
      "item": "4.7",
@@ -255,7 +270,8 @@
      "item": "4.8",
      "text": "How many incidents of corruption were confirmed this year and related to this year?",
      "type": "number",
-     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Count incidents both occurring and confirmed in the current reporting year."
+     "hint": "Ethical behaviour · Source: GRI (205-2) and GRI (205-3). Count incidents both occurring and confirmed in the current reporting year.",
+     "unit": ""
     },
     {
      "item": "4.9",
@@ -503,7 +519,8 @@
      "item": "2.5",
      "text": "What percentage of last year's planned strategic milestones did you achieve?",
      "type": "number",
-     "hint": "Quality of governing body · Source: EPIC. Milestones achieved divided by milestones planned, times 100."
+     "hint": "Quality of governing body · Source: EPIC. Milestones achieved divided by milestones planned, times 100.",
+     "unit": "%"
     },
     {
      "item": "2.6",
@@ -635,43 +652,50 @@
      "item": "5.1",
      "text": "What was the total amount of monetary losses from legal proceedings associated with fraud?",
      "type": "number",
-     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year."
+     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year.",
+     "unit": "currency"
     },
     {
      "item": "5.2",
      "text": "What was the total amount of monetary losses from legal proceedings associated with insider trading?",
      "type": "number",
-     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year."
+     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year.",
+     "unit": "currency"
     },
     {
      "item": "5.3",
      "text": "What was the total amount of monetary losses from legal proceedings associated with anti-trust or anti-competitive behaviour?",
      "type": "number",
-     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year."
+     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year.",
+     "unit": "currency"
     },
     {
      "item": "5.4",
      "text": "What was the total amount of monetary losses from legal proceedings associated with market manipulation?",
      "type": "number",
-     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year."
+     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year.",
+     "unit": "currency"
     },
     {
      "item": "5.5",
      "text": "What was the total amount of monetary losses from legal proceedings associated with malpractice?",
      "type": "number",
-     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year."
+     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year.",
+     "unit": "currency"
     },
     {
      "item": "5.6",
      "text": "What was the total amount of monetary losses from legal proceedings associated with violations of other related industry laws or regulations?",
      "type": "number",
-     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year."
+     "hint": "Ethical behaviour · Source: SASB (510a.1). Report in your reporting currency for the reporting year.",
+     "unit": "currency"
     },
     {
      "item": "5.7",
      "text": "What was the total amount of monetary losses from all of these legal proceedings?",
      "type": "number",
-     "hint": "Ethical behaviour · Source: SASB (510a.1). Sum of fraud, insider trading, anti-trust, anti-competitive behaviour, market manipulation, malpractice and other related violations. Include fines, settlements and legal costs."
+     "hint": "Ethical behaviour · Source: SASB (510a.1). Sum of fraud, insider trading, anti-trust, anti-competitive behaviour, market manipulation, malpractice and other related violations. Include fines, settlements and legal costs.",
+     "unit": "currency"
     }
    ]
   },

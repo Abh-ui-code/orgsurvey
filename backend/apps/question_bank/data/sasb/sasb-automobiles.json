@@ -21,7 +21,8 @@
      "item": ".3",
      "text": "How many vehicles did your organisation recall?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of vehicles recalled during the reporting period."
+     "hint": "Unit: Number · Report the total number of vehicles recalled during the reporting period.",
+     "unit": ""
     }
    ]
   },
@@ -33,7 +34,8 @@
      "item": ".1",
      "text": "What percentage of your active workforce is employed under collective agreements?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of active employees covered by collective bargaining or collective agreements."
+     "hint": "Unit: Percentage (%) · Report the percentage of active employees covered by collective bargaining or collective agreements.",
+     "unit": "%"
     },
     {
      "item": ".2",
@@ -86,8 +88,20 @@
     {
      "item": ".1",
      "text": "What is (1) the total amount of waste from manufacturing and (2) the percentage recycled?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) total manufacturing waste in metric tonnes and (2) the percentage recycled."
+     "type": "table",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) total manufacturing waste in metric tonnes and (2) the percentage recycled.",
+     "parts": [
+      {
+       "label": "Total amount of waste from manufacturing",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Percentage recycled",
+       "kind": "number",
+       "unit": "%"
+      }
+     ]
     },
     {
      "item": ".2",
@@ -99,7 +113,8 @@
      "item": ".3",
      "text": "What is the average recyclability of the vehicles you sold?",
      "type": "number",
-     "hint": "Unit: Percentage (%) by sales-weighted metric tonnes (t) · Report the average recyclability as a percentage, weighted by sales in metric tonnes, and state the calculation method used."
+     "hint": "Unit: Percentage (%) by sales-weighted metric tonnes (t) · Report the average recyclability as a percentage, weighted by sales in metric tonnes, and state the calculation method used.",
+     "unit": "% by sales-weighted metric tonnes (t)"
     }
    ]
   },
@@ -111,13 +126,15 @@
      "item": ".A",
      "text": "How many vehicles did your organisation manufacture?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of vehicles manufactured in the reporting period."
+     "hint": "Unit: Number · Report the number of vehicles manufactured in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".B",
      "text": "How many vehicles did your organisation sell?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of vehicles sold in the reporting period."
+     "hint": "Unit: Number · Report the number of vehicles sold in the reporting period.",
+     "unit": ""
     }
    ]
   }

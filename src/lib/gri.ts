@@ -26,3 +26,27 @@ export function groupByDisclosure<T extends { ref: string; title: string }>(ques
   }
   return groups;
 }
+
+const LABEL = /^\s*(requirement|disclosure|criterion|topic)\s*/;
+const compact = (s: string) => s.toLowerCase().replace(LABEL, "").replace(/\s+/g, "");
+
+/** Questions matching the search. A search with a digit is tried as a question number first ("requirement 1 a",
+ * "305-1", "Strategy a) 1", "Core 1.5"): it finds the questions whose number starts with it, so 1 finds 1 a and
+ * 1 b but not 10 a. If no number matches, or the search is words, every word must be in the number, title,
+ * text or hint. */
+export function filterQuestions<T extends { ref: string; item: string; title: string; text: string; hint?: string | null }>(questions: T[], search: string): T[] {
+  const num = compact(search);
+  if (/\d/.test(num)) {
+    const byNumber = questions.filter((q) => {
+      const n = compact(questionNumber(q.ref, q.item));
+      return n.startsWith(num) && !/\d/.test(n.charAt(num.length));
+    });
+    if (byNumber.length > 0) return byNumber;
+  }
+  const words = search.toLowerCase().split(/\s+/).filter(Boolean);
+  if (words.length === 0) return questions;
+  return questions.filter((q) => {
+    const hay = `${questionNumber(q.ref, q.item)} ${disclosureLabel(q.ref)} ${q.title} ${q.text} ${q.hint ?? ""}`.toLowerCase();
+    return words.every((w) => hay.includes(w));
+  });
+}

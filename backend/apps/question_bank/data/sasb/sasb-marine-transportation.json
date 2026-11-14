@@ -9,7 +9,8 @@
      "item": ".1",
      "text": "What are your organisation's gross global Scope 1 greenhouse gas emissions?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) CO2-e · Report gross global Scope 1 emissions for the reporting period, in metric tonnes CO2-e, covering direct emissions from sources you own or control."
+     "hint": "Unit: Metric tonnes (t) CO2-e · Report gross global Scope 1 emissions for the reporting period, in metric tonnes CO2-e, covering direct emissions from sources you own or control.",
+     "unit": "metric tonnes (t) CO₂-e"
     },
     {
      "item": ".2",
@@ -27,7 +28,8 @@
      "item": ".4",
      "text": "What is the average Energy Efficiency Design Index (EEDI) for your new ships?",
      "type": "number",
-     "hint": "Unit: Grammes of CO2 per ton-nautical mile · Report the average EEDI of newly built ships, in grammes of CO2 per ton-nautical mile."
+     "hint": "Unit: Grammes of CO2 per ton-nautical mile · Report the average EEDI of newly built ships, in grammes of CO2 per ton-nautical mile.",
+     "unit": "grammes of CO₂ per ton-nautical mile"
     }
    ]
   },
@@ -38,8 +40,25 @@
     {
      "item": ".1",
      "text": "What were your organisation's air emissions of the following pollutants: (1) NOx (excluding N2O), (2) SOx and (3) particulate matter (PM10)?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes (t) · Report the quantity of each pollutant separately in metric tonnes, stating how each was calculated or estimated."
+     "type": "table",
+     "hint": "Unit: Metric tonnes (t) · Report the quantity of each pollutant separately in metric tonnes, stating how each was calculated or estimated.",
+     "parts": [
+      {
+       "label": "NOx (excluding N2O)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "SOx",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Particulate matter (PM10)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      }
+     ]
     }
    ]
   },
@@ -56,8 +75,20 @@
     {
      "item": ".2",
      "text": "What percentage of your fleet implements ballast water (1) exchange and (2) treatment?",
-     "type": "text",
-     "hint": "Unit: Percentage (%) · Report (1) the percentage of the fleet using ballast water exchange and (2) the percentage using ballast water treatment."
+     "type": "table",
+     "hint": "Unit: Percentage (%) · Report (1) the percentage of the fleet using ballast water exchange and (2) the percentage using ballast water treatment.",
+     "parts": [
+      {
+       "label": "Exchange",
+       "kind": "number",
+       "unit": "%"
+      },
+      {
+       "label": "Treatment",
+       "kind": "number",
+       "unit": "%"
+      }
+     ]
     },
     {
      "item": ".3",
@@ -75,7 +106,8 @@
      "item": ".1",
      "text": "What is your lost time incident rate (LTIR)?",
      "type": "number",
-     "hint": "Unit: Rate · Report the lost time incident rate for the period and state the exposure-hours basis used (for example per 200,000 hours)."
+     "hint": "Unit: Rate · Report the lost time incident rate for the period and state the exposure-hours basis used (for example per 200,000 hours).",
+     "unit": ""
     }
    ]
   },
@@ -87,7 +119,8 @@
      "item": ".1",
      "text": "How many port calls did your vessels make in countries ranked among the 20 lowest in Transparency International's Corruption Perception Index?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of calls at ports in the 20 lowest-ranked countries in the Corruption Perception Index."
+     "hint": "Unit: Number · Report the number of calls at ports in the 20 lowest-ranked countries in the Corruption Perception Index.",
+     "unit": ""
     },
     {
      "item": ".2",
@@ -129,43 +162,50 @@
      "item": ".A",
      "text": "How many shipboard employees does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of shipboard employees."
+     "hint": "Unit: Number · Report the number of shipboard employees.",
+     "unit": ""
     },
     {
      "item": ".B",
      "text": "What total distance did your vessels travel?",
      "type": "number",
-     "hint": "Unit: Nautical miles (nm) · Report the total distance travelled by vessels in nautical miles (nm)."
+     "hint": "Unit: Nautical miles (nm) · Report the total distance travelled by vessels in nautical miles (nm).",
+     "unit": "nautical miles (nm)"
     },
     {
      "item": ".C",
      "text": "How many operating days did your vessels have?",
      "type": "number",
-     "hint": "Unit: Days · Report total operating days for the reporting period."
+     "hint": "Unit: Days · Report total operating days for the reporting period.",
+     "unit": "days"
     },
     {
      "item": ".D",
      "text": "What is your fleet's deadweight tonnage?",
      "type": "number",
-     "hint": "Unit: Thousand deadweight tonnes · Report deadweight tonnage in thousand deadweight tonnes."
+     "hint": "Unit: Thousand deadweight tonnes · Report deadweight tonnage in thousand deadweight tonnes.",
+     "unit": "thousand deadweight tonnes"
     },
     {
      "item": ".E",
      "text": "How many vessels are in your total shipping fleet?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of vessels in your total shipping fleet."
+     "hint": "Unit: Number · Report the number of vessels in your total shipping fleet.",
+     "unit": ""
     },
     {
      "item": ".F",
      "text": "How many vessel port calls did your organisation make?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of vessel port calls in the reporting period."
+     "hint": "Unit: Number · Report the total number of vessel port calls in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".G",
      "text": "What is your twenty-foot equivalent unit (TEU) capacity?",
      "type": "number",
-     "hint": "Unit: TEU · Report your container capacity in TEU."
+     "hint": "Unit: TEU · Report your container capacity in TEU.",
+     "unit": "TEU"
     }
    ]
   }

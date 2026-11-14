@@ -39,7 +39,7 @@ class BankQuestionSerializer(QuestionFieldsSerializer):
 
     class Meta:
         model = Question
-        fields = ["id", "text", "type", "options", "hint", "required", "category", "category_id"]
+        fields = ["id", "text", "type", "unit", "parts", "options", "hint", "required", "category", "category_id"]
 
 
 class GriQuestionSerializer(serializers.ModelSerializer):
@@ -49,7 +49,7 @@ class GriQuestionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Question
-        fields = ["id", "ref", "title", "item", "text", "type", "hint", "required"]
+        fields = ["id", "ref", "title", "item", "text", "type", "unit", "parts", "hint", "required"]
         read_only_fields = fields
 
 

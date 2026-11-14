@@ -98,8 +98,20 @@
         {
           "item": ".1",
           "text": "Do you record and make available the actual annual production tonnage of RSPO certified crude palm oil (CPO) and palm kernel (PK) at your mill(s) for the previous year or previous 12 months?",
-          "type": "number",
-          "hint": "Indicator 3.5.1 (Critical). Record and make available actual annual tonnage of RSPO certified CPO and PK for the previous year or 12-month period. Enter the CPO tonnage here and give PK tonnage in your notes. Refer to the latest RSPO SCC Standard."
+          "type": "table",
+          "hint": "Indicator 3.5.1 (Critical). Record and make available actual annual tonnage of RSPO certified CPO and PK for the previous year or 12-month period. Refer to the latest RSPO SCC Standard.",
+          "parts": [
+            {
+              "label": "RSPO certified crude palm oil (CPO)",
+              "kind": "number",
+              "unit": "tonnes"
+            },
+            {
+              "label": "RSPO certified palm kernel (PK)",
+              "kind": "number",
+              "unit": "tonnes"
+            }
+          ]
         },
         {
           "item": ".2",

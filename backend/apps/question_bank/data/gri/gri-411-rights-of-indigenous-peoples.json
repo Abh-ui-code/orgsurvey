@@ -51,7 +51,8 @@
           "item": "a",
           "text": "What was the total number of identified incidents of violations involving the rights of indigenous peoples during the reporting period?",
           "hint": "Include incidents involving workers and communities likely to be affected by existing or planned activities.",
-          "type": "text"
+          "type": "number",
+          "unit": "incidents"
         },
         {
           "item": "b",

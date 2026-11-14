@@ -8,8 +8,20 @@
     {
      "item": ".1",
      "text": "What were your organisation's (1) gross global Scope 1 emissions and (2) amount of total emissions from perfluorinated compounds?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes (t) CO₂-e · Report gross global Scope 1 emissions in tonnes CO₂-e and, separately, the part of total emissions from perfluorinated compounds (PFCs). State the consolidation approach and calculation method used."
+     "type": "table",
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Report gross global Scope 1 emissions in tonnes CO₂-e and, separately, the part of total emissions from perfluorinated compounds (PFCs). State the consolidation approach and calculation method used.",
+     "parts": [
+      {
+       "label": "Gross global Scope 1 emissions",
+       "kind": "number",
+       "unit": "metric tonnes (t) CO₂-e"
+      },
+      {
+       "label": "Amount of total emissions from perfluorinated compounds",
+       "kind": "number",
+       "unit": "metric tonnes (t) CO₂-e"
+      }
+     ]
     },
     {
      "item": ".2",
@@ -69,7 +81,8 @@
      "item": ".2",
      "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with employee health and safety violations?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from employee health and safety proceedings. Include any legal proceedings that ended in the period."
+     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from employee health and safety proceedings. Include any legal proceedings that ended in the period.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -81,7 +94,8 @@
      "item": ".1",
      "text": "What percentage of your organisation's employees require a work visa?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the share of total employees who require a work visa to work in the country where they are employed, as a percentage of all employees."
+     "hint": "Unit: Percentage (%) · Report the share of total employees who require a work visa to work in the country where they are employed, as a percentage of all employees.",
+     "unit": "%"
     }
    ]
   },
@@ -123,7 +137,8 @@
      "item": ".1",
      "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with anti-competitive behaviour regulations?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from anti-competition, anti-trust or monopoly proceedings. Include any legal proceedings that ended in the period."
+     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from anti-competition, anti-trust or monopoly proceedings. Include any legal proceedings that ended in the period.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -141,7 +156,8 @@
      "item": ".B",
      "text": "What percentage of your organisation's production comes from facilities you own?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the share of total production made in owned facilities rather than by third-party foundries or contract manufacturers. State the basis used."
+     "hint": "Unit: Percentage (%) · Report the share of total production made in owned facilities rather than by third-party foundries or contract manufacturers. State the basis used.",
+     "unit": "%"
     }
    ]
   }

@@ -33,7 +33,8 @@
      "item": ".2",
      "text": "How many incidents of non-compliance with water quality permits, standards and regulations did your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of incidents of non-compliance with water quality permits, standards and regulations in the reporting period."
+     "hint": "Unit: Number · Report the total number of incidents of non-compliance with water quality permits, standards and regulations in the reporting period.",
+     "unit": ""
     }
    ]
   },
@@ -45,37 +46,43 @@
      "item": ".2",
      "text": "What is the total weight of non-mineral waste your organisation generated?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report the total weight of non-mineral waste generated in metric tonnes for the reporting period."
+     "hint": "Unit: Metric tonnes (t) · Report the total weight of non-mineral waste generated in metric tonnes for the reporting period.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": ".3",
      "text": "What is the total weight of tailings your organisation produced?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report the total weight of tailings produced in metric tonnes for the reporting period."
+     "hint": "Unit: Metric tonnes (t) · Report the total weight of tailings produced in metric tonnes for the reporting period.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": ".4",
      "text": "What is the total weight of waste rock your organisation generated?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report the total weight of waste rock generated in metric tonnes for the reporting period."
+     "hint": "Unit: Metric tonnes (t) · Report the total weight of waste rock generated in metric tonnes for the reporting period.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": ".5",
      "text": "What is the total weight of hazardous waste your organisation generated?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report the total weight of hazardous waste generated in metric tonnes, using the regulatory definition of hazardous waste in each jurisdiction."
+     "hint": "Unit: Metric tonnes (t) · Report the total weight of hazardous waste generated in metric tonnes, using the regulatory definition of hazardous waste in each jurisdiction.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": ".6",
      "text": "What is the total weight of hazardous waste your organisation recycled?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report the total weight of hazardous waste recycled in metric tonnes for the reporting period."
+     "hint": "Unit: Metric tonnes (t) · Report the total weight of hazardous waste recycled in metric tonnes for the reporting period.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": ".7",
      "text": "How many significant incidents associated with hazardous waste management did your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of significant incidents (as defined by regulators or your own criteria) associated with hazardous waste management."
+     "hint": "Unit: Number · Report the number of significant incidents (as defined by regulators or your own criteria) associated with hazardous waste management.",
+     "unit": ""
     },
     {
      "item": ".8",
@@ -98,8 +105,25 @@
     {
      "item": ".2",
      "text": "What percentage of your mine sites have acid rock drainage that is (1) predicted to occur, (2) actively mitigated, and (3) under treatment or remediation?",
-     "type": "text",
-     "hint": "Unit: Percentage (%) · Report each of the three percentages (1) predicted to occur, (2) actively mitigated, (3) under treatment or remediation, as a share of all mine sites."
+     "type": "table",
+     "hint": "Unit: Percentage (%) · Report each of the three percentages (1) predicted to occur, (2) actively mitigated, (3) under treatment or remediation, as a share of all mine sites.",
+     "parts": [
+      {
+       "label": "Predicted to occur",
+       "kind": "number",
+       "unit": "%"
+      },
+      {
+       "label": "Actively mitigated",
+       "kind": "number",
+       "unit": "%"
+      },
+      {
+       "label": "Under treatment or remediation",
+       "kind": "number",
+       "unit": "%"
+      }
+     ]
     },
     {
      "item": ".3",
@@ -153,7 +177,8 @@
      "item": ".1",
      "text": "What percentage of your active workforce is employed under collective agreements?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of the active workforce covered by collective bargaining agreements."
+     "hint": "Unit: Percentage (%) · Report the percentage of the active workforce covered by collective bargaining agreements.",
+     "unit": "%"
     },
     {
      "item": ".2",
@@ -188,14 +213,16 @@
     {
      "item": ".1",
      "text": "How sensitive are your coal reserve levels to future price projection scenarios that account for a price on carbon emissions?",
-     "type": "text",
-     "hint": "Unit: Million metric tonnes (Mt) · Describe the scenarios and price assumptions used and report the resulting change in reserve levels in the unit given."
+     "type": "number",
+     "hint": "Unit: Million metric tonnes (Mt) · Describe the scenarios and price assumptions used and report the resulting change in reserve levels in the unit given.",
+     "unit": "million metric tonnes (Mt)"
     },
     {
      "item": ".2",
      "text": "What is the estimated carbon dioxide emissions embedded in your proven coal reserves?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) CO₂-e · Report the estimated CO2 emissions embedded in proven coal reserves in metric tonnes CO2-e, and state the calculation method and emission factors used."
+     "hint": "Unit: Metric tonnes (t) CO₂-e · Report the estimated CO2 emissions embedded in proven coal reserves in metric tonnes CO2-e, and state the calculation method and emission factors used.",
+     "unit": "metric tonnes (t) CO₂-e"
     },
     {
      "item": ".3",
@@ -237,13 +264,15 @@
      "item": ".A",
      "text": "What was your organisation's production of thermal coal?",
      "type": "number",
-     "hint": "Unit: Million metric tonnes (Mt) · Report production of thermal coal in million metric tonnes for the reporting period."
+     "hint": "Unit: Million metric tonnes (Mt) · Report production of thermal coal in million metric tonnes for the reporting period.",
+     "unit": "million metric tonnes (Mt)"
     },
     {
      "item": ".B",
      "text": "What was your organisation's production of metallurgical coal?",
      "type": "number",
-     "hint": "Unit: Million metric tonnes (Mt) · Report production of metallurgical coal in million metric tonnes for the reporting period."
+     "hint": "Unit: Million metric tonnes (Mt) · Report production of metallurgical coal in million metric tonnes for the reporting period.",
+     "unit": "million metric tonnes (Mt)"
     }
    ]
   }

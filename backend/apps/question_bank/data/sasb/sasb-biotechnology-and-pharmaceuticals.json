@@ -21,7 +21,8 @@
      "item": ".3",
      "text": "What was the total amount of monetary losses from legal proceedings associated with clinical trials in developing countries?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -75,7 +76,8 @@
      "item": ".2",
      "text": "How many fatalities were associated with your products?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of fatalities associated with your products in the reporting period."
+     "hint": "Unit: Number · Report the total number of fatalities associated with your products in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".3",
@@ -129,7 +131,8 @@
      "item": ".1",
      "text": "What was the total amount of monetary losses from legal proceedings associated with false marketing claims?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency.",
+     "unit": "presentation currency"
     },
     {
      "item": ".2",
@@ -177,7 +180,8 @@
      "item": ".1",
      "text": "What was the total amount of monetary losses from legal proceedings associated with corruption and bribery?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency.",
+     "unit": "presentation currency"
     },
     {
      "item": ".2",
@@ -195,7 +199,8 @@
      "item": ".A",
      "text": "How many patients were treated with your products?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of patients treated in the reporting period and state how the figure was estimated."
+     "hint": "Unit: Number · Report the number of patients treated in the reporting period and state how the figure was estimated.",
+     "unit": ""
     },
     {
      "item": ".B",

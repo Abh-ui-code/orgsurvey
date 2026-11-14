@@ -9,11 +9,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { EmptyState } from "@/components/ui/empty-state";
+import { SearchInput } from "@/components/ui/search-input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useGriStandard } from "@/hooks/use-gri-standards";
 import { useSurvey } from "@/hooks/use-surveys";
-import { disclosureLabel, groupByDisclosure, questionNumber } from "@/lib/gri";
-import { FRAMEWORKS, questionTypeLabel } from "@/types/question";
+import { disclosureLabel, filterQuestions, groupByDisclosure, questionNumber } from "@/lib/gri";
+import { FRAMEWORKS, questionKindLabel, partsSummary } from "@/types/question";
 import type { GriStandardDetail } from "@/types/question";
 import type { SurveyDetail } from "@/types/survey";
 import { useAddGriSection } from "../../../_hooks/use-survey-builder";
@@ -26,7 +27,9 @@ function Chooser({ survey, standard, back }: { survey: SurveyDetail; standard: G
     new Set(section?.questions.flatMap((q) => (q.bank_question_id ? [q.bank_question_id] : []))),
   );
   const questions = standard.questions;
-  const all = questions.length > 0 && picked.size === questions.length;
+  const [search, setSearch] = useState("");
+  const shown = filterQuestions(questions, search);
+  const allShown = shown.length > 0 && shown.every((q) => picked.has(q.id));
   const toggle = (id: string) =>
     setPicked((p) => {
       const next = new Set(p);
@@ -55,13 +58,21 @@ function Chooser({ survey, standard, back }: { survey: SurveyDetail; standard: G
       <Card>
         <CardHeader className="items-center py-3">
           <CardTitle>Tick the questions to add to the survey</CardTitle>
-          <label className="flex items-center gap-2 text-xs font-medium text-ink-muted">
-            <input type="checkbox" checked={all} onChange={() => setPicked(all ? new Set() : new Set(questions.map((q) => q.id)))} />
-            Select all ({questions.length})
-          </label>
+          <div className="flex items-center gap-4">
+            <SearchInput value={search} onChange={setSearch} placeholder="Search by number or text" className="w-64" />
+            <label className="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-ink-muted">
+              <input type="checkbox" checked={allShown} onChange={() => setPicked((prev) => {
+                const next = new Set(prev);
+                for (const q of shown) { if (allShown) next.delete(q.id); else next.add(q.id); }
+                return next;
+              })} />
+              {search ? `Select shown (${shown.length})` : `Select all (${questions.length})`}
+            </label>
+          </div>
         </CardHeader>
+        {shown.length === 0 && <p className="px-5 py-8 text-center text-sm text-ink-muted">No questions match “{search}”.</p>}
         <div className="divide-y divide-line">
-          {groupByDisclosure(questions).map((group) => {
+          {groupByDisclosure(shown).map((group) => {
             const ids = group.items.map((q) => q.id);
             const groupAll = ids.every((x) => picked.has(x));
             return (
@@ -96,7 +107,8 @@ function Chooser({ survey, standard, back }: { survey: SurveyDetail; standard: G
                         <span className="min-w-0 flex-1">
                           <span className="block text-sm text-ink">{q.text}</span>
                           {q.hint && <span className="mt-1 block text-xs text-ink-muted">{q.hint}</span>}
-                          <span className="mt-1 block text-xs text-ink-faint">{questionTypeLabel(q.type)}</span>
+                          <span className="mt-1 block text-xs text-ink-faint">{questionKindLabel(q)}</span>
+                          {q.type === "table" && <span className="mt-0.5 block text-xs text-ink-muted">Rows: {partsSummary(q.parts)}</span>}
                         </span>
                       </label>
                     </li>
@@ -108,7 +120,7 @@ function Chooser({ survey, standard, back }: { survey: SurveyDetail; standard: G
         </div>
       </Card>
 
-      <div className="sticky bottom-0 -mx-1 flex items-center justify-between gap-3 border-t border-line bg-paper px-1 py-3">
+      <div className="sticky -bottom-4 -mx-4 -mb-4 flex items-center justify-between gap-3 border-t border-line bg-paper px-4 py-3 sm:-bottom-6 sm:-mx-6 sm:-mb-6 sm:px-6">
         <span className="text-sm text-ink-muted">
           {picked.size} of {questions.length} selected
         </span>

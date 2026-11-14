@@ -18,7 +18,7 @@ import { ConfirmDialog } from "@/components/ui/confirm-dialog";
 import { DrawerField } from "@/components/ui/drawer-form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { questionTypeLabel } from "@/types/question";
+import { questionKindLabel } from "@/types/question";
 import type { SurveyDetail, SurveySection } from "@/types/survey";
 import { useAssignQuestions } from "../../_hooks/use-survey-actions";
 import {
@@ -266,7 +266,7 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
                     <p className="mt-0.5 flex flex-wrap items-center gap-2 text-xs text-ink-faint">
                       <span className="font-mono-data">{section.gri && q.gri_title ? questionNumber(q.gri_ref, q.gri_item) : `Q${qi + 1}`}</span>
                       <span>·</span>
-                      <span>{questionTypeLabel(q.type)}</span>
+                      <span>{questionKindLabel(q)}</span>
                       {q.bank_question_id && !q.gri_ref && <Badge tone="brand">From bank</Badge>}
                       {q.options.length > 0 && <span className="truncate">· {q.options.join(", ")}</span>}
                     </p>

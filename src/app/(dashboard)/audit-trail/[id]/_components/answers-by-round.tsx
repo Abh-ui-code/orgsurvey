@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { EmptyState } from "@/components/ui/empty-state";
 import { formatDateTime } from "@/lib/format";
 import { cn } from "@/lib/utils";
-import { questionTypeLabel } from "@/types/question";
+import { questionKindLabel } from "@/types/question";
 import { Evidence } from "./evidence";
 import type { SurveyDetail } from "@/types/survey";
 
@@ -68,7 +68,7 @@ export function AnswersByRound({ survey }: { survey: SurveyDetail }) {
                             {q.text}
                           </p>
                           <p className="mt-0.5 text-xs text-ink-faint">
-                            {questionTypeLabel(q.type)}
+                            {questionKindLabel(q)}
                             {q.required ? " · required" : ""}
                           </p>
                         </td>
@@ -81,9 +81,9 @@ export function AnswersByRound({ survey }: { survey: SurveyDetail }) {
                               </td>
                             );
                           }
-                          const value = formatAnswer(h.snapshot[q.id]);
+                          const value = formatAnswer(h.snapshot[q.id], q);
                           const earlier = recorded.slice(0, i).reverse().find((r) => r.question_ids.length === 0 || r.question_ids.includes(q.id));
-                          const before = earlier ? formatAnswer(earlier.snapshot[q.id]) : value;
+                          const before = earlier ? formatAnswer(earlier.snapshot[q.id], q) : value;
                           const empty = !value || value === "—";
                           return (
                             <td key={h.id} className={cn("px-4 py-3", value !== before && "bg-amber-soft")}>

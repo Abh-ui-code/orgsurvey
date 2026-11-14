@@ -45,7 +45,8 @@
      "item": ".3",
      "text": "What is your employee engagement, as a percentage?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report employee engagement as a percentage, and describe how it was measured (for example via an employee survey) and the response rate."
+     "hint": "Unit: Percentage (%) · Report employee engagement as a percentage, and describe how it was measured (for example via an employee survey) and the response rate.",
+     "unit": "%"
     }
    ]
   },
@@ -63,7 +64,8 @@
      "item": ".2",
      "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with professional integrity?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to professional integrity."
+     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to professional integrity.",
+     "unit": "presentation currency"
     }
    ]
   },

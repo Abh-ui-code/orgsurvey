@@ -8,14 +8,42 @@
     {
      "item": ".1",
      "text": "What were your organisation's air emissions, in metric tonnes, of (1) NOx (excluding N2O), (2) SOx, (3) volatile organic compounds (VOCs), (4) particulate matter (PM10) and (5) hazardous air pollutants (HAPs)?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes (t) · Report the metric tonnes emitted for each of the five pollutants separately: NOx (excluding N2O), SOx, VOCs, PM10 and HAPs. State the reporting period and how emissions were estimated or measured."
+     "type": "table",
+     "hint": "Unit: Metric tonnes (t) · Report the metric tonnes emitted for each of the five pollutants separately: NOx (excluding N2O), SOx, VOCs, PM10 and HAPs. State the reporting period and how emissions were estimated or measured.",
+     "parts": [
+      {
+       "label": "NOx (excluding N2O)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "SOx",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Volatile organic compounds (VOCs)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Particulate matter (PM10)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Hazardous air pollutants (HAPs)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      }
+     ]
     },
     {
      "item": ".2",
      "text": "How many incidents of non-compliance with air quality permits, standards and regulations did your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of non-compliance incidents in the reporting period. Include incidents involving permits, standards and regulations."
+     "hint": "Unit: Number · Report the total number of non-compliance incidents in the reporting period. Include incidents involving permits, standards and regulations.",
+     "unit": ""
     }
    ]
   },
@@ -39,7 +67,8 @@
      "item": ".3",
      "text": "How many incidents of non-compliance with water quality permits, standards and regulations did your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of non-compliance incidents in the reporting period. Include incidents involving water quality permits, standards and regulations."
+     "hint": "Unit: Number · Report the total number of non-compliance incidents in the reporting period. Include incidents involving water quality permits, standards and regulations.",
+     "unit": ""
     }
    ]
   },
@@ -81,7 +110,8 @@
      "item": ".1",
      "text": "What was the amount of subsidies your organisation received through government programmes?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total value of subsidies received through government programmes in your presentation currency for the reporting period."
+     "hint": "Unit: Presentation currency · Report the total value of subsidies received through government programmes in your presentation currency for the reporting period.",
+     "unit": "presentation currency"
     },
     {
      "item": ".2",
@@ -111,19 +141,43 @@
      "item": ".A",
      "text": "What is your organisation's biofuel production capacity, in millions of litres?",
      "type": "number",
-     "hint": "Unit: Millions of litres (ML) · Report total biofuel production capacity in millions of litres for the reporting period."
+     "hint": "Unit: Millions of litres (ML) · Report total biofuel production capacity in millions of litres for the reporting period.",
+     "unit": "millions of litres (ML)"
     },
     {
      "item": ".B",
      "text": "What was your production, in millions of litres, of (1) renewable fuel, (2) advanced biofuel, (3) biodiesel and (4) cellulosic biofuel?",
-     "type": "text",
-     "hint": "Unit: Millions of litres (ML) · Report production volumes separately for renewable fuel, advanced biofuel, biodiesel and cellulosic biofuel."
+     "type": "table",
+     "hint": "Unit: Millions of litres (ML) · Report production volumes separately for renewable fuel, advanced biofuel, biodiesel and cellulosic biofuel.",
+     "parts": [
+      {
+       "label": "Renewable fuel",
+       "kind": "number",
+       "unit": "millions of litres (ML)"
+      },
+      {
+       "label": "Advanced biofuel",
+       "kind": "number",
+       "unit": "millions of litres (ML)"
+      },
+      {
+       "label": "Biodiesel",
+       "kind": "number",
+       "unit": "millions of litres (ML)"
+      },
+      {
+       "label": "Cellulosic biofuel",
+       "kind": "number",
+       "unit": "millions of litres (ML)"
+      }
+     ]
     },
     {
      "item": ".C",
      "text": "What amount of feedstock did your organisation consume in production, in metric tonnes?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report the total feedstock consumed in production in metric tonnes for the reporting period."
+     "hint": "Unit: Metric tonnes (t) · Report the total feedstock consumed in production in metric tonnes for the reporting period.",
+     "unit": "metric tonnes (t)"
     }
    ]
   }

@@ -68,14 +68,16 @@
     {
      "item": ".A",
      "text": "What was your annual production?",
-     "type": "text",
-     "hint": "Unit: as defined by the entity · Report annual production in the units that suit your products (for example tonnes, cubic metres or units), stating the unit used."
+     "type": "number",
+     "hint": "Unit: as defined by the entity · Report annual production in the units that suit your products (for example tonnes, cubic metres or units), stating the unit used.",
+     "unit": "as defined by the entity"
     },
     {
      "item": ".B",
      "text": "What is the area of your manufacturing facilities, in square metres?",
      "type": "number",
-     "hint": "Unit: Square metres (m²) · Report the total area of manufacturing facilities in square metres."
+     "hint": "Unit: Square metres (m²) · Report the total area of manufacturing facilities in square metres.",
+     "unit": "square metres (m²)"
     }
    ]
   }

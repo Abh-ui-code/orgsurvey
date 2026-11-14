@@ -81,7 +81,8 @@
      "item": ".3",
      "text": "What percentage of your gross exposure is included in the financed emissions calculation?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report a percentage (0 to 100) of gross exposure covered by the calculation."
+     "hint": "Unit: Percentage (%) · Report a percentage (0 to 100) of gross exposure covered by the calculation.",
+     "unit": "%"
     },
     {
      "item": ".4",

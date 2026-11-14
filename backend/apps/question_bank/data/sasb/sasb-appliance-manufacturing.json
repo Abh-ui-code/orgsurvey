@@ -21,7 +21,8 @@
      "item": ".3",
      "text": "What was the total amount of monetary losses because of legal proceedings associated with product safety?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses from legal proceedings related to product safety in the presentation currency, including settlements, judgements and related fees."
+     "hint": "Unit: Presentation currency · Report the total monetary losses from legal proceedings related to product safety in the presentation currency, including settlements, judgements and related fees.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -57,7 +58,8 @@
      "item": ".A",
      "text": "What was your annual production, in number of units?",
      "type": "number",
-     "hint": "Unit: Number of units · Report the total number of units produced during the reporting period."
+     "hint": "Unit: Number of units · Report the total number of units produced during the reporting period.",
+     "unit": "units"
     }
    ]
   }

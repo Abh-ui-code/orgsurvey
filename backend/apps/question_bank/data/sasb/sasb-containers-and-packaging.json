@@ -26,8 +26,30 @@
     {
      "item": ".1",
      "text": "What quantities of the following air pollutants did your organisation emit: (1) NOx (excluding N2O), (2) SOx, (3) volatile organic compounds (VOCs) and (4) particulate matter (PM)?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes (t) · Report emissions in tonnes separately for (1) NOx excluding N2O, (2) SOx, (3) VOCs and (4) PM."
+     "type": "table",
+     "hint": "Unit: Metric tonnes (t) · Report emissions in tonnes separately for (1) NOx excluding N2O, (2) SOx, (3) VOCs and (4) PM.",
+     "parts": [
+      {
+       "label": "NOx (excluding N2O)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "SOx",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Volatile organic compounds (VOCs)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Particulate matter (PM)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      }
+     ]
     }
    ]
   },
@@ -63,7 +85,8 @@
      "item": ".3",
      "text": "How many incidents of non-compliance associated with water quality permits, standards and regulations did your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of non-compliance incidents with water quality permits, standards and regulations in the period."
+     "hint": "Unit: Number · Report the total number of non-compliance incidents with water quality permits, standards and regulations in the period.",
+     "unit": ""
     }
    ]
   },
@@ -159,7 +182,8 @@
      "item": ".C",
      "text": "How many employees does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of employees; state whether it is a headcount or full-time equivalent figure."
+     "hint": "Unit: Number · Report the total number of employees; state whether it is a headcount or full-time equivalent figure.",
+     "unit": ""
     }
    ]
   }

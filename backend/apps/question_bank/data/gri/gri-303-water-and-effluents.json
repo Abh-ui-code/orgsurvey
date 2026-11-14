@@ -100,14 +100,78 @@
         {
           "item": "a",
           "text": "What is the total water withdrawal from all areas in megaliters, by source?",
-          "type": "text",
-          "hint": "Break down by, if applicable: i. surface water; ii. groundwater; iii. seawater; iv. produced water; v. third-party water."
+          "type": "table",
+          "hint": "Break down by, if applicable: i. surface water; ii. groundwater; iii. seawater; iv. produced water; v. third-party water.",
+          "parts": [
+            {
+              "label": "Total water withdrawal",
+              "kind": "number",
+              "unit": "megalitres (ML)"
+            },
+            {
+              "label": "Surface water",
+              "kind": "number",
+              "unit": "megalitres (ML)"
+            },
+            {
+              "label": "Groundwater",
+              "kind": "number",
+              "unit": "megalitres (ML)"
+            },
+            {
+              "label": "Seawater",
+              "kind": "number",
+              "unit": "megalitres (ML)"
+            },
+            {
+              "label": "Produced water",
+              "kind": "number",
+              "unit": "megalitres (ML)"
+            },
+            {
+              "label": "Third-party water",
+              "kind": "number",
+              "unit": "megalitres (ML)"
+            }
+          ]
         },
         {
           "item": "b",
           "text": "What is the total water withdrawal from all areas with water stress in megaliters, by source?",
-          "type": "text",
-          "hint": "Break down by, if applicable: i. surface water; ii. groundwater; iii. seawater; iv. produced water; v. third-party water, and a breakdown of this total by sources i-iv."
+          "type": "table",
+          "hint": "Break down by, if applicable: i. surface water; ii. groundwater; iii. seawater; iv. produced water; v. third-party water, and a breakdown of this total by sources i-iv.",
+          "parts": [
+            {
+              "label": "Total withdrawal from areas with water stress",
+              "kind": "number",
+              "unit": "megalitres (ML)"
+            },
+            {
+              "label": "Surface water",
+              "kind": "number",
+              "unit": "megalitres (ML)"
+            },
+            {
+              "label": "Groundwater",
+              "kind": "number",
+              "unit": "megalitres (ML)"
+            },
+            {
+              "label": "Seawater",
+              "kind": "number",
+              "unit": "megalitres (ML)"
+            },
+            {
+              "label": "Produced water",
+              "kind": "number",
+              "unit": "megalitres (ML)"
+            },
+            {
+              "label": "Third-party water",
+              "kind": "number",
+              "unit": "megalitres (ML)"
+            }
+          ]
         },
         {
           "item": "c",
@@ -173,14 +237,16 @@
         {
           "item": "a",
           "text": "What is the total water consumption from all areas in megaliters?",
-          "type": "text",
-          "hint": "Total water consumption from all areas in megaliters."
+          "type": "number",
+          "hint": "Total water consumption from all areas in megaliters.",
+          "unit": "megalitres (ML)"
         },
         {
           "item": "b",
           "text": "What is the total water consumption from all areas with water stress in megaliters?",
-          "type": "text",
-          "hint": "Total water consumption from all areas with water stress in megaliters."
+          "type": "number",
+          "hint": "Total water consumption from all areas with water stress in megaliters.",
+          "unit": "megalitres (ML)"
         },
         {
           "item": "c",

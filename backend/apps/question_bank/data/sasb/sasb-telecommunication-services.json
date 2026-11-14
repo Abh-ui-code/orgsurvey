@@ -27,13 +27,15 @@
      "item": ".2",
      "text": "How many customers have information that is used for secondary purposes?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of customers whose information is used for purposes other than that for which it was collected, such as targeted advertising or sale to third parties. Count only customers who have not opted out where relevant."
+     "hint": "Unit: Number · Report the number of customers whose information is used for purposes other than that for which it was collected, such as targeted advertising or sale to third parties. Count only customers who have not opted out where relevant.",
+     "unit": ""
     },
     {
      "item": ".3",
      "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with customer privacy?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from customer privacy proceedings. Include any legal proceedings that ended in the period."
+     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from customer privacy proceedings. Include any legal proceedings that ended in the period.",
+     "unit": "presentation currency"
     },
     {
      "item": ".4",
@@ -81,13 +83,26 @@
      "item": ".1",
      "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with anti-competitive behaviour regulations?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from anti-competition, anti-trust or monopoly proceedings. Include any legal proceedings that ended in the period."
+     "hint": "Unit: Presentation currency · Report the total monetary losses in the presentation currency for the reporting period, covering fines, settlements and damages from anti-competition, anti-trust or monopoly proceedings. Include any legal proceedings that ended in the period.",
+     "unit": "presentation currency"
     },
     {
      "item": ".2",
      "text": "What was the average actual sustained download speed of (1) your owned and commercially-associated content and (2) non-associated content?",
-     "type": "text",
-     "hint": "Unit: Megabits per second (Mbps) · Report the average actual sustained download speed in Mbps for each of the two content categories, and describe how it was measured."
+     "type": "table",
+     "hint": "Unit: Megabits per second (Mbps) · Report the average actual sustained download speed in Mbps for each of the two content categories, and describe how it was measured.",
+     "parts": [
+      {
+       "label": "Owned and commercially-associated content",
+       "kind": "number",
+       "unit": "megabits per second (Mbps)"
+      },
+      {
+       "label": "Non-associated content",
+       "kind": "number",
+       "unit": "megabits per second (Mbps)"
+      }
+     ]
     },
     {
      "item": ".3",
@@ -123,25 +138,29 @@
      "item": ".A",
      "text": "How many wireless subscribers does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of wireless subscribers at the end of the reporting period."
+     "hint": "Unit: Number · Report the number of wireless subscribers at the end of the reporting period.",
+     "unit": ""
     },
     {
      "item": ".B",
      "text": "How many wireline subscribers does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of wireline subscribers at the end of the reporting period."
+     "hint": "Unit: Number · Report the number of wireline subscribers at the end of the reporting period.",
+     "unit": ""
     },
     {
      "item": ".C",
      "text": "How many broadband subscribers does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of broadband subscribers at the end of the reporting period."
+     "hint": "Unit: Number · Report the number of broadband subscribers at the end of the reporting period.",
+     "unit": ""
     },
     {
      "item": ".D",
      "text": "What was your organisation's network traffic?",
      "type": "number",
-     "hint": "Unit: Petabytes · Report total network traffic in petabytes over the reporting period."
+     "hint": "Unit: Petabytes · Report total network traffic in petabytes over the reporting period.",
+     "unit": "petabytes"
     }
    ]
   }

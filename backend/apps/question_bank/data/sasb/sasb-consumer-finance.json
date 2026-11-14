@@ -9,13 +9,15 @@
      "item": ".1",
      "text": "How many account holders had their information used for secondary purposes?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of account holders whose information was used for purposes other than those it was collected for."
+     "hint": "Unit: Number · Report the number of account holders whose information was used for purposes other than those it was collected for.",
+     "unit": ""
     },
     {
      "item": ".2",
      "text": "What was the total amount of monetary losses as a result of legal proceedings associated with customer privacy?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period."
+     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -32,8 +34,20 @@
     {
      "item": ".2",
      "text": "What were your card-related fraud losses from (1) card-not-present fraud and (2) card-present and other fraud?",
-     "type": "text",
-     "hint": "Unit: Presentation currency · Report each loss amount separately in your presentation currency."
+     "type": "table",
+     "hint": "Unit: Presentation currency · Report each loss amount separately in your presentation currency.",
+     "parts": [
+      {
+       "label": "Card-not-present fraud",
+       "kind": "number",
+       "unit": "presentation currency"
+      },
+      {
+       "label": "Card-present and other fraud",
+       "kind": "number",
+       "unit": "presentation currency"
+      }
+     ]
     },
     {
      "item": ".3",
@@ -51,7 +65,8 @@
      "item": ".1",
      "text": "What percentage of total remuneration for covered employees is variable and linked to the amount of products and services sold?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report a percentage (0 to 100); note which employees are treated as covered."
+     "hint": "Unit: Percentage (%) · Report a percentage (0 to 100); note which employees are treated as covered.",
+     "unit": "%"
     },
     {
      "item": ".2",
@@ -75,7 +90,8 @@
      "item": ".5",
      "text": "What was the total amount of monetary losses as a result of legal proceedings associated with the selling and servicing of products?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period."
+     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -86,8 +102,20 @@
     {
      "item": ".A",
      "text": "How many unique consumers have an active (1) credit card account and (2) pre-paid debit card account?",
-     "type": "text",
-     "hint": "Unit: Number · Report a count of unique consumers for each of the two account types."
+     "type": "table",
+     "hint": "Unit: Number · Report a count of unique consumers for each of the two account types.",
+     "parts": [
+      {
+       "label": "Credit card account",
+       "kind": "number",
+       "unit": ""
+      },
+      {
+       "label": "Pre-paid debit card account",
+       "kind": "number",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": ".B",

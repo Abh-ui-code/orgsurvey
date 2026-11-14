@@ -9,7 +9,8 @@
      "item": ".1",
      "text": "What is your payload fuel economy?",
      "type": "number",
-     "hint": "Unit: Litres/RTK · Report fuel use in litres per revenue tonne-kilometre (RTK) for your distribution fleet and state the period covered."
+     "hint": "Unit: Litres/RTK · Report fuel use in litres per revenue tonne-kilometre (RTK) for your distribution fleet and state the period covered.",
+     "unit": "litres/RTK"
     },
     {
      "item": ".2",
@@ -27,7 +28,8 @@
      "item": ".1",
      "text": "What was the total amount of monetary losses from legal proceedings associated with product safety?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency.",
+     "unit": "presentation currency"
     },
     {
      "item": ".2",

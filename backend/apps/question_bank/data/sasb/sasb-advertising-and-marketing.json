@@ -21,7 +21,8 @@
      "item": ".3",
      "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with consumer privacy?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to consumer privacy during the reporting period."
+     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to consumer privacy during the reporting period.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -87,7 +88,8 @@
      "item": ".D",
      "text": "How many employees does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of employees at the end of the reporting period."
+     "hint": "Unit: Number · Report the total number of employees at the end of the reporting period.",
+     "unit": ""
     }
    ]
   }

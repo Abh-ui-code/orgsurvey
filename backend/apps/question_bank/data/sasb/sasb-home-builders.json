@@ -21,7 +21,8 @@
      "item": ".3",
      "text": "What was the total amount of monetary losses from legal proceedings associated with environmental regulations?",
      "type": "number",
-     "hint": "Unit: presentation currency · Report total monetary losses from such legal proceedings in your presentation currency."
+     "hint": "Unit: presentation currency · Report total monetary losses from such legal proceedings in your presentation currency.",
+     "unit": "presentation currency"
     },
     {
      "item": ".4",
@@ -57,13 +58,15 @@
      "item": ".2",
      "text": "What percentage of your installed water fixtures are certified to a water efficiency standard?",
      "type": "number",
-     "hint": "Unit: percentage · Report the percentage of installed fixtures certified, naming the standard."
+     "hint": "Unit: percentage · Report the percentage of installed fixtures certified, naming the standard.",
+     "unit": "%"
     },
     {
      "item": ".3",
      "text": "How many homes did you deliver that were certified to a third-party multi-attribute green building standard?",
      "type": "number",
-     "hint": "Unit: number · Report the number of homes delivered and name the green building standards."
+     "hint": "Unit: number · Report the number of homes delivered and name the green building standards.",
+     "unit": ""
     },
     {
      "item": ".4",
@@ -105,7 +108,8 @@
      "item": ".1",
      "text": "How many of your lots are located in 100-year flood zones?",
      "type": "number",
-     "hint": "Unit: number · Report the number of lots located in 100-year flood zones."
+     "hint": "Unit: number · Report the number of lots located in 100-year flood zones.",
+     "unit": ""
     },
     {
      "item": ".2",
@@ -123,19 +127,22 @@
      "item": ".A",
      "text": "How many controlled lots do you have?",
      "type": "number",
-     "hint": "Unit: number · Report the number of controlled lots at the end of the reporting period."
+     "hint": "Unit: number · Report the number of controlled lots at the end of the reporting period.",
+     "unit": ""
     },
     {
      "item": ".B",
      "text": "How many homes did you deliver?",
      "type": "number",
-     "hint": "Unit: number · Report the number of homes delivered in the reporting period."
+     "hint": "Unit: number · Report the number of homes delivered in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".C",
      "text": "How many active selling communities do you have?",
      "type": "number",
-     "hint": "Unit: number · Report the number of active selling communities at the end of the reporting period."
+     "hint": "Unit: number · Report the number of active selling communities at the end of the reporting period.",
+     "unit": ""
     }
    ]
   }

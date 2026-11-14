@@ -9,7 +9,8 @@
      "item": ".1",
      "text": "What are your organisation's gross global Scope 1 greenhouse gas emissions?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) CO2-e · Report gross global Scope 1 emissions for the reporting period, in metric tonnes CO2-e, covering direct emissions from sources you own or control."
+     "hint": "Unit: Metric tonnes (t) CO2-e · Report gross global Scope 1 emissions for the reporting period, in metric tonnes CO2-e, covering direct emissions from sources you own or control.",
+     "unit": "metric tonnes (t) CO₂-e"
     },
     {
      "item": ".2",
@@ -32,8 +33,20 @@
     {
      "item": ".1",
      "text": "What were your organisation's air emissions of the following pollutants: (1) NOx (excluding N2O) and (2) particulate matter (PM10)?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes (t) · Report the quantity of each pollutant separately in metric tonnes, stating how each was calculated or estimated."
+     "type": "table",
+     "hint": "Unit: Metric tonnes (t) · Report the quantity of each pollutant separately in metric tonnes, stating how each was calculated or estimated.",
+     "parts": [
+      {
+       "label": "NOx (excluding N2O)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Particulate matter (PM10)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      }
+     ]
     }
    ]
   },
@@ -57,7 +70,8 @@
      "item": ".1",
      "text": "What is the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with anti-competitive behaviour regulations?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses for the period in your presentation currency, covering fines, settlements and other legal costs from such proceedings."
+     "hint": "Unit: Presentation currency · Report the total monetary losses for the period in your presentation currency, covering fines, settlements and other legal costs from such proceedings.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -69,7 +83,8 @@
      "item": ".1",
      "text": "How many accidents and incidents did your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total count for the reporting period."
+     "hint": "Unit: Number · Report the total count for the reporting period.",
+     "unit": ""
     },
     {
      "item": ".2",
@@ -86,8 +101,9 @@
     {
      "item": ".4",
      "text": "How frequently do you carry out internal railway integrity inspections?",
-     "type": "text",
-     "hint": "Unit: Rate · Report the inspection frequency as a rate, and describe the inspection methods and the network covered."
+     "type": "number",
+     "hint": "Unit: Rate · Report the inspection frequency as a rate, and describe the inspection methods and the network covered.",
+     "unit": ""
     }
    ]
   },
@@ -99,31 +115,36 @@
      "item": ".A",
      "text": "How many carloads did your organisation transport?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of carloads transported in the reporting period."
+     "hint": "Unit: Number · Report the number of carloads transported in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".B",
      "text": "How many intermodal units did your organisation transport?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of intermodal units transported in the reporting period."
+     "hint": "Unit: Number · Report the number of intermodal units transported in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".C",
      "text": "How many track kilometres does your organisation have?",
      "type": "number",
-     "hint": "Unit: Kilometres · Report total track length in kilometres."
+     "hint": "Unit: Kilometres · Report total track length in kilometres.",
+     "unit": "kilometres"
     },
     {
      "item": ".D",
      "text": "What are your revenue tonne-kilometres (RTK)?",
      "type": "number",
-     "hint": "Unit: RTK · Report revenue tonne-kilometres for the reporting period."
+     "hint": "Unit: RTK · Report revenue tonne-kilometres for the reporting period.",
+     "unit": "RTK"
     },
     {
      "item": ".E",
      "text": "How many employees does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of employees."
+     "hint": "Unit: Number · Report the total number of employees.",
+     "unit": ""
     }
    ]
   }

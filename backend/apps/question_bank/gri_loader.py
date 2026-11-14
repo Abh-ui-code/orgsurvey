@@ -31,19 +31,22 @@ def load(apps):
         # Questions are loaded by load_disclosures (migration 0009), grouped by disclosure.
 
 
-def load_disclosures(apps, framework="gri"):
+def load_disclosures(apps, framework="gri", slugs=None):
     """Replaces a framework's standard questions with the ones in data/<framework>/*.json: one group per
     disclosure (GRI), sector topic or SASB topic as numbered in the PDF, one question per requirement
     item (a, b, c ...) or metric (.1, .2 ...).
 
     Questions are updated in place (matched by their PDF number), so a survey built from them keeps its link to
-    them and its numbering; surveys copy the text, so they are never changed."""
+    them and its numbering; surveys copy the text, so they are never changed. `slugs` limits the reload to those standards."""
     GriStandard = apps.get_model("question_bank", "GriStandard")
     Question = apps.get_model("question_bank", "Question")
     BankCategory = apps.get_model("question_bank", "BankCategory")
 
     category = BankCategory.objects.get(label=CATEGORIES[framework])
-    for standard in GriStandard.objects.filter(framework=framework):
+    standards = GriStandard.objects.filter(framework=framework)
+    if slugs is not None:
+        standards = standards.filter(slug__in=slugs)
+    for standard in standards:
         content_file = DATA / framework / f"{standard.slug}.json"
         if not content_file.exists():
             continue
@@ -58,6 +61,7 @@ def load_disclosures(apps, framework="gri"):
                 fields = {
                     "category": category, "gri_order": order, "text": q["text"], "type": q.get("type", "text"),
                     "hint": q.get("hint", "")[:500], "options": q.get("options", []), "required": True,
+                    "unit": q.get("unit", ""), "parts": q.get("parts", []),
                 }
                 found = existing.get(key)
                 if found is not None:

@@ -15,7 +15,8 @@
      "item": ".2",
      "text": "What was the total amount of monetary losses as a result of legal proceedings associated with marketing and communication of financial product-related information to new and returning customers?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period."
+     "hint": "Unit: Presentation currency · Report the total monetary losses in your presentation currency for the reporting period.",
+     "unit": "presentation currency"
     },
     {
      "item": ".3",
@@ -75,13 +76,15 @@
      "item": ".2",
      "text": "What total amount of assets under management (AUM) is included in your financed emissions disclosure?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the AUM covered in your presentation currency."
+     "hint": "Unit: Presentation currency · Report the AUM covered in your presentation currency.",
+     "unit": "presentation currency"
     },
     {
      "item": ".3",
      "text": "What percentage of your total assets under management (AUM) is included in the financed emissions calculation?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report a percentage (0 to 100) of total AUM covered by the calculation."
+     "hint": "Unit: Percentage (%) · Report a percentage (0 to 100) of total AUM covered by the calculation.",
+     "unit": "%"
     },
     {
      "item": ".4",
@@ -117,13 +120,15 @@
      "item": ".A",
      "text": "What is your total assets under management (AUM)?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report total AUM in your presentation currency."
+     "hint": "Unit: Presentation currency · Report total AUM in your presentation currency.",
+     "unit": "presentation currency"
     },
     {
      "item": ".B",
      "text": "What is the total amount of assets under custody and supervision?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report total assets under custody and supervision in your presentation currency."
+     "hint": "Unit: Presentation currency · Report total assets under custody and supervision in your presentation currency.",
+     "unit": "presentation currency"
     }
    ]
   }

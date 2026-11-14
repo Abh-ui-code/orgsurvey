@@ -9,13 +9,15 @@
      "item": "1.1",
      "text": "What was the total number of new employee hires during the reporting period?",
      "type": "number",
-     "hint": "Employment and wealth generation · Source: Adapted from GRI 401-1a (New employee hires) and 401-1b (Employee turnover), to include other indicators of diversity. Report the headcount of new employee hires. Part 1 of the metric."
+     "hint": "Employment and wealth generation · Source: Adapted from GRI 401-1a (New employee hires) and 401-1b (Employee turnover), to include other indicators of diversity. Report the headcount of new employee hires. Part 1 of the metric.",
+     "unit": ""
     },
     {
      "item": "1.2",
      "text": "What was the overall rate of new hires during the reporting period?",
      "type": "number",
-     "hint": "Employment and wealth generation · Source: Adapted from GRI 401-1a (New employee hires) and 401-1b (Employee turnover), to include other indicators of diversity. Report as a percentage: number of new employee hires divided by total employees at the end of the period (GRI 401-1 rate)."
+     "hint": "Employment and wealth generation · Source: Adapted from GRI 401-1a (New employee hires) and 401-1b (Employee turnover), to include other indicators of diversity. Report as a percentage: number of new employee hires divided by total employees at the end of the period (GRI 401-1 rate).",
+     "unit": "%"
     },
     {
      "item": "1.3",
@@ -45,13 +47,15 @@
      "item": "1.7",
      "text": "What was the total number of employees who left (turnover) during the reporting period?",
      "type": "number",
-     "hint": "Employment and wealth generation · Source: Adapted from GRI 401-1a (New employee hires) and 401-1b (Employee turnover), to include other indicators of diversity. Report the headcount of employees who left (turnover). Part 2 of the metric."
+     "hint": "Employment and wealth generation · Source: Adapted from GRI 401-1a (New employee hires) and 401-1b (Employee turnover), to include other indicators of diversity. Report the headcount of employees who left (turnover). Part 2 of the metric.",
+     "unit": ""
     },
     {
      "item": "1.8",
      "text": "What was the overall rate of employee turnover during the reporting period?",
      "type": "number",
-     "hint": "Employment and wealth generation · Source: Adapted from GRI 401-1a (New employee hires) and 401-1b (Employee turnover), to include other indicators of diversity. Report as a percentage: number of employees who left (turnover) divided by total employees at the end of the period (GRI 401-1 rate)."
+     "hint": "Employment and wealth generation · Source: Adapted from GRI 401-1a (New employee hires) and 401-1b (Employee turnover), to include other indicators of diversity. Report as a percentage: number of employees who left (turnover) divided by total employees at the end of the period (GRI 401-1 rate).",
+     "unit": "%"
     },
     {
      "item": "1.9",
@@ -93,43 +97,50 @@
      "item": "2.2",
      "text": "What was your revenue (a) in the reporting period?",
      "type": "number",
-     "hint": "Employment and wealth generation · Source: GRI 201-1 (Direct economic value generated and distributed) and GRI 201-4. Report in currency. Part 1(a): net sales plus revenues from financial investments and sales of assets."
+     "hint": "Employment and wealth generation · Source: GRI 201-1 (Direct economic value generated and distributed) and GRI 201-4. Report in currency. Part 1(a): net sales plus revenues from financial investments and sales of assets.",
+     "unit": "currency"
     },
     {
      "item": "2.3",
      "text": "What were your operating costs (b) in the reporting period?",
      "type": "number",
-     "hint": "Employment and wealth generation · Source: GRI 201-1 (Direct economic value generated and distributed) and GRI 201-4. Report in currency. Part 1(b): payments to suppliers, non-strategic investments, royalties and facilitation payments."
+     "hint": "Employment and wealth generation · Source: GRI 201-1 (Direct economic value generated and distributed) and GRI 201-4. Report in currency. Part 1(b): payments to suppliers, non-strategic investments, royalties and facilitation payments.",
+     "unit": "currency"
     },
     {
      "item": "2.4",
      "text": "What were your employee wages and benefits (c) in the reporting period?",
      "type": "number",
-     "hint": "Employment and wealth generation · Source: GRI 201-1 (Direct economic value generated and distributed) and GRI 201-4. Report in currency. Part 1(c): total payroll and other employee payments, excluding future commitments."
+     "hint": "Employment and wealth generation · Source: GRI 201-1 (Direct economic value generated and distributed) and GRI 201-4. Report in currency. Part 1(c): total payroll and other employee payments, excluding future commitments.",
+     "unit": "currency"
     },
     {
      "item": "2.5",
      "text": "What were your payments to providers of capital (d) in the reporting period?",
      "type": "number",
-     "hint": "Employment and wealth generation · Source: GRI 201-1 (Direct economic value generated and distributed) and GRI 201-4. Report in currency. Part 1(d): e.g. dividends, interest payments to lenders."
+     "hint": "Employment and wealth generation · Source: GRI 201-1 (Direct economic value generated and distributed) and GRI 201-4. Report in currency. Part 1(d): e.g. dividends, interest payments to lenders.",
+     "unit": "currency"
     },
     {
      "item": "2.6",
      "text": "What were your payments to government (e) in the reporting period?",
      "type": "number",
-     "hint": "Employment and wealth generation · Source: GRI 201-1 (Direct economic value generated and distributed) and GRI 201-4. Report in currency. Part 1(e): gross taxes and related penalties paid at international, national and local levels."
+     "hint": "Employment and wealth generation · Source: GRI 201-1 (Direct economic value generated and distributed) and GRI 201-4. Report in currency. Part 1(e): gross taxes and related penalties paid at international, national and local levels.",
+     "unit": "currency"
     },
     {
      "item": "2.7",
      "text": "What was your community investment (f) in the reporting period?",
      "type": "number",
-     "hint": "Employment and wealth generation · Source: GRI 201-1 (Direct economic value generated and distributed) and GRI 201-4. Report in currency. Part 1(f): voluntary contributions and investment of funds in the broader community."
+     "hint": "Employment and wealth generation · Source: GRI 201-1 (Direct economic value generated and distributed) and GRI 201-4. Report in currency. Part 1(f): voluntary contributions and investment of funds in the broader community.",
+     "unit": "currency"
     },
     {
      "item": "2.8",
      "text": "What was the total monetary value of financial assistance received from any government in the period?",
      "type": "number",
-     "hint": "Employment and wealth generation · Source: GRI 201-1 (Direct economic value generated and distributed) and GRI 201-4. Report in currency. Part 2 of the metric: tax relief, subsidies, grants, awards and other financial benefits."
+     "hint": "Employment and wealth generation · Source: GRI 201-1 (Direct economic value generated and distributed) and GRI 201-4. Report in currency. Part 2 of the metric: tax relief, subsidies, grants, awards and other financial benefits.",
+     "unit": "currency"
     },
     {
      "item": "2.9",
@@ -147,19 +158,22 @@
      "item": "3.1",
      "text": "What were your total capital expenditures (CapEx) in the reporting period?",
      "type": "number",
-     "hint": "Wealth creation and employment · Source: IAS 7 Statement of Cash Flows, US GAAP ASC 230. Report in currency. Part 1 of the metric, taken from the cash flow statement."
+     "hint": "Wealth creation and employment · Source: IAS 7 Statement of Cash Flows, US GAAP ASC 230. Report in currency. Part 1 of the metric, taken from the cash flow statement.",
+     "unit": "currency"
     },
     {
      "item": "3.2",
      "text": "What was your depreciation in the reporting period?",
      "type": "number",
-     "hint": "Wealth creation and employment · Source: IAS 7 Statement of Cash Flows, US GAAP ASC 230. Report in currency. Part 1: needed to calculate CapEx minus depreciation."
+     "hint": "Wealth creation and employment · Source: IAS 7 Statement of Cash Flows, US GAAP ASC 230. Report in currency. Part 1: needed to calculate CapEx minus depreciation.",
+     "unit": "currency"
     },
     {
      "item": "3.3",
      "text": "What is your total CapEx minus depreciation?",
      "type": "number",
-     "hint": "Wealth creation and employment · Source: IAS 7 Statement of Cash Flows, US GAAP ASC 230. Report in currency: total CapEx less depreciation. Part 1 of the metric."
+     "hint": "Wealth creation and employment · Source: IAS 7 Statement of Cash Flows, US GAAP ASC 230. Report in currency: total CapEx less depreciation. Part 1 of the metric.",
+     "unit": "currency"
     },
     {
      "item": "3.4",
@@ -171,19 +185,22 @@
      "item": "3.5",
      "text": "What was the total value of your share buybacks in the reporting period?",
      "type": "number",
-     "hint": "Wealth creation and employment · Source: IAS 7 Statement of Cash Flows, US GAAP ASC 230. Report in currency. Part 2 of the metric."
+     "hint": "Wealth creation and employment · Source: IAS 7 Statement of Cash Flows, US GAAP ASC 230. Report in currency. Part 2 of the metric.",
+     "unit": "currency"
     },
     {
      "item": "3.6",
      "text": "What was the total value of dividend payments in the reporting period?",
      "type": "number",
-     "hint": "Wealth creation and employment · Source: IAS 7 Statement of Cash Flows, US GAAP ASC 230. Report in currency. Part 2 of the metric."
+     "hint": "Wealth creation and employment · Source: IAS 7 Statement of Cash Flows, US GAAP ASC 230. Report in currency. Part 2 of the metric.",
+     "unit": "currency"
     },
     {
      "item": "3.7",
      "text": "What is your total of share buybacks plus dividend payments?",
      "type": "number",
-     "hint": "Wealth creation and employment · Source: IAS 7 Statement of Cash Flows, US GAAP ASC 230. Report in currency: buybacks plus dividends. Part 2 of the metric."
+     "hint": "Wealth creation and employment · Source: IAS 7 Statement of Cash Flows, US GAAP ASC 230. Report in currency: buybacks plus dividends. Part 2 of the metric.",
+     "unit": "currency"
     },
     {
      "item": "3.8",
@@ -201,13 +218,15 @@
      "item": "4.1",
      "text": "What were your total costs related to research and development in the reporting period?",
      "type": "number",
-     "hint": "Innovation in better products and services · Source: US GAAP ASC 730. Report in currency. Total costs related to research and development."
+     "hint": "Innovation in better products and services · Source: US GAAP ASC 730. Report in currency. Total costs related to research and development.",
+     "unit": "currency"
     },
     {
      "item": "4.2",
      "text": "What percentage of your revenue do your R&D costs represent?",
      "type": "number",
-     "hint": "Innovation in better products and services · Source: US GAAP ASC 730. Optional context: R&D costs divided by total revenue, as a percentage."
+     "hint": "Innovation in better products and services · Source: US GAAP ASC 730. Optional context: R&D costs divided by total revenue, as a percentage.",
+     "unit": "%"
     },
     {
      "item": "4.3",
@@ -225,37 +244,43 @@
      "item": "5.1",
      "text": "What was the total global tax borne by the company in the reporting period?",
      "type": "number",
-     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency: all taxes that are a cost to the company, across global operations."
+     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency: all taxes that are a cost to the company, across global operations.",
+     "unit": "currency"
     },
     {
      "item": "5.2",
      "text": "How much corporate income tax did the company pay?",
      "type": "number",
-     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency. Category of tax."
+     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency. Category of tax.",
+     "unit": "currency"
     },
     {
      "item": "5.3",
      "text": "How much property tax did the company pay?",
      "type": "number",
-     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency. Category of tax."
+     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency. Category of tax.",
+     "unit": "currency"
     },
     {
      "item": "5.4",
      "text": "How much non-creditable VAT and other sales taxes did the company bear?",
      "type": "number",
-     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency. Only VAT and sales taxes that you cannot recover."
+     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency. Only VAT and sales taxes that you cannot recover.",
+     "unit": "currency"
     },
     {
      "item": "5.5",
      "text": "How much employer-paid payroll tax did the company pay?",
      "type": "number",
-     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency. Category of tax."
+     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency. Category of tax.",
+     "unit": "currency"
     },
     {
      "item": "5.6",
      "text": "How much other tax that is a cost to the company did you pay?",
      "type": "number",
-     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency. Any other taxes that constitute costs to the company; name them in your notes."
+     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency. Any other taxes that constitute costs to the company; name them in your notes.",
+     "unit": "currency"
     }
    ]
   },
@@ -348,13 +373,15 @@
      "item": "3.1",
      "text": "What percentage of your revenue comes from products and services designed to deliver specific social benefits?",
      "type": "number",
-     "hint": "Innovation in better products and services · Source: Adapted from GRI FiFS7 and FiFS8, SASB FN0102-16.a, EPIC Report (2018). Report as a percentage of total revenue."
+     "hint": "Innovation in better products and services · Source: Adapted from GRI FiFS7 and FiFS8, SASB FN0102-16.a, EPIC Report (2018). Report as a percentage of total revenue.",
+     "unit": "%"
     },
     {
      "item": "3.2",
      "text": "What percentage of your revenue comes from products and services designed to address specific sustainability challenges?",
      "type": "number",
-     "hint": "Innovation in better products and services · Source: Adapted from GRI FiFS7 and FiFS8, SASB FN0102-16.a, EPIC Report (2018). Report as a percentage of total revenue."
+     "hint": "Innovation in better products and services · Source: Adapted from GRI FiFS7 and FiFS8, SASB FN0102-16.a, EPIC Report (2018). Report as a percentage of total revenue.",
+     "unit": "%"
     },
     {
      "item": "3.3",
@@ -372,19 +399,22 @@
      "item": "4.1",
      "text": "What were the sales from products launched in the past three (or five) years?",
      "type": "number",
-     "hint": "Innovation in better products and services · Source: Adapted from OECD Oslo Manual Section 8.3.1. Report in currency. State whether you use a three or five year window."
+     "hint": "Innovation in better products and services · Source: Adapted from OECD Oslo Manual Section 8.3.1. Report in currency. State whether you use a three or five year window.",
+     "unit": "currency"
     },
     {
      "item": "4.2",
      "text": "What were your total sales in the reporting period?",
      "type": "number",
-     "hint": "Innovation in better products and services · Source: Adapted from OECD Oslo Manual Section 8.3.1. Report in currency (gross revenue)."
+     "hint": "Innovation in better products and services · Source: Adapted from OECD Oslo Manual Section 8.3.1. Report in currency (gross revenue).",
+     "unit": "currency"
     },
     {
      "item": "4.3",
      "text": "What percentage of gross revenue comes from product lines added in the last three (or five) years?",
      "type": "number",
-     "hint": "Innovation in better products and services · Source: Adapted from OECD Oslo Manual Section 8.3.1. Sales from products launched in the past three (or five) years divided by total sales."
+     "hint": "Innovation in better products and services · Source: Adapted from OECD Oslo Manual Section 8.3.1. Sales from products launched in the past three (or five) years divided by total sales.",
+     "unit": "%"
     },
     {
      "item": "4.4",
@@ -402,31 +432,36 @@
      "item": "5.1",
      "text": "What was your total social investment (TSI) in the reporting period?",
      "type": "number",
-     "hint": "Community and social vitality · Source: CECP Valuation Guidance. Report in currency: the resources used for the 'S' in ESG efforts, as defined by CECP."
+     "hint": "Community and social vitality · Source: CECP Valuation Guidance. Report in currency: the resources used for the 'S' in ESG efforts, as defined by CECP.",
+     "unit": "currency"
     },
     {
      "item": "5.2",
      "text": "How much of it was cash contributions?",
      "type": "number",
-     "hint": "Community and social vitality · Source: CECP Valuation Guidance. Report in currency. A component of TSI under CECP."
+     "hint": "Community and social vitality · Source: CECP Valuation Guidance. Report in currency. A component of TSI under CECP.",
+     "unit": "currency"
     },
     {
      "item": "5.3",
      "text": "How much of it was the value of non-cash (in-kind) contributions?",
      "type": "number",
-     "hint": "Community and social vitality · Source: CECP Valuation Guidance. Report in currency. A component of TSI under CECP."
+     "hint": "Community and social vitality · Source: CECP Valuation Guidance. Report in currency. A component of TSI under CECP.",
+     "unit": "currency"
     },
     {
      "item": "5.4",
      "text": "What was the value of employee time given to social causes (e.g. volunteering)?",
      "type": "number",
-     "hint": "Community and social vitality · Source: CECP Valuation Guidance. Report in currency. A component of TSI under CECP."
+     "hint": "Community and social vitality · Source: CECP Valuation Guidance. Report in currency. A component of TSI under CECP.",
+     "unit": "currency"
     },
     {
      "item": "5.5",
      "text": "What were the overhead and management costs of your social programmes?",
      "type": "number",
-     "hint": "Community and social vitality · Source: CECP Valuation Guidance. Report in currency. A component of TSI under CECP."
+     "hint": "Community and social vitality · Source: CECP Valuation Guidance. Report in currency. A component of TSI under CECP.",
+     "unit": "currency"
     }
    ]
   },
@@ -438,25 +473,29 @@
      "item": "6.1",
      "text": "What was the total additional global tax the company collected on behalf of other taxpayers?",
      "type": "number",
-     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency: taxes remitted by the company on behalf of customers or employees."
+     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency: taxes remitted by the company on behalf of customers or employees.",
+     "unit": "currency"
     },
     {
      "item": "6.2",
      "text": "How much VAT and other sales taxes did the company collect and remit on behalf of customers?",
      "type": "number",
-     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency. Category of tax."
+     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency. Category of tax.",
+     "unit": "currency"
     },
     {
      "item": "6.3",
      "text": "How much employee-related tax did the company withhold and remit on behalf of employees?",
      "type": "number",
-     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency, e.g. income tax withheld and employee social contributions."
+     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency, e.g. income tax withheld and employee social contributions.",
+     "unit": "currency"
     },
     {
      "item": "6.4",
      "text": "How much other tax did the company collect on behalf of others?",
      "type": "number",
-     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency. Name any other categories in your notes."
+     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency. Name any other categories in your notes.",
+     "unit": "currency"
     }
    ]
   },
@@ -474,7 +513,8 @@
      "item": "7.2",
      "text": "What was the total tax paid in each of these countries?",
      "type": "number",
-     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency per country."
+     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency per country.",
+     "unit": "currency"
     },
     {
      "item": "7.3",
@@ -490,7 +530,8 @@
      "item": "7.4",
      "text": "What was the additional tax remitted in each of these countries?",
      "type": "number",
-     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency per country. Only if you report it."
+     "hint": "Community and social vitality · Source: Adapted from GRI 201-1 (2016). Report in currency per country. Only if you report it.",
+     "unit": "currency"
     }
    ]
   }

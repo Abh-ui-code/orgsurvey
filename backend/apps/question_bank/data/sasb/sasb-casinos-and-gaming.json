@@ -21,13 +21,15 @@
      "item": ".1",
      "text": "What percentage of your gaming facilities implement the Responsible Gambling Standards and Criteria for Venues?",
      "type": "number",
-     "hint": "Unit: Percentage (%) by revenue · Report a single percentage by revenue of gaming facilities that implement the Responsible Gambling Council standards and criteria for venues."
+     "hint": "Unit: Percentage (%) by revenue · Report a single percentage by revenue of gaming facilities that implement the Responsible Gambling Council standards and criteria for venues.",
+     "unit": "% by revenue"
     },
     {
      "item": ".2",
      "text": "What percentage of your online gaming operations implement the Responsible Gambling Council (RGC) Standards and Criteria for iGaming?",
      "type": "number",
-     "hint": "Unit: Percentage (%) by revenue · Report a single percentage by revenue of online gaming operations that implement the RGC standards and criteria for iGaming."
+     "hint": "Unit: Percentage (%) by revenue · Report a single percentage by revenue of online gaming operations that implement the RGC standards and criteria for iGaming.",
+     "unit": "% by revenue"
     }
    ]
   },
@@ -39,13 +41,15 @@
      "item": ".1",
      "text": "What percentage of your gaming floor area allows smoking?",
      "type": "number",
-     "hint": "Unit: Percentage (%) of gaming floor area · Report the percentage of total gaming floor area where smoking is allowed."
+     "hint": "Unit: Percentage (%) of gaming floor area · Report the percentage of total gaming floor area where smoking is allowed.",
+     "unit": "% of gaming floor area"
     },
     {
      "item": ".2",
      "text": "What percentage of gaming staff hours are worked in areas where smoking is allowed?",
      "type": "number",
-     "hint": "Unit: Percentage (%) of man-hours · Report the percentage of gaming staff man-hours worked in areas where smoking is allowed."
+     "hint": "Unit: Percentage (%) of man-hours · Report the percentage of gaming staff man-hours worked in areas where smoking is allowed.",
+     "unit": "% of man-hours"
     }
    ]
   },
@@ -63,7 +67,8 @@
      "item": ".2",
      "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with money laundering?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to money laundering."
+     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to money laundering.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -75,25 +80,29 @@
      "item": ".A",
      "text": "How many gaming tables does your organisation operate?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of tables across your gaming facilities."
+     "hint": "Unit: Number · Report the total number of tables across your gaming facilities.",
+     "unit": ""
     },
     {
      "item": ".B",
      "text": "How many slot machines does your organisation operate?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of slots across your gaming facilities."
+     "hint": "Unit: Number · Report the total number of slots across your gaming facilities.",
+     "unit": ""
     },
     {
      "item": ".C",
      "text": "How many active online gaming customers does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of active online gaming customers, and state how you define an active customer."
+     "hint": "Unit: Number · Report the number of active online gaming customers, and state how you define an active customer.",
+     "unit": ""
     },
     {
      "item": ".D",
      "text": "What is the total area of your gaming floor?",
      "type": "number",
-     "hint": "Unit: Square metres (m²) · Report the total gaming floor area in square metres across all facilities."
+     "hint": "Unit: Square metres (m²) · Report the total gaming floor area in square metres across all facilities.",
+     "unit": "square metres (m²)"
     }
    ]
   }

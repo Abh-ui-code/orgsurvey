@@ -11,7 +11,6 @@ import { usePermissions } from "@/hooks/use-permissions";
 import { useSurvey } from "@/hooks/use-surveys";
 import { daysSince, pluralDays } from "@/lib/format";
 import { LIVE_STATUSES, roleName, type HistoryEntry } from "@/types/survey";
-import { ActivityCard } from "./_components/activity-card";
 import { AnswerForm } from "./_components/answer-form";
 import { AnswersReadOnly, type Choice, type Deciding } from "./_components/answers-read-only";
 import { SurveyBuilder } from "./_components/builder/survey-builder";
@@ -116,7 +115,7 @@ export default function SurveyDetailPage() {
             </Banner>
           )}
 
-          <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_340px]">
+          <div className="space-y-5">
             <div className="space-y-5">
               {canRespond && me ? (
                 <AnswerForm survey={s} meId={me.id} />
@@ -143,12 +142,11 @@ export default function SurveyDetailPage() {
               )}
             </div>
 
-            <div className="space-y-5 self-start lg:sticky lg:top-4">
+            <div className="grid items-start gap-5 md:grid-cols-2 xl:grid-cols-3">
               {isAdmin && isLive && (
                 <LiveAssignmentCard key={`${s.reviewer?.id}${s.approver?.id}${s.due_date}`} survey={s} />
               )}
               <RespondentsCard survey={s} meId={me?.id} />
-              <ActivityCard survey={s} />
             </div>
           </div>
         </>

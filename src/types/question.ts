@@ -1,17 +1,39 @@
 import type { Person } from "@/types/common";
 import type { QuestionStatus } from "@/types/survey";
 
-export type QuestionType = "text" | "single_choice" | "multi_choice" | "rating" | "yes_no" | "number" | "date";
+export type QuestionType = "text" | "single_choice" | "multi_choice" | "rating" | "yes_no" | "number" | "date" | "table" | "short_text";
 
 export const QUESTION_TYPES: { value: QuestionType; label: string }[] = [
   { value: "text", label: "Free text" },
+  { value: "short_text", label: "Short text (one line)" },
   { value: "single_choice", label: "Single choice" },
   { value: "multi_choice", label: "Multiple choice" },
   { value: "rating", label: "Rating (1-5)" },
   { value: "yes_no", label: "Yes / No" },
   { value: "number", label: "Number" },
   { value: "date", label: "Date" },
+  { value: "table", label: "Table (numbers and text)" },
 ];
+
+/** One row of a table question: a label and what goes in the box beside it. */
+export interface QuestionPart {
+  label: string;
+  kind: "number" | "text" | "date";
+  /** Shown beside a number box ("hectares"), so the respondent only types the figure. */
+  unit: string;
+}
+
+/** A table's rows on one line: "Total area (hectares) · Notes". */
+export function partsSummary(parts: QuestionPart[] | undefined): string {
+  return (parts ?? []).map((p) => (p.unit ? `${p.label} (${p.unit})` : p.label)).join(" · ");
+}
+
+/** The type as shown in lists: "Number (hectares)", "Table (3 rows)". */
+export function questionKindLabel(q: { type: QuestionType; unit?: string; parts?: QuestionPart[] }): string {
+  if (q.type === "number" && q.unit) return `Number (${q.unit})`;
+  if (q.type === "table") return `Table (${q.parts?.length ?? 0} row${q.parts?.length === 1 ? "" : "s"})`;
+  return questionTypeLabel(q.type);
+}
 
 export function questionTypeLabel(type: QuestionType): string {
   return QUESTION_TYPES.find((t) => t.value === type)?.label ?? type;
@@ -21,6 +43,10 @@ export function questionTypeLabel(type: QuestionType): string {
 export interface QuestionFields {
   text: string;
   type: QuestionType;
+  /** For a number or short-text question: the unit or label shown beside the box. */
+  unit: string;
+  /** For a table question: its rows. */
+  parts: QuestionPart[];
   options: string[];
   hint: string;
   required: boolean;
@@ -168,6 +194,8 @@ export interface GriQuestion {
   item: string;
   text: string;
   type: QuestionType;
+  unit: string;
+  parts: QuestionPart[];
   hint: string;
   required: boolean;
 }

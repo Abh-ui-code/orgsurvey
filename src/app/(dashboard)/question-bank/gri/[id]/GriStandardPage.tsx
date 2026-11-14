@@ -3,22 +3,25 @@
 import { ArrowLeft, Download, FileText } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { useState } from "react";
 import { PermissionGate } from "@/components/permission-gate";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { EmptyState } from "@/components/ui/empty-state";
+import { SearchInput } from "@/components/ui/search-input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useGriStandard } from "@/hooks/use-gri-standards";
-import { disclosureLabel, groupByDisclosure, questionNumber } from "@/lib/gri";
-import { FRAMEWORKS, questionTypeLabel } from "@/types/question";
+import { disclosureLabel, filterQuestions, groupByDisclosure, questionNumber } from "@/lib/gri";
+import { FRAMEWORKS, questionKindLabel, partsSummary } from "@/types/question";
 
 /** One GRI standard on its own page: what it is, its PDF, and its questions. */
 function GriStandard() {
   const { id } = useParams<{ id: string }>();
   const standard = useGriStandard(id);
+  const [search, setSearch] = useState("");
 
-  const back = `/question-bank?category=${standard.data?.framework ?? "gri"}`;
+  const back = `/question-bank/standards/${standard.data?.framework ?? "gri"}`;
   if (standard.isPending) return <Skeleton className="h-96 w-full" />;
   if (standard.isError || !standard.data) {
     return (
@@ -35,6 +38,7 @@ function GriStandard() {
   }
 
   const s = standard.data;
+  const shown = filterQuestions(s.questions, search);
   const framework = FRAMEWORKS[s.framework];
   const series = framework.groups.find((x) => x.value === s.series);
 
@@ -70,10 +74,14 @@ function GriStandard() {
       <Card>
         <CardHeader className="items-center py-3">
           <CardTitle>Questions in this standard</CardTitle>
-          <Badge>{s.questions.length}</Badge>
+          <div className="flex items-center gap-2">
+            <SearchInput value={search} onChange={setSearch} placeholder="Search by number or text" className="w-64" />
+            <Badge>{search ? `${shown.length} of ${s.questions.length}` : s.questions.length}</Badge>
+          </div>
         </CardHeader>
+        {shown.length === 0 && <p className="px-5 py-8 text-center text-sm text-ink-muted">No questions match “{search}”.</p>}
         <div className="divide-y divide-line">
-          {groupByDisclosure(s.questions).map((group) => (
+          {groupByDisclosure(shown).map((group) => (
             <section key={`${group.ref}-${group.items[0].id}`}>
               {group.title && (
                 <h3 className="bg-paper-sunken/60 px-5 py-2.5 text-sm font-semibold text-ink">
@@ -87,7 +95,8 @@ function GriStandard() {
                     <div className="min-w-0 flex-1">
                       <p className="text-sm text-ink">{q.text}</p>
                       {q.hint && <p className="mt-1 text-xs text-ink-muted">{q.hint}</p>}
-                      <p className="mt-1 text-xs text-ink-faint">{questionTypeLabel(q.type)}</p>
+                      <p className="mt-1 text-xs text-ink-faint">{questionKindLabel(q)}</p>
+                      {q.type === "table" && <p className="mt-0.5 text-xs text-ink-muted">Rows: {partsSummary(q.parts)}</p>}
                     </div>
                   </li>
                 ))}

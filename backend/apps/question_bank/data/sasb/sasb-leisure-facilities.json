@@ -51,13 +51,15 @@
      "item": ".A",
      "text": "What was your attendance?",
      "type": "number",
-     "hint": "Unit: Number · Report total attendance across your facilities in the reporting period."
+     "hint": "Unit: Number · Report total attendance across your facilities in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".B",
      "text": "How many customer-days did your organisation record?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of customer-days in the reporting period."
+     "hint": "Unit: Number · Report the total number of customer-days in the reporting period.",
+     "unit": ""
     }
    ]
   }

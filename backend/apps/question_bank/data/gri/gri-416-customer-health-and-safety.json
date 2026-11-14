@@ -51,7 +51,8 @@
           "item": "a",
           "text": "What percentage of significant product and service categories have had their health and safety impacts assessed for improvement?",
           "hint": "Enter the percentage of significant product and service categories.",
-          "type": "number"
+          "type": "number",
+          "unit": "%"
         }
       ]
     },
@@ -63,7 +64,29 @@
           "item": "a",
           "text": "What was the total number of incidents of non-compliance with regulations and/or voluntary codes concerning the health and safety impacts of products and services within the reporting period, by (i) incidents of non-compliance with regulations resulting in a fine or penalty, (ii) incidents resulting in a warning, and (iii) incidents of non-compliance with voluntary codes?",
           "hint": "Exclude incidents where the organization was not at fault; identify incidents relating to prior periods.",
-          "type": "text"
+          "type": "table",
+          "parts": [
+            {
+              "label": "Total incidents of non-compliance",
+              "kind": "number",
+              "unit": "incidents"
+            },
+            {
+              "label": "Incidents resulting in a fine or penalty",
+              "kind": "number",
+              "unit": "incidents"
+            },
+            {
+              "label": "Incidents resulting in a warning",
+              "kind": "number",
+              "unit": "incidents"
+            },
+            {
+              "label": "Incidents of non-compliance with voluntary codes",
+              "kind": "number",
+              "unit": "incidents"
+            }
+          ]
         },
         {
           "item": "b",

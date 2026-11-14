@@ -3,7 +3,7 @@
 import { Download, MessageSquarePlus, UserRoundCog } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import { formatAnswer } from "@/components/shared/answer-field";
+import { AnswerView, formatAnswer } from "@/components/shared/answer-field";
 import { Avatar } from "@/components/shared/avatar";
 import { PersonSelect } from "@/components/shared/person-select";
 import { Button } from "@/components/ui/button";
@@ -11,7 +11,7 @@ import { QUESTION_STATUS, QuestionStatusBadge } from "@/components/ui/status-bad
 import { Textarea } from "@/components/ui/textarea";
 import { downloadCsv, slug } from "@/lib/csv";
 import { cn } from "@/lib/utils";
-import { questionTypeLabel } from "@/types/question";
+import { questionKindLabel } from "@/types/question";
 import { QUESTION_STATUSES, type QuestionStatus, type SurveyDetail } from "@/types/survey";
 import { useAssignQuestions } from "../_hooks/use-survey-actions";
 import { commentsByQuestion, QuestionComments } from "./question-comments";
@@ -77,10 +77,10 @@ export function AnswersReadOnly({ survey, deciding, canReassign }: { survey: Sur
           q.number,
           section.title,
           q.text,
-          questionTypeLabel(q.type),
+          questionKindLabel(q),
           q.responder?.full_name ?? "",
           QUESTION_STATUS[q.status].label,
-          formatAnswer(survey.answers[q.id]),
+          formatAnswer(survey.answers[q.id], q),
         ]);
       }
     }
@@ -174,7 +174,7 @@ export function AnswersReadOnly({ survey, deciding, canReassign }: { survey: Sur
         survey={survey}
         show={(q) => filter === "all" || q.status === filter}
         render={(q, n) => {
-          const answer = formatAnswer(survey.answers[q.id]);
+          const answer = formatAnswer(survey.answers[q.id], q);
           const empty = !answer || answer === "—";
           const pickable = deciding?.status === q.status;
           const choice = deciding?.choices[q.id];
@@ -221,7 +221,7 @@ export function AnswersReadOnly({ survey, deciding, canReassign }: { survey: Sur
                   )}
                   <div className="mt-3 divide-y divide-line overflow-hidden rounded-lg border border-line">
                     <Block label="Answer">
-                      <p className={empty ? "text-sm italic text-ink-faint" : "whitespace-pre-wrap text-sm font-medium text-ink"}>{empty ? "No answer" : answer}</p>
+                      {empty ? <p className="text-sm italic text-ink-faint">No answer</p> : <AnswerView question={q} value={survey.answers[q.id]} />}
                     </Block>
                     {survey.notes[q.id] && (
                       <Block label="Respondent's note">

@@ -33,7 +33,8 @@
      "item": ".2",
      "text": "What was your revenue from embedded advertising?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report revenue from embedded advertising, such as product placement and sponsored content, in your presentation currency."
+     "hint": "Unit: Presentation currency · Report revenue from embedded advertising, such as product placement and sponsored content, in your presentation currency.",
+     "unit": "presentation currency"
     },
     {
      "item": ".3",
@@ -69,7 +70,8 @@
      "item": ".B",
      "text": "What is the total number of media productions and publications your organisation produced?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of media productions and publications produced in the reporting period."
+     "hint": "Unit: Number · Report the total number of media productions and publications produced in the reporting period.",
+     "unit": ""
     }
    ]
   }

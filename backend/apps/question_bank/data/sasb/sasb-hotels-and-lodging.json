@@ -57,7 +57,8 @@
      "item": ".2",
      "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with labour law violations?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to labour law violations."
+     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to labour law violations.",
+     "unit": "presentation currency"
     },
     {
      "item": ".3",
@@ -81,7 +82,8 @@
      "item": ".1",
      "text": "How many of your lodging facilities are located in 100-year flood zones?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of lodging facilities located in 100-year flood zones."
+     "hint": "Unit: Number · Report the number of lodging facilities located in 100-year flood zones.",
+     "unit": ""
     }
    ]
   },
@@ -93,19 +95,22 @@
      "item": ".A",
      "text": "How many available room-nights does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of available room-nights in the reporting period."
+     "hint": "Unit: Number · Report the total number of available room-nights in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".B",
      "text": "What is your average occupancy rate?",
      "type": "number",
-     "hint": "Unit: Rate · Report the average occupancy rate as a rate or percentage of available room-nights occupied."
+     "hint": "Unit: Rate · Report the average occupancy rate as a rate or percentage of available room-nights occupied.",
+     "unit": ""
     },
     {
      "item": ".C",
      "text": "What is the total area of your lodging facilities?",
      "type": "number",
-     "hint": "Unit: Square metres (m²) · Report the total area of lodging facilities in square metres."
+     "hint": "Unit: Square metres (m²) · Report the total area of lodging facilities in square metres.",
+     "unit": "square metres (m²)"
     },
     {
      "item": ".D",

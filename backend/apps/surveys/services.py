@@ -28,7 +28,7 @@ from django.db.models import Max
 from django.utils import timezone
 
 from apps.core.exceptions import ApiError
-from apps.core.question_types import is_empty, validate_answer
+from apps.core.question_types import clean_answer
 from apps.organisation.models import Member
 from apps.surveys.models import QuestionAttachment, QuestionComment, Section, Survey, SurveyEvent, SurveyQuestion
 from apps.surveys.scoping import RESPONDER_OPEN
@@ -36,7 +36,7 @@ from apps.surveys.scoping import RESPONDER_OPEN
 FROZEN = "Published surveys can't be changed. Duplicate it to make changes."
 ROLES = ("reviewer", "approver")
 RETURN_AUDIENCES = ("responder", "reviewer", "both")
-QUESTION_FIELDS = ("text", "type", "options", "hint", "required")
+QUESTION_FIELDS = ("text", "type", "unit", "parts", "options", "hint", "required")
 STAGE_ERROR = "Those questions are not at the right stage for that action."
 
 
@@ -434,6 +434,11 @@ def _refresh_status(survey):
     survey.save(update_fields=["status"])
 
 
+def _shape(q, required):
+    """A survey question as the answer rules see it."""
+    return {"text": q.text, "type": q.type, "options": q.options, "unit": q.unit, "parts": q.parts, "required": required}
+
+
 @transaction.atomic
 def submit_response(survey: Survey, user, answers, question_ids=None, notes=None) -> Survey:
     """A respondent submits some or all of their open questions."""
@@ -443,10 +448,9 @@ def submit_response(survey: Survey, user, answers, question_ids=None, notes=None
     mine = _targets(survey, question_ids, RESPONDER_OPEN, owned_by=user)
     cleaned = {}
     for q in mine:
-        value = answers.get(str(q.id))
-        validate_answer({"text": q.text, "type": q.type, "options": q.options, "required": q.required}, value)
-        if value not in (None, "", []):
-            cleaned[str(q.id)] = value.strip() if isinstance(value, str) else value
+        value = clean_answer(_shape(q, q.required), answers.get(str(q.id)))
+        if value is not None:
+            cleaned[str(q.id)] = value
     ids = {str(q.id) for q in mine}
     survey.answers = {**{k: v for k, v in survey.answers.items() if k not in ids}, **cleaned}
     survey.draft_answers = {k: v for k, v in survey.draft_answers.items() if k not in ids}
@@ -570,10 +574,11 @@ def save_draft(survey: Survey, user, answers, notes=None) -> Survey:
     cleaned = {}
     for question_id, value in answers.items():
         q = mine.get(question_id)
-        if q is None or is_empty(value):
+        if q is None:
             continue
-        validate_answer({"text": q.text, "type": q.type, "options": q.options, "required": False}, value)
-        cleaned[question_id] = value.strip() if isinstance(value, str) else value
+        value = clean_answer(_shape(q, False), value)
+        if value is not None:
+            cleaned[question_id] = value
     survey.draft_answers = {**{k: v for k, v in survey.draft_answers.items() if k not in mine}, **cleaned}
     fields = ["draft_answers"]
     if notes is not None:

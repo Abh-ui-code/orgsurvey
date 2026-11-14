@@ -51,7 +51,8 @@
           "item": "a",
           "text": "What percentage of security personnel have received formal training in the organization's human rights policies or specific procedures and their application to security?",
           "hint": "Calculate using total security personnel, whether employees of the organization or of third parties; state if third-party employees are included.",
-          "type": "text"
+          "type": "number",
+          "unit": "%"
         },
         {
           "item": "b",

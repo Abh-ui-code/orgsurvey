@@ -39,7 +39,8 @@
      "item": ".3",
      "text": "How many fatalities were associated with your products?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of fatalities associated with your products in the reporting period."
+     "hint": "Unit: Number · Report the total number of fatalities associated with your products in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".4",
@@ -57,7 +58,8 @@
      "item": ".1",
      "text": "What was the total amount of monetary losses from legal proceedings associated with false marketing claims?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency."
+     "hint": "Unit: Presentation currency · Report the total amount in your presentation currency, covering monetary losses from legal proceedings (fines, settlements, judgments) in the reporting period; state the period and currency.",
+     "unit": "presentation currency"
     },
     {
      "item": ".2",
@@ -80,8 +82,20 @@
     {
      "item": ".2",
      "text": "What total amount of products accepted for take-back was reused, recycled or donated, for (1) devices and equipment and (2) supplies?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes (t) · Report weight in metric tonnes separately for (1) devices and equipment and (2) supplies."
+     "type": "table",
+     "hint": "Unit: Metric tonnes (t) · Report weight in metric tonnes separately for (1) devices and equipment and (2) supplies.",
+     "parts": [
+      {
+       "label": "Devices and equipment",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Supplies",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      }
+     ]
     }
    ]
   },

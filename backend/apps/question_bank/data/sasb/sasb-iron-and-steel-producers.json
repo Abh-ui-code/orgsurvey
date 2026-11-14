@@ -26,8 +26,50 @@
     {
      "item": ".1",
      "text": "What are your organisation's air emissions of the following pollutants: (1) CO, (2) NOx (excluding N2O), (3) SOx, (4) particulate matter (PM10), (5) manganese (MnO), (6) lead (Pb), (7) volatile organic compounds (VOCs) and (8) polycyclic aromatic hydrocarbons (PAHs)?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes (t) · Report each pollutant separately in metric tonnes, covering all operations and noting estimation or measurement methods; state any pollutant that is not applicable."
+     "type": "table",
+     "hint": "Unit: Metric tonnes (t) · Report each pollutant separately in metric tonnes, covering all operations and noting estimation or measurement methods; state any pollutant that is not applicable.",
+     "parts": [
+      {
+       "label": "CO",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "NOx (excluding N2O)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "SOx",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Particulate matter (PM10)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Manganese (MnO)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Lead (Pb)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Volatile organic compounds (VOCs)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Polycyclic aromatic hydrocarbons (PAHs)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      }
+     ]
     }
    ]
   },
@@ -111,13 +153,15 @@
      "item": ".B",
      "text": "What was your organisation's total iron ore production?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report total iron ore production in metric tonnes for the reporting period."
+     "hint": "Unit: Metric tonnes (t) · Report total iron ore production in metric tonnes for the reporting period.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": ".C",
      "text": "What was your organisation's total coking coal production?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report total coking coal production in metric tonnes for the reporting period."
+     "hint": "Unit: Metric tonnes (t) · Report total coking coal production in metric tonnes for the reporting period.",
+     "unit": "metric tonnes (t)"
     }
    ]
   }

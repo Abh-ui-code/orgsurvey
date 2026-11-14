@@ -27,7 +27,8 @@
      "item": ".2",
      "text": "How many incidents of non-compliance with water quality permits, standards and regulations did your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of incidents of non-compliance associated with water quality permits, standards and regulations in the reporting period."
+     "hint": "Unit: Number · Report the total number of incidents of non-compliance associated with water quality permits, standards and regulations in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".3",
@@ -98,8 +99,20 @@
     {
      "item": ".2",
      "text": "What revenue does your organisation earn from products labelled as (1) containing genetically modified organisms (GMOs) and (2) non-GMO?",
-     "type": "text",
-     "hint": "Unit: Presentation currency · Report (1) revenue from products labelled as containing GMOs and (2) revenue from products labelled non-GMO, each in your presentation currency."
+     "type": "table",
+     "hint": "Unit: Presentation currency · Report (1) revenue from products labelled as containing GMOs and (2) revenue from products labelled non-GMO, each in your presentation currency.",
+     "parts": [
+      {
+       "label": "Containing genetically modified organisms (GMOs)",
+       "kind": "number",
+       "unit": "presentation currency"
+      },
+      {
+       "label": "Non-GMO",
+       "kind": "number",
+       "unit": "presentation currency"
+      }
+     ]
     },
     {
      "item": ".3",
@@ -177,13 +190,15 @@
      "item": ".A",
      "text": "What was the weight of the products you sold?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) · Report the weight of products sold in metric tonnes."
+     "hint": "Unit: Metric tonnes (t) · Report the weight of products sold in metric tonnes.",
+     "unit": "metric tonnes (t)"
     },
     {
      "item": ".B",
      "text": "How many production facilities does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of production facilities."
+     "hint": "Unit: Number · Report the total number of production facilities.",
+     "unit": ""
     }
    ]
   }

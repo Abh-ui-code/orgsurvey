@@ -106,8 +106,9 @@
         {
           "item": "d",
           "text": "What percentage of salary is contributed by the employee or the employer?",
-          "type": "text",
-          "hint": "Percentage of salary contributed by employee or employer."
+          "type": "number",
+          "hint": "Percentage of salary contributed by employee or employer.",
+          "unit": "%"
         },
         {
           "item": "e",

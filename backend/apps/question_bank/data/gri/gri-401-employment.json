@@ -87,25 +87,93 @@
           "item": "a",
           "text": "How many employees were entitled to parental leave, by gender?",
           "hint": "Report numbers by gender.",
-          "type": "text"
+          "type": "table",
+          "parts": [
+            {
+              "label": "Women",
+              "kind": "number",
+              "unit": "employees"
+            },
+            {
+              "label": "Men",
+              "kind": "number",
+              "unit": "employees"
+            },
+            {
+              "label": "Other gender",
+              "kind": "number",
+              "unit": "employees"
+            }
+          ]
         },
         {
           "item": "b",
           "text": "How many employees took parental leave, by gender?",
           "hint": "Report numbers by gender.",
-          "type": "text"
+          "type": "table",
+          "parts": [
+            {
+              "label": "Women",
+              "kind": "number",
+              "unit": "employees"
+            },
+            {
+              "label": "Men",
+              "kind": "number",
+              "unit": "employees"
+            },
+            {
+              "label": "Other gender",
+              "kind": "number",
+              "unit": "employees"
+            }
+          ]
         },
         {
           "item": "c",
           "text": "How many employees returned to work in the reporting period after parental leave ended, by gender?",
           "hint": "Report numbers by gender.",
-          "type": "text"
+          "type": "table",
+          "parts": [
+            {
+              "label": "Women",
+              "kind": "number",
+              "unit": "employees"
+            },
+            {
+              "label": "Men",
+              "kind": "number",
+              "unit": "employees"
+            },
+            {
+              "label": "Other gender",
+              "kind": "number",
+              "unit": "employees"
+            }
+          ]
         },
         {
           "item": "d",
           "text": "How many employees who returned to work after parental leave ended were still employed 12 months after their return, by gender?",
           "hint": "Report numbers by gender.",
-          "type": "text"
+          "type": "table",
+          "parts": [
+            {
+              "label": "Women",
+              "kind": "number",
+              "unit": "employees"
+            },
+            {
+              "label": "Men",
+              "kind": "number",
+              "unit": "employees"
+            },
+            {
+              "label": "Other gender",
+              "kind": "number",
+              "unit": "employees"
+            }
+          ]
         },
         {
           "item": "e",

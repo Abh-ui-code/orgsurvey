@@ -49,15 +49,28 @@
    "questions": [
     {
      "text": "What were your Scope 1 and Scope 2 GHG emissions?",
-     "type": "number",
+     "type": "table",
      "hint": "Guidance for All Sectors. Calculate in line with the GHG Protocol methodology to allow aggregation and comparability; national methodologies may be used if consistent with it.",
-     "item": "1"
+     "item": "1",
+     "parts": [
+      {
+       "label": "Scope 1 GHG emissions",
+       "kind": "number",
+       "unit": "metric tonnes CO₂-e"
+      },
+      {
+       "label": "Scope 2 GHG emissions",
+       "kind": "number",
+       "unit": "metric tonnes CO₂-e"
+      }
+     ]
     },
     {
      "text": "What were your Scope 3 GHG emissions, if appropriate?",
      "type": "number",
      "hint": "Guidance for All Sectors: if appropriate, and the related risks.",
-     "item": "2"
+     "item": "2",
+     "unit": "metric tonnes CO₂-e"
     },
     {
      "text": "What risks are related to your GHG emissions?",

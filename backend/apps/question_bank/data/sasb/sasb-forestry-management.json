@@ -15,13 +15,15 @@
      "item": ".2",
      "text": "What area of your forestland, in hectares, has protected conservation status?",
      "type": "number",
-     "hint": "Unit: Hectares (ha) · Report hectares of forestland with protected conservation status. State how protected status is defined."
+     "hint": "Unit: Hectares (ha) · Report hectares of forestland with protected conservation status. State how protected status is defined.",
+     "unit": "hectares (ha)"
     },
     {
      "item": ".3",
      "text": "What area of your forestland, in hectares, is in endangered species habitat?",
      "type": "number",
-     "hint": "Unit: Hectares (ha) · Report hectares of forestland located in endangered species habitat. State the lists or classifications used to identify such habitat."
+     "hint": "Unit: Hectares (ha) · Report hectares of forestland located in endangered species habitat. State the lists or classifications used to identify such habitat.",
+     "unit": "hectares (ha)"
     },
     {
      "item": ".4",
@@ -39,7 +41,8 @@
      "item": ".1",
      "text": "What area of your forestland, in hectares, is in indigenous land?",
      "type": "number",
-     "hint": "Unit: Hectares (ha) · Report hectares of forestland that lies within indigenous land. State how indigenous land is defined."
+     "hint": "Unit: Hectares (ha) · Report hectares of forestland that lies within indigenous land. State how indigenous land is defined.",
+     "unit": "hectares (ha)"
     },
     {
      "item": ".2",
@@ -75,13 +78,15 @@
      "item": ".B",
      "text": "What is your aggregate standing timber inventory, in cubic metres?",
      "type": "number",
-     "hint": "Unit: Cubic metres (m³) · Report the aggregate standing timber inventory in cubic metres, and state the measurement basis and date."
+     "hint": "Unit: Cubic metres (m³) · Report the aggregate standing timber inventory in cubic metres, and state the measurement basis and date.",
+     "unit": "cubic metres (m³)"
     },
     {
      "item": ".C",
      "text": "What was your timber harvest volume, in cubic metres?",
      "type": "number",
-     "hint": "Unit: Cubic metres (m³) · Report the timber harvest volume in cubic metres for the reporting period."
+     "hint": "Unit: Cubic metres (m³) · Report the timber harvest volume in cubic metres for the reporting period.",
+     "unit": "cubic metres (m³)"
     }
    ]
   }

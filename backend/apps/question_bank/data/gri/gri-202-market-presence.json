@@ -81,7 +81,8 @@
           "item": "a",
           "text": "What percentage of senior management at significant locations of operation is hired from the local community?",
           "type": "number",
-          "hint": "Percentage of senior management at significant locations of operation hired from the local community."
+          "hint": "Percentage of senior management at significant locations of operation hired from the local community.",
+          "unit": "%"
         },
         {
           "item": "b",

@@ -21,7 +21,8 @@
      "item": ".3",
      "text": "What percentage of your engines in service comply with the highest level of emissions standards for non-road diesel engine emissions?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of engines in service meeting the highest applicable non-road diesel emissions standard (e.g. EPA Tier 4 or EU Stage V)."
+     "hint": "Unit: Percentage (%) · Report the percentage of engines in service meeting the highest applicable non-road diesel emissions standard (e.g. EPA Tier 4 or EU Stage V).",
+     "unit": "%"
     }
    ]
   },
@@ -68,8 +69,20 @@
     {
      "item": ".1",
      "text": "What is the average disturbed land area per (1) oil well site and (2) gas well site?",
-     "type": "text",
-     "hint": "Unit: Hectares (ha) · Report the average disturbed land area in hectares for (1) oil well sites and (2) gas well sites separately."
+     "type": "table",
+     "hint": "Unit: Hectares (ha) · Report the average disturbed land area in hectares for (1) oil well sites and (2) gas well sites separately.",
+     "parts": [
+      {
+       "label": "Oil well site",
+       "kind": "number",
+       "unit": "hectares (ha)"
+      },
+      {
+       "label": "Gas well site",
+       "kind": "number",
+       "unit": "hectares (ha)"
+      }
+     ]
     },
     {
      "item": ".2",
@@ -99,7 +112,8 @@
      "item": ".3",
      "text": "How many road accidents and incidents did your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of road accidents and incidents involving your vehicles or drivers in the reporting period."
+     "hint": "Unit: Number · Report the total number of road accidents and incidents involving your vehicles or drivers in the reporting period.",
+     "unit": ""
     }
    ]
   },
@@ -111,7 +125,8 @@
      "item": ".1",
      "text": "What was your organisation's net revenue in countries ranked among the 20 lowest in Transparency International's Corruption Perception Index?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report net revenue in presentation currency from those countries, stating the index year used."
+     "hint": "Unit: Presentation currency · Report net revenue in presentation currency from those countries, stating the index year used.",
+     "unit": "presentation currency"
     },
     {
      "item": ".2",
@@ -153,19 +168,22 @@
      "item": ".A",
      "text": "How many active rig sites does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of active rig sites at the end of the reporting period."
+     "hint": "Unit: Number · Report the number of active rig sites at the end of the reporting period.",
+     "unit": ""
     },
     {
      "item": ".B",
      "text": "How many active well sites does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of active well sites at the end of the reporting period."
+     "hint": "Unit: Number · Report the number of active well sites at the end of the reporting period.",
+     "unit": ""
     },
     {
      "item": ".C",
      "text": "What total amount of drilling did your organisation perform?",
      "type": "number",
-     "hint": "Unit: Metres (m) · Report total drilling performed in metres for the reporting period."
+     "hint": "Unit: Metres (m) · Report total drilling performed in metres for the reporting period.",
+     "unit": "metres (m)"
     },
     {
      "item": ".D",

@@ -33,7 +33,7 @@ export function trailOf(survey: SurveyDetail, question: SurveyQuestion): TrailSt
       steps.push({ event });
       continue;
     }
-    const answer = formatAnswer(event.snapshot[question.id]);
+    const answer = formatAnswer(event.snapshot[question.id], question);
     revisions += 1;
     steps.push({ event, revision: revisions, answer, previous: last, changed: last !== undefined && last !== answer });
     last = answer;

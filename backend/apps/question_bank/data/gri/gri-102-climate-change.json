@@ -122,38 +122,60 @@
     {
      "item": "b",
      "text": "Report the total number of employees whose work was terminated and a breakdown by gender and employee type.",
-     "type": "text",
-     "hint": "102-3-b (i) gender; (ii) employee type."
+     "type": "number",
+     "hint": "102-3-b (i) gender; (ii) employee type.",
+     "unit": "employees"
     },
     {
      "item": "c",
      "text": "Report the total number of redeployed employees and a breakdown by gender and employee type.",
-     "type": "text",
-     "hint": "102-3-c (i) gender; (ii) employee type."
+     "type": "number",
+     "hint": "102-3-c (i) gender; (ii) employee type.",
+     "unit": "employees"
     },
     {
      "item": "d",
      "text": "Report the total number of employees who received training for up- and re-skilling, and a breakdown by gender and employee type.",
-     "type": "text",
-     "hint": "102-3-d (i) gender; (ii) employee type."
+     "type": "number",
+     "hint": "102-3-d (i) gender; (ii) employee type.",
+     "unit": "employees"
     },
     {
      "item": "e",
      "text": "Report the total number of new workers who are not employees recruited and a breakdown by gender.",
-     "type": "text",
-     "hint": "102-3-e."
+     "type": "number",
+     "hint": "102-3-e.",
+     "unit": "workers"
     },
     {
      "item": "f",
      "text": "Report the total number of workers who are not employees whose work was terminated and a breakdown by gender.",
-     "type": "text",
-     "hint": "102-3-f."
+     "type": "number",
+     "hint": "102-3-f.",
+     "unit": "workers"
     },
     {
      "item": "g",
      "text": "Report the total number and percentage of new employees recruited whose basic pay is at or above the cost-of-living estimate, and describe actions taken or commitments made to address any gaps between basic pay and the cost-of-living estimate for workers reported under 102-3-a and 102-3-e.",
-     "type": "text",
-     "hint": "102-3-g."
+     "type": "table",
+     "hint": "102-3-g.",
+     "parts": [
+      {
+       "label": "New employees with basic pay at or above the cost-of-living estimate",
+       "kind": "number",
+       "unit": "employees"
+      },
+      {
+       "label": "Percentage of new employees",
+       "kind": "number",
+       "unit": "%"
+      },
+      {
+       "label": "Actions taken or commitments made to address any gaps",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "h",
@@ -164,8 +186,9 @@
     {
      "item": "i",
      "text": "Report the percentage of locations of operation listed under 102-3-h in which an agreement has been reached with affected or potentially affected local communities or Indigenous Peoples to safeguard their interests.",
-     "type": "text",
-     "hint": "102-3-i."
+     "type": "number",
+     "hint": "102-3-i.",
+     "unit": "%"
     },
     {
      "item": "j",
@@ -255,7 +278,8 @@
      "item": "a",
      "text": "Report gross Scope 1 GHG emissions in metric tons of CO₂ equivalent.",
      "type": "number",
-     "hint": "102-5-a. Include CO2, CH4, N2O, HFCs, PFCs, SF6, NF3 and biogenic non-CO2 emissions from owned or controlled sources; exclude removals, trades and avoided emissions; use 100-year GWP values from the latest IPCC assessment report."
+     "hint": "102-5-a. Include CO2, CH4, N2O, HFCs, PFCs, SF6, NF3 and biogenic non-CO2 emissions from owned or controlled sources; exclude removals, trades and avoided emissions; use 100-year GWP values from the latest IPCC assessment report.",
+     "unit": "metric tonnes CO₂-e"
     },
     {
      "item": "b",
@@ -297,7 +321,8 @@
      "item": "a",
      "text": "Report gross location-based and, if applicable, market-based Scope 2 GHG emissions in metric tons of CO₂ equivalent.",
      "type": "number",
-     "hint": "102-6-a. Include CO2, CH4, N2O and biogenic non-CO2 emissions from electricity use; exclude removals, trades and avoided emissions; use 100-year GWP values from the latest IPCC assessment report."
+     "hint": "102-6-a. Include CO2, CH4, N2O and biogenic non-CO2 emissions from electricity use; exclude removals, trades and avoided emissions; use 100-year GWP values from the latest IPCC assessment report.",
+     "unit": "metric tonnes CO₂-e"
     },
     {
      "item": "b",
@@ -339,7 +364,8 @@
      "item": "a",
      "text": "Report gross Scope 3 GHG emissions in metric tons of CO₂ equivalent.",
      "type": "number",
-     "hint": "102-7-a. Include each Scope 3 category, CO2, CH4, N2O, HFCs, PFCs, SF6, NF3 and biogenic non-CO2 emissions in the upstream and downstream value chain; exclude removals, trades and avoided emissions; use 100-year GWP values from the latest IPCC assessment report."
+     "hint": "102-7-a. Include each Scope 3 category, CO2, CH4, N2O, HFCs, PFCs, SF6, NF3 and biogenic non-CO2 emissions in the upstream and downstream value chain; exclude removals, trades and avoided emissions; use 100-year GWP values from the latest IPCC assessment report.",
+     "unit": "metric tonnes CO₂-e"
     },
     {
      "item": "b",
@@ -439,8 +465,25 @@
     {
      "item": "a",
      "text": "Report the total amount of carbon credits canceled in metric tons of CO₂ equivalent and a breakdown of this total by removal or reduction projects.",
-     "type": "text",
-     "hint": "102-10-a."
+     "type": "table",
+     "hint": "102-10-a.",
+     "parts": [
+      {
+       "label": "Total carbon credits canceled",
+       "kind": "number",
+       "unit": "metric tonnes CO₂-e"
+      },
+      {
+       "label": "From removal projects",
+       "kind": "number",
+       "unit": "metric tonnes CO₂-e"
+      },
+      {
+       "label": "From reduction projects",
+       "kind": "number",
+       "unit": "metric tonnes CO₂-e"
+      }
+     ]
     },
     {
      "item": "b",

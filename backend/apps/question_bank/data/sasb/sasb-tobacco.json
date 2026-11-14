@@ -50,8 +50,30 @@
     {
      "item": ".B",
      "text": "What was your non-combustible product sales volume for (1) traditional smokeless tobacco, (2) non-tobacco nicotine products, (3) heated tobacco products and (4) nicotine replacement therapy products?",
-     "type": "text",
-     "hint": "Unit: Number · Report sales volume separately for each of (1) traditional smokeless tobacco, (2) non-tobacco nicotine products, (3) heated tobacco products and (4) nicotine replacement therapy products, in units."
+     "type": "table",
+     "hint": "Unit: Number · Report sales volume separately for each of (1) traditional smokeless tobacco, (2) non-tobacco nicotine products, (3) heated tobacco products and (4) nicotine replacement therapy products, in units.",
+     "parts": [
+      {
+       "label": "Traditional smokeless tobacco",
+       "kind": "number",
+       "unit": ""
+      },
+      {
+       "label": "Non-tobacco nicotine products",
+       "kind": "number",
+       "unit": ""
+      },
+      {
+       "label": "Heated tobacco products",
+       "kind": "number",
+       "unit": ""
+      },
+      {
+       "label": "Nicotine replacement therapy products",
+       "kind": "number",
+       "unit": ""
+      }
+     ]
     }
    ]
   }

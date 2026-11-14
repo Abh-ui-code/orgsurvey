@@ -93,19 +93,22 @@
      "item": ".A",
      "text": "How many manufacturing facilities does your organisation operate?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of manufacturing facilities you own or operate at the end of the reporting period."
+     "hint": "Unit: Number · Report the total number of manufacturing facilities you own or operate at the end of the reporting period.",
+     "unit": ""
     },
     {
      "item": ".B",
      "text": "What is the total area of your organisation's manufacturing facilities?",
      "type": "number",
-     "hint": "Unit: Square metres (m²) · Report the combined floor area of all manufacturing facilities in square metres at the end of the reporting period."
+     "hint": "Unit: Square metres (m²) · Report the combined floor area of all manufacturing facilities in square metres at the end of the reporting period.",
+     "unit": "square metres (m²)"
     },
     {
      "item": ".C",
      "text": "How many employees does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of employees, stating whether the figure is headcount or full-time equivalent."
+     "hint": "Unit: Number · Report the total number of employees, stating whether the figure is headcount or full-time equivalent.",
+     "unit": ""
     }
    ]
   }

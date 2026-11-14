@@ -115,8 +115,9 @@
     {
      "item": "a",
      "text": "What percentage of capital expenditure (CapEx) is allocated to investments in new reserves, mine expansion, renewable energy, CO2 removal and nature-based solutions, and climate-related R&D?",
-     "type": "text",
-     "hint": "Topic 12.1 additional sector disclosure. Report the % of CapEx allocated to: a. prospection, exploration, acquisition, and development of new reserves; b. expansion of current coal mines; c. energy from renewable sources (by source); d. CO2 removal technologies and nature-based solutions; e. R&D on climate change risks. Also report GRI 102 and 103."
+     "type": "number",
+     "hint": "Topic 12.1 additional sector disclosure. Report the % of CapEx allocated to: a. prospection, exploration, acquisition, and development of new reserves; b. expansion of current coal mines; c. energy from renewable sources (by source); d. CO2 removal technologies and nature-based solutions; e. R&D on climate change risks. Also report GRI 102 and 103.",
+     "unit": "%"
     }
    ]
   },
@@ -160,7 +161,8 @@
      "item": "b",
      "text": "What is the total monetary value of financial provisions for closure and rehabilitation, including post-closure monitoring and aftercare, broken down by project?",
      "type": "number",
-     "hint": "Topic 12.3 additional sector disclosure. Report the total monetary value of financial provisions for closure and rehabilitation, including environmental and socioeconomic post-closure monitoring and aftercare for operational sites, with a breakdown of the total by project."
+     "hint": "Topic 12.3 additional sector disclosure. Report the total monetary value of financial provisions for closure and rehabilitation, including environmental and socioeconomic post-closure monitoring and aftercare for operational sites, with a breakdown of the total by project.",
+     "unit": "currency"
     },
     {
      "item": "c",

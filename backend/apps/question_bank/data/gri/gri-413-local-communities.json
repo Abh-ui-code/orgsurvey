@@ -51,7 +51,8 @@
           "item": "a",
           "text": "What percentage of operations have implemented local community engagement, impact assessments and/or development programs, including the use of: (i) social impact assessments, including gender impact assessments, based on participatory processes; (ii) environmental impact assessments and ongoing monitoring; (iii) public disclosure of results of environmental and social impact assessments; (iv) local community development programs based on local communities' needs; (v) stakeholder engagement plans based on stakeholder mapping; (vi) broad based local community consultation committees and processes that include vulnerable groups; (vii) works councils, occupational health and safety committees and other worker representation bodies to deal with impacts; (viii) formal local community grievance processes?",
           "hint": "Enter the percentage of operations; describe which of items i to viii are used in your notes.",
-          "type": "number"
+          "type": "number",
+          "unit": "%"
         }
       ]
     },

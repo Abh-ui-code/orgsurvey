@@ -15,7 +15,8 @@
      "item": ".2",
      "text": "What were the greenhouse gas emissions associated with your power deliveries, in metric tonnes CO2-e?",
      "type": "number",
-     "hint": "Unit: metric tonnes CO2-e · Report total GHG emissions associated with the power you delivered, stating the method and reporting period."
+     "hint": "Unit: metric tonnes CO2-e · Report total GHG emissions associated with the power you delivered, stating the method and reporting period.",
+     "unit": "metric tonnes CO₂-e"
     },
     {
      "item": ".3",
@@ -51,7 +52,8 @@
      "item": ".2",
      "text": "How many incidents of non-compliance with water quality permits, standards and regulations did you have?",
      "type": "number",
-     "hint": "Unit: number · Report the total number of incidents in the reporting period."
+     "hint": "Unit: number · Report the total number of incidents in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".3",
@@ -86,8 +88,25 @@
     {
      "item": ".1",
      "text": "What is your average retail electric rate for (1) residential, (2) commercial and (3) industrial customers?",
-     "type": "text",
-     "hint": "Unit: rate (presentation currency per kWh) · Report the average retail rate separately for residential, commercial and industrial customers."
+     "type": "table",
+     "hint": "Unit: rate (presentation currency per kWh) · Report the average retail rate separately for residential, commercial and industrial customers.",
+     "parts": [
+      {
+       "label": "Residential",
+       "kind": "number",
+       "unit": "presentation currency per kWh"
+      },
+      {
+       "label": "Commercial",
+       "kind": "number",
+       "unit": "presentation currency per kWh"
+      },
+      {
+       "label": "Industrial customers",
+       "kind": "number",
+       "unit": "presentation currency per kWh"
+      }
+     ]
     },
     {
      "item": ".3",
@@ -182,14 +201,42 @@
     {
      "item": ".B",
      "text": "How much electricity did you deliver to (1) residential, (2) commercial, (3) industrial, (4) all other retail customers and (5) wholesale customers?",
-     "type": "text",
-     "hint": "Unit: megawatt hours (MWh) · Report MWh delivered to each customer category."
+     "type": "table",
+     "hint": "Unit: megawatt hours (MWh) · Report MWh delivered to each customer category.",
+     "parts": [
+      {
+       "label": "Residential",
+       "kind": "number",
+       "unit": "megawatt hours (MWh)"
+      },
+      {
+       "label": "Commercial",
+       "kind": "number",
+       "unit": "megawatt hours (MWh)"
+      },
+      {
+       "label": "Industrial",
+       "kind": "number",
+       "unit": "megawatt hours (MWh)"
+      },
+      {
+       "label": "All other retail customers",
+       "kind": "number",
+       "unit": "megawatt hours (MWh)"
+      },
+      {
+       "label": "Wholesale customers",
+       "kind": "number",
+       "unit": "megawatt hours (MWh)"
+      }
+     ]
     },
     {
      "item": ".C",
      "text": "What is the length of your transmission and distribution lines, in kilometres?",
      "type": "number",
-     "hint": "Unit: kilometres (km) · Report the total length of transmission and distribution lines."
+     "hint": "Unit: kilometres (km) · Report the total length of transmission and distribution lines.",
+     "unit": "kilometres (km)"
     },
     {
      "item": ".D",
@@ -201,7 +248,8 @@
      "item": ".E",
      "text": "What was your total wholesale electricity purchased, in megawatt hours?",
      "type": "number",
-     "hint": "Unit: megawatt hours (MWh) · Report the total MWh of wholesale electricity purchased."
+     "hint": "Unit: megawatt hours (MWh) · Report the total MWh of wholesale electricity purchased.",
+     "unit": "megawatt hours (MWh)"
     }
    ]
   }

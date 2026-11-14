@@ -3,6 +3,7 @@ import { QUESTION_STATUS } from "@/components/ui/status-badge";
 import { cn } from "@/lib/utils";
 import type { Person } from "@/types/common";
 import { QUESTION_STATUSES, type QuestionStatus, type StageCounts, type SurveyDetail } from "@/types/survey";
+import { ActivityTimeline } from "./activity-card";
 
 /** Drawn in this order so the bar reads left to right as "furthest along first". */
 const BAR_ORDER: QuestionStatus[] = ["approved", "awaiting_approval", "awaiting_review", "returned", "awaiting_response"];
@@ -93,6 +94,7 @@ export function WorkflowStepper({ survey, meId }: { survey: SurveyDetail; meId?:
         <PersonLine label="Reviewer" person={survey.reviewer} meId={meId} />
         <PersonLine label="Approver" person={survey.approver} meId={meId} />
       </div>
+      <ActivityTimeline survey={survey} />
     </div>
   );
 }

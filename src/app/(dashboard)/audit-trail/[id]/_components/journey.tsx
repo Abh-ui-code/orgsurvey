@@ -23,7 +23,7 @@ function answerAt(survey: SurveyDetail, questionId: string, event: HistoryEntry)
       ? event
       : survey.history.filter((h) => h.action === "submitted" && h.question_ids.includes(questionId) && new Date(h.at) <= new Date(event.at)).pop();
   if (!sent) return undefined;
-  const value = formatAnswer(sent.snapshot[questionId]);
+  const value = formatAnswer(sent.snapshot[questionId], survey.sections.flatMap((s) => s.questions).find((x) => x.id === questionId));
   return value === "—" ? undefined : value;
 }
 

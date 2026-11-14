@@ -61,15 +61,9 @@
    "questions": [
     {
      "item": "a",
-     "text": "How frequently do you publish sustainability reports? Also specify the reporting period.",
-     "type": "single_choice",
-     "hint": "2-3-a. Specify the reporting period for, and the frequency of, your sustainability reporting.",
-     "options": [
-      "Annually",
-      "Every two years",
-      "Quarterly",
-      "Other"
-     ]
+     "text": "How frequently do you publish sustainability reports, and what reporting period do they cover?",
+     "type": "text",
+     "hint": "2-3-a. Specify the reporting period for, and the frequency of, your sustainability reporting."
     },
     {
      "item": "b",
@@ -80,7 +74,7 @@
     {
      "item": "c",
      "text": "What is the publication date of the report or reported information?",
-     "type": "text",
+     "type": "date",
      "hint": "2-3-c."
     },
     {
@@ -115,15 +109,9 @@
     },
     {
      "item": "b",
-     "text": "If your sustainability reporting has been externally assured, provide the assurance status, a link or reference to the assurance report(s), what was assured and on what basis (standards, level of assurance, limitations), and the relationship with the assurance provider.",
-     "type": "single_choice",
-     "hint": "2-5-b (i) link or reference; (ii) scope, standards, level and limitations; (iii) relationship with the assurance provider. Give details in the notes.",
-     "options": [
-      "Fully assured",
-      "Partially assured",
-      "Not assured, but planned",
-      "Not assured"
-     ]
+     "text": "If your sustainability reporting has been externally assured, state the assurance status and provide a link or reference to the assurance report(s), what was assured and on what basis (standards, level of assurance, limitations), and your relationship with the assurance provider.",
+     "type": "text",
+     "hint": "2-5-b (i) link or reference; (ii) scope, standards, level and limitations; (iii) relationship with the assurance provider. If it is not assured, say so and whether assurance is planned."
     }
    ]
   },
@@ -164,14 +152,68 @@
     {
      "item": "a",
      "text": "Report the total number of employees, and a breakdown of this total by gender and by region.",
-     "type": "text",
-     "hint": "2-7-a. See Tables 1 and 2 of GRI 2 for presentation templates."
+     "type": "table",
+     "hint": "2-7-a. See Tables 1 and 2 of GRI 2 for presentation templates. Add a row for each region and its total.",
+     "parts": [
+      {
+       "label": "Total employees",
+       "kind": "number",
+       "unit": "employees"
+      },
+      {
+       "label": "Women",
+       "kind": "number",
+       "unit": "employees"
+      },
+      {
+       "label": "Men",
+       "kind": "number",
+       "unit": "employees"
+      },
+      {
+       "label": "Other gender",
+       "kind": "number",
+       "unit": "employees"
+      },
+      {
+       "label": "Gender not disclosed",
+       "kind": "number",
+       "unit": "employees"
+      }
+     ]
     },
     {
      "item": "b",
      "text": "Report the total number of permanent, temporary, non-guaranteed hours, full-time and part-time employees, each with a breakdown by gender and by region.",
-     "type": "text",
-     "hint": "2-7-b (i) permanent; (ii) temporary; (iii) non-guaranteed hours; (iv) full-time; (v) part-time. Use national legal definitions at country level, then add up."
+     "type": "table",
+     "hint": "2-7-b (i) permanent; (ii) temporary; (iii) non-guaranteed hours; (iv) full-time; (v) part-time. Use national legal definitions at country level, then add up.",
+     "parts": [
+      {
+       "label": "Permanent employees",
+       "kind": "number",
+       "unit": "employees"
+      },
+      {
+       "label": "Temporary employees",
+       "kind": "number",
+       "unit": "employees"
+      },
+      {
+       "label": "Non-guaranteed hours employees",
+       "kind": "number",
+       "unit": "employees"
+      },
+      {
+       "label": "Full-time employees",
+       "kind": "number",
+       "unit": "employees"
+      },
+      {
+       "label": "Part-time employees",
+       "kind": "number",
+       "unit": "employees"
+      }
+     ]
     },
     {
      "item": "c",
@@ -200,8 +242,25 @@
     {
      "item": "a",
      "text": "Report the total number of workers who are not employees and whose work is controlled by the organization, and describe the most common types of worker and their contractual relationship with you, and the type of work they perform.",
-     "type": "text",
-     "hint": "2-8-a (i) most common worker types and contractual relationship; (ii) type of work performed."
+     "type": "table",
+     "hint": "2-8-a (i) most common worker types and contractual relationship; (ii) type of work performed.",
+     "parts": [
+      {
+       "label": "Total workers who are not employees",
+       "kind": "number",
+       "unit": "workers"
+      },
+      {
+       "label": "Most common types of worker and their contractual relationship",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Type of work they perform",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "b",
@@ -330,13 +389,8 @@
     {
      "item": "a",
      "text": "Is the highest governance body responsible for reviewing and approving the reported information, including the organization’s material topics? If so, describe the process for reviewing and approving the information.",
-     "type": "single_choice",
-     "hint": "2-14-a. Describe the review and approval process in the notes.",
-     "options": [
-      "Yes, all of it",
-      "Yes, in part",
-      "No"
-     ]
+     "type": "text",
+     "hint": "2-14-a. Answer yes, in part or no, then describe the review and approval process."
     },
     {
      "item": "b",
@@ -358,16 +412,9 @@
     },
     {
      "item": "b",
-     "text": "Are conflicts of interest disclosed to stakeholders? Select the situations that are disclosed: cross-board membership, cross-shareholding with suppliers and other stakeholders, existence of controlling shareholders, and related parties, their relationships, transactions and outstanding balances.",
-     "type": "multi_choice",
-     "hint": "2-15-b (i) cross-board membership; (ii) cross-shareholding; (iii) controlling shareholders; (iv) related parties and transactions. Disclose at a minimum these.",
-     "options": [
-      "Cross-board membership",
-      "Cross-shareholding",
-      "Controlling shareholders",
-      "Related-party transactions",
-      "None"
-     ]
+     "text": "Report whether conflicts of interest are disclosed to stakeholders, including at a minimum conflicts relating to cross-board membership, cross-shareholding with suppliers and other stakeholders, the existence of controlling shareholders, and related parties, their relationships, transactions and outstanding balances.",
+     "type": "text",
+     "hint": "2-15-b (i) cross-board membership; (ii) cross-shareholding; (iii) controlling shareholders; (iv) related parties and transactions. Say which are disclosed and where."
     }
    ]
   },
@@ -384,8 +431,20 @@
     {
      "item": "b",
      "text": "Report the total number and the nature of critical concerns that were communicated to the highest governance body during the reporting period.",
-     "type": "text",
-     "hint": "2-16-b."
+     "type": "table",
+     "hint": "2-16-b.",
+     "parts": [
+      {
+       "label": "Total critical concerns communicated",
+       "kind": "number",
+       "unit": ""
+      },
+      {
+       "label": "Nature of the critical concerns",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -468,14 +527,16 @@
     {
      "item": "a",
      "text": "Report the ratio of the annual total compensation for the organization’s highest-paid individual to the median annual total compensation for all employees (excluding the highest-paid individual).",
-     "type": "text",
-     "hint": "2-21-a."
+     "type": "short_text",
+     "hint": "2-21-a. Enter it as a ratio, e.g. 12.5:1 (highest-paid : median).",
+     "unit": "highest-paid : median"
     },
     {
      "item": "b",
      "text": "Report the ratio of the percentage increase in annual total compensation for the organization’s highest-paid individual to the median percentage increase in annual total compensation for all employees (excluding the highest-paid individual).",
-     "type": "text",
-     "hint": "2-21-b."
+     "type": "short_text",
+     "hint": "2-21-b. Enter it as a ratio, e.g. 12.5:1 (highest-paid : median).",
+     "unit": "highest-paid : median"
     },
     {
      "item": "c",
@@ -593,17 +654,9 @@
    "questions": [
     {
      "item": "a",
-     "text": "Describe the mechanisms for individuals to seek advice on implementing your policies and practices for responsible business conduct and to raise concerns about your business conduct. Which mechanisms are available?",
-     "type": "multi_choice",
-     "hint": "2-26-a (i) seeking advice on responsible business conduct; (ii) raising concerns about business conduct. Describe each in the notes.",
-     "options": [
-      "Hotline",
-      "Email or web form",
-      "Ombudsperson",
-      "Grievance committee",
-      "Worker representatives",
-      "Other"
-     ]
+     "text": "Describe the mechanisms for individuals to seek advice on implementing your policies and practices for responsible business conduct and to raise concerns about your business conduct.",
+     "type": "text",
+     "hint": "2-26-a (i) seeking advice on responsible business conduct; (ii) raising concerns about business conduct."
     }
    ]
   },
@@ -614,14 +667,63 @@
     {
      "item": "a",
      "text": "Report the total number of significant instances of non-compliance with laws and regulations during the reporting period, and a breakdown by instances for which fines were incurred and instances for which non-monetary sanctions were incurred.",
-     "type": "text",
-     "hint": "2-27-a (i) instances with fines; (ii) instances with non-monetary sanctions."
+     "type": "table",
+     "hint": "2-27-a (i) instances with fines; (ii) instances with non-monetary sanctions.",
+     "parts": [
+      {
+       "label": "Total significant instances of non-compliance",
+       "kind": "number",
+       "unit": "instances"
+      },
+      {
+       "label": "Instances with fines",
+       "kind": "number",
+       "unit": "instances"
+      },
+      {
+       "label": "Instances with non-monetary sanctions",
+       "kind": "number",
+       "unit": "instances"
+      }
+     ]
     },
     {
      "item": "b",
      "text": "Report the total number and the monetary value of fines for instances of non-compliance with laws and regulations that were paid during the reporting period, with a breakdown by fines for instances that occurred in the current reporting period and in previous reporting periods.",
-     "type": "text",
-     "hint": "2-27-b (i) current-period instances; (ii) previous-period instances."
+     "type": "table",
+     "hint": "2-27-b (i) current-period instances; (ii) previous-period instances.",
+     "parts": [
+      {
+       "label": "Fines paid: total number",
+       "kind": "number",
+       "unit": "fines"
+      },
+      {
+       "label": "Fines paid: total monetary value",
+       "kind": "number",
+       "unit": "currency"
+      },
+      {
+       "label": "Fines for current-period instances: number",
+       "kind": "number",
+       "unit": "fines"
+      },
+      {
+       "label": "Fines for current-period instances: value",
+       "kind": "number",
+       "unit": "currency"
+      },
+      {
+       "label": "Fines for previous-period instances: number",
+       "kind": "number",
+       "unit": "fines"
+      },
+      {
+       "label": "Fines for previous-period instances: value",
+       "kind": "number",
+       "unit": "currency"
+      }
+     ]
     },
     {
      "item": "c",
@@ -655,20 +757,9 @@
    "questions": [
     {
      "item": "a",
-     "text": "Describe your approach to engaging with stakeholders, including the categories of stakeholders you engage with and how they are identified, the purpose of the engagement, and how you seek to ensure meaningful engagement. Which stakeholder categories do you engage with?",
-     "type": "multi_choice",
-     "hint": "2-29-a (i) categories and how identified; (ii) purpose of engagement; (iii) how meaningful engagement is ensured. Describe (ii) and (iii) in the notes.",
-     "options": [
-      "Employees",
-      "Customers",
-      "Suppliers",
-      "Investors",
-      "Communities",
-      "Regulators",
-      "NGOs",
-      "Unions",
-      "Other"
-     ]
+     "text": "Describe your approach to engaging with stakeholders, including the categories of stakeholders you engage with and how they are identified, the purpose of the engagement, and how you seek to ensure meaningful engagement.",
+     "type": "text",
+     "hint": "2-29-a (i) categories and how identified; (ii) purpose of engagement; (iii) how meaningful engagement is ensured."
     }
    ]
   },
@@ -679,8 +770,9 @@
     {
      "item": "a",
      "text": "Report the percentage of total employees covered by collective bargaining agreements.",
-     "type": "text",
-     "hint": "2-30-a."
+     "type": "number",
+     "hint": "2-30-a.",
+     "unit": "%"
     },
     {
      "item": "b",

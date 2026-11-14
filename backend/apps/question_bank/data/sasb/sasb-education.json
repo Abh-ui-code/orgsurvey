@@ -33,19 +33,22 @@
      "item": ".1",
      "text": "What is your graduation rate?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of students who graduate, and state the cohort and time frame used to calculate it."
+     "hint": "Unit: Percentage (%) · Report the percentage of students who graduate, and state the cohort and time frame used to calculate it.",
+     "unit": "%"
     },
     {
      "item": ".2",
      "text": "What is your on-time completion rate?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of students who complete their programme within the expected time, and state how on-time is defined."
+     "hint": "Unit: Percentage (%) · Report the percentage of students who complete their programme within the expected time, and state how on-time is defined.",
+     "unit": "%"
     },
     {
      "item": ".3",
      "text": "What is your job placement rate?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of graduates placed in jobs, and state the time frame and definition of placement used."
+     "hint": "Unit: Percentage (%) · Report the percentage of graduates placed in jobs, and state the time frame and definition of placement used.",
+     "unit": "%"
     },
     {
      "item": ".6",
@@ -69,19 +72,44 @@
      "item": ".2",
      "text": "What was the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with advertising, marketing and mandatory disclosures?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to advertising, marketing and mandatory disclosures."
+     "hint": "Unit: Presentation currency · Report the total in your presentation currency, covering settlements, judgments and penalties from proceedings related to advertising, marketing and mandatory disclosures.",
+     "unit": "presentation currency"
     },
     {
      "item": ".3",
      "text": "What were your (1) instruction and student services expenses and (2) marketing and recruiting expenses?",
-     "type": "text",
-     "hint": "Unit: Presentation currency · Report both amounts in your presentation currency: (1) instruction and student services expenses and (2) marketing and recruiting expenses."
+     "type": "table",
+     "hint": "Unit: Presentation currency · Report both amounts in your presentation currency: (1) instruction and student services expenses and (2) marketing and recruiting expenses.",
+     "parts": [
+      {
+       "label": "Instruction and student services expenses",
+       "kind": "number",
+       "unit": "presentation currency"
+      },
+      {
+       "label": "Marketing and recruiting expenses",
+       "kind": "number",
+       "unit": "presentation currency"
+      }
+     ]
     },
     {
      "item": ".4",
      "text": "What was your revenue from (1) government-funded student aid and (2) private student loans?",
-     "type": "text",
-     "hint": "Unit: Presentation currency · Report both revenue amounts in your presentation currency: (1) government-funded student aid and (2) private student loans."
+     "type": "table",
+     "hint": "Unit: Presentation currency · Report both revenue amounts in your presentation currency: (1) government-funded student aid and (2) private student loans.",
+     "parts": [
+      {
+       "label": "Government-funded student aid",
+       "kind": "number",
+       "unit": "presentation currency"
+      },
+      {
+       "label": "Private student loans",
+       "kind": "number",
+       "unit": "presentation currency"
+      }
+     ]
     }
    ]
   },
@@ -93,13 +121,15 @@
      "item": ".A",
      "text": "How many students are enrolled at your organisation?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of students enrolled in the reporting period."
+     "hint": "Unit: Number · Report the total number of students enrolled in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".B",
      "text": "How many applications for enrolment did your organisation receive?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of applications received for enrolment in the reporting period."
+     "hint": "Unit: Number · Report the total number of applications received for enrolment in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".C",

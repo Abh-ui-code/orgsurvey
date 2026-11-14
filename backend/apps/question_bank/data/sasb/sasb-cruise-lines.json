@@ -9,7 +9,8 @@
      "item": ".1",
      "text": "What are your organisation's gross global Scope 1 greenhouse gas emissions?",
      "type": "number",
-     "hint": "Unit: Metric tonnes (t) CO2-e · Report gross global Scope 1 emissions for the reporting period, in metric tonnes CO2-e, covering direct emissions from sources you own or control."
+     "hint": "Unit: Metric tonnes (t) CO2-e · Report gross global Scope 1 emissions for the reporting period, in metric tonnes CO2-e, covering direct emissions from sources you own or control.",
+     "unit": "metric tonnes (t) CO₂-e"
     },
     {
      "item": ".2",
@@ -27,7 +28,8 @@
      "item": ".4",
      "text": "What is the average Energy Efficiency Design Index (EEDI) for your new ships?",
      "type": "number",
-     "hint": "Unit: Grammes of CO2 per ton-nautical mile · Report the average EEDI of newly built ships, in grammes of CO2 per ton-nautical mile."
+     "hint": "Unit: Grammes of CO2 per ton-nautical mile · Report the average EEDI of newly built ships, in grammes of CO2 per ton-nautical mile.",
+     "unit": "grammes of CO₂ per ton-nautical mile"
     }
    ]
   },
@@ -38,8 +40,25 @@
     {
      "item": ".1",
      "text": "What were your organisation's air emissions of the following pollutants: (1) NOx (excluding N2O), (2) SOx and (3) particulate matter (PM10)?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes (t) · Report the quantity of each pollutant separately in metric tonnes, stating how each was calculated or estimated."
+     "type": "table",
+     "hint": "Unit: Metric tonnes (t) · Report the quantity of each pollutant separately in metric tonnes, stating how each was calculated or estimated.",
+     "parts": [
+      {
+       "label": "NOx (excluding N2O)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "SOx",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Particulate matter (PM10)",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      }
+     ]
     }
    ]
   },
@@ -50,14 +69,38 @@
     {
      "item": ".1",
      "text": "What is (1) the total amount of ship waste discharged to the environment and (2) the percentage treated prior to discharge?",
-     "type": "text",
-     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) total ship waste discharged in metric tonnes and (2) the percentage treated before discharge."
+     "type": "table",
+     "hint": "Unit: Metric tonnes (t), Percentage (%) · Report (1) total ship waste discharged in metric tonnes and (2) the percentage treated before discharge.",
+     "parts": [
+      {
+       "label": "Total amount of ship waste discharged to the environment",
+       "kind": "number",
+       "unit": "metric tonnes (t)"
+      },
+      {
+       "label": "Percentage treated prior to discharge",
+       "kind": "number",
+       "unit": "%"
+      }
+     ]
     },
     {
      "item": ".2",
      "text": "What percentage of your fleet implements ballast water (1) exchange and (2) treatment?",
-     "type": "text",
-     "hint": "Unit: Percentage (%) · Report (1) the percentage of the fleet using ballast water exchange and (2) the percentage using ballast water treatment."
+     "type": "table",
+     "hint": "Unit: Percentage (%) · Report (1) the percentage of the fleet using ballast water exchange and (2) the percentage using ballast water treatment.",
+     "parts": [
+      {
+       "label": "Exchange",
+       "kind": "number",
+       "unit": "%"
+      },
+      {
+       "label": "Treatment",
+       "kind": "number",
+       "unit": "%"
+      }
+     ]
     },
     {
      "item": ".3",
@@ -69,7 +112,8 @@
      "item": ".4",
      "text": "How many notices of violations for dumping did your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the total count for the reporting period."
+     "hint": "Unit: Number · Report the total count for the reporting period.",
+     "unit": ""
     }
    ]
   },
@@ -87,7 +131,8 @@
      "item": ".2",
      "text": "What percentage of your fleet inspections were failed?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of fleet inspections that were failed, out of all inspections carried out."
+     "hint": "Unit: Percentage (%) · Report the percentage of fleet inspections that were failed, out of all inspections carried out.",
+     "unit": "%"
     },
     {
      "item": ".3",
@@ -111,19 +156,22 @@
      "item": ".2",
      "text": "What percentage of your seafarers work the maximum permitted hours?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of seafarers working the maximum hours allowed under applicable rules."
+     "hint": "Unit: Percentage (%) · Report the percentage of seafarers working the maximum hours allowed under applicable rules.",
+     "unit": "%"
     },
     {
      "item": ".3",
      "text": "What percentage of your seafarers are paid for overtime?",
      "type": "number",
-     "hint": "Unit: Percentage (%) · Report the percentage of seafarers who are paid for overtime work."
+     "hint": "Unit: Percentage (%) · Report the percentage of seafarers who are paid for overtime work.",
+     "unit": "%"
     },
     {
      "item": ".4",
      "text": "What is the total amount of monetary losses your organisation incurred as a result of legal proceedings associated with labour law violations?",
      "type": "number",
-     "hint": "Unit: Presentation currency · Report the total monetary losses for the period in your presentation currency, covering fines, settlements and other legal costs from such proceedings."
+     "hint": "Unit: Presentation currency · Report the total monetary losses for the period in your presentation currency, covering fines, settlements and other legal costs from such proceedings.",
+     "unit": "presentation currency"
     }
    ]
   },
@@ -135,7 +183,8 @@
      "item": ".1",
      "text": "What is your seafarer lost time incident rate (LTIR)?",
      "type": "number",
-     "hint": "Unit: Rate · Report the lost time incident rate for the period and state the exposure-hours basis used (for example per 200,000 hours)."
+     "hint": "Unit: Rate · Report the lost time incident rate for the period and state the exposure-hours basis used (for example per 200,000 hours).",
+     "unit": ""
     }
    ]
   },
@@ -171,31 +220,36 @@
      "item": ".A",
      "text": "What are your available lower berth kilometres (ALB-KM)?",
      "type": "number",
-     "hint": "Unit: ALB-KM · Report available lower berth kilometres (ALB-KM) for the reporting period."
+     "hint": "Unit: ALB-KM · Report available lower berth kilometres (ALB-KM) for the reporting period.",
+     "unit": "ALB-KM"
     },
     {
      "item": ".B",
      "text": "What are your average passenger cruise days (APCD)?",
      "type": "number",
-     "hint": "Unit: APCD · Report average passenger cruise days (APCD) for the reporting period."
+     "hint": "Unit: APCD · Report average passenger cruise days (APCD) for the reporting period.",
+     "unit": "APCD"
     },
     {
      "item": ".C",
      "text": "How many shipboard employees does your organisation have?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of shipboard employees."
+     "hint": "Unit: Number · Report the number of shipboard employees.",
+     "unit": ""
     },
     {
      "item": ".D",
      "text": "How many cruise passengers did you carry?",
      "type": "number",
-     "hint": "Unit: Number · Report the number of cruise passengers in the reporting period."
+     "hint": "Unit: Number · Report the number of cruise passengers in the reporting period.",
+     "unit": ""
     },
     {
      "item": ".E",
      "text": "How many vessel port calls did your organisation make?",
      "type": "number",
-     "hint": "Unit: Number · Report the total number of vessel port calls in the reporting period."
+     "hint": "Unit: Number · Report the total number of vessel port calls in the reporting period.",
+     "unit": ""
     }
    ]
   }

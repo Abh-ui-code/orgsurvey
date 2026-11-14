@@ -86,8 +86,20 @@
         {
           "item": ".2 A",
           "text": "For FFB you source indirectly, do your mill(s) engage with suppliers to ensure traceability and legality, and what percentage of your indirectly sourced FFB volume has available documentation?",
-          "type": "number",
-          "hint": "Indicator 2.3.2 (Critical). Engage with suppliers on traceability and legality, and provide the annual percentage of indirectly sourced FFB volume with available documentation during audits to show progress. Enter the percentage (0-100) and attach evidence of engagement."
+          "type": "table",
+          "hint": "Indicator 2.3.2 (Critical). Engage with suppliers on traceability and legality, and provide the annual percentage of indirectly sourced FFB volume with available documentation during audits to show progress. Enter the percentage (0-100) and attach evidence of engagement.",
+          "parts": [
+            {
+              "label": "Whether your mill(s) engage with suppliers on traceability and legality",
+              "kind": "text",
+              "unit": ""
+            },
+            {
+              "label": "Share of indirectly sourced FFB volume with available documentation",
+              "kind": "number",
+              "unit": "%"
+            }
+          ]
         },
         {
           "item": ".2 B",
