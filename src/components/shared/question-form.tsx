@@ -14,16 +14,18 @@ export interface QuestionDraft {
   type: QuestionType;
   unit: string;
   parts: QuestionPart[];
+  rowHeader: string;
+  valueHeader: string;
   optionsText: string;
   hint: string;
   required: boolean;
 }
 
-export const EMPTY_QUESTION: QuestionDraft = { text: "", type: "text", unit: "", parts: [], optionsText: "", hint: "", required: true };
+export const EMPTY_QUESTION: QuestionDraft = { text: "", type: "text", unit: "", parts: [], rowHeader: "", valueHeader: "", optionsText: "", hint: "", required: true };
 const NEW_PART: QuestionPart = { label: "", kind: "number", unit: "" };
 
 export function draftFromQuestion(q: QuestionFields): QuestionDraft {
-  return { text: q.text, type: q.type, unit: q.unit ?? "", parts: q.parts ?? [], optionsText: q.options.join("\n"), hint: q.hint, required: q.required };
+  return { text: q.text, type: q.type, unit: q.unit ?? "", parts: q.parts ?? [], rowHeader: q.row_header ?? "", valueHeader: q.value_header ?? "", optionsText: q.options.join("\n"), hint: q.hint, required: q.required };
 }
 
 export function fieldsFromDraft(d: QuestionDraft): QuestionFields {
@@ -32,6 +34,8 @@ export function fieldsFromDraft(d: QuestionDraft): QuestionFields {
     type: d.type,
     unit: d.type === "number" || d.type === "short_text" ? d.unit.trim() : "",
     parts: d.type === "table" ? d.parts.map((p) => ({ ...p, label: p.label.trim(), unit: p.kind === "number" ? p.unit.trim() : "" })) : [],
+    row_header: d.type === "table" ? d.rowHeader.trim() : "",
+    value_header: d.type === "table" ? d.valueHeader.trim() : "",
     options: d.optionsText.split("\n"),
     hint: d.hint,
     required: d.required,
@@ -70,7 +74,17 @@ export function QuestionFormFields({ value, onChange }: { value: QuestionDraft; 
           <Input value={value.unit} maxLength={40} placeholder="e.g. hectares" onChange={(e) => onChange({ ...value, unit: e.target.value })} />
         </DrawerField>
       )}
-      {value.type === "table" && <PartsEditor parts={value.parts} onChange={(parts) => onChange({ ...value, parts })} />}
+      {value.type === "table" && (
+        <>
+          <DrawerField label="Column headings" hint="What the left column (the rows) and the right column (the answers) are called. Respondents see these fixed headings above the table.">
+            <div className="grid grid-cols-2 gap-2">
+              <Input aria-label="Left column heading" placeholder="Left column, e.g. Pollutant" value={value.rowHeader} maxLength={80} onChange={(e) => onChange({ ...value, rowHeader: e.target.value })} />
+              <Input aria-label="Right column heading" placeholder="Right column, e.g. Emissions (t)" value={value.valueHeader} maxLength={80} onChange={(e) => onChange({ ...value, valueHeader: e.target.value })} />
+            </div>
+          </DrawerField>
+          <PartsEditor parts={value.parts} onChange={(parts) => onChange({ ...value, parts })} />
+        </>
+      )}
       {hasChoices(value.type) && (
         <DrawerField label="Options" required hint="One option per line, at least two.">
           <Textarea rows={4} value={value.optionsText} onChange={(e) => onChange({ ...value, optionsText: e.target.value })} />

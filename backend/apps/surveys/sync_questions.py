@@ -1,6 +1,6 @@
 """Bring standard questions nobody has answered yet up to date with the question bank."""
 
-FIELDS = ("text", "type", "unit", "parts", "options", "hint")
+FIELDS = ("text", "type", "unit", "parts", "row_header", "value_header", "options", "hint")
 TEXTUAL = {"text", "short_text", "number"}
 
 

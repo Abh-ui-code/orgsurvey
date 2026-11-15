@@ -36,7 +36,7 @@ from apps.surveys.scoping import RESPONDER_OPEN
 FROZEN = "Published surveys can't be changed. Duplicate it to make changes."
 ROLES = ("reviewer", "approver")
 RETURN_AUDIENCES = ("responder", "reviewer", "both")
-QUESTION_FIELDS = ("text", "type", "unit", "parts", "options", "hint", "required")
+QUESTION_FIELDS = ("text", "type", "unit", "parts", "row_header", "value_header", "options", "hint", "required")
 STAGE_ERROR = "Those questions are not at the right stage for that action."
 
 

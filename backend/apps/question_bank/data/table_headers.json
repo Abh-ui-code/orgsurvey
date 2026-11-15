@@ -1,0 +1,363 @@
+{
+ "_note": "Fixed column headers of each table question: [left column, right column]. Key: standard|disclosure|item.",
+ "gri-1-foundation|Requirement 1|a": [
+  "Requirement",
+  "Response"
+ ],
+ "gri-102-climate-change|102-3|g": [
+  "Pay item",
+  "Response"
+ ],
+ "gri-102-climate-change|102-10|a": [
+  "Source of carbon credits canceled",
+  "Amount (metric tonnes CO₂-e)"
+ ],
+ "gri-2-general-disclosures|2-7|a": [
+  "Employee group",
+  "Number of employees"
+ ],
+ "gri-2-general-disclosures|2-7|b": [
+  "Employment type",
+  "Number of employees"
+ ],
+ "gri-2-general-disclosures|2-8|a": [
+  "Information",
+  "Response"
+ ],
+ "gri-2-general-disclosures|2-16|b": [
+  "Information",
+  "Response"
+ ],
+ "gri-2-general-disclosures|2-27|a": [
+  "Type of non-compliance",
+  "Number of instances"
+ ],
+ "gri-2-general-disclosures|2-27|b": [
+  "Fines paid",
+  "Number or value (currency)"
+ ],
+ "gri-205-anti-corruption|205-1|a": [
+  "Measure",
+  "Value"
+ ],
+ "gri-205-anti-corruption|205-2|d": [
+  "Measure",
+  "Value"
+ ],
+ "gri-205-anti-corruption|205-2|e": [
+  "Measure",
+  "Value"
+ ],
+ "gri-205-anti-corruption|205-3|a": [
+  "Information",
+  "Response"
+ ],
+ "gri-302-energy|302-1|c": [
+  "Type of energy",
+  "Consumption (joules or multiples, e.g. GJ)"
+ ],
+ "gri-302-energy|302-1|d": [
+  "Type of energy",
+  "Amount sold (joules or multiples, e.g. GJ)"
+ ],
+ "gri-303-water-and-effluents|303-3|a": [
+  "Water source",
+  "Withdrawal (megalitres)"
+ ],
+ "gri-303-water-and-effluents|303-3|b": [
+  "Water source",
+  "Withdrawal (megalitres)"
+ ],
+ "gri-308-supplier-environmental-assessment|308-2|e": [
+  "Information",
+  "Response"
+ ],
+ "gri-401-employment|401-3|a": [
+  "Gender",
+  "Number of employees"
+ ],
+ "gri-401-employment|401-3|b": [
+  "Gender",
+  "Number of employees"
+ ],
+ "gri-401-employment|401-3|c": [
+  "Gender",
+  "Number of employees"
+ ],
+ "gri-401-employment|401-3|d": [
+  "Gender",
+  "Number of employees"
+ ],
+ "gri-414-supplier-social-assessment|414-2|e": [
+  "Information",
+  "Response"
+ ],
+ "gri-416-customer-health-and-safety|416-2|a": [
+  "Incident category",
+  "Number of incidents"
+ ],
+ "gri-417-marketing-and-labeling|417-2|a": [
+  "Incident category",
+  "Number of incidents"
+ ],
+ "gri-417-marketing-and-labeling|417-3|a": [
+  "Incident category",
+  "Number of incidents"
+ ],
+ "gri-418-customer-privacy|418-1|a": [
+  "Complaint source",
+  "Number of complaints"
+ ],
+ "rspo-principle-2|2.3|.2 A": [
+  "Information",
+  "Response"
+ ],
+ "rspo-principle-3|3.5|.1": [
+  "Product",
+  "Annual production (tonnes)"
+ ],
+ "sasb-air-freight-and-logistics|TR-AF-120a|.1": [
+  "Pollutant",
+  "Emissions (metric tonnes)"
+ ],
+ "sasb-air-freight-and-logistics|TR-AF-000|.A": [
+  "Mode of transport",
+  "Revenue tonne-kilometres (RTK)"
+ ],
+ "sasb-air-freight-and-logistics|TR-AF-000|.B": [
+  "Mode of transport",
+  "Load factor"
+ ],
+ "sasb-automobiles|TR-AU-440b|.1": [
+  "Waste measure",
+  "Value"
+ ],
+ "sasb-biofuels|RR-BI-120a|.1": [
+  "Pollutant",
+  "Emissions (metric tonnes)"
+ ],
+ "sasb-biofuels|RR-BI-000|.B": [
+  "Fuel type",
+  "Production (millions of litres)"
+ ],
+ "sasb-chemicals|RT-CH-120a|.1": [
+  "Pollutant",
+  "Emissions (metric tonnes)"
+ ],
+ "sasb-coal-operations|EM-CO-160a|.2": [
+  "Drainage status",
+  "Share of mine sites (%)"
+ ],
+ "sasb-construction-materials|EM-CM-120a|.1": [
+  "Pollutant",
+  "Emissions (metric tonnes)"
+ ],
+ "sasb-consumer-finance|FN-CF-230a|.2": [
+  "Type of fraud",
+  "Losses (presentation currency)"
+ ],
+ "sasb-consumer-finance|FN-CF-000|.A": [
+  "Account type",
+  "Number of unique consumers"
+ ],
+ "sasb-containers-and-packaging|RT-CP-120a|.1": [
+  "Pollutant",
+  "Emissions (metric tonnes)"
+ ],
+ "sasb-cruise-lines|TR-CL-120a|.1": [
+  "Pollutant",
+  "Emissions (metric tonnes)"
+ ],
+ "sasb-cruise-lines|TR-CL-160a|.1": [
+  "Waste measure",
+  "Value"
+ ],
+ "sasb-cruise-lines|TR-CL-160a|.2": [
+  "Ballast water method",
+  "Share of fleet (%)"
+ ],
+ "sasb-education|SV-ED-270a|.3": [
+  "Expense type",
+  "Amount (presentation currency)"
+ ],
+ "sasb-education|SV-ED-270a|.4": [
+  "Revenue source",
+  "Revenue (presentation currency)"
+ ],
+ "sasb-electric-utilities-and-power-generators|IF-EU-240a|.1": [
+  "Customer type",
+  "Average rate (currency per kWh)"
+ ],
+ "sasb-electric-utilities-and-power-generators|IF-EU-000|.B": [
+  "Customer type",
+  "Electricity delivered (MWh)"
+ ],
+ "sasb-engineering-and-construction-services|IF-EN-410b|.1": [
+  "Project type",
+  "Backlog (presentation currency)"
+ ],
+ "sasb-engineering-and-construction-services|IF-EN-510a|.2": [
+  "Cause of legal proceedings",
+  "Monetary losses (presentation currency)"
+ ],
+ "sasb-food-retailers-and-distributors|FB-FR-270a|.3": [
+  "Product label",
+  "Revenue (presentation currency)"
+ ],
+ "sasb-food-retailers-and-distributors|FB-FR-310a|.4": [
+  "Cause of legal proceedings",
+  "Monetary losses (presentation currency)"
+ ],
+ "sasb-food-retailers-and-distributors|FB-FR-430a|.2": [
+  "Product",
+  "Share of revenue (%)"
+ ],
+ "sasb-food-retailers-and-distributors|FB-FR-000|.B": [
+  "Facility type",
+  "Total area (m²)"
+ ],
+ "sasb-gas-utilities-and-distributors|IF-GU-240a|.1": [
+  "Customer type",
+  "Average rate (currency per unit of gas)"
+ ],
+ "sasb-gas-utilities-and-distributors|IF-GU-000|.B": [
+  "Delivered to",
+  "Gas delivered (MMBtu)"
+ ],
+ "sasb-gas-utilities-and-distributors|IF-GU-000|.C": [
+  "Pipeline type",
+  "Length (km)"
+ ],
+ "sasb-iron-and-steel-producers|EM-IS-120a|.1": [
+  "Pollutant",
+  "Emissions (metric tonnes)"
+ ],
+ "sasb-marine-transportation|TR-MT-120a|.1": [
+  "Pollutant",
+  "Emissions (metric tonnes)"
+ ],
+ "sasb-marine-transportation|TR-MT-160a|.2": [
+  "Ballast water method",
+  "Share of fleet (%)"
+ ],
+ "sasb-medical-equipment-and-supplies|HC-MS-410a|.2": [
+  "Product category",
+  "Amount reused, recycled or donated (metric tonnes)"
+ ],
+ "sasb-metals-and-mining|EM-MM-120a|.1": [
+  "Pollutant",
+  "Emissions (metric tonnes)"
+ ],
+ "sasb-metals-and-mining|EM-MM-160a|.2": [
+  "Drainage status",
+  "Share of mine sites (%)"
+ ],
+ "sasb-metals-and-mining|EM-MM-000|.A": [
+  "Product",
+  "Production (metric tonnes saleable)"
+ ],
+ "sasb-multiline-and-specialty-retailers-and-distributors|CG-MR-000|.B": [
+  "Facility type",
+  "Total area (m²)"
+ ],
+ "sasb-non-alcoholic-beverages|FB-NB-260a|.1": [
+  "Beverage category",
+  "Revenue (presentation currency)"
+ ],
+ "sasb-non-alcoholic-beverages|FB-NB-270a|.2": [
+  "Product label",
+  "Revenue (presentation currency)"
+ ],
+ "sasb-oil-and-gas-exploration-and-production|EM-EP-110a|.2": [
+  "Source of Scope 1 emissions",
+  "Emissions (metric tonnes CO₂-e)"
+ ],
+ "sasb-oil-and-gas-exploration-and-production|EM-EP-120a|.1": [
+  "Pollutant",
+  "Emissions (metric tonnes)"
+ ],
+ "sasb-oil-and-gas-midstream|EM-MD-120a|.1": [
+  "Pollutant",
+  "Emissions (metric tonnes)"
+ ],
+ "sasb-oil-and-gas-refining-and-marketing|EM-RM-120a|.1": [
+  "Pollutant",
+  "Emissions (metric tonnes)"
+ ],
+ "sasb-oil-and-gas-refining-and-marketing|EM-RM-410a|.3": [
+  "Activity",
+  "Volume (barrels of oil equivalent)"
+ ],
+ "sasb-oil-and-gas-services|EM-SV-160a|.1": [
+  "Well site type",
+  "Average disturbed land area (hectares)"
+ ],
+ "sasb-processed-foods|FB-PF-270a|.2": [
+  "Product label",
+  "Revenue (presentation currency)"
+ ],
+ "sasb-pulp-and-paper-products|RR-PP-120a|.1": [
+  "Pollutant",
+  "Emissions (metric tonnes)"
+ ],
+ "sasb-rail-transportation|TR-RA-120a|.1": [
+  "Pollutant",
+  "Emissions (metric tonnes)"
+ ],
+ "sasb-restaurants|FB-RN-310a|.3": [
+  "Cause of legal proceedings",
+  "Monetary losses (presentation currency)"
+ ],
+ "sasb-restaurants|FB-RN-000|.B": [
+  "Location type",
+  "Number of employees"
+ ],
+ "sasb-road-transportation|TR-RO-120a|.1": [
+  "Pollutant",
+  "Emissions (metric tonnes)"
+ ],
+ "sasb-security-and-commodity-exchanges|FN-EX-550a|.1": [
+  "Measure",
+  "Value"
+ ],
+ "sasb-semiconductors|TC-SC-110a|.1": [
+  "Type of emissions",
+  "Emissions (metric tonnes CO₂-e)"
+ ],
+ "sasb-telecommunication-services|TC-TL-520a|.2": [
+  "Content type",
+  "Average download speed (Mbps)"
+ ],
+ "sasb-tobacco|FB-TB-000|.B": [
+  "Product type",
+  "Sales volume"
+ ],
+ "sasb-waste-management|IF-WM-120a|.1": [
+  "Pollutant",
+  "Emissions (metric tonnes)"
+ ],
+ "sasb-waste-management|IF-WM-420a|.3": [
+  "Treatment method",
+  "Amount of material (metric tonnes)"
+ ],
+ "sasb-waste-management|IF-WM-000|.A": [
+  "Customer category",
+  "Number of customers"
+ ],
+ "sasb-water-utilities-and-services|IF-WU-240a|.1": [
+  "Customer type",
+  "Average rate (currency per unit of water)"
+ ],
+ "sasb-water-utilities-and-services|IF-WU-000|.C": [
+  "Customer type",
+  "Water delivered (thousand m³)"
+ ],
+ "sasb-water-utilities-and-services|IF-WU-000|.E": [
+  "Pipe type",
+  "Length (km)"
+ ],
+ "tcfd-metrics-and-targets|Metrics and Targets b)|1": [
+  "Scope",
+  "Emissions (metric tonnes CO₂-e)"
+ ]
+}

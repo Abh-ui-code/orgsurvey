@@ -8,7 +8,7 @@ from apps.core.exceptions import ApiError
 
 TYPES = ["text", "single_choice", "multi_choice", "rating", "yes_no", "number", "date", "table", "short_text"]
 PART_KINDS = ("number", "text", "date")
-UNIT_MAX, LABEL_MAX, EXTRA_ROWS_MAX, SHORT_TEXT_MAX = 40, 200, 30, 200
+UNIT_MAX, LABEL_MAX, EXTRA_ROWS_MAX, SHORT_TEXT_MAX, HEADER_MAX = 40, 200, 30, 200, 80
 CHOICE_TYPES = {"single_choice", "multi_choice"}
 
 
@@ -45,6 +45,8 @@ def clean_question_fields(data) -> dict:
         "type": qtype,
         "unit": unit,
         "parts": parts,
+        "row_header": str(data.get("row_header", "") or "").strip()[:HEADER_MAX] if qtype == "table" else "",
+        "value_header": str(data.get("value_header", "") or "").strip()[:HEADER_MAX] if qtype == "table" else "",
         "options": options,
         "hint": str(data.get("hint", "")).strip(),
         "required": bool(data.get("required", True)),

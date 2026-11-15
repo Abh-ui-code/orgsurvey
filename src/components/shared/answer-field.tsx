@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import type { QuestionPart, SurveyQuestion } from "@/types/question";
+import { DEFAULT_ROW_HEADER, DEFAULT_VALUE_HEADER, type QuestionPart, type SurveyQuestion } from "@/types/question";
 import type { AnswerBase, AnswerValue, ExtraRow } from "@/types/survey";
 import { cn } from "@/lib/utils";
 
-type Shape = Pick<SurveyQuestion, "type" | "unit" | "parts" | "required">;
+type Shape = Pick<SurveyQuestion, "type" | "unit" | "parts" | "required" | "row_header" | "value_header">;
 
 const MAX_EXTRA = 30;
 
@@ -115,7 +115,7 @@ function ExtraRowsEditor({ rows, onChange }: { rows: ExtraRow[]; onChange: (next
     <>
       {rows.map((r, i) => (
         <tr key={i} className="block border-t border-line first:border-t-0 sm:table-row">
-          <td className={CELL}>
+          <td className={cn(CELL, "sm:border-r sm:border-line")}>
             <Input aria-label={`Extra row ${i + 1}: item`} placeholder="Item" value={r.label} maxLength={200} onChange={(e) => onChange(rows.map((x, j) => (j === i ? { ...x, label: e.target.value } : x)))} />
           </td>
           <td className={CELL}>
@@ -145,14 +145,15 @@ function AddRowButton({ count, onClick }: { count: number; onClick: () => void }
   );
 }
 
-function TableShell({ children, footer }: { children: React.ReactNode; footer?: React.ReactNode }) {
+/** The table frame. Its two column headings are fixed by the question, so everyone reads the columns the same way. */
+function TableShell({ children, footer, rowHeader, valueHeader }: { children: React.ReactNode; footer?: React.ReactNode; rowHeader?: string; valueHeader?: string }) {
   return (
     <div className="overflow-hidden rounded-lg border border-line bg-paper-raised">
       <table className="block w-full text-sm sm:table">
         <thead className="hidden bg-paper-sunken text-left text-2xs font-semibold uppercase tracking-wider text-ink-faint sm:table-header-group">
           <tr>
-            <th className="w-2/5 px-4 py-2">Item</th>
-            <th className="px-4 py-2">Answer</th>
+            <th scope="col" className="w-2/5 px-4 py-2 sm:border-r sm:border-line">{rowHeader || DEFAULT_ROW_HEADER}</th>
+            <th scope="col" className="px-4 py-2">{valueHeader || DEFAULT_VALUE_HEADER}</th>
           </tr>
         </thead>
         <tbody className="block divide-y divide-line sm:table-row-group">{children}</tbody>
@@ -183,10 +184,10 @@ export function AnswerField({
     const partial = question.required && filled > 0 && filled < question.parts.length;
     return (
       <div className="space-y-1.5">
-        <TableShell footer={<AddRowButton count={extra.length} onClick={addRow} />}>
+        <TableShell rowHeader={question.row_header} valueHeader={question.value_header} footer={<AddRowButton count={extra.length} onClick={addRow} />}>
           {question.parts.map((p, i) => (
             <tr key={i} className="block sm:table-row">
-              <td className={cn(CELL, "pb-0 font-medium text-ink sm:w-2/5 sm:pb-2")}>{p.label}</td>
+              <td className={cn(CELL, "pb-0 font-medium text-ink sm:w-2/5 sm:border-r sm:border-line sm:pb-2")}>{p.label}</td>
               <td className={CELL}>
                 {p.kind === "number" ? (
                   <NumberBox label={p.label} unit={p.unit} value={values[i]} onChange={(n) => set(values.map((v, j) => (j === i ? n : v)))} />
@@ -286,7 +287,7 @@ export function AnswerField({
 }
 
 /** A submitted answer for reading: a table when there are rows, otherwise the value with its unit. */
-export function AnswerView({ question, value, className }: { question: Pick<Shape, "type" | "unit" | "parts">; value: AnswerValue | undefined; className?: string }) {
+export function AnswerView({ question, value, className }: { question: Pick<Shape, "type" | "unit" | "parts" | "row_header" | "value_header">; value: AnswerValue | undefined; className?: string }) {
   const { answer, extra } = splitAnswer(value);
   const rows: { label: string; text: string }[] = [];
   if (question.type === "table" && Array.isArray(answer)) {
@@ -302,10 +303,16 @@ export function AnswerView({ question, value, className }: { question: Pick<Shap
     <div className={cn("space-y-1.5", className)}>
       {main && main !== "—" && <p className="whitespace-pre-wrap text-sm font-medium text-ink-muted">{main}</p>}
       <dl className="overflow-hidden rounded-lg border border-line bg-paper-raised text-sm">
+        {question.type === "table" && (
+          <div className="hidden bg-paper-sunken text-2xs font-semibold uppercase tracking-wider text-ink-faint sm:grid sm:grid-cols-[2fr_3fr]">
+            <dt className="border-r border-line px-3 py-2">{question.row_header || DEFAULT_ROW_HEADER}</dt>
+            <dd className="px-3 py-2">{question.value_header || DEFAULT_VALUE_HEADER}</dd>
+          </div>
+        )}
         {rows.map((r, i) => (
-          <div key={i} className="grid gap-x-4 border-t border-line px-3 py-2 first:border-t-0 sm:grid-cols-[2fr_3fr]">
-            <dt className="text-ink-muted">{r.label || "—"}</dt>
-            <dd className="whitespace-pre-wrap font-medium text-ink">{r.text}</dd>
+          <div key={i} className="grid border-t border-line first:border-t-0 sm:grid-cols-[2fr_3fr]">
+            <dt className="px-3 pt-2 text-ink-muted sm:border-r sm:border-line sm:py-2">{r.label || "—"}</dt>
+            <dd className="whitespace-pre-wrap px-3 pb-2 pt-0.5 font-medium text-ink sm:py-2">{r.text}</dd>
           </div>
         ))}
       </dl>

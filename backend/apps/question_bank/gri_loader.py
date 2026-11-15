@@ -31,6 +31,12 @@ def load(apps):
         # Questions are loaded by load_disclosures (migration 0009), grouped by disclosure.
 
 
+def table_headers(slug, ref, item):
+    """The fixed (left, right) column headings of a table question, from data/table_headers.json."""
+    headers = json.loads((DATA / "table_headers.json").read_text())
+    return tuple(headers.get(f"{slug}|{ref}|{item}", ["", ""]))
+
+
 def load_disclosures(apps, framework="gri", slugs=None):
     """Replaces a framework's standard questions with the ones in data/<framework>/*.json: one group per
     disclosure (GRI), sector topic or SASB topic as numbered in the PDF, one question per requirement
@@ -54,6 +60,7 @@ def load_disclosures(apps, framework="gri", slugs=None):
         # Update in place by PDF number (group + item) so surveys already built from a question stay linked to it;
         # only questions that no longer exist in the data are removed.
         existing = {(q.gri_ref, q.gri_title, q.gri_item): q for q in Question.objects.filter(gri_standard=standard)}
+        has_headers = "row_header" in {f.name for f in Question._meta.get_fields()}  # old migrations run before the field exists
         keep, rows, order = set(), [], 0
         for disclosure in content.get("disclosures", []):
             for q in disclosure["questions"]:
@@ -63,6 +70,8 @@ def load_disclosures(apps, framework="gri", slugs=None):
                     "hint": q.get("hint", "")[:500], "options": q.get("options", []), "required": True,
                     "unit": q.get("unit", ""), "parts": q.get("parts", []),
                 }
+                if has_headers and fields["type"] == "table":
+                    fields["row_header"], fields["value_header"] = table_headers(standard.slug, key[0], key[2])
                 found = existing.get(key)
                 if found is not None:
                     for name, value in fields.items():

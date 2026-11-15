@@ -121,6 +121,9 @@ class SurveyQuestion(BaseModel):
     unit = models.CharField(max_length=40, blank=True)
     # A table question's rows: [{"label", "kind": "number" | "text", "unit"}], one answer box per row.
     parts = models.JSONField(default=list, blank=True)
+    # A table question's fixed column headings: what the left column (the rows) and the right column (the answers) are called.
+    row_header = models.CharField(max_length=80, blank=True)
+    value_header = models.CharField(max_length=80, blank=True)
     hint = models.CharField(max_length=500, blank=True)
     required = models.BooleanField(default=True)
     bank_question = models.ForeignKey(

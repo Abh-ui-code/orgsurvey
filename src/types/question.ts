@@ -23,6 +23,9 @@ export interface QuestionPart {
   unit: string;
 }
 
+export const DEFAULT_ROW_HEADER = "Item";
+export const DEFAULT_VALUE_HEADER = "Answer";
+
 /** A table's rows on one line: "Total area (hectares) · Notes". */
 export function partsSummary(parts: QuestionPart[] | undefined): string {
   return (parts ?? []).map((p) => (p.unit ? `${p.label} (${p.unit})` : p.label)).join(" · ");
@@ -47,6 +50,9 @@ export interface QuestionFields {
   unit: string;
   /** For a table question: its rows. */
   parts: QuestionPart[];
+  /** For a table question: the fixed headings of its left (rows) and right (answers) columns. */
+  row_header?: string;
+  value_header?: string;
   options: string[];
   hint: string;
   required: boolean;
