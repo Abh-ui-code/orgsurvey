@@ -185,3 +185,50 @@ def test_a_table_can_have_date_rows():
         with pytest.raises(ApiError):
             validate_answer(t, bad)
     assert clean_question_fields({"text": "T", "type": "table", "parts": [{"label": "S", "kind": "date", "unit": "x"}]})["parts"] == [{"label": "S", "kind": "date", "unit": ""}]
+
+
+# ---------------------------------------------------------------- columns the respondent adds to a table
+def _cols_table(required=False):
+    return {"text": "T", "type": "table", "unit": "", "options": [], "required": required,
+            "parts": [{"label": "A", "kind": "text", "unit": ""}, {"label": "B", "kind": "number", "unit": "ha"}]}
+
+
+def test_added_columns_are_kept_with_their_cells_and_the_extra_rows():
+    from types import SimpleNamespace as NS
+    q = _cols_table()
+    value = {"answer": ["x", 5], "extra": [{"label": "n", "value": "v", "cols": ["hi"]}], "columns": [" Comments "], "cells": [["c1"], [""]]}
+    assert clean_answer(q, value) == {
+        "answer": ["x", 5], "extra": [{"label": "n", "value": "v", "cols": ["hi"]}], "columns": ["Comments"], "cells": [["c1"], [""]]}
+    assert answer_text(NS(**q), clean_answer(q, value)) == "A: x; Comments: c1\nB: 5 ha\nn: v; Comments: hi"
+
+
+def test_a_column_nobody_named_or_filled_is_dropped_and_an_untouched_table_stores_nothing():
+    q = _cols_table()
+    assert clean_answer(q, {"answer": ["", ""], "extra": [], "columns": [""], "cells": [[""], [""]]}) is None
+    kept = clean_answer(q, {"answer": ["x", 1], "extra": [], "columns": ["", "Notes"], "cells": [["", "n"], ["", ""]]})
+    assert kept["columns"] == ["Notes"] and kept["cells"] == [["n"], [""]]
+
+
+def test_added_columns_must_be_well_formed():
+    q = _cols_table()
+    for bad in (
+        {"answer": ["x", 1], "columns": ["a"], "cells": [["z"]]},                      # a cell row is missing
+        {"answer": ["x", 1], "columns": ["a"], "cells": [["z", "y"], ["z"]]},         # too many cells in a row
+        {"answer": ["x", 1], "columns": ["a"] * 6, "cells": [["z"] * 6] * 2},          # over the column limit
+        {"answer": ["x", 1], "columns": [3], "cells": [["z"], ["z"]]},
+        {"answer": ["x", 1], "extra": [{"label": "n", "value": "v", "cols": []}], "columns": ["a"], "cells": [["z"], ["z"]]},
+    ):
+        with pytest.raises(ApiError):
+            clean_answer(q, bad)
+    with pytest.raises(ApiError):  # columns only belong to table questions
+        clean_answer({**AREA, "required": False}, {"answer": 1, "columns": ["a"], "cells": []})
+
+
+def test_a_table_row_can_be_yes_no():
+    t = {"text": "T", "type": "table", "unit": "", "options": [], "required": True,
+         "parts": [{"label": "Applied?", "kind": "yes_no", "unit": ""}, {"label": "When", "kind": "date", "unit": ""}]}
+    assert clean_answer(t, ["Yes", "2026-01-31"]) == ["Yes", "2026-01-31"]
+    for bad in (["Maybe", "2026-01-31"], [True, "2026-01-31"]):
+        with pytest.raises(ApiError):
+            clean_answer(t, bad)
+    assert clean_question_fields({"text": "T", "type": "table", "parts": [{"label": "A", "kind": "yes_no", "unit": "x"}]})["parts"] == [{"label": "A", "kind": "yes_no", "unit": ""}]

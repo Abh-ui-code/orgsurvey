@@ -3,10 +3,12 @@ import type { SurveyQuestion } from "@/types/question";
 import type { HistoryEntry, SurveyDetail } from "@/types/survey";
 
 /** What a person was acting as on this survey. Anyone else who acted
- * (creating, publishing, closing) is an administrator. */
-export function roleOf(survey: SurveyDetail, person: Person | null): string {
+ * (creating, publishing, closing) is an administrator. Someone who is both a respondent and the reviewer
+ * is a respondent when they submit and the reviewer for anything else. */
+export function roleOf(survey: SurveyDetail, person: Person | null, action?: string): string {
   if (!person) return "System";
-  if (survey.respondents.some((r) => r.person.id === person.id)) return "Respondent";
+  const respondent = survey.respondents.some((r) => r.person.id === person.id);
+  if (respondent && (action === "submitted" || (person.id !== survey.reviewer?.id && person.id !== survey.approver?.id))) return "Respondent";
   if (person.id === survey.reviewer?.id) return "Reviewer";
   if (person.id === survey.approver?.id) return "Approver";
   return "Administrator";

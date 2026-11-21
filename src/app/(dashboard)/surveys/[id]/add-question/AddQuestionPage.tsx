@@ -21,6 +21,7 @@ import { useBankCategories } from "@/hooks/use-bank-categories";
 import { useBankQuestions } from "@/hooks/use-bank-questions";
 import { useDebounced } from "@/hooks/use-debounced";
 import { useSurvey } from "@/hooks/use-surveys";
+import { TablePreview } from "@/components/shared/table-preview";
 import { FRAMEWORKS, questionKindLabel, type StandardFramework } from "@/types/question";
 import type { SurveyDetail } from "@/types/survey";
 import { useAddQuestion, useDeleteQuestion, useDeleteSection } from "../_hooks/use-survey-builder";
@@ -102,7 +103,10 @@ function BankPicker({ survey, sectionId }: { survey: SurveyDetail; sectionId: st
                 const added = used.get(q.id);
                 return (
                   <li key={q.id} className="flex flex-col justify-between gap-3 rounded-lg border border-line bg-paper-raised p-4">
-                    <p className="text-sm text-ink">{q.text}</p>
+                    <div>
+                      <p className="text-sm text-ink">{q.text}</p>
+                      {q.type === "table" && <TablePreview parts={q.parts} rowHeader={q.row_header} valueHeader={q.value_header} />}
+                    </div>
                     <div className="flex items-center justify-between gap-2">
                       <p className="flex flex-wrap items-center gap-1.5 text-xs text-ink-faint">
                         <Badge>{q.category.label}</Badge>
@@ -377,6 +381,7 @@ export default function AddQuestionPage() {
                         {q.text}
                       </p>
                       <p className="text-xs text-ink-faint">{questionKindLabel(q)}</p>
+                      {q.type === "table" && <TablePreview parts={q.parts} rowHeader={q.row_header} valueHeader={q.value_header} />}
                     </div>
                     <IconButton
                       label="Remove question"

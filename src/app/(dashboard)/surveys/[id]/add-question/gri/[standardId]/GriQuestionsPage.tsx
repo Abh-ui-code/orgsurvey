@@ -10,11 +10,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { EmptyState } from "@/components/ui/empty-state";
 import { SearchInput } from "@/components/ui/search-input";
+import { TablePreview } from "@/components/shared/table-preview";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useGriStandard } from "@/hooks/use-gri-standards";
 import { useSurvey } from "@/hooks/use-surveys";
 import { disclosureLabel, filterQuestions, groupByDisclosure, questionNumber } from "@/lib/gri";
-import { FRAMEWORKS, questionKindLabel, partsSummary } from "@/types/question";
+import { FRAMEWORKS, questionKindLabel } from "@/types/question";
 import type { GriStandardDetail } from "@/types/question";
 import type { SurveyDetail } from "@/types/survey";
 import { useAddGriSection } from "../../../_hooks/use-survey-builder";
@@ -108,7 +109,7 @@ function Chooser({ survey, standard, back }: { survey: SurveyDetail; standard: G
                           <span className="block text-sm text-ink">{q.text}</span>
                           {q.hint && <span className="mt-1 block text-xs text-ink-muted">{q.hint}</span>}
                           <span className="mt-1 block text-xs text-ink-faint">{questionKindLabel(q)}</span>
-                          {q.type === "table" && <span className="mt-0.5 block text-xs text-ink-muted">Rows: {partsSummary(q.parts)}</span>}
+                          {q.type === "table" && <TablePreview parts={q.parts} rowHeader={q.row_header} valueHeader={q.value_header} />}
                         </span>
                       </label>
                     </li>

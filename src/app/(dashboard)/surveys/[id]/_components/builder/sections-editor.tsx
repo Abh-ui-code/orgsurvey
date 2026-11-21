@@ -18,6 +18,7 @@ import { ConfirmDialog } from "@/components/ui/confirm-dialog";
 import { DrawerField } from "@/components/ui/drawer-form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { TablePreview } from "@/components/shared/table-preview";
 import { questionKindLabel } from "@/types/question";
 import type { SurveyDetail, SurveySection } from "@/types/survey";
 import { useAssignQuestions } from "../../_hooks/use-survey-actions";
@@ -69,7 +70,8 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
   const fail = (e: Error) => toast.error(e.message);
   const lastSection = survey.sections.length - 1;
   // Reviewer and approver can't answer questions, so they are greyed out in the pickers.
-  const handlers = [survey.reviewer?.id, survey.approver?.id].filter(Boolean) as string[];
+  // The reviewer may also answer questions; the approver may not.
+  const handlers = [survey.approver?.id].filter(Boolean) as string[];
   // Questions ticked for a bulk assignment, across all sections.
   const [picked, setPicked] = useState<Set<string>>(new Set());
   const toggle = (ids: string[], on: boolean) =>
@@ -271,6 +273,7 @@ export function SectionsEditor({ survey }: { survey: SurveyDetail }) {
                       {q.options.length > 0 && <span className="truncate">· {q.options.join(", ")}</span>}
                     </p>
                     {q.hint && <p className="mt-1 text-xs italic text-ink-muted">{q.hint}</p>}
+                    {q.type === "table" && <TablePreview parts={q.parts} rowHeader={q.row_header} valueHeader={q.value_header} />}
                     {!(section.gri && q.gri_ref) && <p className="mt-1.5 flex items-center gap-1.5 text-xs">
                       <span className="text-ink-muted">Respondent</span>
                       {q.responder ? (

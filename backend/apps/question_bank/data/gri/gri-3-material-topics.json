@@ -8,14 +8,38 @@
     {
      "item": "a",
      "text": "Describe the process you followed to determine your material topics, including how you identified actual and potential, negative and positive impacts on the economy, environment and people, including impacts on their human rights, across your activities and business relationships, and how you prioritized the impacts for reporting based on their significance.",
-     "type": "text",
-     "hint": "3-1-a (i) identification of impacts; (ii) prioritization by significance."
+     "type": "table",
+     "hint": "3-1-a (i) identification of impacts; (ii) prioritization by significance.",
+     "parts": [
+      {
+       "label": "Process to identify actual and potential impacts (negative and positive; economy, environment, people, human rights)",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "How impacts were prioritized by significance",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "b",
      "text": "Specify the stakeholders and experts whose views have informed the process of determining your material topics.",
-     "type": "text",
-     "hint": "3-1-b."
+     "type": "table",
+     "hint": "3-1-b.",
+     "parts": [
+      {
+       "label": "Stakeholders whose views informed the process",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Experts whose views informed the process",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -32,8 +56,25 @@
     {
      "item": "b",
      "text": "Report changes to the list of material topics compared to the previous reporting period.",
-     "type": "text",
-     "hint": "3-2-b."
+     "type": "table",
+     "hint": "3-2-b.",
+     "parts": [
+      {
+       "label": "Topics added",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Topics removed",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Topics changed",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -44,14 +85,38 @@
     {
      "item": "a",
      "text": "For each material topic, describe the actual and potential, negative and positive impacts on the economy, environment and people, including impacts on their human rights.",
-     "type": "text",
-     "hint": "3-3-a."
+     "type": "table",
+     "hint": "3-3-a.",
+     "parts": [
+      {
+       "label": "Material topic",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Actual and potential impacts (negative and positive)",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "b",
      "text": "For each material topic, report whether you are involved with the negative impacts through your activities or as a result of your business relationships, and describe the activities or business relationships.",
-     "type": "text",
-     "hint": "3-3-b."
+     "type": "table",
+     "hint": "3-3-b.",
+     "parts": [
+      {
+       "label": "Material topic",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Involved through own activities or business relationships? Describe",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "c",
@@ -62,14 +127,53 @@
     {
      "item": "d",
      "text": "For each material topic, describe actions taken to manage the topic and related impacts, including actions to prevent or mitigate potential negative impacts, actions to address actual negative impacts (including to provide for or cooperate in their remediation), and actions to manage actual and potential positive impacts.",
-     "type": "text",
-     "hint": "3-3-d (i) prevent or mitigate potential negative impacts; (ii) address actual negative impacts; (iii) manage positive impacts."
+     "type": "table",
+     "hint": "3-3-d (i) prevent or mitigate potential negative impacts; (ii) address actual negative impacts; (iii) manage positive impacts.",
+     "parts": [
+      {
+       "label": "Actions to prevent or mitigate potential negative impacts",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Actions to address actual negative impacts (incl. remediation)",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Actions to manage actual and potential positive impacts",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "e",
      "text": "For each material topic, report information about tracking the effectiveness of the actions taken: processes used, goals, targets and indicators used to evaluate progress, the effectiveness of the actions including progress toward goals and targets, and lessons learned and how these have been incorporated into operational policies and procedures.",
-     "type": "text",
-     "hint": "3-3-e (i) tracking processes; (ii) goals, targets, indicators; (iii) effectiveness and progress; (iv) lessons learned."
+     "type": "table",
+     "hint": "3-3-e (i) tracking processes; (ii) goals, targets, indicators; (iii) effectiveness and progress; (iv) lessons learned.",
+     "parts": [
+      {
+       "label": "Processes used to track effectiveness",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Goals, targets and indicators",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Effectiveness and progress toward goals and targets",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Lessons learned and how they were incorporated",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "f",

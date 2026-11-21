@@ -52,7 +52,7 @@ export function Returns({ survey }: { survey: SurveyDetail }) {
                 <div className="flex items-center gap-2">
                   <Avatar name={event.by.full_name} className="h-7 w-7" />
                   <span className="text-sm font-medium text-ink">{event.by.full_name}</span>
-                  <span className="rounded bg-paper-sunken px-1.5 py-0.5 text-2xs font-medium text-ink-muted">{roleOf(survey, event.by)}</span>
+                  <span className="rounded bg-paper-sunken px-1.5 py-0.5 text-2xs font-medium text-ink-muted">{roleOf(survey, event.by, event.action)}</span>
                 </div>
               )}
               {event.comment && <p className="whitespace-pre-wrap rounded-md bg-paper-sunken px-3 py-2 text-sm text-ink">{event.comment}</p>}

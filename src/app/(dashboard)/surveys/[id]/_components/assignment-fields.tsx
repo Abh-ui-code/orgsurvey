@@ -7,8 +7,8 @@ import { WORKFLOW_ROLES, type WorkflowRole } from "@/types/survey";
 export type People = Record<WorkflowRole, string>;
 
 /** The role pickers (all three while drafting, reviewer and approver once live).
- * A person already chosen for one role is greyed out in the others, so the same
- * person can't hold two roles. */
+ * The reviewer and the approver must be different people, so each is greyed out for the other.
+ * A respondent may be the reviewer. */
 export function AssignmentFields({
   people,
   onChange,
@@ -20,12 +20,12 @@ export function AssignmentFields({
   roles?: WorkflowRole[];
   className?: string;
 }) {
-  const chosen = Object.values(people).filter(Boolean);
+  const taken = (role: WorkflowRole) => (role === "reviewer" ? [people.approver] : role === "approver" ? [people.reviewer] : []).filter(Boolean);
   return (
     <div className={className}>
       {WORKFLOW_ROLES.filter((r) => roles.includes(r.value)).map((role) => (
         <DrawerField key={role.value} label={role.label} hint={role.description}>
-          <PersonSelect value={people[role.value]} onChange={(id) => onChange({ ...people, [role.value]: id })} disabledIds={chosen} />
+          <PersonSelect value={people[role.value]} onChange={(id) => onChange({ ...people, [role.value]: id })} disabledIds={taken(role.value)} />
         </DrawerField>
       ))}
     </div>

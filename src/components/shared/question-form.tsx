@@ -105,7 +105,7 @@ export function QuestionFormFields({ value, onChange }: { value: QuestionDraft; 
 function PartsEditor({ parts, onChange }: { parts: QuestionPart[]; onChange: (next: QuestionPart[]) => void }) {
   const set = (i: number, patch: Partial<QuestionPart>) => onChange(parts.map((p, j) => (j === i ? { ...p, ...patch } : p)));
   return (
-    <DrawerField label="Rows" required hint="One row per thing to answer. Numbers get a number-only box with the unit beside it, dates a date picker, text rows a text box.">
+    <DrawerField label="Rows" required hint="One row per thing to answer. Numbers get a number-only box with the unit beside it, dates a date picker, Yes / No rows two buttons, text rows a text box.">
       <div className="space-y-2">
         {parts.map((p, i) => (
           <div key={i} className="grid grid-cols-[1fr_auto] gap-2 rounded-lg border border-line bg-paper-raised p-2 sm:grid-cols-[minmax(0,2fr)_8rem_minmax(0,1fr)_auto]">
@@ -114,6 +114,7 @@ function PartsEditor({ parts, onChange }: { parts: QuestionPart[]; onChange: (ne
               <option value="number">Number</option>
               <option value="text">Text</option>
               <option value="date">Date</option>
+              <option value="yes_no">Yes / No</option>
             </Select>
             {p.kind === "number" ? (
               <Input aria-label={`Row ${i + 1} unit`} placeholder="Unit" value={p.unit} maxLength={40} onChange={(e) => set(i, { unit: e.target.value })} />

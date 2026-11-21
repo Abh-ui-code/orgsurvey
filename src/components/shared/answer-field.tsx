@@ -12,15 +12,17 @@ import { cn } from "@/lib/utils";
 type Shape = Pick<SurveyQuestion, "type" | "unit" | "parts" | "required" | "row_header" | "value_header">;
 
 const MAX_EXTRA = 30;
+const MAX_COLUMNS = 5;
 
 /** A stored value as its answer proper and the extra rows that came with it. */
-export function splitAnswer(value: AnswerValue | undefined): { answer: AnswerBase | null | undefined; extra: ExtraRow[] } {
-  if (value !== null && typeof value === "object" && !Array.isArray(value)) return { answer: value.answer, extra: value.extra ?? [] };
-  return { answer: value, extra: [] };
+export function splitAnswer(value: AnswerValue | undefined): { answer: AnswerBase | null | undefined; extra: ExtraRow[]; columns: string[]; cells: string[][] } {
+  if (value !== null && typeof value === "object" && !Array.isArray(value)) return { answer: value.answer, extra: value.extra ?? [], columns: value.columns ?? [], cells: value.cells ?? [] };
+  return { answer: value, extra: [], columns: [], cells: [] };
 }
 
-function joinAnswer(answer: AnswerBase | null | undefined, extra: ExtraRow[]): AnswerValue {
-  return extra.length === 0 ? (answer ?? "") : { answer: answer ?? "", extra };
+function joinAnswer(answer: AnswerBase | null | undefined, extra: ExtraRow[], columns: string[] = [], cells: string[][] = []): AnswerValue {
+  if (extra.length === 0 && columns.length === 0) return answer ?? "";
+  return columns.length ? { answer: answer ?? "", extra, columns, cells } : { answer: answer ?? "", extra };
 }
 
 const blank = (v: unknown) => v === undefined || v === null || v === "";
@@ -48,18 +50,21 @@ export function isAnswered(value: AnswerValue | undefined, question?: Pick<Shape
 
 /** An answer as plain text: "50 hectares", "Total area: 50 ha", extra rows listed after it, a dash when empty. */
 export function formatAnswer(value: AnswerValue | undefined, question?: Pick<Shape, "type" | "unit" | "parts">): string {
-  const { answer, extra } = splitAnswer(value);
+  const { answer, extra, columns, cells } = splitAnswer(value);
   const lines: string[] = [];
+  const colText = (vals: (string | undefined)[] | undefined) =>
+    columns.map((c, j) => (vals?.[j] ? `${c || `Column ${j + 1}`}: ${vals[j]}` : "")).filter(Boolean);
   if (!blank(answer) && !(Array.isArray(answer) && answer.length === 0)) {
     if (Array.isArray(answer) && question?.type === "table") {
       slots(answer, question.parts).forEach((v, i) => {
         const part = question.parts[i];
-        if (!blank(v)) lines.push(`${part.label}: ${v}${part.unit ? ` ${part.unit}` : ""}`);
+        const cols = colText(cells[i]);
+        if (!blank(v) || cols.length) lines.push([`${part.label}: ${blank(v) ? "—" : v}${!blank(v) && part.unit ? ` ${part.unit}` : ""}`, ...cols].join("; "));
       });
     } else if (Array.isArray(answer)) lines.push(answer.join(", "));
     else lines.push(`${answer}${question?.type === "number" && question.unit ? ` ${question.unit}` : ""}`);
   }
-  for (const r of extra) lines.push(r.label ? `${r.label}: ${r.value}` : r.value);
+  for (const r of extra) lines.push([r.label ? `${r.label}: ${r.value}` : r.value, ...colText(r.cols)].join("; "));
   return lines.length ? lines.join("\n") : "—";
 }
 
@@ -107,28 +112,63 @@ function NumberBox({ value, onChange, unit, label, className }: { value: string 
   );
 }
 
+/** An input that reads as plain text until it is hovered or focused, so a typed heading or label matches the fixed ones. */
+const PLAIN = "border-transparent bg-transparent shadow-none hover:border-line focus:border-brand focus:bg-paper-raised";
+/** A delete button that shows when its row or column (a `group`) is hovered or focused; always shown on touch screens. */
+const HOVER_X = "shrink-0 rounded-md text-ink-faint opacity-0 transition-opacity hover:bg-paper-raised hover:text-rust focus-visible:opacity-100 group-hover:opacity-100 group-focus-within:opacity-100 [@media(hover:none)]:opacity-100";
 const CELL = "block px-4 py-2 sm:table-cell sm:align-middle";
 
 /** The rows a respondent adds on their own: anything on the left, anything on the right. */
-function ExtraRowsEditor({ rows, onChange }: { rows: ExtraRow[]; onChange: (next: ExtraRow[]) => void }) {
+function ExtraRowsEditor({ rows, onChange, columns = [] }: { rows: ExtraRow[]; onChange: (next: ExtraRow[]) => void; columns?: string[] }) {
   return (
     <>
       {rows.map((r, i) => (
-        <tr key={i} className="block border-t border-line first:border-t-0 sm:table-row">
+        <tr key={i} className="group block border-t border-line first:border-t-0 sm:table-row">
           <td className={cn(CELL, "sm:border-r sm:border-line")}>
-            <Input aria-label={`Extra row ${i + 1}: item`} placeholder="Item" value={r.label} maxLength={200} onChange={(e) => onChange(rows.map((x, j) => (j === i ? { ...x, label: e.target.value } : x)))} />
-          </td>
-          <td className={CELL}>
             <div className="flex items-center gap-2">
-              <Input aria-label={`Extra row ${i + 1}: answer`} placeholder="Answer" value={r.value} onChange={(e) => onChange(rows.map((x, j) => (j === i ? { ...x, value: e.target.value } : x)))} />
-              <button type="button" aria-label={`Remove extra row ${i + 1}`} onClick={() => onChange(rows.filter((_, j) => j !== i))} className="shrink-0 rounded-md p-1.5 text-ink-faint hover:bg-paper-sunken hover:text-rust">
-                <X className="h-4 w-4" />
-              </button>
+              <Input aria-label={`Extra row ${i + 1}: item`} placeholder="Item" className={cn(PLAIN, "-ml-2 px-2 font-medium text-ink")} value={r.label} maxLength={200} onChange={(e) => onChange(rows.map((x, j) => (j === i ? { ...x, label: e.target.value } : x)))} />
+              <RemoveRow n={i + 1} onClick={() => onChange(rows.filter((_, j) => j !== i))} />
             </div>
           </td>
+          <td className={CELL}>
+            <Textarea rows={2} aria-label={`Extra row ${i + 1}: answer`} placeholder="Type your answer" value={r.value} onChange={(e) => onChange(rows.map((x, j) => (j === i ? { ...x, value: e.target.value } : x)))} />
+          </td>
+          {columns.map((c, j) => (
+            <td key={j} className={cn(CELL, "sm:border-l sm:border-line")}>
+              <Textarea
+                  rows={2}
+                  aria-label={`Extra row ${i + 1}: ${c || `column ${j + 1}`}`}
+                  placeholder={c || `Column ${j + 1}`}
+                  value={r.cols?.[j] ?? ""}
+                  onChange={(e) => onChange(rows.map((x, k) => (k === i ? { ...x, cols: columns.map((_, m) => (m === j ? e.target.value : (x.cols?.[m] ?? ""))) } : x)))}
+              />
+            </td>
+          ))}
         </tr>
       ))}
     </>
+  );
+}
+
+function RemoveRow({ n, onClick }: { n: number; onClick: () => void }) {
+  return (
+    <button type="button" aria-label={`Remove extra row ${n}`} onClick={onClick} className={HOVER_X + " p-1.5"}>
+      <X className="h-4 w-4" />
+    </button>
+  );
+}
+
+function AddColumnButton({ count, onClick }: { count: number; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={count >= MAX_COLUMNS}
+      title={count >= MAX_COLUMNS ? `Up to ${MAX_COLUMNS} columns` : undefined}
+      className="inline-flex items-center gap-1.5 rounded-md px-2 py-1.5 text-xs font-medium text-brand hover:bg-brand-soft disabled:opacity-50"
+    >
+      <Plus className="h-3.5 w-3.5" /> Add column
+    </button>
   );
 }
 
@@ -146,18 +186,69 @@ function AddRowButton({ count, onClick }: { count: number; onClick: () => void }
 }
 
 /** The table frame. Its two column headings are fixed by the question, so everyone reads the columns the same way. */
-function TableShell({ children, footer, rowHeader, valueHeader }: { children: React.ReactNode; footer?: React.ReactNode; rowHeader?: string; valueHeader?: string }) {
+function PlusColumn({ count, onClick }: { count: number; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={count >= MAX_COLUMNS}
+      aria-label="Add column"
+      title={count >= MAX_COLUMNS ? `Up to ${MAX_COLUMNS} columns` : "Add column"}
+      className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-brand hover:bg-brand-soft disabled:opacity-40"
+    >
+      <Plus className="h-4 w-4" />
+    </button>
+  );
+}
+
+function TableShell({
+  children,
+  footer,
+  rowHeader,
+  valueHeader,
+  columns = [],
+  onRenameColumn,
+  onRemoveColumn,
+  onAddColumn,
+}: {
+  children: React.ReactNode;
+  footer?: React.ReactNode;
+  rowHeader?: string;
+  valueHeader?: string;
+  columns?: string[];
+  onRenameColumn?: (j: number, name: string) => void;
+  onRemoveColumn?: (j: number) => void;
+  onAddColumn?: () => void;
+}) {
   return (
     <div className="overflow-hidden rounded-lg border border-line bg-paper-raised">
+      <div className="overflow-x-auto">
       <table className="block w-full text-sm sm:table">
         <thead className="hidden bg-paper-sunken text-left text-2xs font-semibold uppercase tracking-wider text-ink-faint sm:table-header-group">
           <tr>
             <th scope="col" className="w-2/5 px-4 py-2 sm:border-r sm:border-line">{rowHeader || DEFAULT_ROW_HEADER}</th>
-            <th scope="col" className="px-4 py-2">{valueHeader || DEFAULT_VALUE_HEADER}</th>
+            <th scope="col" className="px-4 py-1.5">
+              <div className="flex items-center justify-between gap-2">
+                {valueHeader || DEFAULT_VALUE_HEADER}
+                {onAddColumn && columns.length === 0 && <PlusColumn count={0} onClick={onAddColumn} />}
+              </div>
+            </th>
+            {columns.map((c, j) => (
+              <th key={j} scope="col" className="group min-w-40 border-l border-line px-4 py-1.5">
+                <div className="flex items-center gap-1">
+                  <Input aria-label={`Column ${j + 1} heading`} placeholder={`Column ${j + 1} name`} maxLength={80} value={c} onChange={(e) => onRenameColumn?.(j, e.target.value)} className={cn(PLAIN, "-ml-2 h-8 px-2 text-2xs font-semibold uppercase tracking-wider text-ink-faint placeholder:normal-case placeholder:tracking-normal")} />
+                  <button type="button" aria-label={`Remove column ${c || j + 1}`} onClick={() => onRemoveColumn?.(j)} className={HOVER_X + " p-1"}>
+                    <X className="h-4 w-4" />
+                  </button>
+                  {onAddColumn && j === columns.length - 1 && <PlusColumn count={columns.length} onClick={onAddColumn} />}
+                </div>
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody className="block divide-y divide-line sm:table-row-group">{children}</tbody>
       </table>
+      </div>
       {footer && <div className="border-t border-line bg-paper-sunken/40 px-2 py-1">{footer}</div>}
     </div>
   );
@@ -173,10 +264,24 @@ export function AnswerField({
   value: AnswerValue | undefined;
   onChange: (next: AnswerValue) => void;
 }) {
-  const { answer, extra } = splitAnswer(value);
-  const set = (next: AnswerBase | null) => onChange(joinAnswer(next, extra));
-  const setExtra = (rows: ExtraRow[]) => onChange(joinAnswer(answer, rows));
-  const addRow = () => setExtra([...extra, { label: "", value: "" }]);
+  const { answer, extra, columns, cells } = splitAnswer(value);
+  const set = (next: AnswerBase | null) => onChange(joinAnswer(next, extra, columns, cells));
+  const setExtra = (rows: ExtraRow[]) => onChange(joinAnswer(answer, rows, columns, cells));
+  const addRow = () => setExtra([...extra, { label: "", value: "", ...(columns.length ? { cols: columns.map(() => "") } : {}) }]);
+
+  // Columns the respondent adds to a table: every row, the question's own and the added ones, gets a cell in each.
+  const cellAt = (i: number, j: number) => cells[i]?.[j] ?? "";
+  const grid = (cols: string[]) => question.parts.map((_, i) => cols.map((__, j) => cellAt(i, j)));
+  const addColumn = () => {
+    const next = [...columns, ""];
+    onChange(joinAnswer(answer, extra.map((r) => ({ ...r, cols: next.map((_, j) => r.cols?.[j] ?? "") })), next, grid(next)));
+  };
+  const renameColumn = (j: number, name: string) => onChange(joinAnswer(answer, extra, columns.map((c, k) => (k === j ? name : c)), grid(columns)));
+  const removeColumn = (j: number) => {
+    const next = columns.filter((_, k) => k !== j);
+    onChange(joinAnswer(answer, extra.map((r) => ({ ...r, cols: (r.cols ?? []).filter((_, k) => k !== j) })), next, grid(columns).map((row) => row.filter((_, k) => k !== j))));
+  };
+  const setCell = (i: number, j: number, v: string) => onChange(joinAnswer(answer, extra, columns, grid(columns).map((row, r) => (r === i ? row.map((c, k) => (k === j ? v : c)) : row))));
 
   if (question.type === "table") {
     const values = slots(answer, question.parts);
@@ -184,22 +289,51 @@ export function AnswerField({
     const partial = question.required && filled > 0 && filled < question.parts.length;
     return (
       <div className="space-y-1.5">
-        <TableShell rowHeader={question.row_header} valueHeader={question.value_header} footer={<AddRowButton count={extra.length} onClick={addRow} />}>
+        <TableShell
+          rowHeader={question.row_header}
+          valueHeader={question.value_header}
+          columns={columns}
+          onRenameColumn={renameColumn}
+          onRemoveColumn={removeColumn}
+          onAddColumn={addColumn}
+          footer={
+            <div className="flex flex-wrap gap-1">
+              <AddRowButton count={extra.length} onClick={addRow} />
+              {/* The header's + is hidden on phones, where the header row is, so the button stays here for them. */}
+              <span className="sm:hidden">
+                <AddColumnButton count={columns.length} onClick={addColumn} />
+              </span>
+            </div>
+          }
+        >
           {question.parts.map((p, i) => (
             <tr key={i} className="block sm:table-row">
               <td className={cn(CELL, "pb-0 font-medium text-ink sm:w-2/5 sm:border-r sm:border-line sm:pb-2")}>{p.label}</td>
               <td className={CELL}>
                 {p.kind === "number" ? (
                   <NumberBox label={p.label} unit={p.unit} value={values[i]} onChange={(n) => set(values.map((v, j) => (j === i ? n : v)))} />
+                ) : p.kind === "yes_no" ? (
+                  <div className="flex gap-2">
+                    {["Yes", "No"].map((o) => (
+                      <ChoiceButton key={o} active={values[i] === o} onClick={() => set(values.map((v, j) => (j === i ? (v === o ? "" : o) : v)))}>
+                        {o}
+                      </ChoiceButton>
+                    ))}
+                  </div>
                 ) : p.kind === "date" ? (
                   <Input type="date" aria-label={p.label} className="max-w-48" value={typeof values[i] === "string" ? (values[i] as string) : ""} onChange={(e) => set(values.map((v, j) => (j === i ? e.target.value : v)))} />
                 ) : (
                   <Textarea rows={2} aria-label={p.label} value={typeof values[i] === "string" ? (values[i] as string) : ""} placeholder="Type your answer" onChange={(e) => set(values.map((v, j) => (j === i ? e.target.value : v)))} />
                 )}
               </td>
+              {columns.map((c, j) => (
+                <td key={j} className={cn(CELL, "sm:border-l sm:border-line")}>
+                  <Textarea rows={2} aria-label={`${p.label}: ${c || `column ${j + 1}`}`} placeholder={c || `Column ${j + 1}`} value={cellAt(i, j)} onChange={(e) => setCell(i, j, e.target.value)} />
+                </td>
+              ))}
             </tr>
           ))}
-          <ExtraRowsEditor rows={extra} onChange={setExtra} />
+          <ExtraRowsEditor rows={extra} onChange={setExtra} columns={columns} />
         </TableShell>
         {partial && <p className="text-xs text-rust">Fill in every row to submit this question.</p>}
       </div>
@@ -288,31 +422,42 @@ export function AnswerField({
 
 /** A submitted answer for reading: a table when there are rows, otherwise the value with its unit. */
 export function AnswerView({ question, value, className }: { question: Pick<Shape, "type" | "unit" | "parts" | "row_header" | "value_header">; value: AnswerValue | undefined; className?: string }) {
-  const { answer, extra } = splitAnswer(value);
-  const rows: { label: string; text: string }[] = [];
+  const { answer, extra, columns, cells } = splitAnswer(value);
+  const rows: { label: string; text: string; cols: string[] }[] = [];
+  const colsOf = (v?: string[]) => columns.map((_, j) => v?.[j] || "—");
+  const template = { gridTemplateColumns: `2fr 3fr${columns.map(() => " 2fr").join("")}` };
   if (question.type === "table" && Array.isArray(answer)) {
     slots(answer, question.parts).forEach((v, i) => {
       const p = question.parts[i];
-      rows.push({ label: p.label, text: blank(v) ? "—" : `${v}${p.unit ? ` ${p.unit}` : ""}` });
+      rows.push({ label: p.label, text: blank(v) ? "—" : `${v}${p.unit ? ` ${p.unit}` : ""}`, cols: colsOf(cells[i]) });
     });
   }
   const main = question.type === "table" ? "" : formatAnswer(answer as AnswerValue | undefined, question);
-  for (const r of extra) rows.push({ label: r.label, text: r.value || "—" });
+  for (const r of extra) rows.push({ label: r.label, text: r.value || "—", cols: colsOf(r.cols) });
   if (!rows.length) return <p className={cn("whitespace-pre-wrap text-sm font-medium text-ink-muted", className)}>{main && main !== "—" ? main : "No answer"}</p>;
   return (
     <div className={cn("space-y-1.5", className)}>
       {main && main !== "—" && <p className="whitespace-pre-wrap text-sm font-medium text-ink-muted">{main}</p>}
       <dl className="overflow-hidden rounded-lg border border-line bg-paper-raised text-sm">
         {question.type === "table" && (
-          <div className="hidden bg-paper-sunken text-2xs font-semibold uppercase tracking-wider text-ink-faint sm:grid sm:grid-cols-[2fr_3fr]">
+          <div className="hidden bg-paper-sunken text-2xs font-semibold uppercase tracking-wider text-ink-faint sm:grid" style={template}>
             <dt className="border-r border-line px-3 py-2">{question.row_header || DEFAULT_ROW_HEADER}</dt>
             <dd className="px-3 py-2">{question.value_header || DEFAULT_VALUE_HEADER}</dd>
+            {columns.map((c, j) => (
+              <dd key={j} className="border-l border-line px-3 py-2">{c || `Column ${j + 1}`}</dd>
+            ))}
           </div>
         )}
         {rows.map((r, i) => (
-          <div key={i} className="grid border-t border-line first:border-t-0 sm:grid-cols-[2fr_3fr]">
+          <div key={i} className="grid border-t border-line first:border-t-0 sm:[grid-template-columns:var(--cols)]" style={{ "--cols": template.gridTemplateColumns } as React.CSSProperties}>
             <dt className="px-3 pt-2 text-ink-muted sm:border-r sm:border-line sm:py-2">{r.label || "—"}</dt>
             <dd className="whitespace-pre-wrap px-3 pb-2 pt-0.5 font-medium text-ink sm:py-2">{r.text}</dd>
+            {r.cols.map((c, j) => (
+              <dd key={j} className="whitespace-pre-wrap px-3 pb-2 pt-0.5 text-ink sm:border-l sm:border-line sm:py-2">
+                <span className="mr-1 text-2xs uppercase text-ink-faint sm:hidden">{columns[j] || `Column ${j + 1}`}:</span>
+                {c}
+              </dd>
+            ))}
           </div>
         ))}
       </dl>

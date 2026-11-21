@@ -3,7 +3,10 @@ The audit trail of one survey as an Excel workbook: what it asked, who it went
 through, every step it took, and every time it was sent back with which
 comments on which questions.
 
-One sheet, "Audit report", with three stacked blocks on a shared grid of eight
+A second sheet, "Table answers", draws each table question's latest answer as a real table, one spreadsheet
+column per table column (including the columns the respondent added).
+
+The first sheet, "Audit report", has three stacked blocks on a shared grid of eight
 columns: survey details, a timeline of every step, and one row per question
 with the answer from each submission and the comments made on it.
 """
@@ -16,7 +19,7 @@ from openpyxl.cell.text import InlineFont
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
-from apps.core.question_types import answer_text
+from apps.core.question_types import answer_text, split_answer, split_columns
 from apps.surveys.models import Survey, SurveyQuestion
 
 STATUS_LABELS = dict(SurveyQuestion.STATUSES)
@@ -41,7 +44,7 @@ OK_FONT = Font(bold=True, color="2C7A4B")
 EDGE = Side(style="thin", color="D9DFE0")
 BOX = Border(left=EDGE, right=EDGE, top=EDGE, bottom=EDGE)
 ZEBRA_FILL = PatternFill("solid", fgColor="F8FAFA")
-WIDTHS = [8, 20, 46, 22, 24, 24, 24, 60]
+WIDTHS = [8, 20, 46, 30, 24, 24, 24, 60]
 WRAP = Alignment(wrap_text=True, vertical="top")
 
 
@@ -156,10 +159,21 @@ def _submission_extras(event, question):
     return "\n".join(lines)
 
 
+def _role(role_of, pk, action, default="Administrator"):
+    """What a person was acting as in one step. Someone who is both a respondent and the reviewer is a
+    respondent when they submit and the reviewer when they review."""
+    roles = role_of.get(pk)
+    if not roles:
+        return default
+    if action == "submitted" and "Respondent" in roles:
+        return "Respondent"
+    return next((r for r in ("Reviewer", "Approver") if r in roles), roles[0])
+
+
 def _comment_parts(comment, event, role_of):
     """One comment as rich text: a bold line (when, who, to whom), then the words."""
     to = AUDIENCE_LABELS.get(event.audience, "")
-    who = f"{_name(comment.author)} ({role_of.get(comment.author.pk, 'Administrator')})" if comment.author else "Unknown"
+    who = f"{_name(comment.author)} ({_role(role_of, comment.author.pk, event.action)})" if comment.author else "Unknown"
     files = _comment_files(comment)
     return [TextBlock(InlineFont(b=True), f"{_nice(event.created_at)} · {who}{' → ' + to if to else ''}\n"), comment.text + (f"\n{files}" if files else "")]
 
@@ -227,6 +241,157 @@ def _polish(ws):
     ws.sheet_properties.pageSetUpPr.fitToPage = True
 
 
+TABLE_SHEET = "Table answers"
+TABLE_WIDTHS = [48, 38, 28, 28, 28, 28, 28]
+ADDED_FILL = PatternFill("solid", fgColor="EEF6F0")
+
+
+def _table_cell(part, value):
+    """One cell of a table answer: a figure stays a number, a date its ISO text, anything else text."""
+    if value in ("", None):
+        return ""
+    if part.get("kind") == "number" and isinstance(value, (int, float)) and not isinstance(value, bool):
+        return value
+    return str(value)
+
+
+def _table_lines(q, value):
+    """A table answer as (headings, lines): the question's two headings then one per column the respondent
+    added, and one line per row as (label, values, added_by_respondent). Used by both sheets so they agree."""
+    answer, extra = split_answer(value)
+    columns, cells = split_columns(value)
+    answer = answer if isinstance(answer, list) else []
+    heads = [q.row_header or "Item", q.value_header or "Answer", *[c or f"Column {j + 1}" for j, c in enumerate(columns)]]
+    lines = []
+    for i, part in enumerate(q.parts):
+        label = f"{part['label']} ({part['unit']})" if part.get("unit") else part["label"]
+        vals = [_table_cell(part, answer[i] if i < len(answer) else "")]
+        vals += [(cells[i][j] if i < len(cells) and j < len(cells[i]) else "") for j in range(len(columns))]
+        lines.append((label, vals, False))
+    for r in extra:
+        lines.append((r.get("label", ""), [r.get("value", "")] + [(r.get("cols") or [""] * len(columns))[j] for j in range(len(columns))], True))
+    return heads, lines
+
+
+def _inline_table(ws, sheet, q, versions):
+    """Under a table question's row, its latest answer as a real table: the question's own columns in C and D,
+    then one column for each column the respondent added. Cells that changed since the previous answer are
+    highlighted and rows the respondent added are shaded green."""
+    heads, lines = _table_lines(q, versions[-1].snapshot[str(q.id)])
+    before = {}
+    if len(versions) > 1:
+        for label, vals, _ in _table_lines(q, versions[-2].snapshot[str(q.id)])[1]:
+            before[label] = vals
+    for j in range(len(heads)):  # columns beyond the usual grid still get a sensible width
+        col = get_column_letter(3 + j)
+        if ws.column_dimensions[col].width is None or ws.column_dimensions[col].width < 20:
+            ws.column_dimensions[col].width = 24
+    width = lambda c: ws.column_dimensions[get_column_letter(c)].width or 13
+    r = sheet.row
+    for j, text in enumerate(heads):
+        cell = ws.cell(r, 3 + j, text)
+        cell.fill, cell.font, cell.alignment = BAND_FILL, BAND_FONT, Alignment(wrap_text=True, vertical="center", indent=1 if j == 0 else 0)
+        cell.border = BOX
+    ws.row_dimensions[r].height = 22
+    r += 1
+    for k, (label, vals, added) in enumerate(lines):
+        for j, v in enumerate([label, *vals]):
+            cell = ws.cell(r, 3 + j, v)
+            cell.alignment = Alignment(wrap_text=True, vertical="top", horizontal="left", indent=1 if j == 0 else 0)
+            cell.border = BOX
+            if j == 0:
+                cell.font = Font(bold=True)
+            if added:
+                cell.fill = ADDED_FILL
+            elif k % 2:
+                cell.fill = ZEBRA_FILL
+            if j and label in before and (before[label][j - 1] if j - 1 < len(before[label]) else "") != v:
+                cell.fill = CHANGED_FILL
+        tallest = max(
+            sum(-(-max(len(part), 1) // int(width(3 + j) * 0.95)) for part in str(v).split("\n"))
+            for j, v in enumerate([label, *vals])
+        )
+        ws.row_dimensions[r].height = max(18, 15 * tallest + 3)
+        r += 1
+    sheet.row = r
+
+
+def _table_sheet(wb, questions, recorded):
+    """A second sheet with every table question's latest submitted answer drawn as a real table: the question's
+    own columns, then one spreadsheet column for each column the respondent added, so it reads like the form did.
+    Rows the respondent added are shaded."""
+    tables = []
+    for q in questions:
+        if q.type != "table":
+            continue
+        found = [e for _, e in recorded if q.pk in {x.pk for x in e.questions.all()} and e.snapshot.get(str(q.id)) is not None]
+        if found:
+            tables.append((q, len(found), found[-1]))
+    if not tables:
+        return
+    ws = wb.create_sheet(TABLE_SHEET)
+    ws.sheet_view.showGridLines = False
+    for i, width in enumerate(TABLE_WIDTHS, start=1):
+        ws.column_dimensions[get_column_letter(i)].width = width
+    ncols = 2 + max(len(split_columns(e.snapshot[str(q.id)])[0]) for q, _, e in tables)
+    row = 1
+
+    def merged(r, text, fill=None, font=None, height=None):
+        ws.merge_cells(start_row=r, start_column=1, end_row=r, end_column=ncols)
+        cell = ws.cell(r, 1, text)
+        cell.alignment = Alignment(wrap_text=True, vertical="center", indent=1)
+        if fill:
+            for c in range(1, ncols + 1):
+                ws.cell(r, c).fill = fill
+        if font:
+            cell.font = font
+        if height:
+            ws.row_dimensions[r].height = height
+
+    merged(row, "TABLE ANSWERS · each table question as a table, latest submitted answer (rows added by the respondent are shaded green)", BAND_FILL, BAND_FONT, 24)
+    row += 2
+    number_of = {q.pk: n for n, q in enumerate(questions, start=1)}
+    for q, n, e in tables:
+        value = e.snapshot[str(q.id)]
+        heads, lines = _table_lines(q, value)
+        title = f"Q{number_of[q.pk]} · {_numbered(q)}"
+        info = f"Respondent: {_name(q.responder) or 'Unassigned'}  ·  Status: {STATUS_LABELS.get(q.status, q.status)}  ·  Answer {n} ({'first submission' if n == 1 else 'resubmitted'}), {_nice(e.created_at)}"
+        chars = int(sum(TABLE_WIDTHS[:ncols]) * 0.95)  # characters that fit on one line across the table
+        merged(row, title, BAND_FILL, BAND_FONT, max(24, 15 * -(-len(title) // chars) + 9))
+        row += 1
+        merged(row, info, LABEL_FILL, None, max(18, 15 * -(-len(info) // chars) + 3))
+        row += 1
+        for c, text in enumerate(heads, start=1):
+            cell = ws.cell(row, c, text)
+            cell.fill, cell.font, cell.alignment, cell.border = HEADER_FILL, HEADER_FONT, Alignment(wrap_text=True, vertical="center"), BOX
+        ws.row_dimensions[row].height = 28
+        row += 1
+        for k, (label, vals, added) in enumerate(lines):
+            for c, v in enumerate([label, *vals], start=1):
+                cell = ws.cell(row, c, v)
+                cell.alignment = Alignment(wrap_text=True, vertical="top", horizontal="left")
+                cell.border = BOX
+                if c == 1:
+                    cell.font = Font(bold=True)
+                if added:
+                    cell.fill = ADDED_FILL
+                elif k % 2:
+                    cell.fill = ZEBRA_FILL
+            # Size the row for its tallest cell: wrapped length plus any line breaks the respondent typed.
+            tallest = max(
+                sum(-(-max(len(part), 1) // int(TABLE_WIDTHS[c] * 0.95)) for part in str(v).split("\n"))
+                for c, v in enumerate([label, *vals]) if c < len(TABLE_WIDTHS)
+            )
+            ws.row_dimensions[row].height = max(18, 15 * tallest + 3)
+            row += 1
+        row += 1
+    ws.freeze_panes = "A3"
+    ws.page_setup.orientation = "landscape"
+    ws.page_setup.fitToWidth = 1
+    ws.page_setup.fitToHeight = 0
+    ws.sheet_properties.pageSetUpPr.fitToPage = True
+
+
 def build_workbook(survey: Survey) -> bytes:
     events = list(survey.events.select_related("by").prefetch_related("question_comments__author", "question_comments__attachments"))
     questions = list(
@@ -235,11 +400,11 @@ def build_workbook(survey: Survey) -> bytes:
     role_of = {}
     for q in questions:
         if q.responder:
-            role_of[q.responder.pk] = "Respondent"
+            role_of.setdefault(q.responder.pk, ["Respondent"])
     for role in ("reviewer", "approver"):
         person = getattr(survey, role)
         if person:
-            role_of[person.pk] = role.capitalize()
+            role_of.setdefault(person.pk, []).append(role.capitalize())
     number_of = {q.pk: n for n, q in enumerate(questions, start=1)}
     respondents = list(dict.fromkeys(_name(q.responder) for q in questions if q.responder))
     submissions = [e for e in events if e.action == "submitted"]
@@ -280,7 +445,7 @@ def build_workbook(survey: Survey) -> bytes:
     for step, e in enumerate(events, start=1):
         r = sheet.line([
             step, _nice(e.created_at), ACTION_LABELS.get(e.action, e.action), _name(e.by),
-            role_of.get(e.by_id, "Administrator" if e.by_id else ""),
+            _role(role_of, e.by_id, e.action, "Administrator" if e.by_id else ""),
             AUDIENCE_LABELS.get(e.audience, "") if e.action == "returned" else "",
             _numbers(number_of[q.pk] for q in e.questions.all() if q.pk in number_of), e.comment,
         ])
@@ -296,25 +461,37 @@ def build_workbook(survey: Survey) -> bytes:
     # before answer history existed) stay in the timeline. The first three fill E:G;
     # any more continue to the right of the Comments column.
     recorded = [(n, e) for n, e in enumerate(submissions, start=1) if e.snapshot]
+    # One answer column per time a question was answered (first answer, then each resubmission), not per
+    # submission, so a survey whose respondents each submit once has a single answer column.
+    revisions = {
+        q.pk: [e for _, e in recorded if q.pk in {x.pk for x in e.questions.all()} and str(q.id) in e.snapshot]
+        for q in questions
+    }
+    answer_cols = max((len(v) for v in revisions.values()), default=0)
     sub_col = lambda i: 5 + i if i < 3 else 8 + (i - 2)
-    # Comments start in the first column no submission uses and stretch to H, so
-    # a survey with one recorded submission has no empty columns in between.
-    first_comment = 5 + min(len(recorded), 3)
+    # Comments start in the first column no answer uses and stretch to H, so
+    # a survey answered once has no empty columns in between.
+    first_comment = 5 + min(answer_cols, 3)
     sheet.header(["Q#", "Section", "Question", "Respondent and status"])
     header_row = sheet.row - 1
     cell = ws.cell(header_row, first_comment, "Comments on this question")
     cell.fill, cell.font, cell.alignment = HEADER_FILL, HEADER_FONT, WRAP
     span = lambda r: _span(ws, r, first_comment)
     span(header_row)
-    for i, (n, e) in enumerate(recorded):
+    for i in range(answer_cols):
         col = sub_col(i)
-        cell = ws.cell(header_row, col, f"Submission {n}\n{_nice(e.created_at)}")
+        cell = ws.cell(header_row, col, f"Answer {i + 1}\n({'first submission' if i == 0 else 'resubmitted'})")
         cell.fill, cell.font, cell.alignment = HEADER_FILL, HEADER_FONT, WRAP
         ws.column_dimensions[get_column_letter(col)].width = 24
     if len(recorded) < len(submissions):
         skipped = len(submissions) - len(recorded)
         ws.merge_cells(start_row=sheet.row, start_column=3, end_row=sheet.row, end_column=8)
         sheet.line(["", "", f"{skipped} earlier submission{'s' if skipped != 1 else ''} made before answers were recorded: see the timeline above."])
+        ws.cell(sheet.row - 1, 3).font = Font(italic=True, color="5B6B6E")
+
+    if any(q.type == "table" for q in questions):
+        ws.merge_cells(start_row=sheet.row, start_column=3, end_row=sheet.row, end_column=8)
+        sheet.line(["", "", f"Table questions are written out line by line here and drawn as proper tables, one column per table column, on the \"{TABLE_SHEET}\" sheet."])
         ws.cell(sheet.row - 1, 3).font = Font(italic=True, color="5B6B6E")
 
     notes_by_question = {}
@@ -341,16 +518,22 @@ def build_workbook(survey: Survey) -> bytes:
         lines = sum(-(-len(t) // width) + 1 for t in (note[-1] for note in notes)) if notes else 1
         ws.row_dimensions[r].height = max(15 * max(lines + len(notes or []) - 1, -(-len(shown) // WIDTHS[2])), 18)
         previous = None
-        for i, (_, e) in enumerate(recorded):
-            if q.pk not in {x.pk for x in e.questions.all()}:
-                continue  # this submission was about other questions
+        for i, e in enumerate(revisions[q.pk]):
             value = _cell(q, e.snapshot.get(str(q.id)))
             extras = _submission_extras(e, q)
             cell = ws.cell(r, sub_col(i), f"{value}\n\n{extras}" if extras else value)
             cell.alignment = Alignment(wrap_text=True, vertical="top", horizontal="left")
+            if q.type == "table":
+                latest = i == len(revisions[q.pk]) - 1
+                note = "Table: see the rows below" if latest else "Earlier answer, replaced by the resubmitted table below (changed cells are highlighted)"
+                cell.value = f"{note}\n\n{extras}" if extras else note
+                cell.font = Font(italic=True, color="5B6B6E")
+                continue
             if previous is not None and value != previous:
                 cell.fill = CHANGED_FILL
             previous = value
+        if q.type == "table" and revisions[q.pk]:
+            _inline_table(ws, sheet, q, revisions[q.pk])
 
     # ---- 4. Each question's own trail
     sheet.gap()
@@ -384,7 +567,7 @@ def build_workbook(survey: Survey) -> bytes:
                 extras = _submission_extras(e, q)
                 notes = ([extras] if extras else []) + notes
             comment = "\n".join(([e.comment] if e.comment else []) + notes)
-            who = f"{_name(e.by)} ({role_of.get(e.by_id, 'Administrator')})" if e.by_id else ""
+            who = f"{_name(e.by)} ({_role(role_of, e.by_id, e.action)})" if e.by_id else ""
             r = sheet.line([n, _nice(e.created_at), step, who, q.text, answer, changed_from, comment])
             if e.action == "returned":
                 ws.cell(r, 3).font = RETURNED_FONT
@@ -394,6 +577,7 @@ def build_workbook(survey: Survey) -> bytes:
                 ws.cell(r, 6).fill = CHANGED_FILL
 
     _polish(ws)
+    _table_sheet(sheet.wb, questions, recorded)
     out = BytesIO()
     sheet.wb.save(out)
     return out.getvalue()

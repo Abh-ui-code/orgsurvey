@@ -111,12 +111,16 @@ export interface Survey {
 export interface ExtraRow {
   label: string;
   value: string;
+  /** Values for the columns the respondent added to the table, in the same order as the columns. */
+  cols?: string[];
 }
 
 /** What one question was answered with: a text, number, choice or list of choices, a table's values (one per row,
  * in order), or any of those with extra rows: {answer, extra}. */
 export type AnswerBase = string | number | string[] | (string | number)[];
-export type AnswerValue = AnswerBase | { answer: AnswerBase | null; extra: ExtraRow[] };
+/** `columns` are extra columns the respondent added to a table question (their headings);
+ * `cells[i][j]` is the value in column j of the question's row i. */
+export type AnswerValue = AnswerBase | { answer: AnswerBase | null; extra: ExtraRow[]; columns?: string[]; cells?: string[][] };
 
 export interface SurveySection {
   id: string;

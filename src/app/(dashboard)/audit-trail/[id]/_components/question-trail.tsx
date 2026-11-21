@@ -79,7 +79,7 @@ export function QuestionTrail({ survey, question }: { survey: SurveyDetail; ques
             <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
               <span className={cn("text-sm font-semibold", returned ? "text-rust" : "text-ink")}>{title}</span>
               <span className="text-xs text-ink-muted">
-                {event.by?.full_name} · {roleOf(survey, event.by)}
+                {event.by?.full_name} · {roleOf(survey, event.by, event.action)}
               </span>
               <span className="ml-auto text-xs text-ink-faint">{formatDateTime(event.at)}</span>
             </div>

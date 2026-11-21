@@ -7,8 +7,9 @@ import datetime
 from apps.core.exceptions import ApiError
 
 TYPES = ["text", "single_choice", "multi_choice", "rating", "yes_no", "number", "date", "table", "short_text"]
-PART_KINDS = ("number", "text", "date")
+PART_KINDS = ("number", "text", "date", "yes_no")
 UNIT_MAX, LABEL_MAX, EXTRA_ROWS_MAX, SHORT_TEXT_MAX, HEADER_MAX = 40, 200, 30, 200, 80
+COLUMNS_MAX = 5
 CHOICE_TYPES = {"single_choice", "multi_choice"}
 
 
@@ -36,7 +37,7 @@ def clean_question_fields(data) -> dict:
             if not label:
                 raise ApiError("Every row of a table question needs a label.")
             if kind not in PART_KINDS:
-                raise ApiError("A table row is a number, text or a date.")
+                raise ApiError("A table row is a number, text, a date or yes / no.")
             parts.append({"label": label[:LABEL_MAX], "kind": kind, "unit": str(part.get("unit", "") or "").strip()[:UNIT_MAX] if kind == "number" else ""})
         if not parts:
             raise ApiError("A table question needs at least one row.")
@@ -72,7 +73,30 @@ def split_answer(value):
     return value, []
 
 
-def _clean_extra(label: str, rows) -> list:
+def split_columns(value):
+    """(column headings, cells) a respondent added to a table answer: cells[i][j] is row i, column j."""
+    if isinstance(value, dict):
+        return value.get("columns") or [], value.get("cells") or []
+    return [], []
+
+
+def _clean_columns(label: str, question: dict, value):
+    """Validated, trimmed (columns, cells) of an answer; a column with no heading and no values is dropped."""
+    columns, cells = split_columns(value)
+    if not columns and not cells:
+        return [], []
+    bad = ApiError(f"That isn't a valid set of columns for: {label}")
+    if question.get("type") != "table" or not isinstance(columns, list) or not isinstance(cells, list) or len(columns) > COLUMNS_MAX:
+        raise bad
+    parts = question.get("parts") or []
+    if any(not isinstance(c, str) or len(c.strip()) > HEADER_MAX for c in columns):
+        raise bad
+    if len(cells) != len(parts) or any(not isinstance(r, list) or len(r) != len(columns) or any(not isinstance(v, str) or len(v) > 5000 for v in r) for r in cells):
+        raise bad
+    return [c.strip() for c in columns], [[v.strip() for v in r] for r in cells]
+
+
+def _clean_extra(label: str, rows, ncols: int = 0) -> list:
     """The rows a respondent added beyond the question: [{label, value}], blank rows dropped."""
     if not isinstance(rows, list) or len(rows) > EXTRA_ROWS_MAX:
         raise ApiError(f"Add at most {EXTRA_ROWS_MAX} extra rows to: {label}")
@@ -81,9 +105,15 @@ def _clean_extra(label: str, rows) -> list:
         if not isinstance(r, dict) or not isinstance(r.get("label", ""), str) or not isinstance(r.get("value", ""), str):
             raise ApiError(f"That isn't a valid extra row for: {label}")
         row = {"label": r.get("label", "").strip(), "value": r.get("value", "").strip()}
-        if len(row["label"]) > LABEL_MAX or len(row["value"]) > 5000:
+        cols = r.get("cols") or []
+        if not isinstance(cols, list) or len(cols) != ncols or any(not isinstance(v, str) for v in cols):
+            raise ApiError(f"That isn't a valid extra row for: {label}")
+        cols = [v.strip() for v in cols]
+        if len(row["label"]) > LABEL_MAX or len(row["value"]) > 5000 or any(len(v) > 5000 for v in cols):
             raise ApiError(f"An extra row is too long for: {label}")
-        if row["label"] or row["value"]:
+        if ncols:
+            row["cols"] = cols
+        if row["label"] or row["value"] or any(cols):
             out.append(row)
     return out
 
@@ -95,23 +125,35 @@ def clean_answer(question: dict, value):
     answer, extra = split_answer(value)
     if isinstance(answer, str):
         answer = answer.strip()
-    extra = _clean_extra(f'"{question["text"]}"', extra) if extra else []
+    label = f'"{question["text"]}"'
+    columns, cells = _clean_columns(label, question, value)
+    extra = _clean_extra(label, extra, len(columns)) if extra else []
+    # A column nobody named and nobody filled in is dropped, from every row.
+    keep = [j for j, c in enumerate(columns) if c or any(r[j] for r in cells) or any(e["cols"][j] for e in extra)]
+    if len(keep) != len(columns):
+        columns = [columns[j] for j in keep]
+        cells = [[r[j] for j in keep] for r in cells]
+        extra = [{**e, "cols": [e["cols"][j] for j in keep]} for e in extra]
     if is_empty(answer):
         answer = None
-    if answer is None and not extra:
+    if answer is None and not extra and not any(any(r) for r in cells):
         return None
-    return {"answer": answer, "extra": extra} if extra else answer
+    out = {"answer": answer, "extra": extra}
+    if columns:
+        out.update(columns=columns, cells=cells)
+    return out if (extra or columns) else answer
 
 
 def validate_answer(question: dict, value) -> None:
     """Raise ApiError unless `value` is an acceptable answer to `question`
     (a dict with text/type/options/required)."""
     label = f'"{question["text"]}"'
-    if isinstance(value, dict) and set(value) - {"answer", "extra"}:
+    if isinstance(value, dict) and set(value) - {"answer", "extra", "columns", "cells"}:
         raise ApiError(f"That isn't a valid answer for: {label}")
     extra = split_answer(value)[1]
+    ncols = len(_clean_columns(label, question, value)[0])
     if extra:
-        _clean_extra(label, extra)
+        _clean_extra(label, extra, ncols)
     value = split_answer(value)[0]
     if is_empty(value):
         if question["required"]:
@@ -154,6 +196,9 @@ def validate_answer(question: dict, value) -> None:
                         datetime.date.fromisoformat(str(v))
                     except ValueError as exc:
                         raise ApiError(f"Enter a valid date for \"{part['label']}\" in: {label}") from exc
+            elif part["kind"] == "yes_no":
+                if v not in ("", None, "Yes", "No"):
+                    raise ApiError(f"Answer Yes or No for \"{part['label']}\" in: {label}")
             elif v not in ("", None) and (not isinstance(v, str) or len(v) > 5000):
                 raise bad
         if question["required"] and any(v in ("", None) for v in value):
@@ -169,17 +214,24 @@ def answer_text(question, value) -> str:
     """An answer as plain text for exports: "50 hectares", "Total area: 50 ha; Notes: ...", extra rows
     listed after it, and a dash when there is nothing."""
     answer, extra = split_answer(value)
+    columns, cells = split_columns(value)
+
+    def col_text(vals):
+        return [f"{c or 'Column ' + str(j + 1)}: {vals[j]}" for j, c in enumerate(columns) if j < len(vals) and vals[j]]
+
     lines = []
     unit = getattr(question, "unit", "") or ""
     parts = getattr(question, "parts", None) or []
     if not is_empty(answer):
         if question.type == "table" and isinstance(answer, list):
-            for part, v in zip(parts, answer):
-                if v not in ("", None):
-                    lines.append(f"{part['label']}: {v}{' ' + part['unit'] if part.get('unit') else ''}")
+            for i, (part, v) in enumerate(zip(parts, answer)):
+                cols = col_text(cells[i] if i < len(cells) else [])
+                if v not in ("", None) or cols:
+                    first = f"{part['label']}: {'—' if v in ('', None) else v}{' ' + part['unit'] if part.get('unit') and v not in ('', None) else ''}"
+                    lines.append("; ".join([first, *cols]))
         elif isinstance(answer, list):
             lines.append(", ".join(str(v) for v in answer))
         else:
             lines.append(f"{answer}{' ' + unit if unit and question.type == 'number' else ''}")
-    lines += [f"{r['label']}: {r['value']}" if r["label"] else r["value"] for r in extra]
+    lines += ["; ".join([f"{r['label']}: {r['value']}" if r["label"] else r["value"], *col_text(r.get("cols") or [])]) for r in extra]
     return "\n".join(lines) if lines else "—"

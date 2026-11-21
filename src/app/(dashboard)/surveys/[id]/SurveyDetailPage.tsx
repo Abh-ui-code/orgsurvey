@@ -117,8 +117,10 @@ export default function SurveyDetailPage() {
 
           <div className="space-y-5">
             <div className="space-y-5">
+              {canRespond && me && <AnswerForm survey={s} meId={me.id} />}
+              {/* Someone who is both a respondent and the reviewer answers their own questions above and reviews others' here. */}
               {canRespond && me ? (
-                <AnswerForm survey={s} meId={me.id} />
+                deciding ? <AnswersReadOnly survey={s} deciding={deciding} canReassign={isAdmin && isLive} /> : null
               ) : questions.length > 0 ? (
                 <AnswersReadOnly survey={s} deciding={deciding} canReassign={isAdmin && isLive} />
               ) : (

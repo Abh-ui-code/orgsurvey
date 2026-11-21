@@ -74,7 +74,7 @@ function Reports() {
     <div className="space-y-4">
       <PageHeader
         title="Reports"
-        description="Download a survey's full audit trail as one Excel sheet: survey details, a timeline of every step, each question with its answers per submission, and a step-by-step trail for every question (answers, changes, returns, approvals and comments)."
+        description="Download a survey's full audit trail as one Excel sheet: survey details, a timeline of every step, each question with its answers per submission, and a step-by-step trail for every question (answers, changes, returns, approvals and comments). A second sheet lays every table question out as a real table, one column per table column."
       />
       <SearchInput
         value={search}

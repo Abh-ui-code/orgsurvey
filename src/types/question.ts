@@ -18,7 +18,7 @@ export const QUESTION_TYPES: { value: QuestionType; label: string }[] = [
 /** One row of a table question: a label and what goes in the box beside it. */
 export interface QuestionPart {
   label: string;
-  kind: "number" | "text" | "date";
+  kind: "number" | "text" | "date" | "yes_no";
   /** Shown beside a number box ("hectares"), so the respondent only types the figure. */
   unit: string;
 }
@@ -202,6 +202,8 @@ export interface GriQuestion {
   type: QuestionType;
   unit: string;
   parts: QuestionPart[];
+  row_header?: string;
+  value_header?: string;
   hint: string;
   required: boolean;
 }

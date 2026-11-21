@@ -60,14 +60,43 @@
     {
      "item": "a",
      "text": "Have you determined your material topics? If so, describe how.",
-     "type": "text",
-     "hint": "Requirement 3-a. See section 1 of GRI 3: Material Topics 2021 for guidance on determining material topics."
+     "type": "table",
+     "hint": "Requirement 3-a. See section 1 of GRI 3: Material Topics 2021 for guidance on determining material topics.",
+     "parts": [
+      {
+       "label": "Material topics determined?",
+       "kind": "yes_no",
+       "unit": ""
+      },
+      {
+       "label": "How they were determined",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "b",
      "text": "Have you reviewed the applicable GRI Sector Standard(s), determined whether each topic in them is a material topic for your organization, and listed in the GRI content index any topics you determined are not material with an explanation of why?",
-     "type": "text",
-     "hint": "Requirement 3-b applies only if GRI Sector Standards for your sector(s) are available. State (i) the determination for each Sector Standard topic and (ii) the explanation for each topic not material."
+     "type": "table",
+     "hint": "Requirement 3-b applies only if GRI Sector Standards for your sector(s) are available. State (i) the determination for each Sector Standard topic and (ii) the explanation for each topic not material.",
+     "parts": [
+      {
+       "label": "Sector Standard(s) reviewed?",
+       "kind": "yes_no",
+       "unit": ""
+      },
+      {
+       "label": "Determination for each Sector Standard topic",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Explanation for each topic not material",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -78,20 +107,56 @@
     {
      "item": "a",
      "text": "Do you report your process of determining material topics using Disclosure 3-1? Describe how and where it is reported.",
-     "type": "text",
-     "hint": "Requirement 4-a. Reasons for omission are not permitted for 3-1."
+     "type": "table",
+     "hint": "Requirement 4-a. Reasons for omission are not permitted for 3-1.",
+     "parts": [
+      {
+       "label": "Reported using Disclosure 3-1 (process of determining material topics)?",
+       "kind": "yes_no",
+       "unit": ""
+      },
+      {
+       "label": "How and where it is reported",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "b",
      "text": "Do you report a list of your material topics using Disclosure 3-2? Describe how and where it is reported.",
-     "type": "text",
-     "hint": "Requirement 4-b. Reasons for omission are not permitted for 3-2."
+     "type": "table",
+     "hint": "Requirement 4-b. Reasons for omission are not permitted for 3-2.",
+     "parts": [
+      {
+       "label": "Reported using Disclosure 3-2 (list of material topics)?",
+       "kind": "yes_no",
+       "unit": ""
+      },
+      {
+       "label": "How and where it is reported",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "c",
      "text": "Do you report how you manage each material topic using Disclosure 3-3? Describe how and where it is reported.",
-     "type": "text",
-     "hint": "Requirement 4-c. Reasons for omission are permitted only for 3-3, and must be given in the GRI content index."
+     "type": "table",
+     "hint": "Requirement 4-c. Reasons for omission are permitted only for 3-3, and must be given in the GRI content index.",
+     "parts": [
+      {
+       "label": "Reported using Disclosure 3-3 (management of each material topic)?",
+       "kind": "yes_no",
+       "unit": ""
+      },
+      {
+       "label": "How and where it is reported",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -102,14 +167,38 @@
     {
      "item": "a",
      "text": "Do you report disclosures from the GRI Topic Standards for each material topic? List the Topic Standard disclosures reported for each material topic.",
-     "type": "text",
-     "hint": "Requirement 5-a. Report only the disclosures relevant to your impacts in relation to each material topic; there is no minimum number of disclosures."
+     "type": "table",
+     "hint": "Requirement 5-a. Report only the disclosures relevant to your impacts in relation to each material topic; there is no minimum number of disclosures.",
+     "parts": [
+      {
+       "label": "Topic Standard disclosures reported?",
+       "kind": "yes_no",
+       "unit": ""
+      },
+      {
+       "label": "Disclosures reported for each material topic",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "b",
      "text": "For each material topic covered in an applicable GRI Sector Standard, do you either report the Topic Standard disclosures listed for that topic, or provide the 'not applicable' reason for omission with the required explanation in the GRI content index?",
-     "type": "text",
-     "hint": "Requirement 5-b applies only if GRI Sector Standards for your sector(s) are available."
+     "type": "table",
+     "hint": "Requirement 5-b applies only if GRI Sector Standards for your sector(s) are available.",
+     "parts": [
+      {
+       "label": "Reported the listed disclosures, or gave the 'not applicable' reason?",
+       "kind": "yes_no",
+       "unit": ""
+      },
+      {
+       "label": "Explanation in the GRI content index",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -120,8 +209,25 @@
     {
      "item": "a",
      "text": "If you cannot comply with a disclosure or a requirement in a disclosure for which reasons for omission are permitted, do you specify in the GRI content index the disclosure or requirement and provide one of the four permitted reasons for omission with the required explanation?",
-     "type": "text",
-     "hint": "Requirement 6-a (i) specify the disclosure or requirement; (ii) give one reason from Table 1: not applicable, legal prohibitions, confidentiality constraints, or information unavailable / incomplete, with the required explanation."
+     "type": "table",
+     "hint": "Requirement 6-a (i) specify the disclosure or requirement; (ii) give one reason from Table 1: not applicable, legal prohibitions, confidentiality constraints, or information unavailable / incomplete, with the required explanation.",
+     "parts": [
+      {
+       "label": "Disclosure or requirement omitted",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Reason for omission (not applicable, legal prohibitions, confidentiality constraints, or information unavailable / incomplete)",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Explanation",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -132,14 +238,43 @@
     {
      "item": "a",
      "text": "Do you publish a GRI content index that includes: the title 'GRI content index'; the statement of use; the title of GRI 1 used; the title(s) of the applicable GRI Sector Standard(s); a list of your material topics; a list of Sector Standard topics determined not material with explanations; a list of reported disclosures with titles; the titles of the Standards and other sources they come from; for omitted Topic Standard disclosures listed in a Sector Standard, the disclosures and reasons for omission; the Sector Standard reference numbers; the location of the information for each disclosure; and any reasons for omission used?",
-     "type": "text",
-     "hint": "Requirement 7-a (i to xii). Provide a link or reference to where the content index is published."
+     "type": "table",
+     "hint": "Requirement 7-a (i to xii). Provide a link or reference to where the content index is published.",
+     "parts": [
+      {
+       "label": "Published a GRI content index?",
+       "kind": "yes_no",
+       "unit": ""
+      },
+      {
+       "label": "Link or reference to where it is published",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Anything the index does not include, and why",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "b",
      "text": "If you publish a standalone sustainability report and the GRI content index is not included in the report itself, do you provide a link or reference to the GRI content index in the report? Provide the link or reference.",
-     "type": "text",
-     "hint": "Requirement 7-b."
+     "type": "table",
+     "hint": "Requirement 7-b.",
+     "parts": [
+      {
+       "label": "Link or reference included in the report?",
+       "kind": "yes_no",
+       "unit": ""
+      },
+      {
+       "label": "Link or reference",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -150,8 +285,20 @@
     {
      "item": "a",
      "text": "Do you include the following statement in your GRI content index: '[Name of organization] has reported in accordance with the GRI Standards for the period [reporting period start and end dates]'? Provide the statement as published.",
-     "type": "text",
-     "hint": "Requirement 8-a. Insert the organization's name and the start and end dates of the reporting period."
+     "type": "table",
+     "hint": "Requirement 8-a. Insert the organization's name and the start and end dates of the reporting period.",
+     "parts": [
+      {
+       "label": "Statement included?",
+       "kind": "yes_no",
+       "unit": ""
+      },
+      {
+       "label": "Statement as published",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -162,8 +309,25 @@
     {
      "item": "a",
      "text": "Have you notified GRI of your use of the GRI Standards and the statement of use by sending an email to reportregistration@globalreporting.org? State when and by whom you notified GRI.",
-     "type": "text",
-     "hint": "Requirement 9-a. Include the legal name, the link to the GRI content index, the link to the report if a standalone report is published, the statement of use, and a contact person."
+     "type": "table",
+     "hint": "Requirement 9-a. Include the legal name, the link to the GRI content index, the link to the report if a standalone report is published, the statement of use, and a contact person.",
+     "parts": [
+      {
+       "label": "Notified GRI?",
+       "kind": "yes_no",
+       "unit": ""
+      },
+      {
+       "label": "Date of notification",
+       "kind": "date",
+       "unit": ""
+      },
+      {
+       "label": "Notified by (name and role)",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   }

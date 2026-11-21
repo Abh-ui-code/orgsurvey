@@ -14,14 +14,38 @@
     {
      "item": "b",
      "text": "What is your nature of ownership and legal form?",
-     "type": "text",
-     "hint": "2-1-b. E.g. publicly or privately owned; incorporated entity, partnership, sole proprietorship, nonprofit, association or charity."
+     "type": "table",
+     "hint": "2-1-b. E.g. publicly or privately owned; incorporated entity, partnership, sole proprietorship, nonprofit, association or charity.",
+     "parts": [
+      {
+       "label": "Nature of ownership",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Legal form",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "c",
      "text": "Where is the location of your headquarters?",
-     "type": "text",
-     "hint": "2-1-c. Headquarters are the global administrative center from which the organization is controlled or directed."
+     "type": "table",
+     "hint": "2-1-c. Headquarters are the global administrative center from which the organization is controlled or directed.",
+     "parts": [
+      {
+       "label": "City",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Country",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "d",
@@ -38,8 +62,30 @@
     {
      "item": "a",
      "text": "List all entities included in your sustainability reporting.",
-     "type": "text",
-     "hint": "2-2-a. Include subsidiaries, joint ventures and affiliates, including minority interests, that you control or have an interest in."
+     "type": "table",
+     "hint": "2-2-a. Include subsidiaries, joint ventures and affiliates, including minority interests, that you control or have an interest in.",
+     "parts": [
+      {
+       "label": "Entity name",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Legal form / type (subsidiary, joint venture, affiliate)",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Country",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Share held / interest",
+       "kind": "number",
+       "unit": "%"
+      }
+     ]
     },
     {
      "item": "b",
@@ -50,8 +96,25 @@
     {
      "item": "c",
      "text": "If your organization consists of multiple entities, explain the approach used for consolidating the information, including whether it involves adjustments for minority interests, how it takes into account mergers, acquisitions and disposals, and whether and how it differs across disclosures and material topics.",
-     "type": "text",
-     "hint": "2-2-c (i) minority interests; (ii) mergers, acquisitions and disposals; (iii) differences across disclosures and material topics."
+     "type": "table",
+     "hint": "2-2-c (i) minority interests; (ii) mergers, acquisitions and disposals; (iii) differences across disclosures and material topics.",
+     "parts": [
+      {
+       "label": "Treatment of minority interests",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Mergers, acquisitions and disposals",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Differences across disclosures and material topics",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -62,14 +125,38 @@
     {
      "item": "a",
      "text": "How frequently do you publish sustainability reports, and what reporting period do they cover?",
-     "type": "text",
-     "hint": "2-3-a. Specify the reporting period for, and the frequency of, your sustainability reporting."
+     "type": "table",
+     "hint": "2-3-a. Specify the reporting period for, and the frequency of, your sustainability reporting.",
+     "parts": [
+      {
+       "label": "Reporting frequency",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Reporting period covered",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "b",
      "text": "Specify the reporting period for your financial reporting and, if it does not align with the period for your sustainability reporting, explain the reason.",
-     "type": "text",
-     "hint": "2-3-b."
+     "type": "table",
+     "hint": "2-3-b.",
+     "parts": [
+      {
+       "label": "Financial reporting period",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Reason, if it differs from the sustainability reporting period",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "c",
@@ -92,8 +179,25 @@
     {
      "item": "a",
      "text": "Report restatements of information made from previous reporting periods and explain the reasons for the restatements and their effect.",
-     "type": "text",
-     "hint": "2-4-a (i) reasons for the restatements; (ii) effect of the restatements."
+     "type": "table",
+     "hint": "2-4-a (i) reasons for the restatements; (ii) effect of the restatements.",
+     "parts": [
+      {
+       "label": "Restatement of information",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Reason for the restatement",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Effect of the restatement",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -104,14 +208,48 @@
     {
      "item": "a",
      "text": "Describe your policy and practice for seeking external assurance, including whether and how the highest governance body and senior executives are involved.",
-     "type": "text",
-     "hint": "2-5-a."
+     "type": "table",
+     "hint": "2-5-a.",
+     "parts": [
+      {
+       "label": "Policy and practice for seeking external assurance",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Involvement of the highest governance body and senior executives",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "b",
      "text": "If your sustainability reporting has been externally assured, state the assurance status and provide a link or reference to the assurance report(s), what was assured and on what basis (standards, level of assurance, limitations), and your relationship with the assurance provider.",
-     "type": "text",
-     "hint": "2-5-b (i) link or reference; (ii) scope, standards, level and limitations; (iii) relationship with the assurance provider. If it is not assured, say so and whether assurance is planned."
+     "type": "table",
+     "hint": "2-5-b (i) link or reference; (ii) scope, standards, level and limitations; (iii) relationship with the assurance provider. If it is not assured, say so and whether assurance is planned.",
+     "parts": [
+      {
+       "label": "Assurance status (assured / not assured / planned)",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Link or reference to the assurance report",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "What was assured, and on what basis (standards, level, limitations)",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Relationship with the assurance provider",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -122,14 +260,43 @@
     {
      "item": "a",
      "text": "Report the sector(s) in which you are active.",
-     "type": "text",
-     "hint": "2-6-a. Sectors can be identified using GRI Sector Standards or classifications such as GICS, ICB, ISIC or SICS."
+     "type": "table",
+     "hint": "2-6-a. Sectors can be identified using GRI Sector Standards or classifications such as GICS, ICB, ISIC or SICS.",
+     "parts": [
+      {
+       "label": "Sector(s)",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Classification used (GRI Sector Standard, GICS, ICB, ISIC, SICS)",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "b",
      "text": "Describe your value chain, including your activities, products, services and markets served, your supply chain, and the entities downstream from your organization and their activities.",
-     "type": "text",
-     "hint": "2-6-b (i) activities, products, services and markets served; (ii) supply chain; (iii) downstream entities and their activities. A high-level overview is sufficient."
+     "type": "table",
+     "hint": "2-6-b (i) activities, products, services and markets served; (ii) supply chain; (iii) downstream entities and their activities. A high-level overview is sufficient.",
+     "parts": [
+      {
+       "label": "Activities, products, services and markets served",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Supply chain",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Downstream entities and their activities",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "c",
@@ -218,8 +385,20 @@
     {
      "item": "c",
      "text": "Describe the methodologies and assumptions used to compile the data, including whether numbers are reported in head count, full-time equivalent (FTE) or another methodology, and at the end of the reporting period, as an average across the period, or using another methodology.",
-     "type": "text",
-     "hint": "2-7-c (i) head count, FTE or other; (ii) period-end, average or other."
+     "type": "table",
+     "hint": "2-7-c (i) head count, FTE or other; (ii) period-end, average or other.",
+     "parts": [
+      {
+       "label": "Reported as head count, FTE or other",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Reported at period end, as an average or other",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "d",
@@ -265,8 +444,20 @@
     {
      "item": "b",
      "text": "Describe the methodologies and assumptions used to compile the data, including whether the number of workers who are not employees is reported in head count, FTE or another methodology, and at the end of the reporting period, as an average, or using another methodology.",
-     "type": "text",
-     "hint": "2-8-b (i) head count, FTE or other; (ii) period-end, average or other."
+     "type": "table",
+     "hint": "2-8-b (i) head count, FTE or other; (ii) period-end, average or other.",
+     "parts": [
+      {
+       "label": "Reported as head count, FTE or other",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Reported at period end, as an average or other",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "c",
@@ -289,14 +480,68 @@
     {
      "item": "b",
      "text": "List the committees of the highest governance body that are responsible for decision-making on and overseeing the management of the organization’s impacts on the economy, environment and people.",
-     "type": "text",
-     "hint": "2-9-b."
+     "type": "table",
+     "hint": "2-9-b.",
+     "parts": [
+      {
+       "label": "Committee name",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Responsibilities for the organization's impacts on the economy, environment and people",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "c",
      "text": "Describe the composition of the highest governance body and its committees by executive and non-executive members, independence, tenure, number and nature of other significant positions and commitments held by each member, gender, under-represented social groups, competencies relevant to the organization's impacts, and stakeholder representation.",
-     "type": "text",
-     "hint": "2-9-c (i) executive / non-executive; (ii) independence; (iii) tenure; (iv) other positions and commitments; (v) gender; (vi) under-represented groups; (vii) competencies; (viii) stakeholder representation."
+     "type": "table",
+     "hint": "2-9-c (i) executive / non-executive; (ii) independence; (iii) tenure; (iv) other positions and commitments; (v) gender; (vi) under-represented groups; (vii) competencies; (viii) stakeholder representation.",
+     "parts": [
+      {
+       "label": "Executive / non-executive members",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Independence",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Tenure",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Other significant positions and commitments",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Gender",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Under-represented social groups",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Competencies relevant to the organization's impacts",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Stakeholder representation",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -313,8 +558,30 @@
     {
      "item": "b",
      "text": "Describe the criteria used for nominating and selecting highest governance body members, including whether and how the views of stakeholders (including shareholders), diversity, independence, and competencies relevant to the organization's impacts are taken into consideration.",
-     "type": "text",
-     "hint": "2-10-b (i) stakeholder views; (ii) diversity; (iii) independence; (iv) competencies."
+     "type": "table",
+     "hint": "2-10-b (i) stakeholder views; (ii) diversity; (iii) independence; (iv) competencies.",
+     "parts": [
+      {
+       "label": "Views of stakeholders (including shareholders)",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Diversity",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Independence",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Competencies relevant to the organization's impacts",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -353,14 +620,38 @@
     {
      "item": "b",
      "text": "Describe the role of the highest governance body in overseeing the organization’s due diligence and other processes to identify and manage its impacts on the economy, environment and people, including whether and how it engages with stakeholders to support these processes and how it considers their outcomes.",
-     "type": "text",
-     "hint": "2-12-b (i) stakeholder engagement to support the processes; (ii) consideration of outcomes."
+     "type": "table",
+     "hint": "2-12-b (i) stakeholder engagement to support the processes; (ii) consideration of outcomes.",
+     "parts": [
+      {
+       "label": "Engagement with stakeholders to support due diligence processes",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "How outcomes are considered",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "c",
      "text": "Describe the role of the highest governance body in reviewing the effectiveness of the processes described in 2-12-b, and report the frequency of this review.",
-     "type": "text",
-     "hint": "2-12-c."
+     "type": "table",
+     "hint": "2-12-c.",
+     "parts": [
+      {
+       "label": "Role in reviewing effectiveness",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Frequency of review",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -371,14 +662,38 @@
     {
      "item": "a",
      "text": "Describe how the highest governance body delegates responsibility for managing the organization’s impacts on the economy, environment and people, including whether it has appointed senior executives with responsibility for managing impacts and whether it has delegated responsibility to other employees.",
-     "type": "text",
-     "hint": "2-13-a (i) senior executives appointed; (ii) delegation to other employees."
+     "type": "table",
+     "hint": "2-13-a (i) senior executives appointed; (ii) delegation to other employees.",
+     "parts": [
+      {
+       "label": "Senior executives appointed with responsibility",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Delegation to other employees",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "b",
      "text": "Describe the process and frequency for senior executives or other employees to report back to the highest governance body on the management of the organization’s impacts on the economy, environment and people.",
-     "type": "text",
-     "hint": "2-13-b."
+     "type": "table",
+     "hint": "2-13-b.",
+     "parts": [
+      {
+       "label": "Process for reporting back",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Frequency of reporting back",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -389,8 +704,20 @@
     {
      "item": "a",
      "text": "Is the highest governance body responsible for reviewing and approving the reported information, including the organization’s material topics? If so, describe the process for reviewing and approving the information.",
-     "type": "text",
-     "hint": "2-14-a. Answer yes, in part or no, then describe the review and approval process."
+     "type": "table",
+     "hint": "2-14-a. Answer yes, in part or no, then describe the review and approval process.",
+     "parts": [
+      {
+       "label": "Responsible for reviewing and approving? (Yes / In part / No)",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Review and approval process",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "b",
@@ -413,8 +740,30 @@
     {
      "item": "b",
      "text": "Report whether conflicts of interest are disclosed to stakeholders, including at a minimum conflicts relating to cross-board membership, cross-shareholding with suppliers and other stakeholders, the existence of controlling shareholders, and related parties, their relationships, transactions and outstanding balances.",
-     "type": "text",
-     "hint": "2-15-b (i) cross-board membership; (ii) cross-shareholding; (iii) controlling shareholders; (iv) related parties and transactions. Say which are disclosed and where."
+     "type": "table",
+     "hint": "2-15-b (i) cross-board membership; (ii) cross-shareholding; (iii) controlling shareholders; (iv) related parties and transactions. Say which are disclosed and where.",
+     "parts": [
+      {
+       "label": "Cross-board membership disclosed? (Yes / No, and where)",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Cross-shareholding disclosed? (Yes / No, and where)",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Controlling shareholders disclosed? (Yes / No, and where)",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Related parties, relationships, transactions and balances disclosed? (Yes / No, and where)",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -473,8 +822,20 @@
     {
      "item": "b",
      "text": "Report whether the evaluations are independent or not, and the frequency of the evaluations.",
-     "type": "text",
-     "hint": "2-18-b."
+     "type": "table",
+     "hint": "2-18-b.",
+     "parts": [
+      {
+       "label": "Independent evaluation?",
+       "kind": "yes_no",
+       "unit": ""
+      },
+      {
+       "label": "Frequency of evaluations",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "c",
@@ -491,8 +852,35 @@
     {
      "item": "a",
      "text": "Describe the remuneration policies for members of the highest governance body and senior executives, including fixed pay and variable pay, sign-on bonuses or recruitment incentive payments, termination payments, clawbacks, and retirement benefits.",
-     "type": "text",
-     "hint": "2-19-a (i) fixed and variable pay; (ii) sign-on bonuses or recruitment incentives; (iii) termination payments; (iv) clawbacks; (v) retirement benefits."
+     "type": "table",
+     "hint": "2-19-a (i) fixed and variable pay; (ii) sign-on bonuses or recruitment incentives; (iii) termination payments; (iv) clawbacks; (v) retirement benefits.",
+     "parts": [
+      {
+       "label": "Fixed pay and variable pay",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Sign-on bonuses or recruitment incentive payments",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Termination payments",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Clawbacks",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Retirement benefits",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "b",
@@ -509,8 +897,25 @@
     {
      "item": "a",
      "text": "Describe the process for designing your remuneration policies and for determining remuneration, including whether independent highest governance body members or an independent remuneration committee oversees the process, how stakeholder (including shareholder) views are sought and considered, and whether remuneration consultants are involved and independent.",
-     "type": "text",
-     "hint": "2-20-a (i) independent oversight; (ii) stakeholder views; (iii) remuneration consultants and their independence."
+     "type": "table",
+     "hint": "2-20-a (i) independent oversight; (ii) stakeholder views; (iii) remuneration consultants and their independence.",
+     "parts": [
+      {
+       "label": "Independent oversight of the process",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "How stakeholder views are sought and considered",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Remuneration consultants and their independence",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "b",
@@ -565,14 +970,48 @@
     {
      "item": "a",
      "text": "Describe your policy commitments for responsible business conduct, including the authoritative intergovernmental instruments they reference, and whether they stipulate conducting due diligence, applying the precautionary principle, and respecting human rights.",
-     "type": "text",
-     "hint": "2-23-a (i) intergovernmental instruments referenced; (ii) due diligence; (iii) precautionary principle; (iv) respecting human rights."
+     "type": "table",
+     "hint": "2-23-a (i) intergovernmental instruments referenced; (ii) due diligence; (iii) precautionary principle; (iv) respecting human rights.",
+     "parts": [
+      {
+       "label": "Intergovernmental instruments referenced",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Stipulates due diligence?",
+       "kind": "yes_no",
+       "unit": ""
+      },
+      {
+       "label": "Stipulates the precautionary principle?",
+       "kind": "yes_no",
+       "unit": ""
+      },
+      {
+       "label": "Stipulates respect for human rights?",
+       "kind": "yes_no",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "b",
      "text": "Describe your specific policy commitment to respect human rights, including the internationally recognized human rights it covers and the categories of stakeholders, including at-risk or vulnerable groups, that it gives particular attention to.",
-     "type": "text",
-     "hint": "2-23-b (i) human rights covered; (ii) stakeholder categories given particular attention."
+     "type": "table",
+     "hint": "2-23-b (i) human rights covered; (ii) stakeholder categories given particular attention.",
+     "parts": [
+      {
+       "label": "Internationally recognized human rights covered",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Stakeholder categories given particular attention (incl. at-risk or vulnerable groups)",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "c",
@@ -607,8 +1046,30 @@
     {
      "item": "a",
      "text": "Describe how you embed each of your policy commitments for responsible business conduct throughout your activities and business relationships, including how responsibility is allocated across levels, how commitments are integrated into strategies, policies and procedures, how they are implemented with and through business relationships, and the training provided.",
-     "type": "text",
-     "hint": "2-24-a (i) allocation of responsibility; (ii) integration into strategies, operational policies and procedures; (iii) implementation through business relationships; (iv) training."
+     "type": "table",
+     "hint": "2-24-a (i) allocation of responsibility; (ii) integration into strategies, operational policies and procedures; (iii) implementation through business relationships; (iv) training.",
+     "parts": [
+      {
+       "label": "Allocation of responsibility across levels",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Integration into strategies, policies and procedures",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Implementation through business relationships",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Training provided",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -637,8 +1098,20 @@
     {
      "item": "d",
      "text": "Describe how the stakeholders who are the intended users of the grievance mechanisms are involved in the design, review, operation and improvement of these mechanisms.",
-     "type": "text",
-     "hint": "2-25-d."
+     "type": "table",
+     "hint": "2-25-d.",
+     "parts": [
+      {
+       "label": "How intended users are involved in design",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "How they are involved in review, operation and improvement",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     },
     {
      "item": "e",
@@ -655,8 +1128,20 @@
     {
      "item": "a",
      "text": "Describe the mechanisms for individuals to seek advice on implementing your policies and practices for responsible business conduct and to raise concerns about your business conduct.",
-     "type": "text",
-     "hint": "2-26-a (i) seeking advice on responsible business conduct; (ii) raising concerns about business conduct."
+     "type": "table",
+     "hint": "2-26-a (i) seeking advice on responsible business conduct; (ii) raising concerns about business conduct.",
+     "parts": [
+      {
+       "label": "Mechanisms for seeking advice",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Mechanisms for raising concerns",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -746,8 +1231,20 @@
     {
      "item": "a",
      "text": "Report industry associations, other membership associations, and national or international advocacy organizations in which you participate in a significant role.",
-     "type": "text",
-     "hint": "2-28-a. A significant role may include a governance position, participation in projects or committees, or substantive funding beyond routine dues."
+     "type": "table",
+     "hint": "2-28-a. A significant role may include a governance position, participation in projects or committees, or substantive funding beyond routine dues.",
+     "parts": [
+      {
+       "label": "Name of association or organization",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Your role (governance position, projects, committees, funding)",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -758,8 +1255,25 @@
     {
      "item": "a",
      "text": "Describe your approach to engaging with stakeholders, including the categories of stakeholders you engage with and how they are identified, the purpose of the engagement, and how you seek to ensure meaningful engagement.",
-     "type": "text",
-     "hint": "2-29-a (i) categories and how identified; (ii) purpose of engagement; (iii) how meaningful engagement is ensured."
+     "type": "table",
+     "hint": "2-29-a (i) categories and how identified; (ii) purpose of engagement; (iii) how meaningful engagement is ensured.",
+     "parts": [
+      {
+       "label": "Categories of stakeholders engaged, and how they are identified",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "Purpose of the engagement",
+       "kind": "text",
+       "unit": ""
+      },
+      {
+       "label": "How meaningful engagement is ensured",
+       "kind": "text",
+       "unit": ""
+      }
+     ]
     }
    ]
   },
@@ -777,8 +1291,20 @@
     {
      "item": "b",
      "text": "For employees not covered by collective bargaining agreements, report whether you determine their working conditions and terms of employment based on collective bargaining agreements that cover your other employees or based on collective bargaining agreements from other organizations.",
-     "type": "text",
-     "hint": "2-30-b."
+     "type": "table",
+     "hint": "2-30-b.",
+     "parts": [
+      {
+       "label": "Working conditions determined by the organization's own agreements?",
+       "kind": "yes_no",
+       "unit": ""
+      },
+      {
+       "label": "Based on agreements of other organizations?",
+       "kind": "yes_no",
+       "unit": ""
+      }
+     ]
     }
    ]
   }

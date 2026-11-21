@@ -81,7 +81,7 @@ def test_workbook_describes_the_whole_flow(monkeypatch):
     assert "Approver) → Respondent and reviewer" in str(q2_row[6]) and "Too high, explain" in str(q2_row[6])
     # A reviewer's files are listed with the comment they were sent with.
     assert "Files: benchmark.pdf" in str(q2_row[6])
-    assert any(str(c).startswith("Submission 2") for c in cells)
+    assert any(str(c).startswith("Answer 2") for c in cells)
 
     # An answer that changed since the previous submission is highlighted.
     ws = wb["Audit report"]

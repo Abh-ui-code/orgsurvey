@@ -10,10 +10,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { EmptyState } from "@/components/ui/empty-state";
 import { SearchInput } from "@/components/ui/search-input";
+import { TablePreview } from "@/components/shared/table-preview";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useGriStandard } from "@/hooks/use-gri-standards";
 import { disclosureLabel, filterQuestions, groupByDisclosure, questionNumber } from "@/lib/gri";
-import { FRAMEWORKS, questionKindLabel, partsSummary } from "@/types/question";
+import { FRAMEWORKS, questionKindLabel } from "@/types/question";
 
 /** One GRI standard on its own page: what it is, its PDF, and its questions. */
 function GriStandard() {
@@ -96,7 +97,7 @@ function GriStandard() {
                       <p className="text-sm text-ink">{q.text}</p>
                       {q.hint && <p className="mt-1 text-xs text-ink-muted">{q.hint}</p>}
                       <p className="mt-1 text-xs text-ink-faint">{questionKindLabel(q)}</p>
-                      {q.type === "table" && <p className="mt-0.5 text-xs text-ink-muted">Rows: {partsSummary(q.parts)}</p>}
+                      {q.type === "table" && <TablePreview parts={q.parts} rowHeader={q.row_header} valueHeader={q.value_header} />}
                     </div>
                   </li>
                 ))}

@@ -88,12 +88,12 @@ def _respondent_ids(survey) -> set:
 
 
 def _check_people(survey):
-    """The reviewer and approver are two different people, and neither answers
-    any of the questions."""
+    """The reviewer and approver are two different people, and the approver answers none of the
+    questions. The reviewer may also be a respondent."""
     if survey.reviewer_id and survey.reviewer_id == survey.approver_id:
         raise ApiError("The reviewer and the approver must be different people.")
-    if {survey.reviewer_id, survey.approver_id} & _respondent_ids(survey):
-        raise ApiError("A respondent can't also be the reviewer or approver.")
+    if survey.approver_id and survey.approver_id in _respondent_ids(survey):
+        raise ApiError("A respondent can't also be the approver.")
 
 
 @transaction.atomic
@@ -343,11 +343,11 @@ def readiness(survey: Survey) -> list[dict]:
     uncovered = [q for q in questions if q.responder_id is None]
     respondents = {q.responder_id for q in questions} - {None}
     reviewer, approver = survey.reviewer_id, survey.approver_id
-    apart = bool(reviewer and approver and reviewer != approver and not ({reviewer, approver} & respondents))
+    apart = bool(reviewer and approver and reviewer != approver and approver not in respondents)
     return [
         {"key": "questions", "label": "At least one question", "ok": bool(questions)},
         {"key": "assigned", "label": "Every question has a respondent", "ok": bool(questions) and not uncovered},
-        {"key": "people", "label": "A reviewer and an approver, who aren't respondents", "ok": apart},
+        {"key": "people", "label": "A reviewer and a different approver, who isn't a respondent", "ok": apart},
     ]
 
 
