@@ -68,6 +68,26 @@ export function formatAnswer(value: AnswerValue | undefined, question?: Pick<Sha
   return lines.length ? lines.join("\n") : "—";
 }
 
+/** Every cell of an answer as {key, label, text}, so two submissions can be compared cell by cell. */
+export function answerCells(value: AnswerValue | undefined, question?: Pick<Shape, "type" | "unit" | "parts">): { key: string; label: string; text: string }[] {
+  const { answer, extra, columns, cells } = splitAnswer(value);
+  const out: { key: string; label: string; text: string }[] = [];
+  const colName = (j: number) => columns[j] || `Column ${j + 1}`;
+  if (Array.isArray(answer) && question?.type === "table") {
+    slots(answer, question.parts).forEach((v, i) => {
+      const p = question.parts[i];
+      out.push({ key: `r${i}`, label: p.label, text: blank(v) ? "" : `${v}${p.unit ? ` ${p.unit}` : ""}` });
+      columns.forEach((_, j) => out.push({ key: `r${i}c${j}`, label: `${p.label} · ${colName(j)}`, text: cells[i]?.[j] ?? "" }));
+    });
+  }
+  extra.forEach((r, i) => {
+    const name = r.label || `Added row ${i + 1}`;
+    out.push({ key: `x${i}`, label: name, text: r.value || "" });
+    columns.forEach((_, j) => out.push({ key: `x${i}c${j}`, label: `${name} · ${colName(j)}`, text: r.cols?.[j] ?? "" }));
+  });
+  return out;
+}
+
 function ChoiceButton({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
   return (
     <button

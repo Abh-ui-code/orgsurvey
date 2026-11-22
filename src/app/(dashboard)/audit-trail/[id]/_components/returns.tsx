@@ -1,5 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
-import { formatAnswer } from "@/components/shared/answer-field";
+import type { AnswerValue } from "@/types/survey";
+import { AnswerBlock } from "./answer-block";
 import { Avatar } from "@/components/shared/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -61,18 +62,18 @@ export function Returns({ survey }: { survey: SurveyDetail }) {
                   {event.question_comments.map((c) => {
                     const q = questions.get(c.question_id);
                     const sent = sentFor(c.question_id);
-                    const answer = sent ? formatAnswer(sent.snapshot[c.question_id], q?.question) : "";
                     return (
-                      <li key={c.id} className="grid gap-3 px-4 py-3 md:grid-cols-2">
+                      <li key={c.id} className="grid gap-3 px-4 py-3">
                         <div>
                           <p className="text-sm text-ink">
                             <span className="mr-1.5 font-mono-data text-xs text-ink-faint">Q{q?.n ?? "?"}</span>
                             {q?.question.text ?? "Question removed"}
                           </p>
                           {sent && c.question_id in sent.snapshot && (
-                            <p className="mt-1.5 text-xs text-ink-muted">
-                              Answer given: <span className="font-medium text-ink">{answer && answer !== "—" ? answer : "No answer"}</span>
-                            </p>
+                            <div className="mt-2">
+                              <span className="mb-1 block text-2xs font-semibold uppercase tracking-wider text-ink-faint">Answer given</span>
+                              <AnswerBlock question={q?.question} value={sent.snapshot[c.question_id] as AnswerValue | undefined} />
+                            </div>
                           )}
                           {sent && <Evidence surveyId={survey.id} detail={sent.details?.[c.question_id]} />}
                         </div>

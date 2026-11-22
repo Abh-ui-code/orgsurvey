@@ -10,7 +10,7 @@ import { QUESTION_STATUS, QuestionStatusBadge } from "@/components/ui/status-bad
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { QUESTION_STATUSES, type QuestionStatus, type SurveyDetail } from "@/types/survey";
-import { QuestionTrail, trailOf, trailSummary } from "./question-trail";
+import { QuestionTrail, tableSummary, trailOf, trailSummary } from "./question-trail";
 
 const Chip = ({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) => (
   <button
@@ -100,8 +100,11 @@ export function ByQuestion({ survey }: { survey: SurveyDetail }) {
                       <span className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-ink-muted">
                         {sum.answer !== undefined ? (
                           <span>
-                            Answer: <span className="font-medium text-ink">{sum.answer === "—" ? "none" : sum.answer}</span>
-                            {sum.was !== undefined && <span className="text-ink-faint"> (was {sum.was === "—" ? "none" : sum.was})</span>}
+                            Answer:{" "}
+                            <span className="font-medium text-ink">
+                              {q.type === "table" ? (sum.answer === "—" ? "none" : tableSummary(q, sum.value)) : sum.answer === "—" ? "none" : sum.answer}
+                            </span>
+                            {q.type !== "table" && sum.was !== undefined && <span className="text-ink-faint"> (was {sum.was === "—" ? "none" : sum.was})</span>}
                           </span>
                         ) : (
                           <span className="text-ink-faint">Not answered yet</span>

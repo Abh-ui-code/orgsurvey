@@ -316,6 +316,20 @@ def _inline_table(ws, sheet, q, versions):
     sheet.row = r
 
 
+TABLE_BELOW = "Table answer, drawn below"
+TABLE_ABOVE = "Table answer as submitted above"
+
+
+def _changed_cells(q, before, after) -> int:
+    """How many cells of a table answer differ from the previous submission of it."""
+    old = {label: vals for label, vals, _ in _table_lines(q, before.snapshot[str(q.id)])[1]}
+    count = 0
+    for label, vals, _ in _table_lines(q, after.snapshot[str(q.id)])[1]:
+        prev = old.get(label, [""] * len(vals))
+        count += sum(1 for j, v in enumerate(vals) if (prev[j] if j < len(prev) else "") != v)
+    return count
+
+
 def _table_sheet(wb, questions, recorded):
     """A second sheet with every table question's latest submitted answer drawn as a real table: the question's
     own columns, then one spreadsheet column for each column the respondent added, so it reads like the form did.
@@ -543,17 +557,27 @@ def build_workbook(survey: Survey) -> bytes:
     for n, q in enumerate(questions, start=1):
         last_answer = None
         revisions = 0
+        tables = []  # a table question's submissions so far, each drawn as a real table under its step
         for e in events:
             if q.pk not in covered[e.pk]:
                 continue
             if e.action == "submitted":
                 revisions += 1
                 answer = _cell(q, e.snapshot.get(str(q.id)))
+                drawn = q.type == "table" and e.snapshot.get(str(q.id)) is not None
+                if drawn:
+                    tables.append(e)
+                    answer = TABLE_BELOW
                 changed_from = last_answer if last_answer is not None and last_answer != answer else ""
+                if drawn and len(tables) > 1:
+                    changed = _changed_cells(q, tables[-2], tables[-1])
+                    changed_from = f"{changed} cell{'s' if changed != 1 else ''} changed (highlighted below)" if changed else "No change"
                 step = "Answer submitted" if revisions == 1 else f"Answer resubmitted (revision {revisions})"
                 last_answer = answer
             else:
                 answer = last_answer if last_answer is not None else ""
+                if q.type == "table" and tables:
+                    answer = TABLE_ABOVE
                 changed_from = ""
                 step = ACTION_LABELS.get(e.action, e.action)
                 if e.action == "returned" and e.audience:
@@ -573,8 +597,14 @@ def build_workbook(survey: Survey) -> bytes:
                 ws.cell(r, 3).font = RETURNED_FONT
             elif e.action == "approved":
                 ws.cell(r, 3).font = OK_FONT
-            if changed_from:
+            if answer in (TABLE_BELOW, TABLE_ABOVE):
+                ws.cell(r, 6).font = Font(italic=True, color="5B6B6E")
+            elif changed_from:
                 ws.cell(r, 6).fill = CHANGED_FILL
+            if answer == TABLE_BELOW:
+                if changed_from:
+                    ws.cell(r, 7).font = Font(italic=True, color="5B6B6E")
+                _inline_table(ws, sheet, q, tables)
 
     _polish(ws)
     _table_sheet(sheet.wb, questions, recorded)

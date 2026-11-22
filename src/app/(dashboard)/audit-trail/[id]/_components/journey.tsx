@@ -2,7 +2,8 @@
 
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { formatAnswer } from "@/components/shared/answer-field";
+import type { AnswerValue } from "@/types/survey";
+import { AnswerBlock } from "./answer-block";
 import { Avatar } from "@/components/shared/avatar";
 import { Badge } from "@/components/ui/badge";
 import { formatDateTime, questionRange } from "@/lib/format";
@@ -17,14 +18,12 @@ import { AttachmentList } from "../../../surveys/[id]/_components/question-attac
 
 /** The answer to a question as it stood at a step: the one submitted in that step, or
  * else the latest submission of that question before it. */
-function answerAt(survey: SurveyDetail, questionId: string, event: HistoryEntry): string | undefined {
+function answerAt(survey: SurveyDetail, questionId: string, event: HistoryEntry): { value: AnswerValue | undefined } | undefined {
   const sent =
     event.action === "submitted"
       ? event
       : survey.history.filter((h) => h.action === "submitted" && h.question_ids.includes(questionId) && new Date(h.at) <= new Date(event.at)).pop();
-  if (!sent) return undefined;
-  const value = formatAnswer(sent.snapshot[questionId], survey.sections.flatMap((s) => s.questions).find((x) => x.id === questionId));
-  return value === "—" ? undefined : value;
+  return sent ? { value: sent.snapshot[questionId] as AnswerValue | undefined } : undefined;
 }
 
 /** The note and files sent with a question's answer as it stood at a step. */
@@ -237,7 +236,7 @@ function QuestionChips({
   survey: SurveyDetail;
   tone: "brand" | "rust";
   /** The answer to show under each question: what was given at the time of this step. */
-  answerFor?: (questionId: string) => string | undefined;
+  answerFor?: (questionId: string) => { value: AnswerValue | undefined } | undefined;
   /** The respondent's note and files sent with that answer. */
   detailFor?: (questionId: string) => SubmissionDetail | undefined;
 }) {
@@ -262,23 +261,27 @@ function QuestionChips({
         <ChevronDown className={cn("h-3.5 w-3.5 shrink-0 transition-transform", open && "rotate-180")} />
       </button>
       {open && (
-        <ul className="mt-2 max-h-64 divide-y divide-line overflow-y-auto rounded-md border border-line bg-paper-raised">
+        <ul className="mt-2 max-h-[32rem] divide-y divide-line overflow-y-auto rounded-md border border-line bg-paper-raised">
           {ids.map((id) => {
             const q = byId.get(id);
             return (
-              <li key={id} className="flex items-start gap-2 px-3 py-1.5 text-xs">
-                <span className="w-9 shrink-0 font-mono-data font-semibold text-ink-faint">Q{q?.number ?? "?"}</span>
-                <span className="min-w-0 flex-1 text-ink">
-                  {q?.text ?? "Question removed"}
-                  {answerFor && (
-                    <span className="mt-0.5 block whitespace-pre-wrap font-medium text-brand-strong">
-                      <span className="mr-1.5 text-2xs font-semibold uppercase tracking-wider text-ink-faint">Answer</span>
-                      {answerFor(id) ?? "No answer"}
-                    </span>
-                  )}
-                  {detailFor && <Evidence surveyId={survey.id} detail={detailFor(id)} />}
-                </span>
-                {q?.responder && <span className="shrink-0 text-ink-faint">{q.responder.full_name}</span>}
+              <li key={id} className="px-3 py-3 text-xs">
+                <div className="flex items-start gap-2">
+                  <span className="w-9 shrink-0 font-mono-data font-semibold text-ink-faint">Q{q?.number ?? "?"}</span>
+                  <span className="min-w-0 flex-1 text-sm font-medium text-ink">{q?.text ?? "Question removed"}</span>
+                  {q?.responder && <span className="shrink-0 text-ink-faint">{q.responder.full_name}</span>}
+                </div>
+                {answerFor && (
+                  <div className="mt-2 pl-11">
+                    <span className="mb-1 block text-2xs font-semibold uppercase tracking-wider text-ink-faint">Answer</span>
+                    {answerFor(id) ? <AnswerBlock question={q} value={answerFor(id)?.value} /> : <p className="text-sm italic text-ink-faint">No answer</p>}
+                  </div>
+                )}
+                {detailFor && (
+                  <div className="pl-11">
+                    <Evidence surveyId={survey.id} detail={detailFor(id)} />
+                  </div>
+                )}
               </li>
             );
           })}

@@ -1,5 +1,7 @@
 import { ClipboardList } from "lucide-react";
 import { formatAnswer } from "@/components/shared/answer-field";
+import type { AnswerValue } from "@/types/survey";
+import { AnswerBlock } from "./answer-block";
 import { Card } from "@/components/ui/card";
 import { EmptyState } from "@/components/ui/empty-state";
 import { formatDateTime } from "@/lib/format";
@@ -40,7 +42,7 @@ export function AnswersByRound({ survey }: { survey: SurveyDetail }) {
         <table className="w-full min-w-[640px] border-collapse text-sm">
           <thead>
             <tr className="border-b border-line bg-paper-sunken/60 text-left text-xs text-ink-muted">
-              <th className="sticky left-0 z-10 w-[38%] bg-paper-sunken px-5 py-3 font-medium">Question</th>
+              <th className="sticky left-0 z-10 w-[16rem] min-w-[16rem] bg-paper-sunken px-5 py-3 font-medium">Question</th>
               {recorded.map((h, i) => (
                 <th key={h.id} className="px-4 py-3 font-medium">
                   <div className="text-ink">Submission {i + 1}</div>
@@ -62,7 +64,7 @@ export function AnswersByRound({ survey }: { survey: SurveyDetail }) {
                     n += 1;
                     return (
                       <tr key={q.id} className="border-b border-line last:border-b-0 align-top">
-                        <td className="sticky left-0 z-10 bg-paper-raised px-5 py-3">
+                        <td className="sticky left-0 z-10 w-[16rem] min-w-[16rem] bg-paper-raised px-5 py-3">
                           <p className="text-ink">
                             <span className="mr-1.5 font-mono-data text-xs text-ink-faint">Q{n}</span>
                             {q.text}
@@ -86,8 +88,12 @@ export function AnswersByRound({ survey }: { survey: SurveyDetail }) {
                           const before = earlier ? formatAnswer(earlier.snapshot[q.id], q) : value;
                           const empty = !value || value === "—";
                           return (
-                            <td key={h.id} className={cn("px-4 py-3", value !== before && "bg-amber-soft")}>
-                              <span className={empty ? "italic text-ink-faint" : "whitespace-pre-wrap font-medium text-ink"}>{empty ? "No answer" : value}</span>
+                            <td key={h.id} className={cn("px-4 py-3 align-top", q.type === "table" && "min-w-[42rem]", value !== before && "bg-amber-soft")}>
+                              {q.type === "table" || q.type === undefined ? (
+                                <AnswerBlock question={q} value={h.snapshot[q.id] as AnswerValue | undefined} />
+                              ) : (
+                                <span className={empty ? "italic text-ink-faint" : "whitespace-pre-wrap font-medium text-ink"}>{empty ? "No answer" : value}</span>
+                              )}
                               <Evidence surveyId={survey.id} detail={h.details?.[q.id]} />
                             </td>
                           );

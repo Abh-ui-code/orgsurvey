@@ -1,4 +1,6 @@
-import { formatAnswer } from "@/components/shared/answer-field";
+import { answerCells, formatAnswer, splitAnswer } from "@/components/shared/answer-field";
+import type { AnswerValue } from "@/types/survey";
+import { AnswerBlock } from "./answer-block";
 import { formatDateTime } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import type { SurveyQuestion } from "@/types/question";
@@ -17,6 +19,19 @@ export interface TrailStep {
   answer?: string;
   previous?: string;
   changed?: boolean;
+  /** The stored answers behind `answer` and `previous`, for drawing them. */
+  value?: AnswerValue;
+  previousValue?: AnswerValue;
+}
+
+/** For a table answer, the cells that differ from the previous submission: [{label, before, after}]. */
+export function cellChanges(question: SurveyQuestion, before: AnswerValue | undefined, after: AnswerValue | undefined) {
+  const was = new Map(answerCells(before, question).map((c) => [c.key, c]));
+  const now = answerCells(after, question);
+  const out = now.filter((c) => (was.get(c.key)?.text ?? "") !== c.text).map((c) => ({ label: c.label, before: was.get(c.key)?.text ?? "", after: c.text }));
+  const kept = new Set(now.map((c) => c.key));
+  for (const c of was.values()) if (!kept.has(c.key) && c.text) out.push({ label: c.label, before: c.text, after: "" });
+  return out;
 }
 
 const display = (value: string) => (value && value !== "—" ? value : "No answer");
@@ -27,6 +42,7 @@ export function trailOf(survey: SurveyDetail, question: SurveyQuestion): TrailSt
   const steps: TrailStep[] = [];
   let revisions = 0;
   let last: string | undefined;
+  let lastValue: AnswerValue | undefined;
   for (const event of survey.history) {
     if (!event.question_ids.includes(question.id)) continue;
     if (event.action !== "submitted") {
@@ -35,20 +51,33 @@ export function trailOf(survey: SurveyDetail, question: SurveyQuestion): TrailSt
     }
     const answer = formatAnswer(event.snapshot[question.id], question);
     revisions += 1;
-    steps.push({ event, revision: revisions, answer, previous: last, changed: last !== undefined && last !== answer });
+    const value = event.snapshot[question.id] as AnswerValue | undefined;
+    steps.push({ event, revision: revisions, answer, previous: last, changed: last !== undefined && last !== answer, value, previousValue: lastValue });
     last = answer;
+    lastValue = value;
   }
   return steps;
 }
 
+/** A table answer in a few words for a collapsed row: "7 of 7 rows filled · 3 added columns · 2 added rows". */
+export function tableSummary(question: SurveyQuestion, value: AnswerValue | undefined): string {
+  const { answer, extra, columns } = splitAnswer(value);
+  const filled = (Array.isArray(answer) ? answer : []).filter((v) => v !== "" && v !== null && v !== undefined).length;
+  const bits = [`${filled} of ${question.parts.length} rows filled`];
+  if (columns.length) bits.push(`${columns.length} added column${columns.length === 1 ? "" : "s"}`);
+  if (extra.length) bits.push(`${extra.length} added row${extra.length === 1 ? "" : "s"}`);
+  return bits.join(" · ");
+}
+
 /** A one-line account of a question for its collapsed row: the answer now, what
  * it was before, how many times it was revised and sent back. */
-export function trailSummary(steps: TrailStep[]): { answer?: string; was?: string; revisions: number; returns: number; notes: number } {
+export function trailSummary(steps: TrailStep[]): { answer?: string; value?: AnswerValue; was?: string; revisions: number; returns: number; notes: number } {
   const submissions = steps.filter((s) => s.revision);
   const latest = submissions[submissions.length - 1];
   const changedFrom = [...submissions].reverse().find((s) => s.changed);
   return {
     answer: latest?.answer,
+    value: latest?.value,
     was: changedFrom?.previous,
     revisions: submissions.length,
     returns: steps.filter((s) => s.event.action === "returned").length,
@@ -66,7 +95,7 @@ export function QuestionTrail({ survey, question }: { survey: SurveyDetail; ques
   }
   return (
     <ol className="relative ml-3 border-l-2 border-line">
-      {steps.map(({ event, revision, answer, previous, changed }) => {
+      {steps.map(({ event, revision, answer, previous, changed, value, previousValue }) => {
         const meta = ACTION_META[event.action];
         const returned = event.action === "returned";
         const notes = event.question_comments.filter((c) => c.question_id === question.id);
@@ -86,11 +115,26 @@ export function QuestionTrail({ survey, question }: { survey: SurveyDetail; ques
 
             {revision !== undefined && answer !== undefined && (
               <div className="mt-1.5 space-y-1">
-                <div className={cn("rounded-md border px-3 py-2 text-sm", changed ? "border-amber/40 bg-amber-soft" : "border-line bg-paper-sunken")}>
-                  <span className="mb-0.5 block text-2xs font-semibold uppercase tracking-wider text-ink-faint">Answer</span>
-                  <span className={cn("whitespace-pre-wrap font-medium", display(answer) === "No answer" ? "italic text-ink-faint" : "text-ink")}>{display(answer)}</span>
+                <div className={cn("rounded-md border px-3 py-2.5", changed ? "border-amber/40 bg-amber-soft" : "border-line bg-paper-sunken")}>
+                  <span className="mb-1.5 block text-2xs font-semibold uppercase tracking-wider text-ink-faint">Answer</span>
+                  <AnswerBlock question={question} value={value} />
                 </div>
-                {changed && previous !== undefined && (
+                {changed && previous !== undefined && question.type === "table" && (
+                  <div className="rounded-md border border-line bg-paper-raised px-3 py-2 text-xs">
+                    <p className="mb-1 font-semibold text-ink-muted">What changed</p>
+                    <ul className="space-y-1">
+                      {cellChanges(question, previousValue, value).map((c) => (
+                        <li key={c.label} className="flex flex-wrap items-baseline gap-x-2">
+                          <span className="text-ink-muted">{c.label}</span>
+                          <span className="text-ink-faint line-through">{c.before || "empty"}</span>
+                          <span className="text-ink-faint">→</span>
+                          <span className="font-medium text-ink">{c.after || "empty"}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {changed && previous !== undefined && question.type !== "table" && (
                   <p className="text-xs text-ink-muted">
                     Changed from <span className="font-medium text-ink line-through decoration-ink-faint">{display(previous)}</span> to{" "}
                     <span className="font-medium text-ink">{display(answer)}</span>
