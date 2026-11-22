@@ -28,6 +28,7 @@ import { useSurveyList } from "@/hooks/use-surveys";
 import { useUnits } from "@/hooks/use-units";
 import { defaultChildKind, flattenWithDepth, unitPath } from "@/lib/org";
 import { unitKindLabel } from "@/types/org";
+import { CreateSurveyDrawer } from "../../surveys/_components/create-survey-drawer";
 import { KIND_TONE } from "../_components/unit-card";
 import { UnitFormDialog, type UnitDraft } from "../_components/unit-form-dialog";
 import { useDeleteUnit, useUnitMembers } from "../_hooks/use-organisation";
@@ -44,6 +45,7 @@ export default function UnitPage() {
   const del = useDeleteUnit();
   const [form, setForm] = useState<UnitDraft | null>(null);
   const [confirmDelete, setConfirmDelete] = useState(false);
+  const [addingSurvey, setAddingSurvey] = useState(false);
 
   if (units.isPending) return <Skeleton className="h-96 w-full" />;
   const all = units.data ?? [];
@@ -124,7 +126,11 @@ export default function UnitPage() {
           </DropdownMenu>
           {isAdmin && (
             <>
+              <Button onClick={() => setAddingSurvey(true)}>
+                <ClipboardList className="h-4 w-4" /> Add survey
+              </Button>
               <Button
+                variant="secondary"
                 onClick={() =>
                   setForm({
                     parent_id: unit.id,
@@ -299,6 +305,7 @@ export default function UnitPage() {
         </div>
       </div>
 
+      <CreateSurveyDrawer open={addingSurvey} onOpenChange={setAddingSurvey} defaultUnitId={unit.id} />
       <UnitFormDialog draft={form} units={all} onClose={() => setForm(null)} />
       <ConfirmDialog
         open={confirmDelete}

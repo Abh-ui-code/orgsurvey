@@ -16,12 +16,21 @@ const EMPTY = { title: "", category_id: "", target_unit_id: "", description: "" 
 
 /** Starts a draft with the few things every survey needs, then opens the
  * builder. Open state is owned here so the trigger can be any button. */
-export function CreateSurveyDrawer({ open, onOpenChange }: { open: boolean; onOpenChange: (open: boolean) => void }) {
+export function CreateSurveyDrawer({
+  open,
+  onOpenChange,
+  defaultUnitId = "",
+}: {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  /** Pre-selects the "Aimed at" block, e.g. when opened from a block's page. */
+  defaultUnitId?: string;
+}) {
   const [form, setForm] = useState(EMPTY);
   const [wasOpen, setWasOpen] = useState(open);
   if (open !== wasOpen) {
     setWasOpen(open);
-    if (open) setForm(EMPTY); // every opening starts from a blank form
+    if (open) setForm({ ...EMPTY, target_unit_id: defaultUnitId }); // every opening starts from a blank form
   }
   const categories = useSurveyCategories();
   const create = useCreateSurvey();
