@@ -232,3 +232,23 @@ def test_a_table_row_can_be_yes_no():
         with pytest.raises(ApiError):
             clean_answer(t, bad)
     assert clean_question_fields({"text": "T", "type": "table", "parts": [{"label": "A", "kind": "yes_no", "unit": "x"}]})["parts"] == [{"label": "A", "kind": "yes_no", "unit": ""}]
+
+
+def test_gri_12_is_about_seventy_percent_tables_with_every_row_validly_typed():
+    import json
+    from pathlib import Path
+
+    from apps.core.question_types import PART_KINDS
+
+    data = Path(__file__).parents[1] / "apps/question_bank/data"
+    questions = [(d["ref"], q) for d in json.loads((data / "gri/gri-12-coal-sector.json").read_text())["disclosures"] for q in d["questions"]]
+    tables = [(r, q) for r, q in questions if q["type"] == "table"]
+    assert 0.65 <= len(tables) / len(questions) <= 0.75
+    headers = json.loads((data / "table_headers.json").read_text())
+    kinds = set()
+    for ref, q in tables:
+        assert q["parts"] and all(p["kind"] in PART_KINDS and p["label"] for p in q["parts"])
+        assert f"gri-12-coal-sector|{ref}|{q['item']}" in headers
+        kinds |= {p["kind"] for p in q["parts"]}
+        clean_question_fields({"text": q["text"], "type": "table", "parts": q["parts"]})
+    assert {"text", "number", "date", "yes_no"} <= kinds
